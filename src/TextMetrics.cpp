@@ -1286,20 +1286,39 @@ void TextMetrics::setRowHeight(Row & row) const
 {
 	Paragraph const & par = text_->getPar(row.pit());
 	Layout const & layout = par.layout();
-	double const spacing_val = layout.spacing.getValue() * text_->spacing(par);
+	// leading space (line spacing) factor based on current paragraph
+	double spacing_val = layout.spacing.getValue() * text_->spacing(par);
+
+	// if this is the first row but not the first paragraph, take into
+	// account the spacing of the previous paragraph.
+	if (row.pos() == 0 && row.pit() > 0) {
+		// for the first row in the paragraph,
+		// use previous paragraphs line spacing if it is larger
+		Paragraph const & previousPar = text_->getPar(row.pit() - 1);
+		Layout const & previousLayout = previousPar.layout();
+		// leading space factor based on previous paragraph
+		double const previous_spacing_val
+			= previousLayout.spacing.getValue() * text_->spacing(previousPar);
+		if (previous_spacing_val > spacing_val)
+			spacing_val = previous_spacing_val;
+	}
 
 	// Initial value for ascent (useful if row is empty).
 	Font const font = displayFont(row.pit(), row.pos());
 	FontMetrics const & fm = theFontMetrics(font);
-	int maxasc = int(fm.maxAscent() * spacing_val);
-	int maxdes = int(fm.maxDescent() * spacing_val);
+	int maxasc = int(fm.maxAscent()
+		// add leading space
+		+ fm.maxHeight() * (spacing_val - 1));
+	int maxdes = int(fm.maxDescent());
 
 	// Take label string into account (useful if labelfont is large)
 	if (row.pos() == 0 && layout.labelIsInline()) {
 		FontInfo const labelfont = text_->labelFont(par);
 		FontMetrics const & lfm = theFontMetrics(labelfont);
-		maxasc = max(maxasc, int(lfm.maxAscent() * spacing_val));
-		maxdes = max(maxdes, int(lfm.maxDescent() * spacing_val));
+		maxasc = max(maxasc, int(lfm.maxAscent()
+			// add leading space
+			+ lfm.maxHeight() * (spacing_val - 1)));
+		maxdes = max(maxdes, int(lfm.maxDescent()));
 	}
 
 	// Find the ascent/descent of the row contents
@@ -1309,8 +1328,10 @@ void TextMetrics::setRowHeight(Row & row) const
 			maxdes = max(maxdes, e.dim.descent());
 		} else {
 			FontMetrics const & fm2 = theFontMetrics(e.font);
-			maxasc = max(maxasc, int(fm2.maxAscent() * spacing_val));
-			maxdes = max(maxdes, int(fm2.maxDescent() * spacing_val));
+			maxasc = max(maxasc, int(fm2.maxAscent()
+				// add leading space
+				+ fm2.maxHeight() * (spacing_val - 1)));
+			maxdes = max(maxdes, int(fm2.maxDescent()));
 		}
 	}
 
