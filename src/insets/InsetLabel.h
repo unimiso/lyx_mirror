@@ -71,6 +71,8 @@ public:
 				  UpdateType utype, TocBackend & backend) const override;
 	/// Is the content of this inset part of the immediate (visible) text sequence?
 	bool isPartOfTextSequence() const override { return false; }
+	///
+	bool inheritFont() const override { return false; }
 	//@}
 
 	/// \name Static public methods obligated for InsetCommand derived classes
