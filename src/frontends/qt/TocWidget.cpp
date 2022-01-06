@@ -64,6 +64,17 @@ TocWidget::TocWidget(GuiView & gui_view, QWidget * parent)
 	moveUpTB->setIconSize(icon_size);
 	moveDownTB->setIconSize(icon_size);
 	updateTB->setIconSize(icon_size);
+	// update icon size according to gui view
+	connect(&gui_view, SIGNAL(iconSizeChanged(QSize)),
+		moveOutTB, SLOT(setIconSize(QSize)));
+	connect(&gui_view, SIGNAL(iconSizeChanged(QSize)),
+		moveInTB, SLOT(setIconSize(QSize)));
+	connect(&gui_view, SIGNAL(iconSizeChanged(QSize)),
+		moveUpTB, SLOT(setIconSize(QSize)));
+	connect(&gui_view, SIGNAL(iconSizeChanged(QSize)),
+		moveDownTB, SLOT(setIconSize(QSize)));
+	connect(&gui_view, SIGNAL(iconSizeChanged(QSize)),
+		updateTB, SLOT(setIconSize(QSize)));
 
 	// avoid flickering
 	tocTV->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
