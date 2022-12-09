@@ -203,7 +203,7 @@ FuncRequest KeyMap::getBinding(KeySequence const & seq, unsigned int r)
 		    && mod1 == it->mod.first
 		    && mod2 == it->mod.second) {
 			if (r + 1 == seq.length())
-				return it->func;
+				return (it->prefixes) ? FuncRequest::prefix : it->func;
 			else if (it->prefixes)
 				return it->prefixes->getBinding(seq, r + 1);
 		}

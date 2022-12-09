@@ -65,8 +65,9 @@ public:
 		    unsigned int r = 0);
 
 
-	/// returns the function bound to this key sequence, or
-	/// FuncRequest::unknown if no binding exists for it.
+	/// returns the function bound to this key sequence, or:
+	/// * FuncRequest::unknown if no binding exists for it;
+	/// * FuncRequest::prefix if this is the start of longer keysequences
 	/// @param r an internal recursion counter
 	// FIXME Surely there's a better way to do that?
 	FuncRequest getBinding(KeySequence const & seq, unsigned int r = 0);

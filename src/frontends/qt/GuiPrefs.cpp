@@ -3408,6 +3408,23 @@ bool PrefShortcuts::validateNewShortcut(FuncRequest const & func,
 		// nothing to change
 		return false;
 
+	// Check whether the key sequence is a prefix for other shortcuts.
+	if (oldBinding == FuncRequest::prefix) {
+		docstring const new_action_string = makeCmdString(func);
+		docstring const text = bformat(_("Shortcut `%1$s' is already a prefix for other commands.\n"
+						 "Are you sure you want to unbind these commands and bind it to %2$s?"),
+									   k.print(KeySequence::ForGui), new_action_string);
+		int ret = Alert::prompt(_("Redefine shortcut?"),
+					text, 0, 1, _("&Redefine"), _("&Cancel"));
+		if (ret != 0)
+			return false;
+		QString const sequence_text = toqstr(k.print(KeySequence::ForGui));
+		QList<QTreeWidgetItem*> items = shortcutsTW->findItems(sequence_text,
+			Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchRecursive), 1);
+		deactivateShortcuts(items);
+		return true;
+	}
+
 	// make sure this key isn't already bound---and, if so, prompt user
 	// (exclude the lfun the user already wants to modify)
 	docstring const action_string = makeCmdString(oldBinding);
