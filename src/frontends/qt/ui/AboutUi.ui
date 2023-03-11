@@ -33,21 +33,12 @@
           <enum>QLayout::SetFixedSize</enum>
          </property>
          <item>
-          <widget class="QLabel" name="iconLA">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
+          <widget class="QSvgWidget" name="iconSW" native="true">
            <property name="minimumSize">
             <size>
              <width>80</width>
              <height>80</height>
             </size>
-           </property>
-           <property name="text">
-            <string notr="true">LyX Icon</string>
            </property>
           </widget>
          </item>
@@ -398,6 +389,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QSvgWidget</class>
+   <extends>QWidget</extends>
+   <header>QSvgWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <includes>
   <include location="local">qt_i18n.h</include>
  </includes>

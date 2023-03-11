@@ -340,12 +340,14 @@ GuiAbout::GuiAbout(GuiView & lv)
 	d->ui.copyrightTB->append(disclaimer());
 
 	d->ui.versionLA->setText(version());
-	QPixmap icon = getPixmap("images/", "lyx", "svg,png");
 	int const iconsize = d->ui.versionLA->height() * 1.5;
-	d->ui.iconLA->setPixmap(icon.scaled(iconsize, iconsize,
-					    Qt::IgnoreAspectRatio,
-					    Qt::SmoothTransformation));
-	d->ui.iconLA->setFixedWidth(iconsize);
+	QString path = "images/";
+	QString name = "lyx";
+	QString ext = "svg";
+	FileName fname = imageLibFileSearch(path, name, ext, theGuiApp()->imageSearchMode());
+	QString fpath = toqstr(fname.absFileName());
+	d->ui.iconSW->load(fpath);
+	d->ui.iconSW->setFixedSize(iconsize, iconsize);
 	d->ui.dirLibraryLA->setText(dirLibrary());
 	d->ui.dirLibraryLA->adjustSize();
 	d->ui.dirUserLA->setText(dirUser());
