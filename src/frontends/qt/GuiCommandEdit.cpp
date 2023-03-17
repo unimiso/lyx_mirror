@@ -29,7 +29,7 @@ GuiCommandEdit::GuiCommandEdit(QWidget * parent)
 
 void GuiCommandEdit::keyPressEvent(QKeyEvent * e)
 {
-	if (e->modifiers() == Qt::NoModifier) {
+	if (e->modifiers() == Qt::NoModifier || e->modifiers() == Qt::KeypadModifier) {
 		switch (e->key()) {
 		case Qt::Key_Escape:
 			// emit signal
