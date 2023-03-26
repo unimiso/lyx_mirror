@@ -716,9 +716,8 @@ double Text::spacing(Paragraph const & par) const
 /**
  * This breaks a paragraph at the specified position.
  * The new paragraph will:
- * - Decrease depth by one (or change layout to default layout) when
- *    keep_layout == false
- * - keep current depth and layout when keep_layout == true
+ * - change layout to default layout when keep_layout == false
+ * - keep layout when keep_layout == true
  */
 static void breakParagraph(Text & text, pit_type par_offset, pos_type pos,
 		    bool keep_layout)
@@ -733,21 +732,13 @@ static void breakParagraph(Text & text, pit_type par_offset, pos_type pos,
 
 	// remember to set the inset_owner
 	tmp->setInsetOwner(&par.inInset());
-	// without doing that we get a crash when typing <Return> at the
-	// end of a paragraph
-	tmp->setPlainOrDefaultLayout(bparams.documentClass());
+	tmp->params().depth(par.params().depth());
 
 	if (keep_layout) {
 		tmp->setLayout(par.layout());
 		tmp->setLabelWidthString(par.params().labelWidthString());
-		tmp->params().depth(par.params().depth());
-	} else if (par.params().depth() > 0) {
-		Paragraph const & hook = pars[text.outerHook(par_offset)];
-		tmp->setLayout(hook.layout());
-		// not sure the line below is useful
-		tmp->setLabelWidthString(par.params().labelWidthString());
-		tmp->params().depth(hook.params().depth());
-	}
+	} else
+		tmp->setPlainOrDefaultLayout(bparams.documentClass());
 
 	bool const isempty = (par.allowEmpty() && par.empty());
 
