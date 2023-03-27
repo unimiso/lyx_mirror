@@ -4438,12 +4438,11 @@ msgid "None[[language package]]"
 msgstr "Žádný"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:100
-#, fuzzy
 msgid ""
 "Enter the command to load a custom language package (default: "
 "\\usepackage{babel})"
 msgstr ""
-"Zadejte příkaz pro načtení jazykového balíčku (standardně "
+"Zadejte příkaz pro načtení vlastního jazykového balíčku (standardně: "
 "\\usepackage{babel})"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:107
@@ -4451,79 +4450,69 @@ msgid "Command s&tart:"
 msgstr "Začá&tek příkazu:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:117
-#, fuzzy
 msgid ""
 "The LaTeX command that starts a switch to a different language. The "
 "placeholder $$lang is replaced by the actual language name."
-msgstr "Příkaz LaTeX-u, který začíná přepnutí změny jazyka."
+msgstr "Příkaz LaTeX-u, kterým začíná přepnutí do jiného jazyka. Proměnná $$lang bude nahrazena skutečným názvem jazyka."
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:124
 msgid "Command e&nd:"
 msgstr "Kone&c příkazu:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:134
-#, fuzzy
 msgid ""
 "The LaTeX command that ends a switch to a different language.  The "
 "placeholder $$lang is replaced by the actual language name."
-msgstr "Příkaz LaTeX-u, který ukončuje přepnutí změny jazyka."
+msgstr "Příkaz LaTeX-u, kterým se ukončuje přepnutí do jiného jazyka. Proměnná $$lang bude nahrazena skutečným názvem jazyka."
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:141
-#, fuzzy
 msgid ""
 "Check to pass the language globally (to the document class), not locally (to "
 "the language package), so that other packages are also informed about the "
 "used languages."
 msgstr ""
 "Zaškrtněte pro nastavení jazyka globálně (třídě dokumentu), nikoli lokálně "
-"(jazykovému balíčku)"
+"(jazykovému balíčku), aby ostatní balíčky byly rovněž informovány o zvoleném jazyku."
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:144
 msgid "Set languages &globally"
 msgstr "Nastavit jazyky &globálně"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:151
-#, fuzzy
 msgid ""
 "If checked, the document language is explicitly set by a language switch "
 "command"
 msgstr ""
-"Při zaškrtnutí není jazyk dokumentu explicitně nastaven přepínacím příkazem"
+"Při zaškrtnutí je jazyk dokumentu explicitně nastaven přepínacím příkazem"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:154
-#, fuzzy
 msgid "Set document language e&xplicitly"
-msgstr "Explicitní jméno tiskárny"
+msgstr "Nastavit jazyk dokumnetu e&xplicitně"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:161
-#, fuzzy
 msgid ""
 "If checked, the document language is explicitly closed by a language switch "
 "command"
 msgstr ""
-"Při zaškrtnutí není jazyk dokumentu explicitně uzavřen přepínacím příkazem"
+"Při zaškrtnutí je jazyk dokumentu explicitně uzavřen přepínacím příkazem"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:164
-#, fuzzy
 msgid "&Unset document language explicitly"
-msgstr "Explicitní jméno tiskárny"
+msgstr "Zr&ušit jazyk dokumentu explicitně"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:177
-#, fuzzy
 msgid "Editor Settings"
-msgstr "Nastavení rámečku"
+msgstr "Nastavení editoru"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:189
-#, fuzzy
 msgid ""
 "Check to highlight additional languages (to the document language) visually "
 "in the work area"
-msgstr "Zaškrtněte pro zvýraznění cizího jazyka v dokumentu na ploše"
+msgstr "Zaškrtněte pro vizuální zvýraznění dalších jazyků při editaci dokumentu"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:192
-#, fuzzy
 msgid "&Mark additional languages"
-msgstr "Označit cizí &jazyk"
+msgstr "O&značit dodatečný jazyk"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:199 src/LyXRC.cpp:3303
 msgid ""
