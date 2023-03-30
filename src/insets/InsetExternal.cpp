@@ -933,4 +933,10 @@ string InsetExternal::params2string(InsetExternalParams const & params,
 	return data.str();
 }
 
+
+docstring InsetExternal::toolTip(BufferView const &, int, int) const
+{
+	return from_utf8(params().filename.onlyFileName());
+}
+
 } // namespace lyx

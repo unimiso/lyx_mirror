@@ -177,7 +177,8 @@ private:
 	bool isPreviewed() const;
 	/// Do we have the right renderer (button, graphic or monitored preview)?
 	bool isRendererValid() const;
-
+	///
+	docstring toolTip(BufferView const & bv, int x, int y) const override;
 	/// The current params
 	InsetExternalParams params_;
 	/// The thing that actually draws the image on LyX's screen.
