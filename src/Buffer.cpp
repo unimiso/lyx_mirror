@@ -4156,6 +4156,7 @@ unique_ptr<TexRow> Buffer::getSourceCode(odocstream & os, string const & format,
 			LaTeXFeatures features(*this, params(), runparams);
 			validate(features);
 			runparams.use_polyglossia = features.usePolyglossia();
+			runparams.use_babel = features.useBabel();
 			runparams.use_hyperref = features.isRequired("hyperref");
 			// latex or literate
 			otexstream ots(os);
