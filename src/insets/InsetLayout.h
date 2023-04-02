@@ -346,8 +346,8 @@ private:
 	bool docbooknotinpara_ = false;
 	///
 	bool docbookargumentbeforemaintag_ = false;
-    ///
-    bool docbookargumentaftermaintag_ = false;
+	///
+	bool docbookargumentaftermaintag_ = false;
 	///
 	bool docbooksection_ = false;
 	///
