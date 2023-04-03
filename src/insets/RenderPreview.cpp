@@ -140,14 +140,16 @@ void RenderPreview::metrics(MetricsInfo & mi, Dimension & dim) const
 		pimage->image();
 		dim = pimage->dim();
 	} else {
-		dim.asc = 50;
-		dim.des = 0;
-
 		FontInfo font(mi.base.font);
 		font.setFamily(SANS_FAMILY);
 		font.setSize(FOOTNOTE_SIZE);
+
+		frontend::FontMetrics const & fm = theFontMetrics(font);
+		dim.asc = 2 * (Inset::textOffset(mi.base.bv) + 6) + fm.maxHeight();
+		dim.des = 0;
+
 		docstring const stat = statusMessage(mi.base.bv, snippet_);
-		dim.wid = 15 + theFontMetrics(font).width(stat);
+		dim.wid = 2 * (Inset::textOffset(mi.base.bv) + 6) + fm.width(stat);
 	}
 
 	dim_ = dim;
@@ -168,11 +170,9 @@ void RenderPreview::draw(PainterInfo & pi, int x, int y, bool const) const
 	} else {
 		int const offset = Inset::textOffset(pi.base.bv);
 
-		pi.pain.rectangle(x + offset,
-				  y - dim_.asc,
-				  dim_.wid - 2 * offset,
-				  dim_.asc + dim_.des,
-				  Color_foreground);
+		pi.pain.rectangle(x + offset, y - dim_.asc,
+		                  dim_.wid - 2 * offset, dim_.asc + dim_.des,
+		                  Color_foreground);
 
 		FontInfo font(pi.base.font);
 		font.setFamily(SANS_FAMILY);
@@ -180,8 +180,8 @@ void RenderPreview::draw(PainterInfo & pi, int x, int y, bool const) const
 
 		docstring const stat = statusMessage(pi.base.bv, snippet_);
 		pi.pain.text(x + offset + 6,
-			     y - theFontMetrics(font).maxAscent() - 4,
-			     stat, font);
+		             y - offset - 6 - theFontMetrics(pi.base.font).maxDescent(),
+		             stat, font);
 	}
 	pi.change.paintCue(pi, x, y - dim_.asc,
 	                   x + dim_.width(), y - dim_.asc + dim_.height());
