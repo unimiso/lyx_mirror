@@ -151,10 +151,6 @@ export/.*/fa/Welcome_(dvi3|pdf5)_systemF
 # Beamer fails also with XeTeX
 export/examples/ar/Presentations/Beamer_.*_systemF
 
-# terminal message: "Language hebrew not found in language.dat.lua"
-export/.*/he/.*(dvi3|pdf5)_systemF
-export/export/latex/languages/supported-languages_(dvi3|pdf5)_systemF
-
 # Fails with TL19 but solved in TL20
 
 # Babel with non-TeX fonts fails for some supported languages
