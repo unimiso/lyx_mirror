@@ -155,7 +155,7 @@ export/examples/ar/Presentations/Beamer_.*_systemF
 export/.*/he/.*(dvi3|pdf5)_systemF
 export/export/latex/languages/supported-languages_(dvi3|pdf5)_systemF
 
-Fails with TL19 but solved in TL20
+# Fails with TL19 but solved in TL20
 
 # Babel with non-TeX fonts fails for some supported languages
 # Lithuanian: L7x font encoding also set with LuaTeX and non-TeX fonts
