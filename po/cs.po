@@ -4518,30 +4518,29 @@ msgstr "O&značit dodatečný jazyk"
 msgid ""
 "Select to use the current keyboard language, as set from the operating "
 "system, as default input language."
-msgstr ""
+msgstr "Použít současný jazyk klávesnice operačního systému jako vstupní jazyk v dokumentu"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:202
-#, fuzzy
 msgid "Respect &OS keyboard language"
-msgstr "Použít &mapu kláves"
+msgstr "Použít &jazyk klávesnice operačního systému"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:226
 msgid ""
 "Specify here how the arrow keys behave within scripts with right-to-left "
 "direction"
 msgstr ""
+"Určí jak se má pohybovat kurzor ve skriptech píšících zleva-doprava"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:229
-#, fuzzy
 msgid "Right-to-left cursor movement:"
-msgstr "Poh&yb kurzoru jako na Mac-u"
+msgstr "Poh&yb kurzoru zprava doleva:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:239
 msgid ""
 "The cursor follows the logic of the text direction (e.g., in embedded right-"
 "to-left text in a left-to-right paragraph, the cursor starts at the right "
 "when coming from the left)"
-msgstr ""
+msgstr "Kurzor sleduje logiku směru textu (t.j. ve vnořeném zprava-doleva textu uvnitř zleva-doprava odstavce, kurzor začne vpravo při příchodu zleva)"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:242
 msgid "&Logical"
@@ -4552,7 +4551,7 @@ msgid ""
 "The cursor follows the visual direction (e.g., in embedded right-to-left "
 "text in a left-to-right paragraph, the cursor starts at the left when coming "
 "from the left)"
-msgstr ""
+msgstr "Kurzor sleduje vizuální směr (t.j. ve vnořeném zprava-doleva textu uvnitř zleva-doprava odstavce, kurzor začne vlevo při příchodu zleva)"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:255
 msgid "&Visual"
