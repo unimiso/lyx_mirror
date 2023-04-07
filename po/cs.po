@@ -4533,7 +4533,7 @@ msgstr ""
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:229
 msgid "Right-to-left cursor movement:"
-msgstr "Poh&yb kurzoru zprava doleva:"
+msgstr "Pohyb kurzoru zprava doleva:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:239
 msgid ""
@@ -4558,9 +4558,8 @@ msgid "&Visual"
 msgstr "&Visuální"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:280
-#, fuzzy
 msgid "Local Preferences"
-msgstr "všechny reference"
+msgstr "Lokální nastavení"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:286
 #: src/frontends/qt/ui/PrefLanguageUi.ui:344
@@ -4568,26 +4567,24 @@ msgid ""
 "Here you can specify the decimal separator that is used in the tabular "
 "dialog by default. \"Language default\" selects the appropriate separator "
 "for the current language."
-msgstr ""
+msgstr "Oddělovač desetinné čárky používaný v dialogovém okně pro tabulky."
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:289
 msgid "Default decimal &separator:"
 msgstr "Oddělovač &desetinné čárky:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:318
-#, fuzzy
 msgid "Insert a custom decimal separator here"
-msgstr "Oddělovač &desetinné čárky:"
+msgstr "Zde vložte vlastní oddělovač desetinné čárky"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:331
 #: src/frontends/qt/ui/PrefLanguageUi.ui:361
-#, fuzzy
 msgid "Select the default length unit for LyX dialogs"
-msgstr "Nastavit standardní jazyk vašich dokumentů"
+msgstr "Nastavit standardní jednotku délky pro dialogy LyX-u"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:334
 msgid "Default length &unit:"
-msgstr "Jednotka &míry:"
+msgstr "Jednotka &délky:"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:348
 #: src/frontends/qt/GuiDocument.cpp:1040
@@ -5025,7 +5022,6 @@ msgstr ""
 "Vlastní hodnota. \"Odsazení seznamu\" musí být nastavené na \"Vlastní\"."
 
 #: src/frontends/qt/ui/PrintindexUi.ui:40
-#, fuzzy
 msgid "Available i&ndexes:"
 msgstr "Dostupné &rejstříky:"
 
@@ -5516,9 +5512,8 @@ msgid "rotation angle"
 msgstr "úhel rotace"
 
 #: src/frontends/qt/ui/TabularUi.ui:140
-#, fuzzy
 msgid "de&grees"
-msgstr "stupně"
+msgstr "st&upně"
 
 #: src/frontends/qt/ui/TabularUi.ui:171
 msgid "Table-wide settings"
@@ -5560,19 +5555,16 @@ msgid ""
 msgstr ""
 
 #: src/frontends/qt/ui/TabularUi.ui:317
-#, fuzzy
 msgid "Text length"
-msgstr "Styl textu"
+msgstr "Délka textu"
 
 #: src/frontends/qt/ui/TabularUi.ui:322
-#, fuzzy
 msgid "Variable[[Width]]"
-msgstr "Proměnlivá"
+msgstr "Proměnná"
 
 #: src/frontends/qt/ui/TabularUi.ui:327
-#, fuzzy
 msgid "Custom[[Width]]"
-msgstr "&Vlastní šířka:"
+msgstr "Vlastní"
 
 #: src/frontends/qt/ui/TabularUi.ui:335
 msgid "Horizontal alignment in column"
@@ -5589,7 +5581,6 @@ msgid "At Decimal Separator"
 msgstr "Na desetinné čárce"
 
 #: src/frontends/qt/ui/TabularUi.ui:390
-#, fuzzy
 msgid "Hori&zontal alignment:"
 msgstr "&Horizontální zarovnání:"
 
@@ -5604,9 +5595,8 @@ msgid "&Vertical alignment in row:"
 msgstr "&Vertikální zarovnání v řádku:"
 
 #: src/frontends/qt/ui/TabularUi.ui:437
-#, fuzzy
 msgid "Custom width of the column"
-msgstr "Pevná šířka sloupce"
+msgstr "Vlastní šířka sloupce"
 
 #: src/frontends/qt/ui/TabularUi.ui:457
 msgid "&Decimal separator:"
@@ -5668,12 +5658,11 @@ msgstr "S&tandardní"
 msgid ""
 "If this is checked, the table will be reset to the formal default style "
 "(only top and bottom row have horizontal lines)"
-msgstr ""
+msgstr "Při zaškrtnutí se tabulka nastaví do standardního formálního stylu (horizontální linie jenom v hlavičce a patičce)"
 
 #: src/frontends/qt/ui/TabularUi.ui:1138
-#, fuzzy
 msgid "Use Default &Formal Style"
-msgstr "Default combo box style"
+msgstr "Použít standardní &formální styl"
 
 #: src/frontends/qt/ui/TabularUi.ui:1145
 msgid "Use formal (a.k.a. booktabs) border style (no vertical borders)"
@@ -5700,7 +5689,6 @@ msgid "Bet&ween rows:"
 msgstr "&Mezi řádky:"
 
 #: src/frontends/qt/ui/TabularUi.ui:1305
-#, fuzzy
 msgid "&Multi-Page Table"
 msgstr "&Vícestranná tabulka"
 
@@ -5889,14 +5877,12 @@ msgid "Number of lines"
 msgstr "Počet řádků"
 
 #: src/frontends/qt/ui/TextLayoutUi.ui:90
-#, fuzzy
 msgid "Table Style"
-msgstr "Table Note"
+msgstr "Styl tabulky"
 
 #: src/frontends/qt/ui/TextLayoutUi.ui:101
-#, fuzzy
 msgid "Default St&yle:"
-msgstr "Zákla&dní styl BibTeX-u:"
+msgstr "Výcho&zí styl:"
 
 #: src/frontends/qt/ui/TextLayoutUi.ui:155
 msgid "Paragraph Separation"
@@ -5957,7 +5943,6 @@ msgid "The selected entry"
 msgstr "Označené heslo"
 
 #: src/frontends/qt/ui/ThesaurusUi.ui:66
-#, fuzzy
 msgid "Sele&ction:"
 msgstr "&Výběr:"
 
@@ -6022,23 +6007,20 @@ msgid ""
 msgstr ""
 
 #: src/frontends/qt/ui/TocUi.ui:317 src/frontends/qt/TocWidget.cpp:88
-#, fuzzy
 msgid "All items"
-msgstr "Všechny soubory"
+msgstr "Všechny položky"
 
 #: src/frontends/qt/ui/TocUi.ui:322
-#, fuzzy
 msgid "Only output items"
-msgstr "Only on slides"
+msgstr "Jen položky výstupu"
 
 #: src/frontends/qt/ui/TocUi.ui:327
-#, fuzzy
 msgid "Only non-output items"
-msgstr "Only on slides"
+msgstr "Jen položky bez výstupu"
 
 #: src/frontends/qt/ui/TocUi.ui:335
 msgid "Sho&w:"
-msgstr ""
+msgstr "Zobrazit:"
 
 #: src/frontends/qt/ui/TocUi.ui:358
 msgid ""
@@ -6049,9 +6031,8 @@ msgstr ""
 "tabulek)"
 
 #: src/frontends/qt/ui/ToggleWarningUi.ui:14
-#, fuzzy
 msgid "Enter text"
-msgstr "LyX: Vlož text"
+msgstr "Vložit text"
 
 #: src/frontends/qt/ui/ToggleWarningUi.ui:62
 #: src/frontends/qt/GuiProgress.cpp:194
@@ -6089,15 +6070,13 @@ msgstr "Velká mezera"
 
 #: src/frontends/qt/ui/VSpaceUi.ui:103 src/VSpace.cpp:202
 #: src/frontends/qt/GuiDocument.cpp:888
-#, fuzzy
 msgid "Half line height"
-msgstr "Základní linka vpravo"
+msgstr "Výška poloviny řádky"
 
 #: src/frontends/qt/ui/VSpaceUi.ui:108 src/VSpace.cpp:205
 #: src/frontends/qt/GuiDocument.cpp:889
-#, fuzzy
 msgid "Line height"
-msgstr "Linka vpravo|r"
+msgstr "Výška řádky"
 
 #: src/frontends/qt/ui/VSpaceUi.ui:113 src/VSpace.cpp:208
 msgid "Vertical fill"
@@ -6149,9 +6128,8 @@ msgid "&Ignore"
 msgstr "&Ignorovat"
 
 #: src/frontends/qt/ui/WrapUi.ui:33
-#, fuzzy
 msgid "Horizontal placement"
-msgstr "Horizontální mezera"
+msgstr "Horizontální umístění"
 
 #: src/frontends/qt/ui/WrapUi.ui:37
 msgid "Outer (default)"
@@ -6171,7 +6149,7 @@ msgstr "Plovoucí &objekt"
 
 #: src/frontends/qt/ui/WrapUi.ui:70
 msgid "Wid&th:"
-msgstr ""
+msgstr "Šířk&a:"
 
 #: src/frontends/qt/ui/WrapUi.ui:108
 msgid "Unit of width value"
