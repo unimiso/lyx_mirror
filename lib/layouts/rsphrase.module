@@ -1,4 +1,4 @@
-#\DeclareLyXModule[rsphrase.sty]{Chemistry: Risk and Safety Statements (obsolete)}
+#\DeclareLyXModule[rsphrase.sty]{Chemistry: Risk and Safety Statements (Obsolete)}
 #\DeclareCategory{Academic Field Specifics}
 #DescriptionBegin
 #Provides two insets and one environment to typeset numbers and phrases of 
