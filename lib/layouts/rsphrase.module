@@ -1,8 +1,9 @@
-#\DeclareLyXModule[rsphrase.sty]{Chemistry: Risk and Safety Statements}
+#\DeclareLyXModule[rsphrase.sty]{Chemistry: Risk and Safety Statements (obsolete)}
 #\DeclareCategory{Academic Field Specifics}
 #DescriptionBegin
 #Provides two insets and one environment to typeset numbers and phrases of 
 #chemical risk and safety statements.
+#Now obsoleted and officialy replaced by GHS Hazard-Precautionary statement system in the EU.
 #DescriptionEnd
 #Author: Uwe Stöhr <uwestoehr@web.de>
 
