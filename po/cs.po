@@ -7592,9 +7592,8 @@ msgstr "Reference"
 #: lib/layouts/powerdot.layout:419 lib/layouts/siamltex.layout:367
 #: lib/layouts/simplecv.layout:211 lib/layouts/stdstruct.inc:92
 #: lib/layouts/svcommon.inc:682
-#, fuzzy
 msgid "Bib preamble"
-msgstr "Preambule náhledu"
+msgstr "Bib preambule"
 
 #: lib/layouts/IEEEtran.layout:399 lib/layouts/aastex.layout:475
 #: lib/layouts/agutex.layout:245 lib/layouts/amsdefs.inc:294
@@ -7607,9 +7606,8 @@ msgstr "Preambule náhledu"
 #: lib/layouts/powerdot.layout:420 lib/layouts/siamltex.layout:368
 #: lib/layouts/simplecv.layout:212 lib/layouts/stdstruct.inc:93
 #: lib/layouts/svcommon.inc:683
-#, fuzzy
 msgid "Bibliography Preamble"
-msgstr "Styl bibliografie"
+msgstr "Preambule bibliografie"
 
 #: lib/layouts/IEEEtran.layout:400 lib/layouts/aastex.layout:476
 #: lib/layouts/agutex.layout:246 lib/layouts/amsdefs.inc:295
@@ -7704,7 +7702,7 @@ msgstr "Triky pro titulek a preambuli"
 #: lib/layouts/InStar.module:3 lib/layouts/fix-cm.module:3
 #: lib/layouts/fixltx2e.module:3 lib/layouts/minimalistic.module:3
 msgid "Fixes & Hacks"
-msgstr ""
+msgstr "Opravy"
 
 #: lib/layouts/InStar.module:13
 msgid ""
@@ -8345,9 +8343,8 @@ msgid "\\Alph{appendix}."
 msgstr "\\Alph{appendix}."
 
 #: lib/layouts/aastex62.layout:253 lib/layouts/copernicus.layout:315
-#, fuzzy
 msgid "Subappendix"
-msgstr "Příloha"
+msgstr "Subappendix"
 
 #: lib/layouts/aastex62.layout:257 lib/layouts/copernicus.layout:319
 msgid "Subsection Appendix"
@@ -8358,9 +8355,8 @@ msgid "\\Alph{appendix}\\arabic{subappendix}."
 msgstr "\\Alph{appendix}\\arabic{subappendix}."
 
 #: lib/layouts/aastex62.layout:269 lib/layouts/copernicus.layout:327
-#, fuzzy
 msgid "Subsubappendix"
-msgstr "Subsubsection Appendix"
+msgstr "Subsubappendix"
 
 #: lib/layouts/aastex62.layout:273 lib/layouts/copernicus.layout:331
 msgid "Subsubsection Appendix"
@@ -8533,9 +8529,8 @@ msgid "ACM SIG Proceedings (SP, Obsolete)"
 msgstr "ACM SIG Proceedings (SP, Obsolete)"
 
 #: lib/layouts/acmart.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Association for Computing Machinery (ACM)"
-msgstr "Association for Computing Machinery (ACM) article"
+msgstr "Association for Computing Machinery (ACM)"
 
 #: lib/layouts/acmart.layout:86 lib/layouts/acmsiggraph-0-92.layout:335
 #: lib/layouts/acmsiggraph.layout:291 lib/layouts/amsdefs.inc:215
@@ -9299,9 +9294,8 @@ msgid "table"
 msgstr "tabulka"
 
 #: lib/layouts/aguplus.inc:236
-#, fuzzy
 msgid "Plano Table"
-msgstr "Planotable"
+msgstr "Plano Table"
 
 #: lib/layouts/agutex.layout:3 lib/examples/Articles:0
 msgid "American Geophysical Union (AGUTeX)"
@@ -9325,16 +9319,14 @@ msgid "Author affiliation:"
 msgstr "Author affiliation:"
 
 #: lib/layouts/algorithm2e.module:2
-#, fuzzy
 msgid "Algorithm2e Float"
-msgstr "Algorithm2e"
+msgstr "Plovoucí Algorithm2e"
 
 #: lib/layouts/algorithm2e.module:3 lib/layouts/bicaption.module:3
 #: lib/layouts/figs-within-sections.module:3
 #: lib/layouts/tabs-within-sections.module:3
-#, fuzzy
 msgid "Floats & Captions"
-msgstr "Nastavení třídy"
+msgstr "Plovoucí objekty & popisky"
 
 #: lib/layouts/algorithm2e.module:8
 msgid ""
@@ -9353,9 +9345,8 @@ msgstr "Seznam algoritmů"
 
 #: lib/layouts/amsart.layout:3 lib/layouts/amsbook.layout:3
 #: lib/examples/Articles:0
-#, fuzzy
 msgid "American Mathematical Society (AMS)"
-msgstr "American Mathematical Society (AMS) Book"
+msgstr "American Mathematical Society (AMS)"
 
 #: lib/layouts/amsart.layout:87
 msgid "SpecialSection"
@@ -10443,19 +10434,16 @@ msgid "Beamerposter"
 msgstr "Beamerposter"
 
 #: lib/layouts/bicaption.module:2
-#, fuzzy
 msgid "Bilingual Captions"
-msgstr "Vícejazyčné popisky"
+msgstr "Dvojjazyčné popisky"
 
 #: lib/layouts/bicaption.module:7
-#, fuzzy
 msgid ""
 "Provides two styles to typeset bilingual captions. For a description see "
 "Help > Specific Manuals > Multilingual Captions."
 msgstr ""
 "Poskytuje dvojici stylů pro sazbu vícejazyčných popisků. Pro detaily "
-"nahlédněte do souboru MultilingualCaptions.lyx, který je uložený v "
-"příkladech."
+"nahlédněte do Nápověda > Specializované manuály > Vícejazyčné popisky."
 
 #: lib/layouts/bicaption.module:11
 msgid "Caption setup"
@@ -10514,16 +10502,14 @@ msgstr "Braillovo písmo"
 
 #: lib/layouts/braille.module:3
 msgid "Accessibility"
-msgstr ""
+msgstr "Zpřístupnění"
 
 #: lib/layouts/braille.module:7
-#, fuzzy
 msgid ""
 "Defines an environment to typeset Braille. For more details see Help > "
 "Specific Manuals > Braille."
 msgstr ""
-"Definuje prostředí pro sazbu Braillova slepeckého písma. Detaily viz soubor "
-"Braille.lyx v příkladech."
+"Definuje prostředí pro sazbu Braillova slepeckého písma. Detaily viz Nápověda > Specializované manuály > Braillovo písmo"
 
 #: lib/layouts/braille.module:23
 msgid "Braille (default)"
@@ -11983,18 +11969,15 @@ msgid "If content is 'url', email becomes an Internet address"
 msgstr "If content is 'url', email becomes an Internet address"
 
 #: lib/layouts/endnotes.module:2
-#, fuzzy
 msgid "Endnotes (Basic)"
-msgstr "Koncová poznámka ##"
+msgstr "Koncové poznámky (základní)"
 
 #: lib/layouts/endnotes.module:3 lib/layouts/enotez.module:3
 #: lib/layouts/foottoend.module:3 lib/layouts/foottoenotez.module:3
-#, fuzzy
 msgid "Foot- and Endnotes"
-msgstr "Poznámky pod čarou"
+msgstr "Poznámky koncové & pod čarou"
 
 #: lib/layouts/endnotes.module:10
-#, fuzzy
 msgid ""
 "Adds an endnote inset, in addition to footnotes. This uses the endnotes "
 "package, which has some limitations but works with older LaTeX distributions "
@@ -12002,16 +11985,14 @@ msgid ""
 "References > Endnotes) where you want the endnotes to appear."
 msgstr ""
 "Přidává vložku pro koncové poznámky (Endnote) (krom již existujících "
-"poznámek pod čarou).Budete muset přidat \\theendnotes do vložky TeX-ového "
-"kódu, a to v místě, kde se mají koncové poznámky objevit."
+"poznámek pod čarou). Používá balíček endnotes, který má určité limitace, ale funguje i se staršímy distribucemi LaTeX-u. Budete muset přidat seznam poznámek na místo, kde se mají koncové poznámky objevit (Vložit > Seznamy > Koncové poznámky)."
 
 #: lib/layouts/endnotes.module:15 lib/layouts/endnotes.module:42
 #: lib/layouts/enotez.module:15 lib/layouts/enotez.module:36
 #: lib/layouts/foottoend.module:30 lib/layouts/foottoenotez.module:25
 #: lib/layouts/memoir.layout:307
-#, fuzzy
 msgid "Endnotes"
-msgstr "Koncová poznámka"
+msgstr "Koncové poznámky"
 
 #: lib/layouts/endnotes.module:16 lib/layouts/enotez.module:16
 #: lib/layouts/memoir.layout:308
@@ -12033,14 +12014,12 @@ msgstr "koncová poznámka"
 #: lib/layouts/endnotes.module:32 lib/layouts/endnotes.module:35
 #: lib/layouts/foottoend.module:20 lib/layouts/foottoend.module:23
 #: lib/layouts/memoir.layout:326 lib/layouts/memoir.layout:329
-#, fuzzy
 msgid "Notes[[Endnotes]]"
-msgstr "Pozn."
+msgstr "Poznámky"
 
 #: lib/layouts/enotez.module:2
-#, fuzzy
 msgid "Endnotes (Extended)"
-msgstr "Teorémy (rozšíření AMS)"
+msgstr "Koncové poznámky (rozšířené)"
 
 #: lib/layouts/enotez.module:10
 msgid ""
@@ -12049,7 +12028,7 @@ msgid ""
 "(module 'Endnotes (Basic)'), but requires a fairly modern LaTeX distribution "
 "(with LaTeX3). You will need to add an endnotes list (Insert > List/Contents/"
 "References > Endnotes) where you want the endnotes to appear."
-msgstr ""
+msgstr "Přidává vložku koncové poznámky. Používá balíček enotez, který je více přizpůsobitelný a účinný nežli balíček endnotes (viz. modul Koncové poznámky (základní)), ale vyžaduje moderní LaTeX-ovou distribuci (obsahující LaTeX3). Budete muset přidat seznam poznámek na místo, kde se mají koncové poznámky objevit (Vložit > Seznamy > Koncové poznámky). "
 
 #: lib/layouts/entcs.layout:3
 msgid "Electronic Notes in Theor. Comp. Sc. (ENTCS)"
@@ -12064,9 +12043,8 @@ msgid "Customisable Lists (enumitem)"
 msgstr "Přizpůsobení seznamů (enumitem)"
 
 #: lib/layouts/enumitem.module:3 lib/layouts/paralist.module:3
-#, fuzzy
 msgid "List Enhancements"
-msgstr "Seznam schémat"
+msgstr "Vylepšení seznamů"
 
 #: lib/layouts/enumitem.module:7
 msgid ""
@@ -12514,9 +12492,8 @@ msgstr ""
 "např. 'fig. 2.1'"
 
 #: lib/layouts/fix-cm.module:2
-#, fuzzy
 msgid "Fix Computer Modern Fonts"
-msgstr "Computer Modern Sans"
+msgstr "Opravy fontů Computer Modern"
 
 #: lib/layouts/fix-cm.module:9
 msgid ""
@@ -12529,9 +12506,8 @@ msgstr ""
 "doc/latex/base/fixltx2e.pdf ."
 
 #: lib/layouts/fixltx2e.module:2
-#, fuzzy
 msgid "LaTeX Kernel Fixes (Obsolete)"
-msgstr "Latex8 Article (Obsolete)"
+msgstr "Opravy LaTeX kernelu (zastaralé)"
 
 #: lib/layouts/fixltx2e.module:11
 msgid ""
@@ -12551,15 +12527,14 @@ msgstr ""
 "funkcionalitu, čímž se tento modul stal zastaralým."
 
 #: lib/layouts/fixme.module:2
-#, fuzzy
 msgid "FiXme Notes"
-msgstr "Fixme Note"
+msgstr "Poznámky FiXme"
 
 #: lib/layouts/fixme.module:3 lib/layouts/pdfcomment.module:3
 #: lib/layouts/pdfform.module:3 lib/layouts/ruby.module:3
 #: lib/layouts/todonotes.module:3
 msgid "Annotation & Revision"
-msgstr ""
+msgstr "Anotace & Revize"
 
 #: lib/layouts/fixme.module:12
 msgid ""
@@ -12895,7 +12870,7 @@ msgstr "Definice*"
 
 #: lib/layouts/foottoend.module:2
 msgid "Footnotes as Endnotes (Basic)"
-msgstr ""
+msgstr "Poznámky pod čarou coby koncové (základní)"
 
 #: lib/layouts/foottoend.module:10
 msgid ""
@@ -12903,11 +12878,11 @@ msgid ""
 "some limitations but works with older LaTeX distributions as well. You will "
 "need to add an endnotes list (Insert > List/Contents/References > Endnotes) "
 "where you want the endnotes to appear."
-msgstr ""
+msgstr "Přenastaví všechny poznámky pod čarou na poznámky koncové. Používá balíček endnotes, který má určité limitace, ale funguje i se staršímy distribucemi LaTeX-u. Budete muset přidat seznam poznámek na místo, kde se mají koncové poznámky objevit (Vložit > Seznamy > Koncové poznámky). "
 
 #: lib/layouts/foottoenotez.module:2
 msgid "Footnotes as Endnotes (Extended)"
-msgstr ""
+msgstr "Poznámky pod čarou coby koncové (rozšířené)"
 
 #: lib/layouts/foottoenotez.module:11
 msgid ""
@@ -12916,7 +12891,8 @@ msgid ""
 "Endnotes (Basic)'), but requires a fairly modern LaTeX distribution (with "
 "LaTeX3).You will need to add an endnotes list (Insert > List/Contents/"
 "References > Endnotes) where you want the endnotes to appear."
-msgstr ""
+msgstr "Přenastaví všechny poznámky pod čarou na poznámky koncové. Používá balíček enotez, který je více přizpůsobitelný a účinný nežli balíček endnotes (viz. modul Poznámky pod čarou coby koncové (základní)), ale vyžaduje moderní LaTeX-ovou distribuci (obsahující LaTeX3). Budete muset přidat seznam poznámek na místo, kde se mají koncové poznámky objevit (Vložit > Seznamy > Koncové poznámky)."
+
 
 #: lib/layouts/frletter.layout:3 lib/examples/Articles:0
 msgid "French Letter (frletter)"
@@ -13307,9 +13283,8 @@ msgstr "Rámečky pro transformace"
 
 #: lib/layouts/graphicboxes.module:3 lib/layouts/sectionbox.module:3
 #: lib/layouts/tcolorbox.module:3 lib/layouts/varwidth.module:3
-#, fuzzy
 msgid "Boxes"
-msgstr "Rámování"
+msgstr "Rámečky"
 
 #: lib/layouts/graphicboxes.module:6
 msgid "Boxes to scale and rotate its contents"
@@ -13483,25 +13458,22 @@ msgid "Scene"
 msgstr "Scene"
 
 #: lib/layouts/hpstatement.module:2
-#, fuzzy
 msgid "Chemistry: Hazard and Precautionary Statements"
-msgstr "Výkaz pro chem. rizika"
+msgstr "Chemie: Fráze rizik a bezpečnostních opatření"
 
 #: lib/layouts/hpstatement.module:3 lib/layouts/linguistics.module:3
 #: lib/layouts/rsphrase.module:3
 msgid "Academic Field Specifics"
-msgstr ""
+msgstr "Oborově specifické"
 
 #: lib/layouts/hpstatement.module:8
-#, fuzzy
 msgid ""
 "Provides two insets to typeset numbers and phrases of chemical hazard and "
 "precautionary statements. For a description see Help > Specific Manuals > "
 "Hazard and Precautionary Statements."
 msgstr ""
-"Poskytne dvě vložky pro sazbu frází a čísel bezpečnostních rizik a "
-"chemických hazardů. Pro popis nahlédňete do souboru H-P-statements.lyx v "
-"příkladech."
+"Poskytne dvě vložky pro sazbu frází a čísel chemických rizik a "
+"preventivních opatření. Pro popis nahlédňete do Nápověda > Specifické manuály > Bezpečnostní výkaz."
 
 #: lib/layouts/hpstatement.module:12 lib/layouts/hpstatement.module:17
 msgid "H-P number"
@@ -15125,9 +15097,8 @@ msgid "Endnotes (sectioned)"
 msgstr "Headnote (optional):"
 
 #: lib/layouts/minimalistic.module:2
-#, fuzzy
 msgid "Minimalistic Insets"
-msgstr "Minimalistický"
+msgstr "Minimalistické vložky"
 
 #: lib/layouts/minimalistic.module:6
 msgid "Redefines several insets (Index, Branch, URL) as being Minimalistic."
@@ -16355,19 +16326,15 @@ msgid "PACS number:"
 msgstr "PACS number:"
 
 #: lib/layouts/rsphrase.module:2
-#, fuzzy
-msgid "Chemistry: Risk and Safety Statements"
-msgstr "R a S-věty"
+msgid "Chemistry: Risk and Safety Statements (Obsolete)"
+msgstr "Chemie: Risk a bezpečnost (zastaralé)"
 
 #: lib/layouts/rsphrase.module:7
-#, fuzzy
 msgid ""
 "Provides two insets and one environment to typeset numbers and phrases of "
-"chemical risk and safety statements."
+"chemical risk and safety statements. Now obsoleted and officialy replaced by GHS Hazard-Precautionary statement system in the EU."
 msgstr ""
-"Poskytuje dvě vložky a jedno prostředí pro sazbu čísel a frází pokynů s "
-"nebezpečnými chemickými látkami (R a S-věty). Pro popis viz. soubor R-S-"
-"statements.lyx v příkladech."
+"Poskytuje dvě vložky a jedno prostředí pro sazbu čísel a frází chemických rizik a bezpečnostních opatření. Nyní zastaralý a nahrazený novějším systémem frází pro rizika a bezpečností opatření."
 
 #: lib/layouts/rsphrase.module:11 lib/layouts/rsphrase.module:16
 msgid "R-S number"
