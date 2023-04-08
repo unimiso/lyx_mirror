@@ -301,27 +301,27 @@ ToolbarSet
 	End
 
 	Toolbar "toolbar-toggle_math" "Show math toolbar"
-		Item "[[Toolbar]]On" "toolbar-set math on"
-		Item "[[Toolbar]]Off" "toolbar-set math off"
-		Item "[[Toolbar]]Automatic" "toolbar-set math auto"
+		Item "[[Toolbar]]&On" "toolbar-set math on"
+		Item "[[Toolbar]]O&ff" "toolbar-set math off"
+		Item "[[Toolbar]]&Automatic" "toolbar-set math auto"
 	End
 
 	Toolbar "toolbar-toggle_math_panels" "Show math panels"
-		Item "[[Toolbar]]On" "toolbar-set math_panels on"
-		Item "[[Toolbar]]Off" "toolbar-set math_panels off"
-		Item "[[Toolbar]]Automatic" "toolbar-set math_panels auto"
+		Item "[[Toolbar]]&On" "toolbar-set math_panels on"
+		Item "[[Toolbar]]O&ff" "toolbar-set math_panels off"
+		Item "[[Toolbar]]&Automatic" "toolbar-set math_panels auto"
 	End
 
 	Toolbar "toolbar-toggle_table" "Show table toolbar"
-		Item "[[Toolbar]]On" "toolbar-set table on"
-		Item "[[Toolbar]]Off" "toolbar-set table off"
-		Item "[[Toolbar]]Automatic" "toolbar-set table auto"
+		Item "[[Toolbar]]&On" "toolbar-set table on"
+		Item "[[Toolbar]]O&ff" "toolbar-set table off"
+		Item "[[Toolbar]]&Automatic" "toolbar-set table auto"
 	End
 
 	Toolbar "toolbar-toggle_review" "Show review toolbar"
-		Item "[[Toolbar]]On" "toolbar-set review on"
-		Item "[[Toolbar]]Off" "toolbar-set review off"
-		Item "[[Toolbar]]Automatic" "toolbar-set review auto"
+		Item "[[Toolbar]]&On" "toolbar-set review on"
+		Item "[[Toolbar]]O&ff" "toolbar-set review off"
+		Item "[[Toolbar]]&Automatic" "toolbar-set review auto"
 	End
 
 # The following three toolbars are disabled because of missing icons.
