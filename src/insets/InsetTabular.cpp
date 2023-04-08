@@ -7516,10 +7516,15 @@ docstring InsetTabular::asString(idx_type stidx, idx_type enidx,
 {
 	LASSERT(stidx <= enidx, return docstring());
 	docstring retval;
-	col_type const col1 = tabular.cellColumn(stidx);
-	col_type const col2 = tabular.cellColumn(enidx);
-	row_type const row1 = tabular.cellRow(stidx);
-	row_type const row2 = tabular.cellRow(enidx);
+	col_type col1 = tabular.cellColumn(stidx);
+	col_type col2 = tabular.cellColumn(enidx);
+	row_type row1 = tabular.cellRow(stidx);
+	row_type row2 = tabular.cellRow(enidx);
+	// stidx might be in a later column or row than enidx
+	if (col1 > col2)
+		swap(col1, col2);
+	if (row1 > row2)
+		swap(row1, row2);
 	bool first = true;
 	for (col_type col = col1; col <= col2; col++)
 		for (row_type row = row1; row <= row2; row++) {
@@ -7537,10 +7542,15 @@ ParagraphList InsetTabular::asParList(idx_type stidx, idx_type enidx)
 {
 	LASSERT(stidx <= enidx, return ParagraphList());
 	ParagraphList retval;
-	col_type const col1 = tabular.cellColumn(stidx);
-	col_type const col2 = tabular.cellColumn(enidx);
-	row_type const row1 = tabular.cellRow(stidx);
-	row_type const row2 = tabular.cellRow(enidx);
+	col_type col1 = tabular.cellColumn(stidx);
+	col_type col2 = tabular.cellColumn(enidx);
+	row_type row1 = tabular.cellRow(stidx);
+	row_type row2 = tabular.cellRow(enidx);
+	// stidx might be in a later column or row than enidx
+	if (col1 > col2)
+		swap(col1, col2);
+	if (row1 > row2)
+		swap(row1, row2);
 	for (col_type col = col1; col <= col2; col++)
 		for (row_type row = row1; row <= row2; row++)
 			for (auto const & par : tabular.cellInset(row, col)->paragraphs())
