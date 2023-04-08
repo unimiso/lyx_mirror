@@ -401,11 +401,13 @@ int LaTeX::run(TeXErrors & terr)
 	// After the bibliography was processed, we need more passes of LaTeX
 	// in order to resolve the citations. We need to do this before the index
 	// is being generated (since we need the correct pagination, see #2696).
+	// With bibliography environment, another LaTeX run might be needed
+	// as well to resolve citations.
 	// Also, memoir (at least) writes an empty *idx file in the first place.
 	// A further latex run is needed in that case as well.
 	FileName const idxfile(changeExtension(file.absFileName(), ".idx"));
-	if (run_bibtex || (idxfile.exists() && idxfile.isFileEmpty())) {
-		while ((head.sumchange() || rerun || (scanres & RERUN))
+	if (run_bibtex || (scanres & UNDEF_CIT) || (idxfile.exists() && idxfile.isFileEmpty())) {
+		while ((head.sumchange() || rerun || (scanres & RERUN) || (scanres & UNDEF_CIT))
 		       && count < MAX_RUN) {
 			// Yes rerun until message goes away, or until
 			// MAX_RUNS are reached.
