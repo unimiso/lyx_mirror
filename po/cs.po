@@ -7562,7 +7562,7 @@ msgstr "Short title for the appendix"
 #: lib/layouts/tufte-handout.layout:78 lib/examples/Articles:0
 #: src/frontends/qt/GuiDocument.cpp:1816 src/insets/InsetBibtex.cpp:963
 msgid "Bibliography"
-msgstr "Literatura"
+msgstr "Bibliografie"
 
 #: lib/layouts/IEEEtran.layout:389 lib/layouts/aastex.layout:464
 #: lib/layouts/aastex.layout:485 lib/layouts/agutex.layout:235
@@ -7621,7 +7621,7 @@ msgstr "Preambule bibliografie"
 #: lib/layouts/simplecv.layout:213 lib/layouts/stdstruct.inc:94
 #: lib/layouts/svcommon.inc:684
 msgid "LaTeX code to be inserted before the first bibliography item"
-msgstr ""
+msgstr "Kód LaTeX-u vložený před první položku bibliografie"
 
 #: lib/layouts/IEEEtran.layout:410
 msgid "Biography"
@@ -10766,32 +10766,30 @@ msgid "KnightMove:"
 msgstr "KnightMove:"
 
 #: lib/layouts/chessboard.module:2
-#, fuzzy
 msgid "Chess Board"
-msgstr "ChessBoard"
+msgstr "šachovnice"
 
 #: lib/layouts/chessboard.module:3 lib/layouts/lilypond.module:3
 msgid "Leisure, Sports & Music"
-msgstr ""
+msgstr "Volno, sporty & hudba"
 
 #: lib/layouts/chessboard.module:7
 msgid ""
 "Support for the chessboard package to print chess games See File > Open "
 "Example > Articles > Chess where you will find Game 1 and Game 2."
-msgstr ""
+msgstr "Podpora balíčku chessboard pro záznam šachových partií, viz Soubor > Otevřít příklad > Články > Šachy."
 
 #: lib/layouts/chessboard.module:16
 msgid "NewChessGame"
-msgstr ""
+msgstr "NewChessGame"
 
 #: lib/layouts/chessboard.module:22
 msgid "[Start New Chess Game]"
-msgstr ""
+msgstr "[Start New Chess Game]"
 
 #: lib/layouts/chessboard.module:32
-#, fuzzy
 msgid "Chessgame Options"
-msgstr "Frame Options"
+msgstr "Chessgame Options"
 
 #: lib/layouts/chessboard.module:33
 msgid "See xskak manual for a comprehensive list of keys and values"
@@ -14197,7 +14195,6 @@ msgstr "Rnw (knitr)"
 
 #: lib/layouts/knitr.module:3 lib/layouts/noweb.module:3
 #: lib/layouts/sweave.module:3
-#, fuzzy
 msgid "Literate Programming"
 msgstr "Dokumentované programování"
 
@@ -14214,9 +14211,8 @@ msgstr ""
 
 #: lib/layouts/knitr.module:14 lib/layouts/litinsets.inc:12
 #: lib/layouts/sweave.module:14
-#, fuzzy
 msgid "Knitr Chunk"
-msgstr "Útržek"
+msgstr "Knitr úsek"
 
 #: lib/layouts/knitr.module:21 lib/layouts/sweave.module:31
 msgid "Sweave Options"
@@ -14339,19 +14335,17 @@ msgid "P.S.:"
 msgstr "P.S.:"
 
 #: lib/layouts/lilypond.module:2
-#, fuzzy
 msgid "LilyPond Music Notation"
-msgstr "LilyPond music"
+msgstr "Sazba not (LilyPond)"
 
 #: lib/layouts/lilypond.module:8
-#, fuzzy
 msgid ""
 "This module adds an inset to enter LilyPond code directly into LyX. It will "
 "be processed in the output. For details, see Help > Specific Manuals > "
 "LilyPond."
 msgstr ""
 "Tento modul přidává vložku pro vkládání kódu LilyPond uvnitř LyX-u (bude "
-"automaticky přeložen při exportu). Viz lilypond.lyx v příkladech."
+"automaticky přeložen při exportu). Viz Nápověda > Specializované manuály > Noty (LilyPond)."
 
 #: lib/layouts/lilypond.module:15 lib/layouts/lilypond.module:16
 #: lib/xtemplates/lilypond.xtemplate:14
@@ -14374,22 +14368,19 @@ msgid "Linguistics"
 msgstr "Lingvistika"
 
 #: lib/layouts/linguistics.module:8
-#, fuzzy
 msgid ""
 "Defines some special environments useful for linguistics (numbered examples, "
 "glosses, semantic markup, tableau floats). See Help > Specific Manuals > "
 "Linguistics."
 msgstr ""
 "Definuje speciální prostředí užitečné pro lingvistiku (číslované příklady, "
-"glosy, semantické styly znaků (markup), plovoucí tabla). Viz soubor "
-"linguistics.lyx v příkladech."
+"glosy, semantické styly znaků (markup), plovoucí tabla). Viz Nápověda > Specializované manuály > Lingvistika."
 
 #: lib/layouts/linguistics.module:20
 msgid "(\\arabic{example})"
 msgstr "(\\arabic{example})"
 
 #: lib/layouts/linguistics.module:24
-#, fuzzy
 msgid "Numbered Example (Multiline)"
 msgstr "Číslovaný příklad (víceřádkový)"
 
@@ -14412,19 +14403,16 @@ msgid "\\theexamplei (\\alph{subexamplei})"
 msgstr "\\theexamplei (\\alph{subexamplei})"
 
 #: lib/layouts/linguistics.module:44
-#, fuzzy
 msgid "\\theexamplei (\\alph{subexampleii})"
-msgstr "\\theexamplei (\\alph{subexamplei})"
+msgstr "\\theexamplei (\\alph{subexampleii})"
 
 #: lib/layouts/linguistics.module:50
-#, fuzzy
 msgid "\\theexamplei (\\alph{subexampleiii})"
-msgstr "\\theexamplei (\\alph{subexamplei})"
+msgstr "\\theexamplei (\\alph{subexampleiii})"
 
 #: lib/layouts/linguistics.module:56
-#, fuzzy
 msgid "\\theexamplei (\\alph{subexampleiv})"
-msgstr "\\theexamplei (\\alph{subexamplei})"
+msgstr "\\theexamplei (\\alph{subexampleiv})"
 
 #: lib/layouts/linguistics.module:64
 msgid "Numbered Example (multiline)"
@@ -14443,38 +14431,32 @@ msgid "Customize the numeration"
 msgstr "Přizpůsobení číslování"
 
 #: lib/layouts/linguistics.module:130
-#, fuzzy
 msgid "Subexamples options"
-msgstr "Podpříklad"
+msgstr "Volby podpříkladu"
 
 #: lib/layouts/linguistics.module:131
-#, fuzzy
 msgid "Subexamples options|s"
-msgstr "Volby podtitulku"
+msgstr "Volby podpříkladu|d"
 
 #: lib/layouts/linguistics.module:132
-#, fuzzy
 msgid "Add subexamples options here"
-msgstr "Zde vložte volby"
+msgstr "Zde vložte volby podříkladu"
 
 #: lib/layouts/linguistics.module:144
 msgid "Interlinear Gloss (2 Lines)"
 msgstr ""
 
 #: lib/layouts/linguistics.module:146
-#, fuzzy
 msgid "Gloss"
-msgstr "Glosa"
+msgstr "Gloss"
 
 #: lib/layouts/linguistics.module:162 lib/layouts/linguistics.module:208
-#, fuzzy
 msgid "Gloss options"
-msgstr "Nastavení třídy"
+msgstr "Volby glosy"
 
 #: lib/layouts/linguistics.module:163 lib/layouts/linguistics.module:209
-#, fuzzy
 msgid "Gloss Options|s"
-msgstr "Nastavení třídy"
+msgstr "Volby glosy|g"
 
 #: lib/layouts/linguistics.module:164
 msgid "Add digloss options here"
@@ -14494,14 +14476,13 @@ msgid "Translation"
 msgstr "Překlad"
 
 #: lib/layouts/linguistics.module:179 lib/layouts/linguistics.module:235
-#, fuzzy
 msgid "Gloss Translation"
-msgstr "Překlad glos|g"
+msgstr "Překlad glos"
 
 #: lib/layouts/linguistics.module:180
 #, fuzzy
 msgid "Add a free translation for the gloss"
-msgstr "Přidat překlad glosy"
+msgstr ""
 
 #: lib/layouts/linguistics.module:190
 msgid "Interlinear Gloss (3 Lines)"
@@ -14513,9 +14494,8 @@ msgid "Tri-Gloss"
 msgstr "Tri-Glosa"
 
 #: lib/layouts/linguistics.module:210
-#, fuzzy
 msgid "Add trigloss options here"
-msgstr "Zde vložte volby"
+msgstr "Zde vložte volby pro tri-glosu"
 
 #: lib/layouts/linguistics.module:214
 msgid "Interlinear Gloss (1)"
@@ -15467,7 +15447,7 @@ msgstr "Polish Report (MW Bundle)"
 
 #: lib/layouts/natbibapa.module:2
 msgid "APA Style with Natbib"
-msgstr ""
+msgstr "Styl APA s použitím Natbib"
 
 #: lib/layouts/natbibapa.module:10
 msgid ""
@@ -15648,15 +15628,13 @@ msgid "PDF Comments"
 msgstr "PDF Komentáře"
 
 #: lib/layouts/pdfcomment.module:8
-#, fuzzy
 msgid ""
 "Provides various kinds of annotations for the PDF output. The module uses "
 "the pdfcomment package. Please consult Help > Specific Manuals > PDF "
 "comments and the package documentation for details."
 msgstr ""
 "Poskytuje různé styly anotací pro PDF výstup. Modul používá balíček "
-"pdfcomment. Pro další detaily viz PDF-comment.lyx v příkladech a dokumentaci "
-"k balíčku."
+"pdfcomment. Pro další detaily viz Nápověda > Specializované manuály > PDF komentáře."
 
 #: lib/layouts/pdfcomment.module:20
 msgid "Define Avatar"
@@ -15856,15 +15834,13 @@ msgid "PDF Form"
 msgstr "PDF formulář"
 
 #: lib/layouts/pdfform.module:8
-#, fuzzy
 msgid ""
 "Provides fields and buttons for PDF forms. The module uses the LaTeX package "
 "hyperref. Please consult Help > Specific Manuals > PDF forms and the "
 "documentation of hyperref for details."
 msgstr ""
 "Poskytuje tlačítka a pole pro PDF formuláře. Modul používá LaTeX-ový balíček "
-"hyperref. Detaily lze najít v dokumentaci k tomuto balíčku a souboru PDF-"
-"form.lyx v příkladech."
+"hyperref. Detaily viz Nápověda > Specializované manuály > PDF formulář."
 
 #: lib/layouts/pdfform.module:16 lib/layouts/pdfform.module:27
 msgid "Begin PDF Form"
@@ -16363,32 +16339,30 @@ msgstr "S phrase:"
 
 #: lib/layouts/ruby.module:2
 msgid "Ruby (Furigana)"
-msgstr ""
+msgstr "Ruby (Furigana)"
 
 #: lib/layouts/ruby.module:8
 msgid ""
 "Defines an inset to typeset reading aids (ruby, furigana) to Chinese "
 "characters. Uses the 'okumakro', 'luatexja-ruby', or 'ruby' package "
 "(depending on the TeX engine) or a fallback definition."
-msgstr ""
+msgstr "Definuje vložku poskytující pomocné značky (ruby, furigana) pro čínské znaky. Používá balíčky 'okumakro', 'luatexja-ruby' nebo 'ruby' (v závislosti na zvoleném TeX-ovém jádru) případně nouzové (fallback) definici."
 
 #: lib/layouts/ruby.module:26 lib/layouts/ruby.module:35
 msgid "Ruby"
-msgstr ""
+msgstr "Ruby"
 
 #: lib/layouts/ruby.module:49
-#, fuzzy
 msgid "ruby text"
-msgstr "Smazat text"
+msgstr "ruby text"
 
 #: lib/layouts/ruby.module:50
-#, fuzzy
 msgid "Ruby Text|R"
-msgstr "Zkopírovat text|k"
+msgstr "Ruby text|R"
 
 #: lib/layouts/ruby.module:51
 msgid "Reading aid (ruby, furigana) for Chinese characters."
-msgstr ""
+msgstr "Pomocné značky (ruby, furigana) pro čínské znaky.)"
 
 #: lib/layouts/sciposter.layout:3 lib/examples/Articles:0
 msgid "SciPoster"
@@ -17599,15 +17573,13 @@ msgid "Sweave"
 msgstr "Sweave"
 
 #: lib/layouts/sweave.module:7
-#, fuzzy
 msgid ""
 "Allows to use the statistical language S/R as a literate programming tool "
 "via the Sweave() function. For more info see Help > Specific Manuals > "
 "Sweave."
 msgstr ""
 "Povoluje statistický programovací jazyk S/R jakožto nástroj pro "
-"dokumentované programování. Používá balíček Sweave. Viz sweave.lyx v "
-"příkladech."
+"dokumentované programování skrze funkci Sweave(). Viz Nápověda > Specializované manuály > Sweave."
 
 #: lib/layouts/sweave.module:77 lib/layouts/sweave.module:78
 msgid "Sweave Input File"
@@ -26994,9 +26966,8 @@ msgid "MS Excel Office Open XML"
 msgstr "MS Excel Office Open XML"
 
 #: lib/configure.py:802
-#, fuzzy
 msgid "XHTML Table (for spreadsheets)"
-msgstr "HTML Tabulka (pro tabulkové kalkulátory)"
+msgstr "XHTML Tabulka (pro tabulkové kalkulátory)"
 
 #: lib/configure.py:803
 msgid "HTML Table (for spreadsheets)"
@@ -27272,11 +27243,11 @@ msgstr "LyX Archive (tar.gz)"
 
 #: lib/examples/Articles:0
 msgid "Game 1"
-msgstr "Game 1"
+msgstr "Partie 1"
 
 #: lib/examples/Articles:0
 msgid "Game 2"
-msgstr "Game 2"
+msgstr "Partie 2"
 
 #: lib/examples/Articles:0
 msgid "Example (LyXified)"
@@ -33143,25 +33114,23 @@ msgstr ""
 
 #: src/frontends/qt/GuiDocument.cpp:5254
 msgid "%1 (missing req.)"
-msgstr ""
+msgstr "%1 (chybí záv.)"
 
 #: src/frontends/qt/GuiDocument.cpp:5266
-#, fuzzy
 msgid "personal module"
-msgstr "Personal Info"
+msgstr "vlastní modul"
 
 #: src/frontends/qt/GuiDocument.cpp:5266
 msgid "distributed module"
-msgstr ""
+msgstr "distribuovaný modul"
 
 #: src/frontends/qt/GuiDocument.cpp:5267
-#, fuzzy
 msgid "<b>Module name:</b> <i>%1</i> (%2)"
-msgstr "(Jméno modulu: %1)"
+msgstr "<b>Jméno modulu:</b> <i>%1</i> (%2)"
 
 #: src/frontends/qt/GuiDocument.cpp:5273
 msgid "<b>Note:</b> Some requirements for this module are missing!"
-msgstr ""
+msgstr "<b>Poznámka:</b> Některé závislosti pro tento modul chybí!"
 
 #: src/frontends/qt/GuiERT.h:33
 msgid "TeX Mode Inset Settings"
