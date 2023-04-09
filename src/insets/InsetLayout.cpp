@@ -585,12 +585,12 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 		case IL_DOCBOOKWRAPPERATTR:
 			lex >> docbookwrapperattr_;
 			break;
-        case IL_DOCBOOKNOFONTINSIDE:
-            lex >> docbooknofontinside_;
-            break;
-        case IL_DOCBOOKRENDERASIMAGE:
-            lex >> docbookrenderasimage_;
-            break;
+		case IL_DOCBOOKNOFONTINSIDE:
+			lex >> docbooknofontinside_;
+			break;
+		case IL_DOCBOOKRENDERASIMAGE:
+			lex >> docbookrenderasimage_;
+			break;
 		case IL_REQUIRES: {
 			lex.eatLine();
 			vector<string> const req
