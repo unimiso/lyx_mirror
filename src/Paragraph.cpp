@@ -1100,10 +1100,7 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	    // babel with Xe/LuaTeX does not need a switch
 	    // and \L is not defined there.
 	    && (!runparams.isFullUnicode() || !runparams.use_babel)
-	    && running_font.isRightToLeft()
-	    // ERT is an exception, it should be output with no
-	    // decorations at all
-	    && inset->lyxCode() != ERT_CODE) {
+	    && running_font.isRightToLeft()) {
 		if (runparams.use_polyglossia) {
 			// (lua)bidi
 			// Displayed environments go in an LTR environment

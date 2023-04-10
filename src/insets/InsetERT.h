@@ -36,6 +36,9 @@ public:
 	static CollapseStatus string2params(std::string const &);
 	///
 	static std::string params2string(CollapseStatus);
+	/// Do NOT force inset into LTR environment if surroundings are RTL
+	/// even though insetlayout has (and should have) forceltr true
+	bool forceLTR(OutputParams const &) const override { return false; }
 
 	std::string contextMenuName() const override
 		{ return "context-ert"; }
