@@ -1091,6 +1091,8 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	}
 
 	bool close_brace = false;
+	bool const disp_env = (inset->isEnvironment() && inset->getLayout().isDisplay())
+			|| runparams.inDisplayMath;
 	string close_env;
 	odocstream::pos_type const len = os.os().tellp();
 
@@ -1105,7 +1107,7 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 		if (runparams.use_polyglossia) {
 			// (lua)bidi
 			// Displayed environments go in an LTR environment
-			if (inset->isEnvironment() && inset->getLayout().isDisplay()) {
+			if (disp_env) {
 				os << "\\begin{LTR}";
 				close_env = "LTR";
 			} else {
@@ -1119,6 +1121,8 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 		} else {
 			// babel classic
 			os << "\\L{";
+			if (disp_env)
+				os << safebreakln;
 			close_brace = true;
 		}
 	}
@@ -1200,8 +1204,11 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	if (!close_env.empty())
 		os << "\\end{" << close_env << "}";
 
-	if (close_brace)
+	if (close_brace) {
 		os << '}';
+		if (disp_env)
+			os << safebreakln;
+	}
 
 	if (os.texrow().rows() > previous_row_count) {
 		os.texrow().start(owner_->id(), i + 1);
