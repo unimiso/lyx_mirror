@@ -17707,6 +17707,46 @@ LatexName
 status collapsed
 
 \begin_layout Plain Layout
+EditExternal
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+0
+\end_layout
+
+\end_inset
+
+,
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+] Erlaubt es,
+ dass der Inhalt der Einfügung (mit dem für das Dokument-Ausgabeformat definierten Bearbeitungsprogramm) extern bearbeitet wird.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 End
 \end_layout
 
