@@ -756,6 +756,14 @@ contributors = [
                  "31 May 2007",
                  u"RTL/BiDi-related fixes"),
 
+     contributor(u"Udi Fogiel",
+                 "udifoglle () gmail ! com",
+                 "GPL",
+                 "Re: spurious spaces around forceLTR insets",
+                 "m=168113096516846",
+                 "10 April 2023",
+                 u"RTL/BiDi-related fixes"),
+
      contributor(u"Michał Fita",
                  "michal ! fita () gmail ! com",
                  "GPL",
