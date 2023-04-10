@@ -98,7 +98,7 @@ End
 Style Remarks
 	CopyStyle             Theorem
 	LatexName             remark
-	LabelString           "הערות \thetheorem."
+	LabelString           "Remarks \thetheorem."
 	Preamble
             \newtheorem{remark}[theorem]{הערה}
 	EndPreamble
