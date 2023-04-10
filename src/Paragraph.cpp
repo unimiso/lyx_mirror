@@ -1090,7 +1090,8 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 		running_change = Change(Change::UNCHANGED);
 	}
 
-	bool close = false;
+	bool close_brace = false;
+	string close_env;
 	odocstream::pos_type const len = os.os().tellp();
 
 	if (inset->forceLTR(runparams)
@@ -1101,16 +1102,25 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	    // ERT is an exception, it should be output with no
 	    // decorations at all
 	    && inset->lyxCode() != ERT_CODE) {
-		if (runparams.use_polyglossia)
+		if (runparams.use_polyglossia) {
 			// (lua)bidi
-			os << "\\LRE{";
-		else if (running_font.language()->lang() == "farsi"
-			 || running_font.language()->lang() == "arabic_arabi")
+			// Displayed environments go in an LTR environment
+			if (inset->isEnvironment() && inset->getLayout().isDisplay()) {
+				os << "\\begin{LTR}";
+				close_env = "LTR";
+			} else {
+				os << "\\LRE{";
+				close_brace = true;
+			}
+		} else if (running_font.language()->lang() == "farsi"
+			 || running_font.language()->lang() == "arabic_arabi") {
 			os << "\\textLR{" << termcmd;
-		else
+			close_brace = true;
+		} else {
 			// babel classic
 			os << "\\L{";
-		close = true;
+			close_brace = true;
+		}
 	}
 
 	if (open_font && fontswitch_inset) {
@@ -1187,7 +1197,10 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 		throw;
 	}
 
-	if (close)
+	if (!close_env.empty())
+		os << "\\end{" << close_env << "}";
+
+	if (close_brace)
 		os << '}';
 
 	if (os.texrow().rows() > previous_row_count) {
