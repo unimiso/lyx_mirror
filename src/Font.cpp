@@ -439,7 +439,8 @@ int Font::latexWriteStartChanges(otexstream & os, BufferParams const & bparams,
 			// (possibly a LuaTeX bug)
 			os << "{\\LR{";
 			count += 6;
-		} else {
+		} else if (!runparams.isFullUnicode()) {
+			// not needed with babel/lua|xetex
 			os << "{\\beginL ";
 			count += 9;
 		}
@@ -616,7 +617,8 @@ int Font::latexWriteEndChanges(otexstream & os, BufferParams const & bparams,
 			// (possibly a LuaTeX bug)
 			os << "}}";
 			count += 2;
-		} else {
+		} else if (!runparams.isFullUnicode()) {
+			// not needed with babel/lua|xetex
 			os << "\\endL}";
 			count += 6;
 		}
