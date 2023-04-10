@@ -39,7 +39,7 @@ public:
 	///
 	static std::string params2string(InsetListingsParams const &);
 	///
-	bool isEnvironment() const { return !params().isInline(); }
+	bool isEnvironment() const override { return !params().isInline(); }
 private:
 	///
 	bool isLabeled() const override { return true; }
