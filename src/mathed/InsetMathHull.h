@@ -174,7 +174,8 @@ public:
 	void initUnicodeMath() const override;
 
 	/// Force inset into LTR environment if surroundings are RTL
-	bool forceLTR(OutputParams const &) const override { return true; }
+	/// FIXME Really needed? (see #12731)
+	bool forceLTR(OutputParams const & rp) const override { return !rp.isFullUnicode(); }
 	///
 	void recordLocation(DocIterator const & di);
 
