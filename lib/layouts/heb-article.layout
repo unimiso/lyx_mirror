@@ -4,26 +4,14 @@
 # Hebrew article textclass definition file.
 # Author: Dekel Tsur <dekel@math.tau.ac.il>
 # Few changes by Baruch Even <baruch.even@writeme.com>
+# Edited by Udi Fogiel <udifoglle@gmail.com>
 
 Format 99
 Input article
 
-Preamble
-\usepackage{theorem}
-\theorembodyfont{\upshape}
-% LuaTeX/luabidi does not know \beginR
-% FIXME LuaTeX/luabidi does not get the order right
-\AtBeginDocument{
-\@ifundefined{setRTL}{}{\providecommand\beginR{\setRTL}}
-}
-\newtheorem{theorem}{{\beginR משפט}}[section]
-% Only needed by babel, not polyglossia (which does
-% not have \make@lr defined)
-\@ifundefined{make@lr}{}{%
-   \AtBeginDocument{\make@lr\thetheorem}
-}
-EndPreamble
-
+Counter theorem
+	Within	section
+End
 
 Style Theorem
 	Category              Reasoning
@@ -41,7 +29,8 @@ Style Theorem
 	Align                 Block
 	AlignPossible         Block, Left
 	LabelType             Static
-	LabelString           "Theorem #."
+	LabelString           "Theorem \thetheorem."
+	LabelCounter		theorem
 	Font
 	  Shape               Up
 	  Size                Normal
@@ -50,56 +39,70 @@ Style Theorem
 	  Shape               Up
 	  Series              Bold
 	EndFont
+	Preamble
+		\usepackage{theorem}
+		\theorembodyfont{\upshape}
+		\newtheorem{theorem}{משפט}[section]
+		% Only needed by babel-hebrew
+		\AtBeginDocument{\@ifundefined{make@lr}{}{%
+		  \make@lr\thetheorem
+		}}
+	EndPreamble
 End
 
 
 Style Lemma
 	CopyStyle             Theorem
 	LatexName             lemma
-	LabelString           "Lemma #."
+	LabelString           "Lemma \thetheorem."
 	Preamble
-		\newtheorem{lemma}[theorem]{{\beginR למה}}
+		\newtheorem{lemma}[theorem]{למה}
 	EndPreamble
+	DependsOn Theorem
 End
 
 
 Style Corollary
 	CopyStyle             Theorem
 	LatexName             corollary
-	LabelString           "Corollary #."
+	LabelString           "Corollary \thetheorem."
 	Preamble
-		\newtheorem{corollary}[theorem]{{\beginR מסקנה}}
+		\newtheorem{corollary}[theorem]{מסקנה}
 	EndPreamble
+	DependsOn Theorem
 End
 
 
 Style Claim
 	CopyStyle             Theorem
 	LatexName             claim
-	LabelString           "Claim #."
+	LabelString           "Claim \thetheorem."
 	Preamble
-		\newtheorem{claim}[theorem]{{\beginR טענה}}
+		\newtheorem{claim}[theorem]{טענה}
 	EndPreamble
+	DependsOn Theorem
 End
 
 
 Style Definition
 	CopyStyle             Theorem
 	LatexName             definition
-	LabelString           "Definition #."
+	LabelString           "Definition \thetheorem."
 	Preamble
-		\newtheorem{definition}[theorem]{{\beginR הגדרה}}
+		\newtheorem{definition}[theorem]{הגדרה}
 	EndPreamble
+	DependsOn Theorem
 End
 
 
 Style Remarks
 	CopyStyle             Theorem
 	LatexName             remark
-	LabelString           "Remarks #."
+	LabelString           "הערות \thetheorem."
 	Preamble
-            \newtheorem{remark}[theorem]{{\beginR הערה}}
+            \newtheorem{remark}[theorem]{הערה}
 	EndPreamble
+	DependsOn Theorem
 End
 
 
@@ -131,7 +134,7 @@ Style Proof
 	EndFont
 	Preamble
 		\newenvironment{proof}%
-			{{\beginR \textbf{הוכחה:}}}%
+			{\textbf{הוכחה:}}%
 			{\hfill\rule{2mm}{2mm}\par\vspace{2mm}}
 	EndPreamble
 End
