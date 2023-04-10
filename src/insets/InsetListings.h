@@ -38,6 +38,8 @@ public:
 	static void string2params(std::string const &, InsetListingsParams &);
 	///
 	static std::string params2string(InsetListingsParams const &);
+	///
+	bool isEnvironment() const { return !params().isInline(); }
 private:
 	///
 	bool isLabeled() const override { return true; }

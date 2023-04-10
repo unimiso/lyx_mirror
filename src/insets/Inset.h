@@ -15,6 +15,7 @@
 #ifndef INSETBASE_H
 #define INSETBASE_H
 
+#include "InsetLayout.h"
 #include "ColorCode.h"
 #include "InsetCode.h"
 #include "LayoutEnums.h"
@@ -601,6 +602,8 @@ public:
 	virtual void acceptChanges() {}
 	/// reject the changes within the inset
 	virtual void rejectChanges() {}
+	///
+	virtual bool isEnvironment() const { return getLayout().latextype() == InsetLaTeXType::ENVIRONMENT; }
 
 	///
 	virtual bool needsCProtection(bool const, bool const) const { return false; }
