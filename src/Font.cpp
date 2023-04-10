@@ -435,8 +435,10 @@ int Font::latexWriteStartChanges(otexstream & os, BufferParams const & bparams,
 		|| language()->lang() == "arabic_arabi")) {
 		if (runparams.use_polyglossia) {
 			// LuaTeX/luabidi
-			os << "\\LR{";
-			count += 5;
+			// \LR needs extra grouping
+			// (possibly a LuaTeX bug)
+			os << "{\\LR{";
+			count += 6;
 		} else {
 			os << "{\\beginL ";
 			count += 9;
@@ -610,8 +612,10 @@ int Font::latexWriteEndChanges(otexstream & os, BufferParams const & bparams,
 		|| language()->lang() == "arabic_arabi")) {
 		if (runparams.use_polyglossia) {
 			// LuaTeX/luabidi
-			os << "}";
-			count += 1;
+			// luabidi's \LR needs extra grouping
+			// (possibly a LuaTeX bug)
+			os << "}}";
+			count += 2;
 		} else {
 			os << "\\endL}";
 			count += 6;

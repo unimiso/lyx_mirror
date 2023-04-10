@@ -1090,7 +1090,7 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 		running_change = Change(Change::UNCHANGED);
 	}
 
-	bool close_brace = false;
+	unsigned int close_brace = 0;
 	bool const disp_env = (inset->isEnvironment() && inset->getLayout().isDisplay())
 			|| runparams.inDisplayMath;
 	string close_env;
@@ -1108,19 +1108,25 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 				os << "\\begin{LTR}";
 				close_env = "LTR";
 			} else {
+				if (runparams.flavor == Flavor::LuaTeX) {
+					// luabidi's \LRE needs extra grouping
+					// (possibly a LuaTeX bug)
+					os << '{';
+					close_brace = 1;
+				}
 				os << "\\LRE{";
-				close_brace = true;
+				close_brace += 1;
 			}
 		} else if (running_font.language()->lang() == "farsi"
 			 || running_font.language()->lang() == "arabic_arabi") {
 			os << "\\textLR{" << termcmd;
-			close_brace = true;
+			close_brace = 1;
 		} else {
 			// babel classic
 			os << "\\L{";
 			if (disp_env)
 				os << safebreakln;
-			close_brace = true;
+			close_brace = 1;
 		}
 	}
 
@@ -1201,8 +1207,9 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	if (!close_env.empty())
 		os << "\\end{" << close_env << "}";
 
-	if (close_brace) {
-		os << '}';
+	if (close_brace > 0) {
+		for (unsigned i = 0; i < close_brace; ++i)
+			os << '}';
 		if (disp_env)
 			os << safebreakln;
 	}
