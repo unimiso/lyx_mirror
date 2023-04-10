@@ -13345,15 +13345,13 @@ msgid "Rotation angle in degrees (counterclockwise)"
 msgstr "Úhel otočení (proti směru hodin)"
 
 #: lib/layouts/hanging.module:2
-#, fuzzy
 msgid "Hanging Paragraphs"
-msgstr "Ods&adit odstavec"
+msgstr "Zavěšené odstavce"
 
 #: lib/layouts/hanging.module:3 lib/layouts/initials.module:3
 #: lib/layouts/shapepar.module:3
-#, fuzzy
 msgid "Paragraph Styles"
-msgstr "Paragraph Start"
+msgstr "Styly odstavců"
 
 #: lib/layouts/hanging.module:7
 msgid ""
@@ -13645,17 +13643,15 @@ msgid "Prop(osition)"
 msgstr "Tvrzení"
 
 #: lib/layouts/initials.module:2
-#, fuzzy
 msgid "Initials (Drop Caps)"
-msgstr "Založ &jméno skupiny:"
+msgstr "Iniciálky (Drop Caps)"
 
 #: lib/layouts/initials.module:7
-#, fuzzy
 msgid ""
 "Defines a style for paragraphs with an enlarged initial letter (drop cap). "
 "See the EmbeddedObjects manual for a detailed description."
 msgstr ""
-"Definuj styl pro odstavce s Iniciálkou. Viz manuál pro vkládané objekty."
+"Definuje styl pro odstavce s Iniciálkou (zvětšeným prvním znakem). Viz manuál pro vkládané objekty."
 
 #: lib/layouts/initials.module:15 lib/layouts/initials.module:17
 #: lib/layouts/initials.module:27 lib/layouts/initials.module:33
@@ -16308,7 +16304,7 @@ msgstr "Chemie: Risk a bezpečnost (zastaralé)"
 #: lib/layouts/rsphrase.module:7
 msgid ""
 "Provides two insets and one environment to typeset numbers and phrases of "
-"chemical risk and safety statements. Now obsoleted and officialy replaced by GHS Hazard-Precautionary statement system in the EU."
+"chemical risk and safety statements. Now obsoleted and officially replaced by GHS Hazard-Precautionary statement system in the EU."
 msgstr ""
 "Poskytuje dvě vložky a jedno prostředí pro sazbu čísel a frází chemických rizik a bezpečnostních opatření. Nyní zastaralý a nahrazený novějším systémem frází pro rizika a bezpečností opatření."
 
@@ -16766,14 +16762,13 @@ msgid "Custom Paragraph Shapes"
 msgstr "Volitelné tvary odstavce"
 
 #: lib/layouts/shapepar.module:8
-#, fuzzy
 msgid ""
 "Provides several paragraph shapes as well as commands to define custom "
 "shapes. For a description see LyX's Additional features manual, section "
 "Modules > Paragraph Styles > Custom Paragraph Shapes."
 msgstr ""
 "Obsahuje několik tvarů pro odstavce a pokytuje příkazy pro tvorbu nových. "
-"Bližší informace v manuálu 'Rozšířené vlasnosti LyX-u.'"
+"Bližší informace v manuálu 'Rozšířené vlasnosti LyX-u.', sekce Modules > Paragraph Styles > Custom Paragraph Shapes."
 
 #: lib/layouts/shapepar.module:27
 msgid "CD label"
@@ -17308,13 +17303,11 @@ msgid "Subequations"
 msgstr "Podrovnice"
 
 #: lib/layouts/subequations.module:6
-#, fuzzy
 msgid ""
 "Provide a straightforward way to segregate subequations in LyX. See the Math "
 "manual."
 msgstr ""
-"Poskytne možnost segregace podrovnic v LyX-u. Viz příklad v souboru "
-"subequations.lyx."
+"Poskytne možnost segregace podrovnic v LyX-u. Viz Nápověda > Matematika."
 
 #: lib/layouts/svcommon.inc:72
 msgid "Front Matter"
@@ -32815,52 +32808,46 @@ msgid "Unapplied changes"
 msgstr "Neuplatněné změny"
 
 #: src/frontends/qt/GuiDocument.cpp:1848
-#, fuzzy
 msgid ""
 "Some changes in the previous document were not yet applied.\n"
 "Do you want to switch back and apply them?"
 msgstr ""
-"Některé změny v dialogovém okně nebyly zatím uplatněny.\n"
-"Pokud tak neučiníte nyní, budou ztraceny po této akci."
+"Některé změny v předchozím dokumentu nebyly zatím uplatněny.\n"
+"Přejete si přepnout zpět and potvrdit je?"
 
 #: src/frontends/qt/GuiDocument.cpp:1850
 msgid "Yes, &Switch Back"
-msgstr ""
+msgstr "Ano, přepnout &zpět"
 
 #: src/frontends/qt/GuiDocument.cpp:1850
-#, fuzzy
 msgid "No, &Dismiss Changes"
-msgstr "Ne, &ponechat změny"
+msgstr "Ne, &odmítnout změny"
 
 #: src/frontends/qt/GuiDocument.cpp:2165 src/frontends/qt/GuiDocument.cpp:2251
-#, fuzzy
 msgid "Class defaults"
-msgstr "Standardní nastavení třídy"
+msgstr "Výchozí (třída)"
 
 #: src/frontends/qt/GuiDocument.cpp:2165 src/frontends/qt/GuiDocument.cpp:2251
-#, fuzzy
 msgid "Package defaults"
-msgstr "&Standardní pro daný jazyk"
+msgstr "Výchozí (balíček)"
 
 #: src/frontends/qt/GuiDocument.cpp:2168 src/frontends/qt/GuiDocument.cpp:2254
 msgid "If no value is given, the defaults as set by the class are used."
-msgstr ""
+msgstr "Bez zadání hodnoty bude použita standardní hodnota definovaná třídou."
 
 #: src/frontends/qt/GuiDocument.cpp:2169 src/frontends/qt/GuiDocument.cpp:2255
 msgid ""
 "If no value is given, the defaults as set by the geometry package or a "
 "package/class overriding geometry's defaults are used."
-msgstr ""
+msgstr "Bez zadání hodnoty bude nastavena hodnota z balíčku geometry nebo hodnota z balíčku/třídy redefinující hodnotu z geometry."
 
 #: src/frontends/qt/GuiDocument.cpp:2522
-#, fuzzy
 msgid "Direct (No inputenc)"
-msgstr "Standardní pro daný jazyk (bez inputenc)"
+msgstr "Přímé (bez inputenc)"
 
 #: src/frontends/qt/GuiDocument.cpp:2524
-#, fuzzy
 msgid "Direct (XeTeX/LuaTeX)"
-msgstr "PDF (LuaTeX)"
+msgstr "Přímé (XeTeX/LuaTeX)"
 
 #: src/frontends/qt/GuiDocument.cpp:2710 src/frontends/qt/GuiDocument.cpp:4407
 #: src/frontends/qt/GuiDocument.cpp:4418 src/frontends/qt/GuiDocument.cpp:4429
@@ -32990,40 +32977,39 @@ msgid "Module provided by document class."
 msgstr "Modul dodán třídou dokumentu."
 
 #: src/frontends/qt/GuiDocument.cpp:3364
-#, fuzzy, c-format
+#, c-format
 msgid "<p><b>Category:</b> %1$s.</p>"
-msgstr "Kategorie: %1$s."
+msgstr "<p><b>Kategorie:</b> %1$s.</p>"
 
 #: src/frontends/qt/GuiDocument.cpp:3374
-#, fuzzy, c-format
+#, c-format
 msgid "<p><b>Package(s) required:</b> %1$s.</p>"
-msgstr "Vyžadované balíčky: %1$s."
+msgstr "<p><b>Vyžadované balíčky:</b> %1$s.</p>"
 
 #: src/frontends/qt/GuiDocument.cpp:3380
 msgid "or"
 msgstr "nebo"
 
 #: src/frontends/qt/GuiDocument.cpp:3383
-#, fuzzy, c-format
+#, c-format
 msgid "<p><b>Modules required:</b> %1$s.</p>"
-msgstr "Požadované moduly: %1$s."
+msgstr "<p><b>Požadované moduly:</b> %1$s.</p>"
 
 #: src/frontends/qt/GuiDocument.cpp:3392
-#, fuzzy, c-format
+#, c-format
 msgid "<p><b>Modules excluded:</b> %1$s.</p>"
-msgstr "Vyloučené moduly: %1$s."
+msgstr "<p><b>Vyloučené moduly:</b> %1$s.</p>"
 
 #: src/frontends/qt/GuiDocument.cpp:3397
-#, fuzzy, c-format
+#, c-format
 msgid "<p><b>Filename:</b> <tt>%1$s.module</tt>.</p>"
-msgstr "Soubor: %1$s.module."
+msgstr "<p><b>Soubor:</b> <tt> %1$s.module</tt>.</p>"
 
 #: src/frontends/qt/GuiDocument.cpp:3402
-#, fuzzy
 msgid ""
 "<p><font color=red><b>WARNING: Some required packages are unavailable!</b></"
 "font></p>"
-msgstr "Upozornění: Některé vyžadované balíčky jsou nedostupné!"
+msgstr "<p><font color=red><b>Upozornění: Některé vyžadované balíčky jsou nedostupné!</b></font></p>"
 
 #: src/frontends/qt/GuiDocument.cpp:4062
 msgid "per part"
@@ -33114,7 +33100,7 @@ msgstr ""
 
 #: src/frontends/qt/GuiDocument.cpp:5254
 msgid "%1 (missing req.)"
-msgstr "%1 (chybí záv.)"
+msgstr "%1 (chybí závislost)"
 
 #: src/frontends/qt/GuiDocument.cpp:5266
 msgid "personal module"
