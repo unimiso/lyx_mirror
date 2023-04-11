@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-03-04 16:31+0100\n"
-"PO-Revision-Date: 2023-03-04 15:35+0000\n"
+"POT-Creation-Date: 2023-04-11 14:27+0200\n"
+"PO-Revision-Date: 2023-04-11 12:36+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -3324,8 +3324,8 @@ msgid "&Greyed out"
 msgstr "&Zosivelé"
 
 #: src/frontends/qt/ui/NumberingUi.ui:37
-msgid "Add line numbers to the document"
-msgstr "Pridať očíslenie riadkov do dokumentu"
+msgid "Add line numbers to the side of the document"
+msgstr "Pridať bočné očíslenie riadkov do dokumentu"
 
 #: src/frontends/qt/ui/NumberingUi.ui:40
 msgid "L&ine numbering"
@@ -11167,15 +11167,18 @@ msgstr "Čínsky referát (CTeX)"
 msgid "Custom Header/Footer Text"
 msgstr "Vlastný text pre hlavičku/pätu"
 
-#: lib/layouts/customHeadersFooters.module:8
+#: lib/layouts/customHeadersFooters.module:10
 msgid ""
-"Adds environments to define header and footer lines. NOTE: To use this "
-"module you must set the 'Page style' in the menu Document Settings -> Page "
-"Layout to 'fancy'!"
+"Adds environments to define header and footer lines. See the Additional "
+"manual, section Modules > Page Layout > Custom Header/Footer Text, for a "
+"detailed description. NOTE: To use this module you must set the 'Page style' "
+"in the menu Document Settings -> Page Layout to 'fancy'!"
 msgstr ""
-"Pridáva prostredia na definície riadkov hlavičiek a pätičiek. POZOR: Na "
-"použitie tohto modulu treba nastaviť 'Štýl stránky' v menu Dokument -> "
-"Nastavenia… -> Formát stránky na 'pestrý' (fancy)!"
+"Pridáva prostredia na definície riadkov hlavičiek a pätičiek. Viď Dodatočné "
+"vlastnosti, sekcia Modules->Page Layout->Custom Header/Footer Text, pre "
+"detailné vysvetlenie. POZOR: Na použitie tohto modulu treba nastaviť 'Štýl "
+"stránky' v menu Dokument -> Nastavenia… -> Formát stránky na "
+"'pestrý' (fancy)!"
 
 #: lib/layouts/customHeadersFooters.module:13
 msgid "Header/Footer"
@@ -13453,17 +13456,13 @@ msgstr "Visiaci odstavec"
 msgid "Hebrew Article"
 msgstr "Hebrejský článok"
 
-#: lib/layouts/heb-article.layout:79
-msgid "Claim #."
-msgstr "Nárok #."
-
 #: lib/layouts/heb-article.layout:96
 msgid "Remarks"
 msgstr "Pripomienky"
 
-#: lib/layouts/heb-article.layout:99
-msgid "Remarks #."
-msgstr "Pripomienky #."
+#: lib/layouts/heb-article.layout:101
+msgid "Remarks \\thetheorem."
+msgstr "Pripomienky \\thetheorem."
 
 #: lib/layouts/heb-article.layout:122 lib/layouts/ijmpc.layout:412
 #: lib/layouts/ijmpd.layout:418
@@ -16233,16 +16232,19 @@ msgid "PACS number:"
 msgstr "PACS-číslo:"
 
 #: lib/layouts/rsphrase.module:2
-msgid "Chemistry: Risk and Safety Statements"
-msgstr "Chémia: Rizikové a poistné uzávierky"
+msgid "Chemistry: Risk and Safety Statements (Obsolete)"
+msgstr "Chémia: Rizikové a Poistné Uzávierky (Zastaralé)"
 
-#: lib/layouts/rsphrase.module:7
+#: lib/layouts/rsphrase.module:8
 msgid ""
 "Provides two insets and one environment to typeset numbers and phrases of "
-"chemical risk and safety statements."
+"chemical risk and safety statements. Now obsoleted and officially replaced "
+"by GHS Hazard-Precautionary statement system in the EU."
 msgstr ""
 "Poskytuje dve vložky a jedno prostredie na sádzanie čísiel a zvratov pre "
-"poistné a rizikové uzávierky v Rizikové a Bezpečnostné Inštrukcie."
+"poistné a rizikové uzávierky v Rizikové a Bezpečnostné Inštrukcie. Teraz "
+"zastaralé a oficiálne nahradené s GHS Riziková a Bezpečnostná Inštrukcia v "
+"EU."
 
 #: lib/layouts/rsphrase.module:11 lib/layouts/rsphrase.module:16
 msgid "R-S number"
@@ -22446,18 +22448,18 @@ msgstr "Aktualizovať iné formáty"
 
 #: lib/ui/stdtoolbars.inc:304 lib/ui/stdtoolbars.inc:310
 #: lib/ui/stdtoolbars.inc:316 lib/ui/stdtoolbars.inc:322
-msgid "[[Toolbar]]On"
+msgid "[[Toolbar]]&On"
 msgstr "Zapnúť"
 
 #: lib/ui/stdtoolbars.inc:305 lib/ui/stdtoolbars.inc:311
 #: lib/ui/stdtoolbars.inc:317 lib/ui/stdtoolbars.inc:323
-msgid "[[Toolbar]]Off"
+msgid "[[Toolbar]]O&ff"
 msgstr "Vypnúť"
 
 #: lib/ui/stdtoolbars.inc:306 lib/ui/stdtoolbars.inc:312
 #: lib/ui/stdtoolbars.inc:318 lib/ui/stdtoolbars.inc:324
-msgid "[[Toolbar]]Automatic"
-msgstr "Automaticky"
+msgid "[[Toolbar]]&Automatic"
+msgstr "&Automaticky"
 
 #: lib/ui/stdtoolbars.inc:343 src/frontends/qt/GuiLog.cpp:303
 msgid "Version Control"
