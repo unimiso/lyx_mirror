@@ -10767,7 +10767,7 @@ msgstr "KnightMove:"
 
 #: lib/layouts/chessboard.module:2
 msgid "Chess Board"
-msgstr "šachovnice"
+msgstr "Šachovnice"
 
 #: lib/layouts/chessboard.module:3 lib/layouts/lilypond.module:3
 msgid "Leisure, Sports & Music"
@@ -10867,19 +10867,16 @@ msgid "Copernicus Publications Manuscript Preparation"
 msgstr ""
 
 #: lib/layouts/copernicus.layout:45
-#, fuzzy
 msgid "InFrontmatter"
-msgstr "EndFrontmatter"
+msgstr "InFrontmatter"
 
 #: lib/layouts/copernicus.layout:68
-#, fuzzy
 msgid "Insert the affiliation number"
-msgstr "Zde vložte volby"
+msgstr "Insert the affiliation number"
 
 #: lib/layouts/copernicus.layout:71
-#, fuzzy
 msgid "Given name"
-msgstr "Jméno souboru"
+msgstr "Given name"
 
 #: lib/layouts/copernicus.layout:76 lib/layouts/copernicus.layout:77
 #: lib/layouts/db_stdcharstyles.inc:47 lib/layouts/db_stdcharstyles.inc:48
@@ -10898,6 +10895,8 @@ msgid ""
 "identify the author with the corresponding affiliation. 1, 2, 3, etc. should "
 "be inserted."
 msgstr ""
+"identify the author with the corresponding affiliation. 1, 2, 3, etc. should "
+"be inserted."
 
 #: lib/layouts/copernicus.layout:102 lib/layouts/svcommon.inc:438
 msgid "Running Title"
@@ -10909,14 +10908,12 @@ msgid "Running title:"
 msgstr "Running title:"
 
 #: lib/layouts/copernicus.layout:113
-#, fuzzy
 msgid "FirstPage"
-msgstr "Firstname"
+msgstr "FirstPage"
 
 #: lib/layouts/copernicus.layout:116
-#, fuzzy
 msgid "firstpage"
-msgstr "Firstname"
+msgstr "firstpage"
 
 #: lib/layouts/copernicus.layout:128 lib/layouts/kluwer.layout:270
 msgid "RunningAuthor"
@@ -10928,155 +10925,132 @@ msgid "Running author:"
 msgstr "Running author:"
 
 #: lib/layouts/copernicus.layout:139
-#, fuzzy
 msgid "Publications"
-msgstr "Publication ID"
+msgstr "Publications"
 
 #: lib/layouts/copernicus.layout:162
-#, fuzzy
 msgid "Correspondence"
-msgstr "Correspondence to:"
+msgstr "Correspondence"
 
 #: lib/layouts/copernicus.layout:165
-#, fuzzy
 msgid "Correspondence:"
-msgstr "Correspondence to:"
+msgstr "Correspondence:"
 
 #: lib/layouts/copernicus.layout:195
 msgid "Pubdiscuss"
-msgstr ""
+msgstr "Pubdiscuss"
 
 #: lib/layouts/copernicus.layout:201
 msgid "Pubdiscuss:"
-msgstr ""
+msgstr "Pubdiscuss:"
 
 #: lib/layouts/copernicus.layout:221
-#, fuzzy
 msgid "Published"
-msgstr "Nakladatel"
+msgstr "Published"
 
 #: lib/layouts/copernicus.layout:227
-#, fuzzy
 msgid "Published:"
-msgstr "Nakladatel"
+msgstr "Published:"
 
 #: lib/layouts/copernicus.layout:258
-#, fuzzy
 msgid "Statements"
-msgstr "Statement Text"
+msgstr "Statements"
 
 #: lib/layouts/copernicus.layout:271
-#, fuzzy
 msgid "Copyrightstatement"
-msgstr "Copyrightdata"
+msgstr "Copyrightstatement"
 
 #: lib/layouts/copernicus.layout:274
 msgid "Copyright:"
 msgstr "Copyright:"
 
 #: lib/layouts/copernicus.layout:282
-#, fuzzy
 msgid "Introduction"
-msgstr "Úvod|o"
+msgstr "Introduction"
 
 #: lib/layouts/copernicus.layout:285
-#, fuzzy
 msgid "\\thesection Introduction"
-msgstr "\\thesection.\\arabic{equation}"
+msgstr "\\thesection Introduction"
 
 #: lib/layouts/copernicus.layout:292
-#, fuzzy
 msgid "Conclusions"
-msgstr "Závěr"
+msgstr "Conclusions"
 
 #: lib/layouts/copernicus.layout:295
-#, fuzzy
 msgid "\\thesection Conclusions"
-msgstr "\\thesection"
+msgstr "\\thesection Conclusions"
 
 #: lib/layouts/copernicus.layout:311
-#, fuzzy
 msgid "Appendix \\Alph{appendix}:"
-msgstr "Appendix \\Alph{appendix}."
+msgstr "Appendix \\Alph{appendix}:"
 
 #: lib/layouts/copernicus.layout:323
-#, fuzzy
 msgid "\\Alph{appendix}\\arabic{subappendix}"
-msgstr "\\Alph{appendix}\\arabic{subappendix}."
+msgstr "\\Alph{appendix}\\arabic{subappendix}"
 
 #: lib/layouts/copernicus.layout:335
-#, fuzzy
 msgid "\\Alph{appendix}\\arabic{subappendix}.\\arabic{subsubappendix}"
-msgstr "\\Alph{appendix}\\arabic{subappendix}.\\arabic{subsubappendix}."
+msgstr "\\Alph{appendix}\\arabic{subappendix}.\\arabic{subsubappendix}"
 
 #: lib/layouts/copernicus.layout:358
-#, fuzzy
 msgid "CodeAvailability"
-msgstr "CJK kompat."
+msgstr "CodeAvailability"
 
 #: lib/layouts/copernicus.layout:360
-#, fuzzy
 msgid "Code availability."
-msgstr "Modul není dostupný"
+msgstr "Code availability."
 
 #: lib/layouts/copernicus.layout:366
 msgid "DataAvailability"
-msgstr ""
+msgstr "DataAvailability"
 
 #: lib/layouts/copernicus.layout:368
 msgid "Data availability."
-msgstr ""
+msgstr "Data availability."
 
 #: lib/layouts/copernicus.layout:374
-#, fuzzy
 msgid "CodeAndDataAvailability"
-msgstr "Modul není dostupný"
+msgstr "CodeAndDataAvailability"
 
 #: lib/layouts/copernicus.layout:376
-#, fuzzy
 msgid "Code and data availability."
-msgstr "Modul není dostupný"
+msgstr "Code and data availability."
 
 #: lib/layouts/copernicus.layout:382
 msgid "SampleAvailability"
-msgstr ""
+msgstr "SampleAvailability"
 
 #: lib/layouts/copernicus.layout:384
 msgid "Sample availability."
-msgstr ""
+msgstr "Sample availability."
 
 #: lib/layouts/copernicus.layout:390
-#, fuzzy
 msgid "Statements2"
-msgstr "Statement Text"
+msgstr "Statements2"
 
 #: lib/layouts/copernicus.layout:400
-#, fuzzy
 msgid "AuthorContribution"
-msgstr "Contributors"
+msgstr "AuthorContribution"
 
 #: lib/layouts/copernicus.layout:402
-#, fuzzy
 msgid "Author contributions."
-msgstr "Author Option"
+msgstr "Author contributions."
 
 #: lib/layouts/copernicus.layout:408
 msgid "CompetingInterests"
-msgstr ""
+msgstr "CompetingInterests"
 
 #: lib/layouts/copernicus.layout:411
 msgid "Competing Interests."
-msgstr ""
+msgstr "Competing Interests."
 
 #: lib/layouts/copernicus.layout:416
-#, fuzzy
 msgid "Disclaimer"
-msgstr "&Neukládat"
+msgstr "Disclaimer"
 
 #: lib/layouts/copernicus.layout:419
-#, fuzzy
 msgid "Disclaimer."
-msgstr "&Neukládat"
+msgstr "Disclaimer."
 
 #: lib/layouts/ctex-article.layout:3 lib/examples/Articles:0
 msgid "Chinese Article (CTeX)"
@@ -11091,7 +11065,6 @@ msgid "Chinese Report (CTeX)"
 msgstr "Chinese Report (CTeX)"
 
 #: lib/layouts/customHeadersFooters.module:2
-#, fuzzy
 msgid "Custom Header/Footer Text"
 msgstr "Vlastní hlavičky/patičky"
 
@@ -14227,29 +14200,24 @@ msgid "S/R expr"
 msgstr "S/R výraz"
 
 #: lib/layouts/landscape.module:2
-#, fuzzy
 msgid "Landscape Document Parts"
-msgstr "Hlavní dokument"
+msgstr "část dokumentu na šířku"
 
 #: lib/layouts/landscape.module:6
-#, fuzzy
 msgid "Output parts of the document in landscape mode."
-msgstr "Tato část dokumentu je vymazána."
+msgstr "Vysázet části dokumentu na šířku."
 
 #: lib/layouts/landscape.module:11 lib/layouts/landscape.module:16
-#, fuzzy
 msgid "Landscape"
-msgstr "Na šířk&u"
+msgstr "Na šířku"
 
 #: lib/layouts/landscape.module:26
-#, fuzzy
 msgid "Landscape (Floating)"
-msgstr "Landscape Slide"
+msgstr "Landscape (Plovoucí)"
 
 #: lib/layouts/landscape.module:29
-#, fuzzy
 msgid "Landscape (floating)"
-msgstr "Landscape Slide"
+msgstr "Landscape (plovoucí)"
 
 #: lib/layouts/latex8.layout:3 lib/examples/Articles:0
 msgid "Latex8 Article (Obsolete)"
@@ -14841,9 +14809,8 @@ msgid "Logical Markup"
 msgstr "Logické styly"
 
 #: lib/layouts/logicalmkup.module:3 lib/layouts/soul.module:3
-#, fuzzy
 msgid "Text Markup"
-msgstr "Sémantický styl"
+msgstr "Značkování textu"
 
 #: lib/layouts/logicalmkup.module:6
 msgid ""
@@ -15393,14 +15360,13 @@ msgid "Multiple Columns"
 msgstr "Vícesloupcový"
 
 #: lib/layouts/multicol.module:8
-#, fuzzy
 msgid ""
 "Adds a custom inset whose content is set with multiple columns (2 by "
 "default). See the Additional manual, section Modules > Page Layout > "
 "Multiple Columns, for a detailed description."
 msgstr ""
 "Přidá novou vložku, která umožnuje sázet vícesloupcový text (standardně 2). "
-"Více v manuálu Rozšířených vlasností LyX-u, sekce 'Multiple Text Columns'."
+"Více v manuálu Rozšířených vlasností LyX-u, sekce Modules > Page Layout > Multiple Text Columns."
 
 #: lib/layouts/multicol.module:20
 msgid "Number of Columns"
@@ -15522,7 +15488,6 @@ msgid "Paragraph Lists (paralist)"
 msgstr "Seznamy v odstavcích (paralist)"
 
 #: lib/layouts/paralist.module:11
-#, fuzzy
 msgid ""
 "The package paralist provides some new list environments. Itemized and "
 "enumerated lists can be typeset within paragraphs, as paragraphs and in a "
@@ -16631,7 +16596,7 @@ msgstr "Rámečky sekcí"
 msgid ""
 "Defines Boxes with section header. Mainly intended for the SciPoster class."
 msgstr ""
-"Definuje rámečky s hlavičkou sekce. Určeno zejméno pro třídu SciPoster."
+"Definuje rámečky s hlavičkou sekce. Určeno zejména pro třídu SciPoster."
 
 #: lib/layouts/sectionbox.module:12
 msgid "SectionBox"
@@ -16992,7 +16957,7 @@ msgstr "<Visible Text Follows>"
 
 #: lib/layouts/soul.module:2
 msgid "Hyphenatable Text Markup (Soul)"
-msgstr ""
+msgstr "Značkování (Soul)"
 
 #: lib/layouts/soul.module:9
 msgid ""
@@ -17000,78 +16965,68 @@ msgid ""
 "capitalize/small-cap text by means of the soul package. As opposed to the "
 "markup provided by the Text Properties dialog, words marked-up with soul are "
 "hyphenated."
-msgstr ""
+msgstr "Definuje styly textu pro zvýraznění, přeškrtnutí, proložení mezerami, podtržení a kapitálky pomocí balíčku soul. Na rozdíl od značkování poskytovaného v dialogu Vlastnosti textu, balíček soul umožňuje dělení slov pomocí pomlček."
 
 #: lib/layouts/soul.module:17
-#, fuzzy
 msgid "Spaceletters"
-msgstr "US-dopis"
+msgstr "Proložení mezerami"
 
 #: lib/layouts/soul.module:19
-#, fuzzy
 msgid "spaced"
-msgstr "mezera"
+msgstr "mezery"
 
 #: lib/layouts/soul.module:33
-#, fuzzy
 msgid "Strikethrough"
-msgstr "Př&eškrtnutí:"
+msgstr "Přeškrtnutí"
 
 #: lib/layouts/soul.module:35
 msgid "strike"
-msgstr ""
+msgstr "škrt"
 
 #: lib/layouts/soul.module:42
-#, fuzzy
 msgid "Underline"
-msgstr "underline"
+msgstr "Podtržení"
 
 #: lib/layouts/soul.module:44
 msgid "ul"
-msgstr ""
+msgstr "pod"
 
 #: lib/layouts/soul.module:53
 msgid "hl"
-msgstr ""
+msgstr "zvýr"
 
 #: lib/layouts/soul.module:59
-#, fuzzy
 msgid "Capitalize"
-msgstr "První v&elké"
+msgstr "Kapitálky"
 
 #: lib/layouts/soul.module:61
-#, fuzzy
 msgid "caps"
-msgstr "allcaps"
+msgstr "kap"
 
 #: lib/layouts/soul.module:71
 #, fuzzy
 msgid "spaceletters"
-msgstr "Dopisy"
+msgstr "mezery"
 
 #: lib/layouts/soul.module:75
-#, fuzzy
 msgid "strikethrough"
-msgstr "Př&eškrtnutí:"
+msgstr "přeškrtnutí"
 
 #: lib/layouts/soul.module:79 lib/ui/stdtoolbars.inc:497
 msgid "underline"
 msgstr "underline"
 
 #: lib/layouts/soul.module:83
-#, fuzzy
 msgid "highlight"
-msgstr "Highlight"
+msgstr "zvýraznění"
 
 #: lib/layouts/soul.module:87
-#, fuzzy
 msgid "capitalise"
-msgstr "První v&elké"
+msgstr "kapitálky"
 
 #: lib/layouts/soul.module:91
-#, fuzzy
 msgid "Capitalise"
-msgstr "První v&elké"
+msgstr "Kapitálky"
 
 #: lib/layouts/spie.layout:3
 msgid "SPIE Proceedings"
@@ -17607,8 +17562,7 @@ msgid ""
 "Adds custom insets that support colored boxes via the tcolorbox package. See "
 "the tcolorbox documentation for details."
 msgstr ""
-"Přidá vložky pro barevné rámečky za použití balíčku tcolorbox. Dokumentace "
-"tamtéž."
+"Přidá vložky pro barevné rámečky za použití balíčku tcolorbox. Detaily v dokumentaci balíčku."
 
 #: lib/layouts/tcolorbox.module:12 lib/layouts/tcolorbox.module:15
 msgid "Color Box"
@@ -18544,7 +18498,6 @@ msgid "Variable-width Minipages"
 msgstr "Ministránky s proměnlivou šířkou"
 
 #: lib/layouts/varwidth.module:14
-#, fuzzy
 msgid ""
 "Adds a 'Minipage (Var. Width)' inset using the varwidth LaTeX package. The "
 "varwidth package provides a variable-width minipage, whose resulting width "
@@ -18557,8 +18510,7 @@ msgstr ""
 "Tento balíček poskytuje ministránky s proměnlivou šířkou, která je "
 "definována šířkou svého obsahu (pokud nepřekročí specifikované maximum). "
 "Vložka má dvě nepovinné volby: vertikální zarovnání (c|t|b) a maximální "
-"šířku (implicitně \\linewidth). Více viz. příklady v varwidth-floats-side-by-"
-"side.lyx."
+"šířku (implicitně \\linewidth). Více viz. příklad v Soubor > Otevřít příklad > Moduly > Ministránky s proměnlivou šířkou."
 
 #: lib/layouts/varwidth.module:20
 msgid "Minipage (Var. Width)"
