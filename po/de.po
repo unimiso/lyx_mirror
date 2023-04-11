@@ -94,8 +94,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-04-08 17:27+0200\n"
-"PO-Revision-Date: 2023-04-08 17:32+0200\n"
+"POT-Creation-Date: 2023-04-11 07:04+0200\n"
+"PO-Revision-Date: 2023-04-11 07:07+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -7051,7 +7051,7 @@ msgstr "Text einer Tabellenanmerkung"
 #: lib/layouts/acmart.layout:548 lib/layouts/acmart.layout:552
 #: lib/layouts/beamer.layout:1391 lib/layouts/elsart.layout:306
 #: lib/layouts/elsart.layout:310 lib/layouts/foils.layout:249
-#: lib/layouts/heb-article.layout:28 lib/layouts/ijmpc.layout:425
+#: lib/layouts/heb-article.layout:16 lib/layouts/ijmpc.layout:425
 #: lib/layouts/ijmpd.layout:432 lib/layouts/ijmpd.layout:435
 #: lib/layouts/llncs.layout:449 lib/layouts/siamltex.layout:69
 #: lib/layouts/svmono.layout:29 lib/layouts/theorems-ams-bytype.inc:30
@@ -7235,7 +7235,7 @@ msgstr "Vermutung"
 
 #: lib/layouts/AEA.layout:244 lib/layouts/acmart.layout:587
 #: lib/layouts/beamer.layout:1307 lib/layouts/elsart.layout:390
-#: lib/layouts/foils.layout:282 lib/layouts/heb-article.layout:66
+#: lib/layouts/foils.layout:282 lib/layouts/heb-article.layout:65
 #: lib/layouts/ijmpc.layout:446 lib/layouts/ijmpd.layout:461
 #: lib/layouts/ijmpd.layout:464 lib/layouts/llncs.layout:353
 #: lib/layouts/siamltex.layout:79 lib/layouts/svmono.layout:44
@@ -7283,7 +7283,7 @@ msgstr "Kriterium"
 
 #: lib/layouts/AEA.layout:259 lib/layouts/acmart.layout:615
 #: lib/layouts/beamer.layout:1345 lib/layouts/elsart.layout:438
-#: lib/layouts/foils.layout:296 lib/layouts/heb-article.layout:86
+#: lib/layouts/foils.layout:296 lib/layouts/heb-article.layout:87
 #: lib/layouts/llncs.layout:367 lib/layouts/siamltex.layout:128
 #: lib/layouts/svmono.layout:34 lib/layouts/theorems-ams-bytype.inc:198
 #: lib/layouts/theorems-ams-bytype.inc:214
@@ -7360,7 +7360,7 @@ msgstr "Aufgabe"
 
 #: lib/layouts/AEA.layout:280 lib/layouts/acmart.layout:594
 #: lib/layouts/beamer.layout:1379 lib/layouts/elsart.layout:378
-#: lib/layouts/foils.layout:275 lib/layouts/heb-article.layout:56
+#: lib/layouts/foils.layout:275 lib/layouts/heb-article.layout:54
 #: lib/layouts/ijmpc.layout:450 lib/layouts/ijmpd.layout:469
 #: lib/layouts/ijmpd.layout:472 lib/layouts/llncs.layout:388
 #: lib/layouts/siamltex.layout:89 lib/layouts/svmono.layout:49
@@ -7554,7 +7554,7 @@ msgstr "Legende"
 
 #: lib/layouts/AEA.layout:347 lib/layouts/IEEEtran.layout:448
 #: lib/layouts/beamer.layout:1385 lib/layouts/elsart.layout:345
-#: lib/layouts/foils.layout:310 lib/layouts/heb-article.layout:106
+#: lib/layouts/foils.layout:310 lib/layouts/heb-article.layout:109
 #: lib/layouts/ijmpc.layout:403 lib/layouts/ijmpd.layout:409
 #: lib/layouts/llncs.layout:408 lib/layouts/siamltex.layout:157
 #: lib/layouts/svcommon.inc:739 lib/layouts/svcommon.inc:754
@@ -7980,7 +7980,7 @@ msgstr "Biographie ohne Foto"
 #: lib/layouts/IEEEtran.layout:449 lib/layouts/acmart.layout:553
 #: lib/layouts/beamer.layout:1308 lib/layouts/elsart.layout:311
 #: lib/layouts/elsart.layout:346 lib/layouts/foils.layout:250
-#: lib/layouts/heb-article.layout:29 lib/layouts/heb-article.layout:107
+#: lib/layouts/heb-article.layout:17 lib/layouts/heb-article.layout:110
 #: lib/layouts/ijmpc.layout:406 lib/layouts/ijmpd.layout:412
 #: lib/layouts/llncs.layout:318 lib/layouts/siamltex.layout:119
 #: lib/layouts/svcommon.inc:740 lib/layouts/theorems-ams-bytype.inc:31
@@ -9198,21 +9198,22 @@ msgstr "Zusätzlicher Theoremtext"
 msgid "Additional text appended to the theorem header"
 msgstr "Zusatztext, der an den Theoremtitel angehängt wird"
 
-#: lib/layouts/acmart.layout:577 lib/layouts/ijmpc.layout:427
-#: lib/layouts/ijmpd.layout:437 lib/layouts/theorems-ams-bytype.inc:55
+#: lib/layouts/acmart.layout:577 lib/layouts/heb-article.layout:32
+#: lib/layouts/ijmpc.layout:427 lib/layouts/ijmpd.layout:437
+#: lib/layouts/theorems-ams-bytype.inc:55
 #: lib/layouts/theorems-ams-chap-bytype.inc:97 lib/layouts/theorems-ams.inc:52
 #: lib/layouts/theorems-bytype.inc:49
 #: lib/layouts/theorems-without-preamble.inc:62 lib/layouts/theorems.inc:52
 msgid "Theorem \\thetheorem."
 msgstr "Theorem \\thetheorem."
 
-#: lib/layouts/acmart.layout:591 lib/layouts/theorems-ams.inc:84
-#: lib/layouts/theorems.inc:84
+#: lib/layouts/acmart.layout:591 lib/layouts/heb-article.layout:68
+#: lib/layouts/theorems-ams.inc:84 lib/layouts/theorems.inc:84
 msgid "Corollary \\thetheorem."
 msgstr "Korollar \\thetheorem."
 
-#: lib/layouts/acmart.layout:598 lib/layouts/theorems-ams.inc:107
-#: lib/layouts/theorems.inc:107
+#: lib/layouts/acmart.layout:598 lib/layouts/heb-article.layout:57
+#: lib/layouts/theorems-ams.inc:107 lib/layouts/theorems.inc:107
 msgid "Lemma \\thetheorem."
 msgstr "Lemma \\thetheorem."
 
@@ -9226,8 +9227,8 @@ msgstr "Satz \\thetheorem."
 msgid "Conjecture \\thetheorem."
 msgstr "Vermutung \\thetheorem."
 
-#: lib/layouts/acmart.layout:619 lib/layouts/theorems-ams.inc:199
-#: lib/layouts/theorems.inc:199
+#: lib/layouts/acmart.layout:619 lib/layouts/heb-article.layout:90
+#: lib/layouts/theorems-ams.inc:199 lib/layouts/theorems.inc:199
 msgid "Definition \\thetheorem."
 msgstr "Definition \\thetheorem."
 
@@ -13122,18 +13123,15 @@ msgstr "Einschränkung"
 msgid "Restriction:"
 msgstr "Einschränkung:"
 
-#: lib/layouts/foils.layout:264 lib/layouts/heb-article.layout:44
-#: lib/layouts/llncs.layout:452
+#: lib/layouts/foils.layout:264 lib/layouts/llncs.layout:452
 msgid "Theorem #."
 msgstr "Theorem #."
 
-#: lib/layouts/foils.layout:278 lib/layouts/heb-article.layout:59
-#: lib/layouts/llncs.layout:391
+#: lib/layouts/foils.layout:278 lib/layouts/llncs.layout:391
 msgid "Lemma #."
 msgstr "Lemma #."
 
-#: lib/layouts/foils.layout:285 lib/layouts/heb-article.layout:69
-#: lib/layouts/llncs.layout:356
+#: lib/layouts/foils.layout:285 lib/layouts/llncs.layout:356
 msgid "Corollary #."
 msgstr "Korollar #."
 
@@ -13141,8 +13139,7 @@ msgstr "Korollar #."
 msgid "Proposition #."
 msgstr "Satz #."
 
-#: lib/layouts/foils.layout:299 lib/layouts/heb-article.layout:89
-#: lib/layouts/llncs.layout:370
+#: lib/layouts/foils.layout:299 lib/layouts/llncs.layout:370
 msgid "Definition #."
 msgstr "Definition #."
 
@@ -13687,19 +13684,20 @@ msgstr "Hängend"
 msgid "Hebrew Article"
 msgstr "Hebräischer Aufsatz"
 
-#: lib/layouts/heb-article.layout:79
-msgid "Claim #."
-msgstr "Behauptung #."
+#: lib/layouts/heb-article.layout:79 lib/layouts/theorems-ams.inc:345
+#: lib/layouts/theorems.inc:345
+msgid "Claim \\thetheorem."
+msgstr "Behauptung \\thetheorem."
 
-#: lib/layouts/heb-article.layout:96
+#: lib/layouts/heb-article.layout:98
 msgid "Remarks"
 msgstr "Bemerkungen"
 
-#: lib/layouts/heb-article.layout:99
-msgid "Remarks #."
-msgstr "Bemerkungen #."
+#: lib/layouts/heb-article.layout:101
+msgid "Remarks \\thetheorem."
+msgstr "Bemerkungen \\thetheorem."
 
-#: lib/layouts/heb-article.layout:122 lib/layouts/ijmpc.layout:412
+#: lib/layouts/heb-article.layout:125 lib/layouts/ijmpc.layout:412
 #: lib/layouts/ijmpd.layout:418
 msgid "Proof:"
 msgstr "Beweis:"
@@ -16593,9 +16591,8 @@ msgid ""
 "by GHS Hazard-Precautionary statement system in the EU."
 msgstr ""
 "Stellt zwei Einfügungen und eine Umgebung für Nummern und Aussagen von R- "
-"und S-Sätzen zur Verfügung. Mittlerweile veraltet, da die R-S-Sätze in der EU"
-" offiziell "
-"von den H-P-Sätzen abgelöst wurden."
+"und S-Sätzen zur Verfügung. Mittlerweile veraltet, da die R-S-Sätze in der "
+"EU offiziell von den H-P-Sätzen abgelöst wurden."
 
 #: lib/layouts/rsphrase.module:12 lib/layouts/rsphrase.module:17
 msgid "R-S number"
@@ -18405,10 +18402,6 @@ msgstr "Lösung \\thetheorem."
 #: lib/layouts/theorems-ams.inc:315 lib/layouts/theorems.inc:315
 msgid "Remark \\thetheorem."
 msgstr "Bemerkung \\thetheorem."
-
-#: lib/layouts/theorems-ams.inc:345 lib/layouts/theorems.inc:345
-msgid "Claim \\thetheorem."
-msgstr "Behauptung \\thetheorem."
 
 #: lib/layouts/theorems-ams.module:2
 msgid "AMS Theorems"
@@ -28587,7 +28580,7 @@ msgid "greyedout inset text"
 msgstr "Grauschrift-Einfügungstext"
 
 #: src/BufferParams.cpp:1721 src/BufferParams.cpp:1875
-#: src/BufferParams.cpp:2330 src/Encoding.cpp:264 src/Paragraph.cpp:3074
+#: src/BufferParams.cpp:2330 src/Encoding.cpp:264 src/Paragraph.cpp:3086
 #: src/frontends/qt/LaTeXHighlighter.cpp:154
 #: src/insets/InsetCommandParams.cpp:508 src/insets/InsetCommandParams.cpp:516
 #: src/insets/InsetGraphics.cpp:900 src/insets/InsetGraphics.cpp:908
@@ -28598,7 +28591,7 @@ msgid "LyX Warning: "
 msgstr "LyX-Warnung: "
 
 #: src/BufferParams.cpp:1722 src/BufferParams.cpp:1876
-#: src/BufferParams.cpp:2331 src/Encoding.cpp:265 src/Paragraph.cpp:3075
+#: src/BufferParams.cpp:2331 src/Encoding.cpp:265 src/Paragraph.cpp:3087
 #: src/insets/InsetCommandParams.cpp:509 src/insets/InsetCommandParams.cpp:517
 #: src/insets/InsetGraphics.cpp:901 src/insets/InsetGraphics.cpp:909
 #: src/insets/InsetListings.cpp:300 src/insets/InsetListings.cpp:308
@@ -30012,15 +30005,15 @@ msgstr "Literaturverzeichnis-Prozessor wird ausgeführt."
 msgid "Re-Running Bibliography Processor."
 msgstr "Literaturverzeichnis-Prozessor wird noch einmal ausgeführt."
 
-#: src/LaTeX.cpp:429
+#: src/LaTeX.cpp:431
 msgid "Running Index Processor."
 msgstr "Indexprozessor wird ausgeführt."
 
-#: src/LaTeX.cpp:438
+#: src/LaTeX.cpp:440
 msgid "Index Processor Error"
 msgstr "Indexprozessor-Fehler"
 
-#: src/LaTeX.cpp:439
+#: src/LaTeX.cpp:441
 msgid ""
 "The index processor did not run successfully. Please check the output of "
 "View > Messages Pane!"
@@ -30028,27 +30021,27 @@ msgstr ""
 "Der Durchlauf des Index-Prozessors war nicht erfolgreich. Bitte prüfen Sie "
 "die Ausgabe von Ansicht > Statusmeldungen!"
 
-#: src/LaTeX.cpp:599
+#: src/LaTeX.cpp:601
 msgid "Running Nomenclature Processor."
 msgstr "Nomenklatur-Prozessor wird ausgeführt."
 
-#: src/LaTeX.cpp:1103
+#: src/LaTeX.cpp:1105
 msgid "(NOTE: The erroneous command is in the preamble)"
 msgstr "(ACHTUNG: Der fehlerhafte Befehl befindet sich in der Präambel)"
 
-#: src/LaTeX.cpp:1595 src/LaTeX.cpp:1601 src/LaTeX.cpp:1610
+#: src/LaTeX.cpp:1597 src/LaTeX.cpp:1603 src/LaTeX.cpp:1612
 msgid "BibTeX error: "
 msgstr "BibTeX-Fehler: "
 
-#: src/LaTeX.cpp:1617
+#: src/LaTeX.cpp:1619
 msgid "Biber error: "
 msgstr "Biber-Fehler: "
 
-#: src/LaTeX.cpp:1644
+#: src/LaTeX.cpp:1646
 msgid "Makeindex error: "
 msgstr "Makeindex-Fehler: "
 
-#: src/LaTeX.cpp:1653
+#: src/LaTeX.cpp:1655
 msgid "Xindy error: "
 msgstr "Xindy-Fehler: "
 
@@ -31042,15 +31035,15 @@ msgstr "Zur gespeicherten Version des Dokuments zurückkehren?"
 msgid "&Revert"
 msgstr "&Wiederherstellen"
 
-#: src/Paragraph.cpp:2205
+#: src/Paragraph.cpp:2217
 msgid "Senseless with this layout!"
 msgstr "Für dieses Format nicht relevant!"
 
-#: src/Paragraph.cpp:2259
+#: src/Paragraph.cpp:2271
 msgid "Alignment not permitted"
 msgstr "Ausrichtung nicht erlaubt"
 
-#: src/Paragraph.cpp:2260
+#: src/Paragraph.cpp:2272
 msgid ""
 "The new layout does not permit the alignment previously used.\n"
 "Setting to default."
@@ -38684,6 +38677,12 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Unbekannter Benutzer"
+
+#~ msgid "Claim #."
+#~ msgstr "Behauptung #."
+
+#~ msgid "Remarks #."
+#~ msgstr "Bemerkungen #."
 
 #~ msgid "Protected Hyphen|y"
 #~ msgstr "Geschützter Trennstrich|T"
