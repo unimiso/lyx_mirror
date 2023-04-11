@@ -2,6 +2,8 @@
 #\DeclareCategory{Page Layout}
 #DescriptionBegin
 #Adds environments to define header and footer lines.
+#See the Additional manual, section Modules > Page Layout >
+#Custom Header/Footer Text, for a detailed description.
 #NOTE: To use this module you must set the 'Page style' in 
 #      the menu Document Settings -> Page Layout to 'fancy'!
 #DescriptionEnd
