@@ -899,10 +899,13 @@ Row TextMetrics::tokenizeParagraph(pit_type const pit) const
 			FontMetrics const & fm = theFontMetrics(text_->labelFont(par));
 			int const wid = fm.width(par.layout().labelsep);
 			row.addMarginSpace(i, wid, *fi, par.lookupChange(i));
-		} else if (c == '\t')
-			row.addSpace(i, theFontMetrics(*fi).width(from_ascii("    ")),
+		} else if (c == '\t') {
+			// Make tab stop size adjust automatically depending on char number
+			int tabStopWidth = 4;
+			std::string s = std::string(tabStopWidth - i % tabStopWidth, ' ');
+			row.addSpace(i, theFontMetrics(*fi).width(from_ascii(s)),
 			             *fi, par.lookupChange(i));
-		else if (c == 0x2028 || c == 0x2029) {
+		} else if (c == 0x2028 || c == 0x2029) {
 			/**
 			 * U+2028 LINE SEPARATOR
 			 * U+2029 PARAGRAPH SEPARATOR
