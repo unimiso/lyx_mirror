@@ -925,7 +925,7 @@ msgstr "&Zamítnout"
 
 #: src/frontends/qt/ui/CharacterUi.ui:25
 msgid "Font Properties"
-msgstr "Vlasnosti fontu"
+msgstr "Vlastnosti fontu"
 
 #: src/frontends/qt/ui/CharacterUi.ui:36 src/frontends/qt/ui/CharacterUi.ui:55
 #: src/frontends/qt/ui/FindAndReplaceUi.ui:488
@@ -6192,7 +6192,7 @@ msgid ""
 "The basic citation capabilities provided by BibTeX. Mainly simple numeric "
 "styles primarily suitable for science and maths."
 msgstr ""
-"Základní citační vlasnosti poskytované balíkem BibTeX. Zejména jednoduché "
+"Základní citační vlastnosti poskytované balíkem BibTeX. Zejména jednoduché "
 "numerické styly primárně určené pro vědecko-technické obory."
 
 #: lib/citeengines/basic.citeengine:52
@@ -9408,9 +9408,8 @@ msgstr "Chapter Exercises"
 #: lib/layouts/simplecv.layout:115 lib/layouts/stdlists.inc:37
 #: lib/layouts/stdlists.inc:79 lib/layouts/stdlists.inc:126
 #: lib/layouts/stdlyxlist.inc:22 lib/layouts/theorems-case.inc:57
-#, fuzzy
 msgid "List preamble"
-msgstr "Preambule náhledu"
+msgstr "Preambule seznamu"
 
 #: lib/layouts/amsbook.layout:167 lib/layouts/apa.layout:408
 #: lib/layouts/apa.layout:446 lib/layouts/apa.layout:488
@@ -9428,9 +9427,8 @@ msgstr "Preambule náhledu"
 #: lib/layouts/simplecv.layout:116 lib/layouts/stdlists.inc:38
 #: lib/layouts/stdlists.inc:80 lib/layouts/stdlists.inc:127
 #: lib/layouts/stdlyxlist.inc:23 lib/layouts/theorems-case.inc:58
-#, fuzzy
 msgid "List Preamble"
-msgstr "Preamble"
+msgstr "Preambule seznamu"
 
 #: lib/layouts/amsbook.layout:168 lib/layouts/apa.layout:409
 #: lib/layouts/apa.layout:447 lib/layouts/apa.layout:489
@@ -9449,7 +9447,7 @@ msgstr "Preamble"
 #: lib/layouts/stdlists.inc:81 lib/layouts/stdlists.inc:128
 #: lib/layouts/stdlyxlist.inc:24 lib/layouts/theorems-case.inc:59
 msgid "LaTeX code to be inserted before the first item"
-msgstr ""
+msgstr "Kód LaTeX-u ke vložení před první položku"
 
 #: lib/layouts/amsdefs.inc:42
 msgid "Short title which appears in the running headers"
@@ -10573,14 +10571,12 @@ msgid "Scripts"
 msgstr "Scénáře"
 
 #: lib/layouts/broadway.layout:27
-#, fuzzy
 msgid "Act Number"
-msgstr "ACM Number"
+msgstr "Act Number"
 
 #: lib/layouts/broadway.layout:32
-#, fuzzy
 msgid "Scene Number"
-msgstr "Číslo stránky"
+msgstr "Scene Number"
 
 #: lib/layouts/broadway.layout:36 lib/layouts/hollywood.layout:41
 msgid "Dialogue"
@@ -11555,28 +11551,24 @@ msgid "Verteiler"
 msgstr "Verteiler"
 
 #: lib/layouts/docbook-book.layout:3 lib/layouts/docbook-book.layout:6
-#, fuzzy
 msgid "DocBook Book (XML)"
-msgstr "DocBook Book (SGML)"
+msgstr "DocBook kniha (XML)"
 
 #: lib/layouts/docbook-book.layout:7
 msgid "Books (DocBook)"
 msgstr "Knihy (DocBook)"
 
 #: lib/layouts/docbook-chapter.layout:3
-#, fuzzy
 msgid "DocBook Chapter (XML)"
-msgstr "DocBook Chapter (SGML)"
+msgstr "DocBook kapitola (XML)"
 
 #: lib/layouts/docbook-section.layout:3
-#, fuzzy
 msgid "DocBook Section (XML)"
-msgstr "DocBook Section (SGML)"
+msgstr "DocBook Sekce (XML)"
 
 #: lib/layouts/docbook.layout:3
-#, fuzzy
 msgid "DocBook Article (XML)"
-msgstr "DocBook Article (SGML)"
+msgstr "DocBook článek (XML)"
 
 #: lib/layouts/doublecol-new.layout:3
 msgid "Inderscience A4 Journals"
@@ -11694,9 +11686,8 @@ msgid "bysame"
 msgstr "bysame"
 
 #: lib/layouts/ectaart.layout:252 lib/layouts/stdcounters.inc:91
-#, fuzzy
 msgid "Footnote (Title)"
-msgstr "Footnote Label"
+msgstr "Patička (titulek)"
 
 #: lib/layouts/egs.layout:3
 msgid "European Geophysical Society (EGS)"
@@ -12523,7 +12514,7 @@ msgstr ""
 "Detaily anotace lze upravit v preambuli LaTeX-u. Poznámka: standardně jsou "
 "poznámky zobrazeny pouze v módu konceptu (Vložte 'draft' do Dokument > "
 "Nastavení > Třída dokumentu > Nastavení třídy > Vlastní ). Vložením "
-"\\fxsetup{draft} do preambule budou zobrazeny vždy. Pro některé vlasnosti "
+"\\fxsetup{draft} do preambule budou zobrazeny vždy. Pro některé vlastnosti "
 "modulu je třeba alespoň verze 4 balíčku FiXme."
 
 #: lib/layouts/fixme.module:18 lib/layouts/fixme.module:56
@@ -13611,9 +13602,8 @@ msgid "Comby"
 msgstr "Comby"
 
 #: lib/layouts/ijmpd.layout:519 lib/layouts/theorems-without-preamble.inc:152
-#, fuzzy
 msgid "Prop(osition)"
-msgstr "Tvrzení"
+msgstr "Tvrz(ení)"
 
 #: lib/layouts/initials.module:2
 msgid "Initials (Drop Caps)"
@@ -13830,50 +13820,47 @@ msgstr "Synopsis"
 
 #: lib/layouts/japanese-vertical.inc:10 lib/layouts/japanese-vertical.inc:15
 msgid "Rensuji"
-msgstr ""
+msgstr "Rensuji"
 
 #: lib/layouts/japanese-vertical.inc:14
 msgid "Rensuji|R"
-msgstr ""
+msgstr "Rensuji|R"
 
 #: lib/layouts/japanese-vertical.inc:18
-#, fuzzy
 msgid "Pos"
-msgstr "cos"
+msgstr "Pos"
 
 #: lib/layouts/japanese-vertical.inc:20
 msgid "Insert 'c' for centering, 'r' for flushright and 'l' for flushleft"
-msgstr ""
+msgstr "Insert 'c' for centering, 'r' for flushright and 'l' for flushleft"
 
 #: lib/layouts/japanese-vertical.inc:25
 msgid "Rensuji*"
-msgstr ""
+msgstr "Rensuji*"
 
 #: lib/layouts/japanese-vertical.inc:28
 msgid "Rensuji with no Skip Adjustment|n"
-msgstr ""
+msgstr "Rensuji with no Skip Adjustment|n"
 
 #: lib/layouts/japanese-vertical.inc:29
 msgid "Rensuji (no skip adj.)"
-msgstr ""
+msgstr "Rensuji (no skip adj.)"
 
 #: lib/layouts/japanese-vertical.inc:32
-#, fuzzy
 msgid "Bou"
-msgstr "Rámeček"
+msgstr "Bou"
 
 #: lib/layouts/japanese-vertical.inc:35 lib/layouts/japanese-vertical.inc:36
 msgid "Bouten"
-msgstr ""
+msgstr "Bouten"
 
 #: lib/layouts/japanese-vertical.inc:39
 msgid "Kasen"
-msgstr ""
+msgstr "Kasen"
 
 #: lib/layouts/japanese-vertical.inc:42 lib/layouts/japanese-vertical.inc:43
-#, fuzzy
 msgid "Bousen"
-msgstr "Myška"
+msgstr "Bousen"
 
 #: lib/layouts/jarticle.layout:3
 msgid "Japanese Article (Standard Class)"
@@ -13920,28 +13907,24 @@ msgid "American Geophysical Union (AGUPLUS JGR)"
 msgstr "American Geophysical Union (AGUPLUS JGR)"
 
 #: lib/layouts/jlreq-article.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Article (JLReq Class)"
-msgstr "Japanese Article (JS Class)"
+msgstr "Japanese Article (JLReq Class)"
 
 #: lib/layouts/jlreq-book.layout:3
-#, fuzzy
 msgid "Japanese Book (JLReq Class)"
-msgstr "Japanese Book (JS Class)"
+msgstr "Japanese Book (JLReq Class)"
 
 #: lib/layouts/jlreq-common.inc:13 lib/layouts/jlreq-common.inc:21
 #: lib/layouts/jlreq-common.inc:29 lib/layouts/jlreq-common.inc:37
 #: lib/layouts/jlreq-common.inc:45 lib/layouts/jlreq-common.inc:53
 #: lib/layouts/jlreq-common.inc:61 lib/layouts/jlreq-common.inc:69
 #: lib/layouts/jlreq-common.inc:77 lib/layouts/jlreq-common.inc:85
-#, fuzzy
 msgid "Subtitle|u"
-msgstr "Podtitulek"
+msgstr "Subtitle|u"
 
 #: lib/layouts/jlreq-common.inc:14 lib/layouts/jlreq-common.inc:22
-#, fuzzy
 msgid "Subtitle of the part"
-msgstr "Title of this part"
+msgstr "Subtitle of the part"
 
 #: lib/layouts/jlreq-common.inc:27 lib/layouts/llncs.layout:42
 #: lib/layouts/memoir.layout:75 lib/layouts/numreport.inc:7
@@ -13953,9 +13936,8 @@ msgid "Chapter"
 msgstr "Kapitola"
 
 #: lib/layouts/jlreq-common.inc:30 lib/layouts/jlreq-common.inc:38
-#, fuzzy
 msgid "Subtitle of the chapter"
-msgstr "Number of the category"
+msgstr "Subtitle of the chapter"
 
 #: lib/layouts/jlreq-common.inc:35 lib/layouts/memoir.layout:91
 #: lib/layouts/stdstarsections.inc:29 lib/layouts/svcommon.inc:275
@@ -13963,28 +13945,24 @@ msgid "Chapter*"
 msgstr "Kapitola*"
 
 #: lib/layouts/jlreq-common.inc:46 lib/layouts/jlreq-common.inc:54
-#, fuzzy
 msgid "Subtitle of the section"
-msgstr "Width of the section Box"
+msgstr "Subtitle of the section"
 
 #: lib/layouts/jlreq-common.inc:62 lib/layouts/jlreq-common.inc:70
-#, fuzzy
 msgid "Subtitle of the subsection"
-msgstr "Width of the section Box"
+msgstr "Subtitle of the subsection"
 
 #: lib/layouts/jlreq-common.inc:78 lib/layouts/jlreq-common.inc:86
-#, fuzzy
 msgid "Subtitle of the subsubsection"
-msgstr "\\thesubsubsection."
+msgstr "Subtitle of the subsubsection"
 
 #: lib/layouts/jlreq-common.inc:91
-#, fuzzy
 msgid "Abstract over Columns"
-msgstr "Počet sloupců"
+msgstr "Abstract over Columns"
 
 #: lib/layouts/jlreq-common.inc:107 lib/layouts/jlreq-common.inc:113
 msgid "JLReq Setup"
-msgstr ""
+msgstr "JLReq Setup"
 
 #: lib/layouts/jlreq-common.inc:170 lib/layouts/jlreq-common.inc:173
 #: lib/layouts/tufte-book.layout:27 lib/layouts/tufte-book.layout:159
@@ -13992,9 +13970,8 @@ msgid "Sidenote"
 msgstr "Sidenote"
 
 #: lib/layouts/jlreq-common.inc:201
-#, fuzzy
 msgid "Endnote contents"
-msgstr "Nekódovatelný obsah"
+msgstr "Endnote contents"
 
 #: lib/layouts/jlreq-common.inc:202
 msgid ""
@@ -14004,28 +13981,27 @@ msgstr ""
 
 #: lib/layouts/jlreq-common.inc:209 lib/layouts/jlreq-common.inc:212
 msgid "Warichu"
-msgstr ""
+msgstr "Warichu"
 
 #: lib/layouts/jlreq-common.inc:240 lib/layouts/jlreq-common.inc:243
 msgid "Warichu*"
-msgstr ""
+msgstr "Warichu*"
 
 #: lib/layouts/jlreq-common.inc:277 lib/layouts/jlreq-common.inc:281
 msgid "Tatechuyoko"
-msgstr ""
+msgstr "Tatechuyoko"
 
 #: lib/layouts/jlreq-common.inc:285 lib/layouts/jlreq-common.inc:288
 msgid "Jidori"
-msgstr ""
+msgstr "Jidori"
 
 #: lib/layouts/jlreq-common.inc:290
 msgid "Length"
 msgstr "Vlastní délka"
 
 #: lib/layouts/jlreq-common.inc:291
-#, fuzzy
 msgid "Jidori Length|L"
-msgstr "Vlastní délka|V"
+msgstr "Jidori Length|L"
 
 #: lib/layouts/jlreq-common.inc:292
 msgid "Length of Jidori. Contents is fit to this length."
@@ -14036,28 +14012,24 @@ msgid "Akigumi"
 msgstr ""
 
 #: lib/layouts/jlreq-common.inc:302
-#, fuzzy
 msgid "Akigumi (LuaLaTeX)"
-msgstr "PDF (LuaTeX)"
+msgstr "Akigumi (LuaLaTeX)"
 
 #: lib/layouts/jlreq-common.inc:304
-#, fuzzy
 msgid "Char Space"
-msgstr "Čtverčík"
+msgstr "Char Space"
 
 #: lib/layouts/jlreq-common.inc:305
-#, fuzzy
 msgid "Char Space|D"
-msgstr "Úzká mezera|z"
+msgstr "Char Space|D"
 
 #: lib/layouts/jlreq-common.inc:306
 msgid "Distance between chars is set to this length."
-msgstr ""
+msgstr "Distance between chars is set to this length."
 
 #: lib/layouts/jlreq-report.layout:3
-#, fuzzy
 msgid "Japanese Report (JLReq Class)"
-msgstr "Japanese Report (BXJS Class)"
+msgstr "Japanese Report (JLReq Class)"
 
 #: lib/layouts/jreport.layout:3
 msgid "Japanese Report (Standard Class)"
@@ -14069,9 +14041,8 @@ msgid "Japanese Article (JS Bundle)"
 msgstr "Japanese Article (JS Class)"
 
 #: lib/layouts/jsbook.layout:3
-#, fuzzy
 msgid "Japanese Book (JS Bundle)"
-msgstr "Japanese Book (JS Class)"
+msgstr "Japanese Book (JS Bundle)"
 
 #: lib/layouts/jss.layout:3 lib/examples/Articles:0
 msgid "Journal of Statistical Software (JSS) version 2"
@@ -14318,7 +14289,7 @@ msgstr "LilyPond"
 
 #: lib/layouts/lilypond.module:39
 msgid "LilyPond Options"
-msgstr "LilyPond - vlasnosti"
+msgstr "LilyPond - vlastnosti"
 
 #: lib/layouts/lilypond.module:40
 msgid ""
@@ -14845,49 +14816,40 @@ msgid "strong"
 msgstr "silný důraz"
 
 #: lib/layouts/ltjarticle.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Article (Standard Class for LuaTeX)"
-msgstr "Japanese Article (Standard Class)"
+msgstr "Japanese Article (Standard Class for LuaTeX)"
 
 #: lib/layouts/ltjbook.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Book (Standard Class for LuaTeX)"
-msgstr "Japanese Book (Standard Class)"
+msgstr "Japanese Book (Standard Class for LuaTeX)"
 
 #: lib/layouts/ltjreport.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Report (Standard Class for LuaTeX)"
-msgstr "Japanese Report (Standard Class)"
+msgstr "Japanese Report (Standard Class for LuaTeX)"
 
 #: lib/layouts/ltjsarticle.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Article (JS Bundle for LuaTeX)"
-msgstr "Japanese Article (JS Class)"
+msgstr "Japanese Article (JS Bundle for LuaTeX)"
 
 #: lib/layouts/ltjsbook.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Book (JS Bundle for LuaTeX)"
-msgstr "Japanese Book (JS Class)"
+msgstr "Japanese Book (JS Bundle for LuaTeX)"
 
 #: lib/layouts/ltjsreport.layout:3 lib/examples/Articles:0
-#, fuzzy
 msgid "Japanese Report (JS Bundle for LuaTeX)"
-msgstr "Japanese Report (BXJS Class)"
+msgstr "Japanese Report (JS Bundle for LuaTeX)"
 
 #: lib/layouts/ltjtarticle.layout:3
-#, fuzzy
 msgid "Japanese Article (Standard Class for LuaTeX, vertical Writing)"
-msgstr "Japanese Article (Standard Class: Vertical Writing)"
+msgstr "Japanese Article (Standard Class for LuaTeX, vertical Writing)"
 
 #: lib/layouts/ltjtbook.layout:3
-#, fuzzy
 msgid "Japanese Book (Standard Class for LuaTeX, vertical Writing)"
-msgstr "Japanese Book (Standard Class: Vertical Writing)"
+msgstr "Japanese Book (Standard Class for LuaTeX, vertical Writing)"
 
 #: lib/layouts/ltjtreport.layout:3
-#, fuzzy
 msgid "Japanese Report (Standard Class for LuaTeX, vertical Writing)"
-msgstr "Japanese Book (Standard Class: Vertical Writing)"
+msgstr "Japanese Report (Standard Class for LuaTeX, vertical Writing)"
 
 #: lib/layouts/ltugboat.layout:3
 msgid "TUGboat"
@@ -15030,14 +14992,12 @@ msgid "Legend"
 msgstr "Legenda"
 
 #: lib/layouts/memoir.layout:336
-#, fuzzy
 msgid "Endnotes (all)"
-msgstr "Koncová poznámka"
+msgstr "Koncové poznámky (všechny)"
 
 #: lib/layouts/memoir.layout:344
-#, fuzzy
 msgid "Endnotes (sectioned)"
-msgstr "Headnote (optional):"
+msgstr "Koncové poznámky (v sekcích):"
 
 #: lib/layouts/minimalistic.module:2
 msgid "Minimalistic Insets"
@@ -15366,7 +15326,7 @@ msgid ""
 "Multiple Columns, for a detailed description."
 msgstr ""
 "Přidá novou vložku, která umožnuje sázet vícesloupcový text (standardně 2). "
-"Více v manuálu Rozšířených vlasností LyX-u, sekce Modules > Page Layout > Multiple Text Columns."
+"Více v manuálu Rozšířených vlastností LyX-u, sekce Modules > Page Layout > Multiple Text Columns."
 
 #: lib/layouts/multicol.module:20
 msgid "Number of Columns"
@@ -16733,7 +16693,7 @@ msgid ""
 "Modules > Paragraph Styles > Custom Paragraph Shapes."
 msgstr ""
 "Obsahuje několik tvarů pro odstavce a pokytuje příkazy pro tvorbu nových. "
-"Bližší informace v manuálu 'Rozšířené vlasnosti LyX-u.', sekce Modules > Paragraph Styles > Custom Paragraph Shapes."
+"Bližší informace v manuálu 'Rozšířené vlastnosti LyX-u.', sekce Modules > Paragraph Styles > Custom Paragraph Shapes."
 
 #: lib/layouts/shapepar.module:27
 msgid "CD label"
@@ -16965,15 +16925,15 @@ msgid ""
 "capitalize/small-cap text by means of the soul package. As opposed to the "
 "markup provided by the Text Properties dialog, words marked-up with soul are "
 "hyphenated."
-msgstr "Definuje styly textu pro zvýraznění, přeškrtnutí, proložení mezerami, podtržení a kapitálky pomocí balíčku soul. Na rozdíl od značkování poskytovaného v dialogu Vlastnosti textu, balíček soul umožňuje dělení slov pomocí pomlček."
+msgstr "Definuje styly textu pro zvýraznění, přeškrtnutí, prostrkávání, podtržení a kapitálky pomocí balíčku soul. Na rozdíl od značkování poskytovaného v dialogu Vlastnosti textu, balíček soul umožňuje dělení slov pomocí pomlček."
 
 #: lib/layouts/soul.module:17
 msgid "Spaceletters"
-msgstr "Proložení mezerami"
+msgstr "Prostrkávání"
 
 #: lib/layouts/soul.module:19
 msgid "spaced"
-msgstr "mezery"
+msgstr "prostr"
 
 #: lib/layouts/soul.module:33
 msgid "Strikethrough"
@@ -17004,9 +16964,8 @@ msgid "caps"
 msgstr "kap"
 
 #: lib/layouts/soul.module:71
-#, fuzzy
 msgid "spaceletters"
-msgstr "mezery"
+msgstr "prostrkávání"
 
 #: lib/layouts/soul.module:75
 msgid "strikethrough"
@@ -18305,9 +18264,8 @@ msgid "Prop \\theprop."
 msgstr "Prop \\theprop."
 
 #: lib/layouts/theorems-without-preamble.inc:300
-#, fuzzy
 msgid "Prob(lem)"
-msgstr "Úloha"
+msgstr "Prob(lém)"
 
 #: lib/layouts/theorems-without-preamble.inc:304
 msgid "Prob"
@@ -20098,14 +20056,12 @@ msgid "Big Skip|B"
 msgstr "Velká mezera (BigSkip)|V"
 
 #: lib/ui/stdcontext.inc:317
-#, fuzzy
 msgid "Half line height|H"
-msgstr "Základní linka vpravo"
+msgstr "Polovina výšky řádky|P"
 
 #: lib/ui/stdcontext.inc:318
-#, fuzzy
 msgid "Line height|L"
-msgstr "Linka vpravo|r"
+msgstr "Výška řádky|d"
 
 #: lib/ui/stdcontext.inc:319
 msgid "Vertical Fill|F"
@@ -20239,7 +20195,7 @@ msgstr "Odmítnout změnu|m"
 
 #: lib/ui/stdcontext.inc:401 lib/ui/stdmenus.inc:124
 msgid "Text Properties|x"
-msgstr "Vlasnosti textu|x"
+msgstr "Vlastnosti textu|x"
 
 #: lib/ui/stdcontext.inc:402 lib/ui/stdmenus.inc:125
 msgid "Custom Text Styles|S"
@@ -20343,9 +20299,8 @@ msgid "Right|R"
 msgstr "Napravo|r"
 
 #: lib/ui/stdcontext.inc:474
-#, fuzzy
 msgid "Reset Formal Defaults|F"
-msgstr "Obnov standardní"
+msgstr "Obnov výchozí pro formální|f"
 
 #: lib/ui/stdcontext.inc:478
 msgid "Left|f"
@@ -20468,13 +20423,12 @@ msgid "Insert Reference at Cursor Position|I"
 msgstr "Vložit křížový odkaz na pozici kurzoru|k"
 
 #: lib/ui/stdcontext.inc:625
-#, fuzzy
 msgid "Insert Copy at Cursor Position|I"
-msgstr "Vložit křížový odkaz na pozici kurzoru|k"
+msgstr "Vložit kopii na pozici kurzoru|o"
 
 #: lib/ui/stdcontext.inc:637
 msgid "Index All Occurrences of this Word|W"
-msgstr ""
+msgstr "Indexovat všechny výskyty tohoto slova|x"
 
 #: lib/ui/stdcontext.inc:639
 msgid "Single Page (No Page Range)|P"
@@ -20604,24 +20558,23 @@ msgstr "Gigantické ikony"
 
 #: lib/ui/stdcontext.inc:769
 msgid "Zoom Level|Z"
-msgstr ""
+msgstr "Lupa (popis)|r"
 
 #: lib/ui/stdcontext.inc:770
 msgid "Zoom Slider|S"
-msgstr ""
+msgstr "Lupa (běhoun)|b"
 
 #: lib/ui/stdcontext.inc:772
 msgid "Word Count|W"
-msgstr ""
+msgstr "Počet slov|v"
 
 #: lib/ui/stdcontext.inc:773
-#, fuzzy
 msgid "Character Count|C"
-msgstr "Znaková sada"
+msgstr "Počet znaků|z"
 
 #: lib/ui/stdcontext.inc:774
 msgid "Character Count (No Blanks)|h"
-msgstr ""
+msgstr "Počet znaků (bez mezer)|b"
 
 #: lib/ui/stdmenus.inc:30
 msgid "File|F"
@@ -20864,7 +20817,6 @@ msgid "Branch Settings...|B"
 msgstr "Nastavení větve...|V"
 
 #: lib/ui/stdmenus.inc:149
-#, fuzzy
 msgid "Box Settings...|S"
 msgstr "Nastavení rámečku...|r"
 
@@ -20873,7 +20825,6 @@ msgid "Index Entry Settings...|y"
 msgstr "Nastavení hesla rejstříku...|t"
 
 #: lib/ui/stdmenus.inc:151
-#, fuzzy
 msgid "Index Settings...|S"
 msgstr "Nastavení rejstříku...|r"
 
@@ -21254,9 +21205,8 @@ msgid "Box[[Menu]]|x"
 msgstr "Rámeček|R"
 
 #: lib/ui/stdmenus.inc:387
-#, fuzzy
 msgid "Regular Expression"
-msgstr "&Regulární výraz"
+msgstr "Regulární výraz"
 
 #: lib/ui/stdmenus.inc:389
 msgid "Citation...|C"
@@ -21271,9 +21221,8 @@ msgid "Label...|L"
 msgstr "Značka...|a"
 
 #: lib/ui/stdmenus.inc:394
-#, fuzzy
 msgid "Index Properties"
-msgstr "Vlasnosti fontu"
+msgstr "Vlastnosti rejstříku"
 
 #: lib/ui/stdmenus.inc:395
 msgid "Nomenclature Entry...|y"
@@ -21473,14 +21422,12 @@ msgid "Numbered Formula|N"
 msgstr "Očíslovaný vzorec|l"
 
 #: lib/ui/stdmenus.inc:504
-#, fuzzy
 msgid "Wrapped Figure|F"
-msgstr "Teaser Figure"
+msgstr "Obrázek (obtékání)|b"
 
 #: lib/ui/stdmenus.inc:505
-#, fuzzy
 msgid "Wrapped Table|T"
-msgstr "Tabulka|a"
+msgstr "Tabulka (obtékání)|u"
 
 #: lib/ui/stdmenus.inc:509
 msgid "Table of Contents|C"
@@ -21697,7 +21644,7 @@ msgstr "Uživatelská příručka|U"
 
 #: lib/ui/stdmenus.inc:651
 msgid "Additional Features|F"
-msgstr "Rozšířené vlasnosti LyX-u|R"
+msgstr "Rozšířené vlastnosti LyX-u|R"
 
 #: lib/ui/stdmenus.inc:652
 msgid "Embedded Objects|O"
@@ -21995,9 +21942,8 @@ msgid "Include file"
 msgstr "Zahrnout soubor"
 
 #: lib/ui/stdtoolbars.inc:150
-#, fuzzy
 msgid "Text properties"
-msgstr "Vlasnosti fontu"
+msgstr "Vlastnosti textu"
 
 #: lib/ui/stdtoolbars.inc:151
 msgid "Apply recent text properties"
@@ -32096,9 +32042,8 @@ msgid "(Without)[[color]]"
 msgstr "Bez barvy"
 
 #: src/frontends/qt/GuiCharacter.cpp:208
-#, fuzzy
 msgid "Text Properties"
-msgstr "Vlasnosti fontu"
+msgstr "Vlastnosti textu"
 
 #: src/frontends/qt/GuiCharacter.cpp:274
 msgid "Reset All To &Default"
@@ -33035,7 +32980,7 @@ msgid ""
 "feature."
 msgstr ""
 "Musíte zahrnout tento soubor do dokumentu\n"
-"'%1$s' pokud chcete používat vlasností hlavního dokumentu."
+"'%1$s' pokud chcete používat vlastností hlavního dokumentu."
 
 #: src/frontends/qt/GuiDocument.cpp:5103
 msgid "Could not load master"
