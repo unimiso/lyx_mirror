@@ -14196,7 +14196,7 @@ msgstr "Latex8 Article (Obsolete)"
 
 #: lib/layouts/letter.layout:3 lib/examples/Articles:0
 msgid "Letter (Standard Class)"
-msgstr "Letter (Standard Class)"
+msgstr "Dopis (standardní třída)"
 
 #: lib/layouts/lettre.layout:3 lib/examples/Articles:0
 msgid "French Letter (lettre)"
@@ -20432,69 +20432,59 @@ msgstr "Indexovat všechny výskyty tohoto slova|x"
 
 #: lib/ui/stdcontext.inc:639
 msgid "Single Page (No Page Range)|P"
-msgstr ""
+msgstr "Jednotlivá stránka (bez rozsahu)|r"
 
 #: lib/ui/stdcontext.inc:640
-#, fuzzy
 msgid "Start Page Range|t"
-msgstr "Start Page: "
+msgstr "Začátek rozsahu stránek|a"
 
 #: lib/ui/stdcontext.inc:641
-#, fuzzy
 msgid "End Page Range|E"
-msgstr "na straně <strana>|a"
+msgstr "Konec rozsahu stránek|s"
 
 #: lib/ui/stdcontext.inc:643
-#, fuzzy
 msgid "No Page Formatting|N"
-msgstr "Formátování|F"
+msgstr "Bez formátování stránky|B"
 
 #: lib/ui/stdcontext.inc:644
-#, fuzzy
 msgid "Bold Page Formatting|B"
-msgstr "Formátování|F"
+msgstr "Tučné - formátování stránky|T"
 
 #: lib/ui/stdcontext.inc:645
-#, fuzzy
 msgid "Italic Page Formatting|I"
-msgstr "Formátování|F"
+msgstr "Kurzíva - formátování stránky|K"
 
 #: lib/ui/stdcontext.inc:646
 msgid "Emphasized Page Formatting|z"
-msgstr ""
+msgstr "Zvýrazněné - formátování stránky|Z"
 
 #: lib/ui/stdcontext.inc:647
-#, fuzzy
 msgid "Custom Page Formatting|u"
-msgstr "Vlastní číslování|l"
+msgstr "Vlastní formátování stránky|y"
 
 #: lib/ui/stdcontext.inc:651
-#, fuzzy
 msgid "Insert Subentry|b"
-msgstr "Vložit heslo rejstříku"
+msgstr "Vložit podheslo|p"
 
 #: lib/ui/stdcontext.inc:652
-#, fuzzy
 msgid "Insert Sortkey|k"
-msgstr "Vložit poznámku"
+msgstr "Vložit klíč ke třídění|t"
 
 #: lib/ui/stdcontext.inc:653
-#, fuzzy
 msgid "Insert See Reference|e"
-msgstr "Internet Address Reference"
+msgstr "Vložit Viz reference|V"
 
 #: lib/ui/stdcontext.inc:654
-#, fuzzy
 msgid "Insert See also Reference|a"
-msgstr "Internet Address Reference"
+msgstr "Vložit Viz též reference|r"
 
 #: lib/ui/stdcontext.inc:662 lib/ui/stdmenus.inc:539
 msgid "See|e"
-msgstr ""
+msgstr "Viz|V"
 
 #: lib/ui/stdcontext.inc:663 lib/ui/stdmenus.inc:540
 msgid "See also|a"
-msgstr ""
+msgstr "Viz též|i"
 
 #: lib/ui/stdcontext.inc:672
 msgid "All Indexes|A"
@@ -21467,12 +21457,11 @@ msgstr "Dokument potomka...|D"
 
 #: lib/ui/stdmenus.inc:537
 msgid "Subentry|b"
-msgstr ""
+msgstr "Podheslo|o"
 
 #: lib/ui/stdmenus.inc:538
-#, fuzzy
 msgid "Sortkey|k"
-msgstr "Třídit"
+msgstr "Klíč k třídění|k"
 
 #: lib/ui/stdmenus.inc:545
 msgid "Comment|C"
@@ -21731,7 +21720,6 @@ msgid "XY-pic|X"
 msgstr "XY-pic|X"
 
 #: lib/ui/stdtoolbars.inc:78
-#, fuzzy
 msgid "Standard[[toolbar]]"
 msgstr "Standardní"
 
@@ -21784,9 +21772,8 @@ msgid "Toggle noun"
 msgstr "Přepnout na styl Jméno"
 
 #: lib/ui/stdtoolbars.inc:98
-#, fuzzy
 msgid "Custom text styles"
-msgstr "Vlastní vložky|s"
+msgstr "Vlastní styly textu"
 
 #: lib/ui/stdtoolbars.inc:100
 msgid "Insert math"
@@ -21801,7 +21788,6 @@ msgid "Insert table"
 msgstr "Vložit tabulku"
 
 #: lib/ui/stdtoolbars.inc:103
-#, fuzzy
 msgid "Custom insets"
 msgstr "Vlastní vložky"
 
@@ -21810,19 +21796,16 @@ msgid "Toggle outline"
 msgstr "Přepnout osnovu"
 
 #: lib/ui/stdtoolbars.inc:106 lib/ui/stdtoolbars.inc:303
-#, fuzzy
 msgid "Show math toolbar"
 msgstr "Zobrazit matematický panel nástrojů"
 
 #: lib/ui/stdtoolbars.inc:107 lib/ui/stdtoolbars.inc:315
-#, fuzzy
 msgid "Show table toolbar"
 msgstr "Zobrazit panel nástrojů pro tabulku"
 
 #: lib/ui/stdtoolbars.inc:108 lib/ui/stdtoolbars.inc:321
-#, fuzzy
 msgid "Show review toolbar"
-msgstr "Přepnout panel nástrojů pro revize"
+msgstr "Zobrazit panel nástrojů pro revize"
 
 #: lib/ui/stdtoolbars.inc:111
 msgid "View/Update"
@@ -21869,9 +21852,8 @@ msgid "Itemized list"
 msgstr "Seznam položek"
 
 #: lib/ui/stdtoolbars.inc:127
-#, fuzzy
 msgid "Labeled List"
-msgstr "Šířka značky"
+msgstr "Seznam jmenovek"
 
 #: lib/ui/stdtoolbars.inc:130
 msgid "Increase depth"
@@ -21986,48 +21968,40 @@ msgid "Move column right"
 msgstr "Přesuň sloupec doprava"
 
 #: lib/ui/stdtoolbars.inc:166
-#, fuzzy
 msgid "Toggle top line"
-msgstr "Přepnout osnovu"
+msgstr "Přepnout horní čáru"
 
 #: lib/ui/stdtoolbars.inc:167
-#, fuzzy
 msgid "Toggle bottom line"
-msgstr "Přepnout osnovu"
+msgstr "Přepnout dolní čáru"
 
 #: lib/ui/stdtoolbars.inc:168
-#, fuzzy
 msgid "Toggle left line"
-msgstr "Přepnout osnovu"
+msgstr "Přepnout levou čáru"
 
 #: lib/ui/stdtoolbars.inc:169
-#, fuzzy
 msgid "Toggle right line"
-msgstr "Nastavit linku napravo"
+msgstr "Přepnout pravou čáru"
 
 #: lib/ui/stdtoolbars.inc:170
-#, fuzzy
 msgid "Toggle border lines"
-msgstr "Nastav linky okraje"
+msgstr "Přepnout okrajové čáry"
 
 #: lib/ui/stdtoolbars.inc:171
-#, fuzzy
 msgid "Toggle inner lines"
-msgstr "Nastav vnitřní linky"
+msgstr "Přepnout vnitřní čáry"
 
 #: lib/ui/stdtoolbars.inc:172
-#, fuzzy
 msgid "Toggle all lines"
-msgstr "Nastavit všechny linky"
+msgstr "Přepnout všechny čáry"
 
 #: lib/ui/stdtoolbars.inc:173
 msgid "Unset all lines"
 msgstr "Smazat všechny linky"
 
 #: lib/ui/stdtoolbars.inc:174
-#, fuzzy
 msgid "Reset formal default lines"
-msgstr "Obnov standardní"
+msgstr "Obnov formální čáry"
 
 #: lib/ui/stdtoolbars.inc:176
 msgid "Align left"
@@ -22134,13 +22108,12 @@ msgid "Insert cases environment"
 msgstr "Vložit prostředí \"cases\""
 
 #: lib/ui/stdtoolbars.inc:215 lib/ui/stdtoolbars.inc:309
-#, fuzzy
 msgid "Show math panels"
-msgstr "Zobrazit mat. panel"
+msgstr "Zobrazit mat. panely"
 
 #: lib/ui/stdtoolbars.inc:218
 msgid "Math Panels"
-msgstr "Matematický panel"
+msgstr "Matematické panely"
 
 #: lib/ui/stdtoolbars.inc:219
 msgid "Math spacings"
@@ -22375,19 +22348,16 @@ msgstr "Aktualizovat ostatní formát"
 
 #: lib/ui/stdtoolbars.inc:304 lib/ui/stdtoolbars.inc:310
 #: lib/ui/stdtoolbars.inc:316 lib/ui/stdtoolbars.inc:322
-#, fuzzy
 msgid "[[Toolbar]]On"
-msgstr "Revize"
+msgstr "Zapnuto"
 
 #: lib/ui/stdtoolbars.inc:305 lib/ui/stdtoolbars.inc:311
 #: lib/ui/stdtoolbars.inc:317 lib/ui/stdtoolbars.inc:323
-#, fuzzy
 msgid "[[Toolbar]]Off"
-msgstr "Revize"
+msgstr "Vypnuto"
 
 #: lib/ui/stdtoolbars.inc:306 lib/ui/stdtoolbars.inc:312
 #: lib/ui/stdtoolbars.inc:318 lib/ui/stdtoolbars.inc:324
-#, fuzzy
 msgid "[[Toolbar]]Automatic"
 msgstr "Automaticky"
 
@@ -26736,9 +26706,8 @@ msgid "Plain text (chess output)"
 msgstr "Prostý text (šachy)"
 
 #: lib/configure.py:769
-#, fuzzy
 msgid "DocBook 5"
-msgstr "DocBook"
+msgstr "DocBook 5"
 
 #: lib/configure.py:770
 msgid "Graphviz Dot"
@@ -26954,9 +26923,8 @@ msgid "PDF (lower resolution)"
 msgstr "PDF (nižší rozlišení)"
 
 #: lib/configure.py:841
-#, fuzzy
 msgid "PDF (DocBook)"
-msgstr "Knihy (DocBook)"
+msgstr "PDF (DocBook)"
 
 #: lib/configure.py:846
 msgid "DVI"
@@ -27064,9 +27032,8 @@ msgid "LyX 2.2.x"
 msgstr "LyX 2.2.x"
 
 #: lib/configure.py:880
-#, fuzzy
 msgid "LyX 2.3.x"
-msgstr "LyX 2.0.x"
+msgstr "LyX 2.3.x"
 
 #: lib/configure.py:881
 msgid "CJK LyX 1.4.x (big5)"
@@ -27191,19 +27158,19 @@ msgstr "Obrázky a vložky"
 
 #: lib/examples/Articles:0
 msgid "Mixing Japanese with other Languages (with CJKutf8)"
-msgstr "Mixing Japanese with other Languages (with CJKutf8)"
+msgstr "Japonština s jinými jazyky (za použití CJKutf8)"
 
 #: lib/examples/Articles:0
 msgid "Localization Test (for Developers)"
-msgstr "Localization Test (for Developers)"
+msgstr "Test lokalizace (pro vývojáře)"
 
 #: lib/examples/Articles:0
 msgid "Writing Armenian"
-msgstr "Writing Armenian"
+msgstr "Psaní arménštiny"
 
 #: lib/examples/Articles:0
 msgid "Mixing Japanese with other Languages (with platex)"
-msgstr "Mixing Japanese with other Languages (with platex)"
+msgstr "Japonština s jinými jazyky (za použití platex-u)"
 
 #: lib/examples/Articles:0
 msgid "Language Support"
@@ -27263,7 +27230,7 @@ msgstr "Uvítání"
 
 #: lib/examples/Articles:0
 msgid "Writing Korean with CJK-ko"
-msgstr "Writing Korean with CJK-ko"
+msgstr "Psaní korejštiny pomocí CJK-ko"
 
 #: lib/examples/Articles:0
 msgid "Mathematical Monthly"
@@ -27358,14 +27325,12 @@ msgid "10 Solutions"
 msgstr "10 Solutions"
 
 #: lib/examples/Articles:0
-#, fuzzy
 msgid "Simple"
-msgstr "Simple CV"
+msgstr "Jenoduchý"
 
 #: lib/examples/Articles:0
-#, fuzzy
 msgid "Colored"
-msgstr "Barevně"
+msgstr "Barevný"
 
 #: lib/examples/Articles:0
 msgid "Main File"
@@ -27486,17 +27451,16 @@ msgid "Changes not shown in LaTeX output"
 msgstr "Změny nezobrazeny v LaTeX-ovém výstupu"
 
 #: src/Buffer.cpp:1044 src/Buffer.cpp:3053
-#, fuzzy
 msgid ""
 "Changes will not be highlighted in LaTeX output, because xcolor and ulem are "
 "not installed.\n"
 "Please install both packages or redefine \\lyxadded and \\lyxdeleted in the "
 "LaTeX preamble."
 msgstr ""
-"Změny nebudou zvýrazněny v LaTeX-ovém výstupu při konverzi pdflatex-em,"
+"Změny nebudou zvýrazněny v LaTeX-ovém výstupu,"
 "jelikož nejsou nainstalovány balíčky xcolor a ulem.\n"
 "Prosím nainstalujte tyto balíčky nebo předefinujte \\lyxadded a "
-"\\lyxdeletedv LaTeX-ové preambuli."
+"\\lyxdeleted v LaTeX-ové preambuli."
 
 #: src/Buffer.cpp:1086 src/BufferParams.cpp:478 src/frontends/qt/GuiLog.cpp:293
 #: src/insets/InsetIndex.cpp:1255
@@ -27903,9 +27867,9 @@ msgid "No information for exporting the format %1$s."
 msgstr "Žádná informace pro export formátu %1$s."
 
 #: src/Buffer.cpp:4467
-#, fuzzy, c-format
-msgid "Hint: use non-TeX fonts or set input encoding  to '%1$s'"
-msgstr "Rozdílné nastavení neTeX-ových fontů"
+#, c-format
+msgid "Hint: use non-TeX fonts or set input encoding to '%1$s'"
+msgstr "Rada: použijte fonty mimo TeX nebo nastavte kódování na '%1$s'"
 
 #: src/Buffer.cpp:4469
 msgid "Couldn't export file"
@@ -27966,9 +27930,8 @@ msgid "&Load Original"
 msgstr "&Načíst původní"
 
 #: src/Buffer.cpp:4740
-#, fuzzy
 msgid "&Only show difference"
-msgstr "differences"
+msgstr "&Pouze ukaž rozdíly"
 
 #: src/Buffer.cpp:4751
 #, c-format
@@ -28022,27 +27985,24 @@ msgid "Can't rename emergency file!"
 msgstr "Nelze přejmenovat soubor nouzového uložení!"
 
 #: src/Buffer.cpp:4802
-#, fuzzy
 msgid ""
 "LyX was unable to rename the emergency file. You should do so manually. "
 "Otherwise, you will be asked about it again the next time you try to load "
 "this file, and may over-write your own work."
 msgstr ""
 "Nebylo možné přejmenovat soubor nouzového uložení, zkuste tak učinit "
-"manuálně. V opačném případě se při příštím spuštění znovu zobrazí tento "
-"dialog a může dojít k přepsání novější verze vašeho dokumentu. "
+"manuálně. V opačném případě budete při příštím otevření znovu dotázáni a může dojít k přepsání novější verze vašeho dokumentu. "
 
 #: src/Buffer.cpp:4807
-#, fuzzy
-msgid "Emergency File Renames"
-msgstr "Soubor s nouzovým uložením smazán."
+msgid "Emergency File Renamed"
+msgstr "Soubor s nouzovým přejmenován"
 
 #: src/Buffer.cpp:4808
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Emergency file renamed as:\n"
 " %1$s"
-msgstr "Soubor s nouzovým uložením smazán."
+msgstr "Soubor s nouzovým uložením přejmenován jako:\n %1$s"
 
 #: src/Buffer.cpp:4847
 #, c-format
@@ -28224,12 +28184,11 @@ msgid "uncodable character"
 msgstr "nekódovatelný znak"
 
 #: src/BufferParams.cpp:1735
-#, fuzzy
 msgid "Uncodable character in document metadata"
-msgstr "Nekódovatelné znaky ve jménu autora"
+msgstr "Nekódovatelné znaky v metadatech dokumentu"
 
 #: src/BufferParams.cpp:1737
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The metadata of your document contains glyphs that are unknown in the "
 "current document encoding (namely %1$s).\n"
@@ -28237,14 +28196,14 @@ msgid ""
 "output.\n"
 "\n"
 "Please select an appropriate document encoding\n"
-"(such as utf8) or change the preamble code accordingly."
+"(such as utf8) or change the metadata accordingly."
 msgstr ""
-"Uživatelská preambule vašeho dokumentu obsahuje znaky, které jsou neznámé v "
+"Metadata vašeho dokumentu obsahují znaky, které jsou neznámé v "
 "aktuálním kódování (%1$s).\n"
 "Příslušné znaky budou při exportu vynechány, což může v důsledku znamenat "
 "neúplný výstupní soubor.\n"
 "\n"
-"Vyberte vhodné kódování dokumentu (např. utf8) nebo změnte preambuli."
+"Vyberte vhodné kódování dokumentu (např. utf8) nebo změnte metadata."
 
 #: src/BufferParams.cpp:1889
 msgid "Uncodable character in class options"
@@ -28410,9 +28369,8 @@ msgid "No further redo information"
 msgstr "Žádná další informace pro opakování akce (redo)"
 
 #: src/BufferView.cpp:1694 src/BufferView.cpp:1709 src/BufferView.cpp:1742
-#, fuzzy
 msgid "Search string not found!"
-msgstr "Řetězec nenalezen."
+msgstr "Hledaný řetězec nenalezen."
 
 #: src/BufferView.cpp:1835
 msgid "Mark off"
@@ -28448,24 +28406,22 @@ msgid "One word"
 msgstr "Jedno slovo"
 
 #: src/BufferView.cpp:1971
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d characters"
-msgstr "Nekódovatelné znaky"
+msgstr "%1$d znaků"
 
 #: src/BufferView.cpp:1973
-#, fuzzy
 msgid "One character"
-msgstr "nekódovatelný znak"
+msgstr "Jeden znak"
 
 #: src/BufferView.cpp:1976
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d characters (no blanks)"
-msgstr "%1$d znaků (včetně mezer)"
+msgstr "%1$d znaků (bez mezer)"
 
 #: src/BufferView.cpp:1978
-#, fuzzy
 msgid "One character (no blanks)"
-msgstr "Jeden znak (včetně mezer)"
+msgstr "Jeden znak (bez mezer)"
 
 #: src/BufferView.cpp:1980
 msgid "Statistics"
@@ -28554,12 +28510,11 @@ msgstr ""
 "UTF-8 jiným programem.\n"
 
 #: src/Changes.cpp:378
-#, fuzzy
 msgid "Uncodable character in author initials"
-msgstr "Nekódovatelné znaky ve jménu autora"
+msgstr "Nekódovatelné znaky v iniciálách autora"
 
 #: src/Changes.cpp:379
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The author initials '%1$s',\n"
 "used for change tracking, contain the following glyphs that\n"
@@ -28569,13 +28524,13 @@ msgid ""
 "Choose an appropriate document encoding (such as utf8)\n"
 "or change the author initials."
 msgstr ""
-"Jméno autora '%1$s',\n"
-"použité pro revize, obsahuje následující znaky, které nelze reprezentovat\n"
+"Iniciály autora '%1$s',\n"
+"použité pro revize, obsahují následující znaky, které nelze reprezentovat\n"
 "v aktuálním kódování: %2$s.\n"
 "Příslušné znaky budou při exportu do LaTeX-u vynechány.\n"
 "\n"
 "Vyberte vhodné kódování dokumentu (např. utf8)\n"
-"nebo změnte jméno autora."
+"nebo změnte iniciály autora."
 
 #: src/Changes.cpp:408
 msgid "Uncodable character in author name"
