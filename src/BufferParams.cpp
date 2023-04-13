@@ -1742,7 +1742,7 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 				    "\n\nPlease select an appropriate "
 				    "document encoding\n"
 				    "(such as utf8) or change the "
-				    "preamble code accordingly."),
+				    "metadata accordingly."),
 				  uncodable_glyphs));
 		}
 		if (!doc_metadata.str().empty()) {
