@@ -4806,7 +4806,7 @@ Buffer::ReadStatus Buffer::loadEmergency()
 					  "asked about it again the next time you try to load "
 					  "this file, and may over-write your own work."));
 			} else {
-				Alert::warning(_("Emergency File Renames"),
+				Alert::warning(_("Emergency File Renamed"),
 					bformat(_("Emergency file renamed as:\n %1$s"),
 					from_utf8(newname.onlyFileName())));
 			}
