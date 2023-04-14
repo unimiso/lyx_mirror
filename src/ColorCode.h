@@ -159,7 +159,7 @@ enum ColorCode {
 	Color_mathframe,
 	/// Math inset frame color not under focus
 	Color_mathcorners,
-	/// Math line color
+	/// Math empty box line color
 	Color_mathline,
 
 	/// Collapsible insets text
@@ -182,9 +182,9 @@ enum ColorCode {
 	Color_appendix,
 	/// Changebar color
 	Color_changebar,
-	/// Deleted text color (output)
+	/// Deleted text color (exported output) in CT
 	Color_deletedtext_output,
-	/// Added text color (output)
+	/// Added text color (exported output) in CT
 	Color_addedtext_output,
 	/// Changed text color author 1 (workarea)
 	Color_changedtext_workarea_author1,
@@ -198,7 +198,7 @@ enum ColorCode {
 	Color_changedtext_workarea_author5,
 	/// Changed text color document comparison (workarea)
 	Color_changedtext_workarea_comparison,
-	/// Deleted text modifying color (workarea)
+	/// Deleted text modifying color (for brightness modulation) (workarea)
 	Color_deletedtext_workarea_modifier,
 	/// Table line color
 	Color_tabularline,
