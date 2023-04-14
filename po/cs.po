@@ -2767,7 +2767,7 @@ msgstr "Str&ana:"
 
 #: src/frontends/qt/ui/ListingsUi.ui:101
 msgid "On which side should line numbers be printed?"
-msgstr "Na jaké straně by měla být vysázena čísla řádků ?"
+msgstr "Na jaké straně by měla být vysázena čísla řádků?"
 
 #: src/frontends/qt/ui/ListingsUi.ui:126
 msgid "S&tep:"
@@ -27915,11 +27915,11 @@ msgid ""
 msgstr ""
 "Existuje nouzové uložení dokumentu %1$s .\n"
 "\n"
-"Obnovit z nouzového uložení ?"
+"Obnovit z nouzového uložení?"
 
 #: src/Buffer.cpp:4739
 msgid "Load emergency save?"
-msgstr "Načíst nouzové uložení ?"
+msgstr "Načíst nouzové uložení?"
 
 #: src/Buffer.cpp:4740
 msgid "&Recover"
@@ -27957,12 +27957,12 @@ msgid ""
 "Remove emergency file now?\n"
 "(%1$s)"
 msgstr ""
-"Smazat nyní soubor s nouzovým uložením ?\n"
+"Smazat nyní soubor s nouzovým uložením?\n"
 "(%1$s)"
 
 #: src/Buffer.cpp:4765 src/Buffer.cpp:4777
 msgid "Delete emergency file?"
-msgstr "Smazat nouzové uložení ?"
+msgstr "Smazat nouzové uložení?"
 
 #: src/Buffer.cpp:4766 src/Buffer.cpp:4779
 msgid "&Keep"
@@ -27978,7 +27978,7 @@ msgstr "Nezapomeňte uložit nyní váš soubor!"
 
 #: src/Buffer.cpp:4778
 msgid "Remove emergency file now?"
-msgstr "Smazat nyní soubor s nouzovým uložením ?"
+msgstr "Smazat nyní soubor s nouzovým uložením?"
 
 #: src/Buffer.cpp:4801
 msgid "Can't rename emergency file!"
@@ -28013,11 +28013,11 @@ msgid ""
 msgstr ""
 "Záloha dokumentu %1$s je novější.\n"
 "\n"
-"Načíst místo toho zálohu ?"
+"Načíst místo toho zálohu?"
 
 #: src/Buffer.cpp:4849
 msgid "Load backup?"
-msgstr "Načíst zálohu ?"
+msgstr "Načíst zálohu?"
 
 #: src/Buffer.cpp:4850
 msgid "&Load backup"
@@ -28159,7 +28159,7 @@ msgstr "Třída dokumentu není dostupná"
 #: src/BufferParams.cpp:1103 src/Color.cpp:281
 #: src/frontends/qt/GuiDocument.cpp:3632
 msgid "greyedout inset text"
-msgstr "zašedlá vložka textu"
+msgstr "poznámka - zašedlá - text"
 
 #: src/BufferParams.cpp:1721 src/BufferParams.cpp:1875
 #: src/BufferParams.cpp:2330 src/Encoding.cpp:264 src/Paragraph.cpp:3060
@@ -28646,7 +28646,7 @@ msgstr "kurzor"
 
 #: src/Color.cpp:263
 msgid "background"
-msgstr "pozadí"
+msgstr "text - pozadí"
 
 #: src/Color.cpp:264
 msgid "text"
@@ -28658,26 +28658,23 @@ msgstr "výběr"
 
 #: src/Color.cpp:266
 msgid "selected text"
-msgstr "označený text"
+msgstr "výběr - text"
 
 #: src/Color.cpp:267
 msgid "LaTeX text"
 msgstr "text LaTeX-u"
 
 #: src/Color.cpp:268
-#, fuzzy
 msgid "Text label 1"
-msgstr "značka hesla rejstříku"
+msgstr "Text vlastní vložky 1"
 
 #: src/Color.cpp:269
-#, fuzzy
 msgid "Text label 2"
-msgstr "značka hesla rejstříku"
+msgstr "Text vlastní vložky 2"
 
 #: src/Color.cpp:270
-#, fuzzy
 msgid "Text label 3"
-msgstr "značka hesla rejstříku"
+msgstr "Text vlastní vložky 3"
 
 #: src/Color.cpp:271
 msgid "inline completion"
@@ -28685,7 +28682,7 @@ msgstr "doplnění v řádku"
 
 #: src/Color.cpp:273
 msgid "non-unique inline completion"
-msgstr "nejednoznačné doplnění v řádku"
+msgstr "doplnění v řádku - nejednoznačné"
 
 #: src/Color.cpp:275
 msgid "previewed snippet"
@@ -28693,35 +28690,35 @@ msgstr "výstřižek (okamžitý náhled)"
 
 #: src/Color.cpp:276
 msgid "note label"
-msgstr "značka poznámky"
+msgstr "poznámka LyX-u - popisek"
 
 #: src/Color.cpp:277
 msgid "note background"
-msgstr "pozadí poznámky"
+msgstr "poznámka LyX-u - pozadí"
 
 #: src/Color.cpp:278
 msgid "comment label"
-msgstr "značka komentáře"
+msgstr "poznámka - komentář - popisek"
 
 #: src/Color.cpp:279
 msgid "comment background"
-msgstr "pozadí komentáře"
+msgstr "poznámka - komentář - pozadí"
 
 #: src/Color.cpp:280
 msgid "greyedout inset label"
-msgstr "značka vložky zašednutí"
+msgstr "poznámka - zašedlá - popisek"
 
 #: src/Color.cpp:282
 msgid "greyedout inset background"
-msgstr "pozadí vložky zašednutí"
+msgstr "poznámka - zašedlá - pozadí"
 
 #: src/Color.cpp:283
 msgid "phantom inset text"
-msgstr "text fantómu"
+msgstr "text - fantóm"
 
 #: src/Color.cpp:284
 msgid "shaded box"
-msgstr "stínovaný rámeček"
+msgstr "rámeček - stínovaný"
 
 #: src/Color.cpp:285
 msgid "listings background"
@@ -28729,23 +28726,23 @@ msgstr "výpis kódu - pozadí"
 
 #: src/Color.cpp:286
 msgid "branch label"
-msgstr "značka větve"
+msgstr "větev - popisek"
 
 #: src/Color.cpp:287
 msgid "footnote label"
-msgstr "značka poznámky pod čarou"
+msgstr "poznámka pod čarou - popisek"
 
 #: src/Color.cpp:288
 msgid "index label"
-msgstr "značka hesla rejstříku"
+msgstr "heslo rejstříku - popisek"
 
 #: src/Color.cpp:289
 msgid "margin note label"
-msgstr "značka poznámky na okraj"
+msgstr "poznámka na okraj - popisek"
 
 #: src/Color.cpp:290
 msgid "URL label"
-msgstr "značka URL"
+msgstr "URL - popisek"
 
 #: src/Color.cpp:291
 msgid "URL text"
@@ -28765,34 +28762,31 @@ msgstr "jazyk"
 
 #: src/Color.cpp:295
 msgid "command inset"
-msgstr "vložka - příkaz"
+msgstr "vložka příkazu"
 
 #: src/Color.cpp:296
 msgid "command inset background"
-msgstr "pozadí vložky příkazu"
+msgstr "vložka příkazu - pozadí"
 
 #: src/Color.cpp:297
 msgid "command inset frame"
-msgstr "rám vložky příkazu"
+msgstr "vložka příkazu - rám"
 
 #: src/Color.cpp:298
-#, fuzzy
 msgid "command inset (broken reference)"
-msgstr "rám vložky příkazu"
+msgstr "vložka příkazu (neplatný odkaz)"
 
 #: src/Color.cpp:299
-#, fuzzy
 msgid "button background (broken reference)"
-msgstr "pozadí zaostřeného tlačítka"
+msgstr "neplatný odkaz - pozadí vložky"
 
 #: src/Color.cpp:300
 msgid "button frame (broken reference)"
-msgstr ""
+msgstr "neplatný odkaz - rám vložky"
 
 #: src/Color.cpp:301
-#, fuzzy
 msgid "button background (broken reference) under focus"
-msgstr "pozadí zaostřeného tlačítka"
+msgstr "neplatný odkaz - pozadí vložky - zaostřeno"
 
 #: src/Color.cpp:302
 msgid "special character"
@@ -28800,63 +28794,63 @@ msgstr "speciální znak"
 
 #: src/Color.cpp:303
 msgid "math"
-msgstr "matematika"
+msgstr "matematika - text"
 
 #: src/Color.cpp:304
 msgid "math background"
-msgstr "pozadí matematiky"
+msgstr "matematika - pozadí"
 
 #: src/Color.cpp:305
 msgid "graphics background"
-msgstr "pozadí obrázku"
+msgstr "obrázek - pozadí"
 
 #: src/Color.cpp:306 src/Color.cpp:310
 msgid "math macro background"
-msgstr "pozadí makra (matematika)"
+msgstr "matematika - makro - pozadí"
 
 #: src/Color.cpp:307
 msgid "math frame"
-msgstr "rám (matematika)"
+msgstr "matematika - rám"
 
 #: src/Color.cpp:308
 msgid "math corners"
-msgstr "rohy mat. vzorce"
+msgstr "matematika - rohy vzorce"
 
 #: src/Color.cpp:309
 msgid "math line"
-msgstr "linka (matematika)"
+msgstr "matematika - linka"
 
 #: src/Color.cpp:311
 msgid "math macro hovered background"
-msgstr "makro - pozadí popisu (matematika)"
+msgstr "matematika - makro - pozadí - zaostřeno"
 
 #: src/Color.cpp:312
 msgid "math macro label"
-msgstr "značka makra (matematika)"
+msgstr "matematika - makro - popisek"
 
 #: src/Color.cpp:313
 msgid "math macro frame"
-msgstr "rám makra (matematika)"
+msgstr "matematika - makro - rám"
 
 #: src/Color.cpp:314
 msgid "math macro blended out"
-msgstr "makro - okolí (matematika)"
+msgstr "matematika - makro - okolí"
 
 #: src/Color.cpp:315
 msgid "math macro old parameter"
-msgstr "starý parametr makra (matematika)"
+msgstr "matematika - makro - starý parametr"
 
 #: src/Color.cpp:316
 msgid "math macro new parameter"
-msgstr "nový parametr makra (matematika)"
+msgstr "matematika - makro - nový parametr"
 
 #: src/Color.cpp:317
 msgid "collapsible inset text"
-msgstr "sbalitelná vložka textu"
+msgstr "vložka - sbalitelná - text"
 
 #: src/Color.cpp:318
 msgid "collapsible inset frame"
-msgstr "sbalitelná vložka rámu"
+msgstr "vložka - sbalitelná - rám"
 
 #: src/Color.cpp:319
 msgid "inset background"
@@ -28880,55 +28874,47 @@ msgstr "značka pro dodatky"
 
 #: src/Color.cpp:324
 msgid "change bar"
-msgstr "značka revize"
+msgstr "revize - postranní značka"
 
 #: src/Color.cpp:325
-#, fuzzy
 msgid "deleted text (output)"
-msgstr "smazaný text"
+msgstr "revize - smazaný text (na výstupu)"
 
 #: src/Color.cpp:326
-#, fuzzy
 msgid "added text (output)"
-msgstr "datum (výstup)"
+msgstr "revize - přidaný text (na výstupu)"
 
 #: src/Color.cpp:327
-#, fuzzy
 msgid "changed text (workarea, 1st author)"
 msgstr "revize - 1. autor"
 
 #: src/Color.cpp:328
-#, fuzzy
 msgid "changed text (workarea, 2nd author)"
 msgstr "revize - 2. autor"
 
 #: src/Color.cpp:329
-#, fuzzy
 msgid "changed text (workarea, 3rd author)"
 msgstr "revize - 3. autor"
 
 #: src/Color.cpp:330
-#, fuzzy
 msgid "changed text (workarea, 4th author)"
 msgstr "revize - 4. autor"
 
 #: src/Color.cpp:331
-#, fuzzy
 msgid "changed text (workarea, 5th author)"
 msgstr "revize - 5. autor"
 
 #: src/Color.cpp:332
 msgid "changed text (workarea, document comparison)"
-msgstr ""
+msgstr "revize - porovnávání dokumentů"
 
 #: src/Color.cpp:333
-#, fuzzy
 msgid "deleted text modifier (workarea)"
-msgstr "modifikátor pro smazaný text"
+msgstr "revize - saturace smazaného textu"
 
 #: src/Color.cpp:334
 msgid "added space markers"
-msgstr "vložené značky mezer"
+msgstr "značky vložených mezer"
 
 #: src/Color.cpp:335
 msgid "table line"
@@ -28944,23 +28930,23 @@ msgstr "spodní oblast"
 
 #: src/Color.cpp:338
 msgid "new page"
-msgstr "nová strana"
+msgstr "značka - nová strana"
 
 #: src/Color.cpp:339
 msgid "page break / line break"
-msgstr "konec řádky/stránky"
+msgstr "značka - konec řádky/stránky"
 
 #: src/Color.cpp:340
 msgid "button frame"
-msgstr "rám tlačítka"
+msgstr "tlačítko - rám"
 
 #: src/Color.cpp:341
 msgid "button background"
-msgstr "pozadí tlačítka"
+msgstr "tlačítko - pozadí"
 
 #: src/Color.cpp:342
 msgid "button background under focus"
-msgstr "pozadí zaostřeného tlačítka"
+msgstr "tlačítko - pozadí - zaostřeno"
 
 #: src/Color.cpp:343
 msgid "paragraph marker"
@@ -28975,9 +28961,8 @@ msgid "regexp frame"
 msgstr "rámeček regulárního výrazu"
 
 #: src/Color.cpp:346
-#, fuzzy
 msgid "bookmark"
-msgstr "&Záložky"
+msgstr "značka záložky"
 
 #: src/Color.cpp:347
 msgid "inherit"
@@ -29977,7 +29962,7 @@ msgstr "Chybí jméno souboru za přepínačem --import"
 msgid ""
 "Consider run-together words, such as \"diskdrive\" for \"disk drive\", as "
 "legal words?"
-msgstr "Považovat složeniny typu \"kafemlejnek\" za legální slova ?"
+msgstr "Považovat složeniny typu \"kafemlejnek\" za legální slova?"
 
 #: src/LyXRC.cpp:3110
 msgid ""
@@ -30483,7 +30468,7 @@ msgstr "%1$s zámek"
 #: src/LyXVC.cpp:111
 #, c-format
 msgid "Do you want to retrieve the document %1$s from version control?"
-msgstr "Chcete obdržet dokument %1$s ze správy verzí ?"
+msgstr "Chcete obdržet dokument %1$s ze správy verzí?"
 
 #: src/LyXVC.cpp:113
 msgid "Retrieve from version control?"
@@ -30532,11 +30517,11 @@ msgid ""
 msgstr ""
 "Návrat k uložené verzi dokumentu %1$s znamená ztrátu všech současných změn.\n"
 "\n"
-"Chcete přejít zpět k starší uložené verzi ?"
+"Chcete přejít zpět k starší uložené verzi?"
 
 #: src/LyXVC.cpp:309
 msgid "Revert to stored version of document?"
-msgstr "Návrat k uložené verzi dokumentu ?"
+msgstr "Návrat k uložené verzi dokumentu?"
 
 #: src/LyXVC.cpp:310 src/frontends/qt/GuiView.cpp:4607
 msgid "&Revert"
@@ -31185,11 +31170,11 @@ msgid ""
 msgstr ""
 "Dokument %1$s ještě neexistuje.\n"
 "\n"
-"Chcete vytvořit nový ?"
+"Chcete vytvořit nový?"
 
 #: src/buffer_funcs.cpp:106
 msgid "Create new document?"
-msgstr "Vytvořit nový ?"
+msgstr "Vytvořit nový?"
 
 #: src/buffer_funcs.cpp:107
 msgid "&Yes, Create New Document"
@@ -33915,7 +33900,7 @@ msgid ""
 "Unchecking this option has the effect that potentially harmful converters "
 "would be run without asking your permission first. This is UNSAFE and NOT "
 "recommended, unless you know what you are doing. Are you sure you would like "
-"to proceed ? The recommended and safe answer is NO!"
+"to proceed? The recommended and safe answer is NO!"
 msgstr ""
 "Výmaz této volby znamená, že potenciálně nebezpečné konvertory budou "
 "spuštěny bez explicitního dotazu. Toto nastavení je NEBEZPEČNÉ a NENÍ "
@@ -34876,12 +34861,12 @@ msgid ""
 msgstr ""
 "Dokument %1$s již existuje.\n"
 "\n"
-"Chcete jej přepsat ?"
+"Chcete jej přepsat?"
 
 #: src/frontends/qt/GuiView.cpp:3038 src/frontends/qt/GuiView.cpp:3305
 #: src/frontends/qt/GuiView.cpp:3410
 msgid "Overwrite document?"
-msgstr "Přepsat dokument ?"
+msgstr "Přepsat dokument?"
 
 #: src/frontends/qt/GuiView.cpp:3047
 #, c-format
@@ -35030,11 +35015,11 @@ msgid ""
 msgstr ""
 "Dokument %1$s nelze uložit.\n"
 "\n"
-"Chcete ho přejmenovat a zkusit znovu uložit ?"
+"Chcete ho přejmenovat a zkusit znovu uložit?"
 
 #: src/frontends/qt/GuiView.cpp:3455
 msgid "Rename and save?"
-msgstr "Přejmenovat a uložit ?"
+msgstr "Přejmenovat a uložit?"
 
 #: src/frontends/qt/GuiView.cpp:3456
 msgid "&Retry"
@@ -35085,11 +35070,11 @@ msgid ""
 msgstr ""
 "Dokument %1$s zatím nebyl uložen.\n"
 "\n"
-"Chcete jej uložit ?"
+"Chcete jej uložit?"
 
 #: src/frontends/qt/GuiView.cpp:3744 src/frontends/qt/GuiView.cpp:3876
 msgid "Save new document?"
-msgstr "Uložit nový dokument ?"
+msgstr "Uložit nový dokument?"
 
 #: src/frontends/qt/GuiView.cpp:3745 src/frontends/qt/GuiView.cpp:3759
 #: src/frontends/qt/GuiView.cpp:3878
@@ -35139,7 +35124,7 @@ msgid ""
 msgstr ""
 "Dokument %1$s obsahuje neuložené změny.\n"
 "\n"
-"Chcete jej uložit ?"
+"Chcete jej uložit?"
 
 #: src/frontends/qt/GuiView.cpp:3899
 #, c-format
@@ -35235,7 +35220,7 @@ msgid ""
 "version of the document %1$s?"
 msgstr ""
 "Všechny změny budou ztraceny. Opravdu se chcete vrátit k původní verzi "
-"dokumentu %1$s ?"
+"dokumentu %1$s?"
 
 #: src/frontends/qt/GuiView.cpp:4605
 msgid "Revert to saved document?"
@@ -39182,7 +39167,7 @@ msgstr "Neznámý uživatel"
 
 #, fuzzy
 #~ msgid "Revert to file on disk?"
-#~ msgstr "Vrátit se k původnímu dokumentu ?"
+#~ msgstr "Vrátit se k původnímu dokumentu?"
 
 #~ msgid "&Key:"
 #~ msgstr "&Klíč:"
@@ -41043,10 +41028,10 @@ msgstr "Neznámý uživatel"
 
 #~ msgid ""
 #~ "The ispell process returned an error.\n"
-#~ "Perhaps it has been configured wrongly ?"
+#~ "Perhaps it has been configured wrongly?"
 #~ msgstr ""
 #~ "Proces ispell skončil s chybou.\n"
-#~ "Možná je špatně konfigurován ?"
+#~ "Možná je špatně konfigurován?"
 
 #~ msgid ""
 #~ "Could not check word `%1$s' because it could not be converted to encoding "
@@ -41078,7 +41063,7 @@ msgstr "Neznámý uživatel"
 #~ msgstr "Určete soubor s vlastním slovníkem. Např. \".ispell_english\"."
 
 #~ msgid "What command runs the spellchecker?"
-#~ msgstr "Jakým příkazem spustit kontrolu pravopisu ?"
+#~ msgstr "Jakým příkazem spustit kontrolu pravopisu?"
 
 #~ msgid ""
 #~ "Specify whether to pass the -T input encoding option to ispell. Enable "
@@ -41918,8 +41903,8 @@ msgstr "Neznámý uživatel"
 #~ msgid "&URL:"
 #~ msgstr "&URL:"
 
-#~ msgid "Output as a hyperlink ?"
-#~ msgstr "Výstup jako odkaz ?"
+#~ msgid "Output as a hyperlink?"
+#~ msgstr "Výstup jako odkaz?"
 
 #~ msgid "&Units:"
 #~ msgstr "&Jednotky:"
