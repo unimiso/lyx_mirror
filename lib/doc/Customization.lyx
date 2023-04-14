@@ -36296,6 +36296,16 @@ appendix Appendix marker color
 
 \begin_layout Description
 background Background color
+\change_inserted 5863208 1681507589
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507597
+bookmark Bookmark indicator color
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -36340,6 +36350,16 @@ changedtextauthor4 Changed text color author 4
 
 \begin_layout Description
 changedtextauthor5 Changed text color author 5
+\change_inserted 5863208 1681507402
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507414
+changedtextcomparison Changed text color document comparison (workarea)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -36360,6 +36380,34 @@ commandbg Background color for command insets
 
 \begin_layout Description
 commandframe Frame color for command insets
+\change_inserted 5863208 1681507735
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507880
+command_broken Text color for broken(-reference) insets 
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507827
+commandbg_broken Background color for broken insets
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507835
+commandframe_broken Frame color for broken insets 
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 5863208 1681507842
+buttonhoverbg_broken Color used for broken inset button under focus 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -36380,6 +36428,10 @@ deletedtext Deleted text color
 
 \begin_layout Description
 deletedtextmodifier Deleted text modifying color
+\change_inserted 5863208 1681507525
+ (for adjusting the brightnes)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
