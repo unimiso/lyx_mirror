@@ -94,8 +94,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-04-11 07:04+0200\n"
-"PO-Revision-Date: 2023-04-11 07:07+0200\n"
+"POT-Creation-Date: 2023-04-14 19:28+0200\n"
+"PO-Revision-Date: 2023-04-14 19:33+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -9506,22 +9506,22 @@ msgstr "Paragraph"
 msgid "Paragraph*"
 msgstr "Paragraph*"
 
-#: lib/layouts/aguplus.inc:80 lib/layouts/customHeadersFooters.module:12
+#: lib/layouts/aguplus.inc:80 lib/layouts/customHeadersFooters.module:14
 #: lib/layouts/foils.layout:216 lib/layouts/simplecv.layout:144
 msgid "Left Header"
 msgstr "Kopfzeile links"
 
-#: lib/layouts/aguplus.inc:93 lib/layouts/customHeadersFooters.module:19
+#: lib/layouts/aguplus.inc:93 lib/layouts/customHeadersFooters.module:21
 #: lib/layouts/foils.layout:220
 msgid "Left Header:"
 msgstr "Kopfzeile links:"
 
-#: lib/layouts/aguplus.inc:103 lib/layouts/customHeadersFooters.module:40
+#: lib/layouts/aguplus.inc:103 lib/layouts/customHeadersFooters.module:42
 #: lib/layouts/foils.layout:224 lib/layouts/simplecv.layout:163
 msgid "Right Header"
 msgstr "Kopfzeile rechts"
 
-#: lib/layouts/aguplus.inc:107 lib/layouts/customHeadersFooters.module:43
+#: lib/layouts/aguplus.inc:107 lib/layouts/customHeadersFooters.module:45
 #: lib/layouts/foils.layout:228
 msgid "Right Header:"
 msgstr "Kopfzeile rechts:"
@@ -11396,57 +11396,62 @@ msgstr "Chinesischer Bericht (CTeX)"
 msgid "Custom Header/Footer Text"
 msgstr "Benutzerdefinierter Kopf-/Fußzeilentext"
 
-#: lib/layouts/customHeadersFooters.module:8
+#: lib/layouts/customHeadersFooters.module:10
 msgid ""
-"Adds environments to define header and footer lines. NOTE: To use this "
-"module you must set the 'Page style' in the menu Document Settings -> Page "
-"Layout to 'fancy'!"
+"Adds environments to define header and footer lines. See the Additional "
+"manual, section Modules > Page Layout > Custom Header/Footer Text, for a "
+"detailed description. NOTE: To use this module you must set the 'Page style' "
+"in the menu Document Settings -> Page Layout to 'fancy'!"
 msgstr ""
-"Fügt Umgebungen zur Definition von Kopf- und Fußzeilen hinzu. WICHTIG: Um "
-"dieses Modul verwenden zu können, müssen Sie in Dokument > Einstellungen > "
+"Fügt Umgebungen zur Definition von Kopf- und Fußzeilen hinzu. Für weitere"
+" Infrmationen "
+"siehe Handbuchergänzungen, Abschnitt Module > Seitenlayout >"
+" Benutzerdefinierter Kopf-/Fußzeilentext. "
+"WICHTIG: Um dieses Modul verwenden zu können, müssen Sie in Dokument >"
+" Einstellungen > "
 "Seitenlayout den Seiten-Stil \"ausgefallen\" wählen!"
 
-#: lib/layouts/customHeadersFooters.module:13
+#: lib/layouts/customHeadersFooters.module:15
 msgid "Header/Footer"
 msgstr "Kopf-/Fußzeile"
 
-#: lib/layouts/customHeadersFooters.module:21
+#: lib/layouts/customHeadersFooters.module:23
 msgid "Even Header"
 msgstr "Kopfzeile (gerade)"
 
-#: lib/layouts/customHeadersFooters.module:22
+#: lib/layouts/customHeadersFooters.module:24
 msgid "Alternative text for the even header"
 msgstr "Alternativer Text für die gerade Kopfzeile"
 
-#: lib/layouts/customHeadersFooters.module:34
+#: lib/layouts/customHeadersFooters.module:36
 msgid "Center Header"
 msgstr "Kopfzeile mitte"
 
-#: lib/layouts/customHeadersFooters.module:37
+#: lib/layouts/customHeadersFooters.module:39
 msgid "Center Header:"
 msgstr "Kopfzeile mitte:"
 
-#: lib/layouts/customHeadersFooters.module:46
+#: lib/layouts/customHeadersFooters.module:48
 msgid "Left Footer"
 msgstr "Fußzeile links"
 
-#: lib/layouts/customHeadersFooters.module:49
+#: lib/layouts/customHeadersFooters.module:51
 msgid "Left Footer:"
 msgstr "Fußzeile links:"
 
-#: lib/layouts/customHeadersFooters.module:52
+#: lib/layouts/customHeadersFooters.module:54
 msgid "Center Footer"
 msgstr "Fußzeile mitte"
 
-#: lib/layouts/customHeadersFooters.module:55
+#: lib/layouts/customHeadersFooters.module:57
 msgid "Center Footer:"
 msgstr "Fußzeile mitte:"
 
-#: lib/layouts/customHeadersFooters.module:58 lib/layouts/foils.layout:232
+#: lib/layouts/customHeadersFooters.module:60 lib/layouts/foils.layout:232
 msgid "Right Footer"
 msgstr "Fußzeile rechts"
 
-#: lib/layouts/customHeadersFooters.module:61 lib/layouts/foils.layout:236
+#: lib/layouts/customHeadersFooters.module:63 lib/layouts/foils.layout:236
 msgid "Right Footer:"
 msgstr "Fußzeile rechts:"
 
@@ -28277,7 +28282,7 @@ msgstr "Keine Informationen vorhanden, um das Format %1$s zu exportieren."
 
 #: src/Buffer.cpp:4469
 #, c-format
-msgid "Hint: use non-TeX fonts or set input encoding  to '%1$s'"
+msgid "Hint: use non-TeX fonts or set input encoding to '%1$s'"
 msgstr ""
 "Tipp: Verwenden Sie keine TeX-Schriften oder stellen Sie als Kodierung "
 "'%1$s' ein."
@@ -28408,7 +28413,7 @@ msgstr ""
 "aktuellen Notspeicherung überschrieben werden."
 
 #: src/Buffer.cpp:4809
-msgid "Emergency File Renames"
+msgid "Emergency File Renamed"
 msgstr "Umbenennung der Notspeicherung"
 
 #: src/Buffer.cpp:4810
@@ -28613,14 +28618,14 @@ msgid ""
 "output.\n"
 "\n"
 "Please select an appropriate document encoding\n"
-"(such as utf8) or change the preamble code accordingly."
+"(such as utf8) or change the metadata accordingly."
 msgstr ""
 "Die Metadaten Ihres Dokuments enthalten Zeichen, die in der aktuellen "
 "Kodierung nicht dargestellt werden können (nämlich: %1$s).\n"
 "Die betroffenen Zeichen werden in der LaTeX-Ausgabe weggelassen.\n"
 "\n"
 "Wählen Sie eine passende Kodierung (bspw. utf8)\n"
-"oder ändern Sie den LaTeX-Code im Vorspann."
+"oder ändern Sie die Metadaten entsprechend."
 
 #: src/BufferParams.cpp:1889
 msgid "Uncodable character in class options"
@@ -34457,7 +34462,7 @@ msgid ""
 "Unchecking this option has the effect that potentially harmful converters "
 "would be run without asking your permission first. This is UNSAFE and NOT "
 "recommended, unless you know what you are doing. Are you sure you would like "
-"to proceed ? The recommended and safe answer is NO!"
+"to proceed? The recommended and safe answer is NO!"
 msgstr ""
 "Wenn Sie diese Option deaktivieren, können potenziell gefährliche Konverter "
 "ausgeführt werden, ohne dass Sie zuvor um Erlaubnis gebeten werden. Das ist "
