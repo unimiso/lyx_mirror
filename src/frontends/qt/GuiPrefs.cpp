@@ -1886,7 +1886,7 @@ void PrefConverters::on_needauthCB_toggled(bool checked)
 	}
 
 	int ret = frontend::Alert::prompt(
-		_("SECURITY WARNING!"), _("Unchecking this option has the effect that potentially harmful converters would be run without asking your permission first. This is UNSAFE and NOT recommended, unless you know what you are doing. Are you sure you would like to proceed ? The recommended and safe answer is NO!"),
+		_("SECURITY WARNING!"), _("Unchecking this option has the effect that potentially harmful converters would be run without asking your permission first. This is UNSAFE and NOT recommended, unless you know what you are doing. Are you sure you would like to proceed? The recommended and safe answer is NO!"),
 		0, 0, _("&No"), _("&Yes"));
 	if (ret == 1)
 		changed();
