@@ -238,6 +238,7 @@ ColorSet::ColorSet()
 	//char const * grey90 = "#e5e5e5";
 	//  ColorCode, gui, latex, x11hexname, x11darkhexname, lyx
 	// Warning: several of these entries are overridden in GuiApplication constructor
+	// lyx color names are collected for users in Customization manual (B.# Dynamic colors)
 	static ColorEntry const items[] = {
 	{ Color_none, N_("none"), "none", black, black, "none" },
 	{ Color_black, N_("black"), "black", black, black, "black" },
