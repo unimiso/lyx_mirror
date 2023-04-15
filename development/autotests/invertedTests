@@ -88,9 +88,6 @@ export/export/latex/languages/nested-inputenc_auto-legacy_pdf2
 # - This test is usually inverted, but it works with the DocBook backend.
 !export/export/latex/lyxbugs/3059-language-in-tables_docbook5
 !export/export/latex/lyxbugs/12708-refstyle-amsmath_docbook5
-# - The issue is only with XeTeX
-!export/export/latex/lyxbugs/12734-unicode-math_(docbook5|dvi|pdf[235]).*
-!export/export/latex/lyxbugs/12734-unicode-math_pdf
 
 # ================================================
 Sublabel: lyxbugs
