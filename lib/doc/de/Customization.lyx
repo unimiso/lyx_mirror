@@ -29711,6 +29711,14 @@ background
 \begin_layout Description
 
 \lang english
+bookmark
+\lang ngerman
+ Farbe der Lesezeichen
+\end_layout
+
+\begin_layout Description
+
+\lang english
 bottomarea
 \lang ngerman
  Farbe des Bereichs nach dem Ende von \SpecialChar LyX
@@ -29747,6 +29755,15 @@ buttonframe
 buttonhoverbg
 \lang ngerman
  Farbe des Hintergrund von (Einfügungs-)Knöpfen,
+ wenn die Maus darüberfährt
+\end_layout
+
+\begin_layout Description
+
+\lang english
+buttonhoverbg_broken
+\lang ngerman
+ Farbe des Hintergrund von (Einfügungs-)Knöpfen für ungültige Verweis-Einfügungen,
  wenn die Maus darüberfährt
 \end_layout
 
@@ -29821,6 +29838,14 @@ Autors
 \begin_layout Description
 
 \lang english
+changedtextcomparison
+\lang ngerman
+ Geänderter Text beim Dokumentvergleich (Arbeitsbereich)
+\end_layout
+
+\begin_layout Description
+
+\lang english
 collapsible
 \lang ngerman
  Textfarbe in einklappbaren Einfügungen
@@ -29861,6 +29886,31 @@ commandframe
 \begin_layout Description
 
 \lang english
+command_broken
+\lang ngerman
+ Textfarbe für ungültige Verweis-Einfügungen (bspw.
+ Literatur- oder Querverweis)
+\end_layout
+
+\begin_layout Description
+
+\lang english
+commandbg_broken
+\lang ngerman
+ Hintergrundfarbe für ungültige Einfügungen
+\end_layout
+
+\begin_layout Description
+
+\lang english
+commandframe_broken
+\lang ngerman
+ Rahmenfarbe für ungültige Einfügungen
+\end_layout
+
+\begin_layout Description
+
+\lang english
 comment
 \lang ngerman
  Farbe der Marke von Kommentaren
@@ -29895,7 +29945,7 @@ deletedtext
 \lang english
 deletedtextmodifier
 \lang ngerman
- Modifizierungsfarbe für gelöschten Text
+ Modifizierungsfarbe für gelöschten Text (um die Helligkeit anzupassen)
 \end_layout
 
 \begin_layout Description
