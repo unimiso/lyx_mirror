@@ -36326,6 +36326,16 @@ buttonframe Color for inset button frames
 
 \begin_layout Description
 buttonhoverbg Color used for button background under focus
+\change_inserted -712698321 1681555554
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1681555554
+buttonhoverbg_broken Color used for broken inset button under focus 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -36387,7 +36397,15 @@ commandframe Frame color for command insets
 \begin_layout Description
 
 \change_inserted 5863208 1681507880
-command_broken Text color for broken(-reference) insets 
+command_broken Text color for broken
+\change_inserted -712698321 1681555620
+ 
+\change_inserted 5863208 1681507880
+(
+\change_deleted -712698321 1681555620
+-
+\change_inserted 5863208 1681507880
+reference) insets 
 \end_layout
 
 \begin_layout Description
@@ -36404,7 +36422,7 @@ commandframe_broken Frame color for broken insets
 
 \begin_layout Description
 
-\change_inserted 5863208 1681507842
+\change_deleted -712698321 1681555548
 buttonhoverbg_broken Color used for broken inset button under focus 
 \change_unchanged
 
@@ -36429,7 +36447,13 @@ deletedtext Deleted text color
 \begin_layout Description
 deletedtextmodifier Deleted text modifying color
 \change_inserted 5863208 1681507525
- (for adjusting the brightnes)
+ (for adjusting the 
+\change_deleted -712698321 1681555611
+brightnes
+\change_inserted -712698321 1681555611
+brightness
+\change_inserted 5863208 1681507525
+)
 \change_unchanged
 
 \end_layout
