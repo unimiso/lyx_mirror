@@ -9,31 +9,6 @@
 
 Format 99
 
-Style Quotation
-	Category              MainText
-	Margin                Static
-	LatexType             Environment
-	LatexName             quotation
-	NextNoIndent          1
-	ToggleIndent          Always
-	LeftMargin            MMM
-	RightMargin           MMM
-	ParIndent             MM
-	ParSkip               0
-	ItemSep               0
-	TopSep                0.5
-	BottomSep             0.5
-	ParSep                0
-	Align                 Block
-	AlignPossible         Block, Left, Right, Center
-	HTMLTag               blockquote
-	HTMLItem              div
-	DocBookWrapperTag     blockquote
-	DocBookWrapperMergeWithPrevious    true
-	DocBookTag            para
-End
-
-
 Style Quote
 	Category              MainText
 	Margin                Static
@@ -48,12 +23,22 @@ Style Quote
 	BottomSep             0.5
 	Align                 Block
 	AlignPossible         Block, Left, Right, Center
-	LabelType             No_Label
 	HTMLTag               blockquote
 	HTMLItem              div
 	DocBookWrapperTag     blockquote
 	DocBookWrapperMergeWithPrevious    true
 	DocBookTag            para
+End
+
+
+Style Quotation
+	CopyStyle             Quote
+	LatexName             quotation
+	ToggleIndent          Always
+	ParIndent             MM
+	ParSkip               0
+	ItemSep               0
+	ParSep                0
 End
 
 
