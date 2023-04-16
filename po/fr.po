@@ -362,8 +362,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-04-13 10:14+0200\n"
-"PO-Revision-Date: 2023-04-16 11:45+0200\n"
+"POT-Creation-Date: 2023-04-16 13:20+0200\n"
+"PO-Revision-Date: 2023-04-16 13:23+0200\n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
 "Language-Team: lyxfr\n"
 "Language: fr\n"
@@ -28579,7 +28579,7 @@ msgstr "Pas d'information pour exporter au format %1$s."
 
 #: src/Buffer.cpp:4469
 #, c-format
-msgid "Hint: use non-TeX fonts or set input encoding  to '%1$s'"
+msgid "Hint: use non-TeX fonts or set input encoding to '%1$s'"
 msgstr ""
 "Astuce : utiliser les polices non-TeX ou positionner l'encodage d'entrée à « "
 "%1$s »"
@@ -28709,7 +28709,7 @@ msgstr ""
 "chargement de votre fichier, et pourrait écraser votre travail."
 
 #: src/Buffer.cpp:4809
-msgid "Emergency File Renames"
+msgid "Emergency File Renamed"
 msgstr "Renommage de la sauvegarde d'urgence"
 
 #: src/Buffer.cpp:4810
@@ -28877,7 +28877,7 @@ msgstr ""
 msgid "Document class not available"
 msgstr "Classe de document non disponible"
 
-#: src/BufferParams.cpp:1103 src/Color.cpp:281
+#: src/BufferParams.cpp:1103 src/Color.cpp:282
 #: src/frontends/qt/GuiDocument.cpp:3653
 msgid "greyedout inset text"
 msgstr "texte d'insert grisé"
@@ -28916,7 +28916,7 @@ msgid ""
 "output.\n"
 "\n"
 "Please select an appropriate document encoding\n"
-"(such as utf8) or change the preamble code accordingly."
+"(such as utf8) or change the metadata accordingly."
 msgstr ""
 "Les métadonnées de votre document contiennent des caractères inconnus de "
 "l'encodage en cours d'utilisation (en l'occurrence %1$s).\n"
@@ -28924,7 +28924,7 @@ msgstr ""
 "incomplet.\n"
 "\n"
 "Choisir un encodage approprié pour le document\n"
-"(par exemple utf8) ou modifier le préambule de manière appropriée."
+"(par exemple utf8) ou modifier les métadonnées de manière appropriée."
 
 #: src/BufferParams.cpp:1889
 msgid "Uncodable character in class options"
@@ -29290,415 +29290,415 @@ msgstr "Avertissement ChkTeX n° %1$s"
 # à revoir, accord avec les autres mots incertain
 # Semble féminin dans tous les cas
 # (couleurs ou liste bibtex) -- JPC
-#: src/Color.cpp:242 src/insets/InsetBibtex.cpp:214
+#: src/Color.cpp:243 src/insets/InsetBibtex.cpp:214
 msgid "none"
 msgstr "aucune"
 
-#: src/Color.cpp:243
+#: src/Color.cpp:244
 msgid "black"
 msgstr "noir"
 
-#: src/Color.cpp:244
+#: src/Color.cpp:245
 msgid "white"
 msgstr "blanc"
 
-#: src/Color.cpp:245
+#: src/Color.cpp:246
 msgid "blue"
 msgstr "bleu"
 
-#: src/Color.cpp:246
+#: src/Color.cpp:247
 msgid "brown"
 msgstr "brun"
 
-#: src/Color.cpp:247
+#: src/Color.cpp:248
 msgid "cyan"
 msgstr "cyan"
 
-#: src/Color.cpp:248
+#: src/Color.cpp:249
 msgid "darkgray"
 msgstr "grisFoncé"
 
-#: src/Color.cpp:249
+#: src/Color.cpp:250
 msgid "gray"
 msgstr "gris"
 
-#: src/Color.cpp:250
+#: src/Color.cpp:251
 msgid "green"
 msgstr "vert"
 
-#: src/Color.cpp:251
+#: src/Color.cpp:252
 msgid "lightgray"
 msgstr "grisClair"
 
-#: src/Color.cpp:252
+#: src/Color.cpp:253
 msgid "lime"
 msgstr "citron"
 
-#: src/Color.cpp:253
+#: src/Color.cpp:254
 msgid "magenta"
 msgstr "magenta"
 
-#: src/Color.cpp:254
+#: src/Color.cpp:255
 msgid "olive"
 msgstr "olive"
 
-#: src/Color.cpp:255
+#: src/Color.cpp:256
 msgid "orange"
 msgstr "orange"
 
-#: src/Color.cpp:256
+#: src/Color.cpp:257
 msgid "pink"
 msgstr "rose"
 
-#: src/Color.cpp:257
+#: src/Color.cpp:258
 msgid "purple"
 msgstr "pourpre"
 
-#: src/Color.cpp:258
+#: src/Color.cpp:259
 msgid "red"
 msgstr "rouge"
 
-#: src/Color.cpp:259
+#: src/Color.cpp:260
 msgid "teal"
 msgstr "turquoise"
 
-#: src/Color.cpp:260
+#: src/Color.cpp:261
 msgid "violet"
 msgstr "violet"
 
-#: src/Color.cpp:261
+#: src/Color.cpp:262
 msgid "yellow"
 msgstr "jaune"
 
-#: src/Color.cpp:262
+#: src/Color.cpp:263
 msgid "cursor"
 msgstr "curseur"
 
-#: src/Color.cpp:263
+#: src/Color.cpp:264
 msgid "background"
 msgstr "fond"
 
-#: src/Color.cpp:264
+#: src/Color.cpp:265
 msgid "text"
 msgstr "texte"
 
-#: src/Color.cpp:265
+#: src/Color.cpp:266
 msgid "selection"
 msgstr "sélection (fond)"
 
-#: src/Color.cpp:266
+#: src/Color.cpp:267
 msgid "selected text"
 msgstr "texte sélectionné"
 
-#: src/Color.cpp:267
+#: src/Color.cpp:268
 msgid "LaTeX text"
 msgstr "Texte LaTeX"
 
-#: src/Color.cpp:268
+#: src/Color.cpp:269
 msgid "Text label 1"
 msgstr "Étiquette de texte 1"
 
-#: src/Color.cpp:269
+#: src/Color.cpp:270
 msgid "Text label 2"
 msgstr "Étiquette de texte 2"
 
-#: src/Color.cpp:270
+#: src/Color.cpp:271
 msgid "Text label 3"
 msgstr "Étiquette de texte 3"
 
-#: src/Color.cpp:271
+#: src/Color.cpp:272
 msgid "inline completion"
 msgstr "complétion en ligne"
 
-#: src/Color.cpp:273
+#: src/Color.cpp:274
 msgid "non-unique inline completion"
 msgstr "complétion en ligne (choix multiples)"
 
-#: src/Color.cpp:275
+#: src/Color.cpp:276
 msgid "previewed snippet"
 msgstr "aperçu"
 
-#: src/Color.cpp:276
+#: src/Color.cpp:277
 msgid "note label"
 msgstr "étiquette de note"
 
-#: src/Color.cpp:277
+#: src/Color.cpp:278
 msgid "note background"
 msgstr "fond de note"
 
-#: src/Color.cpp:278
+#: src/Color.cpp:279
 msgid "comment label"
 msgstr "étiquette de commentaire"
 
-#: src/Color.cpp:279
+#: src/Color.cpp:280
 msgid "comment background"
 msgstr "fond de commentaire"
 
-#: src/Color.cpp:280
+#: src/Color.cpp:281
 msgid "greyedout inset label"
 msgstr "étiquette d'insert grisé"
 
-#: src/Color.cpp:282
+#: src/Color.cpp:283
 msgid "greyedout inset background"
 msgstr "fond d'insert grisé"
 
-#: src/Color.cpp:283
+#: src/Color.cpp:284
 msgid "phantom inset text"
 msgstr "texte d'insert fantôme"
 
-#: src/Color.cpp:284
+#: src/Color.cpp:285
 msgid "shaded box"
 msgstr "boîte ombrée"
 
-#: src/Color.cpp:285
+#: src/Color.cpp:286
 msgid "listings background"
 msgstr "fond de listing"
 
-#: src/Color.cpp:286
+#: src/Color.cpp:287
 msgid "branch label"
 msgstr "étiquette de branche"
 
-#: src/Color.cpp:287
+#: src/Color.cpp:288
 msgid "footnote label"
 msgstr "étiquette de note de bas de page"
 
-#: src/Color.cpp:288
+#: src/Color.cpp:289
 msgid "index label"
 msgstr "étiquette d'index"
 
-#: src/Color.cpp:289
+#: src/Color.cpp:290
 msgid "margin note label"
 msgstr "étiquette de note en marge"
 
-#: src/Color.cpp:290
+#: src/Color.cpp:291
 msgid "URL label"
 msgstr "Étiquette d'URL"
 
-#: src/Color.cpp:291
+#: src/Color.cpp:292
 msgid "URL text"
 msgstr "Texte d'URL"
 
-#: src/Color.cpp:292
+#: src/Color.cpp:293
 msgid "depth bar"
 msgstr "barre de profondeur"
 
-#: src/Color.cpp:293
+#: src/Color.cpp:294
 msgid "scroll indicator"
 msgstr "indicateur de déroulement"
 
-#: src/Color.cpp:294
+#: src/Color.cpp:295
 msgid "language"
 msgstr "langue étrangère"
 
-#: src/Color.cpp:295
+#: src/Color.cpp:296
 msgid "command inset"
 msgstr "insert de commande"
 
-#: src/Color.cpp:296
+#: src/Color.cpp:297
 msgid "command inset background"
 msgstr "fond d'insert de commande"
 
-#: src/Color.cpp:297
+#: src/Color.cpp:298
 msgid "command inset frame"
 msgstr "cadre d'insert de commande"
 
-#: src/Color.cpp:298
+#: src/Color.cpp:299
 msgid "command inset (broken reference)"
 msgstr "insert de commande (référence cassée)"
 
-#: src/Color.cpp:299
+#: src/Color.cpp:300
 msgid "button background (broken reference)"
 msgstr "fond du bouton (référence cassée)"
 
-#: src/Color.cpp:300
+#: src/Color.cpp:301
 msgid "button frame (broken reference)"
 msgstr "entourage de bouton (référence cassée)"
 
-#: src/Color.cpp:301
+#: src/Color.cpp:302
 msgid "button background (broken reference) under focus"
 msgstr "fond de bouton pointé (référence cassée)"
 
-#: src/Color.cpp:302
+#: src/Color.cpp:303
 msgid "special character"
 msgstr "caractère spécial"
 
-#: src/Color.cpp:303
+#: src/Color.cpp:304
 msgid "math"
 msgstr "texte mathématique"
 
-#: src/Color.cpp:304
+#: src/Color.cpp:305
 msgid "math background"
 msgstr "fond mathématique"
 
-#: src/Color.cpp:305
+#: src/Color.cpp:306
 msgid "graphics background"
 msgstr "fond graphique"
 
-#: src/Color.cpp:306 src/Color.cpp:310
+#: src/Color.cpp:307 src/Color.cpp:311
 msgid "math macro background"
 msgstr "fond de macro mathématique"
 
-#: src/Color.cpp:307
+#: src/Color.cpp:308
 msgid "math frame"
 msgstr "cadre mathématique (pointé)"
 
-#: src/Color.cpp:308
+#: src/Color.cpp:309
 msgid "math corners"
 msgstr "cadre mathématique (non pointé)"
 
-#: src/Color.cpp:309
+#: src/Color.cpp:310
 msgid "math line"
 msgstr "ligne mathématique"
 
-#: src/Color.cpp:311
+#: src/Color.cpp:312
 msgid "math macro hovered background"
 msgstr "fond dynamique de macro mathématique"
 
-#: src/Color.cpp:312
+#: src/Color.cpp:313
 msgid "math macro label"
 msgstr "étiquette de macro mathématique"
 
-#: src/Color.cpp:313
+#: src/Color.cpp:314
 msgid "math macro frame"
 msgstr "cadre de macro mathématique"
 
-#: src/Color.cpp:314
+#: src/Color.cpp:315
 msgid "math macro blended out"
 msgstr "macro mathématique désactivée"
 
-#: src/Color.cpp:315
+#: src/Color.cpp:316
 msgid "math macro old parameter"
 msgstr "macro mathématique : ancien paramètre"
 
-#: src/Color.cpp:316
+#: src/Color.cpp:317
 msgid "math macro new parameter"
 msgstr "macro mathématique : nouveau paramètre"
 
-#: src/Color.cpp:317
+#: src/Color.cpp:318
 msgid "collapsible inset text"
 msgstr "texte d'insert repliable"
 
-#: src/Color.cpp:318
+#: src/Color.cpp:319
 msgid "collapsible inset frame"
 msgstr "cadre d'insert repliable"
 
-#: src/Color.cpp:319
+#: src/Color.cpp:320
 msgid "inset background"
 msgstr "fond d'insert"
 
-#: src/Color.cpp:320
+#: src/Color.cpp:321
 msgid "inset frame"
 msgstr "cadre d'insert"
 
-#: src/Color.cpp:321
+#: src/Color.cpp:322
 msgid "LaTeX error"
 msgstr "Erreur LaTeX"
 
-#: src/Color.cpp:322
+#: src/Color.cpp:323
 msgid "end-of-line marker"
 msgstr "marqueur de fin de ligne"
 
-#: src/Color.cpp:323
+#: src/Color.cpp:324
 msgid "appendix marker"
 msgstr "marque d'annexe"
 
-#: src/Color.cpp:324
+#: src/Color.cpp:325
 msgid "change bar"
 msgstr "barre de modification"
 
-#: src/Color.cpp:325
+#: src/Color.cpp:326
 msgid "deleted text (output)"
 msgstr "texte supprimé (en sortie)"
 
-#: src/Color.cpp:326
+#: src/Color.cpp:327
 msgid "added text (output)"
 msgstr "texte ajouté (en sortie)"
 
-#: src/Color.cpp:327
+#: src/Color.cpp:328
 msgid "changed text (workarea, 1st author)"
 msgstr "texte modifié (zone de travail, auteur 1)"
 
-#: src/Color.cpp:328
+#: src/Color.cpp:329
 msgid "changed text (workarea, 2nd author)"
 msgstr "texte modifié (zone de travail, auteur 2)"
 
-#: src/Color.cpp:329
+#: src/Color.cpp:330
 msgid "changed text (workarea, 3rd author)"
 msgstr "texte modifié (zone de travail, auteur 3)"
 
-#: src/Color.cpp:330
+#: src/Color.cpp:331
 msgid "changed text (workarea, 4th author)"
 msgstr "texte modifié (zone de travail, auteur 4)"
 
-#: src/Color.cpp:331
+#: src/Color.cpp:332
 msgid "changed text (workarea, 5th author)"
 msgstr "texte modifié (zone de travail, auteur 5)"
 
-#: src/Color.cpp:332
+#: src/Color.cpp:333
 msgid "changed text (workarea, document comparison)"
 msgstr "texte modifié (zone de travail, comparaison des documents)"
 
-#: src/Color.cpp:333
+#: src/Color.cpp:334
 msgid "deleted text modifier (workarea)"
 msgstr "modificateur de texte supprimé (zone de travail)"
 
-#: src/Color.cpp:334
+#: src/Color.cpp:335
 msgid "added space markers"
 msgstr "marqueur d'espace ajoutée"
 
-#: src/Color.cpp:335
+#: src/Color.cpp:336
 msgid "table line"
 msgstr "ligne de tableau"
 
-#: src/Color.cpp:336
+#: src/Color.cpp:337
 msgid "table on/off line"
 msgstr "ligne on/off de tableau"
 
-#: src/Color.cpp:337
+#: src/Color.cpp:338
 msgid "bottom area"
 msgstr "zone du bas"
 
-#: src/Color.cpp:338
+#: src/Color.cpp:339
 msgid "new page"
 msgstr "saut de page"
 
-#: src/Color.cpp:339
+#: src/Color.cpp:340
 msgid "page break / line break"
 msgstr "saut de page / saut de ligne"
 
-#: src/Color.cpp:340
+#: src/Color.cpp:341
 msgid "button frame"
 msgstr "cadre de bouton"
 
-#: src/Color.cpp:341
+#: src/Color.cpp:342
 msgid "button background"
 msgstr "fond de bouton d'insert"
 
-#: src/Color.cpp:342
+#: src/Color.cpp:343
 msgid "button background under focus"
 msgstr "fond du bouton d'insert (pointé)"
 
-#: src/Color.cpp:343
+#: src/Color.cpp:344
 msgid "paragraph marker"
 msgstr "marqueur de paragraphe"
 
-#: src/Color.cpp:344
+#: src/Color.cpp:345
 msgid "preview frame"
 msgstr "cadre d'aperçu"
 
-#: src/Color.cpp:345
+#: src/Color.cpp:346
 msgid "regexp frame"
 msgstr "cadre d'expression régulière"
 
-#: src/Color.cpp:346
+#: src/Color.cpp:347
 msgid "bookmark"
 msgstr "signet"
 
-#: src/Color.cpp:347
+#: src/Color.cpp:348
 msgid "inherit"
 msgstr "couleur héritée"
 
-#: src/Color.cpp:348
+#: src/Color.cpp:349
 msgid "ignore"
 msgstr "couleur ignorée"
 
@@ -34711,13 +34711,8 @@ msgid ""
 "Unchecking this option has the effect that potentially harmful converters "
 "would be run without asking your permission first. This is UNSAFE and NOT "
 "recommended, unless you know what you are doing. Are you sure you would like "
-"to proceed ? The recommended and safe answer is NO!"
+"to proceed? The recommended and safe answer is NO!"
 msgstr ""
-"Décocher cette option a pour conséquence d'autoriser l'exécution de "
-"convertisseurs dangereux sans demande d'autorisation préalable de votre "
-"part. Ceci n'est PAS SÛR et n'est PAS recommandé, a moins que vous sachiez "
-"ce que vous faisiez. Êtes-vous sûr de vouloir continuer ? La réponse sûre et "
-"recommandée est NON !"
 
 #: src/frontends/qt/GuiPrefs.cpp:2009
 msgid "File Formats"
