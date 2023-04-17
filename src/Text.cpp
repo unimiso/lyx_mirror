@@ -2007,6 +2007,9 @@ bool Text::splitInset(Cursor & cur)
 		cur.resetAnchor();
 		setCursor(cur, cur.lastpit(), getPar(cur.lastpit()).size());
 		cur.setSelection();
+		// Remember whether there was something cut that has to be pasted below
+		// (bug #12747)
+		bool const hasCut = cur.selection();
 		cap::cutSelectionToTemp(cur);
 		cur.setMark(false);
 		cur.selHandle(false);
@@ -2028,7 +2031,9 @@ bool Text::splitInset(Cursor & cur)
 		cur.resetAnchor();
 		cur.text()->selectAll(cur);
 		cutSelection(cur, false);
-		cap::pasteFromTemp(cur, cur.buffer()->errorList("Paste"));
+		// If there was something cut paste it
+		if (hasCut)
+			cap::pasteFromTemp(cur, cur.buffer()->errorList("Paste"));
 		cur.text()->setCursor(cur, 0, 0);
 		if (atlastpos && cur.paragraph().isFreeSpacing() && cur.paragraph().empty()) {
 			// We started from par end, remove extra empty par in free spacing insets
