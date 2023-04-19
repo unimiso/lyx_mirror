@@ -28681,7 +28681,7 @@ msgid "inline completion"
 msgstr "doplnění v řádku"
 
 #: src/Color.cpp:273
-msgid "non-unique inline completion"
+msgid "inline completion (non-unique)"
 msgstr "doplnění v řádku - nejednoznačné"
 
 #: src/Color.cpp:275
@@ -28793,7 +28793,7 @@ msgid "special character"
 msgstr "speciální znak"
 
 #: src/Color.cpp:303
-msgid "math"
+msgid "math - text"
 msgstr "matematika - text"
 
 #: src/Color.cpp:304
@@ -28877,11 +28877,11 @@ msgid "change bar"
 msgstr "revize - postranní značka"
 
 #: src/Color.cpp:325
-msgid "deleted text (output)"
+msgid "changes - deleted text (exported output)"
 msgstr "revize - smazaný text (na výstupu)"
 
 #: src/Color.cpp:326
-msgid "added text (output)"
+msgid "changes - added text (exported output)"
 msgstr "revize - přidaný text (na výstupu)"
 
 #: src/Color.cpp:327
@@ -28909,7 +28909,7 @@ msgid "changed text (workarea, document comparison)"
 msgstr "revize - porovnávání dokumentů"
 
 #: src/Color.cpp:333
-msgid "deleted text modifier (workarea)"
+msgid "changes - deleted text brightness (workarea)"
 msgstr "revize - saturace smazaného textu"
 
 #: src/Color.cpp:334
@@ -29086,13 +29086,13 @@ msgid "Converter killed"
 msgstr "Konvertor přerušen"
 
 #: src/Converter.cpp:451 src/Converter.cpp:708 src/Converter.cpp:737
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The following converter was killed by the user.\n"
 " %1$s\n"
 msgstr ""
-"Běžící konvertor %1$s\n"
-"byl zrušen uživatelem."
+"Konvertor\n %1$s\n"
+"byl zrušen uživatelem.\n"
 
 #: src/Converter.cpp:470 src/Converter.cpp:765 src/Converter.cpp:788
 #: src/Converter.cpp:830
@@ -29209,15 +29209,14 @@ msgid "The export process was terminated by the user."
 msgstr "Export byl zrušen uživatelem."
 
 #: src/Converter.cpp:901
-#, fuzzy
 msgid "Undefined reference"
-msgstr "&Nedefinované větve"
+msgstr "Nedefinovaný odkaz"
 
 #: src/Converter.cpp:902
 msgid ""
 "Undefined references or citations were found during the build.\n"
 "Please check the warnings in the LaTeX log (Document > LaTeX Log)."
-msgstr ""
+msgstr "Během překladu byly nalezeny nedefinované odkazy nebo citace.\nZkontrolujte nahlášená varování v logu LaTeX-u (Dokument > Log LaTeX-u). "
 
 #: src/Converter.cpp:914
 #, c-format
@@ -29487,13 +29486,12 @@ msgid "Auto-view file %1$s failed"
 msgstr "Automatické prohlížení souboru %1$s selhalo"
 
 #: src/Format.cpp:724
-#, fuzzy
 msgid "No Filename"
-msgstr "Jméno souboru"
+msgstr "Chybí jméno souboru"
 
 #: src/Format.cpp:725
 msgid "No filename was provided!"
-msgstr ""
+msgstr "Nebylo poskytnuto jméno souboru!"
 
 #: src/Format.cpp:735 src/Format.cpp:748 src/Format.cpp:759
 msgid "Cannot edit file"
@@ -29561,34 +29559,30 @@ msgid "Waiting for LaTeX run number %1$d"
 msgstr "Čekání na běh LaTeX-u číslo %1$d"
 
 #: src/LaTeX.cpp:328
-#, fuzzy
 msgid "Running Bibliography Processor."
-msgstr "Spouštím generátor rejstříku."
+msgstr "Spouštím generátor bibliografie."
 
 #: src/LaTeX.cpp:389
-#, fuzzy
 msgid "Re-Running Bibliography Processor."
-msgstr "Spouštím generátor rejstříku."
+msgstr "Další běh generátoru bibliografie."
 
 #: src/LaTeX.cpp:429
 msgid "Running Index Processor."
 msgstr "Spouštím generátor rejstříku."
 
 #: src/LaTeX.cpp:438
-#, fuzzy
 msgid "Index Processor Error"
-msgstr "Spouštím generátor rejstříku."
+msgstr "Chyba generátoru rejstříku."
 
 #: src/LaTeX.cpp:439
 msgid ""
 "The index processor did not run successfully. Please check the output of "
 "View > Messages Pane!"
-msgstr ""
+msgstr "Genrátor rejstříku skončil s chybou. Prosím zkontrolujte výstup v Prohlížet > Ladící výpisy!"
 
 #: src/LaTeX.cpp:599
-#, fuzzy
 msgid "Running Nomenclature Processor."
-msgstr "Spouštím generátor rejstříku."
+msgstr "Spouštím generátor nomenklatory."
 
 #: src/LaTeX.cpp:1103
 msgid "(NOTE: The erroneous command is in the preamble)"
@@ -29603,14 +29597,12 @@ msgid "Biber error: "
 msgstr "Chyba Biber-u: "
 
 #: src/LaTeX.cpp:1644
-#, fuzzy
 msgid "Makeindex error: "
-msgstr "Chyba Biber-u: "
+msgstr "Chyba Makeindex-u: "
 
 #: src/LaTeX.cpp:1653
-#, fuzzy
 msgid "Xindy error: "
-msgstr "Chyba Biber-u: "
+msgstr "Chyba Xindy: "
 
 #: src/LaTeXFonts.cpp:238 src/LaTeXFonts.cpp:315
 msgid "Font not available"
@@ -29703,20 +29695,16 @@ msgid "&Exit LyX"
 msgstr "&Ukončit LyX"
 
 #: src/LyX.cpp:617
-#, fuzzy
 msgid "No python is found"
-msgstr "Nebyly nalezeny soubory tříd (textclass)"
+msgstr "Nebyl nalezen python"
 
 #: src/LyX.cpp:618
-#, fuzzy
 msgid ""
 "LyX will only have minimal functionality because no python interpreter has "
 "been found. Consider installing python with your software manager or from "
 "the python.org website."
 msgstr ""
-"LyX bude mít pouze minimální funkcionalitu, protože nebyly nalezeny potřebné "
-"soubory tříd (textclass). Buďto můžete použít normální rekonfiguraci nebo "
-"rekonfigurovat bez kontroly LaTeX-ové instalace anebo pokračovat."
+"LyX bude mít pouze minimální funkcionalitu, protože nebyl nalezen překladač jazyka python. Zvažte instalaci python-u pomocí vašeho balíčkovacího systému nebo ze stránky python.org."
 
 #: src/LyX.cpp:720
 msgid ""
