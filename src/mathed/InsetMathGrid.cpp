@@ -1413,7 +1413,8 @@ void InsetMathGrid::doDispatch(Cursor & cur, FuncRequest & cmd)
 		break;
 
 	case LFUN_CELL_SPLIT:
-		cur.recordUndo();
+		// undo needs to cover two cells
+		cur.recordUndoInset();
 		splitCell(cur);
 		break;
 
