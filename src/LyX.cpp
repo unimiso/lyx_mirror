@@ -1124,7 +1124,7 @@ bool LyX::queryUserLyXDir(bool explicit_userdir)
 
 	if (!sup.createDirectory(0755)) {
 		// Failed, so let's exit.
-		lyxerr << to_utf8(_("Failed to create directory. Perhaps wrong -userdir option?\nExiting."))
+		lyxerr << to_utf8(_("Failed to create directory. Perhaps wrong -userdir command-line option?\nExiting."))
 		       << endl;
 		earlyExit(EXIT_FAILURE);
 	}
