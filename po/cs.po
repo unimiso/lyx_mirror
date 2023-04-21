@@ -29784,11 +29784,10 @@ msgid "LyX: Creating directory %1$s"
 msgstr "LyX: Vytvářím adresář %1$s"
 
 #: src/LyX.cpp:1127
-#, fuzzy
 msgid ""
-"Failed to create directory. Perhaps wrong -userdir option?\n"
+"Failed to create directory. Perhaps wrong -userdir command-line option?\n"
 "Exiting."
-msgstr "Selhalo vytváření adresáře. Konec."
+msgstr "Nelze založit adresář. Možná zvolen špatný argument v příkazové řádce (-userdir).\nKonec."
 
 #: src/LyX.cpp:1200
 msgid "List of supported debug flags:"
@@ -29797,7 +29796,7 @@ msgstr "Seznam podporovaných ladících příznaků:"
 #: src/LyX.cpp:1209
 #, c-format
 msgid "Bad debug value `%1$s'. Exiting."
-msgstr ""
+msgstr "Neplatná ladící volba `%1$s'. Konec."
 
 #: src/LyX.cpp:1220
 msgid ""
@@ -30647,22 +30646,22 @@ msgstr "Mód regulárních výrazů"
 
 #: src/Text3.cpp:592
 msgid "Action flattens document structure"
-msgstr ""
+msgstr "Zvolená akce zploští strukturu dokumentu"
 
 #: src/Text3.cpp:593
 msgid ""
 "This action will cause some headings that have been on different level "
 "before to be on the same level since there is no more lower or higher "
 "heading level. Continue still?"
-msgstr ""
+msgstr "Tato operace způsobí u některých nadpisů, které byly na odlišných úrovních, přeskupení na tutéž úroveň (pro neexistenci ještě vyšší/nižší úrovně). Přesto pokračovat?"
 
 #: src/Text3.cpp:598
 msgid "&Yes, continue nonetheless"
-msgstr ""
+msgstr "&Ano, i tak pokračovat"
 
 #: src/Text3.cpp:599
 msgid "&No, quit operation"
-msgstr ""
+msgstr "&Ne, zrušit akci"
 
 #: src/Text3.cpp:1638
 msgid "Layout "
@@ -30673,9 +30672,8 @@ msgid " not known"
 msgstr " neznámý"
 
 #: src/Text3.cpp:2216
-#, fuzzy
 msgid "Table Style "
-msgstr "Table Note"
+msgstr "Style tabulky"
 
 #: src/Text3.cpp:2409 src/frontends/qt/GuiApplication.cpp:1886
 msgid "Missing argument"
@@ -30683,16 +30681,16 @@ msgstr "Chybí argument"
 
 #: src/Text3.cpp:2574
 msgid "Invalid argument (number exceeds stack size)!"
-msgstr ""
+msgstr "Chybný argument (číslo překračuje velikost zásobníku)!"
 
 #: src/Text3.cpp:2578
 msgid "Invalid argument (must be a non-negative number)!"
-msgstr ""
+msgstr "Chybný argument (musí být nezáporné číslo)!"
 
 #: src/Text3.cpp:2583 src/Text3.cpp:2597
 #, c-format
 msgid "Text properties applied: %1$s"
-msgstr ""
+msgstr "Použité vlastnosti textu: %1$s"
 
 #: src/Text3.cpp:2756
 msgid "Path to thesaurus directory not set!"
@@ -30736,14 +30734,12 @@ msgstr ""
 "Nepodařilo se přečíst soubor stdinsets.inc! Toto může vést ke ztrátě dat!"
 
 #: src/TextClass.cpp:1627
-#, fuzzy, c-format
 msgid "%1$s (Float)"
-msgstr "%1$s zámek"
+msgstr "%1$s (Plovoucí)"
 
 #: src/TextClass.cpp:1632
-#, fuzzy, c-format
 msgid "Sub-%1$s (Float)"
-msgstr "Sub-%1$s"
+msgstr "Sub-%1$s (Plovoucí)"
 
 #: src/TextClass.cpp:1928
 #, c-format
@@ -30829,7 +30825,7 @@ msgstr "Chyba při čtení citačního nástroje %1$s\n"
 
 #: src/TocBackend.cpp:69 src/insets/InsetInclude.cpp:1373
 msgid "MISSING: "
-msgstr ""
+msgstr "CHYBÍ: "
 
 #: src/TocBackend.cpp:273 src/insets/InsetIndex.cpp:993
 #: src/insets/InsetIndex.cpp:1028
@@ -30870,7 +30866,6 @@ msgid "Child Documents"
 msgstr "Dokumenty potomků"
 
 #: src/TocBackend.cpp:300
-#, fuzzy
 msgid "Graphics[[listof]]"
 msgstr "Obrázky"
 
@@ -31303,16 +31298,15 @@ msgstr "Pokročilé vyhledávání"
 
 #: src/frontends/qt/FindAndReplace.cpp:708
 msgid "Find previous occurrence (Shift+Enter, forwards: Enter)"
-msgstr ""
+msgstr "Najít předchozí výskyt (Shift+Enter, dopředu: Enter)"
 
 #: src/frontends/qt/FindAndReplace.cpp:709
 msgid "< Rep&lace"
 msgstr "< Nah&raď"
 
 #: src/frontends/qt/FindAndReplace.cpp:710
-#, fuzzy
 msgid "Replace and find previous occurrence (Shift+Enter, forwards: Enter)"
-msgstr "Nahradit a přejít na další výskyt [Enter]"
+msgstr "Nahradit a přejít na předchozí výskyt (Shift+Enter, dopředu: Enter)"
 
 #: src/frontends/qt/FloatPlacement.cpp:182
 #: src/frontends/qt/GuiDocument.cpp:1166 src/frontends/qt/GuiDocument.cpp:2808
@@ -31333,11 +31327,10 @@ msgid "ERROR: LyX wasn't able to find the CREDITS file\n"
 msgstr "CHYBA: LyX nebyl schopen najít soubor CREDITS\n"
 
 #: src/frontends/qt/GuiAbout.cpp:54 src/frontends/qt/GuiAbout.cpp:59
-#, fuzzy
 msgid ""
 "Please install correctly to estimate the great\n"
 "amount of work other people have done for the LyX project."
-msgstr "množství práce dalších lidí na projektu LyX."
+msgstr "Nainstalujte prosím korektně soubor\nse seznamem autorů a přispěvatelů LyX-u."
 
 #: src/frontends/qt/GuiAbout.cpp:58
 msgid "ERROR: LyX wasn't able to read the CREDITS file\n"
@@ -31348,11 +31341,10 @@ msgid "ERROR: LyX wasn't able to find the RELEASE-NOTES file\n"
 msgstr "CHYBA: LyX nebyl schopen najít soubor RELEASE-NOTES\n"
 
 #: src/frontends/qt/GuiAbout.cpp:98 src/frontends/qt/GuiAbout.cpp:103
-#, fuzzy
 msgid ""
 "Please install correctly to see what has changed\n"
 "for this version of LyX."
-msgstr "Nainstalujte prosím korektně daný soubor\n"
+msgstr "Nainstalujte prosím korektně soubor\ns výčtem změn pro tuto verzi LyX-u."
 
 #: src/frontends/qt/GuiAbout.cpp:102
 msgid "ERROR: LyX wasn't able to read the RELEASE-NOTES file\n"
@@ -31401,12 +31393,12 @@ msgid "not released yet"
 msgstr "zatím nevydán"
 
 #: src/frontends/qt/GuiAbout.cpp:266
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Version %1$s\n"
 "(%2$s)"
 msgstr ""
-"Verze LyX-u %1$s\n"
+"Verze %1$s\n"
 "(%2$s)"
 
 #: src/frontends/qt/GuiAbout.cpp:274
@@ -31424,14 +31416,14 @@ msgid "Qt Version (compile-time): %1$s"
 msgstr "Qt Verze (při kompilaci): %1$s"
 
 #: src/frontends/qt/GuiAbout.cpp:298
-#, fuzzy, c-format
+#, c-format
 msgid "OS Version (run-time): %1$s"
-msgstr "Qt Verze (při kompilaci): %1$s"
+msgstr "Qt Verze (při běhu): %1$s"
 
 #: src/frontends/qt/GuiAbout.cpp:305
 #, c-format
 msgid "Python detected: %1$s"
-msgstr ""
+msgstr "Detekovaný python: %1$s"
 
 #: src/frontends/qt/GuiAbout.cpp:336
 msgid "About LyX"
@@ -31463,18 +31455,16 @@ msgid "&OK"
 msgstr "&OK"
 
 #: src/frontends/qt/GuiApplication.cpp:786
-#, fuzzy
 msgid "Apply"
-msgstr "&Použít"
+msgstr "Použít"
 
 #: src/frontends/qt/GuiApplication.cpp:787
 msgid "Reset"
 msgstr "Vynulovat"
 
 #: src/frontends/qt/GuiApplication.cpp:788
-#, fuzzy
 msgid "Open"
-msgstr "Opening"
+msgstr "Otevřít"
 
 #: src/frontends/qt/GuiApplication.cpp:1283
 msgid "Nothing to do"
@@ -31495,7 +31485,7 @@ msgstr "Příkaz vypnut"
 #: src/frontends/qt/GuiApplication.cpp:1447
 #, c-format
 msgid "Bad debug value `%1$s'."
-msgstr ""
+msgstr "Neplatná ladící volba `%1$s'."
 
 #: src/frontends/qt/GuiApplication.cpp:1476 src/frontends/qt/GuiView.cpp:2348
 msgid "Command not allowed without a buffer open"
@@ -31507,7 +31497,7 @@ msgstr "<LFUN-COMMAND> argument funkce buffer-forall není platný"
 
 #: src/frontends/qt/GuiApplication.cpp:1560
 msgid "Wrong focus!"
-msgstr ""
+msgstr "Chybné ohnisko!"
 
 #: src/frontends/qt/GuiApplication.cpp:1694
 msgid "Running configure..."
@@ -31561,9 +31551,8 @@ msgid "Wrong argument. Must be 'examples' or 'templates'."
 msgstr ""
 
 #: src/frontends/qt/GuiApplication.cpp:1932
-#, fuzzy
 msgid "Syntax: set-color <lyx_name> <x11_name> <x11_darkname>"
-msgstr "Syntax: set-color <lyx_name> <x11_name>"
+msgstr "Syntax: set-color <lyx_name> <x11_name> <x11_darkname>"
 
 #: src/frontends/qt/GuiApplication.cpp:1952
 #, c-format
@@ -31668,9 +31657,8 @@ msgstr ""
 "v Nástroje>Nastavení>Uživatelské rozhraní."
 
 #: src/frontends/qt/GuiBibitem.cpp:60
-#, fuzzy
 msgid "Author &Names:"
-msgstr "Author Names"
+msgstr "&Jména autorů:"
 
 #: src/frontends/qt/GuiBibitem.cpp:62
 msgid ""
@@ -31696,9 +31684,8 @@ msgid "BibTeX Bibliography"
 msgstr "Bibliografie BibTeX-u"
 
 #: src/frontends/qt/GuiBibtex.cpp:69
-#, fuzzy
 msgid "All avail. databases"
-msgstr "Všechny dostupné citace"
+msgstr "Všechny dostupné databáze"
 
 #: src/frontends/qt/GuiBibtex.cpp:114
 msgid ""
@@ -31713,24 +31700,20 @@ msgstr ""
 "databázi, vložte ji sem."
 
 #: src/frontends/qt/GuiBibtex.cpp:130 src/frontends/qt/GuiBibtex.cpp:341
-#, fuzzy
 msgid "Document Encoding"
-msgstr "Obsluha souborů"
+msgstr "Kódování dokumentu"
 
 #: src/frontends/qt/GuiBibtex.cpp:312
-#, fuzzy
 msgid "Database"
-msgstr "Databáze:"
+msgstr "Databáze"
 
 #: src/frontends/qt/GuiBibtex.cpp:313
-#, fuzzy
 msgid "File Encoding"
-msgstr "Obsluha souborů"
+msgstr "Kódování souboru"
 
 #: src/frontends/qt/GuiBibtex.cpp:320
-#, fuzzy
 msgid "General E&ncoding:"
-msgstr "Interpunkce"
+msgstr "Obecné kódování:"
 
 #: src/frontends/qt/GuiBibtex.cpp:321
 msgid ""
@@ -31740,9 +31723,8 @@ msgid ""
 msgstr ""
 
 #: src/frontends/qt/GuiBibtex.cpp:340
-#, fuzzy
 msgid "General Encoding"
-msgstr "Interpunkce"
+msgstr "Obecné kódování"
 
 #: src/frontends/qt/GuiBibtex.cpp:347
 msgid ""
