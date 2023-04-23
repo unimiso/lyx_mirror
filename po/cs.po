@@ -31548,7 +31548,7 @@ msgstr "Otvírání nápovědy %1$s..."
 
 #: src/frontends/qt/GuiApplication.cpp:1918
 msgid "Wrong argument. Must be 'examples' or 'templates'."
-msgstr ""
+msgstr "Chybný argument. Lze použít buďto 'examples' nebo 'templates'."
 
 #: src/frontends/qt/GuiApplication.cpp:1932
 msgid "Syntax: set-color <lyx_name> <x11_name> <x11_darkname>"
@@ -31667,12 +31667,11 @@ msgid ""
 msgstr ""
 
 #: src/frontends/qt/GuiBibitem.cpp:66
-#, fuzzy
 msgid ""
 "Pass content of the `Author', `Year' and `All Authors' fields literally to "
 "LaTeX. Check this if you want to enter LaTeX code."
 msgstr ""
-"Předat pole `Symbol' and `Popis' LaTeX-u v doslovném znění. Vhodné pokud "
+"Předat obsah polí `Autor', `Rok' a `Všichni autoři' LaTeX-u v doslovném znění. Vhodné pokud "
 "chcete vkládat LaTeX-ový kód."
 
 #: src/frontends/qt/GuiBibitem.h:36
@@ -31720,7 +31719,7 @@ msgid ""
 "If your bibliography databases use a different encoding than the LyX "
 "document, specify it here. If indivivual databases have different encodings, "
 "you can set it in the list above."
-msgstr ""
+msgstr "Zde uveďte, pokud vaše bibliografická databáze používá jiné kódování než dokument LyX-u. Pokud jednotlivé databáze používají různá kódování, můžete je nastavit v seznamu výše."
 
 #: src/frontends/qt/GuiBibtex.cpp:340
 msgid "General Encoding"
@@ -31730,7 +31729,7 @@ msgstr "Obecné kódování"
 msgid ""
 "If this bibliography database uses a different encoding than specified "
 "below, set it here"
-msgstr ""
+msgstr "Zde uveďte, pokud tato bibliografická databáze používá jiné kódování nežli uvedeno níže."
 
 #: src/frontends/qt/GuiBibtex.cpp:380
 msgid "Biblatex Bibliography"
@@ -31813,14 +31812,13 @@ msgid "Box Settings"
 msgstr "Nastavení rámečku"
 
 #: src/frontends/qt/GuiBranch.cpp:69
-#, fuzzy, c-format
+#, c-format
 msgid "%1$s[[branch]] (%2$s)[[master]]"
-msgstr "%1$s[[jméno]] (%2$s[[email]])"
+msgstr "%1$s (%2$s)"
 
 #: src/frontends/qt/GuiBranch.cpp:70
-#, fuzzy
 msgid "master"
-msgstr "Vložit"
+msgstr "hlavní"
 
 #: src/frontends/qt/GuiBranch.h:35
 msgid "Branch Settings"
@@ -31885,28 +31883,24 @@ msgid "Merge Changes"
 msgstr "Sloučit revize"
 
 #: src/frontends/qt/GuiChanges.cpp:70
-#, fuzzy
 msgid "Inserted by %1"
-msgstr "Vložit rámeček"
+msgstr "Vložil %1"
 
 #: src/frontends/qt/GuiChanges.cpp:71
-#, fuzzy
 msgid "Deleted by %1"
-msgstr "&Smazat Klávesu"
+msgstr "Smazal %1"
 
 #: src/frontends/qt/GuiChanges.cpp:84
 msgid " on[[date]] %1"
-msgstr ""
+msgstr ", %1"
 
 #: src/frontends/qt/GuiChanges.cpp:86
-#, fuzzy
 msgid "Inserted on %1"
-msgstr "Vložit rámeček"
+msgstr "Vloženo %1"
 
 #: src/frontends/qt/GuiChanges.cpp:87
-#, fuzzy
 msgid "Deleted on %1"
-msgstr "Smazat řádek"
+msgstr "Smazáno %1"
 
 #: src/frontends/qt/GuiCharacter.cpp:50 src/frontends/qt/GuiCharacter.cpp:63
 #: src/frontends/qt/GuiCharacter.cpp:84 src/frontends/qt/GuiCharacter.cpp:97
@@ -32171,14 +32165,12 @@ msgid "differences"
 msgstr "differences"
 
 #: src/frontends/qt/GuiCompare.cpp:399
-#, fuzzy
 msgid "Current Author"
-msgstr "Současné slovo"
+msgstr "Současný autor"
 
 #: src/frontends/qt/GuiCompare.cpp:402
-#, fuzzy
 msgid "Document Comparison"
-msgstr "Třída dokumentu"
+msgstr "Porovnání dokumentu"
 
 #: src/frontends/qt/GuiCompareHistory.cpp:38
 msgid "Compare different revisions"
@@ -32213,9 +32205,8 @@ msgid "(None)"
 msgstr "(Žádné)"
 
 #: src/frontends/qt/GuiDelimiter.cpp:273 src/frontends/qt/GuiDelimiter.cpp:276
-#, fuzzy
 msgid "No Delimiter"
-msgstr "Mat. oddělovač"
+msgstr "Bez oddělovače"
 
 #: src/frontends/qt/GuiDelimiter.cpp:281
 msgid "Variable"
@@ -32303,13 +32294,13 @@ msgid ""
 "Use UTF-8 'as-is': do not load any supporting packages, do not convert any "
 "characters to LaTeX macros. For use with non-TeX fonts (XeTeX/LuaTeX) or "
 "custom preamble code."
-msgstr ""
+msgstr "Použít UTF-8 'jak je': nenačítávat žádné podpůrné balíčky a bez konverzí znaků do maker LaTeX-u. Pro použití s ne-TeX-ovými fonty (XeTeX/LuaTeX) nebo vlastním kódem v preambuli."
 
 #: src/frontends/qt/GuiDocument.cpp:1037
 msgid ""
 "Load ``inputenc'' with option 'utf8x' for extended Unicode support by the "
 "``ucs'' package."
-msgstr ""
+msgstr "Načíst ``inputenc'' s volbou 'utf8x' pro rošířenou podporu Unicode balíčku ``ucs''."
 
 #: src/frontends/qt/GuiDocument.cpp:1041
 msgid "Language Default (no inputenc)"
@@ -32319,13 +32310,13 @@ msgstr "Standardní pro daný jazyk (bez inputenc)"
 msgid ""
 "Use the traditional default encoding of the text language. Switch encoding "
 "if a text part is set to a language with different default."
-msgstr ""
+msgstr "Použít tradiční kódování jazyka textu. Přepne kódování pokud je část textu nastavena na jazyk s jiným kódovacím standardem."
 
 #: src/frontends/qt/GuiDocument.cpp:1047
 msgid ""
 "Do not load the 'inputenc' package. Switch encoding if required but do not "
 "write input encoding switch commands to the source."
-msgstr ""
+msgstr "Nenačítat balíček 'inputenc'. Přepnout kódování pokud nutné, ale nezapisovat přepínací příkazy pro vstupní kódování do zdrojového kódu."
 
 #: src/frontends/qt/GuiDocument.cpp:1161
 msgid "10"
@@ -32340,9 +32331,8 @@ msgid "12"
 msgstr "12"
 
 #: src/frontends/qt/GuiDocument.cpp:1165
-#, fuzzy
 msgid "Automatic[[encoding]]"
-msgstr "Automaticky"
+msgstr "Automatické"
 
 #: src/frontends/qt/GuiDocument.cpp:1175
 msgid ""
@@ -32666,7 +32656,7 @@ msgstr " (není instalován)"
 #: src/frontends/qt/GuiDocument.cpp:2743 src/frontends/qt/GuiDocument.cpp:2775
 #: src/frontends/qt/GuiDocument.cpp:2786 src/frontends/qt/GuiDocument.cpp:2797
 msgid "Default font (as set by class)"
-msgstr ""
+msgstr "Standardní font (definován třídou)"
 
 #: src/frontends/qt/GuiDocument.cpp:2745
 msgid "Non-TeX Fonts Default"
@@ -33093,49 +33083,40 @@ msgid "Select graphics file"
 msgstr "Vybrat soubor s obrázkem"
 
 #: src/frontends/qt/GuiGraphics.cpp:840
-#, fuzzy
 msgid "&Clipart"
-msgstr "Klipart|#K#k"
+msgstr "&Klipart"
 
 #: src/frontends/qt/GuiHSpace.cpp:44 src/insets/InsetSpace.cpp:69
-#, fuzzy
 msgid "Normal Space"
-msgstr "Horizontální mezera"
+msgstr "Normální mezera"
 
 #: src/frontends/qt/GuiHSpace.cpp:45
-#, fuzzy
 msgid "Thin Space (1/6 em)"
-msgstr "Úzká mezera"
+msgstr "Úzká mezera (1/6 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:46
-#, fuzzy
 msgid "Medium Space (2/9 em)"
-msgstr "Střední mezera"
+msgstr "Střední mezera (2/9 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:47
-#, fuzzy
 msgid "Thick Space (5/18 em)"
-msgstr "Široká mezera"
+msgstr "Široká mezera (5/18 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:48
-#, fuzzy
 msgid "Negative Thin Space (−1/6 em)"
-msgstr "Záporná úzká mezera"
+msgstr "Záporná úzká mezera (-1/6 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:49
-#, fuzzy
 msgid "Negative Medium Space (−2/9 em)"
-msgstr "Záporná střední mezera"
+msgstr "Záporná střední mezera (-2/9 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:50
-#, fuzzy
 msgid "Negative Thick Space (−5/18 em)"
-msgstr "Záporná široká mezera"
+msgstr "Záporná široká mezera (-5/18 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:51
-#, fuzzy
 msgid "Half Quad (1/2 em)"
-msgstr "Půl čtverčíku (0.5 em)"
+msgstr "Půl čtverčíku (1/2 em)"
 
 #: src/frontends/qt/GuiHSpace.cpp:52
 msgid "Quad (1 em)"
