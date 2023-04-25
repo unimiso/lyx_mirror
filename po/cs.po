@@ -14036,9 +14036,8 @@ msgid "Japanese Report (Standard Class)"
 msgstr "Japanese Report (Standard Class)"
 
 #: lib/layouts/jsarticle.layout:3
-#, fuzzy
 msgid "Japanese Article (JS Bundle)"
-msgstr "Japanese Article (JS Class)"
+msgstr "Japanese Article (JS Bundle)"
 
 #: lib/layouts/jsbook.layout:3
 msgid "Japanese Book (JS Bundle)"
@@ -33181,14 +33180,12 @@ msgid "Index Entry Settings"
 msgstr "Nastavení hesla rejstříku"
 
 #: src/frontends/qt/GuiIndex.cpp:42
-#, fuzzy
 msgid "Start"
-msgstr "Hvězda"
+msgstr "Začátek"
 
 #: src/frontends/qt/GuiIndex.cpp:49
-#, fuzzy
 msgid "Emphasized"
-msgstr "&Zvýraznění"
+msgstr "Zvýrazněný"
 
 #: src/frontends/qt/GuiIndices.cpp:53
 msgid "Label Color"
@@ -36314,38 +36311,36 @@ msgstr ""
 "%1$s"
 
 #: src/insets/InsetInclude.cpp:1073
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "LyX does not know how to process included non-LyX files when generating "
 "DocBook output. The content of the file will be output as a comment. "
 "Offending file:\n"
 "%1$s"
 msgstr ""
-"LyX neví jakým způsobem zahrnout ne-LyXové soubory při generování HTML "
-"výstupu. Problematický soubor:\n"
+"LyX neví jakým způsobem zpracovat zahrnuté ne-LyXové soubory při generování DocBook "
+"výstupu. Obsah souboru bude vyexportován jako komentář. Problematický soubor:\n"
 "%1$s"
 
 #: src/insets/InsetIndex.cpp:89
-#, fuzzy
 msgid "Starts page range"
-msgstr "Start Page: "
+msgstr "Začátek stránkového rozsahu"
 
 #: src/insets/InsetIndex.cpp:90
-#, fuzzy
 msgid "Ends page range"
-msgstr "na straně <strana>"
+msgstr "Konec stránkového rozsahu"
 
 #: src/insets/InsetIndex.cpp:308
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "LyX's automatic index sorting algorithm faced problems with the entry "
 "'%1$s'.\n"
 "Please specify the sorting of this entry manually, as explained in the User "
 "Guide."
 msgstr ""
-"Algoritmus pro automatické třídění rejstříku narazil na problém\n"
+"Algoritmus LyX-u pro automatické třídění rejstříku narazil na problém\n"
 "s položkou:'%1$s'.\n"
-"Prosím nastavte třídění této položky ručně podle\n"
+"Prosím nastavte třídění této položky ručně podle"
 "popisu v uživatelské příručce."
 
 #: src/insets/InsetIndex.cpp:313 src/insets/InsetIndexMacro.cpp:283
@@ -36357,35 +36352,31 @@ msgstr "Třídění rejstříku se nezdařilo"
 msgid ""
 "There is an empty index subentry in the entry '%1$s'.\n"
 "It will be ignored in the output."
-msgstr ""
+msgstr "Nalezena prázdná podpoložka rejstříku v položce '%1$s'.\nBude ignorována na výstupu."
 
 #: src/insets/InsetIndex.cpp:747
-#, fuzzy
 msgid "Empty index subentry!"
-msgstr "Vložit heslo rejstříku"
+msgstr "Prázdná podpoložka rejstříku!"
 
 #: src/insets/InsetIndex.cpp:986
 msgid "Index Entry"
 msgstr "Heslo rejstříku"
 
 #: src/insets/InsetIndex.cpp:1003
-#, fuzzy
 msgid "Pagination format:"
-msgstr "Formát &datumu:"
+msgstr "Formát stránkování:"
 
 #: src/insets/InsetIndex.cpp:1005
 msgid "bold"
-msgstr ""
+msgstr "tučně"
 
 #: src/insets/InsetIndex.cpp:1007
-#, fuzzy
 msgid "italic"
-msgstr "Kurzíva (italic)"
+msgstr "kurzíva (italic)"
 
 #: src/insets/InsetIndex.cpp:1009
-#, fuzzy
 msgid "emphasized"
-msgstr "&Zvýraznění"
+msgstr "zvýrazněné"
 
 #: src/insets/InsetIndex.cpp:1260
 msgid "Unknown index type!"
@@ -36400,180 +36391,161 @@ msgid "subindex"
 msgstr "podrejstřík"
 
 #: src/insets/InsetIndexMacro.cpp:278
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "LyX's automatic index sorting algorithm faced problems with the sub-entry "
 "'%1$s'.\n"
 "Please specify the sorting of this entry manually, as explained in the User "
 "Guide."
 msgstr ""
-"Algoritmus pro automatické třídění rejstříku narazil na problém\n"
-"s položkou:'%1$s'.\n"
-"Prosím nastavte třídění této položky ručně podle\n"
+"Algoritmus LyX-u pro automatické třídění rejstříku narazil na problém\n"
+"s podpoložkou:'%1$s'.\n"
+"Prosím nastavte třídění této položky ručně podle"
 "popisu v uživatelské příručce."
 
 #: src/insets/InsetInfo.cpp:197
 msgid "No long date format (language unknown)!"
-msgstr ""
+msgstr "Nenalezen dlouhý formát datumu (neznámý jazyk)!"
 
 #: src/insets/InsetInfo.cpp:200
 msgid "No medium date format (language unknown)!"
-msgstr ""
+msgstr "Nenalezen středně-dlouhý formát datumu (neznámý jazyk)!"
 
 #: src/insets/InsetInfo.cpp:203
 msgid "No short date format (language unknown)!"
-msgstr ""
+msgstr "Nenalezen krátký formát datumu (neznámý jazyk)!"
 
 #: src/insets/InsetInfo.cpp:232
 msgid "Please select a valid type!"
-msgstr ""
+msgstr "Prosím nastavte platný typ!"
 
 #: src/insets/InsetInfo.cpp:272
-#, fuzzy
 msgid "File name (with extension)"
-msgstr "Přípona &souboru:"
+msgstr "Jméno souboru (s příponou)"
 
 #: src/insets/InsetInfo.cpp:273
-#, fuzzy
 msgid "File name (without extension)"
-msgstr "Přípona &souboru:"
+msgstr "Jméno souboru (bez přípony)"
 
 #: src/insets/InsetInfo.cpp:274
-#, fuzzy
 msgid "File path"
-msgstr "Formáty souborů"
+msgstr "Cesta k souboru"
 
 #: src/insets/InsetInfo.cpp:275
-#, fuzzy
 msgid "Used text class"
-msgstr "třída dokumentu"
+msgstr "Použitá třída dokumentu"
 
 #: src/insets/InsetInfo.cpp:280 src/insets/InsetInfo.cpp:1159
-#, fuzzy
 msgid "No version control!"
-msgstr "Bez správy verzí"
+msgstr "Bez správy verzí!"
 
 #: src/insets/InsetInfo.cpp:283
-#, fuzzy
 msgid "Revision[[Version Control]]"
-msgstr "Správa verzí"
+msgstr "Revize"
 
 #: src/insets/InsetInfo.cpp:284
 msgid "Abbreviated revision[[Version Control]]"
-msgstr ""
+msgstr "Revize (zkráceně)"
 
 #: src/insets/InsetInfo.cpp:285
-#, fuzzy
 msgid "Tree revision"
-msgstr "Revize pracovního adresáře|p"
+msgstr "Revize pracovního adresáře"
 
 #: src/insets/InsetInfo.cpp:288
 msgid "Time[[of day]]"
-msgstr ""
+msgstr "Čas"
 
 #: src/insets/InsetInfo.cpp:293
-#, fuzzy
 msgid "LyX version"
-msgstr "Verze LyX-u|X"
+msgstr "Verze LyX-u"
 
 #: src/insets/InsetInfo.cpp:294
-#, fuzzy
 msgid "LyX layout format"
-msgstr "Formát Ly&X-u"
+msgstr "Formát LyX-rozvržení"
 
 #: src/insets/InsetInfo.cpp:497
-#, fuzzy
 msgid "Invalid information inset"
-msgstr "Obecné informace"
+msgstr "Chybná informační vložka"
 
 #: src/insets/InsetInfo.cpp:500
 #, c-format
 msgid "The keybard shortcut for the function '%1$s'"
-msgstr ""
+msgstr "Klávesová zkratka pro funkci '%1$s'"
 
 #: src/insets/InsetInfo.cpp:504
 #, c-format
 msgid "The keybard shortcuts for the function '%1$s'"
-msgstr ""
+msgstr "Klávesové zkratky pro funkci '%1$s'"
 
 #: src/insets/InsetInfo.cpp:508
-#, fuzzy, c-format
+#, c-format
 msgid "The menu location for the function '%1$s'"
-msgstr "Žádná informace pro editaci %1$s"
+msgstr "Umístění v menu pro funkci '%1$s'"
 
 #: src/insets/InsetInfo.cpp:512
-#, fuzzy, c-format
+#, c-format
 msgid "The localization for the string '%1$s'"
-msgstr "Popisek podobrázku"
+msgstr "Překlad řetězce '%1$s'"
 
 #: src/insets/InsetInfo.cpp:516
 #, c-format
 msgid "The toolbar icon for the function '%1$s'"
-msgstr ""
+msgstr "Ikona z panelu nástrojů pro funkci '%1$s'"
 
 #: src/insets/InsetInfo.cpp:520
 #, c-format
 msgid "The preference setting for the preference key '%1$s'"
-msgstr ""
+msgstr "Hodnota pro klíč nastavení '%1$s'"
 
 #: src/insets/InsetInfo.cpp:524
 #, c-format
 msgid "Availability of the LaTeX package '%1$s'"
-msgstr ""
+msgstr "Dostupnost LaTeX-ového balíčku '%1$s'"
 
 #: src/insets/InsetInfo.cpp:528
 #, c-format
 msgid "Availability of the LaTeX class '%1$s'"
-msgstr ""
+msgstr "Dostupnost LaTeX-ové třídy '%1$s'"
 
 #: src/insets/InsetInfo.cpp:533
-#, fuzzy
 msgid "The name of this file (incl. extension)"
-msgstr "The name of the PDF action"
+msgstr "Jméno tohoto souboru (včetně přípony)"
 
 #: src/insets/InsetInfo.cpp:535
-#, fuzzy
 msgid "The name of this file (without extension)"
-msgstr "The name of the PDF action"
+msgstr "Jméno tohoto souboru (bez přípony)"
 
 #: src/insets/InsetInfo.cpp:537
 msgid "The path where this file is saved"
-msgstr ""
+msgstr "Cesta, kde je uložen tento soubor"
 
 #: src/insets/InsetInfo.cpp:539
-#, fuzzy
 msgid "The class this document uses"
-msgstr "&Obnovit nastavení, když se změní třída dokumentu"
+msgstr "Třída, kterou používá tento dokument"
 
 #: src/insets/InsetInfo.cpp:543
-#, fuzzy
 msgid "Version control revision"
-msgstr "Správa verzí"
+msgstr "Číslo revize (commit) ze správy verzí"
 
 #: src/insets/InsetInfo.cpp:545
-#, fuzzy
 msgid "Version control abbreviated revision"
-msgstr "Detekována správa verzí."
+msgstr "Zkrácené číslo revize (commit) ze správy verzí."
 
 #: src/insets/InsetInfo.cpp:547
-#, fuzzy
 msgid "Version control tree revision"
-msgstr "Detekována správa verzí."
+msgstr "Číslo revize celého adresářového stromu"
 
 #: src/insets/InsetInfo.cpp:549
-#, fuzzy
 msgid "Version control author"
-msgstr "Správa verzí"
+msgstr "Autor revize"
 
 #: src/insets/InsetInfo.cpp:551
-#, fuzzy
 msgid "Version control date"
-msgstr "Správa verzí"
+msgstr "Datum revize"
 
 #: src/insets/InsetInfo.cpp:553
-#, fuzzy
 msgid "Version control time"
-msgstr "Správa verzí"
+msgstr "Čas revize"
 
 #: src/insets/InsetInfo.cpp:557
 msgid "The current LyX version"
@@ -36684,9 +36656,8 @@ msgid "Esc"
 msgstr "Esc"
 
 #: src/insets/InsetInfo.cpp:978
-#, fuzzy
 msgid "not set"
-msgstr "necitováno"
+msgstr "nenastaveno"
 
 #: src/insets/InsetInfo.cpp:1002 src/insets/InsetInfo.cpp:1019
 msgid "yes"
