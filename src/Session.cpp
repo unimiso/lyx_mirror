@@ -31,11 +31,12 @@ string const sec_lastfiles = "[recent files]";
 string const sec_lastfilepos = "[cursor positions]";
 string const sec_lastopened = "[last opened files]";
 string const sec_bookmarks = "[bookmarks]";
-string const sec_session = "[session info]";
-string const sec_toolbars = "[toolbars]";
 string const sec_lastcommands = "[last commands]";
 string const sec_authfiles = "[auth files]";
 string const sec_shellescape = "[shell escape files]";
+// currently unused:
+//string const sec_session = "[session info]";
+//string const sec_toolbars = "[toolbars]";
 
 } // namespace
 
