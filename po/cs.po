@@ -33551,50 +33551,44 @@ msgid "New File From Template"
 msgstr "Nový soubor ze šablony"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:190
-#, fuzzy
 msgid "All available files"
-msgstr "Všechny dostupné štítky"
+msgstr "Všechny dostupné soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:191
-#, fuzzy
 msgid "Enter string to filter the list of available files"
-msgstr "Zadejte řetězec pro filtrování seznamu značek"
+msgstr "Zadejte řetězec pro filtrování seznamu dostupných souborů"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:219
-#, fuzzy
 msgid "User and System Files"
-msgstr "Používat &sytémové barvy"
+msgstr "Uživatelské a systémové soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:220
-#, fuzzy
 msgid "User Files Only"
-msgstr "Uživatelské soubory|#U#u"
+msgstr "Pouze uživatelské soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:221
-#, fuzzy
 msgid "System Files Only"
-msgstr "Systémové soubory|#S#s"
+msgstr "Pouze systémové soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:327
 msgid ""
 "All available languages of the selected file are displayed here.\n"
 "The selected language version will be opened."
-msgstr ""
+msgstr "Zde jsou zobrazeny všechny dostupné jazykové verze vybraného souboru.\nVybraná jazyková verze bude otevřena."
 
 #: src/frontends/qt/GuiLyXFiles.cpp:330
 msgid "No alternative language versions available for the selected file."
-msgstr ""
+msgstr "Žádná alternativní jazyková verze pro vybraný soubor."
 
 #: src/frontends/qt/GuiLyXFiles.cpp:332
 msgid ""
 "If alternative languages are available for a given file,\n"
 "they can be chosen here if a file is selected."
-msgstr ""
+msgstr "Existují-li alternativní jazykové verze daného souboru,\nmohou být po označení souboru vybrány zde."
 
 #: src/frontends/qt/GuiLyXFiles.cpp:362
-#, fuzzy
 msgid "Select example file"
-msgstr "Vybrat soubor se šablonou"
+msgstr "Vybrat soubor s příkladem"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:365 src/frontends/qt/GuiView.cpp:2821
 #: src/frontends/qt/GuiView.cpp:2979 src/frontends/qt/GuiView.cpp:3113
@@ -33611,42 +33605,34 @@ msgid "&Templates"
 msgstr "Š&ablony"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:376
-#, fuzzy
 msgid "&User files"
-msgstr "Uživatelské soubory|#U#u"
+msgstr "&Uživatelské soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:377
-#, fuzzy
 msgid "&System files"
-msgstr "Systémové soubory|#S#s"
+msgstr "&Systémové soubory"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:380
-#, fuzzy
 msgid "Chose UI file"
 msgstr "Vybrat soubor uživatelského rozhraní"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:381
-#, fuzzy
 msgid "LyX UI Files (*.ui)"
 msgstr "UI soubory LyX-u (*.ui)"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:384
-#, fuzzy
 msgid "Chose bind file"
 msgstr "Vybrat soubor klávesových zkratek"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:385
-#, fuzzy
 msgid "LyX Bind Files (*.bind)"
 msgstr "Klávesové zkratky LyX-u (*.bind)"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:388
-#, fuzzy
 msgid "Chose keyboard map"
 msgstr "Vybrat mapu kláves"
 
 #: src/frontends/qt/GuiLyXFiles.cpp:389
-#, fuzzy
 msgid "LyX Keymap Files (*.kmap)"
 msgstr "Mapa kláves pro LyX (*.kmap)"
 
@@ -33683,9 +33669,8 @@ msgid "||x||"
 msgstr "||x||"
 
 #: src/frontends/qt/GuiMathMatrix.cpp:39
-#, fuzzy
 msgid "small"
-msgstr "Malé"
+msgstr "malá"
 
 #: src/frontends/qt/GuiMathMatrix.cpp:44
 msgid "bmatrix"
@@ -33708,9 +33693,8 @@ msgid "Vmatrix"
 msgstr "Vmatrix"
 
 #: src/frontends/qt/GuiMathMatrix.cpp:49
-#, fuzzy
 msgid "smallmatrix"
-msgstr "bmatrix"
+msgstr "smallmatrix"
 
 #: src/frontends/qt/GuiMathMatrix.cpp:64
 msgid "Math Matrix"
@@ -33872,9 +33856,8 @@ msgstr ""
 "Nejprve smažte konvertor."
 
 #: src/frontends/qt/GuiPrefs.cpp:2328 src/frontends/qt/GuiPrefs.cpp:2353
-#, fuzzy
 msgid "System Default"
-msgstr "Obnov standardní"
+msgstr "Systénový standard"
 
 #: src/frontends/qt/GuiPrefs.cpp:2413
 msgid "Cannot remove a Format used by a Converter. Remove the converter first."
@@ -34491,30 +34474,29 @@ msgid "Outline"
 msgstr "Osnova"
 
 #: src/frontends/qt/GuiToolbar.cpp:445
-#, fuzzy
 msgid "&Reset to default (keep language)"
-msgstr "V&ynulovat"
+msgstr "V&ynulovat na standard (ponechat jazyk)"
 
 #: src/frontends/qt/GuiToolbar.cpp:446
 msgid "Reset all font settings to their defaults but keep language settings"
-msgstr ""
+msgstr "Vynulovat všechna nastavení písma krom jazyka"
 
 #: src/frontends/qt/GuiToolbar.cpp:451
 msgid "Reset to default (including &language)"
-msgstr ""
+msgstr "Vynulov&at (včetně jazyka)"
 
 #: src/frontends/qt/GuiToolbar.cpp:452
 msgid "Reset all font settings and the language to their defaults"
-msgstr ""
+msgstr "Vynulovat všechna nastavení písma včetně jazyka"
 
 #: src/frontends/qt/GuiToolbar.cpp:665
 msgid "auto"
 msgstr "auto"
 
 #: src/frontends/qt/GuiToolbar.cpp:667
-#, fuzzy, c-format
+#, c-format
 msgid "Toolbar \"%1$s\" does not support state \"auto\""
-msgstr "Stav panelu nástrojů \"%1$s\" nastaven na %2$s"
+msgstr "Panel nástrojů \"%1$s\" nepodporuje stav \"auto\""
 
 #: src/frontends/qt/GuiToolbar.cpp:674 src/insets/InsetBranch.cpp:79
 #: src/insets/InsetBranch.cpp:82
