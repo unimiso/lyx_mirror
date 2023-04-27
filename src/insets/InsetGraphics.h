@@ -97,9 +97,9 @@ public:
 	///
 	int bottomOffset(BufferView const *) const override { return 0; }
 	///
-	int leftOffset(BufferView const *) const override { return 0; }
+	int leftOffset(BufferView const *) const override { return 3; }
 	///
-	int rightOffset(BufferView const *) const override { return 0; }
+	int rightOffset(BufferView const *) const override { return 2; }
 
 	///
 	void metrics(MetricsInfo &, Dimension &) const override;
