@@ -157,7 +157,7 @@ public:
 			return;
 		/// The text to be written on top of the pixmap
 		QString const htext = qt_("The Document\nProcessor[[welcome banner]]");
-		QString const htextsize = qt_("1.0[[possibly scale the welcome banner text size]]");
+		QString const htextsize = qt_("1.0[[translating this to different value scales the welcome banner text size for your language]]");
 		/// The text to be written on top of the pixmap
 		QString const text = lyx_version ?
 			qt_("version ") + lyx_version : qt_("unknown version");
