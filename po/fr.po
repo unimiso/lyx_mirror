@@ -362,8 +362,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-04-16 13:20+0200\n"
-"PO-Revision-Date: 2023-04-16 13:23+0200\n"
+"POT-Creation-Date: 2023-04-27 14:54+0200\n"
+"PO-Revision-Date: 2023-04-27 15:08+0200\n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
 "Language-Team: lyxfr\n"
 "Language: fr\n"
@@ -18681,7 +18681,7 @@ msgstr "Question \\thetheorem."
 
 #: lib/layouts/theorems-ams.inc:176 lib/layouts/theorems.inc:176
 msgid "Fact \\thetheorem."
-msgstr "Note \\thetheorem."
+msgstr "Fait \\thetheorem."
 
 #: lib/layouts/theorems-ams.inc:248 lib/layouts/theorems.inc:248
 msgid "Problem \\thetheorem."
@@ -20369,7 +20369,7 @@ msgstr "Copier"
 
 #: lib/ui/stdcontext.inc:63 lib/ui/stdcontext.inc:378 lib/ui/stdmenus.inc:110
 #: lib/ui/stdtoolbars.inc:91 src/Text3.cpp:1548
-#: src/frontends/qt/GuiToolbar.cpp:464 src/mathed/InsetMathGrid.cpp:1565
+#: src/frontends/qt/GuiToolbar.cpp:464 src/mathed/InsetMathGrid.cpp:1566
 #: src/mathed/InsetMathNest.cpp:539
 msgid "Paste"
 msgstr "Coller"
@@ -29411,8 +29411,8 @@ msgid "inline completion"
 msgstr "complétion en ligne"
 
 #: src/Color.cpp:274
-msgid "non-unique inline completion"
-msgstr "complétion en ligne (choix multiples)"
+msgid "inline completion (non-unique)"
+msgstr "complétion en ligne (pas d'unicité)"
 
 #: src/Color.cpp:276
 msgid "previewed snippet"
@@ -29523,8 +29523,8 @@ msgid "special character"
 msgstr "caractère spécial"
 
 #: src/Color.cpp:304
-msgid "math"
-msgstr "texte mathématique"
+msgid "math text"
+msgstr "Texte mathématique"
 
 #: src/Color.cpp:305
 msgid "math background"
@@ -29607,12 +29607,12 @@ msgid "change bar"
 msgstr "barre de modification"
 
 #: src/Color.cpp:326
-msgid "deleted text (output)"
-msgstr "texte supprimé (en sortie)"
+msgid "changes - deleted text (exported output)"
+msgstr "modifications - texte supprimé (en sortie)"
 
 #: src/Color.cpp:327
-msgid "added text (output)"
-msgstr "texte ajouté (en sortie)"
+msgid "changes - added text (exported output)"
+msgstr "modifications - texte ajouté (en sortie)"
 
 #: src/Color.cpp:328
 msgid "changed text (workarea, 1st author)"
@@ -29639,8 +29639,8 @@ msgid "changed text (workarea, document comparison)"
 msgstr "texte modifié (zone de travail, comparaison des documents)"
 
 #: src/Color.cpp:334
-msgid "deleted text modifier (workarea)"
-msgstr "modificateur de texte supprimé (zone de travail)"
+msgid "changes - deleted text brightness (workarea)"
+msgstr "modifications - surbrillance de texte supprimée (zone de travail)"
 
 #: src/Color.cpp:335
 msgid "added space markers"
@@ -30542,10 +30542,10 @@ msgstr "LyX : création du répertoire %1$s"
 
 #: src/LyX.cpp:1127
 msgid ""
-"Failed to create directory. Perhaps wrong -userdir option?\n"
+"Failed to create directory. Perhaps wrong -userdir command-line option?\n"
 "Exiting."
 msgstr ""
-"Échec de la création du répertoire. Option -userdir incorrecte ?\n"
+"Échec de la création du répertoire. Option -userdir peut-être incorrecte ?\n"
 "Sortie du programme."
 
 #: src/LyX.cpp:1200
@@ -34713,6 +34713,10 @@ msgid ""
 "recommended, unless you know what you are doing. Are you sure you would like "
 "to proceed? The recommended and safe answer is NO!"
 msgstr ""
+"Décocher cette option peut activer l'exécution de convertisseurs "
+"potentiellement malfaisants sans vous demander l'autorisation. Ceci n'est "
+"PAS SÛR et N'EST PAS recommandé, à moins que vous ne sachiez ce que vous "
+"faites. Confirmez-vous ? La réponse sûre et recommandée est NON !"
 
 #: src/frontends/qt/GuiPrefs.cpp:2009
 msgid "File Formats"
@@ -38332,27 +38336,27 @@ msgstr "Décoration : %1$s"
 msgid "Environment: %1$s"
 msgstr "Environnement : %1$s"
 
-#: src/mathed/InsetMathGrid.cpp:1725
+#: src/mathed/InsetMathGrid.cpp:1726
 msgid "Cursor not in table"
 msgstr "Le curseur n'est pas dans le tableau"
 
-#: src/mathed/InsetMathGrid.cpp:1730
+#: src/mathed/InsetMathGrid.cpp:1731
 msgid "Only one row"
 msgstr "Une seule ligne"
 
-#: src/mathed/InsetMathGrid.cpp:1736
+#: src/mathed/InsetMathGrid.cpp:1737
 msgid "Only one column"
 msgstr "Une seule colonne"
 
-#: src/mathed/InsetMathGrid.cpp:1744
+#: src/mathed/InsetMathGrid.cpp:1745
 msgid "No hline to delete"
 msgstr "Pas de ligne horizontale à supprimer"
 
-#: src/mathed/InsetMathGrid.cpp:1753
+#: src/mathed/InsetMathGrid.cpp:1754
 msgid "No vline to delete"
 msgstr "Pas de ligne verticale à supprimer"
 
-#: src/mathed/InsetMathGrid.cpp:1782
+#: src/mathed/InsetMathGrid.cpp:1783
 #, c-format
 msgid "Unknown tabular feature '%1$s'"
 msgstr "Option de tableau inconnue '%1$s'"
@@ -38906,6 +38910,12 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Utilisateur inconnu"
+
+#~ msgid "non-unique inline completion"
+#~ msgstr "complétion en ligne (choix multiples)"
+
+#~ msgid "math"
+#~ msgstr "texte mathématique"
 
 #~ msgid "Claim #."
 #~ msgstr "Affirmation #."
