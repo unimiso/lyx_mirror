@@ -34524,11 +34524,11 @@ msgstr "Nastavení vertikální mezery"
 msgid ""
 "The Document\n"
 "Processor[[welcome banner]]"
-msgstr ""
+msgstr "Editor\ndokumentů"
 
 #: src/frontends/qt/GuiView.cpp:160
 msgid "1.0[[possibly scale the welcome banner text size]]"
-msgstr ""
+msgstr "1.0"
 
 #: src/frontends/qt/GuiView.cpp:163
 msgid "version "
@@ -34540,11 +34540,11 @@ msgstr "neznámá verze"
 
 #: src/frontends/qt/GuiView.cpp:635
 msgid "Click here to stop export/output process"
-msgstr ""
+msgstr "Kliknutím zde můžete přerušit export"
 
 #: src/frontends/qt/GuiView.cpp:677
 msgid "Workarea zoom level. Drag, use Ctrl-+/- or Shift-Mousewheel to adjust."
-msgstr ""
+msgstr "Lupa pro pracovní plochu. Nastavte táhnutím, pomocí Ctrl-+/- nebo Shift+kolečko myši."
 
 #: src/frontends/qt/GuiView.cpp:722 src/frontends/qt/GuiView.cpp:833
 #: src/frontends/qt/GuiView.cpp:1019 src/frontends/qt/Menus.cpp:1840
@@ -34552,7 +34552,7 @@ msgstr ""
 #: src/frontends/qt/Menus.cpp:1852 src/frontends/qt/Menus.cpp:1856
 #: src/frontends/qt/Menus.cpp:1860
 msgid "[[ZOOM]]%1$d%"
-msgstr ""
+msgstr "%1$d%"
 
 #: src/frontends/qt/GuiView.cpp:738
 msgid ""
@@ -34563,16 +34563,14 @@ msgstr ""
 "dokument. Změnit pravým tlačítkem."
 
 #: src/frontends/qt/GuiView.cpp:812
-#, fuzzy
 msgid "Cancel Export?"
-msgstr "&Zrušit export"
+msgstr "Zrušit export?"
 
 #: src/frontends/qt/GuiView.cpp:813
 msgid "Do you want to cancel the background export process?"
-msgstr ""
+msgstr "Chcete zrušit probíhající proces exportování?"
 
 #: src/frontends/qt/GuiView.cpp:816
-#, fuzzy
 msgid "Co&ntinue"
 msgstr "&Pokračovat"
 
@@ -34597,9 +34595,9 @@ msgid "Error while previewing format: %1$s"
 msgstr "Chyba při prohlížení formátu: %1$s"
 
 #: src/frontends/qt/GuiView.cpp:930
-#, fuzzy, c-format
+#, c-format
 msgid "Conversion cancelled while previewing format: %1$s"
-msgstr "Chyba při prohlížení formátu: %1$s"
+msgstr "Konverze zrušena při prohlížení formátu: %1$s"
 
 #: src/frontends/qt/GuiView.cpp:1292
 msgid "Exit LyX"
@@ -34610,38 +34608,38 @@ msgid "LyX could not be closed because documents are being processed by LyX."
 msgstr "LyX nelze ukončit, protože některé dokumenty jsou právě zpracovávány."
 
 #: src/frontends/qt/GuiView.cpp:1472
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Word"
-msgstr "%1$d slov"
+msgstr "%1$d slovo"
 
 #: src/frontends/qt/GuiView.cpp:1474
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Words"
 msgstr "%1$d slov"
 
 #: src/frontends/qt/GuiView.cpp:1479
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Character"
-msgstr "Znak: "
+msgstr "%1$d znak"
 
 #: src/frontends/qt/GuiView.cpp:1481
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Characters"
-msgstr "Znaková sada"
+msgstr "%1$d znaků"
 
 #: src/frontends/qt/GuiView.cpp:1486
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Character (no Blanks)"
-msgstr "%1$d znaků (včetně mezer)"
+msgstr "%1$d znak (bez mezer)"
 
 #: src/frontends/qt/GuiView.cpp:1488
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d Characters (no Blanks)"
-msgstr "%1$d znaků (včetně mezer)"
+msgstr "%1$d znaků (bez mezer)"
 
 #: src/frontends/qt/GuiView.cpp:1490
 msgid ", [[stats separator]]"
-msgstr ""
+msgstr ", "
 
 #: src/frontends/qt/GuiView.cpp:1509
 #, c-format
@@ -34666,16 +34664,16 @@ msgstr "Příkaz není povolen bez otevřeného dokumentu"
 
 #: src/frontends/qt/GuiView.cpp:2354
 msgid "Invalid argument of master-buffer-forall"
-msgstr ""
+msgstr "Chybný argument pro funkci master-buffer-forall"
 
 #: src/frontends/qt/GuiView.cpp:2477
 msgid "Function toolbar-set requires two arguments!"
-msgstr ""
+msgstr "Funkce toolbar-set vyžaduje dva argumenty!"
 
 #: src/frontends/qt/GuiView.cpp:2484
 #, c-format
 msgid "Invalid argument \"%1$s\" to function toolbar-set!"
-msgstr ""
+msgstr "Chybný argument \"%1$s\" pro funkci toolbar-set!"
 
 #: src/frontends/qt/GuiView.cpp:2500 src/frontends/qt/GuiView.cpp:2513
 #: src/frontends/qt/GuiView.cpp:2530
@@ -34696,19 +34694,17 @@ msgid "Document not loaded."
 msgstr "Dokument nenačten"
 
 #: src/frontends/qt/GuiView.cpp:2819
-#, fuzzy
 msgid "Select documents to open"
-msgstr "Vybrat dokument k otevření"
+msgstr "Vybrat dokumenty k otevření"
 
 #: src/frontends/qt/GuiView.cpp:2825
-#, fuzzy
 msgid "LyX Document Backups (*.lyx~)"
-msgstr "Dokumenty LyX-u (*.lyx)"
+msgstr "Zálohy dokumentů LyX-u (*.lyx~)"
 
 #: src/frontends/qt/GuiView.cpp:2826
 #, fuzzy
 msgid "All Files (*.*)"
-msgstr "Všechny soubory (*)"
+msgstr "Všechny soubory (*.*)"
 
 #: src/frontends/qt/GuiView.cpp:2857
 #, c-format
@@ -34727,17 +34723,15 @@ msgid ""
 "File\n"
 "%1$s\n"
 "does not exist. Create empty file?"
-msgstr ""
+msgstr "Soubor\n%1$s\nneexistuje. Vytvořit nový?"
 
 #: src/frontends/qt/GuiView.cpp:2873
-#, fuzzy
 msgid "File does not exist"
-msgstr "Soubor neexistuje: %1$s"
+msgstr "Soubor neexistuje"
 
 #: src/frontends/qt/GuiView.cpp:2875
-#, fuzzy
 msgid "Create &File"
-msgstr "Poškozený soubor"
+msgstr "&Vytvořit soubor"
 
 #: src/frontends/qt/GuiView.cpp:2887
 #, c-format
@@ -34834,9 +34828,8 @@ msgid "Create Language Directory?"
 msgstr "V&ytvořit adresář"
 
 #: src/frontends/qt/GuiView.cpp:3164 src/frontends/qt/GuiView.cpp:3195
-#, fuzzy
 msgid "&Yes, Create"
-msgstr "&Vytvořit"
+msgstr "Ano, &vytvořit"
 
 #: src/frontends/qt/GuiView.cpp:3164 src/frontends/qt/GuiView.cpp:3195
 msgid "&No, Save Template in Parent Directory"
