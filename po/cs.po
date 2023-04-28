@@ -10777,29 +10777,27 @@ msgstr "Podpora balíčku chessboard pro záznam šachových partií, viz Soubor
 
 #: lib/layouts/chessboard.module:16
 msgid "NewChessGame"
-msgstr "NewChessGame"
+msgstr "NováPartie"
 
 #: lib/layouts/chessboard.module:22
 msgid "[Start New Chess Game]"
-msgstr "[Start New Chess Game]"
+msgstr "[Začátek nové šachové partie]"
 
 #: lib/layouts/chessboard.module:32
 msgid "Chessgame Options"
-msgstr "Chessgame Options"
+msgstr "Volby šachové partie"
 
 #: lib/layouts/chessboard.module:33
 msgid "See xskak manual for a comprehensive list of keys and values"
-msgstr ""
+msgstr "Pro úplný seznam klíčů a hodnot viz manuál balíčku xskak"
 
 #: lib/layouts/chessboard.module:62
-#, fuzzy
 msgid "Mainline Options"
-msgstr "E-Mail Option"
+msgstr "Hlavní volby"
 
 #: lib/layouts/chessboard.module:63
-#, fuzzy
 msgid "See xskak manual for possible options"
-msgstr "See the todonotes manual for possible options"
+msgstr "Možnosti voleb jsou uvedeny v manuálu balíčku xskak"
 
 #: lib/layouts/chessboard.module:70 lib/layouts/chessboard.module:71
 #: lib/layouts/iopart.layout:100 lib/layouts/pdfcomment.module:131
@@ -10808,51 +10806,46 @@ msgid "Comment"
 msgstr "Komentář"
 
 #: lib/layouts/chessboard.module:96
-#, fuzzy
 msgid "SetChessBoard"
-msgstr "ChessBoard"
+msgstr "Nastavšachovnici"
 
 #: lib/layouts/chessboard.module:101
-#, fuzzy
 msgid "Global Chessboard Settings"
-msgstr "Nastavení Tabulky"
+msgstr "Globální nastavení šachovnice"
 
 #: lib/layouts/chessboard.module:115
 msgid "SetBoardStoreStyle"
-msgstr ""
+msgstr "NastavStylŠachovnice"
 
 #: lib/layouts/chessboard.module:117
-#, fuzzy
 msgid "Set Chessboard Style"
-msgstr "Text Field Style"
+msgstr "Nastavit styl šachovnice"
 
 #: lib/layouts/chessboard.module:120
-#, fuzzy
 msgid "Style Name"
-msgstr "Soubor se stylem:"
+msgstr "Jméno stylu"
 
 #: lib/layouts/chessboard.module:121
 msgid "Chessboard Style Name"
-msgstr ""
+msgstr "Jméno stylu šachovnice"
 
 #: lib/layouts/chessboard.module:122
 msgid ""
 "Here you can store chessboard settings under a style name for later reuse. "
 "See chessboard manual for details."
-msgstr ""
+msgstr "Zde můžete uložit nastavení šachovnice jakožto styl pro pozdější použití. Deataily viz manuál balíčku chessboard."
 
 #: lib/layouts/chessboard.module:137 lib/examples/Articles:0
 msgid "Chessboard"
 msgstr "Šachovnice"
 
 #: lib/layouts/chessboard.module:140
-#, fuzzy
 msgid "Chessboard Options"
-msgstr "Nastavení třídy"
+msgstr "Volby šachovnice"
 
 #: lib/layouts/chessboard.module:141
 msgid "See chessboard manual for a comprehensive list of keys and values"
-msgstr ""
+msgstr "Pro úplný seznam klíčů a hodnot viz manuál balíčku chessboard."
 
 #: lib/layouts/cl2emult.layout:3
 msgid "Springer Contributed Books (cl2emult, Obsolete!)"
@@ -10860,7 +10853,7 @@ msgstr "Springer Contributed Books (cl2emult, Obsolete!)"
 
 #: lib/layouts/copernicus.layout:3 lib/examples/Articles:0
 msgid "Copernicus Publications Manuscript Preparation"
-msgstr ""
+msgstr "Copernicus Publications Manuscript Preparation"
 
 #: lib/layouts/copernicus.layout:45
 msgid "InFrontmatter"
@@ -34702,7 +34695,6 @@ msgid "LyX Document Backups (*.lyx~)"
 msgstr "Zálohy dokumentů LyX-u (*.lyx~)"
 
 #: src/frontends/qt/GuiView.cpp:2826
-#, fuzzy
 msgid "All Files (*.*)"
 msgstr "Všechny soubory (*.*)"
 
@@ -34829,26 +34821,23 @@ msgstr "V&ytvořit adresář"
 
 #: src/frontends/qt/GuiView.cpp:3164 src/frontends/qt/GuiView.cpp:3195
 msgid "&Yes, Create"
-msgstr "Ano, &vytvořit"
+msgstr "&Ano, vytvořit"
 
 #: src/frontends/qt/GuiView.cpp:3164 src/frontends/qt/GuiView.cpp:3195
 msgid "&No, Save Template in Parent Directory"
-msgstr ""
+msgstr "&Ne, uložit šablonu v rodičovském adresáři."
 
 #: src/frontends/qt/GuiView.cpp:3167 src/frontends/qt/GuiView.cpp:3198
-#, fuzzy
 msgid "Subdirectory creation failed!"
-msgstr "Rekonfigurace systému selhala"
+msgstr "Nepodařilo se vytvořit podadresář!"
 
 #: src/frontends/qt/GuiView.cpp:3168 src/frontends/qt/GuiView.cpp:3199
-#, fuzzy
 msgid ""
 "Could not create subdirectory.\n"
 "The template will be saved in the parent directory."
 msgstr ""
-"Nelze zkopírovat soubor\n"
-"%1$s\n"
-"do pomocného adresáře."
+"Nepodařilo se vytvořit podadresář.\n"
+"Šablona bude uložena do rodičovského adresáře."
 
 #: src/frontends/qt/GuiView.cpp:3189
 #, c-format
@@ -34857,17 +34846,15 @@ msgid ""
 "appropriate to the layout category (%1$s).\n"
 "This subdirectory does not exists yet.\n"
 "Do you want to create it?"
-msgstr ""
+msgstr "Doporučuje se uložit šablonu v podadresáři,\nkterý je patřičný k dané kategorii rozvržení (%1$s).\nTento podadresář zatím neexistuje.\nChcete ho vytvořit?"
 
 #: src/frontends/qt/GuiView.cpp:3194
-#, fuzzy
 msgid "Create Category Directory?"
-msgstr "V&ytvořit adresář"
+msgstr "Vytvořit adresář pro danou kategorii?"
 
 #: src/frontends/qt/GuiView.cpp:3229
-#, fuzzy
 msgid "Choose a filename to save template as"
-msgstr "Vybrat nové jméno souboru pro dokument"
+msgstr "Vybrat jméno souboru pro uložení šablony"
 
 #: src/frontends/qt/GuiView.cpp:3230
 msgid "Choose a filename to save document as"
