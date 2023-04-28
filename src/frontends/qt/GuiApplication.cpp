@@ -130,6 +130,11 @@
 #if (QT_VERSION >= 0x050400)
 #if defined(Q_OS_WIN) || defined(Q_CYGWIN_WIN)
 #if (QT_VERSION >= 0x060000)
+#if (QT_VERSION >= 0x060500)
+#include <QtGui/QWindowsMimeConverter>
+#define QWINDOWSMIME QWindowsMimeConverter
+#define QVARIANTTYPE QMetaType
+#else
 #include <QtGui/private/qguiapplication_p.h>
 #include <QtGui/private/qwindowsmime_p.h>
 #include <QtGui/qpa/qplatformintegration.h>
@@ -137,6 +142,7 @@
 #define QVARIANTTYPE QMetaType
 using QWindowsMime = QNativeInterface::Private::QWindowsMime;
 using QWindowsApplication = QNativeInterface::Private::QWindowsApplication;
+#endif
 #else
 #include <QWinMime>
 #define QWINDOWSMIME QWinMime
@@ -1031,7 +1037,7 @@ struct GuiApplication::Private
 	#if defined(Q_OS_WIN) || defined(Q_CYGWIN_WIN)
 		/// WMF Mime handler for Windows clipboard.
 		wmf_mime_ = new QWindowsMimeMetafile;
-	#if (QT_VERSION >= 0x060000)
+	#if (QT_VERSION >= 0x060000 && QT_VERSION < 0x060500)
 		win_app_ = dynamic_cast<QWindowsApplication *>
 			(QGuiApplicationPrivate::platformIntegration());
 		win_app_->registerMime(wmf_mime_);
@@ -1041,7 +1047,7 @@ struct GuiApplication::Private
 		initKeySequences(&theTopLevelKeymap());
 	}
 
-	#if (QT_VERSION >= 0x060000)
+	#if (QT_VERSION >= 0x060000 && QT_VERSION < 0x060500)
 	#if defined(Q_OS_WIN) || defined(Q_CYGWIN_WIN)
 	~Private()
 	{
@@ -1120,7 +1126,7 @@ struct GuiApplication::Private
 #if defined(Q_OS_WIN) || defined(Q_CYGWIN_WIN)
 	/// WMF Mime handler for Windows clipboard.
 	QWindowsMimeMetafile * wmf_mime_;
-#if (QT_VERSION >= 0x060000)
+#if (QT_VERSION >= 0x060000 && QT_VERSION < 0x060500)
 	QWindowsApplication * win_app_;
 #endif
 #endif
