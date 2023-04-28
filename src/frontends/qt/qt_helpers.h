@@ -184,6 +184,8 @@ QString internalPath(QString const &);
 QString onlyFileName(QString const & str);
 QString onlyPath(QString const & str);
 QStringList fileFilters(QString const & description);
+/// all files wildcard for filter in qt dialogs (crossplatform)
+QString wildcardAllFiles();
 
 /// Remove the extension from \p name
 QString removeExtension(QString const & name);

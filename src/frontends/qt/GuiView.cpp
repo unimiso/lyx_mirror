@@ -2831,7 +2831,7 @@ void GuiView::openDocuments(string const & fname, int origin)
 		QStringList const filter({
 				qt_("LyX Documents (*.lyx)"),
 				qt_("LyX Document Backups (*.lyx~)"),
-				qt_("All Files (*.*)")
+				qt_("All Files") + " " + wildcardAllFiles()
 		});
 		FileDialog::Results results =
 			dlg.openMulti(toqstr(initpath), filter);
@@ -4581,7 +4581,7 @@ void GuiView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 				FileDialog dlg(qt_("Select file to insert"));
 
 				FileDialog::Result result = dlg.open(toqstr(bv->buffer().filePath()),
-					QStringList(qt_("All Files (*)")));
+					QStringList(qt_("All Files")+ " " + wildcardAllFiles()));
 
 				if (result.first == FileDialog::Later || result.second.isEmpty()) {
 					dr.setMessage(_("Canceled."));

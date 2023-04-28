@@ -601,18 +601,12 @@ struct FileFilterList
 	std::vector<Filter> filters_;
 };
 
-
 FileFilterList::FileFilterList(docstring const & qt_style_filter)
 {
 	// FIXME UNICODE
 	string const filter = to_utf8(qt_style_filter)
 		+ (qt_style_filter.empty() ? string() : ";;")
-		+ to_utf8(_("All Files "))
-#if defined(_WIN32)
-		+ ("(*.*)");
-#else
-		+ ("(*)");
-#endif
+		+ to_utf8(_("All Files")) + " " + fromqstr(wildcardAllFiles());
 
 	// Split data such as "TeX documents (*.tex);;LyX Documents (*.lyx)"
 	// into individual filters.
@@ -654,6 +648,16 @@ void FileFilterList::parse_filter(string const & filter)
 		string const globs = string(what[2].first, what[2].second);
 		filters_.push_back(Filter(trim(desc), trim(globs)));
 	}
+}
+
+
+QString wildcardAllFiles()
+{
+#if defined(_WIN32)
+		return "(*.*)";
+#else
+		return "(*)";
+#endif
 }
 
 
