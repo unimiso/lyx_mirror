@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 615
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -674,7 +674,7 @@ Notes
  Si vous voulez tricher ou vérifier ce que vous avez fait,
  vous pouvez consulter un autre fichier appelé 
 \emph on
-Exemple (lixifié)
+Exemple (lyxifié)
 \emph default
 ,
  qui contient le même texte comme s'il avait été écrit et mis en forme par un maître de \SpecialChar LyX
