@@ -34812,12 +34812,11 @@ msgid ""
 "appropriate to the document language (%1$s).\n"
 "This subdirectory does not exists yet.\n"
 "Do you want to create it?"
-msgstr ""
+msgstr "Doporučuje se uložit šablonu v podresáři,\nkterý odpovídá jazyku (%1$s) použitém v dokumentu.\n Takovýto adresář ještě neexistuje.\nVytvořit?"
 
 #: src/frontends/qt/GuiView.cpp:3163
-#, fuzzy
 msgid "Create Language Directory?"
-msgstr "V&ytvořit adresář"
+msgstr "Vytvořit adresář pro daný jazyk?"
 
 #: src/frontends/qt/GuiView.cpp:3164 src/frontends/qt/GuiView.cpp:3195
 msgid "&Yes, Create"
@@ -35328,9 +35327,8 @@ msgid "Update [%1$s]|U"
 msgstr "Aktualizovat [%1$s]|A"
 
 #: src/frontends/qt/Menus.cpp:1266
-#, fuzzy
 msgid "(No Custom Insets Defined)"
-msgstr "Žádné vlastní vložky definovány!"
+msgstr "(Žádné vlastní vložky nedefinovány)"
 
 #: src/frontends/qt/Menus.cpp:1353
 msgid "(No Document Open)"
@@ -35353,27 +35351,24 @@ msgid "Open Outliner..."
 msgstr "Otevřít osnovu..."
 
 #: src/frontends/qt/Menus.cpp:1440
-#, fuzzy
 msgid "[[Toolbar]]On|O"
-msgstr "Revize"
+msgstr "Zapnout|Z"
 
 #: src/frontends/qt/Menus.cpp:1442
-#, fuzzy
 msgid "[[Toolbar]]Off|f"
-msgstr "Revize"
+msgstr "Vypnout|V"
 
 #: src/frontends/qt/Menus.cpp:1444
 msgid "[[Toolbar]]Automatic|A"
-msgstr ""
+msgstr "Automaticky|A"
 
 #: src/frontends/qt/Menus.cpp:1456
 msgid "Other Toolbars"
 msgstr "Jiné panely nástrojů"
 
 #: src/frontends/qt/Menus.cpp:1519
-#, fuzzy
 msgid "Master Documents"
-msgstr "Hlavní dokument"
+msgstr "Hlavní dokumenty"
 
 #: src/frontends/qt/Menus.cpp:1535
 msgid "Index List|I"
@@ -35411,14 +35406,12 @@ msgid "Force upper case|u"
 msgstr "Vynutit velké písmo|p"
 
 #: src/frontends/qt/Menus.cpp:1714
-#, fuzzy
 msgid "No Text Field in Scope!"
-msgstr "Žádná uvozovky v dosahu!"
+msgstr "Žádné textové pole v dosahu!"
 
 #: src/frontends/qt/Menus.cpp:1733
-#, fuzzy
 msgid "Custom..."
-msgstr "Vlastní...|V"
+msgstr "Vlastní..."
 
 #: src/frontends/qt/Menus.cpp:1809
 #, c-format
@@ -35426,17 +35419,16 @@ msgid "Caption (%1$s)"
 msgstr "Popisek (%1$s)"
 
 #: src/frontends/qt/Menus.cpp:1829
-#, fuzzy
 msgid "Reset to Default (%1$d%)|R"
-msgstr "V&ynulovat"
+msgstr "Nastavit standardní (%1$d%)|s"
 
 #: src/frontends/qt/Menus.cpp:1832
 msgid "Zoom In|I"
-msgstr ""
+msgstr "Zvětšit|v"
 
 #: src/frontends/qt/Menus.cpp:1834
 msgid "Zoom Out|O"
-msgstr ""
+msgstr "Zmenšit|m"
 
 #: src/frontends/qt/Menus.cpp:1876
 msgid "No Quote in Scope!"
@@ -35527,7 +35519,7 @@ msgstr "Hledat"
 
 #: src/frontends/qt/PanelStack.cpp:160
 msgid "This section contains invalid input. Please fix!"
-msgstr ""
+msgstr "Tato sekce obsahuje neplatný vstup. Prosím opravte!"
 
 #: src/frontends/qt/Toolbars.cpp:246
 #, c-format
@@ -35563,37 +35555,35 @@ msgstr ""
 
 #: src/frontends/qt/qt_helpers.cpp:281
 msgid "Invalid URL"
-msgstr ""
+msgstr "Chybný odkaz"
 
 #: src/frontends/qt/qt_helpers.cpp:282
-#, fuzzy, c-format
+#, c-format
 msgid "The URL `%1$s' could not be resolved."
-msgstr "Třídu dokumentu `%1$s' se nepodařilo načíst."
+msgstr "URL `%1$s' není syntakticky správně."
 
 #: src/frontends/qt/qt_helpers.cpp:288
-#, fuzzy
 msgid "URL could not be accessed"
-msgstr "Dokument nemůže být uložen do repositáře."
+msgstr "Odkaz se nepodařil otevřít"
 
 #: src/frontends/qt/qt_helpers.cpp:289
 #, c-format
 msgid "The URL `%1$s' could not be opened although it exists!"
-msgstr ""
+msgstr "URL `%1$s' se nepodařilo otevřít!"
 
 #: src/frontends/qt/qt_helpers.cpp:314
-#, fuzzy
 msgid "The lyxpaperview script failed."
-msgstr "Skript `%1$s' selhal."
+msgstr "Skript lyxpaperview selhal."
 
 #: src/frontends/qt/qt_helpers.cpp:317
 #, c-format
 msgid "No file was found using the pattern `%1$s'."
-msgstr ""
+msgstr "Nebyl nalezen žádný soubor odpovídající hledané masce `%1$s'."
 
 #: src/frontends/qt/qt_helpers.cpp:323
-#, fuzzy, c-format
+#, c-format
 msgid "The target `%1$s' could not be resolved."
-msgstr "Třídu dokumentu `%1$s' se nepodařilo načíst."
+msgstr "Cílový dokument `%1$s' se nepodařilo otevřít."
 
 #: src/frontends/qt/qt_helpers.cpp:359
 msgid "Could not update TeX information"
@@ -35668,7 +35658,7 @@ msgstr "&Pokračovat"
 
 #: src/insets/InsetBibtex.cpp:181
 msgid "EMPTY: "
-msgstr ""
+msgstr "PRÁZDNÝ: "
 
 #: src/insets/InsetBibtex.cpp:182
 msgid "Biblatex Generated Bibliography"
@@ -35713,7 +35703,7 @@ msgstr "Možnosti:"
 
 #: src/insets/InsetBibtex.cpp:281
 msgid "[BIBLIOGRAPHY DELETED!]"
-msgstr ""
+msgstr "[BIBLIOGRAFIE SMAZÁNA!]"
 
 #: src/insets/InsetBibtex.cpp:354
 msgid ""
@@ -35826,9 +35816,8 @@ msgid ""
 msgstr ""
 
 #: src/insets/InsetCaption.cpp:416
-#, fuzzy
 msgid "Orphaned caption:"
-msgstr "Table caption"
+msgstr "Osiřelá citace:"
 
 #: src/insets/InsetCaption.cpp:432
 #, c-format
@@ -35838,7 +35827,7 @@ msgstr "Sub-%1$s"
 #: src/insets/InsetCaption.cpp:456
 #, c-format
 msgid "%1$s %2$s: [[Caption label (ex. Figure 1: )]]"
-msgstr ""
+msgstr "%1$s %2$s: "
 
 #: src/insets/InsetCitation.cpp:321
 msgid "No bibliography defined!"
@@ -36021,14 +36010,12 @@ msgid "float"
 msgstr "plovoucí objekt"
 
 #: src/insets/InsetFloat.cpp:923
-#, fuzzy
 msgid "Float: "
-msgstr "plovoucí objekt: "
+msgstr "Plovoucí objekt: "
 
 #: src/insets/InsetFloat.cpp:926
-#, fuzzy
 msgid "Subfloat: "
-msgstr "pod-plovoucí objekt: "
+msgstr "Pod-plovoucí objekt: "
 
 #: src/insets/InsetFloat.cpp:936
 msgid " (sideways)"
@@ -36065,17 +36052,16 @@ msgstr "Konverze %1$s není vůbec potřeba"
 
 #: src/insets/InsetGraphics.cpp:832
 msgid "Graphic not specified. Falling back to `draft' mode."
-msgstr ""
+msgstr "Obrázek není specifikován. Nouzový návrat do módu konceptu."
 
 #: src/insets/InsetGraphics.cpp:833
 #, c-format
 msgid "Graphic `%1$s' was not found. Falling back to `draft' mode."
-msgstr ""
+msgstr "Nenalezen obrázek `%1$s'. Nouzový návrat do módu konceptu."
 
 #: src/insets/InsetGraphics.cpp:836
-#, fuzzy
 msgid "Graphic not found!"
-msgstr "Řetězec nenalezen!"
+msgstr "Obrázek nenalezen!"
 
 #: src/insets/InsetGraphics.cpp:920
 #, c-format
@@ -36111,7 +36097,7 @@ msgstr "soubor"
 
 #: src/insets/InsetHyperlink.cpp:283
 msgid "other[[Hyperlink Type]]"
-msgstr ""
+msgstr "jiný"
 
 #: src/insets/InsetHyperlink.cpp:284
 #, c-format
@@ -36120,7 +36106,7 @@ msgstr "Odkaz (hyperlink) (%1$s) na %2$s"
 
 #: src/insets/InsetInclude.cpp:402
 msgid "MISSING:"
-msgstr ""
+msgstr "CHYBÍ:"
 
 #: src/insets/InsetInclude.cpp:420
 msgid "Include (excluded)"
@@ -36133,30 +36119,26 @@ msgid ""
 "%1$s\n"
 " has attempted to include itself.\n"
 "The document set will not work properly until this is fixed!"
-msgstr ""
+msgstr "Došlo k pokusu vložit soubor\n%1$s\nrekurzivně do sebe.\nDokument nebude fungovat správně, dokud nezjednáte nápravu."
 
 #: src/insets/InsetInclude.cpp:531
-#, fuzzy
 msgid "Recursive Include"
-msgstr "Rekurzivní vstup"
+msgstr "Rekurzivní zahrnutí"
 
 #: src/insets/InsetInclude.cpp:545
-#, fuzzy
 msgid "No file name specified"
-msgstr "Je očekávána absolutní cesta k souboru."
+msgstr "Nebylo zadáno jméno souboru"
 
 #: src/insets/InsetInclude.cpp:546
-#, fuzzy
 msgid ""
 "An included file name is empty.\n"
 "Ignoring Inclusion"
 msgstr ""
-"Došlo k pokusu vložit soubor %1$s rekurzivně do sebe! Ignoruji toto vložení."
+"Vkládaný soubor je prázdný.\nIgnoruji toto zahrnutí."
 
 #: src/insets/InsetInclude.cpp:553
-#, fuzzy
 msgid "Included file not found"
-msgstr "Systémový soubor nenalezen"
+msgstr "Soubor k zhrnutí nenalezen"
 
 #: src/insets/InsetInclude.cpp:554
 #, c-format
@@ -36165,11 +36147,12 @@ msgid ""
 "'%1$s'\n"
 "has not been found. LyX will ignore the inclusion."
 msgstr ""
+"Vkládaný soubor\n'%1$s'\nnebyl nalezen.\nIgnoruji toto zahrnutí."
 
 #: src/insets/InsetInclude.cpp:569
 #, c-format
 msgid "[INCLUDED FILE %1$s DELETED!]"
-msgstr ""
+msgstr "[ZAHRNUTÝ %1$s SOUBOR SMAZÁN!]"
 
 #: src/insets/InsetInclude.cpp:801
 #, c-format
