@@ -728,10 +728,9 @@ Row::findElement(pos_type const pos, bool const boundary, double & x) const
 		 * to accept virtual elements, in which case the position
 		 * will be before the virtual element.
 		 */
-		if (cit->isVirtual() && pos + boundary_corr == cit->pos)
-			break;
-		else if (pos + boundary_corr >= cit->pos
-		         && pos + boundary_corr < cit->endpos) {
+		if ((pos + boundary_corr >= cit->pos && pos + boundary_corr < cit->endpos)
+		    || (cit->isVirtual() && pos + boundary_corr == cit->pos)) {
+			// FIXME: shall we use `pos + boundary_corr' here?
 			x += cit->pos2x(pos);
 			break;
 		}
