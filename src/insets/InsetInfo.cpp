@@ -465,6 +465,22 @@ string InsetInfoParams::infoType() const
 /////////////////////////////////////////////////////////////////////////
 
 
+namespace {
+
+class InsetGraphicsTight : public InsetGraphics
+{
+public:
+	///
+	explicit InsetGraphicsTight(Buffer * buf) : InsetGraphics(buf) {}
+
+	///
+	int leftOffset(BufferView const *) const override { return 0; }
+	///
+	int rightOffset(BufferView const *) const override { return 0; }
+};
+
+}
+
 
 InsetInfo::InsetInfo(Buffer * buf, string const & info)
 	: InsetCollapsible(buf), initialized_(false)
@@ -1127,7 +1143,7 @@ void InsetInfo::build()
 				percent_scale = (100 * iconsize + imgsize / 2)/imgsize;
 			}
 		}
-		InsetGraphics * inset = new InsetGraphics(buffer_);
+		InsetGraphicsTight * inset = new InsetGraphicsTight(buffer_);
 		InsetGraphicsParams igp;
 		igp.filename = file;
 		igp.lyxscale = percent_scale;
