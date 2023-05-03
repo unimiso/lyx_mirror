@@ -474,8 +474,9 @@ void GuiWorkArea::Private::resizeBufferView()
 
 void GuiWorkArea::Private::resetCaret()
 {
-	// Don't start blinking if the cursor isn't on screen.
-	if (!buffer_view_->caretInView())
+	// Don't start blinking if the cursor isn't on screen or the window
+	// does not have focus
+	if (!buffer_view_->caretInView() || !p->hasFocus())
 		return;
 
 	// completion indicator
