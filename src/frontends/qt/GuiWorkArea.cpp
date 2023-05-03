@@ -479,15 +479,6 @@ void GuiWorkArea::Private::resetCaret()
 	if (!buffer_view_->caretInView() || !p->hasFocus())
 		return;
 
-	// completion indicator
-	Cursor const & cur = buffer_view_->cursor();
-	bool const completable = cur.inset().showCompletionCursor()
-		&& completer_->completionAvailable()
-		&& !completer_->popupVisible()
-		&& !completer_->inlineVisible();
-
-	buffer_view_->buildCaretGeometry(completable);
-
 	needs_caret_geometry_update_ = true;
 	caret_visible_ = true;
 }
@@ -500,6 +491,14 @@ void GuiWorkArea::Private::updateCaretGeometry()
 	if (buffer_view_->busy() || !buffer_view_->caretInView())
 		return;
 
+	// completion indicator
+	Cursor const & cur = buffer_view_->cursor();
+	bool const completable = cur.inset().showCompletionCursor()
+		&& completer_->completionAvailable()
+		&& !completer_->popupVisible()
+		&& !completer_->inlineVisible();
+
+	buffer_view_->buildCaretGeometry(completable);
 
 	needs_caret_geometry_update_ = false;
 }
