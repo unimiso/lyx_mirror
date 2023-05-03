@@ -3352,8 +3352,8 @@ void BufferView::buildCaretGeometry(bool complet)
 	bool const slant = fm.italic() && cur.inTexted() && !cur.selection();
 	double const slope = slant ? fm.italicSlope() : 0;
 	cg.shapes.push_back(
-		{{iround(p.x_ + dim.asc * slope), p.y_},
-		 {iround(p.x_ - dim.des * slope), p.y_ + dim.height()},
+		{{iround(p.x_ + dim.asc * slope),                 p.y_},
+		 {iround(p.x_ - dim.des * slope),                 p.y_ + dim.height()},
 		 {iround(p.x_ + dir * dim.wid - dim.des * slope), p.y_ + dim.height()},
 		 {iround(p.x_ + dir * dim.wid + dim.asc * slope), p.y_}}
 		);
@@ -3366,10 +3366,10 @@ void BufferView::buildCaretGeometry(bool complet)
 		int const xx = iround(p.x_ - dim.des * slope);
 		int const yy = p.y_ + dim.height();
 		cg.shapes.push_back(
-			{{xx, yy - dim.wid},
+			{{xx,                            yy - dim.wid},
 			 {xx + dir * (dim.wid + lx - 1), yy - dim.wid},
 			 {xx + dir * (dim.wid + lx - 1), yy},
-			 {xx, yy}}
+			 {xx,                            yy}}
 			);
 	}
 
@@ -3382,12 +3382,12 @@ void BufferView::buildCaretGeometry(bool complet)
 		// starting position x
 		int const xx = p.x_ + dir * dim.wid + sx;
 		cg.shapes.push_back(
-			{{xx, m - d},
-			 {xx + dir * d, m},
-			 {xx, m + d},
-			 {xx, m + d - dim.wid},
+			{{xx,                     m - d},
+			 {xx + dir * d,           m},
+			 {xx,                     m + d},
+			 {xx,                     m + d - dim.wid},
 			 {xx + dir * d - dim.wid, m},
-			 {xx, m - d + dim.wid}}
+			 {xx,                     m - d + dim.wid}}
 			);
 	}
 
