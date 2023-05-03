@@ -39,7 +39,6 @@
 #include "LyXVC.h"
 #include "Text.h"
 #include "TextMetrics.h"
-#include "Undo.h"
 #include "version.h"
 
 #include "support/convert.h"
@@ -311,8 +310,7 @@ void GuiWorkArea::startBlinkingCaret()
 
 	// Don't start blinking if the cursor isn't on screen, unless we
 	// are not ready to know whether the cursor is on screen.
-	if (!d->buffer_view_->buffer().undo().activeUndoGroup()
-	    && !d->buffer_view_->caretInView())
+	if (!d->buffer_view_->busy() && !d->buffer_view_->caretInView())
 		return;
 
 	d->showCaret();
@@ -498,8 +496,7 @@ void GuiWorkArea::Private::updateCaretGeometry()
 {
 	// we cannot update geometry if not ready and we do not need to if
 	// caret is not in view.
-	if (buffer_view_->buffer().undo().activeUndoGroup()
-	    || !buffer_view_->caretInView())
+	if (buffer_view_->busy() || !buffer_view_->caretInView())
 		return;
 
 
@@ -1240,7 +1237,7 @@ void GuiWorkArea::paintEvent(QPaintEvent * ev)
 	// Do not trigger the painting machinery if we are not ready (see
 	// bug #10989). The second test triggers when in the middle of a
 	// dispatch operation.
-	if (view().busy() || d->buffer_view_->buffer().undo().activeUndoGroup()) {
+	if (view().busy() || d->buffer_view_->busy()) {
 		// Since the screen may have turned black at this point, our
 		// backing store has to be copied to screen. This is a no-op
 		// except when our drawing strategy is "backingstore" (macOS,

@@ -802,6 +802,12 @@ Undo & Buffer::undo()
 }
 
 
+Undo const & Buffer::undo() const
+{
+	return d->undo_;
+}
+
+
 void Buffer::setChild(DocIterator const & dit, Buffer * child)
 {
 	d->children_positions[child] = dit;

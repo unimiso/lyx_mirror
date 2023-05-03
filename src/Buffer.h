@@ -651,6 +651,8 @@ public:
 
 	///
 	Undo & undo();
+	///
+	Undo const & undo() const;
 
 	/// This function is called when the buffer is changed.
 	void changed(bool update_metrics) const;

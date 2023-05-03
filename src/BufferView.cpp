@@ -3527,6 +3527,12 @@ void BufferView::checkCursorScrollOffset()
 }
 
 
+bool BufferView::busy() const
+{
+	return buffer().undo().activeUndoGroup();
+}
+
+
 void BufferView::draw(frontend::Painter & pain, bool paint_caret)
 {
 	if (height_ == 0 || width_ == 0)

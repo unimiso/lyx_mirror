@@ -339,6 +339,8 @@ public:
 	/// the shape of the caret
 	frontend::CaretGeometry const & caretGeometry() const;
 
+	/// Returns true when the BufferView is not ready for drawing
+	bool busy() const;
 	///
 	void draw(frontend::Painter & pain, bool paint_caret);
 
