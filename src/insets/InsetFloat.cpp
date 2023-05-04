@@ -866,7 +866,7 @@ void InsetFloat::docbook(XMLStream & xs, OutputParams const & runparams) const
 
 bool InsetFloat::insetAllowed(InsetCode code) const
 {
-	// The case that code == FLOAT_CODE is handled in Text3.cpp,
+	// The case that code == FLOAT_CODE is handled in Text.cpp,
 	// because we need to know what type of float is meant.
 	switch(code) {
 	case WRAP_CODE:

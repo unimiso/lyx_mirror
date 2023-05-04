@@ -177,8 +177,6 @@ SOURCEFILESCORE = \
 	TexRow.cpp \
 	texstream.cpp \
 	Text.cpp \
-	Text2.cpp \
-	Text3.cpp \
 	TextClass.cpp \
 	TextMetrics.cpp \
 	TocBackend.cpp \
