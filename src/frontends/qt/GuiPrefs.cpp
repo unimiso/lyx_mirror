@@ -2619,16 +2619,6 @@ PrefUserInterface::PrefUserInterface(GuiPreferences * form)
 		this, SIGNAL(changed()));
 	connect(tooltipCB, SIGNAL(toggled(bool)),
 		this, SIGNAL(changed()));
-	connect(toggleTabbarCB, SIGNAL(toggled(bool)),
-		this, SIGNAL(changed()));
-	connect(toggleMenubarCB, SIGNAL(toggled(bool)),
-		this, SIGNAL(changed()));
-	connect(toggleScrollbarCB, SIGNAL(toggled(bool)),
-		this, SIGNAL(changed()));
-	connect(toggleStatusbarCB, SIGNAL(toggled(bool)),
-		this, SIGNAL(changed()));
-	connect(toggleToolbarsCB, SIGNAL(toggled(bool)),
-		this, SIGNAL(changed()));
 	lastfilesSB->setMaximum(maxlastfiles);
 
 	iconSetCO->addItem(qt_("Default"), QString());
@@ -2650,11 +2640,6 @@ void PrefUserInterface::applyRC(LyXRC & rc) const
 	rc.use_system_theme_icons = useSystemThemeIconsCB->isChecked();
 	rc.num_lastfiles = lastfilesSB->value();
 	rc.use_tooltip = tooltipCB->isChecked();
-	rc.full_screen_toolbars = toggleToolbarsCB->isChecked();
-	rc.full_screen_scrollbar = toggleScrollbarCB->isChecked();
-	rc.full_screen_statusbar = toggleStatusbarCB->isChecked();
-	rc.full_screen_tabbar = toggleTabbarCB->isChecked();
-	rc.full_screen_menubar = toggleMenubarCB->isChecked();
 }
 
 
@@ -2668,11 +2653,6 @@ void PrefUserInterface::updateRC(LyXRC const & rc)
 	uiFileED->setText(toqstr(external_path(rc.ui_file)));
 	lastfilesSB->setValue(rc.num_lastfiles);
 	tooltipCB->setChecked(rc.use_tooltip);
-	toggleScrollbarCB->setChecked(rc.full_screen_scrollbar);
-	toggleStatusbarCB->setChecked(rc.full_screen_statusbar);
-	toggleToolbarsCB->setChecked(rc.full_screen_toolbars);
-	toggleTabbarCB->setChecked(rc.full_screen_tabbar);
-	toggleMenubarCB->setChecked(rc.full_screen_menubar);
 }
 
 
@@ -2839,6 +2819,16 @@ PrefEdit::PrefEdit(GuiPreferences * form)
 		this, SIGNAL(changed()));
 	connect(screenWidthUnitCO, SIGNAL(selectionChanged(lyx::Length::UNIT)), 
 		this, SIGNAL(changed()));
+	connect(toggleTabbarCB, SIGNAL(toggled(bool)),
+		this, SIGNAL(changed()));
+	connect(toggleMenubarCB, SIGNAL(toggled(bool)),
+		this, SIGNAL(changed()));
+	connect(toggleScrollbarCB, SIGNAL(toggled(bool)),
+		this, SIGNAL(changed()));
+	connect(toggleStatusbarCB, SIGNAL(toggled(bool)),
+		this, SIGNAL(changed()));
+	connect(toggleToolbarsCB, SIGNAL(toggled(bool)),
+		this, SIGNAL(changed()));
 }
 
 
@@ -2874,6 +2864,11 @@ void PrefEdit::applyRC(LyXRC & rc) const
 	rc.cursor_width = cursorWidthSB->value();
 	rc.citation_search = citationSearchCB->isChecked();
 	rc.citation_search_pattern = fromqstr(citationSearchLE->text());
+	rc.full_screen_toolbars = toggleToolbarsCB->isChecked();
+	rc.full_screen_scrollbar = toggleScrollbarCB->isChecked();
+	rc.full_screen_statusbar = toggleStatusbarCB->isChecked();
+	rc.full_screen_tabbar = toggleTabbarCB->isChecked();
+	rc.full_screen_menubar = toggleMenubarCB->isChecked();
 	rc.screen_width = Length(widgetsToLength(screenWidthLE, screenWidthUnitCO)); 
 	rc.screen_limit = screenLimitCB->isChecked(); 
 }
@@ -2893,6 +2888,11 @@ void PrefEdit::updateRC(LyXRC const & rc)
 	citationSearchLE->setText(toqstr(rc.citation_search_pattern));
 	citationSearchLE->setEnabled(rc.citation_search);
 	citationSearchLA->setEnabled(rc.citation_search);
+	toggleScrollbarCB->setChecked(rc.full_screen_scrollbar);
+	toggleStatusbarCB->setChecked(rc.full_screen_statusbar);
+	toggleToolbarsCB->setChecked(rc.full_screen_toolbars);
+	toggleTabbarCB->setChecked(rc.full_screen_tabbar);
+	toggleMenubarCB->setChecked(rc.full_screen_menubar);
 	lengthToWidgets(screenWidthLE, screenWidthUnitCO, rc.screen_width, Length::defaultUnit());
 	screenWidthUnitCO->setEnabled(rc.screen_limit);
 	screenLimitCB->setChecked(rc.screen_limit);
