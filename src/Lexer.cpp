@@ -690,6 +690,7 @@ docstring Lexer::getLongString(docstring const & endtoken)
 	docstring str;
 	docstring prefix;
 	bool firstline = true;
+	bool foundend = false;
 
 	while (pimpl_->is) { //< eatLine only reads from is, not from pushTok
 		if (!eatLine())
@@ -701,8 +702,10 @@ docstring Lexer::getLongString(docstring const & endtoken)
 		LYXERR(Debug::PARSER, "LongString: `" << tmpstr << '\'');
 
 		// We do a case independent comparison, like searchKeyword does.
-		if (compare_no_case(token, endtoken) == 0)
+		if (compare_no_case(token, endtoken) == 0) {
+			foundend = true;
 			break;
+		}
 
 		if (firstline) {
 			size_t i = tmpstr.find_first_not_of(from_ascii(" \t"));
@@ -720,7 +723,7 @@ docstring Lexer::getLongString(docstring const & endtoken)
 		str += tmpstr + '\n';
 	}
 
-	if (!pimpl_->is)
+	if (!foundend)
 		printError("Long string not ended by `" + to_utf8(endtoken) + '\'');
 
 	return str;
