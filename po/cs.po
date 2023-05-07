@@ -36201,20 +36201,19 @@ msgid "Different use-non-TeX-fonts settings"
 msgstr "Rozdílné nastavení neTeX-ových fontů"
 
 #: src/insets/InsetInclude.cpp:838
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Included file `%1$s'\n"
 "uses input encoding \"%2$s\" [%3$s]\n"
 "while parent file uses input encoding \"%4$s\" [%5$s]."
 msgstr ""
 "Zahrnutý soubor `%1$s'\n"
-"je třídy (textclass) `%2$s'\n"
-"zatímco rodičovský soubor má třídu `%3$s'."
+"používá vstupní kódování \"%2$s\" [%3$s]\n"
+"zatímco rodičovský soubor používá kódování \"%4$s\" [%5$s]."
 
 #: src/insets/InsetInclude.cpp:846
-#, fuzzy
 msgid "Different LaTeX input encodings"
-msgstr "Kódování fontu v LaTe&X-u:"
+msgstr "Rozdílná vstupní kódování LaTe&X-u"
 
 #: src/insets/InsetInclude.cpp:861
 #, c-format
@@ -36494,49 +36493,43 @@ msgstr "Čas revize"
 
 #: src/insets/InsetInfo.cpp:557
 msgid "The current LyX version"
-msgstr ""
+msgstr "Současná verze LyX-u"
 
 #: src/insets/InsetInfo.cpp:559
 msgid "The current LyX layout format"
-msgstr ""
+msgstr "Současná verze formátu rozvržení LyX-u"
 
 #: src/insets/InsetInfo.cpp:562
-#, fuzzy
 msgid "The current date"
-msgstr "Aktuální dokukment byl uzavřen."
+msgstr "Současné datum"
 
 #: src/insets/InsetInfo.cpp:565
-#, fuzzy
 msgid "The date of last save"
-msgstr "The width of the overlay area"
+msgstr "Datum poslední modifikace dokumentu"
 
 #: src/insets/InsetInfo.cpp:568
-#, fuzzy
 msgid "A static date"
-msgstr "Automatická aktualizace"
+msgstr "Statické datum"
 
 #: src/insets/InsetInfo.cpp:571
-#, fuzzy
 msgid "The current time"
-msgstr "Uzavřít skupinu panelů|U"
+msgstr "Současný čas"
 
 #: src/insets/InsetInfo.cpp:574
 msgid "The time of last save"
-msgstr ""
+msgstr "Čas poslední modifikace dokumentu"
 
 #: src/insets/InsetInfo.cpp:577
-#, fuzzy
 msgid "A static time"
-msgstr "Automatická aktualizace"
+msgstr "Statický čas"
 
 #: src/insets/InsetInfo.cpp:604
 msgid "Missing \\end_inset at this point."
 msgstr "V tomto místě postrádám \\end_inset ."
 
 #: src/insets/InsetInfo.cpp:826
-#, fuzzy
 msgid "Unknown Info!"
-msgstr "Neznámá informace: "
+msgstr "Neznámá informace!"
 
 #: src/insets/InsetInfo.cpp:835 src/insets/InsetInfo.cpp:1034
 #, c-format
@@ -36615,15 +36608,15 @@ msgstr "ne"
 #: src/insets/InsetInfo.cpp:1045
 #, c-format
 msgid "Can't determine menu entry for action %1$s in batch mode"
-msgstr ""
+msgstr "Nelze určit položku v menu pro akci %1$s v módu příkazového řádku"
 
 #: src/insets/InsetInfo.cpp:1053
-#, fuzzy, c-format
+#, c-format
 msgid "No menu entry for action %1$s"
-msgstr "Žádný dokument pro soubor: %1$s"
+msgstr "Chybí položka v menu pro akci %1$s"
 
 #: src/insets/InsetInfo.cpp:1178
-#, fuzzy, c-format
+#, c-format
 msgid "%1$s[[vcs data]] unknown"
 msgstr "%1$s (neznámý)"
 
@@ -37071,7 +37064,7 @@ msgstr "Formát"
 
 #: src/insets/InsetRef.cpp:628 src/mathed/InsetMathRef.cpp:378
 msgid "Label Only"
-msgstr "Pouze preambule"
+msgstr "Pouze značka"
 
 #: src/insets/InsetScript.cpp:337
 msgid "subscript"
@@ -37184,11 +37177,11 @@ msgstr ""
 
 #: src/insets/InsetTabular.cpp:5705
 msgid "Column movement not supported with multi-columns."
-msgstr ""
+msgstr "Přesun sloupců není podporován s víceřádkovými buňkami."
 
 #: src/insets/InsetTabular.cpp:5723
 msgid "Row movement not supported with multi-rows."
-msgstr ""
+msgstr "Přesun řádků není podporován s víceslopucovými buňkami."
 
 #: src/insets/InsetTabular.cpp:6244
 msgid "Selection size should match clipboard content."
@@ -37200,9 +37193,8 @@ msgid "[contains tracked changes]"
 msgstr "Sledovat revize"
 
 #: src/insets/InsetWrap.cpp:64
-#, fuzzy
 msgid "Wrap: "
-msgstr "obtékání: "
+msgstr "Obtékání: "
 
 #: src/insets/InsetWrap.cpp:197
 msgid "wrap"
@@ -37277,12 +37269,11 @@ msgid ""
 "The search string matches the selection, and search is limited to "
 "selection.\n"
 "Continue search outside?"
-msgstr ""
+msgstr "Hledaný řetězec je identický s výběrem a hledání je omezeno na výběr.\nHledat mimo výběr?"
 
 #: src/lyxfind.cpp:312 src/lyxfind.cpp:339
-#, fuzzy
 msgid "Search outside selection?"
-msgstr "Přijmout změnu uvnitř výběru"
+msgstr "Hledat mimo výběr?"
 
 #: src/lyxfind.cpp:337
 msgid ""
@@ -37307,18 +37298,16 @@ msgstr ""
 "Pokračovat ve vyhledávání od konce dokumentu?"
 
 #: src/lyxfind.cpp:374
-#, fuzzy
 msgid "Search reached end of document, continuing from beginning."
-msgstr "Byl dosažen konec dokumentu. Pokračovat dále od začátku?"
+msgstr "Byl dosažen konec dokumentu, pokračování od začátku."
 
 #: src/lyxfind.cpp:375
 msgid "Search reached beginning of document, continuing from end."
-msgstr ""
+msgstr "Byl dosažen začátek dokumentu, pokračování od konce"
 
 #: src/lyxfind.cpp:674
-#, fuzzy
 msgid "String not found in selection."
-msgstr "Řetězec nenalezen."
+msgstr "Řetězec nenalezen ve výběru."
 
 #: src/lyxfind.cpp:676
 msgid "String not found."
@@ -37333,9 +37322,9 @@ msgid "String has been replaced."
 msgstr "Řetězec byl nahrazen."
 
 #: src/lyxfind.cpp:684
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d strings have been replaced in the selection."
-msgstr "%1$d řetězců bylo nahrazeno."
+msgstr "%1$d řetězců bylo nahrazeno ve výběru."
 
 #: src/lyxfind.cpp:685
 #, c-format
@@ -37343,34 +37332,29 @@ msgid "%1$d strings have been replaced."
 msgstr "%1$d řetězců bylo nahrazeno."
 
 #: src/lyxfind.cpp:4854
-#, fuzzy
 msgid "One match has been replaced."
-msgstr "Řetězec byl nahrazen."
+msgstr "Jeden řetězec byl nahrazen."
 
 #: src/lyxfind.cpp:4857
-#, fuzzy
 msgid "Two matches have been replaced."
-msgstr "%1$d řetězců bylo nahrazeno."
+msgstr "Dva řetězce byly nahrazeno."
 
 #: src/lyxfind.cpp:4860
-#, fuzzy, c-format
+#, c-format
 msgid "%1$d matches have been replaced."
 msgstr "%1$d řetězců bylo nahrazeno."
 
 #: src/lyxfind.cpp:4866
-#, fuzzy
 msgid "Match not found."
-msgstr "Řetězec nenalezen!"
+msgstr "Řetězec nenalezen."
 
 #: src/lyxfind.cpp:4872
-#, fuzzy
 msgid "Match has been replaced."
 msgstr "Řetězec byl nahrazen."
 
 #: src/lyxfind.cpp:4874
-#, fuzzy
 msgid "Match found."
-msgstr "Řetězec nalezen!"
+msgstr "Řetězec nalezen."
 
 #: src/mathed/InsetMathAMSArray.cpp:135 src/mathed/InsetMathCases.cpp:90
 #: src/mathed/InsetMathHull.cpp:2146 src/mathed/InsetMathSplit.cpp:127
@@ -37385,9 +37369,9 @@ msgid "Box: %1$s"
 msgstr "Rámeček: %1$s"
 
 #: src/mathed/InsetMathCases.cpp:97 src/mathed/InsetMathSubstack.cpp:107
-#, fuzzy, c-format
+#, c-format
 msgid "Changing number of columns not allowed in '%1$s'"
-msgstr "Nelze změnit počet sloupců v prostředí 'cases': vlastnost '%1$s'"
+msgstr "Nelze měnit počet sloupců v '%1$s'"
 
 #: src/mathed/InsetMathColor.cpp:160
 #, c-format
@@ -37513,7 +37497,7 @@ msgstr "Editace v módu regulárních výrazů"
 #: src/mathed/InsetMathNest.cpp:1996
 #, c-format
 msgid "Cannot apply %1$s here."
-msgstr ""
+msgstr "Zde nelze použít %1$s."
 
 #: src/mathed/InsetMathRef.cpp:371
 msgid "Standard[[mathref]]"
@@ -37553,9 +37537,8 @@ msgid "NameRef: "
 msgstr "NameRef: "
 
 #: src/mathed/InsetMathRef.cpp:378
-#, fuzzy
 msgid "Label Only: "
-msgstr "Pouze preambule"
+msgstr "Pouze značka: "
 
 #: src/mathed/InsetMathSize.cpp:108
 #, c-format
