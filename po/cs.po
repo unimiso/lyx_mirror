@@ -1896,7 +1896,7 @@ msgstr ""
 msgid ""
 "Select the roman (serif) typeface. To filter the list of fonts, just start "
 "typing while the list is expanded."
-msgstr ""
+msgstr "Vybrat druh antikvy. Pro vyfiltrování ze seznamu fontů, stačí začít psát jméno fontu po zobrazení seznamu."
 
 #: src/frontends/qt/ui/FontUi.ui:142
 msgid "Use a real small caps shape, if the font provides one"
@@ -1936,7 +1936,7 @@ msgstr ""
 msgid ""
 "Select the Sans Serif (grotesque) typeface. To filter the list of fonts, "
 "just start typing while the list is expanded."
-msgstr ""
+msgstr "Vybrat druh bezpatkového písma. Pro vyfiltrování ze seznamu fontů, stačí začít psát jméno fontu po zobrazení seznamu."
 
 #: src/frontends/qt/ui/FontUi.ui:237
 msgid "S&cale (%):"
@@ -1959,7 +1959,7 @@ msgstr "S&trojopisný:"
 msgid ""
 "Select the typewriter (monospaced) typeface. To filter the list of fonts, "
 "just start typing while the list is expanded."
-msgstr ""
+msgstr "Vybrat druh strojopisného písma. Pro vyfiltrování ze seznamu fontů, stačí začít psát jméno fontu po zobrazení seznamu."
 
 #: src/frontends/qt/ui/FontUi.ui:345
 msgid "Sc&ale (%):"
@@ -2973,7 +2973,7 @@ msgstr "&Typ:"
 msgid ""
 "Determines whether only personal user files, system files or all files are "
 "displayed"
-msgstr ""
+msgstr "Určuje, zda-li zobrazit pouze uživatelské, systémové nebo všechny dokumenty"
 
 #: src/frontends/qt/ui/LyXFilesUi.ui:72 src/frontends/qt/ui/RefUi.ui:68
 msgid "Filter case-sensitively"
@@ -3051,11 +3051,11 @@ msgstr "Zahrnout &všechny potomky"
 msgid ""
 "Here you can set up the handling of counters and references with regard to "
 "the excluded child documents."
-msgstr ""
+msgstr "Zde lze nastavit zpracování čítačů a křížových odkazů vzhledem k vynechaným potomkům"
 
 #: src/frontends/qt/ui/MasterChildUi.ui:58
 msgid "Global Counters && References"
-msgstr "Globální číslování a reference"
+msgstr "Globální číslování a odkazy"
 
 #: src/frontends/qt/ui/MasterChildUi.ui:64
 msgid ""
@@ -3063,11 +3063,11 @@ msgid ""
 "thus the counters in the output will differ from an output of the complete "
 "document.<br>This is the fastest method. Use this if you do not need correct "
 "counter values and references."
-msgstr ""
+msgstr "Všechny čítače a odkazy vynechaných potomků budou ignorovány, a tak bude číslování ve výstupním dokumentu odlišné od výstupu kompletního dokumentu. <br>Jedná se o nejrychlejší variantu, pokud nepotřebujete koretktní číslování a odkazy."
 
 #: src/frontends/qt/ui/MasterChildUi.ui:67
 msgid "Do &not maintain (fast)"
-msgstr ""
+msgstr "&Neudržovat (rychlé)"
 
 #: src/frontends/qt/ui/MasterChildUi.ui:74
 msgid ""
@@ -3077,22 +3077,22 @@ msgid ""
 "to unincluded children that change due to changes of included files.<br>This "
 "is significantly faster than \"Strictly maintain\". Use this if you need "
 "correct counters and more or less correct references."
-msgstr ""
+msgstr "Čítače a odkazy vynechaných potomků budou nastaveny jednou a měněny při modifikaci vynechaných potomků. To nastaví čísla i dokazu korektně ve většině případů. Výjimkou jsou odkazy na změněné v soubory, které jsou importovány samotnými nezahrnutými potomky.<br>Podstatně rychlejší než ve striktním módu. Vyberte pokud Vám stačí víceméně koretktní číslování a odkazy."
 
 #: src/frontends/qt/ui/MasterChildUi.ui:77
 msgid "Maintain mostl&y (medium)"
-msgstr ""
+msgstr "Udržovat &přibližně (střední)"
 
 #: src/frontends/qt/ui/MasterChildUi.ui:84
 msgid ""
 "Assure that all counters and references are identical to the complete "
 "document. This can be much slower than the first two methods.<br>Use this if "
 "you absolutely need correct counters."
-msgstr ""
+msgstr "Zajišťuje, že všechny odkazy a čítače budou identické jako v kompletním dokumentu. Může být výrazně pomalejší."
 
 #: src/frontends/qt/ui/MasterChildUi.ui:87
 msgid "Strictly &maintain (slow)"
-msgstr ""
+msgstr "Udržovat striktně (pomalé)"
 
 #: src/frontends/qt/ui/MathMatrixUi.ui:53
 msgid "Horizontal alignment per column (l,c,r)"
@@ -20540,11 +20540,11 @@ msgstr "Gigantické ikony"
 
 #: lib/ui/stdcontext.inc:769
 msgid "Zoom Level|Z"
-msgstr "Lupa (popis)|r"
+msgstr "Lupa (popis)|p"
 
 #: lib/ui/stdcontext.inc:770
 msgid "Zoom Slider|S"
-msgstr "Lupa (běhoun)|b"
+msgstr "Lupa (běhoun)|h"
 
 #: lib/ui/stdcontext.inc:772
 msgid "Word Count|W"
@@ -37710,11 +37710,11 @@ msgstr "Vlastní definice klávesnice"
 
 #: src/support/debug.cpp:50
 msgid "Output source file generation/processing"
-msgstr ""
+msgstr "Generování/zpracování výstupních souborů"
 
 #: src/support/debug.cpp:51
 msgid "Output source file generation/processing (alias to 'outfile')"
-msgstr ""
+msgstr "Generování/zpracování výstupních souborů (alias pro 'outfile')"
 
 #: src/support/debug.cpp:52
 msgid "Math editor"
@@ -37805,14 +37805,12 @@ msgid "Selection copy/paste mechanism"
 msgstr "Mechanismus kopírovaní a vkládání z/do schránky"
 
 #: src/support/debug.cpp:74
-#, fuzzy
 msgid "Find and replace mechanism, terse version"
-msgstr "Mechanismus vyhledávání"
+msgstr "Mechanismus vyhledávání, stručná verze"
 
 #: src/support/debug.cpp:75
-#, fuzzy
 msgid "Find and replace mechanism, verbose version"
-msgstr "Mechanismus vyhledávání"
+msgstr "Mechanismus vyhledávání, podrobná verze"
 
 #: src/support/debug.cpp:76
 msgid "Developers' general debug messages"
@@ -37823,9 +37821,8 @@ msgid "All debugging messages"
 msgstr "Všechny ladící výpisy"
 
 #: src/support/debug.cpp:78
-#, fuzzy
 msgid "All debugging messages (alias to 'all')"
-msgstr "Všechny ladící výpisy"
+msgstr "Všechny ladící výpisy (alias pro 'all')"
 
 #: src/support/debug.cpp:193
 #, c-format
