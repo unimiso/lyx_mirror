@@ -1021,4 +1021,11 @@ string InsetQuotes::contextMenuName() const
 	return "context-quote";
 }
 
+
+pair<int, int> InsetQuotes::isWords() const
+{
+	//one character from the statistics perspective
+	return std::pair<int,int>(1, 0);
+}
+
 } // namespace lyx
