@@ -1829,7 +1829,7 @@ GuiDocument::GuiDocument(GuiView & lv)
 	docPS->addPanel(listingsModule, N_("Listings[[inset]]"));
 	docPS->addPanel(bulletsModule, N_("Bullets"));
 	docPS->addPanel(branchesModule, N_("Branches"));
-	docPS->addPanel(outputModule, N_("Formats[[output]]"));
+	docPS->addPanel(outputModule, N_("Output"));
 	docPS->addPanel(preambleModule, N_("LaTeX Preamble"));
 	docPS->setCurrentPanel("Document Class");
 }
