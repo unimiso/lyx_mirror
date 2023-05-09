@@ -4008,16 +4008,16 @@ msgid ""
 "given interval (as #filename.lyx# in the given directory). As opposed to the "
 "backup above, this snapshot will be removed when changes are being saved. If "
 "the application crashes with unsaved changes and the restoration from the "
-"emergency file fails, this snapshot can be at rescue."
-msgstr ""
+"emergency file (named filename.lyx.emergency) fails, this snapshot can be at rescue."
+msgstr "Při zaškrtnutí bude LyX ukládat dočasnou kopii rozpracovávaného dokumentu v daném intervalu (jakožto #soubor.lyx# v daném adresáři). Na rozdíl od možnosti zálohy výše, tato kopie je smazána při uložení souboru. V případě pádu aplikace při práci na neuloženém souboru a neúspěchu obnovy z nouzové kopie (soubor.lyx.emergency), můžete použít tuto dočasnou kopii."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:106
 msgid "Make a&uto-save snapshots every[[ N minutes]]"
-msgstr ""
+msgstr "Zá&lohovat dokumenty každých"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:123
 msgid "[[Make auto-save snapshots every N ]]&minutes"
-msgstr ""
+msgstr "&minut"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:148
 msgid ""
@@ -14371,7 +14371,7 @@ msgstr "Zde vložte volby podříkladu"
 
 #: lib/layouts/linguistics.module:144
 msgid "Interlinear Gloss (2 Lines)"
-msgstr ""
+msgstr "Meziřádková glosa (2 řádky)"
 
 #: lib/layouts/linguistics.module:146
 msgid "Gloss"
@@ -14387,16 +14387,15 @@ msgstr "Volby glosy|g"
 
 #: lib/layouts/linguistics.module:164
 msgid "Add digloss options here"
-msgstr ""
+msgstr "Zde přidat možnosti pro di-glosu"
 
 #: lib/layouts/linguistics.module:168 lib/layouts/linguistics.module:169
-#, fuzzy
 msgid "Interlinear Gloss"
-msgstr "Interlingua"
+msgstr "Meziřádková glosa"
 
 #: lib/layouts/linguistics.module:170
 msgid "Add the inter-linear gloss here"
-msgstr ""
+msgstr "Zde přidat meziřádkovou glosu"
 
 #: lib/layouts/linguistics.module:178 lib/layouts/linguistics.module:234
 msgid "Translation"
@@ -14404,19 +14403,17 @@ msgstr "Překlad"
 
 #: lib/layouts/linguistics.module:179 lib/layouts/linguistics.module:235
 msgid "Gloss Translation"
-msgstr "Překlad glos"
+msgstr "Překlad glosy"
 
 #: lib/layouts/linguistics.module:180
-#, fuzzy
 msgid "Add a free translation for the gloss"
-msgstr ""
+msgstr "Přidat volný překlad glosy"
 
 #: lib/layouts/linguistics.module:190
 msgid "Interlinear Gloss (3 Lines)"
-msgstr ""
+msgstr "Meziřádková glosa (3 řádky)"
 
 #: lib/layouts/linguistics.module:192
-#, fuzzy
 msgid "Tri-Gloss"
 msgstr "Tri-Glosa"
 
@@ -14426,23 +14423,23 @@ msgstr "Zde vložte volby pro tri-glosu"
 
 #: lib/layouts/linguistics.module:214
 msgid "Interlinear Gloss (1)"
-msgstr ""
+msgstr "Meziřádková glosa (1)"
 
 #: lib/layouts/linguistics.module:215
 msgid "Interlinear Gloss (Line 1)|1"
-msgstr ""
+msgstr "Meziřádková glosa (řádek 1)|1"
 
 #: lib/layouts/linguistics.module:216 lib/layouts/linguistics.module:226
 msgid "Add the first inter-linear gloss line here"
-msgstr ""
+msgstr "Zde přidat první řádek meziřádkové glosy"
 
 #: lib/layouts/linguistics.module:224
 msgid "Interlinear Gloss (2)"
-msgstr ""
+msgstr "Meziřádková glosa (2)"
 
 #: lib/layouts/linguistics.module:225
 msgid "Interlinear Gloss (Line 2)|2"
-msgstr ""
+msgstr "Meziřádková glosa (řádek 2)|2"
 
 #: lib/layouts/linguistics.module:236
 msgid "Add a translation for the glosse"
@@ -14466,173 +14463,161 @@ msgstr "Strom"
 
 #: lib/layouts/linguistics.module:289 lib/layouts/linguistics.module:291
 msgid "DRS"
-msgstr ""
+msgstr "RSD"
 
 #: lib/layouts/linguistics.module:292
 msgid "Discourse Representation Structure|D"
-msgstr ""
+msgstr "Reprezentace struktury diskurzu|d"
 
 #: lib/layouts/linguistics.module:304 lib/layouts/linguistics.module:451
-#, fuzzy
 msgid "Referents"
-msgstr "Reference"
+msgstr "Referenti"
 
 #: lib/layouts/linguistics.module:305 lib/layouts/linguistics.module:452
-#, fuzzy
 msgid "DRS Referents"
-msgstr "Reference"
+msgstr "RSD referenti"
 
 #: lib/layouts/linguistics.module:306 lib/layouts/linguistics.module:453
 msgid "Add the DRS referents (universe) here"
-msgstr ""
+msgstr "Zde přidat RSD referenty"
 
 #: lib/layouts/linguistics.module:313 lib/layouts/linguistics.module:315
 msgid "DRS*"
-msgstr ""
+msgstr "RSD*"
 
 #: lib/layouts/linguistics.module:316
 msgid "Discourse Representation Structure (unspaced)|u"
-msgstr ""
+msgstr "Reprezentace struktury diskurzu (bez mezer)|m"
 
 #: lib/layouts/linguistics.module:321
 msgid "IfThen-DRS"
-msgstr ""
+msgstr "KdyžPotom-RSD"
 
 #: lib/layouts/linguistics.module:323 lib/layouts/linguistics.module:324
 msgid "If-Then DRS"
-msgstr ""
+msgstr "KdyžPotom RSD"
 
 #: lib/layouts/linguistics.module:328 lib/layouts/linguistics.module:363
 #: lib/layouts/linguistics.module:407
-#, fuzzy
 msgid "Then-Referents"
-msgstr "Reference"
+msgstr "Potom-Referenti"
 
 #: lib/layouts/linguistics.module:329 lib/layouts/linguistics.module:338
 #: lib/layouts/linguistics.module:364 lib/layouts/linguistics.module:373
 #: lib/layouts/linguistics.module:408 lib/layouts/linguistics.module:417
 msgid "DRS Then-Referents"
-msgstr ""
+msgstr "DRS Potom-Referenti"
 
 #: lib/layouts/linguistics.module:330 lib/layouts/linguistics.module:365
 #: lib/layouts/linguistics.module:409
 msgid "Add the DRS then-referents (universe) here"
-msgstr ""
+msgstr "Zde přidat RSD Potom-referenty"
 
 #: lib/layouts/linguistics.module:337 lib/layouts/linguistics.module:372
 #: lib/layouts/linguistics.module:416
-#, fuzzy
 msgid "Then-Conditions"
-msgstr "Podmínka"
+msgstr "Potom-Podmínky"
 
 #: lib/layouts/linguistics.module:339 lib/layouts/linguistics.module:374
 #: lib/layouts/linguistics.module:418
 msgid "Add the DRS then-conditions here"
-msgstr ""
+msgstr "Zde přidat RSD Potom-podmínky"
 
 #: lib/layouts/linguistics.module:347
 msgid "Cond-DRS"
-msgstr ""
+msgstr "Podm-RSD"
 
 #: lib/layouts/linguistics.module:349
 msgid "Cond. DRS"
-msgstr ""
+msgstr "Podm. RSD"
 
 #: lib/layouts/linguistics.module:350
-#, fuzzy
 msgid "Conditional DRS"
-msgstr "Podmínka"
+msgstr "Podmínečná RSD"
 
 #: lib/layouts/linguistics.module:354
-#, fuzzy
 msgid "Cond."
-msgstr "Podmínka."
+msgstr "Podm."
 
 #: lib/layouts/linguistics.module:355
-#, fuzzy
 msgid "DRS Condition"
-msgstr "Podmínka"
+msgstr "RSD Podmínka"
 
 #: lib/layouts/linguistics.module:356
-#, fuzzy
 msgid "Add the DRS condition here"
-msgstr "Zde vložte volby"
+msgstr "Zde přidat RSD podmínku"
 
 #: lib/layouts/linguistics.module:382
 msgid "QDRS"
-msgstr ""
+msgstr "KRSD"
 
 #: lib/layouts/linguistics.module:384
 msgid "Dupl. Cond. DRS"
-msgstr ""
+msgstr "Dupl. Podm. RSD"
 
 #: lib/layouts/linguistics.module:385
-#, fuzzy
 msgid "Duplex Condition DRS"
-msgstr "Condition #:"
+msgstr "Duplexní podmínka RSD"
 
 #: lib/layouts/linguistics.module:389
 msgid "Quant."
-msgstr ""
+msgstr "Kvant."
 
 #: lib/layouts/linguistics.module:390
 msgid "DRS Quantifier"
-msgstr ""
+msgstr "RSD kvantifikátor"
 
 #: lib/layouts/linguistics.module:391
 msgid "Add the DRS duplex quantifier here"
-msgstr ""
+msgstr "Zde přidat RSD duplexní kvantifikátor"
 
 #: lib/layouts/linguistics.module:398
 msgid "Quant. Var."
-msgstr ""
+msgstr "Kvant. Prom."
 
 #: lib/layouts/linguistics.module:399
 msgid "DRS Quantifier Variable"
-msgstr ""
+msgstr "RSD proměnná kvantifikátoru"
 
 #: lib/layouts/linguistics.module:400
 msgid "Add the DRS duplex quantifier variables here"
-msgstr ""
+msgstr "Zde přidat RSD duplexní proměnnou kvantifikátoru"
 
 #: lib/layouts/linguistics.module:427
 msgid "NegDRS"
-msgstr ""
+msgstr "NegRDS"
 
 #: lib/layouts/linguistics.module:429
 msgid "Neg. DRS"
-msgstr ""
+msgstr "Neg. RDS"
 
 #: lib/layouts/linguistics.module:430
 msgid "Negated DRS"
-msgstr ""
+msgstr "Negovaná RDS"
 
 #: lib/layouts/linguistics.module:435
 msgid "SDRS"
-msgstr ""
+msgstr "VRDS"
 
 #: lib/layouts/linguistics.module:437
 msgid "Sent. DRS"
-msgstr ""
+msgstr "Vět. RDS"
 
 #: lib/layouts/linguistics.module:438
 msgid "DRS with Sentence above"
-msgstr ""
+msgstr "RDS s Větou výše"
 
 #: lib/layouts/linguistics.module:442
-#, fuzzy
 msgid "Sentence"
-msgstr "Konec věty|K"
+msgstr "Věta"
 
 #: lib/layouts/linguistics.module:443
-#, fuzzy
 msgid "DRS Sentence"
-msgstr "Konec věty|K"
+msgstr "RDS věta"
 
 #: lib/layouts/linguistics.module:444
-#, fuzzy
 msgid "Add the sentence here"
-msgstr "Přidat vybrané větve do seznamu."
+msgstr "Zde přidat větu."
 
 #: lib/layouts/linguistics.module:465
 msgid "Expression"
