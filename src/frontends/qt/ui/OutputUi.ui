@@ -6,161 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>510</width>
-    <height>504</height>
+    <width>546</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="4" column="0">
-    <widget class="QGroupBox" name="docbookGB">
-     <property name="title">
-      <string>DocBook Output Options</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-     <layout class="QGridLayout" name="outDBGridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="tableoutLA">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>&amp;Table output:</string>
-        </property>
-        <property name="buddy">
-         <cstring>tableoutCB</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QComboBox" name="tableoutCB">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="toolTip">
-         <string>Format to use for math output.</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>HTML</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>CALS</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="mathmlprefixLA">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>&amp;MathML namespace prefix:</string>
-        </property>
-        <property name="buddy">
-         <cstring>mathmlprefixCB</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QComboBox" name="mathmlprefixCB">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="toolTip">
-         <string>Namespace prefix to use for MathML formulae. For instance, with the &lt;code&gt;m&lt;/code&gt; prefix, the MathML tags will be output like &lt;code&gt;m:math&lt;/code&gt;.</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>No prefix (namespace defined inline for each tag)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>m (default)</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>mml</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <spacer name="horizontalSpacer_6">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="5" column="0">
-    <widget class="QGroupBox" name="savingGB">
-     <property name="title">
-      <string>LyX Format</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-     <property name="checkable">
-      <bool>false</bool>
-     </property>
-     <layout class="QGridLayout" name="gridLayout7">
-      <item row="0" column="0">
-       <widget class="QCheckBox" name="saveTransientPropertiesCB">
-        <property name="toolTip">
-         <string>Save all parameters in the LyX file, including ones that are frequently switched or that are specific to the user (such as the output of the tracked changes, or the document directory path). Disabling this option plays nicer in collaborative settings and with version control systems.</string>
-        </property>
-        <property name="text">
-         <string>Save &amp;transient properties</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QGroupBox" name="outputFormatGB">
      <property name="title">
       <string>Output Format</string>
@@ -239,139 +93,411 @@
      </layout>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QGroupBox" name="xhtmlGB">
+   <item row="5" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>&amp;LaTeX</string>
+      </attribute>
+      <widget class="QGroupBox" name="latexOutputGB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>528</width>
+         <height>87</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>LaTeX Output Options</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="outputsyncCB">
+            <property name="toolTip">
+             <string>Enable forward/reverse search between editor and output (e.g., SyncTeX)</string>
+            </property>
+            <property name="text">
+             <string>S&amp;ynchronize with output</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="synccustomLA">
+              <property name="text">
+               <string>C&amp;ustom macro:</string>
+              </property>
+              <property name="buddy">
+               <cstring>synccustomCB</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="synccustomCB">
+              <property name="toolTip">
+               <string>Custom LaTeX preamble macro</string>
+              </property>
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="postponeFragileCB">
+          <property name="toolTip">
+           <string>If this is checked, fragile items such as labels and index entries are moved out of moving arguments such as sections and captions. This prevents LaTeX errors that can happen in such cases. It is recommended to keep this on.</string>
+          </property>
+          <property name="text">
+           <string>Put fra&amp;gile content out of moving arguments</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>&amp;XHTML</string>
+      </attribute>
+      <widget class="QGroupBox" name="xhtmlGB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>528</width>
+         <height>122</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>XHTML Output Options</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QGridLayout" name="outGridLayout">
+        <item row="1" column="1">
+         <widget class="QComboBox" name="mathoutCB">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Format to use for math output.</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>MathML</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>HTML</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Images</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>LaTeX</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="cssCB">
+          <property name="text">
+           <string>Write CSS to file</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="mathoutLA">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>&amp;Math output:</string>
+          </property>
+          <property name="buddy">
+           <cstring>tableoutCB</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="mathimgLA">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Math &amp;image scaling:</string>
+          </property>
+          <property name="buddy">
+           <cstring>mathimgSB</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="strictCB">
+          <property name="toolTip">
+           <string>Whether to comply strictly with XHTML 1.1.</string>
+          </property>
+          <property name="text">
+           <string>&amp;Strict XHTML 1.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="mathimgSB">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Scaling factor for images used for math output.</string>
+          </property>
+          <property name="minimum">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>&amp;Docbook</string>
+      </attribute>
+      <widget class="QGroupBox" name="docbookGB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>528</width>
+         <height>94</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>DocBook Output Options</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QGridLayout" name="outDBGridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="tableoutLA">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>&amp;Table output:</string>
+          </property>
+          <property name="buddy">
+           <cstring>tableoutCB</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="tableoutCB">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Format to use for math output.</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>HTML</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CALS</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="mathmlprefixLA">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>&amp;MathML namespace prefix:</string>
+          </property>
+          <property name="buddy">
+           <cstring>mathmlprefixCB</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="mathmlprefixCB">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Namespace prefix to use for MathML formulae. For instance, with the &lt;code&gt;m&lt;/code&gt; prefix, the MathML tags will be output like &lt;code&gt;m:math&lt;/code&gt;.</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>No prefix (namespace defined inline for each tag)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>m (default)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mml</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="savingGB">
      <property name="title">
-      <string>XHTML Output Options</string>
+      <string>LyX Format</string>
      </property>
      <property name="flat">
       <bool>true</bool>
      </property>
-     <layout class="QGridLayout" name="outGridLayout">
-      <item row="1" column="1">
-       <widget class="QComboBox" name="mathoutCB">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="toolTip">
-         <string>Format to use for math output.</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>MathML</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>HTML</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Images</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>LaTeX</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QCheckBox" name="cssCB">
-        <property name="text">
-         <string>Write CSS to file</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="mathoutLA">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>&amp;Math output:</string>
-        </property>
-        <property name="buddy">
-         <cstring>tableoutCB</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="mathimgLA">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Math &amp;image scaling:</string>
-        </property>
-        <property name="buddy">
-         <cstring>mathimgSB</cstring>
-        </property>
-       </widget>
-      </item>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout7">
       <item row="0" column="0">
-       <widget class="QCheckBox" name="strictCB">
+       <widget class="QCheckBox" name="saveTransientPropertiesCB">
         <property name="toolTip">
-         <string>Whether to comply strictly with XHTML 1.1.</string>
+         <string>Save all parameters in the LyX file, including ones that are frequently switched or that are specific to the user (such as the output of the tracked changes, or the document directory path). Disabling this option plays nicer in collaborative settings and with version control systems.</string>
         </property>
         <property name="text">
-         <string>&amp;Strict XHTML 1.1</string>
+         <string>Save &amp;transient properties</string>
         </property>
        </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QDoubleSpinBox" name="mathimgSB">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="toolTip">
-         <string>Scaling factor for images used for math output.</string>
-        </property>
-        <property name="minimum">
-         <double>0.100000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>10.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.100000000000000</double>
-        </property>
-        <property name="value">
-         <double>1.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <spacer name="horizontalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QCheckBox" name="shellescapeCB">
      <property name="toolTip">
       <string>Runs the LaTeX backend with the -shell-escape option (Warning: use only when really necessary)</string>
@@ -380,105 +506,6 @@
       <string>&amp;Allow running external programs</string>
      </property>
     </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QGroupBox" name="latexOutputGB">
-     <property name="title">
-      <string>LaTeX Output Options</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QCheckBox" name="outputsyncCB">
-          <property name="toolTip">
-           <string>Enable forward/reverse search between editor and output (e.g., SyncTeX)</string>
-          </property>
-          <property name="text">
-           <string>S&amp;ynchronize with output</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="synccustomLA">
-            <property name="text">
-             <string>C&amp;ustom macro:</string>
-            </property>
-            <property name="buddy">
-             <cstring>synccustomCB</cstring>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="synccustomCB">
-            <property name="toolTip">
-             <string>Custom LaTeX preamble macro</string>
-            </property>
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item row="1" column="0">
-       <widget class="QCheckBox" name="postponeFragileCB">
-        <property name="toolTip">
-         <string>If this is checked, fragile items such as labels and index entries are moved out of moving arguments such as sections and captions. This prevents LaTeX errors that can happen in such cases. It is recommended to keep this on.</string>
-        </property>
-        <property name="text">
-         <string>Put fra&amp;gile content out of moving arguments</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
