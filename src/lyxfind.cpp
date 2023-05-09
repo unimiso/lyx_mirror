@@ -1123,10 +1123,10 @@ private:
 	// par_as_string after removal of lead_as_string
 	string par_as_string_nolead;
 	// unmatched open braces in the search string/regexp
-	int open_braces;
+	int open_braces = 0;
 	// number of (.*?) subexpressions added at end of search regexp for closing
 	// environments, math mode, styles, etc...
-	int close_wildcards;
+	int close_wildcards = 0;
 public:
 	// Are we searching with regular expressions ?
 	bool use_regexp = false;
@@ -3665,8 +3665,6 @@ MatchStringAdv::MatchStringAdv(lyx::Buffer & buf, FindAndReplaceOptions & opt)
 	}
 	// When using regexp, braces are hacked already by escape_for_regex()
 	par_as_string = convertLF2Space(ds, opt.ignoreformat);
-	open_braces = 0;
-	close_wildcards = 0;
 
 	size_t lead_size = 0;
 	// correct the language settings
