@@ -11,7 +11,7 @@
 # This script will update a .layout file to current format
 
 # The latest layout format is also defined in src/TextClass.cpp
-currentFormat = 99
+currentFormat = 100
 
 
 # Incremented to format 4, 6 April 2007, lasgouttes
@@ -334,6 +334,9 @@ currentFormat = 99
 # Incremented to format 99, 22 December 2022 by tcuvelier
 # Add DocBookGenerateTitle for Layout
 
+# Incremented to format 100, 9 May 2023 by forenr
+# Add inset label color
+
 # Do not forget to document format change in Customization
 # Manual (section "Declaring a new text class").
 
@@ -580,7 +583,7 @@ def convert(lines, end_format):
                 i += 1
             continue
 
-        if 87 <= format <= 98:
+        if 87 <= format <= 100:
             # nothing to do.
             i += 1
             continue

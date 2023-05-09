@@ -55,7 +55,7 @@ enum class InsetLaTeXType : int {
 class InsetLayout {
 public:
 	///
-	InsetLayout() { labelfont_.setColor(Color_error); }
+	InsetLayout() { labelfont_.setColor(Color_insetlabel); }
 	///
 	bool read(Lexer & lexrc, TextClass const & tclass,
 			bool validating = false);

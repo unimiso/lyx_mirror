@@ -318,6 +318,7 @@ ColorSet::ColorSet()
 	{ Color_collapsible, N_("collapsible inset text"), "collapsible", DarkRed, DarkRed, "collapsible" },
 	{ Color_collapsibleframe, N_("collapsible inset frame"), "collapsibleframe", IndianRed, IndianRed, "collapsibleframe" },
 	{ Color_insetbg, N_("inset background"), "insetbg", grey80, grey80, "insetbg" },
+	{ Color_insetlabel, N_("inset label"), "insetlabel", black, black, "insetlabel" },
 	{ Color_insetframe, N_("inset frame"), "insetframe", IndianRed, IndianRed, "insetframe" },
 	{ Color_error, N_("LaTeX error"), "error", red, DarkRed, "error" },
 	{ Color_eolmarker, N_("end-of-line marker"), "eolmarker", Brown, Brown, "eolmarker" },

@@ -171,6 +171,8 @@ enum ColorCode {
 	Color_insetbg,
 	/// Inset marker frame color
 	Color_insetframe,
+	/// Inset marker label color
+	Color_insetlabel,
 
 	/// Error box text color
 	Color_error,
