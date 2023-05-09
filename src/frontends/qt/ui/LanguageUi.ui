@@ -106,7 +106,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
+     <item row="1" column="1">
       <widget class="QComboBox" name="unicodeEncodingCO">
        <property name="visible">
         <bool>true</bool>
@@ -116,7 +116,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
+     <item row="1" column="1">
       <widget class="QComboBox" name="autoEncodingCO">
        <property name="enabled">
         <bool>false</bool>
@@ -126,7 +126,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
+     <item row="1" column="1">
       <widget class="QComboBox" name="customEncodingCO">
        <property name="visible">
         <bool>false</bool>
