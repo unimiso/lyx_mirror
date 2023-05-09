@@ -6,7 +6,7 @@
 # Few changes by Baruch Even <baruch.even@writeme.com>
 # Edited by Udi Fogiel <udifoglle@gmail.com>
 
-Format 99
+Format 100
 Input article
 
 Counter theorem

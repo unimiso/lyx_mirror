@@ -4,7 +4,7 @@
 # DocBook textclass definition file.
 # Author : Jose' Matos <jamatos@lyx.org>
 
-Format 99
+Format 100
 Input db_stdclass.inc
 
 SecNumDepth             2

@@ -2,7 +2,7 @@
 #  \DeclareLaTeXClass[ctexrep,savesym.sty,xeCJK.sty]{Chinese Report (CTeX)}
 #  \DeclareCategory{Reports}
 
-Format 99
+Format 100
 
 # Read the definitions from report.layout
 Input report.layout

@@ -7,7 +7,7 @@
 #
 # Input general definitions
 
-Format 99
+Format 100
 
 Input stdclass.inc
 

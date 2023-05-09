@@ -1,6 +1,6 @@
 # Reference prefixes for theorem environments
 
-Format 99
+Format 100
 
 ModifyStyle Theorem
 	RefPrefix thm

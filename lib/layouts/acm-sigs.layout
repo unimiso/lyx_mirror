@@ -9,6 +9,6 @@
 #
 # Author: Gioele Barabucci
 
-Format 99
+Format 100
 Input acm-sigs.inc
 

@@ -6,7 +6,7 @@
 # IEEtran Magnetics textclass definition file.
 
 
-Format 99
+Format 100
 
 Input IEEEtran.layout
 

@@ -9,7 +9,7 @@
 # IEEtran textclass definition file.
 
 
-Format 99
+Format 100
 
 Sides		1
 SecNumDepth	3

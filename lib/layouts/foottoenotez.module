@@ -10,7 +10,7 @@
 #DescriptionEnd
 #Excludes: endnotes | foottoend
 
-Format 99
+Format 100
 
 
 InsetLayout Foot

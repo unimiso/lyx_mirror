@@ -4,5 +4,5 @@
 # Heavily modifed and enhanced by several developers.
 
 
-Format 99
+Format 100
 Input stdstarsections.inc
