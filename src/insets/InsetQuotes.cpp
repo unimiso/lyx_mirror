@@ -1031,11 +1031,11 @@ pair<int, int> InsetQuotes::isWords() const
 		QuoteStyle style = (style_ == QuoteStyle::Dynamic) ? global_style_ : style_;
 
 		// in French, thin spaces are added inside double guillemets
-		if (prefixIs(context_lang_, "fr")
-		    && level_ == QuoteLevel::Primary
+		if (level_ == QuoteLevel::Primary
 		    && (style == QuoteStyle::Swiss
 			|| style == QuoteStyle::French
-			|| style == QuoteStyle::FrenchIN)) {
+			|| style == QuoteStyle::FrenchIN)
+		    && prefixIs(context_lang_, "fr")) {
 			// space added by default for all formats
 			length++;
 		}
