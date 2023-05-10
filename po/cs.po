@@ -4801,7 +4801,7 @@ msgid ""
 "If no path is given, backups will be stored alongside the original document. "
 "This requires 'Backup original documents when saving' in Look & Feel > "
 "Document Handling to be checked."
-msgstr ""
+msgstr "Pokud zde zadáte cestu k adresáři, všechny zálohy budou uloženy v tomto adresáře. Pokud nezadáte nic, záloha bude uložena ve stejném adresáři jako editovaný dokument. Obé vyžaduje zapnuté zálohování v panelu 'Obsluha souborů.'"
 
 #: src/frontends/qt/ui/PrefPathsUi.ui:156
 msgid "&Backup directory:"
@@ -5553,6 +5553,8 @@ msgid ""
 "text width</p><p>* Variable: Adjust to match table width</p><p>* Custom: "
 "Fixed custom width</p></body></html>"
 msgstr ""
+"<html><head/><body><p>Typ šířky sloupce:</p><p>* Délka textu: roztáhnout podle šířky textu</p><p>* Proměnná: Přizpůsobit šírce tabulky</p><p>* Vlastní: "
+"Fixní zadaná šířka</p></body></html>"
 
 #: src/frontends/qt/ui/TabularUi.ui:317
 msgid "Text length"
@@ -6004,7 +6006,7 @@ msgstr "Držet"
 msgid ""
 "Filter items that are not output (in notes, inactive branches, deleted in "
 "change tracking, etc.)"
-msgstr ""
+msgstr "Odfiltrovat položky jež se neexportují (poznámky, neaktivní větve, smazáno revizí, atd.)"
 
 #: src/frontends/qt/ui/TocUi.ui:317 src/frontends/qt/TocWidget.cpp:88
 msgid "All items"
@@ -13971,6 +13973,8 @@ msgid ""
 "Contents of the sidenote. Only makes sense when "
 "\\jlreqsetup{sidenote_type=symbol} is specified in the preamble."
 msgstr ""
+"Contents of the sidenote. Only makes sense when "
+"\\jlreqsetup{sidenote_type=symbol} is specified in the preamble."
 
 #: lib/layouts/jlreq-common.inc:209 lib/layouts/jlreq-common.inc:212
 msgid "Warichu"
@@ -13998,11 +14002,11 @@ msgstr "Jidori Length|L"
 
 #: lib/layouts/jlreq-common.inc:292
 msgid "Length of Jidori. Contents is fit to this length."
-msgstr ""
+msgstr "Length of Jidori. Contents is fit to this length."
 
 #: lib/layouts/jlreq-common.inc:298 lib/layouts/jlreq-common.inc:301
 msgid "Akigumi"
-msgstr ""
+msgstr "Akigumi"
 
 #: lib/layouts/jlreq-common.inc:302
 msgid "Akigumi (LuaLaTeX)"
@@ -15977,30 +15981,25 @@ msgstr ""
 "Enter the text of the left column here (right column in main paragraph)"
 
 #: lib/layouts/powerdot.layout:611 lib/layouts/stdcounters.inc:50
-#, fuzzy
 msgid "Numbered List (Level 1)"
-msgstr "Očíslovaný seznam"
+msgstr "Očíslovaný seznam (úroveň 1)"
 
 #: lib/layouts/powerdot.layout:615 lib/layouts/scrclass.inc:49
 #: lib/layouts/stdcounters.inc:55
-#, fuzzy
 msgid "Numbered List (Level 2)"
-msgstr "Očíslovaný seznam"
+msgstr "Očíslovaný seznam (úroveň 2)"
 
 #: lib/layouts/powerdot.layout:620 lib/layouts/stdcounters.inc:61
-#, fuzzy
 msgid "Numbered List (Level 3)"
-msgstr "Očíslovaný seznam"
+msgstr "Očíslovaný seznam (úroveň 3)"
 
 #: lib/layouts/powerdot.layout:625 lib/layouts/stdcounters.inc:67
-#, fuzzy
 msgid "Numbered List (Level 4)"
-msgstr "Očíslovaný seznam"
+msgstr "Očíslovaný seznam (úroveň 4)"
 
 #: lib/layouts/powerdot.layout:630 lib/layouts/stdcounters.inc:73
-#, fuzzy
 msgid "Bibliography Item"
-msgstr "Styl bibliografie"
+msgstr "Položka bibliografie"
 
 #: lib/layouts/powerdot.layout:649
 msgid "Onslide"
@@ -16379,7 +16378,7 @@ msgstr "Extra titulek"
 
 #: lib/layouts/scrclass.inc:302
 msgid "Frontispiece"
-msgstr ""
+msgstr "Frontispiece"
 
 #: lib/layouts/scrclass.inc:323
 msgid "Above"
@@ -18526,7 +18525,7 @@ msgstr "Němčina (Rakousko)"
 
 #: lib/languages:340
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Ázerbájdžánština"
 
 #: lib/languages:356
 msgid "Indonesian"
@@ -18590,7 +18589,7 @@ msgstr "Čínština (tradiční)"
 
 #: lib/languages:545
 msgid "Church Slavonic"
-msgstr ""
+msgstr "Církevní slovanština"
 
 #: lib/languages:558
 msgid "Coptic"
@@ -18784,7 +18783,7 @@ msgstr "Okcitánština"
 
 #: lib/languages:1242
 msgid "Russian (Petrine orthography)"
-msgstr ""
+msgstr "Ruština (Petrská ortografie)"
 
 #: lib/languages:1252
 msgid "Piedmontese"
@@ -19090,11 +19089,11 @@ msgstr "Biolinum"
 
 #: lib/latexfonts:694
 msgid "Cantarell"
-msgstr ""
+msgstr "Cantarell"
 
 #: lib/latexfonts:705
 msgid "Chivo (Thin)"
-msgstr ""
+msgstr "Chivo (Thin)"
 
 #: lib/latexfonts:716
 msgid "Chivo (Light)"
@@ -19526,7 +19525,7 @@ msgstr "Korejština (EUC-KR)"
 
 #: lib/encodings:215
 msgid "Extended [CJK] (Chinese/Japanese/Korean)"
-msgstr "Rozšířené [CJK] (Čínština/Japonština/Korejština"
+msgstr "Rozšířené [CJK] (Čínština/Japonština/Korejština)"
 
 #: lib/encodings:219
 msgid "Chinese (traditional) (EUC-TW)"
@@ -21906,7 +21905,7 @@ msgstr "Vlastnosti textu"
 
 #: lib/ui/stdtoolbars.inc:151
 msgid "Apply recent text properties"
-msgstr ""
+msgstr "Použít poslední nastavení vlastností textu"
 
 #: lib/ui/stdtoolbars.inc:152
 msgid "Paragraph settings"
@@ -26696,7 +26695,7 @@ msgstr "LaTeX (dviluatex)"
 
 #: lib/configure.py:772
 msgid "ePub"
-msgstr ""
+msgstr "ePub"
 
 #: lib/configure.py:773
 msgid "LaTeX (pLaTeX)"
@@ -27625,7 +27624,7 @@ msgid ""
 "Please verify that the `iconv' support software is properly installed and "
 "supports the selected encoding (%1$s), or change the encoding in "
 "Document>Settings>Language."
-msgstr ""
+msgstr "Prosím zkontrolujte že je správně nainstalován `iconv' a podporuje zvolené kódování (%1$s). Případně zkuste změnit kódování v Dokument>Nastavení>Jazyk."
 
 #: src/Buffer.cpp:1799
 #, c-format
@@ -30836,7 +30835,7 @@ msgstr "Značky a odkazy"
 
 #: src/TocBackend.cpp:297
 msgid "Broken References and Citations"
-msgstr ""
+msgstr "Nefunkční citace a odkazy"
 
 #: src/TocBackend.cpp:299 src/frontends/qt/GuiDocument.cpp:1805
 msgid "Child Documents"
@@ -31181,7 +31180,7 @@ msgstr "Dings 4"
 
 #: src/frontends/qt/ButtonController.cpp:94
 msgid "This tab contains invalid input. Please fix!"
-msgstr ""
+msgstr "Tento panel obsahuje špatný vstup. Prosím opravte!"
 
 #: src/frontends/qt/ButtonController.cpp:266
 #: src/frontends/qt/GuiApplication.cpp:2010 src/frontends/qt/GuiCompare.cpp:196
@@ -35906,34 +35905,29 @@ msgid "Restore saved counter value"
 msgstr "Obnovit uloženou hodnotu čítače"
 
 #: src/insets/InsetCounter.cpp:142
-#, fuzzy
 msgid "Roman Uppercase"
-msgstr "Velká písmena|l"
+msgstr "Římská velká"
 
 #: src/insets/InsetCounter.cpp:143
-#, fuzzy
 msgid "Roman Lowercase"
-msgstr "Lowercase"
+msgstr "Římská malá"
 
 #: src/insets/InsetCounter.cpp:144
-#, fuzzy
 msgid "Uppercase Letter"
-msgstr "Hebrew Letter"
+msgstr "Velké znaky"
 
 #: src/insets/InsetCounter.cpp:145
-#, fuzzy
 msgid "Lowercase Letter"
-msgstr "Malá písmena|M"
+msgstr "Malé znaky"
 
 #: src/insets/InsetCounter.cpp:146
-#, fuzzy
 msgid "Arabic Numeral"
-msgstr "Základní numerický"
+msgstr "Arabské číslice"
 
 #: src/insets/InsetCounter.cpp:224
 #, c-format
 msgid "Counter: Set %1$s"
-msgstr "Čítač: nastavení %1$s"
+msgstr "Čítač: Nastavit %1$s"
 
 #: src/insets/InsetCounter.cpp:225
 #, c-format
@@ -35953,7 +35947,7 @@ msgstr "Přičíst %1$s k hodnotě čítače %2$s"
 #: src/insets/InsetCounter.cpp:233
 #, c-format
 msgid "Counter: Reset %1$s"
-msgstr "Čítač: vynulování %1$s"
+msgstr "Čítač: Vynulovat %1$s"
 
 #: src/insets/InsetCounter.cpp:234
 #, c-format
@@ -35963,7 +35957,7 @@ msgstr "Vynulování hodnoty čítače %1$s"
 #: src/insets/InsetCounter.cpp:237
 #, c-format
 msgid "Counter: Save %1$s"
-msgstr "Čítač: uložení %1$s"
+msgstr "Čítač: Uložit %1$s"
 
 #: src/insets/InsetCounter.cpp:238
 #, c-format
@@ -35973,7 +35967,7 @@ msgstr "Uložení hodnoty čítače %1$s"
 #: src/insets/InsetCounter.cpp:241
 #, c-format
 msgid "Counter: Restore %1$s"
-msgstr "Čítač: obnovení %1$s"
+msgstr "Čítač: Obnovit %1$s"
 
 #: src/insets/InsetCounter.cpp:242
 #, c-format
