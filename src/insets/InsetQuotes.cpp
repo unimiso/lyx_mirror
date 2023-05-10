@@ -1024,8 +1024,25 @@ string InsetQuotes::contextMenuName() const
 
 pair<int, int> InsetQuotes::isWords() const
 {
-	//one character from the statistics perspective
-	return std::pair<int,int>(1, 0);
+	int length = 1;
+	// In PassThru, we use straight quotes otherwise we need to check for French
+	if (!pass_thru_) {
+
+		QuoteStyle style = (style_ == QuoteStyle::Dynamic) ? global_style_ : style_;
+
+		// in French, thin spaces are added inside double guillemets
+		if (prefixIs(context_lang_, "fr")
+		    && level_ == QuoteLevel::Primary
+		    && (style == QuoteStyle::Swiss
+			|| style == QuoteStyle::French
+			|| style == QuoteStyle::FrenchIN)) {
+			// space added by default for all formats
+			length++;
+		}
+	}
+
+	//one or two characters from the statistics perspective
+	return std::pair<int,int>(length, 0);
 }
 
 } // namespace lyx
