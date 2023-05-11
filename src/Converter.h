@@ -52,15 +52,15 @@ public:
 	///
 	void readFlags();
 	///
-	std::string const & from() const { return from_; }
+	std::string const from() const { return from_; }
 	///
-	std::string const & to() const { return to_; }
+	std::string const to() const { return to_; }
 	///
-	std::string const & command() const { return command_; }
+	std::string const command() const { return command_; }
 	///
 	void setCommand(std::string const & command);
 	///
-	std::string const & flags() const { return flags_; }
+	std::string const flags() const { return flags_; }
 	///
 	void setFlags(std::string const & flags) { flags_ = flags; }
 	///
@@ -74,7 +74,7 @@ public:
 	///
 	bool latex() const { return latex_; }
 	///
-	std::string const & latex_flavor() const { return latex_flavor_; }
+	std::string const latex_flavor() const { return latex_flavor_; }
 	///
 	bool docbook() const { return docbook_; }
 	///
@@ -84,13 +84,13 @@ public:
 	///
 	bool nice() const { return nice_; }
 	///
-	std::string const & result_dir() const { return result_dir_; }
+	std::string const result_dir() const { return result_dir_; }
 	///
-	std::string const & result_file() const { return result_file_; }
+	std::string const result_file() const { return result_file_; }
 	///
-	std::string const & parselog() const { return parselog_; }
+	std::string const parselog() const { return parselog_; }
 	///
-	std::string const & hyperref_driver() const { return href_driver_; }
+	std::string const hyperref_driver() const { return href_driver_; }
 
 private:
 	///
