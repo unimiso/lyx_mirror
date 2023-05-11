@@ -340,7 +340,7 @@
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>&amp;Docbook</string>
+       <string>&amp;DocBook</string>
       </attribute>
       <widget class="QGroupBox" name="docbookGB">
        <property name="geometry">
