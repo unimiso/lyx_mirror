@@ -877,7 +877,7 @@ msgstr "Při zaškrtnutí budou změny zobrazeny ve výstupu PDF/DVI/PS"
 
 #: src/frontends/qt/ui/ChangeTrackingUi.ui:33
 msgid "&Show changes in output"
-msgstr "&Zobrazit změny ve výstupu"
+msgstr "&Zobrazit revize ve výstupu"
 
 #: src/frontends/qt/ui/ChangeTrackingUi.ui:40
 msgid "Use change bars in addition to change tracking markup"
@@ -21453,7 +21453,7 @@ msgstr "Zrušit export|x"
 
 #: lib/ui/stdmenus.inc:572
 msgid "Change Tracking|C"
-msgstr "Změnit revize|Z"
+msgstr "Revizní změny|z"
 
 #: lib/ui/stdmenus.inc:573
 msgid "Build Program|B"
@@ -30512,7 +30512,7 @@ msgstr "Neznámá vložka"
 
 #: src/Text.cpp:554 src/insets/InsetTabular.cpp:476
 msgid "Change tracking author index missing"
-msgstr "Index autora sledovaných změn chybí"
+msgstr "Index autora revizních změn chybí"
 
 #: src/Text.cpp:555 src/insets/InsetTabular.cpp:477
 #, c-format
@@ -30550,7 +30550,7 @@ msgstr "Znak je nekódovatelný v tomto Doslovném kontextu."
 
 #: src/Text.cpp:2100
 msgid "[Change Tracking] "
-msgstr "[Změna revize] "
+msgstr "[Revize] "
 
 #: src/Text.cpp:2108
 #, c-format
@@ -31640,7 +31640,7 @@ msgstr "&Jména autorů:"
 msgid ""
 "Insert the author name(s) for the author-year reference here. If you use an "
 "abbreviated list (with `et al.'), the full list can go below."
-msgstr ""
+msgstr "Zde vložit jméno autora/ů pro citaci autor-rok. Pokud použijete zkrácený seznam (s 'et al.'), plný seznam může být zadán níže."
 
 #: src/frontends/qt/GuiBibitem.cpp:66
 msgid ""
@@ -32816,12 +32816,12 @@ msgstr "[Žádné nastavení předdefinováno]"
 #: src/frontends/qt/GuiDocument.cpp:4408 src/frontends/qt/GuiDocument.cpp:4419
 #: src/frontends/qt/GuiDocument.cpp:4430
 msgid "Uninstalled used fonts"
-msgstr ""
+msgstr "Použité nenainstalované fonty"
 
 #: src/frontends/qt/GuiDocument.cpp:4409 src/frontends/qt/GuiDocument.cpp:4420
 #: src/frontends/qt/GuiDocument.cpp:4431
 msgid "This font is not installed and won't be used in output"
-msgstr ""
+msgstr "Tento font není nainstalován a nebude použit na výstupu"
 
 #: src/frontends/qt/GuiDocument.cpp:4601
 msgid "C&ustomize Hyperref Options"
@@ -33872,7 +33872,7 @@ msgid ""
 "working directory. The backup file has the same name but the suffix '.lyx~'. "
 "Note that these files are hidden by default by some file managers. A "
 "dedicated backup directory can be set in the 'Paths' section."
-msgstr ""
+msgstr "Při zaškrtnutí bude LyX ukládat zálohu dokumentu v současném pracovním adresáři jakožto 'soubor.lyx~'. Upozorňujeme, že někteří správci souborů implicitně skrývají tyto soubory. Dedikovaný adresář pro tyto zálohy lze nastavit v panelu 'Cesty'."
 
 #: src/frontends/qt/GuiPrefs.cpp:2779
 #, c-format
@@ -33881,7 +33881,7 @@ msgid ""
 "directory (%1$s). The backup file has the full original path and name as "
 "file name and the suffix '.lyx~' (e.g., !mydir!filename.lyx~). Note that "
 "these files are hidden by default by some file managers."
-msgstr ""
+msgstr "Při zaškrtnutí bude LyX ukládat zálohu dokumentu v dedikovaném záložním adresáři (%1$s). Jméno záložního souboru bude obsahovat celou původní cestu a jméno s příponou '.lyx~' (např. !adresar!soubor.lyx~). Upozorňujeme, že někteří správci souborů implicitně skrývají tyto soubory."
 
 #: src/frontends/qt/GuiPrefs.cpp:2804
 msgid "Control"
@@ -35121,7 +35121,7 @@ msgstr "Vrátit se k uloženému dokumentu?"
 
 #: src/frontends/qt/GuiView.cpp:4622
 msgid "Buffer export reset."
-msgstr ""
+msgstr "Reset exportu dokumentu."
 
 #: src/frontends/qt/GuiView.cpp:4645
 msgid "Saving all documents..."
@@ -35658,7 +35658,7 @@ msgstr "Databáze:"
 
 #: src/insets/InsetBibtex.cpp:195
 msgid "None[[bib databases]], please fill in!"
-msgstr ""
+msgstr "Žádná, prosím vyplňte!"
 
 #: src/insets/InsetBibtex.cpp:213
 msgid "Style File:"
@@ -35797,7 +35797,7 @@ msgid ""
 "Standard captions are not allowed outside floats. You will get a LaTeX "
 "error.\n"
 "For captions outside floats, you can use the 'nonfloat' LaTeX package."
-msgstr ""
+msgstr "Standardní popisky nejsou povoleny mimo plovoucí objekty. Obdržíte chybu LaTeX-u.\nPro popisky mimo prosím použijte LaTeX-ový balíček 'nonfloat'."
 
 #: src/insets/InsetCaption.cpp:416
 msgid "Orphaned caption:"
@@ -37144,15 +37144,14 @@ msgid "Unknown TOC type"
 msgstr "Neznámý typ Obsahu"
 
 #: src/insets/InsetTabular.cpp:467
-#, fuzzy
 msgid "Change tracking data incomplete"
-msgstr "Index autora sledovaných změn chybí"
+msgstr "Index autora revizních změn chybí"
 
 #: src/insets/InsetTabular.cpp:468
 msgid ""
 "Change tracking information for tabular row/column is incomplete. I will "
 "ignore this."
-msgstr ""
+msgstr "Chybí úplná revizní informace pro řádek/sloupec tabulky. Ignoruji."
 
 #: src/insets/InsetTabular.cpp:5705
 msgid "Column movement not supported with multi-columns."
@@ -37167,9 +37166,8 @@ msgid "Selection size should match clipboard content."
 msgstr "Velikost výběru by měla odpovídat obsahu schránky."
 
 #: src/insets/InsetText.cpp:1384
-#, fuzzy
 msgid "[contains tracked changes]"
-msgstr "Sledovat revize"
+msgstr "[obsahuje revizní změny]"
 
 #: src/insets/InsetWrap.cpp:64
 msgid "Wrap: "
@@ -37258,7 +37256,7 @@ msgstr "Hledat mimo výběr?"
 msgid ""
 "The search string was not found within the selection.\n"
 "Continue search outside?"
-msgstr ""
+msgstr "Hledaný řetězec nebyl nalezen ve výběru.\nPokračovat v hledání vně?"
 
 #: src/lyxfind.cpp:355 src/lyxfind.cpp:701
 msgid ""
@@ -37753,7 +37751,7 @@ msgstr "Konverze a načítání obrázku"
 
 #: src/support/debug.cpp:66
 msgid "Change tracking"
-msgstr "Změna revize"
+msgstr "Revizní změny"
 
 #: src/support/debug.cpp:67
 msgid "External template/inset messages"
