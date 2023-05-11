@@ -3317,9 +3317,8 @@ msgid "De&fault output format:"
 msgstr "&Standarní výstupní formát:"
 
 #: src/frontends/qt/ui/OutputUi.ui:103
-#, fuzzy
 msgid "&LaTeX"
-msgstr "LaTeX"
+msgstr "&LaTeX"
 
 #: src/frontends/qt/ui/OutputUi.ui:115
 msgid "LaTeX Output Options"
@@ -3357,9 +3356,8 @@ msgid "Put fra&gile content out of moving arguments"
 msgstr "Přemístit kře&hký obsah z pohyblivých argumentů"
 
 #: src/frontends/qt/ui/OutputUi.ui:200
-#, fuzzy
 msgid "&XHTML"
-msgstr "HTML"
+msgstr "&XHTML"
 
 #: src/frontends/qt/ui/OutputUi.ui:212
 msgid "XHTML Output Options"
@@ -3413,8 +3411,8 @@ msgid "Scaling factor for images used for math output."
 msgstr "Měřítko pro zvětšení obrázků použitých pro výstup vzorců"
 
 #: src/frontends/qt/ui/OutputUi.ui:343
-msgid "&Docbook"
-msgstr ""
+msgid "&DocBook"
+msgstr "&DocBook"
 
 #: src/frontends/qt/ui/OutputUi.ui:355
 msgid "DocBook Output Options"
@@ -5498,7 +5496,6 @@ msgid "Re&place All"
 msgstr "Na&hraď vše"
 
 #: src/frontends/qt/ui/SpellcheckerUi.ui:165
-#, fuzzy
 msgid ""
 "Ignore this occurrence of the word permanently (saved as a text property)."
 msgstr "Ignorovat tento výskyt permanentně (uloženo ve vlastnostech textu)"
@@ -9652,9 +9649,8 @@ msgid "FourAffiliations"
 msgstr "FourAffiliations"
 
 #: lib/layouts/apa.layout:256 lib/layouts/iucr.layout:257
-#, fuzzy
 msgid "Acknowledgments:"
-msgstr "Acknowledgments"
+msgstr "Acknowledgments:"
 
 #: lib/layouts/apa.layout:268 lib/layouts/apax.inc:367
 msgid "ThickLine"
@@ -11147,15 +11143,14 @@ msgid "Custom Header/Footer Text"
 msgstr "Vlastní hlavičky/patičky"
 
 #: lib/layouts/customHeadersFooters.module:10
-#, fuzzy
 msgid ""
 "Adds environments to define header and footer lines. See the Additional "
 "manual, section Modules > Page Layout > Custom Header/Footer Text, for a "
 "detailed description. NOTE: To use this module you must set the 'Page style' "
 "in the menu Document Settings -> Page Layout to 'fancy'!"
 msgstr ""
-"Přidává prostředí pro definici hlavičky a patičky. Pro použití tohoto modulu "
-"musíte nastavit styl hlavičky v nastavení dokumentu (rozvržení stránky) na "
+"Přidává prostředí pro definici hlavičky a patičky. Viz Manuál rozšířených vlastností LyX-u, sekce Modules > Page Layout > Custom Header/Footer Text. Pro použití tohoto modulu "
+"musíte nastavit styl hlavičky v nastaveních dokumentu ('Rozvržení stránky') na "
 "'pestrý (fancy)'"
 
 #: lib/layouts/customHeadersFooters.module:15
@@ -13442,9 +13437,8 @@ msgid "Remarks"
 msgstr "Remarks"
 
 #: lib/layouts/heb-article.layout:101
-#, fuzzy
 msgid "Remarks \\thetheorem."
-msgstr "Poznámka \\thetheorem."
+msgstr "Remarks \\thetheorem."
 
 #: lib/layouts/heb-article.layout:125 lib/layouts/ijmpc.layout:412
 #: lib/layouts/ijmpd.layout:418
@@ -20514,7 +20508,7 @@ msgstr "Přidat neznámou větev|n"
 
 #: lib/ui/stdcontext.inc:539
 msgid "Sync all|y"
-msgstr ""
+msgstr "Synchronizovat všechny|y"
 
 #: lib/ui/stdcontext.inc:548
 msgid "Insert Reference at Cursor Position|I"
@@ -22446,21 +22440,18 @@ msgstr "Aktualizovat ostatní formát"
 
 #: lib/ui/stdtoolbars.inc:306 lib/ui/stdtoolbars.inc:312
 #: lib/ui/stdtoolbars.inc:318 lib/ui/stdtoolbars.inc:324
-#, fuzzy
 msgid "[[Toolbar]]&On"
-msgstr "Zapnuto"
+msgstr "&Zapnuto"
 
 #: lib/ui/stdtoolbars.inc:307 lib/ui/stdtoolbars.inc:313
 #: lib/ui/stdtoolbars.inc:319 lib/ui/stdtoolbars.inc:325
-#, fuzzy
 msgid "[[Toolbar]]O&ff"
-msgstr "Vypnuto"
+msgstr "&Vypnuto"
 
 #: lib/ui/stdtoolbars.inc:308 lib/ui/stdtoolbars.inc:314
 #: lib/ui/stdtoolbars.inc:320 lib/ui/stdtoolbars.inc:326
-#, fuzzy
 msgid "[[Toolbar]]&Automatic"
-msgstr "Automaticky"
+msgstr "&Automaticky"
 
 #: lib/ui/stdtoolbars.inc:345 src/frontends/qt/GuiLog.cpp:262
 msgid "Version Control"
@@ -28898,7 +28889,6 @@ msgid "special character"
 msgstr "speciální znak"
 
 #: src/Color.cpp:304
-#, fuzzy
 msgid "math text"
 msgstr "matematika - text"
 
@@ -28963,9 +28953,8 @@ msgid "inset background"
 msgstr "vložka - pozadí"
 
 #: src/Color.cpp:321
-#, fuzzy
 msgid "inset label"
-msgstr "Vložit značku"
+msgstr "vložka - popisek"
 
 #: src/Color.cpp:322
 msgid "inset frame"
@@ -34689,7 +34678,6 @@ msgstr ""
 "dokumentů"
 
 #: src/frontends/qt/GuiView.cpp:160
-#, fuzzy
 msgid ""
 "1.0[[translating this to different value scales the welcome banner text size "
 "for your language]]"
@@ -34870,9 +34858,8 @@ msgstr "Zálohy dokumentů LyX-u (*.lyx~)"
 
 #: src/frontends/qt/GuiView.cpp:2834 src/frontends/qt/GuiView.cpp:4584
 #: src/frontends/qt/qt_helpers.cpp:609
-#, fuzzy
 msgid "All Files"
-msgstr "Všechny soubory "
+msgstr "Všechny soubory"
 
 #: src/frontends/qt/GuiView.cpp:2865
 #, c-format
