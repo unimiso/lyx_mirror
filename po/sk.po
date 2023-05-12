@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-04-11 14:27+0200\n"
-"PO-Revision-Date: 2023-04-11 12:36+0000\n"
+"POT-Creation-Date: 2023-05-12 07:55+0200\n"
+"PO-Revision-Date: 2023-05-12 07:03+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -3427,6 +3427,10 @@ msgstr "Určite štandardný výstupný formát (pre náhľad/aktualizáciu)"
 msgid "De&fault output format:"
 msgstr "Š&tandardný výstup:"
 
+#: src/frontends/qt/ui/OutputUi.ui:103
+msgid "&LaTeX"
+msgstr "&LaTeX"
+
 #: src/frontends/qt/ui/OutputUi.ui:245
 msgid "XHTML Output Options"
 msgstr "XHTML Voľby"
@@ -3453,6 +3457,10 @@ msgstr "Píš CSS do súboru"
 #: src/frontends/qt/ui/OutputUi.ui:300
 msgid "&Math output:"
 msgstr "Výstup pre &matematiku:"
+
+#: src/frontends/qt/ui/OutputUi.ui:297
+msgid "&DocBook"
+msgstr "&DocBook"
 
 #: src/frontends/qt/ui/OutputUi.ui:316
 msgid "Math &image scaling:"
@@ -3516,6 +3524,10 @@ msgstr ""
 #: src/frontends/qt/ui/OutputUi.ui:463
 msgid "Put fra&gile content out of moving arguments"
 msgstr "Vys&unúť lámavý obsah z pohyblivých argumentov"
+
+#: src/frontends/qt/ui/OutputUi.ui:200
+msgid "&XHTML"
+msgstr "&XHTML"
 
 #: src/frontends/qt/ui/PDFSupportUi.ui:23
 msgid "&Use hyperref support"
@@ -4092,13 +4104,14 @@ msgid ""
 "given interval (as #filename.lyx# in the given directory). As opposed to the "
 "backup above, this snapshot will be removed when changes are being saved. If "
 "the application crashes with unsaved changes and the restoration from the "
-"emergency file fails, this snapshot can be at rescue."
+"emergency file (named filename.lyx.emergency) fails, this snapshot can be at "
+"rescue."
 msgstr ""
 "Keď je toto zaškrtnuté, LyX zálohuje prechodné kópie zmenených dokumentov v "
 "danom intervale (ako #menosúboru.lyx# v určenom adresáre). Ináč ako navyše, "
-"zálohy budú odstránené keď budú patričné zmeny uložené. Keď aplikácia "
+"táto momentka bude odstránená keď budú patričné zmeny uložené. Keď aplikácia "
 "havaruje a bez uložených zmien a obnovenie z havarijnej kópie zlyhá, táto "
-"záloha by mohla byť záchranou."
+"momentka (menom súbor.lyx.emergency) by mohla byť záchranou."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:106
 msgid "Make a&uto-save snapshots every[[ N minutes]]"
@@ -21973,7 +21986,7 @@ msgstr "Vložiť plávajúcu tabuľku"
 
 #: lib/ui/stdtoolbars.inc:135
 msgid "Insert label"
-msgstr "Vložiť značku"
+msgstr "Vložiť návestie"
 
 #: lib/ui/stdtoolbars.inc:136
 msgid "Insert cross-reference"
@@ -27973,9 +27986,9 @@ msgstr "Automatické ukladanie súčasného dokumentu…"
 msgid "No information for exporting the format %1$s."
 msgstr "Žiadne informácie pre export formátu %1$s."
 
-#: src/Buffer.cpp:4467
+#: src/Buffer.cpp:4469
 #, c-format
-msgid "Hint: use non-TeX fonts or set input encoding  to '%1$s'"
+msgid "Hint: use non-TeX fonts or set input encoding to '%1$s'"
 msgstr "Tip:Použite fonty mimo TeXu alebo nastavte kódovanie na '%1$s'"
 
 #: src/Buffer.cpp:4469
@@ -28100,8 +28113,8 @@ msgstr ""
 "ručne. Ináč, v prípade že chcete tento súbor nabudúce čítať, budete opýtaný "
 "ešte raz a tak by ste mohli prepísať vlastnú prácu."
 
-#: src/Buffer.cpp:4807
-msgid "Emergency File Renames"
+#: src/Buffer.cpp:4809
+msgid "Emergency File Renamed"
 msgstr "Havarijný súbor premenovaný"
 
 #: src/Buffer.cpp:4808
@@ -28306,15 +28319,14 @@ msgid ""
 "output.\n"
 "\n"
 "Please select an appropriate document encoding\n"
-"(such as utf8) or change the preamble code accordingly."
+"(such as utf8) or change the metadata accordingly."
 msgstr ""
 "Metaúdaje vášho dokumentu obsahuje glyfy, ktoré sú neznáme v kódovaní "
 "aktuálneho dokumentu (menovite %1$s).\n"
-"Tieto glyfy budú pri exporte do LaTeX-u vynechané, čo môže končiť neúplnom "
-"výstupe.\n"
+"Tieto glyfy budú pri exporte vynechané, čo môže končiť v neúplnom výstupe.\n"
 "\n"
 "Vyberte vhodné kódovanie dokumentu (napr. utf8)\n"
-"alebo zmeňte primerane preambulu."
+"alebo zmeňte metadáty primerane."
 
 #: src/BufferParams.cpp:1889
 msgid "Uncodable character in class options"
@@ -28788,13 +28800,13 @@ msgstr "Označenie textu 2"
 msgid "Text label 3"
 msgstr "Označenie textu 3"
 
-#: src/Color.cpp:271
+#: src/Color.cpp:272
 msgid "inline completion"
-msgstr "priame doplňovanie"
+msgstr "doplňovanie v riadku"
 
-#: src/Color.cpp:273
-msgid "non-unique inline completion"
-msgstr "priame doplňovanie: nejednoznačné"
+#: src/Color.cpp:274
+msgid "inline completion (non-unique)"
+msgstr "doplňovanie v riadku (nejednoznačné)"
 
 #: src/Color.cpp:275
 msgid "previewed snippet"
@@ -28904,9 +28916,9 @@ msgstr "tlačidlo: pozadie (rozbitá referencia) pod fókusom"
 msgid "special character"
 msgstr "Špeciálny znak"
 
-#: src/Color.cpp:303
-msgid "math"
-msgstr "matematika"
+#: src/Color.cpp:304
+msgid "math text"
+msgstr "mat. text"
 
 #: src/Color.cpp:304
 msgid "math background"
@@ -28968,6 +28980,10 @@ msgstr "zbaliteľná vložka: rám"
 msgid "inset background"
 msgstr "vložka: pozadie"
 
+#: src/Color.cpp:321
+msgid "inset label"
+msgstr "vložka: návestie"
+
 #: src/Color.cpp:320
 msgid "inset frame"
 msgstr "vložka: rám"
@@ -28988,13 +29004,13 @@ msgstr "príloha: označenie"
 msgid "change bar"
 msgstr "revízne označenie"
 
-#: src/Color.cpp:325
-msgid "deleted text (output)"
-msgstr "zmazaný text (výstup)"
-
 #: src/Color.cpp:326
-msgid "added text (output)"
-msgstr "pridaný tex (výstup)"
+msgid "changes - deleted text (exported output)"
+msgstr "zmeny - zmazaný text (exportovaný výstup)"
+
+#: src/Color.cpp:327
+msgid "changes - added text (exported output)"
+msgstr "zmeny - pridaný tex (exportovaný výstup)"
 
 #: src/Color.cpp:327
 msgid "changed text (workarea, 1st author)"
@@ -29016,13 +29032,13 @@ msgstr "zmenený text (pracovná plocha, štvrtý autor)"
 msgid "changed text (workarea, 5th author)"
 msgstr "zmenený text (pracovná plocha, piaty autor)"
 
-#: src/Color.cpp:332
-msgid "changed text (workarea, document comparison)"
-msgstr "zmenený text (pracovná plocha, porovnanie s dokumentom)"
-
 #: src/Color.cpp:333
-msgid "deleted text modifier (workarea)"
-msgstr "zmazaný text: modifikátor (pracovná plocha)"
+msgid "changed text (workarea, document comparison)"
+msgstr "zmenený text (pracovná plocha, porovnanie dokumentov)"
+
+#: src/Color.cpp:334
+msgid "changes - deleted text brightness (workarea)"
+msgstr "zmeny - zmazaný text: svetlosť (pracovná plocha)"
 
 #: src/Color.cpp:334
 msgid "added space markers"
@@ -29907,10 +29923,11 @@ msgstr "LyX: Vytváram adresár %1$s"
 
 #: src/LyX.cpp:1127
 msgid ""
-"Failed to create directory. Perhaps wrong -userdir option?\n"
+"Failed to create directory. Perhaps wrong -userdir command-line option?\n"
 "Exiting."
 msgstr ""
-"Nepodarilo sa vytvoriť adresár. Hádam nesprávna voľba --userdir?\n"
+"Nepodarilo sa vytvoriť adresár. Hádam nesprávna voľba v príkazovom riadku "
+"pre --userdir?\n"
 "Končím."
 
 #: src/LyX.cpp:1200
@@ -32744,10 +32761,6 @@ msgstr "PDF vlastnosti"
 msgid "Bullets"
 msgstr "Odrážky"
 
-#: src/frontends/qt/GuiDocument.cpp:1824
-msgid "Formats[[output]]"
-msgstr "Výstupné formáty"
-
 #: src/frontends/qt/GuiDocument.cpp:1825 src/frontends/qt/GuiDocument.cpp:4966
 msgid "LaTeX Preamble"
 msgstr "Preambula LaTeX-u"
@@ -33996,12 +34009,12 @@ msgstr "Konvertory"
 msgid "SECURITY WARNING!"
 msgstr "OCHRANNÉ VAROVANIE!"
 
-#: src/frontends/qt/GuiPrefs.cpp:1893
+#: src/frontends/qt/GuiPrefs.cpp:1889
 msgid ""
 "Unchecking this option has the effect that potentially harmful converters "
 "would be run without asking your permission first. This is UNSAFE and NOT "
 "recommended, unless you know what you are doing. Are you sure you would like "
-"to proceed ? The recommended and safe answer is NO!"
+"to proceed? The recommended and safe answer is NO!"
 msgstr ""
 "Ne-zaškrtnutie tejto voľby povolí spustiť aj potenciálne škodlivé konvertory "
 "bez požiadania vášho súhlasu. Toto je NEBEZPEČNÉ a sa nedoporučuje, pokiaľ "
@@ -34703,11 +34716,13 @@ msgid ""
 "The Document\n"
 "Processor[[welcome banner]]"
 msgstr ""
-"Krásne Spracovať\n"
-"Dokumenty"
+"Editor\n"
+"dokumentov"
 
 #: src/frontends/qt/GuiView.cpp:160
-msgid "1.0[[possibly scale the welcome banner text size]]"
+msgid ""
+"1.0[[translating this to different value scales the welcome banner text size "
+"for your language]]"
 msgstr "0.95"
 
 #: src/frontends/qt/GuiView.cpp:163
@@ -34725,7 +34740,7 @@ msgstr "Kliknite sem keď chcete zastaviť proces exportu/výstupu"
 #: src/frontends/qt/GuiView.cpp:677
 msgid "Workarea zoom level. Drag, use Ctrl-+/- or Shift-Mousewheel to adjust."
 msgstr ""
-"Úroveň lupy v pracovnom poli. Použ Ctrl-+/- alebo Shift a koliesko myši na "
+"Úroveň lupy v pracovnom poli. Použite Ctrl-+/- alebo Shift a koliesko myši na "
 "úpravu."
 
 #: src/frontends/qt/GuiView.cpp:720 src/frontends/qt/GuiView.cpp:831
@@ -34748,9 +34763,9 @@ msgstr ""
 msgid "Cancel Export?"
 msgstr "Zrušiť export?"
 
-#: src/frontends/qt/GuiView.cpp:811
+#: src/frontends/qt/GuiView.cpp:813
 msgid "Do you want to cancel the background export process?"
-msgstr "Chcete zrušiť export v pozadí?"
+msgstr "Chcete zrušiť export bežiaci v pozadí?"
 
 #: src/frontends/qt/GuiView.cpp:814
 msgid "Co&ntinue"
@@ -34789,30 +34804,30 @@ msgstr "Ukončiť LyX"
 msgid "LyX could not be closed because documents are being processed by LyX."
 msgstr "Nemohol som zavrieť LyX, lebo LyX ešte spracováva dokumenty."
 
-#: src/frontends/qt/GuiView.cpp:1464
+#: src/frontends/qt/GuiView.cpp:1472
 #, c-format
 msgid "%1$d Word"
-msgstr "%1$d (Počet slov)"
+msgstr "%1$d slovo"
 
 #: src/frontends/qt/GuiView.cpp:1466
 #, c-format
 msgid "%1$d Words"
 msgstr "%1$d (Počet slov)"
 
-#: src/frontends/qt/GuiView.cpp:1471
+#: src/frontends/qt/GuiView.cpp:1479
 #, c-format
 msgid "%1$d Character"
-msgstr "%1$d (Počet znakov)"
+msgstr "%1$d znak"
 
 #: src/frontends/qt/GuiView.cpp:1473
 #, c-format
 msgid "%1$d Characters"
 msgstr "%1$d (Počet znakov)"
 
-#: src/frontends/qt/GuiView.cpp:1478
+#: src/frontends/qt/GuiView.cpp:1486
 #, c-format
 msgid "%1$d Character (no Blanks)"
-msgstr "%1$d (Počet znakov bez medzier)"
+msgstr "%1$d znak (bez medzier)"
 
 #: src/frontends/qt/GuiView.cpp:1480
 #, c-format
@@ -34844,9 +34859,9 @@ msgstr "Automatické ukladanie zlyhalo!"
 msgid "Command not allowed without any document open"
 msgstr "Príkaz nie je povolený pokiaľ nie je otvorený aspoň jeden dokument"
 
-#: src/frontends/qt/GuiView.cpp:2344
+#: src/frontends/qt/GuiView.cpp:2354
 msgid "Invalid argument of master-buffer-forall"
-msgstr "neplatný-argument pre funkciu 'master-buffer-forall'"
+msgstr "Neplatný argument pre funkciu 'master-buffer-forall'"
 
 #: src/frontends/qt/GuiView.cpp:2467
 msgid "Function toolbar-set requires two arguments!"
@@ -34875,17 +34890,18 @@ msgstr "Stupeň lupy nesmie byť vyšší ako %1$d%."
 msgid "Document not loaded."
 msgstr "Dokument nie je nahraný."
 
-#: src/frontends/qt/GuiView.cpp:2809
+#: src/frontends/qt/GuiView.cpp:2827
 msgid "Select documents to open"
-msgstr "Vyberte dokumenty pre otvorenie"
+msgstr "Vybrať dokumenty pre otvorenie"
 
 #: src/frontends/qt/GuiView.cpp:2815
 msgid "LyX Document Backups (*.lyx~)"
 msgstr "Záložné LyX dokumenty (*.lyx~)"
 
-#: src/frontends/qt/GuiView.cpp:2816
-msgid "All Files (*.*)"
-msgstr "Všetky súbory (*.*)"
+#: src/frontends/qt/GuiView.cpp:2834 src/frontends/qt/GuiView.cpp:4584
+#: src/frontends/qt/qt_helpers.cpp:609
+msgid "All Files"
+msgstr "Všetky súbory"
 
 #: src/frontends/qt/GuiView.cpp:2847
 #, c-format
@@ -35304,10 +35320,6 @@ msgstr "Dokument nie je nahraný"
 #: src/frontends/qt/GuiView.cpp:4554
 msgid "Select file to insert"
 msgstr "Vyberte súbor na vloženie"
-
-#: src/frontends/qt/GuiView.cpp:4557
-msgid "All Files (*)"
-msgstr "Všetky súbory (*)"
 
 #: src/frontends/qt/GuiView.cpp:4585
 #, c-format
@@ -35789,10 +35801,6 @@ msgstr "Nemohol som aktualizovať TeX informáciu"
 #, c-format
 msgid "The script `%1$s' failed."
 msgstr "Skript `%1$s' zlyhal."
-
-#: src/frontends/qt/qt_helpers.cpp:607
-msgid "All Files "
-msgstr "Všetky súbory "
 
 #: src/insets/Inset.cpp:92
 msgid "Bibliography Entry"
