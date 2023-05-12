@@ -2683,7 +2683,7 @@ QPixmap GuiApplication::getScaledPixmap(QString imagedir, QString name) const
 	QPixmap pm = getPixmap(imagedir, name, "svgz,png");
 	FileName fname = imageLibFileSearch(imagedir, name, "svgz,png");
 	QString fpath = toqstr(fname.absFileName());
-	if (!fpath.isEmpty()) {
+	if (!fpath.isEmpty() && !fpath.endsWith(".png")) {
 		QSvgRenderer svgRenderer(fpath);
 		if (svgRenderer.isValid()) {
 			pm = QPixmap(pm.size() * dpr);
