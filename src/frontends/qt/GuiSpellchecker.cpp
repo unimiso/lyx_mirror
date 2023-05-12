@@ -192,8 +192,9 @@ void SpellcheckerWidget::on_suggestionsLW_itemClicked(QListWidgetItem * item)
 }
 
 
-void SpellcheckerWidget::on_replaceCO_highlighted(const QString & str)
+void SpellcheckerWidget::on_replaceCO_highlighted(int index)
 {
+	QString const str = d->ui.replaceCO->itemText(index);
 	QListWidget * lw = d->ui.suggestionsLW;
 	if (lw->currentItem() && lw->currentItem()->text() == str)
 		return;
