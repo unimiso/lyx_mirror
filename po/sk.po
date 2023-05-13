@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-05-12 07:55+0200\n"
-"PO-Revision-Date: 2023-05-12 07:03+0000\n"
+"POT-Creation-Date: 2023-05-13 22:02+0200\n"
+"PO-Revision-Date: 2023-05-13 20:03+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -2700,9 +2700,9 @@ msgstr ""
 msgid "Use d&ynamic quotation marks"
 msgstr "Použiť d&ynamické úvodzovky"
 
-#: src/frontends/qt/ui/LanguageUi.ui:89
-msgid "&Encoding:"
-msgstr "Kó&dovanie:"
+#: src/frontends/qt/ui/LanguageUi.ui:87
+msgid "Encoding"
+msgstr "Kódovanie"
 
 #: src/frontends/qt/ui/LanguageUi.ui:102
 msgid "Select encoding of the generated LaTeX source (LaTeX input encoding)."
