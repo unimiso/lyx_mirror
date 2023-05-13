@@ -2536,6 +2536,18 @@ void GuiDocument::encodingSwitched(int i)
 	langModule->unicodeEncodingCO->setVisible(i == EncodingSets::unicode);
 	langModule->autoEncodingCO->setVisible(i == EncodingSets::legacy);
 	langModule->customEncodingCO->setVisible(i == EncodingSets::custom);
+	switch (i) {
+	case EncodingSets::unicode:
+		langModule->encodingVariantLA->setBuddy(langModule->unicodeEncodingCO);
+		break;
+	case EncodingSets::legacy:
+		langModule->encodingVariantLA->setBuddy(langModule->autoEncodingCO);
+		break;
+	case EncodingSets::custom:
+		langModule->encodingVariantLA->setBuddy(langModule->customEncodingCO);
+		break;
+	}
+ 
 	if (tex_fonts)
 		langModule->unicodeEncodingCO->setItemText(1, qt_("Direct (No inputenc)"));
 	else
