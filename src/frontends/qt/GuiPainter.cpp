@@ -546,11 +546,12 @@ void GuiPainter::wavyHorizontalLine(FontInfo const & f, int x, int y, int width,
 {
 	FontMetrics const & fm = theFontMetrics(f);
 	int const pos = fm.underlinePos();
+	int const lw = max(1, fm.lineWidth());
 
-	setQPainterPen(computeColor(col), line_solid, fm.lineWidth());
-	int const step = 2 * fm.lineWidth();
+	setQPainterPen(computeColor(col), line_solid, lw);
+	int const step = 2 * lw;
 	int const xend = x + width;
-	int height = 1 * fm.lineWidth();
+	int height = lw;
 	//FIXME: I am not sure if Antialiasing gives the best effect.
 	//setRenderHint(Antialiasing, true);
 	QVector<QPoint> points;
@@ -560,8 +561,8 @@ void GuiPainter::wavyHorizontalLine(FontInfo const & f, int x, int y, int width,
 		points.append(QPoint(x + step, y + pos + height));
 		x += step;
 		points.append(QPoint(x, (qreal)y + pos + height));
-		points.append(QPoint(x + step/2, y + pos + height));
-		x += step/2;
+		points.append(QPoint(x + lw, y + pos + height));
+		x += lw;
 	}
 	drawPolyline(points);
 	//setRenderHint(Antialiasing, false);
