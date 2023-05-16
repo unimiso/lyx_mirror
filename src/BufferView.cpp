@@ -3190,6 +3190,7 @@ void BufferView::insertLyXFile(FileName const & fname, bool const ignorelang)
 			// set main language of imported file to context language
 			buf.changeLanguage(buf.language(), d->cursor_.getFont().language());
 		buffer_.undo().recordUndo(d->cursor_);
+		cap::replaceSelection(d->cursor_);
 		cap::pasteParagraphList(d->cursor_, pars,
 					buf.params().documentClassPtr(),
 					buf.params().authors(), el);
