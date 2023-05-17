@@ -1825,7 +1825,7 @@ void GuiApplication::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 			createView(QString(), false); // keep hidden
 			current_view_->newDocument(to_utf8(cmd.argument()));
 			current_view_->show();
-			setActiveWindow(current_view_);
+			current_view_->activateWindow();
 		} else {
 			current_view_->newDocument(to_utf8(cmd.argument()));
 		}
@@ -2619,7 +2619,7 @@ void GuiApplication::createView(QString const & geometry_arg, bool autoShow,
 
 	if (autoShow) {
 		view->show();
-		setActiveWindow(view);
+		view->activateWindow();
 	}
 
 	if (!geometry_arg.isEmpty()) {
