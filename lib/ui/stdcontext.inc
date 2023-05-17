@@ -371,7 +371,7 @@ Menuset
 		spellingsuggestions
 		Separator
 		OptItem "Edit Externally..." "inset-edit"
-		OptItem "End Editing Externally..." "inset-end-edit"
+		OptItem "End Editing Externally" "inset-end-edit"
 		Separator
 		Item "Cut" "cut"
 		Item "Copy" "copy"
