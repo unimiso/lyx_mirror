@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-05-13 22:02+0200\n"
-"PO-Revision-Date: 2023-05-13 20:03+0000\n"
+"POT-Creation-Date: 2023-05-18 11:56+0200\n"
+"PO-Revision-Date: 2023-05-18 09:57+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -20256,8 +20256,8 @@ msgid "Edit Externally..."
 msgstr "Externe upraviť…"
 
 #: lib/ui/stdcontext.inc:374
-msgid "End Editing Externally..."
-msgstr "Externú úpravu dokončiť…"
+msgid "End Editing Externally"
+msgstr "Externú úpravu dokončiť"
 
 #: lib/ui/stdcontext.inc:381
 msgid "Split Inset|t"
@@ -43644,3 +43644,5 @@ msgstr "Neznámy používateľ"
 #~ msgid "Title of acknowledgment[[credits]]"
 #~ msgstr "Titul poďakovania"
 
+#~ msgid "End Editing Externally..."
+#~ msgstr "Externú úpravu dokončiť…"
