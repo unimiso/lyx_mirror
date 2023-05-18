@@ -82,6 +82,8 @@ public:
 	///
 	docstring xhtml(XMLStream &, OutputParams const &) const override;
 	///
+	bool hasToString() const override { return true; }
+	///
 	void toString(odocstream &) const override;
 	///
 	bool isInToc() const override { return true; }

@@ -34,6 +34,8 @@ public:
 	///
 	bool isInToc() const override { return true; }
 	///
+	bool hasToString() const override { return true; }
+	///
 	void toString(odocstream &) const override;
 	///
 	void forOutliner(docstring &, size_t const, bool const) const override;

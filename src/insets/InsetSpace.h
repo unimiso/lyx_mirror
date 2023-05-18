@@ -136,6 +136,8 @@ public:
 	///
 	void validate(LaTeXFeatures & features) const override;
 	///
+	bool hasToString() const override { return true; }
+	///
 	void toString(odocstream &) const override;
 	///
 	void forOutliner(docstring &, size_t const, bool const) const override;

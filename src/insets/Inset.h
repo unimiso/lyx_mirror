@@ -348,6 +348,8 @@ public:
 	/// paragraph closes. this is appropriate e.g. for floats.
 	virtual docstring xhtml(XMLStream &, OutputParams const &) const;
 
+	/// 
+	virtual bool hasToString() const { return false; }
 	/// Writes a string representation of the inset to the odocstream.
 	/// This one should be called when you want the whole contents of
 	/// the inset.
