@@ -94,15 +94,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-05-13 18:40+0200\n"
-"PO-Revision-Date: 2023-05-13 19:01+0200\n"
+"POT-Creation-Date: 2023-05-19 12:31+0200\n"
+"PO-Revision-Date: 2023-05-19 12:32+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: src/frontends/qt/ui/AboutUi.ui:27
@@ -4241,9 +4241,9 @@ msgstr ""
 "jeweiligen Ordner). Im Gegensatz zur Sicherungskopie oben werden diese "
 "Schnappschüsse entfernt, sobald die Änderungen gespeichert werden. Sollte "
 "das Programm mit ungesicherten Änderungen abstürzen und die "
-"Wiederherstellung aus der Notspeicherungsdatei (mit dem Namen"
-" Dateiname.lyx.emergency) "
-"scheitern, können Sie notfalls auf diesen Schnappschuss zurückgreifen."
+"Wiederherstellung aus der Notspeicherungsdatei (mit dem Namen Dateiname.lyx."
+"emergency) scheitern, können Sie notfalls auf diesen Schnappschuss "
+"zurückgreifen."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:106
 msgid "Make a&uto-save snapshots every[[ N minutes]]"
@@ -20074,7 +20074,7 @@ msgid "Copy as Reference|R"
 msgstr "Als Querverweis kopieren|k"
 
 #: lib/ui/stdcontext.inc:61 lib/ui/stdcontext.inc:376 lib/ui/stdmenus.inc:108
-#: lib/ui/stdtoolbars.inc:89 src/Text.cpp:4934 src/mathed/InsetMathNest.cpp:570
+#: lib/ui/stdtoolbars.inc:89 src/Text.cpp:4938 src/mathed/InsetMathNest.cpp:570
 msgid "Cut"
 msgstr "Ausschneiden"
 
@@ -20084,7 +20084,7 @@ msgid "Copy"
 msgstr "Kopieren"
 
 #: lib/ui/stdcontext.inc:63 lib/ui/stdcontext.inc:378 lib/ui/stdmenus.inc:110
-#: lib/ui/stdtoolbars.inc:91 src/Text.cpp:4878
+#: lib/ui/stdtoolbars.inc:91 src/Text.cpp:4882
 #: src/frontends/qt/GuiToolbar.cpp:464 src/mathed/InsetMathGrid.cpp:1566
 #: src/mathed/InsetMathNest.cpp:539
 msgid "Paste"
@@ -20541,8 +20541,8 @@ msgid "Edit Externally..."
 msgstr "Extern bearbeiten..."
 
 #: lib/ui/stdcontext.inc:374
-msgid "End Editing Externally..."
-msgstr "Externe Bearbeitung beenden..."
+msgid "End Editing Externally"
+msgstr "Externe Bearbeitung beenden"
 
 #: lib/ui/stdcontext.inc:381
 msgid "Split Inset|t"
@@ -31170,31 +31170,31 @@ msgstr ", Zeichen: 0x"
 msgid ", Boundary: "
 msgstr ", Grenze: "
 
-#: src/Text.cpp:2824
+#: src/Text.cpp:2828
 msgid "No font change defined."
 msgstr "Keine Schriftänderung definiert."
 
-#: src/Text.cpp:3528
+#: src/Text.cpp:3532
 msgid "Math editor mode"
 msgstr "Mathe-Editor-Modus"
 
-#: src/Text.cpp:3530
+#: src/Text.cpp:3534
 msgid "No valid math formula"
 msgstr "Keine gültige Matheformel"
 
-#: src/Text.cpp:3538 src/mathed/InsetMathNest.cpp:1047
+#: src/Text.cpp:3542 src/mathed/InsetMathNest.cpp:1047
 msgid "Already in regular expression mode"
 msgstr "Bereits im Regexp-Modus"
 
-#: src/Text.cpp:3551
+#: src/Text.cpp:3555
 msgid "Regexp editor mode"
 msgstr "Regexp-Editor-Modus"
 
-#: src/Text.cpp:3919
+#: src/Text.cpp:3923
 msgid "Action flattens document structure"
 msgstr "Vorgang flacht die Dokumentstruktur ab"
 
-#: src/Text.cpp:3920
+#: src/Text.cpp:3924
 msgid ""
 "This action will cause some headings that have been on different level "
 "before to be on the same level since there is no more lower or higher "
@@ -31205,48 +31205,48 @@ msgstr ""
 "Unterparagraph), auf derselben Stufe sein, da das Ende der Hierarchieskala "
 "nach oben oder unten erreicht ist. Trotzdem fortfahren?"
 
-#: src/Text.cpp:3925
+#: src/Text.cpp:3929
 msgid "&Yes, continue nonetheless"
 msgstr "&Ja, trotzdem fortfahren"
 
-#: src/Text.cpp:3926
+#: src/Text.cpp:3930
 msgid "&No, quit operation"
 msgstr "&Nein, Vorgang abbrechen"
 
-#: src/Text.cpp:4968
+#: src/Text.cpp:4972
 msgid "Layout "
 msgstr "Format "
 
-#: src/Text.cpp:4969 src/Text.cpp:5547
+#: src/Text.cpp:4973 src/Text.cpp:5551
 msgid " not known"
 msgstr " unbekannt"
 
-#: src/Text.cpp:5546
+#: src/Text.cpp:5550
 msgid "Table Style "
 msgstr "Tabellenstil"
 
-#: src/Text.cpp:5739 src/frontends/qt/GuiApplication.cpp:1890
+#: src/Text.cpp:5743 src/frontends/qt/GuiApplication.cpp:1890
 msgid "Missing argument"
 msgstr "Fehlendes Argument"
 
-#: src/Text.cpp:5904
+#: src/Text.cpp:5908
 msgid "Invalid argument (number exceeds stack size)!"
 msgstr "Ungültiges Argument (Zahl größer als Zwischenspeicher)!"
 
-#: src/Text.cpp:5908
+#: src/Text.cpp:5912
 msgid "Invalid argument (must be a non-negative number)!"
 msgstr "Ungültiges Argument (muss eine nicht-negative Zahl sein)!"
 
-#: src/Text.cpp:5913 src/Text.cpp:5927
+#: src/Text.cpp:5917 src/Text.cpp:5931
 #, c-format
 msgid "Text properties applied: %1$s"
 msgstr "Angewendete Texteigenschaften: %1$s"
 
-#: src/Text.cpp:6086
+#: src/Text.cpp:6090
 msgid "Path to thesaurus directory not set!"
 msgstr "Pfad zum Thesaurus-Wörterbuch nicht festlegt!"
 
-#: src/Text.cpp:6087
+#: src/Text.cpp:6091
 msgid ""
 "The path to the thesaurus directory has not been specified.\n"
 "The thesaurus is not functional.\n"
@@ -31258,7 +31258,7 @@ msgstr ""
 "Im Benutzerhandbuch, Abschnitt 6.15.11, finden Sie Hinweise,\n"
 "um den Thesaurus einzurichten."
 
-#: src/Text.cpp:6213 src/Text.cpp:6224
+#: src/Text.cpp:6217 src/Text.cpp:6228
 msgid "Paragraph layout set"
 msgstr "Absatzformat festgelegt"
 
