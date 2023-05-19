@@ -2479,7 +2479,11 @@ FontInfo Text::layoutFont(pit_type const pit) const
 		// In case the default family has been customized
 		if (layout.font.family() == INHERIT_FAMILY)
 			lf.setFamily(owner_->buffer().params().getFont().fontInfo().family());
-		FontInfo icf = owner_->getLayout().font();
+		FontInfo icf = (!isMainText())
+				  // inside insets, we call the getFont() method
+				? owner_->getFont()
+				  // outside, we access the layout font directly
+				: owner_->getLayout().font();
 		icf.realize(lf);
 		return icf;
 	}
