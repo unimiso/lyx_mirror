@@ -894,7 +894,7 @@ TextClass::ReturnValues TextClass::read(Lexer & lexrc, ReadType rt)
 			error = !readOutlinerName(lexrc);
 			break;
 
-        case TC_TABLESTYLE:
+		case TC_TABLESTYLE:
 			lexrc.next();
 			tablestyle_ = rtrim(lexrc.getString());
 			break;
