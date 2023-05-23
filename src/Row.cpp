@@ -61,7 +61,7 @@ int Row::Element::expansionAmount() const
 
 void Row::Element::setExtra(double extra_per_em)
 {
-	if (type != STRING)
+	if (type != STRING || font.fontInfo().family() == TYPEWRITER_FAMILY)
 		return;
 	extra = extra_per_em * theFontMetrics(font).em();
 }
