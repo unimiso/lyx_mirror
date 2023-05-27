@@ -5396,7 +5396,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 			// invalid after regex_match returns, since it is then
 			// being given a temporary object. (Thanks to Georg for
 			// figuring that out.)
-            regex const link_re("^(([a-z]+):|www\\.).*");
+			regex const link_re("^(([a-z]+):|www\\.).*");
 			smatch matches;
 			string const c = to_utf8(lowercase(content));
 
