@@ -2296,7 +2296,7 @@ void LyXAction::init()
  * \li Origin: spitz, 22 Dec 2020
  * \endvar
  */
-		{ LFUN_INSET_SPLIT, "inset-split", AtPoint, Edit },
+		{ LFUN_INSET_SPLIT, "inset-split", Noop, Edit },
 
 /*!
  * \var lyx::FuncCode lyx::LFUN_INSET_TOGGLE
