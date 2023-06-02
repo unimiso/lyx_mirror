@@ -10222,12 +10222,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10240,6 +10242,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10263,6 +10266,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -56992,7 +56996,13 @@ nolink "false"
 \end_layout
 
 \begin_layout Section
+
+\change_deleted 5863208 1685691759
 Formats
+\change_inserted 5863208 1685691762
+Output
+\change_unchanged
+
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Doc-Formats"
@@ -57006,6 +57016,47 @@ name "sec:Doc-Formats"
 Here you can define some output specifics for the current document:
 \end_layout
 
+\begin_layout Description
+
+\change_inserted 5863208 1685692056
+LyX
+\begin_inset space ~
+\end_inset
+
+Format The option 
+\family sans
+Save transient properties
+\family default
+ controls whether document settings that are frequently switched or that are specific to the user are saved with the document.
+ The properties that are affected by option are currently:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted 5863208 1685692056
+the activation of change tracking
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 5863208 1685692056
+the output of tracked changes
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 5863208 1685692056
+the recording of the document directory path.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 5863208 1685692056
+Disabling the option can prevent issues in collaborative work and/or when using a version control system (for instance unnecessary merge conflicts)
+\end_layout
+
+\end_deeper
 \begin_layout Description
 Default
 \begin_inset space ~
@@ -57084,7 +57135,7 @@ nolink "false"
 
 \begin_layout Description
 
-\change_inserted -712698321 1578647276
+\change_deleted 5863208 1685692088
 Allow
 \begin_inset space ~
 \end_inset
@@ -57106,6 +57157,8 @@ programs If this is switched on,
  option which is needed with some packages.
  Note that this comes with security risks,
  so please use this only when really necessary and if you know what you are doing.
+\change_inserted -712698321 1578647276
+
 \end_layout
 
 \begin_layout Description
@@ -57305,9 +57358,40 @@ image
 scaling
 \family default
  is used for the size of equations in the output.
+\change_inserted 5863208 1685692496
+
 \end_layout
 
 \begin_layout Description
+
+\change_inserted 5863208 1685692661
+DocBook
+\begin_inset space ~
+\end_inset
+
+Output
+\begin_inset space ~
+\end_inset
+
+Options offers settings for the export format 
+\family sans
+DocBook.
+ The details for the options are described in the chapter 
+\emph on
+DocBook Output
+\emph default
+ in the 
+\emph on
+Additional Features
+\emph default
+ Manual.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Description
+
+\change_deleted 5863208 1685692051
 LyX
 \begin_inset space ~
 \end_inset
@@ -57322,22 +57406,62 @@ Save transient properties
 
 \begin_deeper
 \begin_layout Itemize
+
+\change_deleted 5863208 1685692051
 the activation of change tracking
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted 5863208 1685692051
 the output of tracked changes
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted 5863208 1685692051
 the recording of the document directory path.
 \end_layout
 
 \begin_layout Standard
-Disabling the option can prevent issues in collaborative work and/or when using a version control system (for instance unnecessary merge conflicts).
+
+\change_deleted 5863208 1685692051
+Disabling the option can prevent issues in collaborative work and/or when using a version control system (for instance unnecessary merge conflicts)
+\change_unchanged
+.
+\change_inserted 5863208 1685692091
+
 \end_layout
 
 \end_deeper
+\begin_layout Description
+
+\change_inserted 5863208 1685692091
+Allow
+\begin_inset space ~
+\end_inset
+
+running
+\begin_inset space ~
+\end_inset
+
+external
+\begin_inset space ~
+\end_inset
+
+programs If this is switched on,
+ \SpecialChar LaTeX
+ is run with the 
+\family typewriter
+-shell-escape
+\family default
+ option which is needed with some packages.
+ Note that this comes with security risks,
+ so please use this only when really necessary and if you know what you are doing.
+\change_unchanged
+
+\end_layout
+
 \begin_layout Section
 La
 \family sans
