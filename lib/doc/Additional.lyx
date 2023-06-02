@@ -37706,7 +37706,11 @@ Introduction
 \begin_layout Standard
 \SpecialChar LyX
  supports some of the most basic RCS/CVS/SVN/GIT commands.
- If you need something a bit more sophisticated you will have to do that manually in a terminal.
+ If you need something a bit more sophisticated you will have to do that manually in a terminal
+\change_inserted 5863208 1685691238
+ or your favourite client
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -37805,6 +37809,16 @@ Compressed
  Uncompressed LyX documents are text files and therefore for merging two different versions by version control systems.
  Compressed LyX documents are binary files,
  which cannot be merged by version control systems.
+
+\change_inserted 5863208 1685692758
+
+\family sans
+ Also to avoid unnecessary merge conflicts we advise to disable document Document\SpecialChar menuseparator
+Settings\SpecialChar menuseparator
+Output\SpecialChar menuseparator
+Save transient properties when more users work on the same document.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -37826,7 +37840,11 @@ Control
 \family default
  submenu.
  \SpecialChar LyX
- was tested against RCS 5.7/5.8.
+ was tested against RCS 5.7/5.8
+\change_inserted 5863208 1685694069
+/5.10
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -40423,7 +40441,11 @@ Control
  Please note that if you use password protected access to repository via ssh,
  you will be asked in terminal window.
  \SpecialChar LyX
- was tested against GIT 1.7.
+ was tested against GIT 1.7
+\change_inserted 5863208 1685694088
+/2.30
+\change_unchanged
+.
 \begin_inset Foot
 status collapsed
 
@@ -40521,7 +40543,33 @@ This command registers in GIT your document ONLY in case you have already the do
 \family typewriter
 .git/index
 \family default
- file exists).
+ file exists
+\change_inserted 5863208 1685693727
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 5863208 1685693727
+For that both 
+\family typewriter
+git init
+\family default
+ *and* initial repository commit (or at least 
+\family typewriter
+git add
+\family default
+) needs to be manually done.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+).
  This means you have to checkout the archive by yourself.
 \end_layout
 
