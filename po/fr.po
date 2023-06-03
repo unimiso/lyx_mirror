@@ -363,7 +363,7 @@ msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-05-30 17:30+0200\n"
-"PO-Revision-Date: 2023-05-11 18:08+0200\n"
+"PO-Revision-Date: 2023-05-31 11:19+0200\n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
 "Language-Team: lyxfr\n"
 "Language: fr\n"
@@ -20840,9 +20840,8 @@ msgid "Edit Externally..."
 msgstr "Modifier le fichier via une application externe..."
 
 #: lib/ui/stdcontext.inc:374
-#, fuzzy
 msgid "End Editing Externally"
-msgstr "Fin de modification du fichier via une application externe..."
+msgstr "Fin de modification du fichier via une application externe"
 
 #: lib/ui/stdcontext.inc:381
 msgid "Split Inset|t"
