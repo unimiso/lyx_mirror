@@ -81,6 +81,9 @@
   sgmltools has been removed, this new support is always enabled.
   Having sgmltools installed or not will not change anything in LyX.
 
+* Postscript -> PDF convertor (ps2pdf) uses -dALLOWPSTRANSPARENCY by
+  default now (implemented since ghostscript 9.53.3, see bug #12303).
+
 !!!The following pref variables were added in 2.4:
 
 * \ct_additions_underlined true|false: determines whether additions in change tracking
