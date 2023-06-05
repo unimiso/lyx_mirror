@@ -112,6 +112,17 @@ will cause LyX to print myfile.lyx to the default printer, using dvips and
 the default print settings (which, of course, have to have been configured
 already).
 
+.SH QT OPTIONS
+\fBLyX\fR is a Qt-based application and thus recognizes common options implemented
+by Qt itself (notably \fB-platform\fR, \fB-style\fR, \fB-geometry\fR, \fB-session\fR,
+\fB-display\fR, etc). Please consult Qt documentation for further details, e.g.:
+.br
+
+https://doc.qt.io/qt-5/qapplication.html#QApplication
+.br
+https://doc.qt.io/qt-5/qguiapplication.html#supported-command-line-options
+.br
+
 .SH ENVIRONMENT
 .TP
 .B @LYX_DIR_VER@
@@ -194,4 +205,4 @@ Don't forget to mention which version you are having problems with!
 files. Consult the \fBtex2lyx@version_suffix@\fR documentation.
 
 .SH AUTHORS
-LyX is Copyright (C) 1995 by Matthias Ettrich, 1995-2019 LyX Team
+LyX is Copyright (C) 1995 by Matthias Ettrich, 1995-2023 LyX Team
