@@ -386,7 +386,7 @@ msgstr "Ouvrir le répertoire de la bibliothèque dans le navigateur de fichiers
 
 #: src/frontends/qt/ui/AboutUi.ui:165
 msgid "[[do]]&Open"
-msgstr "&Óuvrir"
+msgstr "&Ouvrir"
 
 #: src/frontends/qt/ui/AboutUi.ui:200
 msgid "User directory"
@@ -398,7 +398,7 @@ msgstr "Ouvrir le répertoire utilisateur dans le navigateur de fichiers"
 
 #: src/frontends/qt/ui/AboutUi.ui:234
 msgid "[[do]]O&pen"
-msgstr "&Ouvert"
+msgstr "O&uvrir"
 
 #: src/frontends/qt/ui/AboutUi.ui:263
 msgid "Credits"
