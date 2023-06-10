@@ -1746,7 +1746,9 @@ bool GuiView::event(QEvent * e)
 	}
 
 	case QEvent::ApplicationPaletteChange: {
-		// runtime switch from/to dark mode
+		// runtime switch from/to dark mode (Mac OS)
+		// We need to update metrics here to avoid a crash (#12786)
+		theBufferList().changed(true);
 		refillToolbars();
 		return QMainWindow::event(e);
 	}
@@ -1769,6 +1771,13 @@ bool GuiView::event(QEvent * e)
 				zoomValueChanged(factor);
 			}
 		}
+		return QMainWindow::event(e);
+	}
+
+	case QEvent::StyleChange: {
+		// This might be a change from dark to light mode (Linux)
+		// We need to update metrics here to avoid a crash (#12786)
+		theBufferList().changed(true);
 		return QMainWindow::event(e);
 	}
 
