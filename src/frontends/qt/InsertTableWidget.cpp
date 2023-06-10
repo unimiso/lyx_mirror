@@ -63,6 +63,13 @@ void InsertTableWidget::show(bool show)
 }
 
 
+void InsertTableWidget::hideEvent(QHideEvent * event)
+{
+	QWidget::hideEvent(event);
+	visible(false);
+}
+
+
 void InsertTableWidget::resetGeometry()
 {
 	QPoint p = parentWidget()->mapToGlobal(parentWidget()->geometry().bottomLeft());

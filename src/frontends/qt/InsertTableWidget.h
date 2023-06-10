@@ -41,6 +41,7 @@ protected Q_SLOTS:
 	void mouseReleaseEvent(QMouseEvent *) override;
 	void mousePressEvent(QMouseEvent *) override;
 	void paintEvent(QPaintEvent *) override;
+	void hideEvent(QHideEvent * event);
 
 private:
 	//! update the geometry
