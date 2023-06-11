@@ -1188,6 +1188,9 @@ int InsetMathMacroTemplate::write(TeXMathStream & os, bool overwriteRedefinition
 	int num_lines = 0;
 
 	if (os.latex()) {
+		if (definition().empty())
+			return num_lines;
+
 		if (optionals_ > 0) {
 			// macros with optionals use the xargs package, e.g.:
 			// \newcommandx{\foo}[2][usedefault, addprefix=\global,1=default]{#1,#2}
