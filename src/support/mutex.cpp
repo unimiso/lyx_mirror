@@ -20,7 +20,7 @@ namespace lyx {
 
 struct Mutex::Private
 {
-#if QT_VERSION < 0x060000
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
 	// QMutex::Recursive: less risks for dead-locks
 	Private() : qmutex_(QMutex::Recursive)
 	{
