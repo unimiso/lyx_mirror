@@ -4969,6 +4969,37 @@ def revert_ack_theorems(document):
         document.del_local_layout(ackStar_theorem_def)
         document.del_local_layout(ack_theorem_def)
 
+def revert_empty_macro(document):
+    '''Remove macros with empty LaTeX part'''
+    i = 0
+    while True:
+        i = find_token(document.body, '\\begin_inset FormulaMacro', i)
+        if i == -1:
+            break
+        cmd = document.body[i+1]
+        if cmd[-3:] != "}{}" and cmd[-3:] != "]{}":
+            i += 1
+            continue
+        j = find_end_of_inset(document.body, i)
+        document.body[i:j+1] = []
+
+
+def convert_empty_macro(document):
+    '''In the unlikely event someone defined a macro with empty LaTeX, add {}'''
+    i = 0
+    while True:
+        i = find_token(document.body, '\\begin_inset FormulaMacro', i)
+        if i == -1:
+            break
+        cmd = document.body[i+1]
+        if cmd[-3:] != "}{}" and cmd[-3:] != "]{}":
+            i += 1
+            continue
+        newstr = cmd[:-2] + "{\\{\\}}"
+        document.body[i+1] = newstr
+        i += 1
+
+
 ##
 # Conversion hub
 #
@@ -5045,10 +5076,12 @@ convert = [
            [612, [convert_starred_refs]],
            [613, []],
            [614, [convert_hyper_other]],
-           [615, [convert_acknowledgment,convert_ack_theorems]]
+           [615, [convert_acknowledgment,convert_ack_theorems]],
+           [616, [convert_empty_macro]]
           ]
 
-revert =  [[614, [revert_ack_theorems,revert_acknowledgment]],
+revert =  [[615, [revert_empty_macro]],
+           [614, [revert_ack_theorems,revert_acknowledgment]],
            [613, [revert_hyper_other]],
            [612, [revert_familydefault]],
            [611, [revert_starred_refs]],
