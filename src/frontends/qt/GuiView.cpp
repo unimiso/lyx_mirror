@@ -1745,14 +1745,6 @@ bool GuiView::event(QEvent * e)
 		return QMainWindow::event(e);
 	}
 
-	case QEvent::ApplicationPaletteChange: {
-		// runtime switch from/to dark mode (Mac OS)
-		// We need to update metrics here to avoid a crash (#12786)
-		theBufferList().changed(true);
-		refillToolbars();
-		return QMainWindow::event(e);
-	}
-
 	case QEvent::Gesture: {
 		QGestureEvent *ge = static_cast<QGestureEvent*>(e);
 		QGesture *gp = ge->gesture(Qt::PinchGesture);
@@ -1774,8 +1766,20 @@ bool GuiView::event(QEvent * e)
 		return QMainWindow::event(e);
 	}
 
+	// dark/light mode runtime switch support, OS-dependent.
+	// 1. Mac OS X
+	// Limit to Q_OS_MAC as this unnecessarily would also
+	// trigger on Linux with grave performance issues
+#ifdef Q_OS_MAC
+	case QEvent::ApplicationPaletteChange: {
+		// We need to update metrics here to avoid a crash (#12786)
+		theBufferList().changed(true);
+		refillToolbars();
+		return QMainWindow::event(e);
+	}
+#endif
+	// 2. Linux
 	case QEvent::StyleChange: {
-		// This might be a change from dark to light mode (Linux)
 		// We need to update metrics here to avoid a crash (#12786)
 		theBufferList().changed(true);
 		return QMainWindow::event(e);
