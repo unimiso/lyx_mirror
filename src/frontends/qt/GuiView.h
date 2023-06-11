@@ -535,6 +535,8 @@ private:
 	bool char_nb_count_enabled_;
 	/// Statusbar widget that shows zoom value
 	GuiClickableLabel * zoom_value_;
+	/// The zoom widget
+	QWidget * zoom_widget_;
 	/// The zoom slider widget
 	QSlider * zoom_slider_;
 	/// Zoom in ("+") Button

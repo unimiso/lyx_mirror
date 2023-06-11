@@ -658,8 +658,6 @@ GuiView::GuiView(int id)
 	connect(stat_counts_, SIGNAL(clicked()), this, SLOT(statsPressed()));
 
 	zoom_slider_ = new QSlider(Qt::Horizontal, statusBar());
-	// Small size slider for macOS to prevent the status bar from enlarging
-	zoom_slider_->setAttribute(Qt::WA_MacSmallSize);
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
 	zoom_slider_->setFixedWidth(fm.horizontalAdvance('x') * 15);
 #else
@@ -691,14 +689,22 @@ GuiView::GuiView(int id)
 	zoom_out_->setFixedSize(s);
 	zoom_out_->setAlignment(Qt::AlignCenter);
 
-	statusBar()->addPermanentWidget(zoom_out_);
+
+	zoom_widget_ = new QWidget(statusBar());
+	zoom_widget_->setAttribute(Qt::WA_MacSmallSize);
+	zoom_widget_->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+	zoom_widget_->setLayout(new QHBoxLayout());
+	zoom_widget_->layout()->setSpacing(5);
+	zoom_widget_->layout()->setContentsMargins(0,0,0,0);
+	zoom_widget_->layout()->addWidget(zoom_out_);
+	zoom_widget_->layout()->addWidget(zoom_slider_);
+	zoom_widget_->layout()->addWidget(zoom_in_);
+	statusBar()->addPermanentWidget(zoom_widget_);
 	zoom_out_->setEnabled(currentBufferView()
 			      && zoom_slider_->value() > zoom_slider_->minimum());
-	statusBar()->addPermanentWidget(zoom_slider_);
 	zoom_slider_->setEnabled(currentBufferView());
 	zoom_in_->setEnabled(currentBufferView()
 			     && zoom_slider_->value() < zoom_slider_->maximum());
-	statusBar()->addPermanentWidget(zoom_in_);
 
 	connect(zoom_slider_, SIGNAL(sliderMoved(int)), this, SLOT(zoomSliderMoved(int)));
 	connect(zoom_slider_, SIGNAL(valueChanged(int)), this, SLOT(zoomValueChanged(int)));
@@ -993,7 +999,7 @@ void GuiView::saveLayout() const
 	settings.setValue("layout", saveState(0));
 	settings.setValue("icon_size", toqstr(d.iconSize(iconSize())));
 	settings.setValue("zoom_value_visible", zoom_value_->isVisible());
-	settings.setValue("zoom_slider_visible", zoom_slider_->isVisible());
+	settings.setValue("zoom_slider_visible", zoom_widget_->isVisible());
 	settings.setValue("word_count_enabled", word_count_enabled_);
 	settings.setValue("char_count_enabled", char_count_enabled_);
 	settings.setValue("char_nb_count_enabled", char_nb_count_enabled_);
@@ -1044,9 +1050,7 @@ bool GuiView::restoreLayout()
 	zoom_value_->setVisible(settings.value("zoom_value_visible", true).toBool());
 
 	bool const show_zoom_slider = settings.value("zoom_slider_visible", true).toBool();
-	zoom_slider_->setVisible(show_zoom_slider);
-	zoom_in_->setVisible(show_zoom_slider);
-	zoom_out_->setVisible(show_zoom_slider);
+	zoom_widget_->setVisible(show_zoom_slider);
 
 	word_count_enabled_ = settings.value("word_count_enabled", true).toBool();
 	char_count_enabled_ = settings.value("char_count_enabled", true).toBool();
@@ -2566,7 +2570,7 @@ bool GuiView::getStatus(FuncRequest const & cmd, FuncStatus & flag)
 		if (cmd.argument() == "zoomlevel") {
 			flag.setOnOff(zoom_value_ ? zoom_value_->isVisible() : false);
 		} else if (cmd.argument() == "zoomslider") {
-			flag.setOnOff(zoom_slider_ ? zoom_slider_->isVisible() : false);
+			flag.setOnOff(zoom_widget_ ? zoom_widget_->isVisible() : false);
 		} else if (cmd.argument() == "statistics-w") {
 			flag.setOnOff(word_count_enabled_);
 		} else if (cmd.argument() == "statistics-cb") {
@@ -5108,9 +5112,7 @@ bool GuiView::lfunUiToggle(string const & ui_component)
 	} else if (ui_component == "zoomlevel") {
 		zoom_value_->setVisible(!zoom_value_->isVisible());
 	} else if (ui_component == "zoomslider") {
-		zoom_slider_->setVisible(!zoom_slider_->isVisible());
-		zoom_in_->setVisible(zoom_slider_->isVisible());
-		zoom_out_->setVisible(zoom_slider_->isVisible());
+		zoom_widget_->setVisible(!zoom_widget_->isVisible());
 	} else if (ui_component == "statistics-w") {
 		word_count_enabled_ = !word_count_enabled_;
 		if (statsEnabled())
