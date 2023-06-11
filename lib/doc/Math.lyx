@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 616
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -137,6 +137,7 @@
 \use_default_options false
 \begin_modules
 subequations
+logicalmkup
 \end_modules
 \maintain_unincluded_children no
 \language english
@@ -233,6 +234,7 @@ subequations
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\author -584632292 "Richard Kimberly Heck"
 \author -563046850 "Jean-Marc LASGOUTTES"
 \author 177693 "x"
 \author 5863208 "ab"
@@ -37676,6 +37678,21 @@ A=B
 \end_inset
 
 
+\change_inserted -584632292 1686503213
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1686503316
+As is obvious,
+ commands defined in the preamble do not display `nicely' in LyX itself.
+ Most such commands can be defined in LyX using `math macros',
+ however,
+ which we are about to explain,
+ and these do display nicely.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -38666,6 +38683,75 @@ Eating From The Right
 
 \end_inset
 
+
+\change_inserted -584632292 1686503329
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -584632292 1686503341
+Math Macros for External Commands
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1686503466
+Sometimes,
+ you may need to use a LaTeX package which defines a math command that is not natively supported in LyX.
+ This is easy enough to do:
+ Just include the package in the preamble and type out the command in math.
+ As with commands defined in the preamble,
+ however,
+ the display in LyX will not be `nice'.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1686503786
+As of LyX 2.4,
+ this problem has been solved.
+ Just define a math macro with empty LaTeX slot!
+ The LyX part will be used for display,
+ but no corresponding LaTeX will be output.
+ For example,
+ the 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1686503714
+godelnum.sty
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ package defines a Godelnum macro that puts a single argument into corner quotes.
+ To get a nice LyX display of this macro,
+ just do:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1686503742
+\begin_inset FormulaMacro
+\newcommand{\Godelnum}[1]{}
+{\ulcorner#1\urcorner}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1686503753
+The same trick,
+ of course,
+ can be used for commands defined in the preamble.
+\change_unchanged
 
 \end_layout
 
