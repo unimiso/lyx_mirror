@@ -17,6 +17,7 @@
 #include "FuncRequest.h"
 #include "FuncStatus.h"
 #include "LaTeXFeatures.h"
+#include "LyX.h"
 #include "output_docbook.h"
 #include "output_xhtml.h"
 #include "xml.h"
@@ -91,6 +92,12 @@ docstring InsetHyperlink::screenLabel() const
 
 void InsetHyperlink::doDispatch(Cursor & cur, FuncRequest & cmd)
 {
+	// Ctrl + click: open hyperlink
+	if (cmd.action() == LFUN_MOUSE_RELEASE && cmd.modifier() == ControlModifier) {
+			lyx::dispatch(FuncRequest(LFUN_INSET_EDIT));
+			return;
+		}
+
 	switch (cmd.action()) {
 
 	case LFUN_INSET_EDIT:
