@@ -289,7 +289,6 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 		return;
 	}
 
-	TocBuilder & b = backend.builder("equation");
 	// compute first and last item
 	row_type first = nrows();
 	for (row_type row = 0; row != nrows(); ++row)
@@ -303,8 +302,10 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 	row_type last = nrows() - 1;
 	for (; last != 0; --last)
 		if (numbered(last))
-			break;
-	// add equation numbers
+            break;
+
+    TocBuilder & b = backend.builder("equation");
+    // add equation numbers
 	b.pushItem(pit, docstring(), output_active);
 	if (first != last)
 		b.argumentItem(bformat(from_ascii("(%1$s-%2$s)"),
