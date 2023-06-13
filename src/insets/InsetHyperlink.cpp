@@ -94,9 +94,9 @@ void InsetHyperlink::doDispatch(Cursor & cur, FuncRequest & cmd)
 {
 	// Ctrl + click: open hyperlink
 	if (cmd.action() == LFUN_MOUSE_RELEASE && cmd.modifier() == ControlModifier) {
-			lyx::dispatch(FuncRequest(LFUN_INSET_EDIT));
-			return;
-		}
+		lyx::dispatch(FuncRequest(LFUN_INSET_EDIT));
+		return;
+	}
 
 	switch (cmd.action()) {
 
