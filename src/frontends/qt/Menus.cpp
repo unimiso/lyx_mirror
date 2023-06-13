@@ -1420,8 +1420,11 @@ void MenuDefinition::expandPasteRecent(Buffer const * buf)
 	docstring_list::const_iterator end = sel.end();
 
 	for (unsigned int index = 0; cit != end; ++cit, ++index) {
-		add(MenuItem(MenuItem::Command, toqstr(*cit) + '|',
-				    FuncRequest(LFUN_PASTE, convert<string>(index))));
+		docstring const i = convert<docstring>(index);
+		docstring const s = *cit;
+		docstring const lb = i + from_ascii(". ") + s + "|" + i;
+		add(MenuItem(MenuItem::Command, toqstr(lb),
+				    FuncRequest(LFUN_PASTE, i)));
 	}
 }
 
