@@ -10222,12 +10222,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10240,6 +10242,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10263,6 +10266,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -57874,6 +57878,29 @@ Open
 Recent
 \family default
 .
+\change_inserted 5863208 1686648655
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted 5863208 1686648655
+Fullscreen
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 5863208 1686648655
+Here you can specify what is hidden in the fullscreen mode.
+ With the option 
+\family sans
+Limit text width
+\family default
+ you can specify the width of the text in fullscreen mode.
+ This way you can display the text smaller than the screen;
+ the text then appears centered.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -58810,10 +58837,14 @@ nolink "false"
 \end_layout
 
 \begin_layout Subsubsection
+
+\change_deleted 5863208 1686648616
 Fullscreen
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted 5863208 1686648616
 Here you can specify what is hidden in the fullscreen mode.
  With the option 
 \family sans
@@ -58822,6 +58853,8 @@ Limit text width
  you can specify the width of the text in fullscreen mode.
  This way you can display the text smaller than the screen;
  the text then appears centered.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
