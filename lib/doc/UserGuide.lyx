@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 616
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -10222,14 +10222,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10242,7 +10240,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10266,7 +10263,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -33864,9 +33860,21 @@ to
 
 Label
 \family default
- sets the cursor before the referenced label.
+ sets the cursor before the referenced label
+\change_deleted 5863208 1686632729
+.
+
+\change_inserted 5863208 1686632729
+ 
 \change_inserted -584632292 1599757593
-(Ctrl-clicking on a cross-reference will also take you to its corresponding label.)
+(Ctrl-clicking on a cross-reference will also take you to its corresponding label
+\change_deleted 5863208 1686632734
+.
+\change_inserted -584632292 1599757593
+)
+\change_inserted 5863208 1686632735
+.
+
 \change_unchanged
  This entry will be renamed in the context menu of the label to 
 \family sans
@@ -34539,6 +34547,15 @@ to the field
 Additional options
 \family default
  in the PDF Properties dialog.
+\change_inserted 5863208 1686630948
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 5863208 1686631630
+To open the link while editing in \SpecialChar LyX
+ you can use context menu (or Ctrl + click).
 \change_inserted -584632292 1588303457
 
 \end_layout
