@@ -371,7 +371,7 @@ case "${QtVersion}" in
 	QtFrameworkVersion="5"
 	;;
 6*)
-	QtLibraries=${QtLibraries:-"QtCore5Compat QtDBus QtSvg QtXml QtPrintSupport QtSvgWidgets QtWidgets QtGui QtNetwork QtConcurrent QtCore"}
+	QtLibraries=${QtLibraries:-"QtDBus QtSvg QtXml QtPrintSupport QtSvgWidgets QtWidgets QtGui QtNetwork QtConcurrent QtCore"}
 	QtFrameworkVersion="A"
 	case "${EnableCXXMode}" in
 	--enable-cxx11|--enable-cxx-mode=11)
