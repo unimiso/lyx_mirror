@@ -161,6 +161,7 @@ logicalmkup
 \author -584632292 "Richard Kimberly Heck"
 \author -563046850 "Jean-Marc LASGOUTTES"
 \author -131811572 "Yuriy Skalko"
+\author 5381 ""
 \author 177693 "x"
 \author 5863208 "ab"
 \author 5863344 "Enrico Forestieri"
@@ -10222,14 +10223,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10242,7 +10241,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10266,7 +10264,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -14954,8 +14951,12 @@ Formatting
 \change_unchanged
 \SpecialChar menuseparator
 
+\change_deleted 5381 1686690158
+No
+\change_inserted 5381 1686690161
+Prevent
 \change_inserted 5863208 1602706556
-No Page Break
+ Page Break
 \change_unchanged
 
 \family default
@@ -49357,8 +49358,12 @@ nolink "false"
 
 \begin_layout Description
 
-\change_inserted -712698321 1607005924
+\change_deleted 5863208 1686701518
 No
+\change_inserted 5863208 1686701520
+Prevent
+\change_inserted -712698321 1607005924
+
 \begin_inset space ~
 \end_inset
 
