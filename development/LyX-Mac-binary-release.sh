@@ -803,41 +803,47 @@ EOF
 			cp -p "${libname}" "${condir}/PlugIns/${dirname}"
 		done
 	fi
+	echo Copy frameworks ${QtLibraries} ...
 	for libnm in ${QtLibraries} ; do
 		fwdir=$(framework_name "$libnm")
 		dirname=$(dirname "${fwdir}")
 		mkdir -p "${condir}/${dirname}"
 		dirname=$(basename "${fwdir}")
-		test -d "${condir}/${fwdir}" || (
-			echo Copy framework "${source}/lib/"$(basename "${fwdir}")
-			cp -pR "${source}/lib/"$(basename "${fwdir}") "${condir}/${fwdir}"
-			rm -f "${condir}/${fwdir}/${libnm}"_debug "${condir}/${fwdir}/${version}${libnm}"_debug
-			test -f "${condir}/${fwdir}/${libnm}".prl && mv "${condir}/${fwdir}/${libnm}".prl "${condir}/${fwdir}"/Resources
-			test -f "${condir}/${fwdir}/${libnm}"_debug.prl && mv "${condir}/${fwdir}/${libnm}"_debug.prl "${condir}/${fwdir}"/Resources
-			installname -id "@executable_path/../${fwdir}/${version}${libnm}" "${condir}/${fwdir}/${version}${libnm}"
-			find "${condir}/PlugIns" "${condir}/"$(dirname "${fwdir}") -name Headers -prune -o -type f -print | while read filename ; do
-				if [ "${filename}" != "${target}" ]; then
-					otool -L "${filename}" 2>/dev/null | sort -u | while read library ; do
-						# pattern match for: /path/to/qt/lib/QtGui.framework/Versions/4/QtGui (compatibility version 4.6.0, current version 4.6.2)
-						case "${library}" in
-						*@rpath/*"${libnm}"*"("*version*")"*)
-							# echo rpath based name for ${libnm} is ok.
-							;;
-						*"${libnm}"*"("*version*")"*)
-							installname -change\
-								"${source}/lib/${dirname}/${version}${libnm}"\
-								"@executable_path/../${fwdir}/${version}${libnm}"\
-								"${filename}"
-							;;
-						esac
-					done
-				fi
-			done
-		)
-		installname -change\
-			"${source}/lib/${dirname}/${version}${libnm}"\
-			"@executable_path/../${fwdir}/${version}${libnm}"\
-			"${target}"
+		libpath="${source}/lib/${dirname}"
+		if [ -d "${libpath}" ]; then
+			test -d "${condir}/${fwdir}" || (
+				echo Copy framework "${libpath}"
+				cp -pR "${libpath}" "${condir}/${fwdir}"
+				rm -f "${condir}/${fwdir}/${libnm}"_debug "${condir}/${fwdir}/${version}${libnm}"_debug
+				test -f "${condir}/${fwdir}/${libnm}".prl && mv "${condir}/${fwdir}/${libnm}".prl "${condir}/${fwdir}"/Resources
+				test -f "${condir}/${fwdir}/${libnm}"_debug.prl && mv "${condir}/${fwdir}/${libnm}"_debug.prl "${condir}/${fwdir}"/Resources
+				installname -id "@executable_path/../${fwdir}/${version}${libnm}" "${condir}/${fwdir}/${version}${libnm}"
+				find "${condir}/PlugIns" "${condir}/"$(dirname "${fwdir}") -name Headers -prune -o -type f -print | while read filename ; do
+					if [ "${filename}" != "${target}" ]; then
+						otool -L "${filename}" 2>/dev/null | sort -u | while read library ; do
+							# pattern match for: /path/to/qt/lib/QtGui.framework/Versions/4/QtGui (compatibility version 4.6.0, current version 4.6.2)
+							case "${library}" in
+							*@rpath/*"${libnm}"*"("*version*")"*)
+								# echo rpath based name for ${libnm} is ok.
+								;;
+							*"${libnm}"*"("*version*")"*)
+								installname -change\
+									"${source}/lib/${dirname}/${version}${libnm}"\
+									"@executable_path/../${fwdir}/${version}${libnm}"\
+									"${filename}"
+								;;
+							esac
+						done
+					fi
+				done
+			)
+			installname -change\
+				"${source}/lib/${dirname}/${version}${libnm}"\
+				"@executable_path/../${fwdir}/${version}${libnm}"\
+				"${target}"
+		else
+			echo Warning: Cannot copy framework for "$libnm" ... missing source "${libpath}"
+		fi
 	done
 	if [ -d "${source}"/translations ]; then
 		if [ ! -d "${condir}/translations" ]; then
