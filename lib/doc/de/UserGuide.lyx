@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 616
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -9301,10 +9301,12 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim
+
 Dies ist Unformatiert.
 \end_layout
 
 \begin_layout Verbatim
+
 Die folgenden 2 Zeilen sind leer:
 \end_layout
 
@@ -9317,6 +9319,7 @@ Die folgenden 2 Zeilen sind leer:
 \end_layout
 
 \begin_layout Verbatim
+
 Fast alles ist in Unformatiert erlaubt:"%&$§#~'`
 \backslash
 }][{|
@@ -9342,6 +9345,7 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim*
+
 Dies ist Unformatiert*.
 \end_layout
 
@@ -31248,6 +31252,16 @@ blue
 .
 \end_layout
 
+\begin_layout Standard
+Direkt aus \SpecialChar LyX
+ können Sie einen Link über das Kontextmenü oder direkt mit 
+\family sans
+Strg+rechter Maustaste
+\family default
+ öffnen.
+ 
+\end_layout
+
 \begin_layout Section
 Zähler
 \begin_inset Index idx
@@ -36497,7 +36511,7 @@ Es gibt auch umgekehrte Zweig-Einfügungen,
 \emph on
 nicht
 \emph default
- aktiviert ist.
+ aktiviert ist (diese Zweige sind mit einem ~ vor dem Namen gekennzeichnet).
  Dadurch kann leicht alternativer Text für verschiedene Versionen eines Dokuments eingegeben werden.
  Um zu schauen,
  ob eine spezifische Einfügung umgekehrt ist,
@@ -36757,6 +36771,22 @@ Anpassung
 Flexible Einfügungen und InsetLayout
 \emph default
 ).
+\end_layout
+
+\begin_layout Standard
+Falls es Ihnen wichtig ist,
+ dass alle Zweige eines Namens gleichzeitig geöffnet oder geschlossen sind,
+ können Sie die \SpecialChar LyX
+-Funktion 
+\family typewriter
+branch-sync-all 
+\family default
+verwenden.
+ Diese öffnet oder schließt alle Zweige desselben Namens,
+ je nachdem,
+ ob der Zweig an der Cursorposition geöffnet oder geschlossen ist.
+ Sie können dieser Funktion natürlich auch ein eigenes Tastenkürzel zuweisen oder es zu einem benutzerdefinierten Kontextmenü für Zweige hinzufügen.
+ 
 \end_layout
 
 \begin_layout Section
@@ -39585,7 +39615,7 @@ Einstellungen
 \end_layout
 
 \begin_layout Subsection
-Benutzung mit regulären Ausdrücken
+Erweiterte Möglichkeiten
 \end_layout
 
 \begin_layout Standard
@@ -39669,15 +39699,20 @@ Suchen
 
 \begin_layout Enumerate
 Suche nach Text in einem bestimmten Stil:
- ist die Option 
+ ist die Optionen 
 \family sans
-Ignoriere Format
+Sucheintragsformatierung beachten bzgl.
+
 \family default
  im Reiter 
 \family sans
 Einstellungen
 \family default
- ausgeschaltet,
+ ausgewählt und der Knopf 
+\family sans
+Alle auswählen
+\family default
+ im selben Abschnitt gedrückt,
  kann man den regulären Ausdruck 
 \series bold
 
@@ -39692,8 +39727,67 @@ Einstellungen
 \end_inset
 
  in einer nummerierten Liste oder einer Abschnittsüberschrift findet alle nummerierten Listen oder Abschnittsüberschriften.
+ Die Bedeutung der verschiedenen Stiloptionen (falls ausgewählt) ist:
 \end_layout
 
+\begin_deeper
+\begin_layout Description
+Sprache erlaubt es,
+ nach Stellen in einer bestimmten Sprache zu suchen (relevant sind hier,
+ wie bei den anderen Optionen,
+ die Einstellungen des Suchbegriffs)
+\end_layout
+
+\begin_layout Description
+Schriftfarbe sucht nur nach farbigem Text
+\end_layout
+
+\begin_layout Description
+Schriftfamilie sucht nur nach bestimmten Schriftfamilien wie serifenlos oder Schreibmaschine
+\end_layout
+
+\begin_layout Description
+Strichstärke schränkt die Suche auf fett gedruckten Text etc.
+ ein
+\end_layout
+
+\begin_layout Description
+Schriftschnitt entsprechend auf kursiv,
+ aufrecht etc.
+\end_layout
+
+\begin_layout Description
+Schriftgrad berücksichtigt die Schriftgröße
+\end_layout
+
+\begin_layout Description
+Hervorh./Eigenname berücksichtigt,
+ ob der Suchbegriff hervorgehoben oder als Eigenname formatiert ist
+\end_layout
+
+\begin_layout Description
+Unterstreichung entsprechend,
+ ob er unterstrichen ist
+\end_layout
+
+\begin_layout Description
+Durchstreichung entsprechend,
+ ob er durchgestrichen ist
+\end_layout
+
+\begin_layout Description
+Löschung
+\begin_inset space ~
+\end_inset
+
+(Änderungen) sucht auch in im Änderungsmodus gelöschten Passagen
+\end_layout
+
+\begin_layout Description
+Überschriftenformat achtet auf Überschriftenformatierungen
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 Allgemein können Referenzen auf (Unter)Ausdrücke in Regexp wie üblich verwendet werden:
  Gruppieren eines Teils des Ausdrucks mit runden Klammern 
@@ -39715,9 +39809,17 @@ Allgemein können Referenzen auf (Unter)Ausdrücke in Regexp wie üblich verwend
 \begin_inset Newline newline
 \end_inset
 
-[[:space:]]([[:alpha:]]+)[[:space:]]
+
 \backslash
-1[[:space:]]
+b(
+\backslash
+w+)
+\backslash
+s
+\backslash
+1
+\backslash
+b
 \begin_inset Newline newline
 \end_inset
 
@@ -39727,7 +39829,7 @@ zu suchen,
 \end_layout
 
 \begin_layout Standard
-Die Verwendung von Referenzen im ersetzten Text ist (noch) nicht implementiert.
+Die Verwendung von Referenzen im ersetzten Text ist (noch) nicht vollständig implementiert.
 \end_layout
 
 \begin_layout Standard
@@ -39862,11 +39964,11 @@ Alle von \SpecialChar LyX
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-https://sourceforge.net/projects/lyxwininstaller/files/hunspell/
+https://www.lyx.org/trac/export/HEAD/lyxsvn/dictionaries/trunk/dicts/
 \end_layout
 
 \end_inset
@@ -39879,7 +39981,13 @@ Es gibt 2
 \begin_inset space ~
 \end_inset
 
-Dateien für jede Sprache.
+Dateien für jede Sprache (verwenden Sie den Link 
+\emph on
+\lang english
+Original Format
+\emph default
+\lang ngerman
+ am Fuß der genannten Website).
  Um ein Wörterbuch unter Windows zu installieren,
  kopiert man beide Dateien in \SpecialChar LyX
 ’ Installationsunterordner 
@@ -40265,11 +40373,11 @@ weitere Wörterbücher installieren möchten,
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-https://sourceforge.net/projects/lyxwininstaller/files/thesaurus/
+https://www.lyx.org/trac/export/HEAD/lyxsvn/dictionaries/trunk/thes/
 \end_layout
 
 \end_inset
@@ -50791,7 +50899,7 @@ nolink "false"
 \end_layout
 
 \begin_layout Section
-Formate
+Ausgabe
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Dokument-Formate"
@@ -50805,6 +50913,39 @@ name "sec:Dokument-Formate"
 Hier können Sie einige Spezifika für die Ausgabe des Dokuments festlegen:
 \end_layout
 
+\begin_layout Description
+LyX-Format Die Option 
+\family sans
+Benutzervariable Dokument-Eigenschaften speichern
+\family default
+ legt fest,
+ ob auch Einstellungen in die Datei gespeichert werden,
+ die oft geändert werden oder die benutzerspezifisch sind.
+ Die Eigenschaften,
+ die von der Option betroffen sind,
+ sind momentan
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+die Aktivierung der Änderungsverfolgung
+\end_layout
+
+\begin_layout Itemize
+die Ausgabe verfolgter Änderungen
+\end_layout
+
+\begin_layout Itemize
+die Speicherung des Dateipfads zum Dokument
+\end_layout
+
+\begin_layout Standard
+Die Deaktivierung der Option kann Probleme verhindern,
+ die auftreten wenn ein Dokument von mehreren Personen geändert wird und\SpecialChar breakableslash
+oder wenn ein Versionskontrollsystem verwendet wird.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 Voreingestelltes
 \begin_inset space ~
@@ -50841,37 +50982,6 @@ nolink "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Description
-Erlaube
-\begin_inset space ~
-\end_inset
-
-den
-\begin_inset space ~
-\end_inset
-
-Aufruf
-\begin_inset space ~
-\end_inset
-
-externer
-\begin_inset space ~
-\end_inset
-
-Programme Wenn dies aktiviert ist,
- wird \SpecialChar LaTeX
- mit der Option 
-\family typewriter
--shell-escape
-\family default
- ausgeführt.
- Dies ist zur Nutzung mancher Pakete nötig.
- Beachten Sie,
- dass dies Sicherheitsrisiken birgt!
- Aktivieren Sie dies also nur wenn unbedingt nötig und Sie absolut sicher sind,
- was Sie tun.
 \end_layout
 
 \begin_layout Description
@@ -50950,36 +51060,6 @@ beweglichen Argumenten
 
 \end_deeper
 \begin_layout Description
-Mit
-\begin_inset space ~
-\end_inset
-
-der
-\begin_inset space ~
-\end_inset
-
-Ausgabe
-\begin_inset space ~
-\end_inset
-
-synchronisieren Einstellungen für das Menü 
-\family sans
-Navigieren\SpecialChar menuseparator
-Vorwärtssuche
-\family default
-.
- Siehe Abschnitt 
-\emph on
-DVI/PDF Rückwärtssuche
-\emph default
- der 
-\emph on
-Handbuchergänzungen
-\emph default
- für eine detaillierte Beschreibung.
-\end_layout
-
-\begin_layout Description
 XHTML-Ausgabe-Optionen Einstellungen für das Export-Format 
 \family sans
 LyXHTML
@@ -51020,38 +51100,45 @@ Handbuchergänzungen
 \end_layout
 
 \begin_layout Description
-LyX-Format Die Option 
-\family sans
-Benutzervariable Dokument-Eigenschaften speichern
+DocBook-Ausgabe-Optionen erlaubt Einstellungen betreffend der DocBook-Ausgabe.
+ Genauere Informationen hierzu finden Sie im Kapitel 
+\emph on
+DocBook-Ausgabe
+\emph default
+ in den Handbuchergänzungen.
+\end_layout
+
+\begin_layout Description
+Erlaube
+\begin_inset space ~
+\end_inset
+
+den
+\begin_inset space ~
+\end_inset
+
+Aufruf
+\begin_inset space ~
+\end_inset
+
+externer
+\begin_inset space ~
+\end_inset
+
+Programme Wenn dies aktiviert ist,
+ wird \SpecialChar LaTeX
+ mit der Option 
+\family typewriter
+-shell-escape
 \family default
- legt fest,
- ob auch Einstellungen in die Datei gespeichert werden,
- die oft geändert werden oder die benutzerspezifisch sind.
- Die Eigenschaften,
- die von der Option betroffen sind,
- sind momentan
+ ausgeführt.
+ Dies ist zur Nutzung mancher Pakete nötig.
+ Beachten Sie,
+ dass dies Sicherheitsrisiken birgt!
+ Aktivieren Sie dies also nur wenn unbedingt nötig und Sie absolut sicher sind,
+ was Sie tun.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-die Aktivierung der Änderungsverfolgung
-\end_layout
-
-\begin_layout Itemize
-die Ausgabe verfolgter Änderungen
-\end_layout
-
-\begin_layout Itemize
-die Speicherung des Dateipfads zum Dokument
-\end_layout
-
-\begin_layout Standard
-Die Deaktivierung der Option kann Probleme verhindern,
- die auftreten wenn ein Dokument von mehreren Personen geändert wird und\SpecialChar breakableslash
-oder wenn ein Versionskontrollsystem verwendet wird.
-\end_layout
-
-\end_deeper
 \begin_layout Section
 \SpecialChar LaTeX
 -Vorspann
@@ -51377,8 +51464,18 @@ geöffnet
  anzeigen soll.
 \end_layout
 
+\begin_layout Subsubsection
+Vollbild
+\end_layout
+
+\begin_layout Standard
+Hier können Sie festlegen,
+ was im Vollbildmodus angezeigt wird.
+ Mit der Option 
+\end_layout
+
 \begin_layout Subsection
-Dokument-Handhabung
+Datei-Handhabung
 \end_layout
 
 \begin_layout Subsubsection
@@ -52202,22 +52299,6 @@ nolink "false"
 \end_inset
 
  erläutert die Details.
-\end_layout
-
-\begin_layout Subsubsection
-Vollbild
-\end_layout
-
-\begin_layout Standard
-Hier kann eingestellt werden,
- was im Vollbildmodus ausgeblendet wird.
- Die Option 
-\family sans
-Begrenze Textbreite
-\family default
- legt die Breite des Textes im Vollbildmodus fest.
- Auf diese Weise kann der Text schmaler als der Bildschirm angezeigt werden.
- Der Text erscheint dann zentriert.
 \end_layout
 
 \begin_layout Subsection
