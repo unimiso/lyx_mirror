@@ -80,6 +80,8 @@ InsetParamsDialog::InsetParamsDialog(GuiView & lv, InsetParamsWidget * widget)
 	widget->dialogTitle()), d(new Private)
 {
 	setupUi(this);
+	// Remove margins since the widget is embedded in dialog which provides them
+	widget->layout()->setContentsMargins(0, 0, 0, 0);
 	setInsetParamsWidget(widget);
 	immediateApplyCB->setChecked(false);
 	synchronizedCB->setChecked(true);
@@ -87,6 +89,8 @@ InsetParamsDialog::InsetParamsDialog(GuiView & lv, InsetParamsWidget * widget)
 	setFocusProxy(widget);
 	newPB = buttonBox->addButton(qt_("Ne&w Inset"),
 			     QDialogButtonBox::ActionRole);
+	// fix height to minimum
+	setFixedHeight(sizeHint().height());
 }
 
 InsetParamsDialog::~InsetParamsDialog()
