@@ -10223,12 +10223,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10241,6 +10243,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10264,6 +10267,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -34560,7 +34564,19 @@ Additional options
 
 \change_inserted 5863208 1686631630
 To open the link while editing in \SpecialChar LyX
- you can use context menu (or Ctrl + click).
+ you can use context menu (or 
+\change_inserted -712698321 1686813434
+directly via 
+\change_inserted 5863208 1686631630
+
+\family sans
+Ctrl + 
+\change_inserted -712698321 1686813424
+right mouse button
+\family default
+ 
+\change_inserted 5863208 1686631630
+click).
 \change_inserted -584632292 1588303457
 
 \end_layout
@@ -41545,13 +41561,91 @@ Flex insets and InsetLayout
 \begin_layout Standard
 
 \change_inserted 5863208 1650148601
-In case one extensively needs syncing activation branch status with open/close status of all branch insets in the document we provide 
+In case 
+\change_deleted -712698321 1686813809
+one
+\change_inserted -712698321 1686813809
+you
+\change_inserted 5863208 1650148601
+ 
+\change_deleted -712698321 1686813823
+extensively
+\change_inserted -712698321 1686813823
+often
+\change_inserted 5863208 1650148601
+ need
+\change_deleted -712698321 1686813812
+s
+\change_inserted 5863208 1650148601
+ 
+\change_inserted -712698321 1686813845
+to keep all branches of a given name in 
+\change_inserted 5863208 1650148601
+sync
+\change_deleted -712698321 1686813847
+ing
+\change_inserted 5863208 1650148601
+ 
+\change_inserted -712698321 1686813855
+as far as their 
+\change_deleted -712698321 1686813873
+activation branch status with 
+\change_inserted 5863208 1650148601
+open/close status 
+\change_inserted -712698321 1686813886
+is concerned,
+ you can use the 
+\change_deleted -712698321 1686813893
+of all branch insets in the document we provide
+\change_inserted -712698321 1686813893
+\SpecialChar LyX
+ function
+\change_inserted 5863208 1650148601
+ 
 \family typewriter
 branch-sync-all
+\change_deleted -712698321 1686813903
+
 \family default
  \SpecialChar LyX
- function,
- which can be bound to keyboard shortcut or added to user-defined context menu of branch inset.
+ function
+\change_inserted -712698321 1686813949
+ that sets the open/close state to all branches of the same name from the branch currently at cursor.
+\change_deleted -712698321 1686813904
+,
+
+\change_inserted 5863208 1650148601
+ 
+\change_inserted -712698321 1686813911
+You can bind it 
+\change_deleted -712698321 1686813959
+which can be bound
+\change_inserted 5863208 1650148601
+ to 
+\change_inserted -712698321 1686813962
+a 
+\change_inserted 5863208 1650148601
+keyboard shortcut or add
+\change_deleted -712698321 1686813966
+ed
+\change_inserted -712698321 1686813966
+ it
+\change_inserted 5863208 1650148601
+ to 
+\change_inserted -712698321 1686813971
+a 
+\change_inserted 5863208 1650148601
+user-defined context menu 
+\change_inserted -712698321 1686813975
+for 
+\change_deleted -712698321 1686813976
+of 
+\change_inserted 5863208 1650148601
+branch inset
+\change_inserted -712698321 1686813978
+s
+\change_inserted 5863208 1650148601
+.
 \change_unchanged
 
 \end_layout
@@ -44745,10 +44839,14 @@ Searching for all text with a given style:
 un
 \change_unchanged
 checking the 
-\change_inserted 1549938239 1651390710
+\change_deleted -712698321 1686814407
 
 \family sans
-'Adhere to search string formatting of'
+'
+\change_inserted 1549938239 1651390710
+Adhere to search string formatting of
+\change_deleted -712698321 1686814409
+'
 \change_deleted 1549938239 1651390724
 Ignore format
 \change_unchanged
@@ -44756,13 +44854,35 @@ Ignore format
 \family default
  
 \change_inserted 1549938239 1651390961
-and the 'Select all' 
+and the 
+\change_deleted -712698321 1686814412
+'
+\change_inserted 1549938239 1651390961
+
+\family sans
+Select all
+\change_deleted -712698321 1686814414
+
+\family default
+'
+\change_inserted 1549938239 1651390961
+ 
+\change_deleted -712698321 1686814534
+option
+\change_inserted -712698321 1686814534
+button
 \change_unchanged
-option from the 
+ 
+\change_deleted -712698321 1686814548
+from the 
 \family sans
 Settings
 \family default
- tab,
+ tab
+\change_inserted -712698321 1686814554
+in this section pressed
+\change_unchanged
+,
  entering a 
 \series bold
 
@@ -44790,6 +44910,12 @@ Settings
 
 \change_inserted 1549938239 1651391862
 Language Allows searching for text in specific language
+\change_inserted -712698321 1686814961
+ (relevant here is,
+ as with the other options,
+ the setting of the search string)
+\change_inserted 1549938239 1651391862
+
 \end_layout
 
 \begin_layout Description
@@ -45088,7 +45214,7 @@ All spell-checker dictionaries supported by \SpecialChar LyX
 
 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
