@@ -1759,6 +1759,10 @@ void BufferView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 	}
 
 	case LFUN_INDEX_TAG_ALL: {
+		if (cur.pos() == 0)
+			// nothing precedes
+			break;
+
 		Inset * ins = cur.nextInset();
 		if (!ins || ins->lyxCode() != INDEX_CODE)
 			// not at index inset
@@ -1795,6 +1799,8 @@ void BufferView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 		// Get word or selection
 		cur.text()->selectWord(cur, WHOLE_WORD);
 		docstring const searched_string = cur.selectionAsString(false);
+		if (searched_string.empty())
+			break;
 		// Start from the beginning
 		lyx::dispatch(FuncRequest(LFUN_BUFFER_BEGIN));
 		while (findOne(this, searched_string,

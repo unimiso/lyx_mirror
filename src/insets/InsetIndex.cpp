@@ -27,6 +27,7 @@
 #include "IndicesList.h"
 #include "InsetList.h"
 #include "Language.h"
+#include "Paragraph.h"
 #include "LaTeX.h"
 #include "LaTeXFeatures.h"
 #include "Lexer.h"
@@ -693,8 +694,31 @@ bool InsetIndex::getStatus(Cursor & cur, FuncRequest const & cmd,
 	case LFUN_INDEXMACRO_INSERT:
 		return macrosPossible(cmd.getArg(0));
 
-	case LFUN_INDEX_TAG_ALL:
-		return true;
+	case LFUN_INDEX_TAG_ALL: {
+		if (cur.pos() == 0)
+			// nothing to tag
+			return false;
+		// move backwards into preceding word
+		// skip over other index insets
+		DocIterator dit(cur);
+		dit.backwardPosIgnoreCollapsed();
+		while (true) {
+			if (dit.inset().lyxCode() == INDEX_CODE)
+				dit.pop_back();
+			else if (dit.prevInset() && dit.prevInset()->lyxCode() == INDEX_CODE)
+				dit.backwardPosIgnoreCollapsed();
+			else
+				break;
+		}
+		if (!dit.inTexted())
+			// action not possible
+			return false;
+		// Check if we actually have a word to tag
+		FontSpan tw = dit.locateWord(WHOLE_WORD);
+
+		// action possible if we have a word of at least one char
+		return (tw.size() > 0);
+	}
 
 	default:
 		return InsetCollapsible::getStatus(cur, cmd, flag);
