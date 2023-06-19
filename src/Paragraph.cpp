@@ -1999,7 +1999,7 @@ Font const & Paragraph::getFirstFontSettings(BufferParams const & bparams) const
 
 
 // Gets the fully instantiated font at a given position in a paragraph
-// This is basically the same function as Text::GetFont() in text2.cpp.
+// This is basically the same function as TextMetrics::displayFont().
 // The difference is that this one is used for generating the LaTeX file,
 // and thus cosmetic "improvements" are disallowed: This has to deliver
 // the true picture of the buffer. (Asger)
@@ -2122,10 +2122,8 @@ void Paragraph::setFont(pos_type pos, Font const & font)
 {
 	LASSERT(pos <= size(), return);
 
-	// First, reduce font against layout/label font
-	// Update: The setCharFont() routine in text2.cpp already
-	// reduces font, so we don't need to do that here. (Asger)
-
+	// Text::setCharFont() already reduces font against layout/label
+	// font, so we don't need to do that here. (Asger)
 	d->fontlist_.set(pos, font);
 }
 
