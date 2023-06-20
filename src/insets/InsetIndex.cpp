@@ -1175,7 +1175,7 @@ string InsetIndex::contextMenuName() const
 string InsetIndex::contextMenu(BufferView const & bv, int x, int y) const
 {
 	// We override the implementation of InsetCollapsible,
-	// because we have eytra entries.
+	// because we have extra entries.
 	string owncm = "context-edit-index;";
 	return owncm + InsetCollapsible::contextMenu(bv, x, y);
 }
