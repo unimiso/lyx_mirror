@@ -3746,11 +3746,12 @@ void insertSeparator(Cursor const & cur, depth_type const depth)
 }
 
 
-void outline(OutlineOp mode, Cursor & cur, Text * text)
+void outline(OutlineOp mode, Cursor & cur)
 {
 	Buffer & buf = *cur.buffer();
+	Text & text = *cur.text();
 	pit_type & pit = cur.pit();
-	ParagraphList & pars = buf.text().paragraphs();
+	ParagraphList & pars = text.paragraphs();
 	ParagraphList::iterator const bgn = pars.begin();
 	// The first paragraph of the area to be copied:
 	ParagraphList::iterator start = pars.iterator_at(pit);
@@ -3759,7 +3760,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 	ParagraphList::iterator const end = pars.end();
 	depth_type const current_depth = cur.paragraph().params().depth();
 
-	int const thistoclevel = buf.text().getTocLevel(distance(bgn, start));
+	int const thistoclevel = text.getTocLevel(distance(bgn, start));
 	int toclevel;
 
 	// Move out (down) from this section header
@@ -3768,7 +3769,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 
 	// Seek the one (on same level) below
 	for (; finish != end; ++finish) {
-		toclevel = buf.text().getTocLevel(distance(bgn, finish));
+		toclevel = text.getTocLevel(distance(bgn, finish));
 		if (toclevel != Layout::NOT_IN_TOC && toclevel <= thistoclevel)
 			break;
 	}
@@ -3785,7 +3786,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 			// Search previous same-level header above
 			do {
 				--dest;
-				toclevel = buf.text().getTocLevel(distance(bgn, dest));
+				toclevel = text.getTocLevel(distance(bgn, dest));
 			} while(dest != bgn
 				&& (toclevel == Layout::NOT_IN_TOC
 				    || toclevel > thistoclevel));
@@ -3819,7 +3820,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 				// Get the parent paragraph (outer in nested context)
 				pit_type const parent =
 					before->params().depth() > current_depth
-						? text->depthHook(distance(bgn, before), current_depth)
+						? text.depthHook(distance(bgn, before), current_depth)
 						: distance(bgn, before);
 				// If a environment with same layout preceeds the moved one in the new
 				// position, and there is no separator yet, insert one.
@@ -3845,7 +3846,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 			ParagraphList::iterator dest = next(finish, 1);
 			// Go further down to find header to insert in front of:
 			for (; dest != end; ++dest) {
-				toclevel = buf.text().getTocLevel(distance(bgn, dest));
+				toclevel = text.getTocLevel(distance(bgn, dest));
 				if (toclevel != Layout::NOT_IN_TOC
 				      && toclevel <= thistoclevel)
 					break;
@@ -3861,7 +3862,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 			// Get the parent paragraph (outer in nested context)
 			pit_type const parent =
 				before->params().depth() > current_depth
-					? text->depthHook(distance(bgn, before), current_depth)
+					? text.depthHook(distance(bgn, before), current_depth)
 					: distance(bgn, before);
 			// If a environment with same layout preceeds the moved one in the new
 			// position, and there is no separator yet, insert one.
@@ -3902,7 +3903,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 			ParagraphList::iterator cstart = start;
 			bool strucchange = false;
 			for (; cstart != finish; ++cstart) {
-				toclevel = buf.text().getTocLevel(distance(bgn, cstart));
+				toclevel = text.getTocLevel(distance(bgn, cstart));
 				if (toclevel == Layout::NOT_IN_TOC)
 					continue;
 
@@ -3938,7 +3939,7 @@ void outline(OutlineOp mode, Cursor & cur, Text * text)
 			pit_type const len = distance(start, finish);
 			buf.undo().recordUndo(cur, pit, pit + len - 1);
 			for (; start != finish; ++start) {
-				toclevel = buf.text().getTocLevel(distance(bgn, start));
+				toclevel = text.getTocLevel(distance(bgn, start));
 				if (toclevel == Layout::NOT_IN_TOC)
 					continue;
 
@@ -6247,7 +6248,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 
 	case LFUN_OUTLINE_UP: {
 		pos_type const opos = cur.pos();
-		outline(OutlineUp, cur, this);
+		outline(OutlineUp, cur);
 		setCursor(cur, cur.pit(), opos);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
@@ -6256,7 +6257,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 
 	case LFUN_OUTLINE_DOWN: {
 		pos_type const opos = cur.pos();
-		outline(OutlineDown, cur, this);
+		outline(OutlineDown, cur);
 		setCursor(cur, cur.pit(), opos);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
@@ -6264,13 +6265,13 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 	}
 
 	case LFUN_OUTLINE_IN:
-		outline(OutlineIn, cur, this);
+		outline(OutlineIn, cur);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
 		break;
 
 	case LFUN_OUTLINE_OUT:
-		outline(OutlineOut, cur, this);
+		outline(OutlineOut, cur);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
 		break;
@@ -6879,9 +6880,7 @@ bool Text::getStatus(Cursor & cur, FuncRequest const & cmd,
 	case LFUN_OUTLINE_DOWN:
 	case LFUN_OUTLINE_IN:
 	case LFUN_OUTLINE_OUT:
-		// FIXME: LyX is not ready for outlining within inset.
-		enable = isMainText()
-			&& cur.buffer()->text().getTocLevel(cur.pit()) != Layout::NOT_IN_TOC;
+		enable = cur.text()->getTocLevel(cur.pit()) != Layout::NOT_IN_TOC;
 		break;
 
 	case LFUN_NEWLINE_INSERT:
