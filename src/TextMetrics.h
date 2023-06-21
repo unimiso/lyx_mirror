@@ -79,12 +79,18 @@ public:
 	/// cache. Related to BufferView::updatePosCache.
 	void updatePosCache(pit_type pit) const;
 
-	/// Gets the fully instantiated font at a given position in a paragraph
+	/// Gets the fully instantiated font at a given position in a paragraph.
 	/// Basically the same routine as Paragraph::getFont() in Paragraph.cpp.
 	/// The difference is that this one is used for displaying, and thus we
 	/// are allowed to make cosmetic improvements. For instance make footnotes
 	/// smaller. (Asger)
 	Font displayFont(pit_type pit, pos_type pos) const;
+
+	/// Gets the fully instantiated label font of a paragraph.
+	/// Basically the same routine as displayFont, but specialized for
+	/// a layout font.
+	Font labelDisplayFont(pit_type pit) const;
+
 
 	/// There are currently two font mechanisms in LyX:
 	/// 1. The font attributes in a lyxtext, and

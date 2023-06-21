@@ -289,55 +289,64 @@ void TextMetrics::applyOuterFont(Font & font) const
 }
 
 
+// This is an arbitrary magic value
+static const pos_type force_label = -12345;
+
+// if pos == force_label, this function will return the label font instead.
+// This undocumented and only for use by labelDisplayFont()
 Font TextMetrics::displayFont(pit_type pit, pos_type pos) const
 {
-	LASSERT(pos >= 0, { static Font f; return f; });
+	LASSERT(pos >= 0 || pos == force_label, { static Font f; return f; });
 
 	ParagraphList const & pars = text_->paragraphs();
 	Paragraph const & par = pars[pit];
 	Layout const & layout = par.layout();
 	Buffer const & buffer = bv_->buffer();
 	// FIXME: broken?
-	BufferParams const & params = buffer.params();
-	pos_type const body_pos = par.beginOfBody();
+	BufferParams const & bparams = buffer.params();
+	bool const label = pos < par.beginOfBody() || pos == force_label;
+
+	Font f = (pos == force_label) ? Font(inherit_font, bparams.language)
+	                              : par.getFontSettings(bparams, pos);
+	FontInfo const & lf = label ? layout.labelfont : layout.font;
 
 	// We specialize the 95% common case:
 	if (!par.getDepth()) {
-		Font f = par.getFontSettings(params, pos);
 		if (!text_->isMainText())
 			applyOuterFont(f);
-		bool lab = layout.labeltype == LABEL_MANUAL && pos < body_pos;
 
-		FontInfo const & lf = lab ? layout.labelfont : layout.font;
-		FontInfo rlf = lab ? layout.reslabelfont : layout.resfont;
+		FontInfo rlf = label ? layout.reslabelfont : layout.resfont;
 
 		// In case the default family has been customized
 		if (lf.family() == INHERIT_FAMILY)
-			rlf.setFamily(params.getFont().fontInfo().family());
+			rlf.setFamily(bparams.getFont().fontInfo().family());
 		f.fontInfo().realize(rlf);
 		return f;
 	}
 
-	// The uncommon case need not be optimized as much
-	FontInfo const & layoutfont = pos < body_pos ?
-		layout.labelfont : layout.font;
-
-	Font font = par.getFontSettings(params, pos);
-	font.fontInfo().realize(layoutfont);
+	// The uncommon case need not be optimized as much.
+	// FIXME : the two code paths seem different in function.
+	f.fontInfo().realize(lf);
 
 	if (!text_->isMainText())
-		applyOuterFont(font);
+		applyOuterFont(f);
 
 	// Realize against environment font information
 	// NOTE: the cast to pit_type should be removed when pit_type
 	// changes to a unsigned integer.
 	if (pit < pit_type(pars.size()))
-		font.fontInfo().realize(text_->outerFont(pit).fontInfo());
+		f.fontInfo().realize(text_->outerFont(pit).fontInfo());
 
 	// Realize with the fonts of lesser depth.
-	font.fontInfo().realize(params.getFont().fontInfo());
+	f.fontInfo().realize(bparams.getFont().fontInfo());
 
-	return font;
+	return f;
+}
+
+
+Font TextMetrics::labelDisplayFont(pit_type pit) const
+{
+	return displayFont(pit, force_label);
 }
 
 
