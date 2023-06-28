@@ -409,6 +409,10 @@ void InsetListings::latex(otexstream & os, OutputParams const & runparams) const
 		// Switch back
 		switchEncoding(os.os(), buffer().params(),
 			       runparams, *save_enc, true, true);
+        if (!isInline)
+            // Go out of vertical mode. Otherwise \egroup
+            // causes a paragraph break (#12821)
+            os << "\\leavevmode";
 		os << "\\egroup" << breakln;
 		runparams.encoding = save_enc;
 	}
