@@ -3237,7 +3237,8 @@ void LyXAction::init()
  * \li Action: Moves the current group in the downward direction in the
                hierarchy of the document structure.
  * \li Notion: Part -> Chapter -> Section -> etc.
- * \li Syntax: outline-in
+ * \li Syntax: outline-in [local]
+ * \li Params: local: if given, only the current paragraph will be affected.
  * \li Origin: Vermeer, 23 Mar 2006
  * \endvar
  */
@@ -3248,7 +3249,8 @@ void LyXAction::init()
  * \li Action: Moves the current group in the upward direction in the
                hierarchy of the document structure.
  * \li Notion: Part <- Chapter <- Section <- etc.
- * \li Syntax: outline-out
+ * \li Syntax: outline-out [local]
+ * \li Params: local: if given, only the current paragraph will be affected.
  * \li Origin: Vermeer, 23 Mar 2006
  * \endvar
  */

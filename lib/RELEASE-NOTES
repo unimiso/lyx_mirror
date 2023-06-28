@@ -173,7 +173,7 @@
 
 * index-tag-all adds a copy of the index entry under cursor to after all occurrences of the
   word that precedes the index inset.
-  
+
 * inset-insert-copy inserts the inset's content (in ToC pane) at the position of the cursor.
 
 * inset-split is a new convenience function that splits an inset into two at the given
@@ -194,6 +194,9 @@
   context's language).
 
 * info-insert buffer vcs-*: renamed to info-insert vcs *
+
+* outline-in/out can now take argument "local", that restricts their
+  action to the current paragraph.
 
 * set-graphics-group was renamed to graphics-set-group.
 

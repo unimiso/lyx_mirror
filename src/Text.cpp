@@ -3746,7 +3746,7 @@ void insertSeparator(Cursor const & cur, depth_type const depth)
 }
 
 
-void outline(OutlineOp mode, Cursor & cur)
+void outline(OutlineOp mode, Cursor & cur, bool local)
 {
 	Buffer & buf = *cur.buffer();
 	Text & text = *cur.text();
@@ -3767,11 +3767,13 @@ void outline(OutlineOp mode, Cursor & cur)
 	if (finish != end)
 		++finish;
 
-	// Seek the one (on same level) below
-	for (; finish != end; ++finish) {
-		toclevel = text.getTocLevel(distance(bgn, finish));
-		if (toclevel != Layout::NOT_IN_TOC && toclevel <= thistoclevel)
-			break;
+	if (!local || (mode != OutlineIn && mode != OutlineOut)) {
+		// Seek the one (on same level) below
+		for (; finish != end; ++finish) {
+			toclevel = text.getTocLevel(distance(bgn, finish));
+			if (toclevel != Layout::NOT_IN_TOC && toclevel <= thistoclevel)
+				break;
+		}
 	}
 
 	switch (mode) {
@@ -6248,7 +6250,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 
 	case LFUN_OUTLINE_UP: {
 		pos_type const opos = cur.pos();
-		outline(OutlineUp, cur);
+		outline(OutlineUp, cur, false);
 		setCursor(cur, cur.pit(), opos);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
@@ -6257,7 +6259,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 
 	case LFUN_OUTLINE_DOWN: {
 		pos_type const opos = cur.pos();
-		outline(OutlineDown, cur);
+		outline(OutlineDown, cur, false);
 		setCursor(cur, cur.pit(), opos);
 		cur.forceBufferUpdate();
 		needsUpdate = true;
@@ -6265,13 +6267,13 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 	}
 
 	case LFUN_OUTLINE_IN:
-		outline(OutlineIn, cur);
+		outline(OutlineIn, cur, cmd.getArg(0) == "local");
 		cur.forceBufferUpdate();
 		needsUpdate = true;
 		break;
 
 	case LFUN_OUTLINE_OUT:
-		outline(OutlineOut, cur);
+		outline(OutlineOut, cur, cmd.getArg(0) == "local");
 		cur.forceBufferUpdate();
 		needsUpdate = true;
 		break;
