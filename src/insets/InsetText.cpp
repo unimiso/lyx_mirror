@@ -1435,7 +1435,7 @@ bool InsetText::needsCProtection(bool const maintext, bool const fragile) const
 			return true;
 		docstring const par_str = par.asString();
 		for (int k = 0; k < nchars_escape; k++) {
-			if (contains(par_str, chars_escape[k]))
+			if (!maintext && contains(par_str, chars_escape[k]))
 				return true;
 		}
 	}
