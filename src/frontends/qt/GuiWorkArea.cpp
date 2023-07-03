@@ -652,6 +652,10 @@ void GuiWorkArea::contextMenuEvent(QContextMenuEvent * e)
 					++pos.rx();
 			}
 		}
+		if (e->reason() == QContextMenuEvent::Keyboard)
+			// Subtract the top margin
+			pos.setY(pos.y() - d->buffer_view_->topMargin());
+
 		name = d->buffer_view_->contextMenu(pos.x(), pos.y());
 	}
 
