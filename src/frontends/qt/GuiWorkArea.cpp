@@ -653,7 +653,7 @@ void GuiWorkArea::contextMenuEvent(QContextMenuEvent * e)
 			}
 		}
 		if (e->reason() == QContextMenuEvent::Keyboard)
-			// Subtract the top margin
+			// Subtract the top margin, see #12811
 			pos.setY(pos.y() - d->buffer_view_->topMargin());
 
 		name = d->buffer_view_->contextMenu(pos.x(), pos.y());
