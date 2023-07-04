@@ -1529,7 +1529,9 @@ def convert_hebrew_parentheses(document):
     """
     # print("convert hebrew parentheses")
     current_languages = [document.language]
-    for i, line in enumerate(document.body):
+    i = 0
+    while i < len(document.body):
+        line = document.body[i]
         if line.startswith('\\lang '):
             current_languages[-1] = line.lstrip('\\lang ')
         elif line.startswith('\\begin_layout'):
@@ -1537,8 +1539,13 @@ def convert_hebrew_parentheses(document):
             # print (line, current_languages[-1])
         elif line.startswith('\\end_layout'):
             current_languages.pop()
+        elif line.startswith('\\begin_inset Formula'):
+            # In math, parentheses must not be changed
+            i = find_end_of_inset(document.body, i)
+            continue
         elif current_languages[-1] == 'hebrew' and not line.startswith('\\'):
             document.body[i] = line.replace('(','\x00').replace(')','(').replace('\x00',')')
+        i += 1
 
 
 def revert_hebrew_parentheses(document):
