@@ -2111,8 +2111,16 @@ static QString label(MenuItem const & mi)
 	}
 
 	QString const binding = mi.binding();
+#if defined(Q_OS_MAC)
+	// MacOS cannot display complex bindings, so hide those
+	// https://doc.qt.io/qt-6/macos-issues.html#menu-actions
+	// #12693
+	if (!binding.isEmpty() && !binding.contains(" "))
+		label += '\t' + binding;
+#else
 	if (!binding.isEmpty())
 		label += '\t' + binding;
+#endif
 
 	return label;
 }
