@@ -717,8 +717,11 @@ void InsetCollapsible::setStatus(Cursor & cur, CollapseStatus status)
 {
 	status_ = status;
 	setButtonLabel();
-	if (status_ == Collapsed)
+	if (status_ == Collapsed) {
 		cur.leaveInset(*this);
+		// if cursor was inside the inset, it was now moved outside (#12830)
+		cur.setCurrentFont();
+	}
 }
 
 
