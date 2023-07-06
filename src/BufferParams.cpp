@@ -3527,11 +3527,11 @@ string const BufferParams::loadFonts(LaTeXFeatures & features) const
 				os << "\\babelfont{rm}[";
 			else
 				os << "\\setmainfont[";
-			if (!font_roman_opts.empty())
-				os << font_roman_opts << ',';
 			os << texmapping;
 			if (fonts_roman_osf)
 				os << ",Numbers=OldStyle";
+			if (!font_roman_opts.empty())
+				os << ',' << font_roman_opts;
 			os << "]{" << parseFontName(fontsRoman()) << "}\n";
 		}
 		if (fontsSans() != "default") {
@@ -3545,10 +3545,10 @@ string const BufferParams::loadFonts(LaTeXFeatures & features) const
 				   << float(fontsSansScale()) / 100 << ',';
 				if (fonts_sans_osf)
 					os << "Numbers=OldStyle,";
+				os << texmapping;
 				if (!font_sans_opts.empty())
-					os << font_sans_opts << ',';
-				os << texmapping << "]{"
-				   << sans << "}\n";
+					os << ',' << font_sans_opts;
+				os << "]{" << sans << "}\n";
 			} else {
 				if (babelfonts)
 					os << "\\babelfont{sf}[";
@@ -3556,10 +3556,10 @@ string const BufferParams::loadFonts(LaTeXFeatures & features) const
 					os << "\\setsansfont[";
 				if (fonts_sans_osf)
 					os << "Numbers=OldStyle,";
+				os << texmapping;
 				if (!font_sans_opts.empty())
-					os << font_sans_opts << ',';
-				os << texmapping << "]{"
-				   << sans << "}\n";
+					os << ',' << font_sans_opts;
+				os << "]{" << sans << "}\n";
 			}
 		}
 		if (fontsTypewriter() != "default") {
