@@ -84,6 +84,7 @@ Format 5
 \bind "C-x d"                  "buffer-new"
 \bind "C-x g"                  "buffer-view ps"
 \bind "C-x k"                  "buffer-close"
+\bind "C-x o"                  "tab-group-next"
 \bind "C-x p"                  "buffer-view dvi"
 \bind "C-x r"                  "buffer-update dvi"
 # Should have been "buffer-write-some"
