@@ -1077,6 +1077,8 @@ bool BufferView::scrollToCursor(DocIterator const & dit, ScrollType how)
 	d->anchor_ypos_ = - offset + row_dim.ascent();
 	if (how == SCROLL_CENTER)
 		d->anchor_ypos_ += height_/2 - row_dim.height() / 2;
+	else if (!lyxrc.scroll_below_document && d->anchor_pit_ == max_pit)
+		d->anchor_ypos_ = height_ - offset - row_dim.descent();
 	return d->anchor_ypos_ != old_ypos || d->anchor_pit_ != old_pit;
 }
 
