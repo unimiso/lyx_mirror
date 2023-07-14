@@ -105,6 +105,8 @@ public:
 	bool vmode;
 	/// if true, do not expand insets to max width artificially
 	bool tight_insets;
+	/// Extra width required by an inset, in addition to its dimension
+	int extrawidth;
 };
 
 
