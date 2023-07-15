@@ -414,12 +414,13 @@ EOF1
 		AC_SUBST(QT_CORE_LDFLAGS)
 		AC_SUBST(QT_CORE_LIB)
 		cat > $lyx_test_qt_pro << EOF2
-qtHaveModule(core):		QT += core
-qtHaveModule(concurrent):	QT += concurrent
-qtHaveModule(gui):		QT += gui gui-private
-qtHaveModule(svg):		QT += svg
-qtHaveModule(svgwidgets):	QT += svgwidgets
-qtHaveModule(widgets):		QT += widgets
+QMAKE_EXTRA_VARIABLES = MISSING
+qtHaveModule(core)		{QT += core} else {MISSING += core}
+qtHaveModule(concurrent)	{QT += concurrent} else {MISSING += concurrent}
+qtHaveModule(gui)		{QT += gui gui-private} else {MISSING += gui}
+qtHaveModule(svg)		{QT += svg} else {MISSING += svg}
+qtHaveModule(svgwidgets)	{QT += svgwidgets} else {MISSING += svgwidgets}
+qtHaveModule(widgets)		{QT += widgets} else {MISSING += widgets}
 percent.target = %
 percent.commands = @echo -n "\$(\$(@))\ "
 QMAKE_EXTRA_TARGETS += percent
@@ -439,6 +440,10 @@ EOF2
 		if test -z "$QT_LIB"; then
 		    AC_MSG_RESULT(no)
 		else
+		    QT_MISSING=`cd $lyx_test_qt_dir; make -s -f $lyx_test_qt_mak EXPORT_MISSING | sed 's/^ *//'`
+		    if test -n "$QT_MISSING"; then
+			    AC_MSG_ERROR([Qt6 module(s) $QT_MISSING not found.])
+		    fi
 		    AC_MSG_RESULT(yes)
 		    AC_SUBST(QT_INCLUDES)
 		    AC_SUBST(QT_LDFLAGS)
