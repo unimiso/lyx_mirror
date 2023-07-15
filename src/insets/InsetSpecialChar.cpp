@@ -243,6 +243,8 @@ void InsetSpecialChar::metrics(MetricsInfo & mi, Dimension & dim) const
 			frontend::NullPainter np;
 			PainterInfo pi(mi.base.bv, np);
 			pi.base.font = mi.base.font;
+			// We rely on the fact that drawLogo updates x to compute
+			// the width without code duplication.
 			drawLogo(pi, dim.wid, 0, kind_);
 			break;
 	}
