@@ -117,7 +117,7 @@ inline QChar const ucs4_to_qchar(char_type const ucs4)
 
 
 GuiFontMetrics::GuiFontMetrics(QFont const & font)
-	: font_(font), metrics_(font, 0),
+	: font_(font), metrics_(font, 0), xheight_(metrics_.xHeight()),
 	  strwidth_cache_(strwidth_cache_max_cost),
 	  breakstr_cache_(breakstr_cache_max_cost),
 	  qtextlayout_cache_(qtextlayout_cache_max_size)
@@ -167,7 +167,7 @@ int GuiFontMetrics::em() const
 int GuiFontMetrics::xHeight() const
 {
 //	LATTEST(metrics_.xHeight() == ascent('x'));
-	return metrics_.xHeight();
+	return xheight_;
 }
 
 

@@ -116,6 +116,9 @@ private:
 	/// Metrics on the font
 	QFontMetrics metrics_;
 
+	/// Height of character "x"
+	int xheight_;
+
 	/// Slope of italic font
 	double slope_;
 
