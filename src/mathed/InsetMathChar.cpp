@@ -26,7 +26,6 @@
 #include "frontends/FontMetrics.h"
 
 #include "support/debug.h"
-#include "support/lstrings.h"
 #include "support/textutils.h"
 
 #include <algorithm>
@@ -310,16 +309,27 @@ void InsetMathChar::htmlize(HtmlStream & ms) const
 MathClass InsetMathChar::mathClass() const
 {
 	// this information comes from fontmath.ltx in LaTeX source.
-	char const ch = static_cast<char>(char_);
 	if (subst_)
 		return string_to_class(subst_->extra);
-	else if (support::contains(",;", ch))
+
+	if (!isASCII(char_))
+		return MC_ORD;
+
+	switch (static_cast<char>(char_)) {
+	case ',':
+	case ';':
 		return MC_PUNCT;
-	else if (support::contains("([", ch))
+	case '(':
+	case '[':
 		return MC_OPEN;
-	else if (support::contains(")]!?", ch))
+	case ')':
+	case ']':
+	case '!':
+	case '?':
 		return MC_CLOSE;
-	else return MC_ORD;
+	default:
+		return MC_ORD;
+	}
 }
 
 
