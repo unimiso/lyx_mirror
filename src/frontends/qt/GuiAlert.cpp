@@ -75,8 +75,8 @@ docstring toPlainText(docstring const & msg)
 }
 
 
-int doPrompt(docstring const & title, docstring const & question,
-		  int default_button, int cancel_button,
+buttonid doPrompt(docstring const & title, docstring const & question,
+		  buttonid default_button, buttonid cancel_button,
 		  docstring const & b1, docstring const & b2,
 		  docstring const & b3, docstring const & b4)
 {
@@ -108,7 +108,7 @@ int doPrompt(docstring const & title, docstring const & question,
 
 	// FIXME replace that with guiApp->currentView()
 	//LYXERR0("FOCUS: " << qApp->focusWidget());
-	QPushButton * b[4] = { 0, 0, 0, 0 };
+	QPushButton * b[4] = { nullptr, nullptr, nullptr, nullptr };
 	QMessageBox msg_box(QMessageBox::Information,
 			toqstr(title), toqstr(question),
 			QMessageBox::NoButton, qApp->focusWidget());
@@ -120,23 +120,37 @@ int doPrompt(docstring const & title, docstring const & question,
 		b[2] = msg_box.addButton(toqstr(b3), QMessageBox::ActionRole);
 	if (!b4.empty())
 		b[3] = msg_box.addButton(toqstr(b4), QMessageBox::ActionRole);
-	msg_box.setDefaultButton(b[default_button]);
-	msg_box.setEscapeButton(static_cast<QAbstractButton *>(b[cancel_button]));
-	int res = msg_box.exec();
+	if (default_button < size(b) && nullptr != b[default_button])
+		msg_box.setDefaultButton(b[default_button]);
+	if (cancel_button < size(b) && nullptr != b[cancel_button])
+		msg_box.setEscapeButton(static_cast<QAbstractButton *>(b[cancel_button]));
+	msg_box.exec();
+	const QAbstractButton * button = msg_box.clickedButton();
 
 	qApp->restoreOverrideCursor();
 
 	if (long_op)
 		theApp()->startLongOperation();
 
-	// Qt bug: can return -1 on cancel or WM close, despite the docs.
-	if (res == -1)
-		res = cancel_button;
+	size_t res = cancel_button;
+
+	if (button == nullptr)
+		return res;
+	else {
+		// Convert selection of the button into an integer
+		for (size_t i = 0; i < size(b); i++) {
+			if (button == b[i]) {
+				res = i;
+				break;
+			}
+		}
+	}
+
 	return res;
 }
 
-int prompt(docstring const & title, docstring const & question,
-		  int default_button, int cancel_button,
+buttonid prompt(docstring const & title, docstring const & question,
+		  buttonid default_button, buttonid cancel_button,
 		  docstring const & b0, docstring const & b1,
 		  docstring const & b2, docstring const & b3)
 {

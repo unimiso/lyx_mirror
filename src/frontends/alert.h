@@ -19,6 +19,8 @@ namespace lyx {
 namespace frontend {
 namespace Alert {
 
+typedef unsigned short buttonid;
+
 /**
  * Prompt for a question. Returns 0-3 for the chosen button.
  * Set default_button and cancel_button to reasonable values. b1-b3
@@ -30,8 +32,8 @@ namespace Alert {
  * "Yes" or "No", I will personally come around to your house and
  * slap you with fish, and not in an enjoyable way either.
  */
-int prompt(docstring const & title, docstring const & question,
-	   int default_button, int cancel_button,
+buttonid prompt(docstring const & title, docstring const & question,
+	   buttonid default_button, buttonid cancel_button,
 	   docstring const & b0, docstring const & b1,
 	   docstring const & b2 = empty_docstring(),
 	   docstring const & b3 = empty_docstring());
