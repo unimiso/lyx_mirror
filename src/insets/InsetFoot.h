@@ -32,6 +32,8 @@ private:
 	///
 	docstring layoutName() const override;
 	///
+	void latex(otexstream &, OutputParams const &) const override;
+	///
 	int plaintext(odocstringstream & ods, OutputParams const & op,
 	              size_t max_length = INT_MAX) const override;
 	///

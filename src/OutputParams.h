@@ -291,6 +291,10 @@ public:
 	 */
 	bool inInclude = false;
 
+	/** Whether we are inside a footnote. 
+	 */
+	bool inFootnote = false;
+
 	/** Whether a btUnit (for multiple biblographies) is open.
 	 */
 	mutable bool openbtUnit = false;

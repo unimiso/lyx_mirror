@@ -1298,13 +1298,15 @@ void TeXOnePar(Buffer const & buf,
 	if (localswitch_needed
 	    || (intitle_command && using_begin_end)
 	    || closing_rtl_ltr_environment
-	    || (((runparams.isLastPar && !runparams.inbranch) || close_lang_switch)
-	        && (par_lang != outer_lang || (using_begin_end
-						&& style.isEnvironment()
-						&& par_lang != nextpar_lang)))) {
 		// Since \selectlanguage write the language to the aux file,
 		// we need to reset the language at the end of footnote or
 		// float.
+	    || (((runparams.isLastPar
+		  && (using_begin_end || runparams.inFloat != OutputParams::NONFLOAT || runparams.inFootnote))
+		 || close_lang_switch)
+	        && (par_lang != outer_lang || (using_begin_end
+						&& style.isEnvironment()
+						&& par_lang != nextpar_lang)))) {
 
 		if (!localswitch && (pending_newline || close_lang_switch))
 			os << '\n';

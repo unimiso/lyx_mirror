@@ -111,6 +111,14 @@ docstring InsetFoot::toolTip(BufferView const & bv, int x, int y) const
 }
 
 
+void InsetFoot::latex(otexstream & os, OutputParams const & runparams_in) const
+{
+	OutputParams runparams(runparams_in);
+	runparams.inFootnote = true;
+	InsetText::latex(os, runparams);
+}
+
+
 int InsetFoot::plaintext(odocstringstream & os,
         OutputParams const & runparams, size_t max_length) const
 {
