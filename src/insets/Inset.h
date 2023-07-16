@@ -579,7 +579,7 @@ public:
 	 * LaTeX export if this method returns true, as well as on screen.
 	 * Otherwise the document default font is used.
 	 */
-	virtual bool inheritFont() const { return true; }
+	virtual bool inheritFont() const { return getLayout().inheritFont(); }
 	/**
 	 * If this method returns true all explicitly set font attributes
 	 * are reset during editing operations.

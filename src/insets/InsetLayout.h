@@ -84,6 +84,8 @@ public:
 	///
 	docstring rightdelim() const { return rightdelim_; }
 	///
+	bool inheritFont() const { return inheritfont_; }
+	///
 	FontInfo font() const { return font_; }
 	///
 	FontInfo labelfont() const { return labelfont_; }
@@ -287,6 +289,8 @@ private:
 	FontInfo font_ = inherit_font;
 	///
 	FontInfo labelfont_ = sane_font;
+	///
+	bool inheritfont_ = true;
 	///
 	ColorCode bgcolor_ = Color_error;
 	///

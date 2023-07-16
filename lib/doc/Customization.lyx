@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 616
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -144,6 +144,7 @@ logicalmkup
 \author 177693 "x"
 \author 5863208 "ab"
 \author 34634807 "Jean-Pierre"
+\author 47243155 "Jean-Marc"
 \author 232239728 "Owner"
 \author 731793113 "Richard Kimberly Heck" rikiheck@lyx.org
 \author 1075283030 "Thibaut"
@@ -21833,6 +21834,60 @@ nolink "false"
 \end_inset
 
 .
+\change_inserted 47243155 1689528605
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted 47243155 1689528735
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted 47243155 1689528630
+InheritFont
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted 47243155 1689528607
+0
+\end_layout
+
+\end_inset
+
+,
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted 47243155 1689528607
+
+\emph on
+1
+\end_layout
+
+\end_inset
+
+] The font inside the inset is inherited from the parent for \SpecialChar LaTeX
+ export if this parameter is 1,
+ as well as on screen.
+ Otherwise the document default font is used.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description

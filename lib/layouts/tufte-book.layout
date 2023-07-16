@@ -162,6 +162,8 @@ InsetLayout Flex:Sidenote
 	LatexName		sidenote
 	Decoration		classic
 	LabelString		"sidenote"
+	ResetsFont		true
+	InheritFont		false
 	Font
 	  Color			foreground
 	  Size			Small
@@ -177,7 +179,6 @@ InsetLayout Flex:Sidenote
     DocBookAttr     role='sidenote'
 	DocBookItemTag  para
     DocBookTagType  inline
-	ResetsFont		true
 End
 
 InsetLayout Flex:Marginnote
@@ -185,11 +186,6 @@ InsetLayout Flex:Marginnote
 	LatexName		marginnote
 	Decoration		classic
 	LabelString		"marginnote"
-	Font
-	  Family		Roman
-	  Shape			Up
-	  Series		Medium
-	EndFont
     DocBookAttr     role='marginnote'
 	MultiPar		true
 End
@@ -199,6 +195,7 @@ InsetLayout Flex:NewThought
 	LatexType		Command
 	LatexName		newthought
 	LabelString		"new thought"
+	ResetsFont		true
 	Font
 	  Shape			SmallCaps
 	EndFont
@@ -206,7 +203,6 @@ InsetLayout Flex:NewThought
 	  Family		Roman
 	  Color			textlabel3
 	EndFont
-	ResetsFont		true
 	DocBookTag      emphasis
 	DocBookAttr     role='newthought'
     DocBookTagType  inline
