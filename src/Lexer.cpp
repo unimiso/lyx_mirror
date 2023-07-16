@@ -300,7 +300,7 @@ bool Lexer::Pimpl::next(bool esc /* = false */)
 			string dummy;
 			getline(is, dummy);
 
-			LYXERR(Debug::LYXLEX, "Comment read: `" << c << dummy << '\'');
+			LYXERR(Debug::LYXLEX, "Comment read: `" << string(1, c) << dummy << '\'');
 #else
 			// unfortunately ignore is buggy (Lgb)
 			is.ignore(100, '\n');
