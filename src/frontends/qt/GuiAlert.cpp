@@ -109,6 +109,7 @@ buttonid doPrompt(docstring const & title, docstring const & question,
 	// FIXME replace that with guiApp->currentView()
 	//LYXERR0("FOCUS: " << qApp->focusWidget());
 	QPushButton * b[4] = { nullptr, nullptr, nullptr, nullptr };
+	const size_t numbuttons = sizeof(b)/sizeof(b[0]);
 	QMessageBox msg_box(QMessageBox::Information,
 			toqstr(title), toqstr(question),
 			QMessageBox::NoButton, qApp->focusWidget());
@@ -120,9 +121,9 @@ buttonid doPrompt(docstring const & title, docstring const & question,
 		b[2] = msg_box.addButton(toqstr(b3), QMessageBox::ActionRole);
 	if (!b4.empty())
 		b[3] = msg_box.addButton(toqstr(b4), QMessageBox::ActionRole);
-	if (default_button < size(b) && nullptr != b[default_button])
+	if (default_button < numbuttons && nullptr != b[default_button])
 		msg_box.setDefaultButton(b[default_button]);
-	if (cancel_button < size(b) && nullptr != b[cancel_button])
+	if (cancel_button < numbuttons && nullptr != b[cancel_button])
 		msg_box.setEscapeButton(static_cast<QAbstractButton *>(b[cancel_button]));
 	msg_box.exec();
 	const QAbstractButton * button = msg_box.clickedButton();
@@ -138,7 +139,7 @@ buttonid doPrompt(docstring const & title, docstring const & question,
 		return res;
 	else {
 		// Convert selection of the button into an integer
-		for (size_t i = 0; i < size(b); i++) {
+		for (size_t i = 0; i < numbuttons; i++) {
 			if (button == b[i]) {
 				res = i;
 				break;
