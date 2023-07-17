@@ -4669,7 +4669,7 @@ int Paragraph::find(docstring const & str, bool cs, bool mw,
 			if (!inset->isLetter() && !inset->isChar())
 				break;
 			odocstringstream os;
-			if (inset->lyxCode() == lyx::QUOTE_CODE) {
+			if (inset->lyxCode() == lyx::QUOTE_CODE || inset->lyxCode() == lyx::SPACE_CODE) {
 				OutputParams op(0);
 				op.find_set_feature(OutputParams::SearchQuick);
 				inset->plaintext(os, op);
