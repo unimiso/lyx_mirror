@@ -603,7 +603,7 @@ void InsetSpace::latex(otexstream & os, OutputParams const & runparams) const
 		break;
 	case InsetSpaceParams::THIN:
 		if (runparams.find_effective())
-			os.put(0x2009);
+			os.put(0x202f);
 		else
 			os << (runparams.free_spacing ? " " : "\\,");
 		break;
@@ -798,7 +798,7 @@ std::string spaceToXMLEntity(InsetSpaceParams::Kind kind) {
 	case InsetSpaceParams::ENSPACE: // HTML: &#x2060;&ensp;&#x2060; (word joiners)
 		return "&#x2060;&#x2002;&#x2060;";
 	case InsetSpaceParams::THIN:
-		return "&#x2009;"; // HTML: &thinspace;
+		return "&#x202F;"; // HTML: &thinspace;
 	case InsetSpaceParams::MEDIUM:
 		return "&#x2005;"; // HTML: &emsp14;
 	case InsetSpaceParams::THICK:

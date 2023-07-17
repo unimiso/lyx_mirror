@@ -219,7 +219,7 @@ void InsetMathSpace::htmlize(HtmlStream & ms) const
 	SpaceInfo const & si = space_info[space_];
 	switch (si.kind) {
 	case InsetSpaceParams::THIN:
-		ms << from_ascii("&#x2009;"); // HTML: &thinsp;
+		ms << from_ascii("&#x202F;"); // HTML: &thinsp;
 		break;
 	case InsetSpaceParams::MEDIUM:
 		ms << from_ascii("&#160;");
