@@ -111,11 +111,13 @@ docstring InsetFoot::toolTip(BufferView const & bv, int x, int y) const
 }
 
 
-void InsetFoot::latex(otexstream & os, OutputParams const & runparams_in) const
+void InsetFoot::latex(otexstream & os, OutputParams const & runparams) const
 {
-	OutputParams runparams(runparams_in);
+	// We need to maintain the runparams values set
+	// by InsetText::latex. hence we use no copy
 	runparams.inFootnote = true;
 	InsetText::latex(os, runparams);
+	runparams.inFootnote = false;
 }
 
 

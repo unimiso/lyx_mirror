@@ -293,7 +293,7 @@ public:
 
 	/** Whether we are inside a footnote. 
 	 */
-	bool inFootnote = false;
+	mutable bool inFootnote = false;
 
 	/** Whether a btUnit (for multiple biblographies) is open.
 	 */
