@@ -20,8 +20,8 @@ namespace lyx {
 namespace frontend {
 
 
-LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool keyval, bool optsnippet)
-	: QSyntaxHighlighter(parent), at_letter_(at_letter), keyval_(keyval), optsnippet_(optsnippet)
+LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool keyval)
+	: QSyntaxHighlighter(parent), at_letter_(at_letter), keyval_(keyval)
 {
 	auto blend = [](QColor color1, QColor color2) {
 		int r = 0.5 * (color1.red() + color2.red());
@@ -49,13 +49,12 @@ void LaTeXHighlighter::highlightBlock(QString const & text)
 	// keyval
 	if (keyval_) {
 		// Highlight key-val options. Used in some option widgets.
-		static QRegularExpression exprKeyvalkey("[^=,]+");
-		static QRegularExpression exprKeyvalgval("[^,]+{[^}]+}");
+		// 1. The keys. Might or might not have values
+		static QRegularExpression exprKeyvalkey("[^=,{]+");
+		// 2. These are grouped values such as "key1={val,val},key2=val"
+		static QRegularExpression exprKeyvalgval("[^=,{]+{[^}]+}");
+		// 3. And normal values if we don't find grouped ones
 		static QRegularExpression exprKeyvalval("[^,]+");
-		if (optsnippet_) {
-			static QRegularExpression exprKeyvalkey("^=,+");
-			static QRegularExpression exprKeyvalval("^,+");
-		}
 		QRegularExpressionMatch matchkey = exprKeyvalkey.match(text);
 		int kvindex = matchkey.capturedStart(0);
 		while (kvindex >= 0) {
