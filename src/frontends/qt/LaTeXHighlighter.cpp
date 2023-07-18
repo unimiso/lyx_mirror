@@ -50,6 +50,7 @@ void LaTeXHighlighter::highlightBlock(QString const & text)
 	if (keyval_) {
 		// Highlight key-val options. Used in some option widgets.
 		static QRegularExpression exprKeyvalkey("[^=,]+");
+		static QRegularExpression exprKeyvalgval("[^,]+{[^}]+}");
 		static QRegularExpression exprKeyvalval("[^,]+");
 		if (optsnippet_) {
 			static QRegularExpression exprKeyvalkey("^=,+");
@@ -61,13 +62,22 @@ void LaTeXHighlighter::highlightBlock(QString const & text)
 			int length = matchkey.capturedLength(0);
 			setFormat(kvindex, length, keyFormat);
 			if (text.size() > kvindex + length && text.at(kvindex + length) == '=') {
-				QRegularExpressionMatch matchval =
-					exprKeyvalval.match(text, kvindex + length);
-				int kvvindex = matchval.capturedStart(0);
+				QRegularExpressionMatch matchgval =
+					exprKeyvalgval.match(text, kvindex + length);
+				int kvvindex = matchgval.capturedStart(0);
 				if (kvvindex > 0) {
-					int vlength = matchval.capturedLength(0);
+					int vlength = matchgval.capturedLength(0);
 					length += vlength;
 					setFormat(kvvindex, vlength, valFormat);
+				} else {
+					QRegularExpressionMatch matchval =
+						exprKeyvalval.match(text, kvindex + length);
+					kvvindex = matchval.capturedStart(0);
+					if (kvvindex > 0) {
+						int vlength = matchval.capturedLength(0);
+						length += vlength;
+						setFormat(kvvindex, vlength, valFormat);
+					}
 				}
 			}
 			matchkey = exprKeyvalkey.match(text, kvindex + length);
