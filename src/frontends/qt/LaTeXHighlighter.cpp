@@ -50,7 +50,7 @@ void LaTeXHighlighter::highlightBlock(QString const & text)
 	if (keyval_) {
 		// Highlight key-val options. Used in some option widgets.
 		// 1. The keys. Might or might not have values
-		static QRegularExpression exprKeyvalkey("[^=,{]+");
+		static QRegularExpression exprKeyvalkey("[^=,}]+");
 		// 2. These are grouped values such as "key1={val,val},key2=val"
 		static QRegularExpression exprKeyvalgval("[^=,{]+{[^}]+}");
 		// 3. And normal values if we don't find grouped ones
