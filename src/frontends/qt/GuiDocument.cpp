@@ -1774,8 +1774,8 @@ GuiDocument::GuiDocument(GuiView & lv)
 		pdfSupportModule->subjectLE));
 	pdfSupportModule->keywordsLE->setValidator(new NoNewLineValidator(
 		pdfSupportModule->keywordsLE));
-	(void) new LaTeXHighlighter(pdfSupportModule->optionsTE->document(), true, true);
-	(void) new LaTeXHighlighter(pdfSupportModule->metadataTE->document(), true, true);
+	(void) new LaTeXHighlighter(pdfSupportModule->optionsTE->document(), true, true, true);
+	(void) new LaTeXHighlighter(pdfSupportModule->metadataTE->document(), true, true, true);
 
 	for (int i = 0; backref_opts[i][0]; ++i)
 		pdfSupportModule->backrefCO->addItem(qt_(backref_opts_gui[i]));

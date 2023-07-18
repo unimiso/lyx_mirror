@@ -27,7 +27,8 @@ class LaTeXHighlighter : public QSyntaxHighlighter
 public:
 	explicit LaTeXHighlighter(QTextDocument * parent,
 				  bool at_letter = false,
-				  bool keyval = false);
+				  bool keyval = false,
+				  bool optsnippet = false);
 
 protected:
 	void highlightBlock(QString const & text) override;
@@ -43,6 +44,8 @@ private:
 	bool const at_letter_;
 	// highlight keyval options?
 	bool const keyval_;
+	// option snippet?
+	bool const optsnippet_;
 };
 
 } // namespace frontend

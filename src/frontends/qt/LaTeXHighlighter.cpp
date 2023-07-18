@@ -20,8 +20,8 @@ namespace lyx {
 namespace frontend {
 
 
-LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool keyval)
-	: QSyntaxHighlighter(parent), at_letter_(at_letter), keyval_(keyval)
+LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool keyval, bool optsnippet)
+	: QSyntaxHighlighter(parent), at_letter_(at_letter), keyval_(keyval), optsnippet_(optsnippet)
 {
 	auto blend = [](QColor color1, QColor color2) {
 		int r = 0.5 * (color1.red() + color2.red());
@@ -44,8 +44,9 @@ LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool 
 }
 
 
-void LaTeXHighlighter::highlightBlock(QString const & text)
+void LaTeXHighlighter::highlightBlock(QString const & text_in)
 {
+	QString const text = (optsnippet_) ? '[' + text_in + ']' : text_in;
 	// keyval
 	if (keyval_) {
 		// Highlight key-val options. Used in some option widgets.
