@@ -1303,7 +1303,9 @@ void TeXOnePar(Buffer const & buf,
 		      // Since \selectlanguage write the language to the aux file,
 		      // we need to reset the language at the end of footnote or
 		      // float.
-		      || runparams.inFloat != OutputParams::NONFLOAT || runparams.inFootnote))
+		      || runparams.inFloat != OutputParams::NONFLOAT || runparams.inFootnote
+		      // Same for maintext in children (see below)
+		      || maintext))
 		 || close_lang_switch)
 	        && (par_lang != outer_lang || (using_begin_end
 						&& style.isEnvironment()
