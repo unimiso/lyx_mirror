@@ -44,25 +44,31 @@ LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool 
 }
 
 
-void LaTeXHighlighter::highlightBlock(QString const & text_in)
+void LaTeXHighlighter::highlightBlock(QString const & text)
 {
-	QString const text = (optsnippet_) ? '[' + text_in + ']' : text_in;
 	// keyval
 	if (keyval_) {
 		// Highlight key-val options. Used in some option widgets.
-		static const QRegularExpression exprKeyvalkey("[^=,]+");
-		static const QRegularExpression exprKeyvalval("[^,]+");
+		static QRegularExpression exprKeyvalkey("[^=,]+");
+		static QRegularExpression exprKeyvalval("[^,]+");
+		if (optsnippet_) {
+			static QRegularExpression exprKeyvalkey("^=,+");
+			static QRegularExpression exprKeyvalval("^,+");
+		}
 		QRegularExpressionMatch matchkey = exprKeyvalkey.match(text);
 		int kvindex = matchkey.capturedStart(0);
 		while (kvindex >= 0) {
 			int length = matchkey.capturedLength(0);
 			setFormat(kvindex, length, keyFormat);
-			QRegularExpressionMatch matchval =
-				exprKeyvalval.match(text, kvindex + length);
-			int kvvindex = matchval.capturedStart(0);
-			if (kvvindex > 0) {
-				length += matchval.capturedLength(0);
-				setFormat(kvvindex, length, valFormat);
+			if (text.size() > kvindex + length && text.at(kvindex + length) == '=') {
+				QRegularExpressionMatch matchval =
+					exprKeyvalval.match(text, kvindex + length);
+				int kvvindex = matchval.capturedStart(0);
+				if (kvvindex > 0) {
+					int vlength = matchval.capturedLength(0);
+					length += vlength;
+					setFormat(kvvindex, vlength, valFormat);
+				}
 			}
 			matchkey = exprKeyvalkey.match(text, kvindex + length);
 			kvindex = matchkey.capturedStart(0);
