@@ -236,6 +236,7 @@ logicalmkup
 \docbook_mathml_prefix 1
 \author -584632292 "Richard Kimberly Heck"
 \author -563046850 "Jean-Marc LASGOUTTES"
+\author -495245474 "Jean-Marc Lasgouttes"
 \author 177693 "x"
 \author 5863208 "ab"
 \author 47243155 "Jean-Marc"
@@ -29069,24 +29070,257 @@ modulo-
 \begin_layout Standard
 The modulo-function is special,
  because it exists in four variants.
- The variants in a displayed formula are:
+ The variants in a
+\change_deleted -495245474 1689684546
+ displayed
+\change_inserted -495245474 1689684548
+n inline
+\change_unchanged
+ formula are:
+\change_deleted -495245474 1689684526
+
 \begin_inset Formula 
 \begin{align*}
 \underline{\textrm{Command}\raisebox{-0.9mm}{}} &  & \underline{\textrm{Result}}\\
-\mathrm{a\backslash mod\textrm{␣}b} &  & a\mod b\\
-\mathrm{a\backslash pmod\textrm{␣}b} &  & a\pmod b\\
-\mathrm{a\backslash bmod\textrm{␣}b} &  & a\bmod b\\
-\mathrm{a\backslash pod\textrm{␣}b} &  & a\pod b
+\mathrm{a\backslash mod\textrm{␣}b\textrm{␣}} &  & a\mod b\\
+\mathrm{a\backslash pmod\textrm{␣}b\textrm{␣}} &  & a\pmod b\\
+\mathrm{a\backslash bmod\textrm{␣}b\textrm{␣}} &  & a\bmod b\\
+\mathrm{a\backslash pod\textrm{␣}b\textrm{␣}} &  & a\pod b
 \end{align*}
 
 \end_inset
 
 
+\change_inserted -495245474 1689684215
+
 \end_layout
 
 \begin_layout Standard
-In an inline formula less space is set before the function names for all variants.
- By default the modulo-functions take only the first character following the command into account.
+\noindent
+\align center
+
+\change_inserted -495245474 1689684215
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="block" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684215
+Command
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684215
+Result
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684286
+a
+\backslash
+mod
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+b
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684457
+\begin_inset Formula $a\mod b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684416
+a
+\backslash
+pmod
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+b
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684474
+\begin_inset Formula $a\pmod b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row change="inserted -495245474 1689684088">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684419
+a
+\backslash
+bmod
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+b
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684488
+\begin_inset Formula $a\bmod b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row change="inserted -495245474 1689684088">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684421
+a
+\backslash
+pod
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+b
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -495245474 1689684502
+\begin_inset Formula $a\pod b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+In a
+\change_deleted -495245474 1689684554
+n inline
+\change_inserted -495245474 1689684556
+ display
+\change_unchanged
+ formula
+\change_inserted -495245474 1689684559
+,
+
+\change_unchanged
+ 
+\change_deleted -495245474 1689684562
+less
+\change_inserted -495245474 1689684563
+more
+\change_unchanged
+ space is set before the function names for all variants
+\change_inserted -495245474 1689684688
+ but 
+\series bold
+
+\backslash
+mod.
+
+\series default
+ This later version is also the only one that does not take the 
+\series bold
+b
+\series default
+ as argument but acts as a binary operator
+\change_unchanged
+.
+ 
+\change_deleted -495245474 1689684609
+By default the modulo-functions take only the first character following the command into account.
  To use more than one character,
  put them in \SpecialChar TeX
  braces:
@@ -29099,6 +29333,8 @@ In an inline formula less space is set before the function names for all variant
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 

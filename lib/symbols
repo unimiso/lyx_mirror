@@ -11,7 +11,7 @@
 # Note that the first argument of \def must not uses braces, and the second
 # must use braces.
 #
-# syntax: Either
+# syntax: (note that there should be no space character in the definition)
 # \def\macroname{definition}
 # or
 # \def\macroname{definition} requires
@@ -22,6 +22,11 @@
 #
 # ("" for empty strings is not supported. One would have to use x for fields
 # that are not set.)
+#
+# It is also possible to use parameters for the macros
+# \def\macroname#1{definition using #1}
+#
+# TODO: Devise a mechanism to represent these in DocBook/XHTML
 #
 # If you put any symbol with a requirement inside an iffont clause, you
 # must put an alternative definition with the same requirement in the
@@ -1115,11 +1120,18 @@ exp                lyxblacktext  0   0 func     x
 Pr                 lyxblacktext  0   0 funclim  x
 gcd                lyxblacktext  0   0 funclim  x
 deg                lyxblacktext  0   0 func     x
-mod                lyxblacktext  0   0 func     x     amsmath
-bmod               lyxblacktext  0   0 func     x
-pmod               lyxblacktext  0   0 func     x
-pod                lyxblacktext  0   0 func     x     amsmath
 
+
+#
+# Modulo notation
+#
+
+# the original definitions have spacing differences between display/inline/script,
+# but we cannot reproduce that here
+\def\bmod{\mkern1mu\mathbin{\textrm{mod}}\mkern1mu}
+\def\pmod#1{\mkern18mu(\textrm{mod}\mkern6mu#1)}
+\def\pod#1{\mkern18mu(#1)} amsmath
+\def\mod#1{\mkern12mu\textrm{mod}\mkern6mu#1} amsmath
 
 # mathtools.sty
 vcentcolon         cmr          58  58    mathrel :          mathtools
