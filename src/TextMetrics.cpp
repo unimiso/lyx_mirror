@@ -1426,7 +1426,7 @@ pit_type TextMetrics::getPitNearY(int y)
 {
 	LASSERT(!text_->paragraphs().empty(), return -1);
 	LASSERT(!par_metrics_.empty(), return -1);
-	LYXERR(Debug::DEBUG, "y: " << y << " cache size: " << par_metrics_.size());
+	LYXERR(Debug::PAINTING, "y: " << y << " cache size: " << par_metrics_.size());
 
 	// look for highest numbered paragraph with y coordinate less than given y
 	pit_type pit = -1;
@@ -1467,7 +1467,7 @@ pit_type TextMetrics::getPitNearY(int y)
 	}
 
 	for (; it != et; ++it) {
-		LYXERR(Debug::DEBUG, "examining: pit: " << it->first
+		LYXERR(Debug::PAINTING, "examining: pit: " << it->first
 			<< " y: " << it->second.position());
 
 		ParagraphMetrics const & pm2 = par_metrics_[it->first];
@@ -1478,7 +1478,7 @@ pit_type TextMetrics::getPitNearY(int y)
 		}
 	}
 
-	LYXERR(Debug::DEBUG, "found best y: " << yy << " for pit: " << pit);
+	LYXERR(Debug::PAINTING, "found best y: " << yy << " for pit: " << pit);
 
 	return pit;
 }
@@ -1592,7 +1592,7 @@ void TextMetrics::setCursorFromCoordinates(Cursor & cur, int const x, int const 
 	ParagraphMetrics const & pm = par_metrics_[pit];
 
 	int yy = pm.position() - pm.rows().front().ascent();
-	LYXERR(Debug::DEBUG, "x: " << x << " y: " << y <<
+	LYXERR(Debug::PAINTING, "x: " << x << " y: " << y <<
 		" pit: " << pit << " yy: " << yy);
 
 	int r = 0;
@@ -1606,13 +1606,13 @@ void TextMetrics::setCursorFromCoordinates(Cursor & cur, int const x, int const 
 
 	Row const & row = pm.rows()[r];
 
-	LYXERR(Debug::DEBUG, "row " << r << " from pos: " << row.pos());
+	LYXERR(Debug::PAINTING, "row " << r << " from pos: " << row.pos());
 
 	bool bound = false;
 	int xx = x;
 	pos_type const pos = getPosNearX(row, xx, bound);
 
-	LYXERR(Debug::DEBUG, "setting cursor pit: " << pit << " pos: " << pos);
+	LYXERR(Debug::PAINTING, "setting cursor pit: " << pit << " pos: " << pos);
 
 	text_->setCursor(cur, pit, pos, true, bound);
 	// remember new position.
@@ -1626,18 +1626,18 @@ InsetList::Element * TextMetrics::checkInsetHit(pit_type pit, int x, int y)
 	Paragraph const & par = text_->paragraphs()[pit];
 	CoordCache::Insets const & insetCache = bv_->coordCache().getInsets();
 
-	LYXERR(Debug::DEBUG, "x: " << x << " y: " << y << "  pit: " << pit);
+	LYXERR(Debug::PAINTING, "x: " << x << " y: " << y << "  pit: " << pit);
 
 	for (InsetList::Element const & e : par.insetList()) {
-		LYXERR(Debug::DEBUG, "examining inset " << e.inset);
+		LYXERR(Debug::PAINTING, "examining inset " << e.inset);
 
 		if (insetCache.covers(e.inset, x, y)) {
-			LYXERR(Debug::DEBUG, "Hit inset: " << e.inset);
+			LYXERR(Debug::PAINTING, "Hit inset: " << e.inset);
 			return const_cast<InsetList::Element *>(&e);
 		}
 	}
 
-	LYXERR(Debug::DEBUG, "No inset hit. ");
+	LYXERR(Debug::PAINTING, "No inset hit. ");
 	return nullptr;
 }
 

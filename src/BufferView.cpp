@@ -605,7 +605,7 @@ void BufferView::updateScrollbarParameters()
 	Text & t = buffer_.text();
 	TextMetrics & tm = d->text_metrics_[&t];
 
-	LYXERR(Debug::GUI, " Updating scrollbar: height: "
+	LYXERR(Debug::SCROLLING, " Updating scrollbar: height: "
 		<< t.paragraphs().size()
 		<< " curr par: " << d->cursor_.bottom().pit()
 		<< " default height " << defaultRowHeight());
