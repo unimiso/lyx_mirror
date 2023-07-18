@@ -832,7 +832,7 @@ string string2regex(string in)
 			blanks++;
 		}
 		else if ((tempx[i] == '\302' && tempx[i+1] == '\240')
-			|| (tempx[i] == '\342' && tempx[i+1] == '\200')) {
+			|| (tempx[i] == '\342' && tempx[i+1] == '\202')) {
 			// protected space
 			// thin space
 			blanks++;
