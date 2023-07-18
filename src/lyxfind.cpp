@@ -831,12 +831,46 @@ string string2regex(string in)
 			// normal blanks
 			blanks++;
 		}
-		else if ((tempx[i] == '\302' && tempx[i+1] == '\240')
-			|| (tempx[i] == '\342' && tempx[i+1] == '\202')) {
-			// protected space
-			// thin space
+		else if (tempx[i] == '\302' && tempx[i+1] == '\240') {
+			// Normal Space
 			blanks++;
 			i++;
+		}
+		else if (tempx[i] == '\342') {
+			if (tempx[i+1] == '\200') {
+				if ((tempx[i+2] == '\257')
+				   || (tempx[i+2] == '\203')
+				   || (tempx[i+2] == '\202')) {
+					// Non-breaking Thin (1/6 em)
+					// Quad(1 em), (Double quad counts as 2 blanks)
+					// Half Quad
+					blanks++;
+					i += 2;
+				}
+				else if (tempx[i+2] == '\213') {
+					// Ignoring parts of Medium and Thick
+					i += 2;
+					continue;
+				}
+				else if ((tempx[i+2] == '\204') || (tempx[i+2] == '\205')) {
+					// Thick
+					// Medium
+					blanks++;
+					i += 2;
+				}
+			}
+			else if (tempx[i+1] == '\201') {
+				if (tempx[i+2] == '\240') {
+					// Ignoring parts of half quad
+					i += 2;
+					continue;
+				}
+			}
+			else if ((tempx[i+1] == '\220') && (tempx[i+2] == '\243')) {
+				// Visible space
+				blanks++;
+				i += 2;
+			}
 		}
 		else {
 			if (blanks > 0) {
