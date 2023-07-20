@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 617
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -266,8 +266,8 @@ glosses
 \change_unchanged
 .
 
-\change_inserted -712698321 1561204748
- Note that at least version 2.3 of the covington package is required to use all features.
+\change_inserted -712698321 1689860042
+ Note that at least version 2.11 of the covington package is required to use all features.
 \change_unchanged
 
 \end_layout
@@ -620,25 +620,35 @@ nolink "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -712698321 1689862356
 If you want to modify the numbering of an individual example,
  you can use 
 \family sans
 Insert\SpecialChar menuseparator
 Custom Numbering
-\change_deleted -712698321 1561204890
- 
-\change_unchanged
-
 \family default
 .
+\change_unchanged
 
-\change_inserted -712698321 1561205104
- For global adjustments,
- 
-\emph on
-covington
-\emph default
- provides means for customization.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1689861656
+All example variants can be customized in many details via optional arguments.
+ These can be inserted via 
+\family sans
+Insert\SpecialChar menuseparator
+Examples options
+\family default
+ or 
+\family sans
+Insert\SpecialChar menuseparator
+Subexamples options
+\family default
+,
+ respectively.
  Please refer to the 
 \emph on
 covington
@@ -652,28 +662,22 @@ literal "false"
 \end_inset
 
  for details.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -712698321 1561205365
-As of version 2.3,
- 
-\emph on
-covington
-\emph default
-'s subexamples features optional arguments (to insert text between the main number and the first sub-example).
- These can be inserted via 
-\family sans
-Insert\SpecialChar menuseparator
-Subexamples options
+\change_inserted -712698321 1689862358
+For global adjustments,
+ these options can be passed to the 
+\family typewriter
+
+\backslash
+setexampleoptions
 \family default
-.
- Please,
- again,
- refer to the 
+ macro (please use \SpecialChar TeX
+ mode for this purpose).
+ Again,
+ please refer to the 
 \emph on
 covington
 \emph default
@@ -686,6 +690,85 @@ literal "false"
 \end_inset
 
  for details.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1689862465
+In the case of consecutive examples and subexamples,
+ there are some more extra insets available:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1689862485
+To modify the numbering of an individual example,
+ you can use 
+\family sans
+Insert\SpecialChar menuseparator
+Custom Numbering
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1689862558
+To add judgment markers (such as * or ?) to example sentences,
+ use 
+\family sans
+Insert\SpecialChar menuseparator
+Judgment
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1689863425
+To add text that precedes an example sentence (but is not part of the presented data),
+ use 
+\family sans
+Insert\SpecialChar menuseparator
+Custom Inset\SpecialChar menuseparator
+Example Preamble
+\family default
+ or 
+\family sans
+Subexample Preamble.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1689863466
+To add text that follows an example sentence (but is not part of the presented data),
+ use 
+\family sans
+Insert\SpecialChar menuseparator
+Custom Inset\SpecialChar menuseparator
+Example Postamble
+\family default
+ or 
+\family sans
+Subexample Postamble.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1689862769
+Please consult the 
+\emph on
+covington
+\emph default
+ manual 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "covington"
+literal "false"
+
+\end_inset
+
+ for details on all these features.
 \change_unchanged
 
 \end_layout
@@ -859,9 +942,36 @@ in the right order
 \change_unchanged
 .
 
-\change_inserted -712698321 1559636755
- Finally,
- you can also insert gloss options via 
+\change_inserted -712698321 1689863632
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1689863920
+Optionally,
+ you can also insert comments to the example sentence or each of the gloss lines via 
+\family sans
+Insert\SpecialChar menuseparator
+Sentence Comment
+\family default
+ (for the example sentence) or 
+\family sans
+Insert\SpecialChar menuseparator
+Gloss Comment
+\family default
+ (for the respective gloss line).
+ These comments will be printed to the right of the respective line,
+ again independently to where you have inserted them in the \SpecialChar LyX
+ window.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1689863687
+Finally you can also insert gloss options via 
 \family sans
 Insert\SpecialChar menuseparator
 Gloss Options
@@ -951,7 +1061,7 @@ C'est     un exemple simple
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637046
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -983,7 +1093,7 @@ This is
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637046
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -1128,7 +1238,7 @@ Hoc est aliud exemplum
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637110
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -1147,7 +1257,7 @@ n.sg.nom 3sg n.sg.nom n.sg.nom
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637111
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -1166,7 +1276,7 @@ This is another  example
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559649011
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout
@@ -1321,7 +1431,7 @@ Mein Luftkissenfahrzeug ist voller  Aale
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637185
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -1340,7 +1450,7 @@ My    skeertuig                   is  vol       palings
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637185
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -1373,7 +1483,7 @@ full of
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637185
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout
@@ -1492,7 +1602,7 @@ Mein Luftkissenfahrzeug ist voller  Aale
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637243
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -1511,7 +1621,7 @@ My    skeertuig                   is  vol       palings
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637243
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -1544,7 +1654,7 @@ full of
 \begin_layout Plain Layout
 
 \change_inserted -712698321 1559637243
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout

@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 617
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -246,7 +246,7 @@ literal "true"
  um nummerierte Beispiele,
  Glossen und semantische Auszeichnungen zu erzeugen.
  Beachten Sie,
- dass mindestens Version 2.3 des Pakets erforderlich ist,
+ dass mindestens Version 2.11 des Pakets erforderlich ist,
  um alle Funktionen zu nutzen.
 \end_layout
 
@@ -528,19 +528,19 @@ nolink "false"
 \end_layout
 
 \begin_layout Standard
-Wenn Sie die Nummerierung für einzelne Beispiele ändern möchten,
- verwenden Sie 
+Alle Beispielvarianten können mittels optionaler Argument in vielen Details angepasst werden.
+ Diese können Sie über 
 \family sans
 Einfügen\SpecialChar menuseparator
-Benutzerdef.
- Nummerierung
+Optionen für Beispiele
 \family default
-.
- Für globale Anpassungen bietet 
-\emph on
-covington
-\emph default
- selbst Möglichkeiten.
+ bzw.
+ 
+\family sans
+Einfügen\SpecialChar menuseparator
+Optionen für Unterbeispiele
+\family default
+ eingeben.
  Bitte konsultieren Sie das Handbuch des Pakets 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -553,17 +553,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Ab Version 2.3 bietet 
-\emph on
-covingtons
-\emph default
- subexamples-Umgebung ein optionales Argument (mit dem man Text zwischen der Hauptnummer und dem ersten Unterbeispiel einfügen kann).
- Dieses können Sie über 
-\family sans
-Einfügen\SpecialChar menuseparator
-Optionen für Unterbeispiele
+Für globale Anpassungen können Sie die Optionen an das Makro 
+\family typewriter
+
+\backslash
+setexampleoptions
 \family default
- eingeben.
+ übergeben (bitte verwenden Sie hierfür den \SpecialChar TeX
+-Modus).
  Bitte konsultieren Sie auch hier das Handbuch des Pakets 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -573,6 +570,77 @@ literal "false"
 \end_inset
 
  für Einzelheiten.
+\end_layout
+
+\begin_layout Standard
+Im Fall von konsekutiven Beispielen und Unterbeispielen stehen darüber hinaus noch folgende Einfügungen zur Verfügung:
+\end_layout
+
+\begin_layout Itemize
+Um die Nummerierung für einzelne Beispiele zu ändern,
+ verwenden Sie 
+\family sans
+Einfügen\SpecialChar menuseparator
+Benutzerdef.
+ Nummerierung
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Um Grammatikalitätsmarker (wie * oder ?) einzufügen,
+ verwenden Sie 
+\family sans
+Einfügen\SpecialChar menuseparator
+Urteil
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Um Text direkt vor einen Beispielsatz einzufügen (der aber nicht zu den präsentierten Daten gehört),
+ verwenden Sie 
+\family sans
+Einfügen\SpecialChar menuseparator
+Spezifische Einfügung\SpecialChar menuseparator
+Beispiel-Vorspann
+\family default
+ oder 
+\family sans
+Unterbeispiel-Vorspann
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Um Text direkt nach einen Beispielsatz einzufügen (der aber nicht zu den präsentierten Daten gehört),
+ verwenden Sie 
+\family sans
+Einfügen\SpecialChar menuseparator
+Spezifische Einfügung\SpecialChar menuseparator
+Beispiel-Nachspann
+\family default
+ oder 
+\family sans
+Unterbeispiel-Nachspann
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Bitte konsultieren Sie das Handbuch des Pakets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "covington"
+literal "false"
+
+\end_inset
+
+ für Einzelheiten zu all diesen Möglichkeiten.
 \end_layout
 
 \begin_layout Section
@@ -654,7 +722,29 @@ Interlinear-Glosse
 .
  Ungeachtet wo Sie diese Untereinfügungen innerhalb der Glosse einfügen,
  wird alles in der richtigen Reihenfolge ausgegeben.
- Schließlich können Sie über 
+\end_layout
+
+\begin_layout Standard
+Optional können Sie auch Kommentare zum Beispielsatz oder zu jeder der Glossenzeilen eingeben.
+ Verwenden Sie hierfür 
+\family sans
+Einfügen\SpecialChar menuseparator
+Kommentar zum Satz
+\family default
+ oder 
+\family sans
+Einfügen\SpecialChar menuseparator
+Kommentar zur Glossierung
+\family default
+ (für die entsprechende Zeile).
+ Diese Kommentare werden rechts von der jeweiligen Zeile gedruckt,
+ unabhängig davon,
+ woe Sie sie im \SpecialChar LyX
+-Fenster eingegeben haben.
+\end_layout
+
+\begin_layout Standard
+Schließlich können Sie über 
 \family sans
 Einfügen\SpecialChar menuseparator
 Glossen-Optionen
@@ -719,7 +809,7 @@ C'est       un exemple simple
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -741,7 +831,7 @@ Dies ist
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -811,7 +901,7 @@ Hoc est aliud exemplum
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -824,7 +914,7 @@ n.sg.nom 3sg n.sg.nom n.sg.nom
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -837,7 +927,7 @@ Dies ist anderes Beispiel
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout
@@ -903,7 +993,7 @@ Mein Luftkissenfahrzeug ist voller  Aale
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -916,7 +1006,7 @@ My    skeertuig                   is   vol      palings
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -939,7 +1029,7 @@ full of
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout
@@ -986,7 +1076,7 @@ Mein Luftkissenfahrzeug ist voller  Aale
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:1
+\begin_inset Argument post:2
 status open
 
 \begin_layout Plain Layout
@@ -999,7 +1089,7 @@ My    skeertuig                   is   vol      palings
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:2
+\begin_inset Argument post:4
 status open
 
 \begin_layout Plain Layout
@@ -1022,7 +1112,7 @@ full of
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Argument post:3
+\begin_inset Argument post:6
 status open
 
 \begin_layout Plain Layout
