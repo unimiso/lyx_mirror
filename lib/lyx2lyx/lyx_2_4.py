@@ -5007,6 +5007,521 @@ def convert_empty_macro(document):
         i += 1
 
 
+def convert_cov_options(document):
+    """Update examples item argument structure"""
+
+    if "linguistics" not in document.get_module_list():
+        return
+
+    layouts = ["Numbered Examples (consecutive)", "Subexample"]
+
+    for layout in layouts:
+        i = 0
+        while True:
+            i = find_token(document.body, "\\begin_layout %s" % layout, i)
+            if i == -1:
+                break
+            j = find_end_of_layout(document.body, i)
+            if j == -1:
+                document.warning("Malformed LyX document: Can't find end of example layout at line %d" % i)
+                i += 1
+                continue
+            k = find_token(document.body, '\\begin_inset Argument item:1', i, j)
+            if k != -1:
+                document.body[k] = '\\begin_inset Argument item:2'
+            i += 1
+    # Shift gloss arguments
+    i = 0
+    while True:
+        i = find_token(document.body, "\\begin_inset Flex Interlinear Gloss (2 Lines)", i)
+        if i == -1:
+            break
+        j = find_end_of_inset(document.body, i)
+        if j == -1:
+            document.warning("Malformed LyX document: Can't find end of gloss inset at line %d" % i)
+            i += 1
+            continue
+        k = find_token(document.body, '\\begin_inset Argument post:2', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:4'
+        k = find_token(document.body, '\\begin_inset Argument post:1', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:2'
+        i += 1
+
+    i = 0
+    while True:
+        i = find_token(document.body, "\\begin_inset Flex Interlinear Gloss (3 Lines)", i)
+        if i == -1:
+            break
+        j = find_end_of_inset(document.body, i)
+        if j == -1:
+            document.warning("Malformed LyX document: Can't find end of gloss inset at line %d" % i)
+            i += 1
+            continue
+        k = find_token(document.body, '\\begin_inset Argument post:3', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:6'
+        k = find_token(document.body, '\\begin_inset Argument post:2', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:4'
+        k = find_token(document.body, '\\begin_inset Argument post:1', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:2'
+        i += 1
+
+
+def revert_linggloss2(document):
+    " Revert gloss with new args to ERT "
+
+    if not "linguistics" in document.get_module_list():
+        return
+
+    cov_req = False
+    glosses = ["\\begin_inset Flex Interlinear Gloss (2 Lines)", "\\begin_inset Flex Interlinear Gloss (3 Lines)"]
+    for glosse in glosses:
+        i = 0
+        while True:
+            i = find_token(document.body, glosse, i+1)
+            if i == -1:
+                break
+            j = find_end_of_inset(document.body, i)
+            if j == -1:
+                document.warning("Malformed LyX document: Can't find end of Gloss inset")
+                continue
+
+            # Check if we have new options
+            arg = find_token(document.body, "\\begin_inset Argument post:1", i, j)
+            if arg == -1:
+                arg = find_token(document.body, "\\begin_inset Argument post:3", i, j)
+                if arg == -1:
+                    arg = find_token(document.body, "\\begin_inset Argument post:5", i, j)
+            if arg == -1:
+                # nothing to do
+                continue
+
+            arg = find_token(document.body, "\\begin_inset Argument 1", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            optargcontent = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                optargcontent = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+
+            arg = find_token(document.body, "\\begin_inset Argument post:1", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg1content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 1 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg1content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+
+            arg = find_token(document.body, "\\begin_inset Argument post:2", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg2content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 2 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg2content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+
+            arg = find_token(document.body, "\\begin_inset Argument post:3", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg3content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 3 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg3content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+             
+            arg = find_token(document.body, "\\begin_inset Argument post:4", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg4content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 4 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg4content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+             
+            arg = find_token(document.body, "\\begin_inset Argument post:5", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg5content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 5 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg5content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+             
+            arg = find_token(document.body, "\\begin_inset Argument post:6", i, j)
+            endarg = find_end_of_inset(document.body, arg)
+            marg6content = []
+            if arg != -1:
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find arg 6 plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                marg6content = document.body[argbeginPlain + 1 : argendPlain - 2]
+
+                # remove Arg insets and paragraph, if it only contains this inset
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+
+            cmd = "\\digloss"
+            if glosse == "\\begin_inset Flex Interlinear Gloss (3 Lines)":
+                cmd = "\\trigloss"
+
+            beginPlain = find_token(document.body, "\\begin_layout Plain Layout", i)
+            endInset = find_end_of_inset(document.body, i)
+            endPlain = find_end_of_layout(document.body, beginPlain)
+            precontent = put_cmd_in_ert(cmd)
+            if len(optargcontent) > 0:
+                precontent += put_cmd_in_ert("[") + optargcontent + put_cmd_in_ert("]")
+            precontent += put_cmd_in_ert("{")
+            
+            postcontent = put_cmd_in_ert("}")
+            if len(marg1content) > 0:
+                postcontent += put_cmd_in_ert("[") + marg1content + put_cmd_in_ert("]")
+            postcontent += put_cmd_in_ert("{") + marg2content + put_cmd_in_ert("}")
+            if len(marg3content) > 0:
+                postcontent += put_cmd_in_ert("[") + marg3content + put_cmd_in_ert("]")
+            postcontent += put_cmd_in_ert("{") + marg4content + put_cmd_in_ert("}")
+            if cmd == "\\trigloss":
+                if len(marg5content) > 0:
+                    postcontent += put_cmd_in_ert("[") + marg5content + put_cmd_in_ert("]")
+                postcontent += put_cmd_in_ert("{") + marg6content + put_cmd_in_ert("}")
+
+            document.body[endPlain:endInset + 1] = postcontent
+            document.body[beginPlain + 1:beginPlain] = precontent
+            del document.body[i : beginPlain + 1]
+            if not cov_req:
+                document.append_local_layout("Requires covington")
+                cov_req = True
+            i = beginPlain
+
+
+def revert_exarg2(document):
+    " Revert linguistic examples with new arguments to ERT "
+
+    if not "linguistics" in document.get_module_list():
+        return
+
+    cov_req = False
+    
+    layouts = ["Numbered Example", "Subexample"]
+
+    for layout in layouts:
+        i = 0
+        while True:
+            i = find_token(document.body, "\\begin_layout %s" % layout, i+1)
+            if i == -1:
+                break
+            j = find_end_of_layout(document.body, i)
+            if j == -1:
+                document.warning("Malformed LyX document: Can't find end of example layout")
+                continue
+            consecex = document.body[i] == "\\begin_layout Numbered Examples (consecutive)"
+            subexpl = document.body[i] == "\\begin_layout Subexample"
+            singleex = document.body[i] == "\\begin_layout Numbered Examples (multiline)"
+            layouttype = "\\begin_layout Numbered Examples (multiline)"
+            if consecex:
+                layouttype = "\\begin_layout Numbered Examples (consecutive)"
+            elif subexpl:
+                layouttype = "\\begin_layout Subexample"
+            k = i
+            l = j
+            while True:
+                if singleex:
+                    break
+                m = find_end_of_layout(document.body, k)
+                # check for consecutive layouts
+                k = find_token(document.body, "\\begin_layout", m)
+                if k == -1 or document.body[k] != layouttype:
+                    break
+                l = find_end_of_layout(document.body, k)
+                if l == -1:
+                     document.warning("Malformed LyX document: Can't find end of example layout")
+                     continue
+
+            arg = find_token(document.body, "\\begin_inset Argument 1", i, l)
+            if subexpl or arg == -1:
+                iarg = find_token(document.body, "\\begin_inset Argument item:1", i, l)
+                if iarg == -1:
+                    continue
+
+            if arg != -1:
+                endarg = find_end_of_inset(document.body, arg)
+                optargcontent = ""
+                argbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", arg, endarg)
+                if argbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                    continue
+                argendPlain = find_end_of_inset(document.body, argbeginPlain)
+                optargcontent = lyx2latex(document, document.body[argbeginPlain + 1 : argendPlain - 2])
+                # This is a verbatim argument
+                optargcontent = re.sub(r'textbackslash{}', r'', optargcontent)
+
+            itemarg = ""
+            iarg = find_token(document.body, "\\begin_inset Argument item:1", i, j)
+            if iarg != -1:
+                endiarg = find_end_of_inset(document.body, iarg)
+                iargcontent = ""
+                iargbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", iarg, endiarg)
+                if iargbeginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                    continue
+                iargendPlain = find_end_of_inset(document.body, iargbeginPlain)
+                itemarg = "<" + lyx2latex(document, document.body[iargbeginPlain : iargendPlain]) + ">"
+
+            iarg2 = find_token(document.body, "\\begin_inset Argument item:2", i, j)
+            if iarg2 != -1:
+                endiarg2 = find_end_of_inset(document.body, iarg2)
+                iarg2content = ""
+                iarg2beginPlain = find_token(document.body, "\\begin_layout Plain Layout", iarg2, endiarg2)
+                if iarg2beginPlain == -1:
+                    document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                    continue
+                iarg2endPlain = find_end_of_inset(document.body, iarg2beginPlain)
+                itemarg += "[" + lyx2latex(document, document.body[iarg2beginPlain : iarg2endPlain]) + "]"
+
+            if itemarg == "":
+                itemarg = " "
+
+            # remove Arg insets and paragraph, if it only contains this inset
+            if arg != -1:
+                if document.body[arg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, arg - 1) == endarg + 3:
+                    del document.body[arg - 1 : endarg + 4]
+                else:
+                    del document.body[arg : endarg + 1]
+            if iarg != -1:
+                iarg = find_token(document.body, "\\begin_inset Argument item:1", i, j)
+                if iarg == -1:
+                    document.warning("Unable to re-find item:1 Argument")
+                else:
+                    endiarg = find_end_of_inset(document.body, iarg)
+                    if document.body[iarg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, iarg - 1) == endiarg + 3:
+                        del document.body[iarg - 1 : endiarg + 4]
+                    else:
+                        del document.body[iarg : endiarg + 1]
+            if iarg2 != -1:
+                iarg2 = find_token(document.body, "\\begin_inset Argument item:2", i, j)
+                if iarg2 == -1:
+                    document.warning("Unable to re-find item:2 Argument")
+                else:
+                    endiarg2 = find_end_of_inset(document.body, iarg2)
+                    if document.body[iarg2 - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, iarg2 - 1) == endiarg2 + 3:
+                        del document.body[iarg2 - 1 : endiarg2 + 4]
+                    else:
+                        del document.body[iarg2 : endiarg2 + 1]
+
+            envname = "example"
+            if consecex:
+                envname = "examples"
+            elif subexpl:
+                envname = "subexamples"
+ 
+            cmd = put_cmd_in_ert("\\begin{" + envname + "}[" + optargcontent + "]")
+
+            # re-find end of layout
+            j = find_end_of_layout(document.body, i)
+            if j == -1:
+                document.warning("Malformed LyX document: Can't find end of Subexample layout")
+                continue
+            l = j
+            while True:
+                # check for consecutive layouts
+                k = find_token(document.body, "\\begin_layout", l)
+                if k == -1 or document.body[k] != layouttype:
+                    break
+                if not singleex:
+                    subitemarg = ""
+                    m = find_end_of_layout(document.body, k)
+                    iarg = find_token(document.body, "\\begin_inset Argument item:1", k, m)
+                    if iarg != -1:
+                        endiarg = find_end_of_inset(document.body, iarg)
+                        iargcontent = ""
+                        iargbeginPlain = find_token(document.body, "\\begin_layout Plain Layout", iarg, endiarg)
+                        if iargbeginPlain == -1:
+                            document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                            continue
+                        iargendPlain = find_end_of_inset(document.body, iargbeginPlain)
+                        subitemarg = "<" + lyx2latex(document, document.body[iargbeginPlain : iargendPlain]) + ">"
+
+                    iarg2 = find_token(document.body, "\\begin_inset Argument item:2", k, m)
+                    if iarg2 != -1:
+                        endiarg2 = find_end_of_inset(document.body, iarg2)
+                        iarg2content = ""
+                        iarg2beginPlain = find_token(document.body, "\\begin_layout Plain Layout", iarg2, endiarg2)
+                        if iarg2beginPlain == -1:
+                            document.warning("Malformed LyX document: Can't find optarg plain Layout")
+                            continue
+                        iarg2endPlain = find_end_of_inset(document.body, iarg2beginPlain)
+                        subitemarg += "[" + lyx2latex(document, document.body[iarg2beginPlain : iarg2endPlain]) + "]"
+
+                    if subitemarg == "":
+                        subitemarg = " "
+                    document.body[k : k + 1] = ["\\begin_layout Standard"] + put_cmd_in_ert("\\item" + subitemarg)
+                    # Refind and remove arg insets
+                    if iarg != -1:
+                        iarg = find_token(document.body, "\\begin_inset Argument item:1", k, m)
+                        if iarg == -1:
+                            document.warning("Unable to re-find item:1 Argument")
+                        else:
+                            endiarg = find_end_of_inset(document.body, iarg)
+                            if document.body[iarg - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, iarg - 1) == endiarg + 3:
+                                del document.body[iarg - 1 : endiarg + 4]
+                            else:
+                                del document.body[iarg : endiarg + 1]
+                    if iarg2 != -1:
+                        iarg2 = find_token(document.body, "\\begin_inset Argument item:2", k, m)
+                        if iarg2 == -1:
+                            document.warning("Unable to re-find item:2 Argument")
+                        else:
+                            endiarg2 = find_end_of_inset(document.body, iarg2)
+                            if document.body[iarg2 - 1] == "\\begin_layout Plain Layout" and find_end_of_layout(document.body, iarg2 - 1) == endiarg2 + 3:
+                                del document.body[iarg2 - 1 : endiarg2 + 4]
+                            else:
+                                del document.body[iarg2 : endiarg2 + 1]
+                else:
+                    document.body[k : k + 1] = ["\\begin_layout Standard"]
+                l = find_end_of_layout(document.body, k)
+                if l == -1:
+                     document.warning("Malformed LyX document: Can't find end of example layout")
+                     continue
+
+            endev = put_cmd_in_ert("\\end{" + envname + "}")
+
+            document.body[l : l] = ["\\end_layout", "", "\\begin_layout Standard"] + endev
+            document.body[i : i + 1] = ["\\begin_layout Standard"] + cmd \
+                    + ["\\end_layout", "", "\\begin_layout Standard"] + put_cmd_in_ert("\\item" + itemarg)
+            if not cov_req:
+                document.append_local_layout("Requires covington")
+                cov_req = True
+
+
+def revert_cov_options(document):
+    """Revert examples item argument structure"""
+
+    if "linguistics" not in document.get_module_list():
+        return
+
+    layouts = ["Numbered Examples (consecutive)", "Subexample"]
+
+    for layout in layouts:
+        i = 0
+        while True:
+            i = find_token(document.body, "\\begin_layout %s" % layout, i)
+            if i == -1:
+                break
+            j = find_end_of_layout(document.body, i)
+            if j == -1:
+                document.warning("Malformed LyX document: Can't find end of example layout at line %d" % i)
+                i += 1
+                continue
+            k = find_token(document.body, '\\begin_inset Argument item:2', i, j)
+            if k != -1:
+                document.body[k] = '\\begin_inset Argument item:1'
+            i += 1
+    # Shift gloss arguments
+    i = 0
+    while True:
+        i = find_token(document.body, "\\begin_inset Flex Interlinear Gloss (2 Lines)", i)
+        if i == -1:
+            break
+        j = find_end_of_inset(document.body, i)
+        if j == -1:
+            document.warning("Malformed LyX document: Can't find end of gloss inset at line %d" % i)
+            i += 1
+            continue
+        k = find_token(document.body, '\\begin_inset Argument post:2', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:1'
+        k = find_token(document.body, '\\begin_inset Argument post:4', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:2'
+        i += 1
+
+    i = 0
+    while True:
+        i = find_token(document.body, "\\begin_inset Flex Interlinear Gloss (3 Lines)", i)
+        if i == -1:
+            break
+        j = find_end_of_inset(document.body, i)
+        if j == -1:
+            document.warning("Malformed LyX document: Can't find end of gloss inset at line %d" % i)
+            i += 1
+            continue
+        k = find_token(document.body, '\\begin_inset Argument post:2', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:1'
+        k = find_token(document.body, '\\begin_inset Argument post:4', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:2'
+        k = find_token(document.body, '\\begin_inset Argument post:6', i, j)
+        if k != -1:
+            document.body[k] = '\\begin_inset Argument post:3'
+        i += 1
+
+
+def revert_expreambles(document):
+    """Revert covington example preamble flex insets to ERT"""
+
+    revert_flex_inset(document.body, "Example Preamble", "\\expreamble")
+    revert_flex_inset(document.body, "Subexample Preamble", "\\subexpreamble")
+
+
 ##
 # Conversion hub
 #
@@ -5084,10 +5599,12 @@ convert = [
            [613, []],
            [614, [convert_hyper_other]],
            [615, [convert_acknowledgment,convert_ack_theorems]],
-           [616, [convert_empty_macro]]
+           [616, [convert_empty_macro]],
+           [617, [convert_cov_options]]
           ]
 
-revert =  [[615, [revert_empty_macro]],
+revert =  [[616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
+           [615, [revert_empty_macro]],
            [614, [revert_ack_theorems,revert_acknowledgment]],
            [613, [revert_hyper_other]],
            [612, [revert_familydefault]],

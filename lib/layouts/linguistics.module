@@ -81,6 +81,12 @@ Style Numbered_Example_(multiline)
 		Color         textlabel1
 	EndFont
 	Requires	      covington
+	Argument 1
+		LabelString   "Example options"
+		MenuString    "Examples options|s"
+		Tooltip       "Add examples options here"
+		PassThru       1
+	EndArgument
 	Category              Linguistics
 	DocBookWrapperTag     informalexample
 	DocBookWrapperAttr    role='numbered'
@@ -108,6 +114,12 @@ Style Numbered_Examples_(consecutive)
 		EndFont
 	EndArgument
 	Argument item:1
+		LabelString   "Judgment|J"
+		Tooltip       "Grammaticality judgment marker"
+		LeftDelim     <
+		RightDelim    >
+	EndArgument
+	Argument item:2
 		LabelString   "Custom Numbering|s"
 		Tooltip       "Customize the numeration"
 	EndArgument
@@ -133,6 +145,21 @@ Style Subexample
 		PassThru       1
 	EndArgument
 	HTMLClass          SubExample
+End
+
+InsetLayout Flex:Example_Preamble
+	LyXType               custom
+	Decoration            classic
+	LatexType             command
+	LatexName             expreamble
+	LabelString           "Ex. Preamble"
+	ResetsFont            true
+End
+
+InsetLayout Flex:Subexample_Preamble
+	CopyStyle	      Flex:Example_Preamble
+	LatexName             subexpreamble
+	LabelString           "Subex. Preamble"
 End
 
 
@@ -164,6 +191,11 @@ InsetLayout Flex:Interlinear_Gloss_(2_Lines)
 		Tooltip       "Add digloss options here"
 	EndArgument
 	Argument post:1
+		LabelString   "Sentence Comment"
+		MenuString    "Sentence Comment"
+		Tooltip       "Add an optional sentence comment here"
+	EndArgument
+	Argument post:2
 		Decoration    conglomerate
 		LabelString   "Interlinear Gloss"
 		MenuString    "Interlinear Gloss"
@@ -173,7 +205,12 @@ InsetLayout Flex:Interlinear_Gloss_(2_Lines)
 		FreeSpacing   true
 		InsertOnNewline true
 	EndArgument
-	Argument post:2
+	Argument post:3
+		LabelString   "Gloss Comment"
+		MenuString    "Gloss Comment"
+		Tooltip       "Add an optional gloss comment here"
+	EndArgument
+	Argument post:4
 		Decoration    conglomerate
 		LabelString   "Translation"
 		MenuString    "Gloss Translation"
@@ -210,6 +247,11 @@ InsetLayout Flex:Interlinear_Gloss_(3_Lines)
 		Tooltip       "Add trigloss options here"
 	EndArgument
 	Argument post:1
+		LabelString   "Sentence Comment"
+		MenuString    "Sentence Comment"
+		Tooltip       "Add an optional sentence comment here"
+	EndArgument
+	Argument post:2
 		Decoration    conglomerate
 		LabelString   "Interlinear Gloss (1)"
 		MenuString    "Interlinear Gloss (Line 1)|1"
@@ -219,17 +261,27 @@ InsetLayout Flex:Interlinear_Gloss_(3_Lines)
 		FreeSpacing   true
 		InsertOnNewline true
 	EndArgument
-	Argument post:2
+	Argument post:3
+		LabelString   "Gloss Comment (1)"
+		MenuString    "Gloss Comment (Line 1)"
+		Tooltip       "Add an optional gloss comment here"
+	EndArgument
+	Argument post:4
 		Decoration    conglomerate
 		LabelString   "Interlinear Gloss (2)"
 		MenuString    "Interlinear Gloss (Line 2)|2"
-		Tooltip       "Add the first inter-linear gloss line here"
+		Tooltip       "Add the second inter-linear gloss line here"
 		Mandatory     true
 		AutoInsert    true
 		FreeSpacing   true
 		InsertOnNewline true
 	EndArgument
-	Argument post:3
+	Argument post:5
+		LabelString   "Gloss Comment (2)"
+		MenuString    "Gloss Comment (Line 2)"
+		Tooltip       "Add an optional gloss comment here"
+	EndArgument
+	Argument post:6
 		Decoration    conglomerate
 		LabelString   "Translation"
 		MenuString    "Gloss Translation"

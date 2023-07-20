@@ -7,6 +7,15 @@ changes happened in particular if possible. A good example would be
 
 -----------------------
 
+2023-07-20 Jürgen Spitzmüller <spitz@lyx.org> 
+	* Format incremented to 617: Update covington support in linguistics module:
+	- Support enviroment option of example and examples
+	- Support angular item argument of examples and subexamples (this shifts item
+	  argument structure)
+	- Support new optional arguments of \digloss and \trigloss (this shifts argument
+	  structure)
+	- Support \expreamble and \subexpreamble macros
+
 2022-12-25 Richard Kimberly Heck <rikiheck@lyx.org>
 	* Format incremented to 614: New "Other" type for hyperlinks
 
