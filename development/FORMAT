@@ -14,7 +14,7 @@ changes happened in particular if possible. A good example would be
 	  argument structure)
 	- Support new optional arguments of \digloss and \trigloss (this shifts argument
 	  structure)
-	- Support \expreamble and \subexpreamble macros
+	- Support \expreamble, \subexpreamble \expostamble, \subexpostamble  macros
 
 2023-06-11 Enrico Forestieri <forenr@lyx.org>
 	* Format incremented to 616: Do not output LaTeX for a macro if the LaTeX part is empty

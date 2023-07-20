@@ -163,6 +163,19 @@ InsetLayout Flex:Subexample_Preamble
 End
 
 
+InsetLayout Flex:Example_Postamble
+	CopyStyle             Flex:Example_Preamble
+	LatexName             expostamble
+	LabelString           "Ex. Postamble"
+End
+
+InsetLayout Flex:Subexample_Postamble
+	CopyStyle             Flex:Example_Preamble
+	LatexName             subexpostamble
+	LabelString           "Subex. Postamble"
+End
+
+
 #
 # Interlinear Glosses
 #

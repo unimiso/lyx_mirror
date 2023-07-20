@@ -5520,6 +5520,8 @@ def revert_expreambles(document):
 
     revert_flex_inset(document.body, "Example Preamble", "\\expreamble")
     revert_flex_inset(document.body, "Subexample Preamble", "\\subexpreamble")
+    revert_flex_inset(document.body, "Example Postamble", "\\expostamble")
+    revert_flex_inset(document.body, "Subexample Postamble", "\\subexpostamble")
 
 
 ##
