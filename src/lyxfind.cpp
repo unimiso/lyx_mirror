@@ -947,6 +947,9 @@ string correctRegex(string t, bool withformat)
 			}
 			else if (sub.str(4) == "mathcircumflex")
 				replace = "^";
+			else if ((sub.str(4) == "negthinspace") || (sub.str(4) == "negmedspace") || (sub.str(4) == "negthickspace")) {
+				replace = accents[sub.str(4)+"{}"];
+			}
 			else if (backslashed) {
 				backslashed = false;
 				if (withformat) {
@@ -1996,11 +1999,11 @@ static void buildAccentsMap()
 	accents["guillemotleft"] = "«";
 	accents["hairspace"]     = getutf8(0xf0000);	// select from free unicode plane 15
 	accents["thinspace"]     = getutf8(0xf0002);	// and used _only_ by findadv
-	accents["negthinspace"]  = getutf8(0xf0003);	// to omit backslashed latex macros
+	accents["negthinspace{}"]= getutf8(0xf0003);	// to omit backslashed latex macros
 	accents["medspace"]      = getutf8(0xf0004);	// See https://en.wikipedia.org/wiki/Private_Use_Areas
-	accents["negmedspace"]   = getutf8(0xf0005);
+	accents["negmedspace{}"] = getutf8(0xf0005);
 	accents["thickspace"]    = getutf8(0xf0006);
-	accents["negthickspace"] = getutf8(0xf0007);
+	accents["negthickspace{}"]= getutf8(0xf0007);
 	accents["lyx"]           = getutf8(0xf0010);	// Used logos
 	accents["LyX"]           = getutf8(0xf0010);
 	accents["tex"]           = getutf8(0xf0011);
@@ -2090,7 +2093,7 @@ void Intervall::removeAccents()
 	if (accents.empty())
 		buildAccentsMap();
 	static regex const accre("\\\\("
-				 "([\\S]|[A-Za-z]+)\\{[^\\\\\\{\\}]+\\}"
+				 "([\\S]|[A-Za-z]+)\\{[^\\\\\\{\\}]*\\}"
 				 "|([\\S]|[A-Za-z]+)\\{\\\\[ij](math)?\\}"
 				 "|("
 				 "(backslash ([lL]y[xX]|[tT]e[xX]|[lL]a[tT]e[xX]e?|lyxarrow))"
