@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-06-17 10:35+0200\n"
-"PO-Revision-Date: 2023-06-17 08:39+0000\n"
+"POT-Creation-Date: 2023-07-20 17:30+0200\n"
+"PO-Revision-Date: 2023-07-20 16:33+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -14351,9 +14351,29 @@ msgstr "\\theexamplei (\\alph{subexampleiv})"
 msgid "Numbered Example (multiline)"
 msgstr "Číslovaný príklad (viac-riadkový)"
 
+#: lib/layouts/linguistics.module:85
+msgid "Example options"
+msgstr "Príkladné voľby"
+
+#: lib/layouts/linguistics.module:86
+msgid "Examples options|s"
+msgstr "Voľby pre príklady|y"
+
+#: lib/layouts/linguistics.module:87
+msgid "Add examples options here"
+msgstr "Pridajte sem voľby pre príklady"
+
 #: lib/layouts/linguistics.module:93
 msgid "Numbered Examples (consecutive)"
 msgstr "Číslované príklady (postupne)"
+
+#: lib/layouts/linguistics.module:117
+msgid "Judgment|J"
+msgstr "Úsudok|D"
+
+#: lib/layouts/linguistics.module:118
+msgid "Grammaticality judgment marker"
+msgstr "Marker pre gramatikalizujúcy úsudok"
 
 #: lib/layouts/linguistics.module:111
 msgid "Custom Numbering|s"
@@ -14363,17 +14383,49 @@ msgstr "Vlastné číslovanie|é"
 msgid "Customize the numeration"
 msgstr "Prispôsobiť číslovanie"
 
-#: lib/layouts/linguistics.module:130
+#: lib/layouts/linguistics.module:142
 msgid "Subexamples options"
-msgstr "Podpríkladné voľby"
+msgstr "Pod-príkladné voľby"
 
-#: lib/layouts/linguistics.module:131
+#: lib/layouts/linguistics.module:143
 msgid "Subexamples options|s"
-msgstr "Podpríkladné voľby|n"
+msgstr "Pod-príkladné voľby|n"
 
-#: lib/layouts/linguistics.module:132
+#: lib/layouts/linguistics.module:144
 msgid "Add subexamples options here"
-msgstr "Pridajte sem voľby pre podpríklad"
+msgstr "Pridajte sem voľby pre pod-príklad"
+
+#: lib/layouts/linguistics.module:150
+msgid "Example Preamble"
+msgstr "Príkladná preambula"
+
+#: lib/layouts/linguistics.module:155
+msgid "Ex. Preamble"
+msgstr "Pr. preambula"
+
+#: lib/layouts/linguistics.module:159
+msgid "Subexample Preamble"
+msgstr "Pod-príkladná preambula"
+
+#: lib/layouts/linguistics.module:162
+msgid "Subex. Preamble"
+msgstr "Podpr. preambula"
+
+#: lib/layouts/linguistics.module:166
+msgid "Example Postamble"
+msgstr "Príkladný záver"
+
+#: lib/layouts/linguistics.module:169
+msgid "Ex. Postamble"
+msgstr "Pr. záver"
+
+#: lib/layouts/linguistics.module:172
+msgid "Subexample Postamble"
+msgstr "Pod-príkladný záver"
+
+#: lib/layouts/linguistics.module:175
+msgid "Subex. Postamble"
+msgstr "Podpr. záver"
 
 #: lib/layouts/linguistics.module:144
 msgid "Interlinear Gloss (2 Lines)"
@@ -14396,6 +14448,15 @@ msgstr "Voľby glosy|s"
 msgid "Add digloss options here"
 msgstr "Pridajte sem voľby pre digloss"
 
+#: lib/layouts/linguistics.module:207 lib/layouts/linguistics.module:208
+#: lib/layouts/linguistics.module:263 lib/layouts/linguistics.module:264
+msgid "Sentence Comment"
+msgstr "Komentár na vetu"
+
+#: lib/layouts/linguistics.module:209 lib/layouts/linguistics.module:265
+msgid "Add an optional sentence comment here"
+msgstr "Pridajte sem nepovinný komentár glosovej vety"
+
 # Med
 #: lib/layouts/linguistics.module:168 lib/layouts/linguistics.module:169
 msgid "Interlinear Gloss"
@@ -14404,6 +14465,15 @@ msgstr "Medziriadková glosa"
 #: lib/layouts/linguistics.module:170
 msgid "Add the inter-linear gloss here"
 msgstr "Vložte sem medzi-riadkovú glosu"
+
+#: lib/layouts/linguistics.module:222 lib/layouts/linguistics.module:223
+msgid "Gloss Comment"
+msgstr "Komentár na glosu"
+
+#: lib/layouts/linguistics.module:224 lib/layouts/linguistics.module:280
+#: lib/layouts/linguistics.module:295
+msgid "Add an optional gloss comment here"
+msgstr "Pridajte sem nepovinný komentár glosy"
 
 #: lib/layouts/linguistics.module:178 lib/layouts/linguistics.module:234
 msgid "Translation"
@@ -14441,6 +14511,14 @@ msgstr "Medziriadková glosa (riadok 1)|1"
 msgid "Add the first inter-linear gloss line here"
 msgstr "Vložte sem prvý riadok medzi-riadkovej glosy"
 
+#: lib/layouts/linguistics.module:278
+msgid "Gloss Comment (1)"
+msgstr "Komentár na glosu (1)"
+
+#: lib/layouts/linguistics.module:279
+msgid "Gloss Comment (Line 1)"
+msgstr "Komentár na glosu (riadok 1)"
+
 #: lib/layouts/linguistics.module:224
 msgid "Interlinear Gloss (2)"
 msgstr "Medziriadková glosa (2)"
@@ -14448,6 +14526,18 @@ msgstr "Medziriadková glosa (2)"
 #: lib/layouts/linguistics.module:225
 msgid "Interlinear Gloss (Line 2)|2"
 msgstr "Medziriadková glosa (riadok 2)|2"
+
+#: lib/layouts/linguistics.module:286
+msgid "Add the second inter-linear gloss line here"
+msgstr "Pridajte sem druhú medzi-riadkovú glosu"
+
+#: lib/layouts/linguistics.module:293
+msgid "Gloss Comment (2)"
+msgstr "Komentár na glosu (2)"
+
+#: lib/layouts/linguistics.module:294
+msgid "Gloss Comment (Line 2)"
+msgstr "Komentár na glosu (riadok 2)"
 
 #: lib/layouts/linguistics.module:236
 msgid "Add a translation for the glosse"
