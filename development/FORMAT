@@ -18,6 +18,8 @@ changes happened in particular if possible. A good example would be
 
 2023-06-11 Enrico Forestieri <forenr@lyx.org>
 	* Format incremented to 616: Do not output LaTeX for a macro if the LaTeX part is empty
+	- This allows the user to define the LyX display for LaTeX commands
+	  that are already defined (e.g., in user preamble or a package).
 
 2023-04-02 Jürgen Spitzmüller <spitz@lyx.org> 
 	* Format incremented to 615: Unifiy spelling of "acknowledgment" styles
