@@ -2719,6 +2719,24 @@ void Buffer::markDepClean(string const & name)
 }
 
 
+bool Buffer::branchActivationEnabled(FuncCode act, docstring const & branch) const
+{
+	bool const master = act == LFUN_BRANCH_MASTER_ACTIVATE
+	                    || act == LFUN_BRANCH_MASTER_DEACTIVATE;
+	bool const activate = act == LFUN_BRANCH_ACTIVATE
+	                    || act == LFUN_BRANCH_MASTER_ACTIVATE;
+	Buffer const * buf = master ? masterBuffer() : this;
+	Branch const * our_branch = buf->params().branchlist().find(branch);
+	// Can be disabled if
+	// - this is  a _MASTER_ command and there is no master
+	// - the relevant buffer does not know the branch
+	// - the branch is already in the desired state
+	return ((!master || parent() != nullptr)
+	        && !branch.empty() && our_branch
+	        && our_branch->isSelected() != activate);
+}
+
+
 bool Buffer::getStatus(FuncRequest const & cmd, FuncStatus & flag) const
 {
 	if (isInternal()) {
@@ -2770,15 +2788,12 @@ bool Buffer::getStatus(FuncRequest const & cmd, FuncStatus & flag) const
 	case LFUN_BRANCH_ACTIVATE:
 	case LFUN_BRANCH_DEACTIVATE:
 	case LFUN_BRANCH_MASTER_ACTIVATE:
-	case LFUN_BRANCH_MASTER_DEACTIVATE: {
-		bool const master = (cmd.action() == LFUN_BRANCH_MASTER_ACTIVATE
-				     || cmd.action() == LFUN_BRANCH_MASTER_DEACTIVATE);
-		BranchList const & branchList = master ? masterBuffer()->params().branchlist()
-			: params().branchlist();
-		docstring const & branchName = cmd.argument();
-		flag.setEnabled(!branchName.empty() && branchList.find(branchName));
+	case LFUN_BRANCH_MASTER_DEACTIVATE:
+		// Let a branch inset handle that
+		if (cmd.argument().empty())
+			return false;
+		flag.setEnabled(branchActivationEnabled(cmd.action(), cmd.argument()));
 		break;
-	}
 
 	case LFUN_BRANCH_ADD:
 	case LFUN_BRANCHES_RENAME:
@@ -2823,6 +2838,53 @@ bool Buffer::getStatus(FuncRequest const & cmd, FuncStatus & flag) const
 }
 
 
+bool Buffer::branchActivationDispatch(FuncCode act, docstring const & branch)
+{
+	bool const master = (act == LFUN_BRANCH_MASTER_ACTIVATE
+			     || act == LFUN_BRANCH_MASTER_DEACTIVATE);
+	bool const activate = (act == LFUN_BRANCH_ACTIVATE
+			       || act == LFUN_BRANCH_MASTER_ACTIVATE);
+	Buffer * buf = master ? const_cast<Buffer *>(masterBuffer()) : this;
+	Branch * our_branch = buf->params().branchlist().find(branch);
+
+	// See comment in branchActivationStatus
+	if ((master && parent() == nullptr)
+	     || !our_branch
+	     || our_branch->isSelected() == activate)
+		return false;
+
+	if (master && !buf->hasGuiDelegate()
+	    && (!theApp() || !theApp()->unhide(buf)))
+		// at least issue a warning for now (ugly, but better than dataloss).
+		frontend::Alert::warning(_("Branch state changes in master document"),
+		    lyx::support::bformat(_("The state of the branch '%1$s' "
+			"was changed in the master file. "
+			"Please make sure to save the master."), branch), true);
+
+	UndoGroupHelper ugh(buf);
+	buf->undo().recordUndoBufferParams(CursorData());
+	our_branch->setSelected(activate);
+	// cur.forceBufferUpdate() is not enough)
+	buf->updateBuffer();
+
+	// if branch exists in a descendant, update previews.
+	// TODO: only needed if "Show preview" is enabled in the included inset.
+	bool exists_in_desc = false;
+	for (auto const & it : buf->getDescendants()) {
+		if (it->params().branchlist().find(branch))
+			exists_in_desc = true;
+	}
+	if (exists_in_desc) {
+		// TODO: ideally we would only update the previews of the
+		// specific children that have this branch directly or
+		// in one of their descendants
+		buf->removePreviews();
+		buf->updatePreviews();
+	}
+	return true;
+}
+
+
 void Buffer::dispatch(string const & command, DispatchResult & result)
 {
 	return dispatch(lyxaction.lookupFunc(command), result);
@@ -2834,6 +2896,7 @@ void Buffer::dispatch(string const & command, DispatchResult & result)
 // whether we have a GUI or not. The boolean use_gui holds this information.
 void Buffer::dispatch(FuncRequest const & func, DispatchResult & dr)
 {
+	LYXERR(Debug::ACTION, "Buffer::dispatch: cmd: " << func);
 	if (isInternal()) {
 		// FIXME? if there is an Buffer LFUN that can be dispatched even
 		// if internal, put a switch '(cmd.action())' here.
@@ -2932,35 +2995,15 @@ void Buffer::dispatch(FuncRequest const & func, DispatchResult & dr)
 	case LFUN_BRANCH_DEACTIVATE:
 	case LFUN_BRANCH_MASTER_ACTIVATE:
 	case LFUN_BRANCH_MASTER_DEACTIVATE: {
-		bool const master = (func.action() == LFUN_BRANCH_MASTER_ACTIVATE
-				     || func.action() == LFUN_BRANCH_MASTER_DEACTIVATE);
-		Buffer * buf = master ? const_cast<Buffer *>(masterBuffer())
-				      : this;
-
-		docstring const & branch_name = func.argument();
-		// the case without a branch name is handled elsewhere
-		if (branch_name.empty()) {
-			dispatched = false;
-			break;
+		// Let a branch inset handle that
+		if (func.argument().empty()) {
+			dr.dispatched(false);
+			return;
 		}
-		Branch * branch = buf->params().branchlist().find(branch_name);
-		if (!branch) {
-			LYXERR0("Branch " << branch_name << " does not exist.");
-			dr.setError(true);
-			docstring const msg =
-				bformat(_("Branch \"%1$s\" does not exist."), branch_name);
-			dr.setMessage(msg);
-			break;
-		}
-		bool const activate = (func.action() == LFUN_BRANCH_ACTIVATE
-				       || func.action() == LFUN_BRANCH_MASTER_ACTIVATE);
-		if (branch->isSelected() != activate) {
-			buf->undo().recordUndoBufferParams(CursorData());
-			branch->setSelected(activate);
-			dr.setError(false);
+		bool const res = branchActivationDispatch(func.action(), func.argument());
+		dr.setError(!res);
+		if (res)
 			dr.screenUpdate(Update::Force);
-			dr.forceBufferUpdate();
-		}
 		break;
 	}
 

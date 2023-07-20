@@ -166,54 +166,9 @@ void InsetBranch::doDispatch(Cursor & cur, FuncRequest & cmd)
 	case LFUN_BRANCH_ACTIVATE:
 	case LFUN_BRANCH_DEACTIVATE:
 	case LFUN_BRANCH_MASTER_ACTIVATE:
-	case LFUN_BRANCH_MASTER_DEACTIVATE: {
-		bool const master = (cmd.action() == LFUN_BRANCH_MASTER_ACTIVATE
-				     || cmd.action() == LFUN_BRANCH_MASTER_DEACTIVATE);
-		Buffer * buf = master ? const_cast<Buffer *>(buffer().masterBuffer())
-				      : &buffer();
-
-		Branch * our_branch = buf->params().branchlist().find(params_.branch);
-		if (!our_branch)
-			break;
-
-		bool const activate = (cmd.action() == LFUN_BRANCH_ACTIVATE
-				       || cmd.action() == LFUN_BRANCH_MASTER_ACTIVATE);
-		if (our_branch->isSelected() != activate) {
-			// FIXME If the branch is in the master document, we cannot
-			// call recordUndo..., because the master may be hidden, and
-			// the code presently assumes that hidden documents can never
-			// be dirty. See GuiView::closeBufferAll(), for example.
-			// An option would be to check if the master is hidden.
-			// If it is, unhide.
-			if (!master)
-				buffer().undo().recordUndoBufferParams(cur);
-			else
-				// at least issue a warning for now (ugly, but better than dataloss).
-				frontend::Alert::warning(_("Branch state changes in master document"),
-				    lyx::support::bformat(_("The state of the branch '%1$s' "
-					"was changed in the master file. "
-					"Please make sure to save the master."), params_.branch), true);
-			our_branch->setSelected(activate);
-			// cur.forceBufferUpdate() is not enough
-			buf->updateBuffer();
-		}
-
-		// if branch exists in a descendant, update previews.
-		// TODO: only needed if "Show preview" is enabled in the included inset.
-		bool exists_in_desc = false;
-		for (auto const & it : buf->getDescendants()) {
-			if (it->params().branchlist().find(params_.branch))
-				exists_in_desc = true;
-		}
-		if (exists_in_desc) {
-			// TODO: ideally we would only update the previews of the
-			// specific children that have this branch directly or
-			// in one of their descendants
-			buf->removePreviews();
-			buf->updatePreviews();
-		}
+	case LFUN_BRANCH_MASTER_DEACTIVATE:
+		buffer().branchActivationDispatch(cmd.action(), params_.branch);
 		break;
-	}
 	case LFUN_BRANCH_INVERT:
 		cur.recordUndoInset(this);
 		params_.inverted = !params_.inverted;
@@ -253,7 +208,10 @@ bool InsetBranch::getStatus(Cursor & cur, FuncRequest const & cmd,
 		break;
 
 	case LFUN_BRANCH_ACTIVATE:
-		flag.setEnabled(known_branch && !isBranchSelected(true));
+	case LFUN_BRANCH_DEACTIVATE:
+	case LFUN_BRANCH_MASTER_ACTIVATE:
+	case LFUN_BRANCH_MASTER_DEACTIVATE:
+		flag.setEnabled(buffer().branchActivationEnabled(cmd.action(), params_.branch));
 		break;
 
 	case LFUN_BRANCH_INVERT:
@@ -263,20 +221,6 @@ bool InsetBranch::getStatus(Cursor & cur, FuncRequest const & cmd,
 
 	case LFUN_BRANCH_ADD:
 		flag.setEnabled(!known_branch);
-		break;
-
-	case LFUN_BRANCH_DEACTIVATE:
-		flag.setEnabled(isBranchSelected(true));
-		break;
-
-	case LFUN_BRANCH_MASTER_ACTIVATE:
-		flag.setEnabled(buffer().parent()
-				&& buffer().masterBuffer()->params().branchlist().find(params_.branch)
-				&& !isBranchSelected());
-		break;
-
-	case LFUN_BRANCH_MASTER_DEACTIVATE:
-		flag.setEnabled(buffer().parent() && isBranchSelected());
 		break;
 
 	case LFUN_BRANCH_SYNC_ALL:

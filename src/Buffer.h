@@ -12,6 +12,7 @@
 #ifndef BUFFER_H
 #define BUFFER_H
 
+#include "FuncCode.h"
 #include "OutputEnums.h"
 
 #include "support/unique_ptr.h"
@@ -153,13 +154,17 @@ public:
 	/// Destructor
 	~Buffer();
 
-	/// Clones the entire structure of which this Buffer is part, 
+	/// Clones the entire structure of which this Buffer is part,
 	/// cloning all the children, too.
 	Buffer * cloneWithChildren() const;
 	/// Just clones this single Buffer. For autosave.
 	Buffer * cloneBufferOnly() const;
 	///
 	bool isClone() const;
+
+	/// Helper method: dispatch this branch activation LFUN
+	/// Retunrs true if the function has been dispatched
+	bool branchActivationDispatch(FuncCode act, docstring const & branch);
 
 	/** High-level interface to buffer functionality.
 	    This function parses a command string and executes it.
@@ -168,6 +173,9 @@ public:
 
 	/// Maybe we know the function already by number...
 	void dispatch(FuncRequest const & func, DispatchResult & result);
+
+	/// Helper method: Is this buffer activation LFUN enabled?
+	bool branchActivationEnabled(FuncCode act, docstring const & branch) const;
 
 	/// Can this function be exectued?
 	/// \return true if we made a decision
