@@ -94,8 +94,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-07-20 15:23+0200\n"
-"PO-Revision-Date: 2023-07-20 15:31+0200\n"
+"POT-Creation-Date: 2023-07-20 16:46+0200\n"
+"PO-Revision-Date: 2023-07-20 16:47+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -14795,327 +14795,343 @@ msgstr "Unterbeispiel-Vorspann"
 msgid "Subex. Preamble"
 msgstr "Unterbsp.-Vorspann"
 
-#: lib/layouts/linguistics.module:171
+#: lib/layouts/linguistics.module:166
+msgid "Example Postamble"
+msgstr "Beispiel-Nachspann"
+
+#: lib/layouts/linguistics.module:169
+msgid "Ex. Postamble"
+msgstr "Bsp.-Nachspann"
+
+#: lib/layouts/linguistics.module:172
+msgid "Subexample Postamble"
+msgstr "Unterbeispiel-Nachspann"
+
+#: lib/layouts/linguistics.module:175
+msgid "Subex. Postamble"
+msgstr "Unterbsp.-Nachspann"
+
+#: lib/layouts/linguistics.module:184
 msgid "Interlinear Gloss (2 Lines)"
 msgstr "Interlinear-Glosse (2 Zeilen)"
 
-#: lib/layouts/linguistics.module:173
+#: lib/layouts/linguistics.module:186
 msgid "Gloss"
 msgstr "Glosse"
 
-#: lib/layouts/linguistics.module:189 lib/layouts/linguistics.module:245
+#: lib/layouts/linguistics.module:202 lib/layouts/linguistics.module:258
 msgid "Gloss options"
 msgstr "Glossen-Optionen"
 
-#: lib/layouts/linguistics.module:190 lib/layouts/linguistics.module:246
+#: lib/layouts/linguistics.module:203 lib/layouts/linguistics.module:259
 msgid "Gloss Options|s"
 msgstr "Glossen-Optionen"
 
-#: lib/layouts/linguistics.module:191
+#: lib/layouts/linguistics.module:204
 msgid "Add digloss options here"
 msgstr "Fügen Sie hier digloss-Optionen ein."
 
-#: lib/layouts/linguistics.module:194 lib/layouts/linguistics.module:195
-#: lib/layouts/linguistics.module:250 lib/layouts/linguistics.module:251
+#: lib/layouts/linguistics.module:207 lib/layouts/linguistics.module:208
+#: lib/layouts/linguistics.module:263 lib/layouts/linguistics.module:264
 msgid "Sentence Comment"
 msgstr "Kommentar zum Satz"
 
-#: lib/layouts/linguistics.module:196 lib/layouts/linguistics.module:252
+#: lib/layouts/linguistics.module:209 lib/layouts/linguistics.module:265
 msgid "Add an optional sentence comment here"
 msgstr "Geben Sie hier optional einen Kommentar zum glossierten Satz ein"
 
-#: lib/layouts/linguistics.module:200 lib/layouts/linguistics.module:201
+#: lib/layouts/linguistics.module:213 lib/layouts/linguistics.module:214
 msgid "Interlinear Gloss"
 msgstr "Interlinear-Glosse"
 
-#: lib/layouts/linguistics.module:202
+#: lib/layouts/linguistics.module:215
 msgid "Add the inter-linear gloss here"
 msgstr "Geben Sie hier die Interlinear-Glossierung ein"
 
-#: lib/layouts/linguistics.module:209 lib/layouts/linguistics.module:210
+#: lib/layouts/linguistics.module:222 lib/layouts/linguistics.module:223
 msgid "Gloss Comment"
 msgstr "Kommentar zur Glossierung"
 
-#: lib/layouts/linguistics.module:211 lib/layouts/linguistics.module:267
-#: lib/layouts/linguistics.module:282
+#: lib/layouts/linguistics.module:224 lib/layouts/linguistics.module:280
+#: lib/layouts/linguistics.module:295
 msgid "Add an optional gloss comment here"
 msgstr "Geben Sie hier optional einen Kommentar zur Glossierung ein."
 
-#: lib/layouts/linguistics.module:215 lib/layouts/linguistics.module:286
+#: lib/layouts/linguistics.module:228 lib/layouts/linguistics.module:299
 msgid "Translation"
 msgstr "Übersetzung"
 
-#: lib/layouts/linguistics.module:216 lib/layouts/linguistics.module:287
+#: lib/layouts/linguistics.module:229 lib/layouts/linguistics.module:300
 msgid "Gloss Translation"
 msgstr "Glossen-Übersetzung"
 
-#: lib/layouts/linguistics.module:217
+#: lib/layouts/linguistics.module:230
 msgid "Add a free translation for the gloss"
 msgstr "Fügt der Glosse eine freie Übersetzung (Paraphrase) hinzu"
 
-#: lib/layouts/linguistics.module:227
+#: lib/layouts/linguistics.module:240
 msgid "Interlinear Gloss (3 Lines)"
 msgstr "Interlinear-Glosse (3 Zeilen)"
 
-#: lib/layouts/linguistics.module:229
+#: lib/layouts/linguistics.module:242
 msgid "Tri-Gloss"
 msgstr "Tri-Glosse"
 
-#: lib/layouts/linguistics.module:247
+#: lib/layouts/linguistics.module:260
 msgid "Add trigloss options here"
 msgstr "Geben Sie hier trigloss-Optionen ein"
 
-#: lib/layouts/linguistics.module:256
+#: lib/layouts/linguistics.module:269
 msgid "Interlinear Gloss (1)"
 msgstr "Interlinear-Glosse (1)"
 
-#: lib/layouts/linguistics.module:257
+#: lib/layouts/linguistics.module:270
 msgid "Interlinear Gloss (Line 1)|1"
 msgstr "Interlinear-Glosse (Zeile 1)|1"
 
-#: lib/layouts/linguistics.module:258
+#: lib/layouts/linguistics.module:271
 msgid "Add the first inter-linear gloss line here"
 msgstr "Geben Sie hier die erste Interlinear-Glossierung ein"
 
-#: lib/layouts/linguistics.module:265
+#: lib/layouts/linguistics.module:278
 msgid "Gloss Comment (1)"
 msgstr "Kommentar zur Glossierung (1)"
 
-#: lib/layouts/linguistics.module:266
+#: lib/layouts/linguistics.module:279
 msgid "Gloss Comment (Line 1)"
 msgstr "Kommentar zur Glossierung (Z. 1)"
 
-#: lib/layouts/linguistics.module:271
+#: lib/layouts/linguistics.module:284
 msgid "Interlinear Gloss (2)"
 msgstr "Interlinear-Glosse (2)"
 
-#: lib/layouts/linguistics.module:272
+#: lib/layouts/linguistics.module:285
 msgid "Interlinear Gloss (Line 2)|2"
 msgstr "Interlinear-Glosse (Zeile 2)|2"
 
-#: lib/layouts/linguistics.module:273
+#: lib/layouts/linguistics.module:286
 msgid "Add the second inter-linear gloss line here"
 msgstr "Geben Sie hier die zweite Interlinear-Glossierung ein"
 
-#: lib/layouts/linguistics.module:280
+#: lib/layouts/linguistics.module:293
 msgid "Gloss Comment (2)"
 msgstr "Kommentar zur Glossierung (2)"
 
-#: lib/layouts/linguistics.module:281
+#: lib/layouts/linguistics.module:294
 msgid "Gloss Comment (Line 2)"
 msgstr "Kommentar zur Glossierung (Z. 2)"
 
-#: lib/layouts/linguistics.module:288
+#: lib/layouts/linguistics.module:301
 msgid "Add a translation for the glosse"
 msgstr "Fügt der Glosse eine Übersetzung (Paraphrase) hinzu"
 
-#: lib/layouts/linguistics.module:297
+#: lib/layouts/linguistics.module:310
 msgid "GroupGlossedWords"
 msgstr "Glossierte Wortgruppen"
 
-#: lib/layouts/linguistics.module:299
+#: lib/layouts/linguistics.module:312
 msgid "Group"
 msgstr "Gruppe"
 
-#: lib/layouts/linguistics.module:311
+#: lib/layouts/linguistics.module:324
 msgid "Structure Tree"
 msgstr "Strukturbaum"
 
-#: lib/layouts/linguistics.module:313
+#: lib/layouts/linguistics.module:326
 msgid "Tree"
 msgstr "Baum"
 
-#: lib/layouts/linguistics.module:341 lib/layouts/linguistics.module:343
+#: lib/layouts/linguistics.module:354 lib/layouts/linguistics.module:356
 msgid "DRS"
 msgstr "DRS"
 
-#: lib/layouts/linguistics.module:344
+#: lib/layouts/linguistics.module:357
 msgid "Discourse Representation Structure|D"
 msgstr "Diskursrepräsentationsstruktur|D"
 
-#: lib/layouts/linguistics.module:356 lib/layouts/linguistics.module:503
+#: lib/layouts/linguistics.module:369 lib/layouts/linguistics.module:516
 msgid "Referents"
 msgstr "Referenten"
 
-#: lib/layouts/linguistics.module:357 lib/layouts/linguistics.module:504
+#: lib/layouts/linguistics.module:370 lib/layouts/linguistics.module:517
 msgid "DRS Referents"
 msgstr "DRS-Referenten"
 
-#: lib/layouts/linguistics.module:358 lib/layouts/linguistics.module:505
+#: lib/layouts/linguistics.module:371 lib/layouts/linguistics.module:518
 msgid "Add the DRS referents (universe) here"
 msgstr "Fügen Sie hier die Diskursreferenten (Universum) ein."
 
-#: lib/layouts/linguistics.module:365 lib/layouts/linguistics.module:367
+#: lib/layouts/linguistics.module:378 lib/layouts/linguistics.module:380
 msgid "DRS*"
 msgstr "DRS*"
 
-#: lib/layouts/linguistics.module:368
+#: lib/layouts/linguistics.module:381
 msgid "Discourse Representation Structure (unspaced)|u"
 msgstr "Diskursrepräsentationsstruktur (einfach)"
 
-#: lib/layouts/linguistics.module:373
+#: lib/layouts/linguistics.module:386
 msgid "IfThen-DRS"
 msgstr "Implikative DRS"
 
-#: lib/layouts/linguistics.module:375 lib/layouts/linguistics.module:376
+#: lib/layouts/linguistics.module:388 lib/layouts/linguistics.module:389
 msgid "If-Then DRS"
 msgstr "Implikative DRS"
 
-#: lib/layouts/linguistics.module:380 lib/layouts/linguistics.module:415
-#: lib/layouts/linguistics.module:459
+#: lib/layouts/linguistics.module:393 lib/layouts/linguistics.module:428
+#: lib/layouts/linguistics.module:472
 msgid "Then-Referents"
 msgstr "Dann-Referenten"
 
-#: lib/layouts/linguistics.module:381 lib/layouts/linguistics.module:390
-#: lib/layouts/linguistics.module:416 lib/layouts/linguistics.module:425
-#: lib/layouts/linguistics.module:460 lib/layouts/linguistics.module:469
+#: lib/layouts/linguistics.module:394 lib/layouts/linguistics.module:403
+#: lib/layouts/linguistics.module:429 lib/layouts/linguistics.module:438
+#: lib/layouts/linguistics.module:473 lib/layouts/linguistics.module:482
 msgid "DRS Then-Referents"
 msgstr "DRS-Dann-Referenten"
 
-#: lib/layouts/linguistics.module:382 lib/layouts/linguistics.module:417
-#: lib/layouts/linguistics.module:461
+#: lib/layouts/linguistics.module:395 lib/layouts/linguistics.module:430
+#: lib/layouts/linguistics.module:474
 msgid "Add the DRS then-referents (universe) here"
 msgstr "Geben Sie hier die implizierten (\"dann\") Referenten ein."
 
-#: lib/layouts/linguistics.module:389 lib/layouts/linguistics.module:424
-#: lib/layouts/linguistics.module:468
+#: lib/layouts/linguistics.module:402 lib/layouts/linguistics.module:437
+#: lib/layouts/linguistics.module:481
 msgid "Then-Conditions"
 msgstr "Dann-Bedingungen"
 
-#: lib/layouts/linguistics.module:391 lib/layouts/linguistics.module:426
-#: lib/layouts/linguistics.module:470
+#: lib/layouts/linguistics.module:404 lib/layouts/linguistics.module:439
+#: lib/layouts/linguistics.module:483
 msgid "Add the DRS then-conditions here"
 msgstr "Geben Sie hier die DRS-Dann-Bedingungen ein"
 
-#: lib/layouts/linguistics.module:399
+#: lib/layouts/linguistics.module:412
 msgid "Cond-DRS"
 msgstr "Kond.-DRS"
 
-#: lib/layouts/linguistics.module:401
+#: lib/layouts/linguistics.module:414
 msgid "Cond. DRS"
 msgstr "Kond. DRS"
 
-#: lib/layouts/linguistics.module:402
+#: lib/layouts/linguistics.module:415
 msgid "Conditional DRS"
 msgstr "Konditionale DRS"
 
-#: lib/layouts/linguistics.module:406
+#: lib/layouts/linguistics.module:419
 msgid "Cond."
 msgstr "Bed."
 
-#: lib/layouts/linguistics.module:407
+#: lib/layouts/linguistics.module:420
 msgid "DRS Condition"
 msgstr "DRS-Bedingung"
 
-#: lib/layouts/linguistics.module:408
+#: lib/layouts/linguistics.module:421
 msgid "Add the DRS condition here"
 msgstr "Geben Sie hier DRS-Bedingung ein"
 
-#: lib/layouts/linguistics.module:434
+#: lib/layouts/linguistics.module:447
 msgid "QDRS"
 msgstr "QDRS"
 
-#: lib/layouts/linguistics.module:436
+#: lib/layouts/linguistics.module:449
 msgid "Dupl. Cond. DRS"
 msgstr "Dupl.-Bed.-DRS"
 
-#: lib/layouts/linguistics.module:437
+#: lib/layouts/linguistics.module:450
 msgid "Duplex Condition DRS"
 msgstr "Duplex-Bedingungs-DRS"
 
-#: lib/layouts/linguistics.module:441
+#: lib/layouts/linguistics.module:454
 msgid "Quant."
 msgstr "Quant."
 
-#: lib/layouts/linguistics.module:442
+#: lib/layouts/linguistics.module:455
 msgid "DRS Quantifier"
 msgstr "DRS-Quantifizierer"
 
-#: lib/layouts/linguistics.module:443
+#: lib/layouts/linguistics.module:456
 msgid "Add the DRS duplex quantifier here"
 msgstr "Geben Sie hier den DRS-Duplex-Quantifizierer ein"
 
-#: lib/layouts/linguistics.module:450
+#: lib/layouts/linguistics.module:463
 msgid "Quant. Var."
 msgstr "Quant.-Var."
 
-#: lib/layouts/linguistics.module:451
+#: lib/layouts/linguistics.module:464
 msgid "DRS Quantifier Variable"
 msgstr "Quantifizierer-Variablen"
 
-#: lib/layouts/linguistics.module:452
+#: lib/layouts/linguistics.module:465
 msgid "Add the DRS duplex quantifier variables here"
 msgstr "Geben Sie hier die DRS-Quantifizierer-Variablen ein"
 
-#: lib/layouts/linguistics.module:479
+#: lib/layouts/linguistics.module:492
 msgid "NegDRS"
 msgstr "NegDRS"
 
-#: lib/layouts/linguistics.module:481
+#: lib/layouts/linguistics.module:494
 msgid "Neg. DRS"
 msgstr "Neg. DRS"
 
-#: lib/layouts/linguistics.module:482
+#: lib/layouts/linguistics.module:495
 msgid "Negated DRS"
 msgstr "Negierte DRS"
 
-#: lib/layouts/linguistics.module:487
+#: lib/layouts/linguistics.module:500
 msgid "SDRS"
 msgstr "SDRS"
 
-#: lib/layouts/linguistics.module:489
+#: lib/layouts/linguistics.module:502
 msgid "Sent. DRS"
 msgstr "Satz-DRS"
 
-#: lib/layouts/linguistics.module:490
+#: lib/layouts/linguistics.module:503
 msgid "DRS with Sentence above"
 msgstr "DRS mit Satz oberhalb"
 
-#: lib/layouts/linguistics.module:494
+#: lib/layouts/linguistics.module:507
 msgid "Sentence"
 msgstr "Satz"
 
-#: lib/layouts/linguistics.module:495
+#: lib/layouts/linguistics.module:508
 msgid "DRS Sentence"
 msgstr "DRS-Satz"
 
-#: lib/layouts/linguistics.module:496
+#: lib/layouts/linguistics.module:509
 msgid "Add the sentence here"
 msgstr "Geben Sie hier den Satz ein."
 
-#: lib/layouts/linguistics.module:517
+#: lib/layouts/linguistics.module:530
 msgid "Expression"
 msgstr "Ausdruck"
 
-#: lib/layouts/linguistics.module:519
+#: lib/layouts/linguistics.module:532
 msgid "expr."
 msgstr "Ausdr."
 
-#: lib/layouts/linguistics.module:531
+#: lib/layouts/linguistics.module:544
 msgid "Concepts"
 msgstr "Konzept"
 
-#: lib/layouts/linguistics.module:533
+#: lib/layouts/linguistics.module:546
 msgid "concept"
 msgstr "Konzept"
 
-#: lib/layouts/linguistics.module:545
+#: lib/layouts/linguistics.module:558
 msgid "Meaning"
 msgstr "Bedeutung"
 
-#: lib/layouts/linguistics.module:547
+#: lib/layouts/linguistics.module:560
 msgid "meaning"
 msgstr "Bedeutung"
 
-#: lib/layouts/linguistics.module:560
+#: lib/layouts/linguistics.module:573
 msgid "Tableaux"
 msgstr "Tableaus"
 
-#: lib/layouts/linguistics.module:564
+#: lib/layouts/linguistics.module:577
 msgid "Tableau"
 msgstr "Tableau"
 
-#: lib/layouts/linguistics.module:569
+#: lib/layouts/linguistics.module:582
 msgid "List of Tableaux"
 msgstr "Tableaux-Verzeichnis"
 
