@@ -86,3 +86,15 @@
 \kmap B ֲ	#	Hataf patah
 \kmap N ֳ	#	Hataf qamats
 \kmap M ֵ	# Shift+Tsadi = Tsere
+
+# mirroring delimiters
+\kmap ( )
+\kmap ) (
+\kmap [ ]
+\kmap ] [
+\kmap { }
+\kmap } {
+\kmap < >
+\kmap > <
+
+
