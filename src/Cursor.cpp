@@ -795,7 +795,7 @@ void Cursor::dispatch(FuncRequest const & cmd0)
 		disp_.dispatched(true);
 		disp_.screenUpdate(Update::FitCursor | Update::Force);
 		FuncRequest tmpcmd = cmd;
-		LYXERR(Debug::DEBUG, "Cursor::dispatch: (AtPoint) cmd: "
+		LYXERR(Debug::ACTION, "Cursor::dispatch: (AtPoint) cmd: "
 			<< cmd0 << endl << *this);
 		nextInset()->dispatch(*this, tmpcmd);
 		if (disp_.dispatched()) {
@@ -807,7 +807,7 @@ void Cursor::dispatch(FuncRequest const & cmd0)
 	// store some values to be used inside of the handlers
 	beforeDispatchCursor_ = *this;
 	for (; depth(); pop(), boundary(false)) {
-		LYXERR(Debug::DEBUG, "Cursor::dispatch: cmd: "
+		LYXERR(Debug::ACTION, "Cursor::dispatch: cmd: "
 			<< cmd0 << endl << *this);
 
 		// In any of these cases, the cursor is invalid, and we should
@@ -829,7 +829,7 @@ void Cursor::dispatch(FuncRequest const & cmd0)
 	// it completely to get a 'bomb early' behaviour in case this
 	// object will be used again.
 	if (!disp_.dispatched()) {
-		LYXERR(Debug::DEBUG, "RESTORING OLD CURSOR!");
+		LYXERR(Debug::ACTION, "RESTORING OLD CURSOR!");
 		// We might have invalidated the cursor when removing an empty
 		// paragraph while the cursor could not be moved out the inset
 		// while we initially thought we could. This might happen when
