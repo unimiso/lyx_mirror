@@ -5296,6 +5296,9 @@ def revert_exarg2(document):
                      continue
 
             arg = find_token(document.body, "\\begin_inset Argument 1", i, l)
+            if arg != -1 and layouttype != "\\begin_layout " + get_containing_layout(document.body, arg)[0]:
+                 # this is not our argument!
+                 arg = -1
             if subexpl or arg == -1:
                 iarg = find_token(document.body, "\\begin_inset Argument item:1", i, l)
                 if iarg == -1:
