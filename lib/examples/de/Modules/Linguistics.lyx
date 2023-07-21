@@ -433,6 +433,36 @@ arg   "pict2e"
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+
+\emph on
+varwidth.sty
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "varwidth"
+literal "true"
+
+\end_inset
+
+:
+ Dieses Paket wird von covington (ab Version 2.11) für Glossen-Kommentare gebraucht.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Auf Ihrem System installiert:
+ 
+\begin_inset Info
+type  "package"
+arg   "varwidth"
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Nummerierte Beispiele
 \end_layout
@@ -3371,6 +3401,29 @@ status collapsed
 \begin_layout Plain Layout
 
 http://www.ctan.org/tex-archive/fonts/tipa/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "varwidth"
+literal "false"
+
+\end_inset
+
+Das varwidth-Paket:
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://ctan.org/tex-archive/macros/latex/contrib/varwidth
 \end_layout
 
 \end_inset

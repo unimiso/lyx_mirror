@@ -511,12 +511,46 @@ es.
 \begin_deeper
 \begin_layout Itemize
 
-\change_inserted -712698321 1561276163
+\change_inserted -712698321 1689942218
 Installed on your system:
  
 \begin_inset Info
 type  "package"
 arg   "pict2e"
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\change_inserted -712698321 1689942481
+
+\emph on
+varwidth.sty
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "varwidth"
+literal "true"
+
+\end_inset
+
+:
+ Needed by covington (as of version 2.11) for gloss comments.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -712698321 1689942218
+Installed on your system:
+ 
+\begin_inset Info
+type  "package"
+arg   "varwidth"
 \end_inset
 
 .
@@ -4338,6 +4372,39 @@ http://www.ctan.org/tex-archive/fonts/tipa/
 \end_inset
 
 .
+\change_inserted -712698321 1689942343
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted -712698321 1689942407
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "varwidth"
+literal "false"
+
+\end_inset
+
+The varwidth package:
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1689942372
+
+https://ctan.org/tex-archive/macros/latex/contrib/varwidth
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+\change_unchanged
+
 \end_layout
 
 \end_body

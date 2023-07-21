@@ -1,4 +1,4 @@
-#\DeclareLyXModule[covington.sty,drs.sty,forest.sty,pict2e.sty]{Linguistics}
+#\DeclareLyXModule[covington.sty,drs.sty,forest.sty,pict2e.sty,varwidth.sty]{Linguistics}
 #\DeclareCategory{Academic Field Specifics}
 #DescriptionBegin
 #Defines some special environments useful for linguistics (numbered examples,
