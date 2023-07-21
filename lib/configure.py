@@ -1206,8 +1206,10 @@ def checkConverterEntries():
         except:
             removeFiles(['mock.eps'])
             #needs empty record otherwise default converter will be issued
-            rc_entry = r'\converter eps        png        ""	""'
-            addToRC(rc_entry)
+            addToRC(r'''\converter eps        png        ""	""
+\converter png        eps        ""	""
+\converter jpg        tiff        "convert $$i $$o"	""
+\converter png        tiff        "convert $$i $$o"	""''')
             logger.info('ImageMagick seems to ban conversions from EPS. Disabling direct EPS->PNG.')
     #
     # no agr -> pdf6 converter, since the pdf library used by gracebat is not
