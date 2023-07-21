@@ -84,6 +84,22 @@
 * Postscript -> PDF convertor (ps2pdf) uses -dALLOWPSTRANSPARENCY by
   default now (implemented since ghostscript 9.53.3, see bug #12303).
 
+* There is a widespread ban on postscript conversions across different
+  linux distributions and there are currently two way how to address
+  various image conversion errors when typesetting your documents: 
+  - either manually remove the bans of EPS/PDF coders in ImageMagick
+    policy.xml configuration file
+  - or install alternative converters for bitmap <-> postscript.
+    In particular pdftoppm (poppler-utils) and tiff2ps (libtiff-tools)
+    are now recognized and activated in case LyX detects ImageMagick
+    policy ban. These will allow eps<->png(jpg) conversion chain to
+    be found when processing your documents. 
+  Package maintainers of distributions (e.g. openSUSE or Debian derivates)
+  where ghostscript conversions of ImageMagick are banned can simply 
+  add dependencies for poppler-utils and libtiff-tools to workaround
+  the problem.
+
+
 !!!The following pref variables were added in 2.4:
 
 * \ct_additions_underlined true|false: determines whether additions in change tracking
