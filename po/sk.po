@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-07-20 17:30+0200\n"
-"PO-Revision-Date: 2023-07-20 16:33+0000\n"
+"POT-Creation-Date: 2023-07-22 20:31+0200\n"
+"PO-Revision-Date: 2023-07-22 18:37+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -34248,6 +34248,15 @@ msgstr "Táto funkcia LyXu je tajná a nedá sa viazať."
 #: src/frontends/qt/GuiPrefs.cpp:3395
 msgid "Invalid or empty key sequence"
 msgstr "Chybná alebo prázdna sekvencia kláves"
+
+#: src/frontends/qt/GuiPrefs.cpp:3414
+#, c-format
+msgid ""
+"Shortcut `%1$s' is already a prefix for other commands.\n"
+"Are you sure you want to unbind these commands and bind it to %2$s?"
+msgstr ""
+"Skratka `%1$s' je už prefixom pre iné príkazy.\n"
+"Naozaj chcete túto väzbu zmazať a zato vytvoriť novú skratku %2$s?"
 
 #: src/frontends/qt/GuiPrefs.cpp:3410
 #, c-format
