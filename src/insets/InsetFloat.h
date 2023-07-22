@@ -105,8 +105,6 @@ private:
 	///
 	bool insetAllowed(InsetCode) const override;
 	///
-	bool inheritFont() const override { return false; }
-	///
 	bool getStatus(Cursor &, FuncRequest const &, FuncStatus &) const override;
 	///
 	bool hasSubCaptions(ParIterator const & it) const override;

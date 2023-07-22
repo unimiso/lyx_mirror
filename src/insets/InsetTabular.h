@@ -62,6 +62,8 @@ public:
 	///
 	InsetCode lyxCode() const override { return CELL_CODE; }
 	///
+	docstring layoutName() const override { return from_ascii("Tabular:Cell"); }
+	///
 	Inset * clone() const override { return new InsetTableCell(*this); }
 	///
 	bool getStatus(Cursor & cur, FuncRequest const & cmd,
@@ -88,8 +90,6 @@ public:
 				  UpdateType utype, TocBackend & backend) const override;
 	///
 	void metrics(MetricsInfo &, Dimension &) const override;
-	/// Needs to be same as InsetTabular
-	bool inheritFont() const override { return false; }
 	/// Can the cell contain several paragraphs?
 	bool allowMultiPar() const override { return !isMultiRow && (!isMultiColumn || isFixedWidth); }
 	///
@@ -1038,8 +1038,6 @@ public:
 	bool canTrackChanges() const override { return true; }
 	///
 	bool canPaintChange(BufferView const &) const override { return true; }
-	///
-	bool inheritFont() const override { return false; }
 	///
 	bool allowMultiPar() const override;
 	///

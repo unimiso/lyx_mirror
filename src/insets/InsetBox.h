@@ -127,8 +127,6 @@ public:
 	///
 	bool neverIndent() const override { return true; }
 	///
-	bool inheritFont() const override { return false; }
-	///
 	void latex(otexstream &, OutputParams const &) const override;
 	///
 	int plaintext(odocstringstream & ods, OutputParams const & op,

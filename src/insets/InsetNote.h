@@ -61,8 +61,6 @@ private:
 	InsetCode lyxCode() const override { return NOTE_CODE; }
 	///
 	docstring layoutName() const override;
-	///
-	bool inheritFont() const override { return params_.type == InsetNoteParams::Note; }
 	/// Is the content of this inset part of the output document?
 	bool producesOutput() const override
 		{ return params_.type == InsetNoteParams::Greyedout; }

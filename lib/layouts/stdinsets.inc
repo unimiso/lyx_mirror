@@ -4,7 +4,7 @@
 #
 # Detailed format description is available in the customization manual
 
-Format 100
+Format 101
 
 Provides stdinsets 1
 
@@ -19,6 +19,7 @@ InsetLayout Marginal
 	LabelString           Margin
 	LatexType             command
 	LatexName             marginpar
+	InheritFont 	      false
 	Font
 	  Size                Small
 	EndFont
@@ -52,6 +53,7 @@ InsetLayout Foot
 	LatexType             Command
 	LatexName             footnote
 	Counter               footnote
+	InheritFont 	      false
 	Font
 	  Size                Small
 	EndFont
@@ -138,6 +140,7 @@ InsetLayout Note:Comment
 	LatexName             comment
 	Requires	      verbatim
 	BgColor               commentbg
+	InheritFont 	      false
 	LabelFont
 	  Color               comment
 	  Size                Small
@@ -179,6 +182,7 @@ InsetLayout Note:Greyedout
 	LatexName             lyxgreyedout
 	Requires	      color,lyxgreyedout
 	BgColor               greyedoutbg
+	InheritFont	      false
 	Font
 	  Size                Normal
 	  Color               greyedouttext
@@ -351,6 +355,7 @@ InsetLayout Listings
 	LabelString           Listings[[inset]]
 	LatexType             none
 	Decoration            minimalistic
+	InheritFont	      false
 	Font
 	  Color               foreground
 	  Family              typewriter
@@ -462,6 +467,7 @@ InsetLayout IndexMacro:subentry
 End
 
 InsetLayout Box
+	InheritFont           false
 	LabelFont
 	  Color               foreground
 	  Size                Small
@@ -572,6 +578,7 @@ End
 
 InsetLayout Float
 	LaTeXType             environment
+	InheritFont 	      false
 	LabelFont
 	  Color               collapsible
 	  Size                Small
@@ -800,6 +807,7 @@ InsetLayout PrintNomencl
 End
 
 InsetLayout Tabular
+	InheritFont false
 	HTMLStyle
 		table {
 			border-collapse: collapse;

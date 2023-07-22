@@ -95,8 +95,6 @@ public:
 	///
 	bool neverIndent() const override { return true; }
 	///
-	bool inheritFont() const override { return true; }
-	///
 	int plaintext(odocstringstream & ods, OutputParams const & op,
 	              size_t max_length = INT_MAX) const override;
 	///

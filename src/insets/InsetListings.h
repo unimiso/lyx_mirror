@@ -43,8 +43,6 @@ public:
 private:
 	///
 	bool isLabeled() const override { return true; }
-	/// false is needed since listings do their own font handling.
-	bool inheritFont() const override { return false; }
 	///
 	InsetCode lyxCode() const override { return LISTINGS_CODE; }
 	/// lstinline is inlined, normal listing is displayed

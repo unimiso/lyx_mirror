@@ -478,8 +478,9 @@ def convert(lines, end_format):
     re_trimLabelStringAppendix  = re.compile(b'^(\\s*LabelStringAppendix\\s+)"\\s*(.*?)\\s*"\\s*$')
     re_trimEndLabelString = re.compile(b'^(\\s*EndLabelString\\s+)"\\s*(.*?)\\s*"\\s*$')
     re_trimLabelCounter = re.compile(b'^(\\s*LabelCounter\\s+)"\\s*(.*?)\\s*"\\s*$')
-
-
+    # for format 100
+    re_InsetLayout100 = re.compile(b'^\\s*InsetLayout\\s+\\"?(Box|Float|Foot|Marginal|Listings|Note:Comment|Note:Greyedout|Tabular)(:\\S*)?\\"?\\s*$', re.IGNORECASE)
+    re_InheritFont = re.compile(b'^(\\s*)InheritFont(\\s+)(\\S+)$', re.IGNORECASE)
     # counters for sectioning styles (hardcoded in 1.3)
     counters = {b"part"          : b"\\Roman{part}",
                 b"chapter"       : b"\\arabic{chapter}",
@@ -586,7 +587,36 @@ def convert(lines, end_format):
                 i += 1
             continue
 
-        if 87 <= format <= 101:
+        if format == 100:
+            # InheritFont has been introduced and defaults to true. Some insets had
+            # an hardcoded inheritFont') method returning true. We removed them, so
+            # we want to introduce the correct tag if it is not already there.
+            match = re_InsetLayout100.match(lines[i])
+            if not match:
+                i += 1
+                continue
+
+            inheritfont_found = False
+            inherited = False
+            while i < len(lines):
+                match = re_InheritFont.match(lines[i])
+                if match:
+                    inheritfont_found = True
+                else:
+                    match = re_CopyStyle.match(lines[i])
+                    if match:
+                        inherited = True
+                    else:
+                        match = re_End.match(lines[i])
+                        if match:
+                            break
+                i += 1
+            if not inheritfont_found and not inherited:
+                lines.insert(i, b"\tInheritFont false")
+
+            continue
+
+        if 87 <= format <= 99:
             # nothing to do.
             i += 1
             continue
