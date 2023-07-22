@@ -88,7 +88,9 @@ void InsetFoot::updateBuffer(ParIterator const & it, UpdateType utype, bool cons
 	int val = cnts.value(count);
 	if (cnts.hasCounter(count)) {
 		cnts.step(count, utype);
-		custom_label_ += ' ' + cnts.theCounter(count, lang->code());
+		if (!custom_label_.empty())
+			custom_label_ += ' ';
+		custom_label_ += cnts.theCounter(count, lang->code());
 		if (deleted)
 			// un-step after deleted counter
 			cnts.set(count, val);
@@ -107,7 +109,7 @@ docstring InsetFoot::toolTip(BufferView const & bv, int x, int y) const
 	if (isOpen(bv))
 		// this will give us something useful if there is no button
 		return InsetCollapsible::toolTip(bv, x, y);
-	return toolTipText(custom_label_+ ": ");
+	return toolTipText(custom_label_+ " ");
 }
 
 

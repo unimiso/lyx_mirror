@@ -41,5 +41,4 @@ End
 Counter footnote
 	GuiName Footnote
 	Within		      chapter
-	LabelString	      "\arabic{footnote}"
 End

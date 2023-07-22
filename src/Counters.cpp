@@ -476,6 +476,9 @@ docstring Counters::labelItem(docstring const & ctr,
 	if (numbertype == "fnsymbol")
 		return fnsymbolCounter(val);
 
+	if (numbertype == "superarabic")
+		return superarabicCounter(val);
+
 	return convert<docstring>(val);
 }
 

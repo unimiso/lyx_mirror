@@ -49,17 +49,17 @@ InsetLayout Marginal
 End
 
 InsetLayout Foot
-	LabelString           Foot
+	LabelString           ""
 	LatexType             Command
 	LatexName             footnote
 	Counter               footnote
 	InheritFont 	      false
 	Font
-	  Size                Small
+	  Size                FootnoteSize
 	EndFont
 	LabelFont
 	  Color               footlabel
-	  Size                Small
+	  Size                Normal
 	EndFont
 	MultiPar              true
 	RefPrefix             fn

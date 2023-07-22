@@ -27,6 +27,7 @@ char hebrewCounter(int const n);
 docstring const romanCounter(int const n);
 docstring const lowerromanCounter(int const n);
 docstring const fnsymbolCounter(int const n);
+docstring const superarabicCounter(int const n);
 
 } // namespace lyx
 

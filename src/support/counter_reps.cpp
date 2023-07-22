@@ -12,6 +12,8 @@
 #include <config.h>
 
 #include "support/counter_reps.h"
+
+#include "support/convert.h"
 #include "support/docstring.h"
 #include "support/lstrings.h"
 
@@ -130,6 +132,17 @@ docstring const fnsymbolCounter(int const n)
 	default:
 		return from_ascii("?");
 	};
+}
+
+
+docstring const superarabicCounter(int const n)
+{
+	docstring superarabic = convert<docstring>(n);
+	static char_type map[] = {0x2070, 0x00b9, 0x00b2, 0x00b3, 0x2074,
+	                          0x2075, 0x2076, 0x2077, 0x2078, 0x2079 };
+	for (char_type & c : superarabic)
+		c = map[c - char_type('0')];
+	return superarabic;
 }
 
 } // namespace lyx
