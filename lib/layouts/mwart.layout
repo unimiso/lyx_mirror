@@ -6,7 +6,7 @@
 # Transposed by Tomasz Łuczak <tlu@technodat.com.pl>
 # Heavily modifed and enhanced by several developers.
 
-Format 100
+Format 101
 Input stdclass.inc
 
 NoStyle   Chapter

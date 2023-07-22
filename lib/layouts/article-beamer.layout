@@ -3,7 +3,7 @@
 #  \DeclareCategory{Articles}
 # Author: Jürgen Spitzmüller <spitz@lyx.org>
 
-Format 100
+Format 101
 
 # Includes
 Input article.layout

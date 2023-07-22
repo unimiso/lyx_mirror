@@ -9,7 +9,7 @@
 #DescriptionEnd
 #Excludes: enotez | foottoenotez
 
-Format 100
+Format 101
 
 
 InsetLayout Foot
@@ -22,6 +22,7 @@ InsetLayout Foot
    BabelPreamble
      \addto\captions$$lang{\renewcommand{\notesname}{_(Notes[[Endnotes]])}}
    EndBabelPreamble
+	InheritFont false
 End
 
 # We are only interested in the list

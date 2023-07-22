@@ -6,7 +6,7 @@
 # - tbook
 # - treport
 
-Format 100
+Format 101
 InsetLayout Flex:Rensuji
 	LyxType				custom
 	LatexType			Command

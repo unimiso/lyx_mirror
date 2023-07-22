@@ -6,7 +6,7 @@
 
 # Author : Martin vermeer <martin.vermeer@hut.fi>
 
-Format 100
+Format 101
 
 InsetLayout Flex:Noun
 	LyxType               charstyle

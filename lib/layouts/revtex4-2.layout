@@ -16,6 +16,6 @@
 #     - add support for \onlinecite{}
 
 
-Format 100
+Format 101
 
 Input revtex4-x.inc

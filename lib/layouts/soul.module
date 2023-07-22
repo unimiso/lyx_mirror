@@ -12,7 +12,7 @@
 #Author: Stephen [original implementation],
 #        Juergen Spitzmueller <spitz@lyx.org> [fixes]
 
-Format 100
+Format 101
 
 InsetLayout Flex:Spaceletters
 	LyxType	charstyle

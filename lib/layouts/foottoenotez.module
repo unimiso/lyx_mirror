@@ -10,13 +10,14 @@
 #DescriptionEnd
 #Excludes: endnotes | foottoend
 
-Format 100
+Format 101
 
 
 InsetLayout Foot
 	LabelString     Endnote
 	LatexName       endnote
 	Requires        enotez
+	InheritFont false
 End
 
 # We are only interested in the list

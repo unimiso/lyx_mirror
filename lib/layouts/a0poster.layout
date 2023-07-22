@@ -3,7 +3,7 @@
 #  \DeclareCategory{Posters}
 # Wrapper layout for the a0poster poster class
 
-Format 100
+Format 101
 
 # Authors: Günter Milde, Jürgen Spitzmüller
 

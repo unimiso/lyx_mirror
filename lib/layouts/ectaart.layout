@@ -3,7 +3,7 @@
 #  \DeclareCategory{Articles}
 # Author : Koji Yokota <yok...@res.otaru-uc.ac.jp>
 
-Format 100
+Format 101
 Input article.layout
 
 TitleLatexType		Environment

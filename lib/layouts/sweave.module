@@ -6,7 +6,7 @@
 #DescriptionEnd
 #Excludes: lilypond
 
-Format 100
+Format 101
 
 Input litinsets.inc
 

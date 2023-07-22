@@ -7,7 +7,7 @@
 #DescriptionEnd
 #Author: Uwe Stöhr <uwestoehr@web.de>
 
-Format 100
+Format 101
 
 AddToPreamble
  % used for custom paragraph shapes

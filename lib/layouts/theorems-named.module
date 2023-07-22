@@ -7,7 +7,7 @@
 #DescriptionEnd
 #Original Author: John Perry
 
-Format 100
+Format 101
 
 ProvideStyle Theorem*
 	Category              Reasoning
