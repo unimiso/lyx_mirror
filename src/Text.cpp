@@ -2908,7 +2908,8 @@ void Text::setParagraphs(Cursor const & cur, docstring const & arg, bool merge)
 	Layout priorlayout;
 	Cursor c(cur.bv());
 	c.setCursor(cur.selectionBegin());
-	for ( ; c <= cur.selectionEnd() ; ++c.pit()) {
+	pit_type const last_pit = cur.selectionEnd().pit();
+	for ( ; c.pit() <= last_pit ; ++c.pit()) {
 		Paragraph & par = c.paragraph();
 		ParagraphParameters params = par.params();
 		params.read(argument, merge);
@@ -2934,7 +2935,8 @@ void Text::setParagraphs(Cursor const & cur, ParagraphParameters const & p)
 	Layout priorlayout;
 	Cursor c(cur.bv());
 	c.setCursor(cur.selectionBegin());
-	for ( ; c < cur.selectionEnd() ; ++c.pit()) {
+	pit_type const last_pit = cur.selectionEnd().pit();
+	for ( ; c.pit() <= last_pit ; ++c.pit()) {
 		Paragraph & par = c.paragraph();
 		// Changes to label width string apply to all paragraphs
 		// with same layout in a sequence.
