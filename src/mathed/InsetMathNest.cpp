@@ -1285,7 +1285,10 @@ void InsetMathNest::doDispatch(Cursor & cur, FuncRequest & cmd)
 		break;
 	}
 	case LFUN_INSET_DISSOLVE:
-		if (!asHullInset()) {
+		if (cmd.argument().empty() && !asHullInset() && !asMacroTemplate()) {
+			// we have been triggered via the AtPoint mechanism
+			if (cur.nextInset() == this)
+				cur.push(*this);
 			cur.recordUndoInset();
 			cur.pullArg();
 		}
@@ -1528,7 +1531,7 @@ bool InsetMathNest::getStatus(Cursor & cur, FuncRequest const & cmd,
 	}
 
 	case LFUN_INSET_DISSOLVE:
-		flag.setEnabled(!asHullInset());
+		flag.setEnabled(cmd.argument().empty() && !asHullInset() && !asMacroTemplate());
 		break;
 
 	case LFUN_PASTE: {
