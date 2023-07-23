@@ -2134,9 +2134,11 @@ void LyXAction::init()
                the inset is locked, and the temporary file is edited.
                In this case, #LFUN_INSET_END_EDIT must be called to overtake
                the changes and unlock the inset after editing is finished.
- * \li Syntax: inset-edit [<INSET_PARAMS>]
+ * \li Syntax: inset-edit [nogui] [<INSET_PARAMS>]
  * \li Params: <INSET_PARAMS>: Parameters for the inset. \n
-                               Currently only the filename will be considered.
+                               Currently only the filename will be considered.\n
+               nogui: does not launch external editor, only returns filename
+                      to be processed.
  * \li Origin: spitz, 27 Apr 2006
  * \endvar
  */

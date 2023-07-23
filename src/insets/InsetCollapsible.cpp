@@ -626,7 +626,12 @@ void InsetCollapsible::doDispatch(Cursor & cur, FuncRequest & cmd)
 		cur.clearSelection();
 		cur.pop();
 		cur.leaveInset(*this);
-		theFormats().edit(buffer(), tempfilename, format);
+
+		if (cmd.argument() == "nogui")
+			cur.message(from_utf8(name));
+		else
+			theFormats().edit(buffer(), tempfilename, format);
+
 		break;
 	}
 	case LFUN_INSET_END_EDIT: {
