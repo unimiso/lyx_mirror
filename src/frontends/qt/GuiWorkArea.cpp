@@ -2085,13 +2085,13 @@ void TabWorkArea::showContextMenu(const QPoint & pos)
 	// show tab popup
 	QMenu popup;
 	popup.addAction(QIcon(getPixmap("images/", "hidetab", "svgz,png")),
-		qt_("Hide tab"), this, SLOT(hideCurrentTab()));
+		qt_("Hide Tab"), this, SLOT(hideCurrentTab()));
 
 	// we want to show the 'close' option only if this is not a child buffer.
 	Buffer const & buf = wa->bufferView().buffer();
 	if (!buf.parent())
 		popup.addAction(QIcon(getPixmap("images/", "closetab", "svgz,png")),
-			qt_("Close tab"), this, SLOT(closeCurrentBuffer()));
+			qt_("Close Tab"), this, SLOT(closeCurrentBuffer()));
 	popup.exec(tabBar()->mapToGlobal(pos));
 
 	clicked_tab_ = -1;
