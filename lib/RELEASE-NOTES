@@ -211,6 +211,9 @@
 
 * info-insert buffer vcs-*: renamed to info-insert vcs *
 
+* inset-edit recognizes optional argument "nogui" - no editor will be launched in
+  such case, only filename will be returned (for use in scripts).
+
 * outline-in/out can now take argument "local", that restricts their
   action to the current paragraph.
 
