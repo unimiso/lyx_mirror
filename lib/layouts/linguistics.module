@@ -157,6 +157,7 @@ InsetLayout Flex:Example_Preamble
 	AllowedInLayouts
 	    Numbered_Example_(multiline), Numbered_Examples_(consecutive)
 	EndAllowedInLayouts
+	AllowedOccurrences   1
 End
 
 InsetLayout Flex:Subexample_Preamble

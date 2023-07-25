@@ -250,6 +250,7 @@ InsetLayout Flex:Department
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 InsetLayout Flex:Street_Address
@@ -261,6 +262,7 @@ InsetLayout Flex:Street_Address
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 InsetLayout Flex:City
@@ -272,6 +274,7 @@ InsetLayout Flex:City
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 InsetLayout Flex:Country
@@ -283,6 +286,7 @@ InsetLayout Flex:Country
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 InsetLayout Flex:State
@@ -294,6 +298,7 @@ InsetLayout Flex:State
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 InsetLayout Flex:Postal_Code
@@ -305,6 +310,7 @@ InsetLayout Flex:Postal_Code
   AllowedInLayouts
     Affiliation
   EndAllowedInLayouts
+  AllowedOccurrences   1
 End
 
 Style TitleNote

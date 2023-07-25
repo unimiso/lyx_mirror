@@ -256,6 +256,8 @@ public:
 	std::set<docstring> const & allowedInInsets() const { return allowed_in_insets_; }
 	///
 	std::set<docstring> const & allowedInLayouts() const { return allowed_in_layouts_; }
+	///
+	int allowedOccurrences() const { return allowed_occurrences_; }
 private:
 	///
 	void makeDefaultCSS() const;
@@ -443,6 +445,8 @@ private:
 	std::set<docstring> allowed_in_insets_;
 	/// Layouts that can hold insets with this InsetLayout
 	std::set<docstring> allowed_in_layouts_;
+	///
+	int allowed_occurrences_ = -1;
 };
 
 ///

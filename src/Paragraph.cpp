@@ -2344,21 +2344,34 @@ bool Paragraph::allowedInContext(Cursor const & cur, InsetLayout const & il) con
 	set<docstring> const & allowed_insets = il.allowedInInsets();
 	set<docstring> const & allowed_layouts = il.allowedInLayouts();
 
+	bool result = false;
 	if (allowed_insets.find(inInset().getLayout().name()) != allowed_insets.end())
-		return true;
+		result = true;
 
-	if (allowed_layouts.find(d->layout_->name()) != allowed_layouts.end())
-		return true;
+	else if (allowed_layouts.find(d->layout_->name()) != allowed_layouts.end())
+		result = true;
 
-	if (inInset().asInsetArgument()) {
+	else if (inInset().asInsetArgument()) {
 		// check if the argument allows the inset in question
 		if (cur.depth() > 1) {
 			docstring parlayout = cur[cur.depth() - 2].inset().getLayout().name()
 					+ from_ascii("@") + from_ascii(inInset().asInsetArgument()->name());
 			if (allowed_insets.find(parlayout) != allowed_insets.end())
-				return true;
+				result = true;
 		}
 	}
+	
+	if (result && il.allowedOccurrences() != -1) {
+		int have_ins = 0;
+		for (auto const & table : insetList())
+			if (table.inset->getLayout().name() == il.name())
+				++have_ins;
+		if (have_ins >= il.allowedOccurrences())
+			return false;
+	}
+	
+	if (result)
+		return true;
 
 	return (allowed_insets.empty() && allowed_layouts.empty());
 }

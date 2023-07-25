@@ -66,6 +66,7 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 		IL_ADDTOTOC,
 		IL_ALLOWED_IN_INSET,
 		IL_ALLOWED_IN_LAYOUT,
+		IL_ALLOWED_OCCURRENCES,
 		IL_ARGUMENT,
 		IL_BABELPREAMBLE,
 		IL_BGCOLOR,
@@ -153,6 +154,7 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 		{ "addtotoc", IL_ADDTOTOC },
 		{ "allowedininsets", IL_ALLOWED_IN_INSET },
 		{ "allowedinlayouts", IL_ALLOWED_IN_LAYOUT },
+		{ "allowedoccurrences", IL_ALLOWED_OCCURRENCES },
 		{ "argument", IL_ARGUMENT },
 		{ "babelpreamble", IL_BABELPREAMBLE },
 		{ "bgcolor", IL_BGCOLOR },
@@ -651,6 +653,9 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 			allowed_in_layouts_.insert(allowances.begin(), allowances.end());
 			break;
 		}
+		case IL_ALLOWED_OCCURRENCES:
+			lex >> allowed_occurrences_;
+			break;
 		case IL_END:
 			getout = true;
 			break;

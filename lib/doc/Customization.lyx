@@ -20957,6 +20957,8 @@ status collapsed
 
 \change_inserted -712698321 1690284277
 AllowedInInsets
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -20974,6 +20976,8 @@ status collapsed
 
 \change_inserted -712698321 1690284318
 EndAllowedInInsets
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21013,6 +21017,8 @@ status collapsed
 
 \change_inserted -712698321 1690284329
 AllowedInLayouts
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21022,7 +21028,7 @@ AllowedInLayouts
 
 \begin_layout Description
 
-\change_inserted -712698321 1690284561
+\change_inserted -712698321 1690292495
 \begin_inset Flex Code
 status collapsed
 
@@ -21030,6 +21036,8 @@ status collapsed
 
 \change_inserted -712698321 1690284338
 AllowedInLayouts
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21047,6 +21055,8 @@ status collapsed
 
 \change_inserted -712698321 1690284353
 EndAllowedInLayouts
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21065,11 +21075,67 @@ status collapsed
 
 \change_inserted -712698321 1690284358
 AllowedInInsets
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1690292676
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690292501
+AllowedOccurrences
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690292507
+int
+\end_layout
+
+\end_inset
+
+] If 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690292530
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690292536
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+ has been defined,
+ this can be used to determine how many times the inset can be inserted to a given paragraph.
 \change_unchanged
 
 \end_layout

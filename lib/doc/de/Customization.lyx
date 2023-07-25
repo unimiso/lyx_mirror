@@ -17396,6 +17396,50 @@ AllowedInInsets
 status collapsed
 
 \begin_layout Plain Layout
+AllowedOccurrences
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+
+] Falls 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+ oder 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+ definiert wurde,
+ kann hiermit eine maximale Anzahl von Einfügungen pro Absatz festgelegt werden.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 Argument
 \end_layout
 

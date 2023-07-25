@@ -342,7 +342,7 @@ currentFormat = 102
 
 # Incremented to format 102, 25 July 2023 by spitz
 # add InsetLayout tags AllowedInInsets, EndAllowedInInsets,
-# AllowedInLayouts, EndAllowedInLayouts
+# AllowedInLayouts, EndAllowedInLayouts, AllowedOccurrences
 
 # Do not forget to document format change in Customization
 # Manual (section "Declaring a new text class").
