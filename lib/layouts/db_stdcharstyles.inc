@@ -2,7 +2,7 @@
 # Author : José Abílio Oliveira Matos <jamatos@lyx.org>
 # Character Styles definition
 
-Format 101
+Format 102
 
 InsetLayout Flex:Filename
 	LabelString Filename

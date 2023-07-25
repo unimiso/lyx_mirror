@@ -13,7 +13,7 @@
 # Author: Georg Baum <baum@lyx.org>
 # (structuring taken from enumitem.module by Günter Milde)
 
-Format 101
+Format 102
 
 AddToPreamble
 	\usepackage{paralist}

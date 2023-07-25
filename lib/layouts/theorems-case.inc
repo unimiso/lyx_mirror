@@ -6,7 +6,7 @@
 # Define Case as an enumeration environment
 # with its own counters
 
-Format 101
+Format 102
 
 Counter casei
 	GuiName "Case (Level 1)"

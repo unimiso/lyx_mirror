@@ -6,7 +6,7 @@
 # ftp://ftp.agu.org/journals/latex/journals
 
 
-Format 101
+Format 102
 Input stdclass.inc
 
 SecNumDepth             4

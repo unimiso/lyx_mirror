@@ -8,7 +8,7 @@
 # a document, like title, author and such.
 
 
-Format 101
+Format 102
 
 Style Title
 	Margin                Static

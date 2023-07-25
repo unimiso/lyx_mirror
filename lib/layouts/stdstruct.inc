@@ -8,7 +8,7 @@
 # a document, like abstract, bibliography and such.
 
 
-Format 101
+Format 102
 
 Style Abstract
 	Margin                Static

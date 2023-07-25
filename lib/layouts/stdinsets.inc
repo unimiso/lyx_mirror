@@ -4,7 +4,7 @@
 #
 # Detailed format description is available in the customization manual
 
-Format 101
+Format 102
 
 Provides stdinsets 1
 
