@@ -8,7 +8,7 @@
 
 # Author: Jürgen Spitzmüller <spitz@lyx.org>
 
-Format 101
+Format 102
 
 #
 # Counters
@@ -154,12 +154,18 @@ InsetLayout Flex:Example_Preamble
 	LatexName             expreamble
 	LabelString           "Ex. Preamble"
 	ResetsFont            true
+	AllowedInLayouts
+	    Numbered_Example_(multiline), Numbered_Examples_(consecutive)
+	EndAllowedInLayouts
 End
 
 InsetLayout Flex:Subexample_Preamble
 	CopyStyle	      Flex:Example_Preamble
 	LatexName             subexpreamble
 	LabelString           "Subex. Preamble"
+	AllowedInLayouts
+	    Subexample
+	EndAllowedInLayouts
 End
 
 
@@ -173,6 +179,9 @@ InsetLayout Flex:Subexample_Postamble
 	CopyStyle             Flex:Example_Preamble
 	LatexName             subexpostamble
 	LabelString           "Subex. Postamble"
+	AllowedInLayouts
+	    Subexample
+	EndAllowedInLayouts
 End
 
 
@@ -313,6 +322,11 @@ InsetLayout Flex:GroupGlossedWords
 	LeftDelim             {
 	RightDelim            }
 	ResetsFont            true
+	AllowedInInsets
+	   Flex:Interlinear_Gloss_(2_Lines), Flex:Interlinear_Gloss_(2_Lines)@post:2,
+	   Flex:Interlinear_Gloss_(3_Lines), Flex:Interlinear_Gloss_(3_Lines)@post:2,
+	   Flex:Interlinear_Gloss_(3_Lines)@post:4
+	EndAllowedInInsets
 End
 
 

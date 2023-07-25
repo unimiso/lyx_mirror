@@ -9,7 +9,7 @@
 # Reviewed following tickets #10722 & #10723
 #          by Jean-Pierre Chrétien <jpc@lyx.org>
 
-Format 101
+Format 102
 
 Provides amscls 1
 Provides amsmath 1
@@ -247,6 +247,9 @@ InsetLayout Flex:Department
   LatexName department
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 InsetLayout Flex:Street_Address
@@ -255,6 +258,9 @@ InsetLayout Flex:Street_Address
   LatexName streetaddress
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 InsetLayout Flex:City
@@ -263,6 +269,9 @@ InsetLayout Flex:City
   LatexName city
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 InsetLayout Flex:Country
@@ -271,6 +280,9 @@ InsetLayout Flex:Country
   LatexName country
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 InsetLayout Flex:State
@@ -279,6 +291,9 @@ InsetLayout Flex:State
   LatexName state
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 InsetLayout Flex:Postal_Code
@@ -287,6 +302,9 @@ InsetLayout Flex:Postal_Code
   LatexName postcode
   LatexType command
   Spellcheck 0
+  AllowedInLayouts
+    Affiliation
+  EndAllowedInLayouts
 End
 
 Style TitleNote
