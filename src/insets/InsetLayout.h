@@ -252,6 +252,10 @@ public:
 	bool isTocCaption() const { return is_toc_caption_; }
 	///
 	bool editExternally () const { return edit_external_; }
+	///
+	std::set<docstring> const & allowedInInsets() const { return allowed_in_insets_; }
+	///
+	std::set<docstring> const & allowedInLayouts() const { return allowed_in_layouts_; }
 private:
 	///
 	void makeDefaultCSS() const;
@@ -435,6 +439,10 @@ private:
 	bool is_toc_caption_ = false;
 	///
 	bool edit_external_ = false;
+	/// Insets that can hold insets with this InsetLayout
+	std::set<docstring> allowed_in_insets_;
+	/// Layouts that can hold insets with this InsetLayout
+	std::set<docstring> allowed_in_layouts_;
 };
 
 ///

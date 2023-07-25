@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 617
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -17282,6 +17282,113 @@ IsTocCaption
  Dies ist nur für Flex-Einfügungen implementiert.
  Standard:
  deaktiviert.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+ enthält eine kommaseparierte Liste von Einfügungen,
+ in die diese Einfügung platziert werden kann.
+ Muss mittels 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+EndAllowedInInsets
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ beendet werden.
+ Falls Sie die Einfügung (auch) in bestimmten Argumenten der entsprechenden Einfügung erlauben möchten,
+ hängen Sie den Namen des Arguments nach @ an (bspw.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Meine_Einfuegung@post:1
+\end_layout
+
+\end_inset
+
+).
+ Beachten Sie,
+ dass im Moment nur Einfügungen berücksichtigt werden,
+ die eine Hierarchiestufe höher stehen (keine tiefere Verschachtelung).
+ Siehe auch 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+ enthält eine kommaseparierte Liste von Stilen,
+ in die diese Einfügung platziert werden kann.
+ Muss mittels 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+EndAllowedInLayouts
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ beendet werden.
+ Beachten Sie,
+ dass im Moment nur Stile berücksichtigt werden,
+ die die Einfügung unmittelbar enthalten (keine tiefere Verschachtelung).
+ Siehe auch 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description

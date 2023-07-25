@@ -22,6 +22,8 @@
 #include "support/strfwd.h"
 #include "support/types.h"
 
+#include "insets/InsetLayout.h"
+
 #include <set>
 #include <vector>
 
@@ -31,6 +33,7 @@ class AuthorList;
 class Buffer;
 class BufferParams;
 class Change;
+class Cursor;
 class DocIterator;
 class docstring_list;
 class DocumentClass;
@@ -240,6 +243,8 @@ public:
 	bool isPassThru() const;
 	///
 	bool parbreakIsNewline() const;
+	///
+	bool allowedInContext(Cursor const & cur, InsetLayout const & il) const;
 	///
 	bool isPartOfTextSequence() const;
 	///

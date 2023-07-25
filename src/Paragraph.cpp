@@ -25,6 +25,7 @@
 #include "BufferEncodings.h"
 #include "Changes.h"
 #include "Counters.h"
+#include "Cursor.h"
 #include "InsetList.h"
 #include "Language.h"
 #include "LaTeXFeatures.h"
@@ -2335,6 +2336,31 @@ bool Paragraph::isPassThru() const
 bool Paragraph::parbreakIsNewline() const
 {
 	return inInset().getLayout().parbreakIsNewline() || d->layout_->parbreak_is_newline;
+}
+
+
+bool Paragraph::allowedInContext(Cursor const & cur, InsetLayout const & il) const
+{
+	set<docstring> const & allowed_insets = il.allowedInInsets();
+	set<docstring> const & allowed_layouts = il.allowedInLayouts();
+
+	if (allowed_insets.find(inInset().getLayout().name()) != allowed_insets.end())
+		return true;
+
+	if (allowed_layouts.find(d->layout_->name()) != allowed_layouts.end())
+		return true;
+
+	if (inInset().asInsetArgument()) {
+		// check if the argument allows the inset in question
+		if (cur.depth() > 1) {
+			docstring parlayout = cur[cur.depth() - 2].inset().getLayout().name()
+					+ from_ascii("@") + from_ascii(inInset().asInsetArgument()->name());
+			if (allowed_insets.find(parlayout) != allowed_insets.end())
+				return true;
+		}
+	}
+
+	return (allowed_insets.empty() && allowed_layouts.empty());
 }
 
 

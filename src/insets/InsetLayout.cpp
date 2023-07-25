@@ -64,6 +64,8 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 {
 	enum {
 		IL_ADDTOTOC,
+		IL_ALLOWED_IN_INSET,
+		IL_ALLOWED_IN_LAYOUT,
 		IL_ARGUMENT,
 		IL_BABELPREAMBLE,
 		IL_BGCOLOR,
@@ -149,6 +151,8 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 
 	LexerKeyword elementTags[] = {
 		{ "addtotoc", IL_ADDTOTOC },
+		{ "allowedininsets", IL_ALLOWED_IN_INSET },
+		{ "allowedinlayouts", IL_ALLOWED_IN_LAYOUT },
 		{ "argument", IL_ARGUMENT },
 		{ "babelpreamble", IL_BABELPREAMBLE },
 		{ "bgcolor", IL_BGCOLOR },
@@ -622,6 +626,31 @@ bool InsetLayout::read(Lexer & lex, TextClass const & tclass,
 		case IL_EDITEXTERNAL:
 			lex >> edit_external_;
 			break;
+		case IL_ALLOWED_IN_INSET: {
+			docstring allowed = lex.getLongString(from_ascii("EndAllowedInInsets"));
+			allowed = subst(allowed, from_ascii("\n"), docstring());
+			allowed = subst(allowed, from_ascii("\t"), docstring());
+			allowed = subst(allowed, from_ascii("\""), docstring());
+			allowed = subst(allowed, '_', ' ');
+			vector<docstring> const allowances =
+				getVectorFromString(allowed, from_ascii(","), false, true);
+			allowed_in_insets_.clear();
+			allowed_in_insets_.insert(allowances.begin(), allowances.end());
+			break;
+		}
+
+		case IL_ALLOWED_IN_LAYOUT: {
+			docstring allowed = lex.getLongString(from_ascii("EndAllowedInLayouts"));
+			allowed = subst(allowed, from_ascii("\n"), docstring());
+			allowed = subst(allowed, from_ascii("\t"), docstring());
+			allowed = subst(allowed, from_ascii("\""), docstring());
+			allowed = subst(allowed, '_', ' ');
+			vector<docstring> const allowances =
+				getVectorFromString(allowed, from_ascii(","), false, true);
+			allowed_in_layouts_.clear();
+			allowed_in_layouts_.insert(allowances.begin(), allowances.end());
+			break;
+		}
 		case IL_END:
 			getout = true;
 			break;

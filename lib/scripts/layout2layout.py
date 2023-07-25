@@ -11,7 +11,7 @@
 # This script will update a .layout file to current format
 
 # The latest layout format is also defined in src/TextClass.cpp
-currentFormat = 101
+currentFormat = 102
 
 
 # Incremented to format 4, 6 April 2007, lasgouttes
@@ -340,6 +340,10 @@ currentFormat = 101
 # Incremented to format 101, 22 July 2023 by lasgouttes
 # add InsetLayout tag InheritFont
 
+# Incremented to format 102, 25 July 2023 by spitz
+# add InsetLayout tags AllowedInInsets, EndAllowedInInsets,
+# AllowedInLayouts, EndAllowedInLayouts
+
 # Do not forget to document format change in Customization
 # Manual (section "Declaring a new text class").
 
@@ -585,6 +589,11 @@ def convert(lines, end_format):
             i += 1
             while i < len(lines) and not re_EndBabelPreamble.match(lines[i]):
                 i += 1
+            continue
+
+        if format == 101:
+            # nothing to do.
+            i += 1
             continue
 
         if format == 100:

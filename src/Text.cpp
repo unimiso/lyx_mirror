@@ -6544,6 +6544,8 @@ bool Text::getStatus(Cursor & cur, FuncRequest const & cmd,
 			s = from_ascii("Flex:") + s;
 		if (!cur.buffer()->params().documentClass().hasInsetLayout(s))
 			enable = false;
+		else if (!cur.paragraph().allowedInContext(cur, cur.buffer()->params().documentClass().insetLayout(s)))
+			enable = false;
 		else {
 			InsetLyXType ilt =
 				cur.buffer()->params().documentClass().insetLayout(s).lyxtype();

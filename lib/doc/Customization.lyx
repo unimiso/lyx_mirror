@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 616
+\lyxformat 617
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -20943,6 +20943,135 @@ string
  This is only implemented for Flex insets.
  Default:
  disabled.
+\change_inserted -712698321 1690284265
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1690284544
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284277
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+ Includes a comma-separated list of insets to which this inset can be inserted.
+ Must be ended by 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284318
+EndAllowedInInsets
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If you you also want the insertion to be allowed in specific arguments of the target insets,
+ append the argument name after @ (e.
+\begin_inset space \thinspace{}
+\end_inset
+
+g.,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284445
+My_Inset@post:1
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+).
+ Note that this currently only supports immediately containing insets (no deeper nesting).
+ See also 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284329
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1690284561
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284338
+AllowedInLayouts
+\end_layout
+
+\end_inset
+
+ Includes a comma-separated list of layouts within which this inset can be inserted.
+ Must be ended by 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284353
+EndAllowedInLayouts
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Note that this currently only supports immediately containing layouts (no deeper nesting).
+ See also 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690284358
+AllowedInInsets
+\end_layout
+
+\end_inset
+
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -21848,6 +21977,8 @@ status collapsed
 
 \change_inserted 47243155 1689528630
 InheritFont
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21860,6 +21991,8 @@ status collapsed
 
 \change_inserted 47243155 1689528607
 0
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21878,6 +22011,8 @@ status collapsed
 
 \emph on
 1
+\change_unchanged
+
 \end_layout
 
 \end_inset
