@@ -508,6 +508,7 @@ Style Frame
   TopSep           1
   BottomSep        1
   ParSep           0
+  HTMLLabel        NONE
   LabelFont
     Size           largest
     Family         Roman
