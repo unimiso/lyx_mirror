@@ -73,6 +73,10 @@ public:
 	///
 	void str(docstring const & s) { str_ = s; }
 	///
+	docstring const & prettyStr() const { return pretty_str_; }
+	///
+	void prettyStr (docstring const & s) { pretty_str_ = s; }
+	///
 	bool isOutput() const { return output_; }
 	///
 	bool isMissing() const { return missing_; }
@@ -93,6 +97,8 @@ private:
 	int depth_;
 	/// Full item string
 	docstring str_;
+	/// Dereferenced name, for labels (e.g. Label 5.2 instead of lem:foobar)
+	docstring pretty_str_;
 	/// Is this item in a note, inactive branch, etc?
 	bool output_;
 	/// Is this item missing, e.g. missing label?

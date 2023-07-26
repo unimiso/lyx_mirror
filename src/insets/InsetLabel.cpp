@@ -156,7 +156,7 @@ docstring InsetLabel::screenLabel() const
 }
 
 
-void InsetLabel::updateBuffer(ParIterator const & it, UpdateType utype, bool const /*deleted*/)
+void InsetLabel::updateBuffer(ParIterator const & it, UpdateType, bool const /*deleted*/)
 {
 	docstring const & label = getParam("name");
 
@@ -184,19 +184,24 @@ void InsetLabel::updateBuffer(ParIterator const & it, UpdateType utype, bool con
 	buffer().setInsetLabel(label, this, active);
 	screen_label_ = label;
 
-	if (utype == OutputUpdate) {
-		// save info on the active counter
-		Counters const & cnts =
-			buffer().masterBuffer()->params().documentClass().counters();
-		active_counter_ = cnts.currentCounter();
-		Language const * lang = it->getParLanguage(buffer().params());
-		if (lang && !active_counter_.empty()) {
+	// save info on the active counter
+	Counters & cnts =
+		buffer().masterBuffer()->params().documentClass().counters();
+	active_counter_ = cnts.currentCounter();
+	Language const * lang = it->getParLanguage(buffer().params());
+	if (lang && !active_counter_.empty()) {
+		if (active_counter_ != from_ascii("equation")) {
 			counter_value_ = cnts.theCounter(active_counter_, lang->code());
 			pretty_counter_ = cnts.prettyCounter(active_counter_, lang->code());
 		} else {
+			// For equations, the counter value and pretty counter
+			// value will be set by the parent InsetMathHull.
 			counter_value_ = from_ascii("#");
-			pretty_counter_ = from_ascii("#");
+			pretty_counter_ = from_ascii("");
 		}
+	} else {
+		counter_value_ = from_ascii("#");
+		pretty_counter_ = from_ascii("#");
 	}
 }
 
@@ -212,7 +217,9 @@ void InsetLabel::addToToc(DocIterator const & cpit, bool output_active,
 
 	// We put both  active and inactive labels to the outliner
 	shared_ptr<Toc> toc = backend.toc("label");
-	toc->push_back(TocItem(cpit, 0, screen_label_, output_active));
+	TocItem toc_item = TocItem(cpit, 0, screen_label_, output_active);
+	toc_item.prettyStr(pretty_counter_);
+	toc->push_back(toc_item);
 	// The refs get assigned only to the active label. If no active one exists,
 	// assign the (BROKEN) refs to the first inactive one.
 	if (buffer().insetLabel(label, true) == this || !buffer().activeLabel(label)) {

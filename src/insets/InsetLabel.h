@@ -30,6 +30,8 @@ public:
 	///
 	docstring const & prettyCounter() const { return pretty_counter_; }
 	///
+	void setPrettyCounter(docstring pc) { pretty_counter_ = pc; }
+	///
 	int rowFlags() const override { return CanBreakBefore | CanBreakAfter; }
 	/// Updates only the label string, doesn't handle undo nor references.
 	void updateLabel(docstring const & new_label, bool const active = true);

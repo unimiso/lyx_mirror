@@ -2422,7 +2422,7 @@ void Buffer::validate(LaTeXFeatures & features) const
 }
 
 
-void Buffer::getLabelList(vector<std::pair<docstring, docstring>> & list) const
+void Buffer::getLabelList(vector<std::tuple<docstring, docstring, docstring>> & list) const
 {
 	// If this is a child document, use the master's list instead.
 	if (parent()) {
@@ -2433,8 +2433,9 @@ void Buffer::getLabelList(vector<std::pair<docstring, docstring>> & list) const
 	list.clear();
 	shared_ptr<Toc> toc = d->toc_backend.toc("label");
 	for (auto const & tocit : *toc) {
-		if (tocit.depth() == 0)
-			list.push_back(make_pair(tocit.str(), tocit.asString()));
+		if (tocit.depth() == 0) {
+			list.push_back(make_tuple(tocit.str(), tocit.asString(),tocit.prettyStr()));
+		}
 	}
 }
 

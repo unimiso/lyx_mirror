@@ -313,8 +313,10 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 	for (row_type row = 0; row != nrows(); ++row) {
 		if (!numbered(row))
 			continue;
-		if (label_[row])
+		if (label_[row]) {
+			label_[row]->setPrettyCounter(_("Equation ") + numbers_[row]);
 			label_[row]->addToToc(pit, output_active, utype, backend);
+		}
 		docstring label = nicelabel(row);
 		if (first == last)
 			// this is the only equation

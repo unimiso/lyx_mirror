@@ -73,9 +73,6 @@ GuiRef::GuiRef(GuiView & lv)
 	buttonBox->button(QDialogButtonBox::Reset)->setText(qt_("&Update"));
 	buttonBox->button(QDialogButtonBox::Reset)->setToolTip(qt_("Update the label list"));
 
-	refsTW->setColumnCount(1);
-	refsTW->header()->setVisible(false);
-
 	connect(this, SIGNAL(rejected()), this, SLOT(dialogRejected()));
 
 	connect(typeCO, SIGNAL(activated(int)),
@@ -423,9 +420,9 @@ void GuiRef::gotoRef()
 	at_ref_ = !at_ref_;
 }
 
-inline bool caseInsensitiveLessThanVec(QPair<QString, QString> const & s1, QPair<QString, QString> const & s2)
+inline bool caseInsensitiveLessThanVec(std::tuple<QString, QString, QString> const & s1, std::tuple<QString, QString, QString> const & s2)
 {
-	return s1.first.toLower() < s2.first.toLower();
+	return std::get<0>(s1).toLower() < std::get<0>(s2).toLower();
 }
 
 inline bool caseInsensitiveLessThan(QString const & s1, QString const & s2)
@@ -448,17 +445,19 @@ void GuiRef::redoRefs()
 	// the first item inserted
 	QString const oldSelection(referenceED->text());
 
-	// Plain label and GUI string. This might get resorted below
-	QVector<QPair<QString, QString>> refsNames;
+	// Plain label, GUI string, and dereferenced string.
+	// This might get resorted below
+	QVector<std::tuple<QString, QString,QString>> refsNames;
 	// List of categories (prefixes)
 	QStringList refsCategories;
 	// Do we have a prefix-less label at all?
 	bool noprefix = false;
-	vector<std::pair<docstring, docstring>>::const_iterator iter;
+	vector<std::tuple<docstring, docstring,docstring>>::const_iterator iter;
 	for (iter = refs_.begin(); iter != refs_.end(); ++iter) {
-		// first: plain label name, second: gui name
-		QString const lab = toqstr((*iter).first);
-		refsNames.append({lab, toqstr((*iter).second)});
+		// first: plain label name, second: gui name, third: pretty name
+		QString const lab = toqstr(std::get<0>(*iter));
+		refsNames.append({lab, toqstr(std::get<1>(*iter)),
+				    toqstr(std::get<2>(*iter))});
 		if (groupCB->isChecked()) {
 			if (lab.contains(":")) {
 				QString const pref = lab.split(':')[0];
@@ -473,7 +472,7 @@ void GuiRef::redoRefs()
 				noprefix = true;
 		}
 	}
-	// sort categories case-intensively
+	// sort categories case-insensitively
 	sort(refsCategories.begin(), refsCategories.end(),
 		  caseInsensitiveLessThan /*defined above*/);
 	if (noprefix)
@@ -496,15 +495,17 @@ void GuiRef::redoRefs()
 			QTreeWidgetItem * item = new QTreeWidgetItem(refsTW);
 			item->setText(0, cat);
 			for (int j = 0; j < refsNames.size(); ++j) {
-				QString const ref = refsNames.at(j).first;
+				QString const ref = std::get<0>(refsNames.at(j));
 				if ((ref.startsWith(cat + QString(":")))
 				    || (cat == qt_("<No prefix>")
 				       && (!ref.mid(1).contains(":") || ref.left(1).contains(":")))) {
 						QTreeWidgetItem * child =
 							new QTreeWidgetItem(item);
-						QString const val = refsNames.at(j).second;
+						QString const val = std::get<1>(refsNames.at(j));
+						QString const pretty = std::get<2>(refsNames.at(j));
 						child->setText(0, val);
 						child->setData(0, Qt::UserRole, ref);
+						child->setText(1, pretty);
 						item->addChild(child);
 				}
 			}
@@ -515,10 +516,12 @@ void GuiRef::redoRefs()
 		QList<QTreeWidgetItem *> refsItems;
 		for (int i = 0; i < refsNames.size(); ++i) {
 			QTreeWidgetItem * item = new QTreeWidgetItem(refsTW);
-			QString const ref = refsNames.at(i).first;
-			QString const val = refsNames.at(i).second;
+			QString const ref = std::get<0>(refsNames.at(i));
+			QString const val = std::get<1>(refsNames.at(i));
+			QString const pretty = std::get<2>(refsNames.at(i));
 			item->setText(0, val);
 			item->setData(0, Qt::UserRole, ref);
+			item->setText(1, pretty);
 			refsItems.append(item);
 		}
 		refsTW->addTopLevelItems(refsItems);
@@ -605,6 +608,7 @@ void GuiRef::filterLabels()
 		(*it)->setHidden(
 			(*it)->childCount() == 0
 			&& !(*it)->text(0).contains(filter_->text(), cs)
+			&& !(*it)->text(1).contains(filter_->text(), cs)
 		);
 		++it;
 	}

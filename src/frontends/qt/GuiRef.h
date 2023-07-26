@@ -106,9 +106,10 @@ private:
 	int restored_buffer_;
 	/// store the last active buffer
 	int active_buffer_;
-	/// the references as two strings: plain label name and label as gui string
+	/// the references as three strings: plain label name, label as gui
+	/// string, and pretty dereferenced name ("Lemma 3")
 	/// FIXME: might be a good idea to use a custom struct
-	std::vector<std::pair<docstring, docstring>> refs_;
+	std::vector<std::tuple<docstring, docstring, docstring>> refs_;
 };
 
 } // namespace frontend

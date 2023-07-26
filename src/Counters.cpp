@@ -42,9 +42,10 @@ Counter::Counter()
 
 
 Counter::Counter(docstring const & mc, docstring const & ls,
-		docstring const & lsa, docstring const & guiname)
+		docstring const & lsa, docstring const & prettyformat,
+		docstring const & guiname)
 	: initial_value_(0), saved_value_(0), parent_(mc), labelstring_(ls),
-	  labelstringappendix_(lsa), guiname_(guiname)
+	  labelstringappendix_(lsa), prettyformat_(prettyformat), guiname_(guiname)
 {
 	reset();
 }
@@ -129,6 +130,12 @@ bool Counter::read(Lexer & lex)
 			case CT_END:
 				getout = true;
 				break;
+		}
+		if (prettyformat_ == "") { // fall back on GuiName if PrettyFormat is empty
+			if (guiname_ == "")
+				prettyformat_ = from_ascii("##");
+			else
+				prettyformat_ = "## (" + guiname_ + " counter)";
 		}
 	}
 
@@ -220,6 +227,7 @@ void Counters::newCounter(docstring const & newc,
 			  docstring const & parentc,
 			  docstring const & ls,
 			  docstring const & lsa,
+			  docstring const & prettyformat,
 			  docstring const & guiname)
 {
 	if (!parentc.empty() && !hasCounter(parentc)) {
@@ -228,7 +236,7 @@ void Counters::newCounter(docstring const & newc,
 		       << endl;
 		return;
 	}
-	counterList_[newc] = Counter(parentc, ls, lsa, guiname);
+	counterList_[newc] = Counter(parentc, ls, lsa, prettyformat, guiname);
 }
 
 
@@ -344,7 +352,7 @@ void Counters::stepParent(docstring const & ctr, UpdateType utype)
 }
 
 
-void Counters::step(docstring const & ctr, UpdateType utype)
+void Counters::step(docstring const & ctr, UpdateType /* deleted */)
 {
 	CounterList::iterator it = counterList_.find(ctr);
 	if (it == counterList_.end()) {
@@ -354,11 +362,9 @@ void Counters::step(docstring const & ctr, UpdateType utype)
 	}
 
 	it->second.step();
-	if (utype == OutputUpdate) {
-		LBUFERR(!counter_stack_.empty());
-		counter_stack_.pop_back();
-		counter_stack_.push_back(ctr);
-	}
+	LBUFERR(!counter_stack_.empty());
+	counter_stack_.pop_back();
+	counter_stack_.push_back(ctr);
 
 	resetChildren(ctr);
 }
