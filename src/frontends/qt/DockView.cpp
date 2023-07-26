@@ -49,6 +49,12 @@ void DockView::keyPressEvent(QKeyEvent * ev)
 		}
 		mw->activateWindow();
 		mw->setFocus();
+		Qt::KeyboardModifiers mod = ev->modifiers();
+		if (mod & Qt::AltModifier) {
+			(setFloating(!isFloating()));
+			ev->accept();
+			return;
+		}
 		if (isFloating())
 			hide();
 		ev->accept();

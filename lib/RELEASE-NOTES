@@ -48,6 +48,9 @@
   creating a link (and are only available when hyperref is used). There is a 
   checkbox "No Hyperlink" for this purpose.
 
+* Alt-Escape can be used to 'float' and redock widgets like the table of contents
+  or source view.
+
 !!Documents compilation process and images conversion
 
 * LyX now uses utf8 encoding per default for all languages. This does
