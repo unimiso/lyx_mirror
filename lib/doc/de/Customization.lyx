@@ -17440,6 +17440,79 @@ AllowedInLayouts
 status collapsed
 
 \begin_layout Plain Layout
+AllowedOccurrencesPerItem
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+0
+\end_layout
+
+\end_inset
+
+,
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+] Wenn dies auf 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+true
+\end_layout
+
+\end_inset
+
+ gesetzt wird,
+ zählen die 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+AllowedOccurrences
+\end_layout
+
+\end_inset
+
+ je Absatz,
+ sofern wir uns in einer listenartigen Umgebung (mit 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+s) befinden.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 Argument
 \end_layout
 

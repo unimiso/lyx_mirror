@@ -2344,33 +2344,73 @@ bool Paragraph::allowedInContext(Cursor const & cur, InsetLayout const & il) con
 	set<docstring> const & allowed_insets = il.allowedInInsets();
 	set<docstring> const & allowed_layouts = il.allowedInLayouts();
 
-	bool result = false;
-	if (allowed_insets.find(inInset().getLayout().name()) != allowed_insets.end())
-		result = true;
+	bool in_allowed_inset =
+		allowed_insets.find(inInset().getLayout().name()) != allowed_insets.end();
 
-	else if (allowed_layouts.find(d->layout_->name()) != allowed_layouts.end())
-		result = true;
+	bool in_allowed_layout =
+		allowed_layouts.find(d->layout_->name()) != allowed_layouts.end();
 
-	else if (inInset().asInsetArgument()) {
+	if (!in_allowed_inset && inInset().asInsetArgument()) {
 		// check if the argument allows the inset in question
 		if (cur.depth() > 1) {
 			docstring parlayout = cur[cur.depth() - 2].inset().getLayout().name()
 					+ from_ascii("@") + from_ascii(inInset().asInsetArgument()->name());
 			if (allowed_insets.find(parlayout) != allowed_insets.end())
-				result = true;
+				in_allowed_inset = true;
 		}
 	}
 	
-	if (result && il.allowedOccurrences() != -1) {
-		int have_ins = 0;
-		for (auto const & table : insetList())
-			if (table.inset->getLayout().name() == il.name())
-				++have_ins;
+	int have_ins = 0;
+	// check if we exceed the number of allowed insets in this inset
+	if (in_allowed_inset && inInset().asInsetText() && il.allowedOccurrences() != -1) {
+		ParagraphList & pars = cur.text()->paragraphs();
+			for (Paragraph const & par : pars) {
+				for (auto const & table : par.insetList())
+				if (table.inset->getLayout().name() == il.name())
+					++have_ins;
+			}
 		if (have_ins >= il.allowedOccurrences())
 			return false;
 	}
 	
-	if (result)
+	have_ins = 0;
+	// check if we exceed the number of allowed insets in the layout group
+	if (in_allowed_layout && il.allowedOccurrences() != -1) {
+		pit_type pit = cur.pit();
+		pit_type lastpit = cur.pit();
+		ParagraphList & pars = cur.text()->paragraphs();
+		// If we are not on a list-type environment or AllowedOccurrencesPerItem
+		// is false, we check the whole paragraph group
+		if (d->layout_->isEnvironment()
+		    && !(il.allowedOccurrencesPerItem()
+			 && (d->layout_->latextype == LATEX_LIST_ENVIRONMENT
+			     || d->layout_->latextype == LATEX_ITEM_ENVIRONMENT))) {
+			lastpit = cur.lastpit();
+			// get the first paragraph in sequence with this layout
+			depth_type const current_depth = params().depth();
+			while (true) {
+				if (pit == 0)
+					break;
+				Paragraph cpar = pars[pit - 1];
+				if (&cpar.layout() == d->layout_
+				    && cpar.params().depth() == current_depth)
+					--pit;
+				else
+					break;
+			}
+		}
+		for (; pit <= lastpit; ++pit) {
+			if (&pars[pit].layout() != d->layout_)
+				break;
+			for (auto const & table : pars[pit].insetList())
+				if (table.inset->getLayout().name() == il.name())
+					++have_ins;
+		}
+		if (have_ins >= il.allowedOccurrences())
+			return false;
+	}
+	
+	if (in_allowed_layout || in_allowed_inset)
 		return true;
 
 	return (allowed_insets.empty() && allowed_layouts.empty());

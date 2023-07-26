@@ -21086,7 +21086,7 @@ AllowedInInsets
 
 \begin_layout Description
 
-\change_inserted -712698321 1690292676
+\change_inserted -712698321 1690357747
 \begin_inset Flex Code
 status collapsed
 
@@ -21094,6 +21094,8 @@ status collapsed
 
 \change_inserted -712698321 1690292501
 AllowedOccurrences
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21106,6 +21108,8 @@ status collapsed
 
 \change_inserted -712698321 1690292507
 int
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21118,6 +21122,8 @@ status collapsed
 
 \change_inserted -712698321 1690292530
 AllowedInInsets
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21130,12 +21136,90 @@ status collapsed
 
 \change_inserted -712698321 1690292536
 AllowedInLayouts
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
  has been defined,
- this can be used to determine how many times the inset can be inserted to a given paragraph.
+ this can be used to determine how many times the inset can be inserted to a given inset or the paragraph (group).
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1690357828
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690357753
+AllowedOccurrencesPerItem
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690357747
+
+\emph on
+0
+\end_layout
+
+\end_inset
+
+,
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690357747
+1
+\end_layout
+
+\end_inset
+
+] If this is set to true,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690357774
+AllowedOccurrences
+\end_layout
+
+\end_inset
+
+ applies to single paragraphs if we are in a list-type environment (with 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1690357825
+
+\backslash
+item
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+s).
 \change_unchanged
 
 \end_layout

@@ -258,6 +258,8 @@ public:
 	std::set<docstring> const & allowedInLayouts() const { return allowed_in_layouts_; }
 	///
 	int allowedOccurrences() const { return allowed_occurrences_; }
+	///
+	bool allowedOccurrencesPerItem() const { return allowed_occurrences_per_item_; }
 private:
 	///
 	void makeDefaultCSS() const;
@@ -447,6 +449,8 @@ private:
 	std::set<docstring> allowed_in_layouts_;
 	///
 	int allowed_occurrences_ = -1;
+	///
+	bool allowed_occurrences_per_item_ = false;
 };
 
 ///
