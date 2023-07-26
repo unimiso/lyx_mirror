@@ -148,6 +148,12 @@ void GuiSearchWidget::keyPressEvent(QKeyEvent * ev)
 		return;
 	}
 	if (ev->key() == Qt::Key_Escape) {
+		Qt::KeyboardModifiers mod = ev->modifiers();
+		if (mod & Qt::AltModifier) {
+			QWidget::keyPressEvent(ev);
+			return;
+		}
+
 		dispatch(FuncRequest(LFUN_DIALOG_HIDE, "findreplace"));
 		view_.setFocus();
 		bv_->buffer().updateBuffer();
