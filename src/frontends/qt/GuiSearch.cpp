@@ -131,8 +131,13 @@ GuiSearchWidget::GuiSearchWidget(QWidget * parent, GuiView & view)
 
 bool GuiSearchWidget::initialiseParams(std::string const & str)
 {
-	if (!str.empty())
-		findCO->lineEdit()->setText(toqstr(str));
+	if (!str.empty()) {
+		// selectAll & insert rather than setText in order to keep undo stack
+		findCO->lineEdit()->selectAll();
+		findCO->lineEdit()->insert(toqstr(str));
+	}
+	findCO->setFocus();
+	findCO->lineEdit()->selectAll();
 	return true;
 }
 
@@ -409,8 +414,6 @@ void GuiSearchWidget::wrapActTriggered()
 void GuiSearchWidget::showEvent(QShowEvent * e)
 {
 	findChanged();
-	findPB->setFocus();
-	findCO->lineEdit()->selectAll();
 	QWidget::showEvent(e);
 }
 
@@ -432,9 +435,9 @@ void GuiSearchWidget::findBufferChanged()
 	// might end up in loops with search as you type)
 	if (!search.empty() && toqstr(search) != findCO->lineEdit()->text()) {
 		LYXERR(Debug::CLIPBOARD, "from findbuffer: " << search);
+		// selectAll & insert rather than setText in order to keep undo stack
 		findCO->lineEdit()->selectAll();
 		findCO->lineEdit()->insert(toqstr(search));
-		findCO->lineEdit()->selectAll();
 	}
 }
 
