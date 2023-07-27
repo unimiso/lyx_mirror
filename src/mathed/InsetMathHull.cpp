@@ -310,6 +310,13 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 	if (first != last)
 		b.argumentItem(bformat(from_ascii("(%1$s-%2$s)"),
 		                       numbers_[first], numbers_[last]));
+
+	odocstringstream ods;
+	Encoding const * enc = encodings.fromLyXName("utf8");
+	OutputParams ops(enc);
+	ops.for_toc = true;
+	int const max_length = 30;
+
 	for (row_type row = 0; row != nrows(); ++row) {
 		if (!numbered(row))
 			continue;
@@ -319,12 +326,26 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 			label_[row]->addToToc(pit, output_active, utype, backend);
 		}
 		docstring label = nicelabel(row);
-		if (first == last)
+		if (first == last) {
 			// this is the only equation
-			b.argumentItem(label);
-		else {
+			plaintext(ods, ops, max_length);
+			b.argumentItem(label + " " + ods.str());
+		} else {
 			// insert as sub-items
-			b.pushItem(pit, label, output_active);
+			otexrowstream ots(ods);
+			TeXMathStream wi(ots, false, false, TeXMathStream::wsDefault, enc);
+			docstring d;
+			for (col_type c = 0; c < ncols(); ++c) {
+				wi << cell(index(row, c));
+				d = ods.str();
+				if (d.size() > max_length) {
+					d = d.substr(0, max_length - 1);
+					break;
+				}
+			}
+			b.pushItem(pit, label+ " " + d, output_active);
+			// clear the stringstream
+			odocstringstream().swap(ods);
 			b.pop();
 		}
 	}
