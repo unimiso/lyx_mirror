@@ -43,6 +43,8 @@ public:
 	///
 	void write(TeXMathStream & os) const override;
 	///
+	void mathmlize(MathMLStream & ms) const override;
+	///
 	void infoize(odocstream & os) const override;
 	///
 	InsetCode lyxCode() const override { return MATH_CLASS_CODE; }

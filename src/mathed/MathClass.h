@@ -40,7 +40,7 @@ class MetricsBase;
  * + Vcent: a vbox to be centered, produced by \vcenter.
  *
  * Over, Under, Acc, Rad and Vcent are not considered in the enum
- * below. The relvant elements will be considered as Ord.
+ * below. The relevant elements will be considered as Ord.
  */
 enum MathClass {
 	MC_ORD,

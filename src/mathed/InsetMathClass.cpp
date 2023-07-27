@@ -11,6 +11,7 @@
 #include <config.h>
 
 #include "InsetMathClass.h"
+#include "MathStream.h"
 
 #include "support/docstream.h"
 
@@ -53,6 +54,16 @@ void InsetMathClass::write(TeXMathStream & os) const
 {
 	InsetMathNest::write(os);
 	writeLimits(os);
+}
+
+
+void InsetMathClass::mathmlize(MathMLStream & ms) const
+{
+	// Skip the \mathXXX macro, the MathML processor is supposed to handle
+	// spacing down the line.
+	for (size_t i = 0; i < nargs(); ++i) {
+		ms << cell(i);
+	}
 }
 
 
