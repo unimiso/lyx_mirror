@@ -333,6 +333,7 @@ docstring convertLaTeXCommands(docstring const & str)
 
 	bool scanning_cmd = false;
 	bool scanning_math = false;
+	bool is_section = false;
 	bool escaped = false; // used to catch \$, etc.
 	while (!val.empty()) {
 		char_type const ch = val[0];
@@ -355,13 +356,24 @@ docstring convertLaTeXCommands(docstring const & str)
 		// discard characters until we hit something that
 		// isn't alpha.
 		if (scanning_cmd) {
+			if (!is_section && ch == 'S') {
+				is_section = true;
+				val = val.substr(1);
+				continue;
+			}
 			if (isAlphaASCII(ch)) {
+				is_section = false;
 				val = val.substr(1);
 				escaped = false;
+				continue;
+			} else if (is_section) {
+				ret.push_back(0x00a7);
+				is_section = false;
 				continue;
 			}
 			// so we're done with this command.
 			// now we fall through and check this character.
+			is_section = false;
 			scanning_cmd = false;
 		}
 
