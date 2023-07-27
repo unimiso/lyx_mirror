@@ -1292,6 +1292,9 @@ void GuiView::closeEvent(QCloseEvent * close_event)
 {
 	LYXERR(Debug::DEBUG, "GuiView::closeEvent()");
 
+	// FIXME Bug #12828 bites here. If there is some other View open, then
+	// we really should only refuse to close if one of the Buffers open here
+	// is being processed.
 	if (!GuiViewPrivate::busyBuffers.isEmpty()) {
 		Alert::warning(_("Exit LyX"),
 			_("LyX could not be closed because documents are being processed by LyX."));
