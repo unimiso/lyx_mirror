@@ -68,6 +68,7 @@
 0x00a5 "\\textyen"                "textcomp" "force=cp862;cp1255;cp1256;euc-jp;euc-jp-platex;jis;shift-jis-platex" "\\yen" "amssymb" # YEN SIGN
 0x00a6 "\\textbrokenbar"          "textcomp" "force=cp1255;cp1256;iso8859-7;euc-jp;euc-jp-platex;utf8-platex" # BROKEN BAR
 0x00a7 "\\textsection"            "textcomp" "force=cp1255;cp1256;iso8859-7;euc-cn;euc-jp;euc-kr;euc-tw;gbk;jis;shift-jis-platex" "\\mathsection" "" # SECTION SIGN
+0x00a7 "\\S" ""
 0x00a8 "\\textasciidieresis"      "textcomp" "force=cp1255;cp1256;iso8859-7;euc-cn;euc-jp;euc-kr;gbk;jis;shift-jis-platex" # DIAERESIS
 0x00a9 "\\textcopyright"          "textcomp" "force=cp1255;cp1256;koi8-u;iso8859-7;euc-jp;euc-jp-platex;utf8-platex" # COPYRIGHT SIGN
 0x00a9 "\\copyright" ""

@@ -459,13 +459,13 @@ docstring Encodings::fromLaTeXCommand(docstring const & cmd, int cmdtype,
 		// the prefix of some command in the unicodesymbols file
 		docstring subcmd = cmd.substr(i, j - i + 1);
 
-		CharInfoMap::const_iterator it = unicodesymbols.begin();
 		// First part of subcmd which might be a combining character
 		docstring combcmd = (m == j) ? docstring() : cmd.substr(i, m - i + 1);
 		// The combining character of combcmd if it exists
-		CharInfoMap::const_iterator combining = uniend;
 		size_t unicmd_size = 0;
 		char_type c = 0;
+		CharInfoMap::const_iterator it = unicodesymbols.begin();
+		CharInfoMap::const_iterator combining = uniend;
 		for (; it != uniend; ++it) {
 			if (it->second.deprecated())
 				continue;
