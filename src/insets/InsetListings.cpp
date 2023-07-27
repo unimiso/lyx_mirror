@@ -440,48 +440,42 @@ void InsetListings::latex(otexstream & os, OutputParams const & runparams) const
 
 docstring InsetListings::xhtml(XMLStream & os, OutputParams const & rp) const
 {
-	odocstringstream ods;
-	XMLStream out(ods);
-
 	bool const isInline = params().isInline();
 	if (isInline)
-		out << xml::CompTag("br");
+		os << xml::CompTag("br");
 	else {
-		out << xml::StartTag("div", "class='float-listings'");
+		os << xml::StartTag("div", "class='float-listings'");
 		docstring caption = getCaptionHTML(rp);
 		if (!caption.empty())
-			out << xml::StartTag("div", "class='listings-caption'")
-			    << XMLStream::ESCAPE_NONE
-			    << caption << xml::EndTag("div");
+			os << xml::StartTag("div", "class='listings-caption'")
+			   << XMLStream::ESCAPE_NONE
+			   << caption << xml::EndTag("div");
 	}
 
-	InsetLayout const & il = getLayout();
-	string const & tag = il.htmltag();
-	string attr = "class ='listings";
+	string const & tag = getLayout().htmltag();
+	string attr = "class='listings";
 	string const lang = params().getParamValue("language");
 	if (!lang.empty())
 		attr += " " + lang;
 	attr += "'";
-	out << xml::StartTag(tag, attr);
+	os << xml::StartTag(tag, attr);
 	OutputParams newrp = rp;
 	newrp.html_disable_captions = true;
 	// We don't want to convert dashes here. That's the only conversion we
 	// do for XHTML, so this is safe.
 	newrp.pass_thru = true;
-	docstring def = InsetText::insetAsXHTML(out, newrp, InsetText::JustText);
-	out << xml::EndTag(tag);
+	docstring def = InsetText::insetAsXHTML(os, newrp, InsetText::JustText);
+	os << xml::EndTag(tag);
 
 	if (isInline) {
-		out << xml::CompTag("br");
-		// escaping will already have been done
-		os << XMLStream::ESCAPE_NONE << ods.str();
+		os << xml::CompTag("br");
 	} else {
-		out << xml::EndTag("div");
-		// In this case, this needs to be deferred, but we'll put it
-		// before anything the text itself deferred.
-		def = ods.str() + '\n' + def;
+		if (!def.empty()) {
+			os << '\n' << def;
+		}
+		os << xml::EndTag("div");
 	}
-	return def;
+	return {};
 }
 
 
