@@ -5711,15 +5711,24 @@ void Buffer::Impl::fileExternallyModified(bool const exists)
 		       "checksum unchanged: " << filename);
 		return;
 	}
+	lyx_clean = false;
 	// If the file has been deleted, only mark the file as dirty since it is
 	// pointless to prompt for reloading. If later a file is moved into this
 	// location, then the externally modified warning will appear then.
 	if (exists)
-			externally_modified_ = true;
+		externally_modified_ = true;
 	// Update external modification notification.
 	// Dirty buffers must be visible at all times.
-	if (wa_ && wa_->unhide(owner_))
+	if (wa_ && wa_->unhide(owner_)) {
 		wa_->updateTitles();
+		if (!exists) {
+			frontend::Alert::warning(
+				_("File deleted from disk"),
+				bformat(_("The file\n  %1$s\n"
+					   "has been deleted from disk!"),
+					from_utf8(filename.absFileName())));
+		}
+	}
 	else
 		// Unable to unhide the buffer (e.g. no GUI or not current View)
 		lyx_clean = true;
