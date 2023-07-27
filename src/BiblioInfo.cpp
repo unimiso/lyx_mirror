@@ -378,6 +378,12 @@ docstring convertLaTeXCommands(docstring const & str)
 			continue;
 		}
 
+		if (ch == '~') {
+			ret += ' ';
+			val = val.substr(1);
+			continue;
+		}
+
 		if (ch == '$') {
 			ret += ch;
 			val = val.substr(1);
