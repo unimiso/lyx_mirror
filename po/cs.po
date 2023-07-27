@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Lyx 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-07-27 23:02+0200\n"
-"PO-Revision-Date: 2023-02-03 01:09-0800\n"
+"PO-Revision-Date: 2023-07-27 01:09-0800\n"
 "Last-Translator: Pavel Sanda <sanda@lyx.org>\n"
 "Language-Team: Czech <LL@li.org>\n"
 "Language: cs\n"
@@ -2652,9 +2652,8 @@ msgid "Use d&ynamic quotation marks"
 msgstr "Použití d&ynamických uvozovek"
 
 #: src/frontends/qt/ui/LanguageUi.ui:87
-#, fuzzy
 msgid "Encoding"
-msgstr "&Kódování:"
+msgstr "Kódování"
 
 #: src/frontends/qt/ui/LanguageUi.ui:95 src/frontends/qt/ui/LyXFilesUi.ui:32
 #: src/frontends/qt/ui/MathMatrixUi.ui:109
@@ -5179,9 +5178,8 @@ msgid "Label"
 msgstr "Značka"
 
 #: src/frontends/qt/ui/RefUi.ui:38
-#, fuzzy
 msgid "Reference counter value"
-msgstr "Obnovit uloženou hodnotu čítače"
+msgstr "Hodnota čítače"
 
 #: src/frontends/qt/ui/RefUi.ui:63
 msgid "&In[[buffer]]:"
@@ -14465,32 +14463,28 @@ msgid "Numbered Example (multiline)"
 msgstr "Číslovaný příklad (víceřádkový)"
 
 #: lib/layouts/linguistics.module:85
-#, fuzzy
 msgid "Example options"
-msgstr "Volby podpříkladu"
+msgstr "Volby příkladu"
 
 #: lib/layouts/linguistics.module:86
-#, fuzzy
 msgid "Examples options|s"
-msgstr "Volby podpříkladu|d"
+msgstr "Volby příkladu|o"
 
 #: lib/layouts/linguistics.module:87
-#, fuzzy
 msgid "Add examples options here"
-msgstr "Zde vložte volby podříkladu"
+msgstr "Zde vložte volby příkladu"
 
 #: lib/layouts/linguistics.module:99
 msgid "Numbered Examples (consecutive)"
 msgstr "Číslovaný příklad (nepřetržitý)"
 
 #: lib/layouts/linguistics.module:117
-#, fuzzy
 msgid "Judgment|J"
-msgstr "Dokument|D"
+msgstr "Úsudek|d"
 
 #: lib/layouts/linguistics.module:118
 msgid "Grammaticality judgment marker"
-msgstr ""
+msgstr "Značka gramatického úsudku"
 
 #: lib/layouts/linguistics.module:123
 msgid "Custom Numbering|s"
@@ -14510,46 +14504,39 @@ msgstr "Volby podpříkladu|d"
 
 #: lib/layouts/linguistics.module:144
 msgid "Add subexamples options here"
-msgstr "Zde vložte volby podříkladu"
+msgstr "Zde vložte volby podpříkladu"
 
 #: lib/layouts/linguistics.module:150
-#, fuzzy
 msgid "Example Preamble"
-msgstr "Preambule LaTeXu"
+msgstr "Preambule příkladu"
 
 #: lib/layouts/linguistics.module:155
-#, fuzzy
 msgid "Ex. Preamble"
-msgstr "Preamble"
+msgstr "Preambule př."
 
 #: lib/layouts/linguistics.module:164
-#, fuzzy
 msgid "Subexample Preamble"
-msgstr "Podpříklad"
+msgstr "Preambule podpříkladu"
 
 #: lib/layouts/linguistics.module:167
-#, fuzzy
 msgid "Subex. Preamble"
-msgstr "Podpříklad"
+msgstr "Preambule podpř."
 
 #: lib/layouts/linguistics.module:174
-#, fuzzy
 msgid "Example Postamble"
-msgstr "Příklad \\theexample."
+msgstr "Postambule příkladu"
 
 #: lib/layouts/linguistics.module:177
 msgid "Ex. Postamble"
-msgstr ""
+msgstr "Postambule př."
 
 #: lib/layouts/linguistics.module:180
-#, fuzzy
 msgid "Subexample Postamble"
-msgstr "Podpříklad"
+msgstr "Postambule podpříkladu"
 
 #: lib/layouts/linguistics.module:183
-#, fuzzy
 msgid "Subex. Postamble"
-msgstr "Podpříklad"
+msgstr "Postambule podpř."
 
 #: lib/layouts/linguistics.module:195
 msgid "Interlinear Gloss (2 Lines)"
@@ -14573,14 +14560,12 @@ msgstr "Zde přidat možnosti pro di-glosu"
 
 #: lib/layouts/linguistics.module:218 lib/layouts/linguistics.module:219
 #: lib/layouts/linguistics.module:274 lib/layouts/linguistics.module:275
-#, fuzzy
 msgid "Sentence Comment"
-msgstr "Věta"
+msgstr "Komentář věty"
 
 #: lib/layouts/linguistics.module:220 lib/layouts/linguistics.module:276
-#, fuzzy
 msgid "Add an optional sentence comment here"
-msgstr "Zde přidat větu."
+msgstr "Zde přidat volitelný komentář věty"
 
 #: lib/layouts/linguistics.module:224 lib/layouts/linguistics.module:225
 msgid "Interlinear Gloss"
@@ -14591,15 +14576,13 @@ msgid "Add the inter-linear gloss here"
 msgstr "Zde přidat meziřádkovou glosu"
 
 #: lib/layouts/linguistics.module:233 lib/layouts/linguistics.module:234
-#, fuzzy
 msgid "Gloss Comment"
-msgstr "Zavře dokument"
+msgstr "Komentář glosy"
 
 #: lib/layouts/linguistics.module:235 lib/layouts/linguistics.module:291
 #: lib/layouts/linguistics.module:306
-#, fuzzy
 msgid "Add an optional gloss comment here"
-msgstr "Zde vložte volby pro tri-glosu"
+msgstr "Zde přidat volitelný komentář glosy"
 
 #: lib/layouts/linguistics.module:239 lib/layouts/linguistics.module:310
 msgid "Translation"
@@ -14638,13 +14621,12 @@ msgid "Add the first inter-linear gloss line here"
 msgstr "Zde přidat první řádek meziřádkové glosy"
 
 #: lib/layouts/linguistics.module:289
-#, fuzzy
 msgid "Gloss Comment (1)"
-msgstr "Zavře dokument"
+msgstr "Komentář glosy (1)"
 
 #: lib/layouts/linguistics.module:290
 msgid "Gloss Comment (Line 1)"
-msgstr ""
+msgstr "Komentář glosy (řádek 1)"
 
 #: lib/layouts/linguistics.module:295
 msgid "Interlinear Gloss (2)"
@@ -14655,18 +14637,16 @@ msgid "Interlinear Gloss (Line 2)|2"
 msgstr "Meziřádková glosa (řádek 2)|2"
 
 #: lib/layouts/linguistics.module:297
-#, fuzzy
 msgid "Add the second inter-linear gloss line here"
-msgstr "Zde přidat první řádek meziřádkové glosy"
+msgstr "Zde přidat druhý řádek meziřádkové glosy"
 
 #: lib/layouts/linguistics.module:304
-#, fuzzy
 msgid "Gloss Comment (2)"
-msgstr "Zavře dokument"
+msgstr "Komentář glosy (2)"
 
 #: lib/layouts/linguistics.module:305
 msgid "Gloss Comment (Line 2)"
-msgstr ""
+msgstr "Komentář glosy (řádek 2)"
 
 #: lib/layouts/linguistics.module:312
 msgid "Add a translation for the glosse"
@@ -17272,9 +17252,8 @@ msgid "Equation ##"
 msgstr "Rovnice ##"
 
 #: lib/layouts/stdcounters.inc:87
-#, fuzzy
 msgid "\\superarabic{footnote}"
-msgstr "\\arabic{footnote}"
+msgstr "\\superarabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:88 lib/layouts/stdcounters.inc:93
 msgid "Footnote ##"
@@ -20348,9 +20327,8 @@ msgid "Edit Externally..."
 msgstr "Edituj externě...|E"
 
 #: lib/ui/stdcontext.inc:374 lib/ui/stdcontext.inc:726
-#, fuzzy
 msgid "End Editing Externally"
-msgstr "Konec externí editace...|e"
+msgstr "Konec externí editace"
 
 #: lib/ui/stdcontext.inc:381
 msgid "Split Inset|t"
@@ -20666,9 +20644,8 @@ msgid "Emphasized Page Formatting|z"
 msgstr "Zvýrazněné - formátování stránky|Z"
 
 #: lib/ui/stdcontext.inc:647
-#, fuzzy
 msgid "Custom Page Formatting...|u"
-msgstr "Vlastní formátování stránky|y"
+msgstr "Vlastní formátování stránky...|y"
 
 #: lib/ui/stdcontext.inc:651
 msgid "Insert Subentry|b"
@@ -21612,9 +21589,8 @@ msgid "Optional Line Break|B"
 msgstr "Volitelné zalomení řádku|t"
 
 #: lib/ui/stdmenus.inc:471
-#, fuzzy
 msgid "Prevent Page Break|g"
-msgstr "Bez zalomení stránky|B"
+msgstr "Zabránit zalomení stránky|b"
 
 #: lib/ui/stdmenus.inc:479
 msgid "Display Formula|D"
@@ -30975,9 +30951,8 @@ msgstr ""
 "Nepodařilo se přečíst soubor stdinsets.inc! Toto může vést ke ztrátě dat!"
 
 #: src/TextClass.cpp:1627
-#, fuzzy, c-format
 msgid "%1$s ##"
-msgstr "%1$s zámek"
+msgstr "%1$s ##"
 
 #: src/TextClass.cpp:1628
 #, c-format
@@ -30985,9 +30960,8 @@ msgid "%1$s (Float)"
 msgstr "%1$s (Plovoucí)"
 
 #: src/TextClass.cpp:1633
-#, fuzzy, c-format
 msgid "Sub-%1$s ##"
-msgstr "Sub-%1$s"
+msgstr "Sub-%1$s ##"
 
 #: src/TextClass.cpp:1634
 #, c-format
@@ -34251,13 +34225,13 @@ msgid "Invalid or empty key sequence"
 msgstr "Chybná nebo prázdná sekvence kláves"
 
 #: src/frontends/qt/GuiPrefs.cpp:3414
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Shortcut `%1$s' is already a prefix for other commands.\n"
 "Are you sure you want to unbind these commands and bind it to %2$s?"
 msgstr ""
-"Zkratka `%1$s' je již použita pro %2$s.\n"
-"Opravdu chcete toto přiřazení změnit na %3$s?"
+"Zkratka `%1$s' je již prefixem jiného příkazu.\n"
+"Opravdu chcete toto přiřazení změnit na %2$s?"
 
 #: src/frontends/qt/GuiPrefs.cpp:3417 src/frontends/qt/GuiPrefs.cpp:3440
 msgid "Redefine shortcut?"
@@ -35528,14 +35502,12 @@ msgid "%1 (modified externally)"
 msgstr "%1 (externě modifikováno)"
 
 #: src/frontends/qt/GuiWorkArea.cpp:2088
-#, fuzzy
 msgid "&Hide Tab"
-msgstr "Skrýt panel"
+msgstr "&Skrýt panel"
 
 #: src/frontends/qt/GuiWorkArea.cpp:2094
-#, fuzzy
 msgid "&Close Tab"
-msgstr "Zavřít panel"
+msgstr "&Zavřít panel"
 
 #: src/frontends/qt/GuiWorkArea.cpp:2134
 msgid "<b>The file %1 changed on disk.</b>"
@@ -37728,9 +37700,8 @@ msgid "Unknown tabular feature '%1$s'"
 msgstr "Neznámá vlastnost tabulky '%1$s'"
 
 #: src/mathed/InsetMathHull.cpp:317
-#, fuzzy
 msgid "Equation "
-msgstr "Rovnice"
+msgstr "Rovnice "
 
 #: src/mathed/InsetMathHull.cpp:1702
 #, c-format
