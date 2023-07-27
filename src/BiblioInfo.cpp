@@ -379,7 +379,7 @@ docstring convertLaTeXCommands(docstring const & str)
 		}
 
 		if (ch == '~') {
-			ret += 0x00a0;
+			ret += char_type(0x00a0);
 			val = val.substr(1);
 			continue;
 		}
