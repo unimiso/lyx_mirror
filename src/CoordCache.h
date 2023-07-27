@@ -31,8 +31,10 @@ struct Geometry {
 
 	bool covers(int x, int y) const
 	{
-		return x >= pos.x_ && x < pos.x_ + dim.wid
-		       && y >= pos.y_ - dim.asc && y <= pos.y_ + dim.des;
+		return x >= pos.x_
+			&& x <= pos.x_ + dim.wid
+			&& y >= pos.y_ - dim.asc
+			&& y <= pos.y_ + dim.des;
 	}
 
 	int squareDistance(int x, int y) const
