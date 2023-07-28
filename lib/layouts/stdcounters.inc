@@ -49,24 +49,28 @@ End
 Counter enumi
 	GuiName "Numbered List (Level 1)"
 	LabelString          "\arabic{enumi}."
+	PrettyFormat         "(\arabic{enumi})"
 End
 
 Counter enumii
 	GuiName "Numbered List (Level 2)"
 	Within               enumi
 	LabelString          "(\alph{enumii})"
+	PrettyFormat         "(\alph{enumii})"
 End
 
 Counter enumiii
 	GuiName "Numbered List (Level 3)"
 	Within               enumii
 	LabelString          "\roman{enumiii}."
+	PrettyFormat         "(\roman{enumiii})"
 End
 
 Counter enumiv
 	GuiName "Numbered List (Level 4)"
 	Within               enumiii
 	LabelString          "\Alph{enumiv}."
+	PrettyFormat         "(\Alph{enumiv})"
 End
 
 Counter bibitem
@@ -85,7 +89,7 @@ End
 Counter footnote
 	GuiName Footnote
 	LabelString          "\superarabic{footnote}"
-	PrettyFormat         "Footnote ##"
+	PrettyFormat         "Footnote \arabic{footnote}"
 End
 
 Counter thanks
