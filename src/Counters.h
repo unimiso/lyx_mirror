@@ -69,6 +69,8 @@ public:
 	/// E.g., for a section counter it might be "section \thesection"
 	docstring const & prettyFormat() const { return prettyformat_; }
 	///
+	docstring const & refFormat(docstring const & prefix) const;
+	///
 	docstring const & guiName() const { return guiname_; }
 	///
 	docstring const & latexName() const { return latexname_; }
@@ -102,6 +104,8 @@ private:
 	docstring labelstringappendix_;
 	/// Similar, but used for formatted references in XHTML output
 	docstring prettyformat_;
+	///
+	std::map<docstring, docstring> ref_formats_;
 	///
 	docstring guiname_;
 	/// The name used for the counter in LaTeX
@@ -183,6 +187,11 @@ public:
 	/// format given by Counter::prettyFormat().
 	docstring prettyCounter(docstring const & cntr,
 			       std::string const & lang) const;
+	/// returns a formatted version of the counter, using the
+	/// format given by Counter::prettyFormat().
+	docstring formattedCounter(docstring const & cntr,
+					docstring const & prefix,
+					std::string const & lang) const;
 	///
 	docstring const & guiName(docstring const & cntr) const;
 	///

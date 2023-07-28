@@ -30,6 +30,8 @@ public:
 	///
 	docstring const & prettyCounter() const { return pretty_counter_; }
 	///
+	docstring const & formattedCounter() const { return formatted_counter_; }
+	///
 	void setPrettyCounter(docstring pc) { pretty_counter_ = pc; }
 	///
 	int rowFlags() const override { return CanBreakBefore | CanBreakAfter; }
@@ -109,6 +111,8 @@ private:
 	docstring counter_value_;
 	///
 	docstring pretty_counter_;
+	///
+	docstring formatted_counter_;
 };
 
 

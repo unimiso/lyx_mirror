@@ -11,7 +11,7 @@
 # This script will update a .layout file to current format
 
 # The latest layout format is also defined in src/TextClass.cpp
-currentFormat = 103
+currentFormat = 104
 
 
 # Incremented to format 4, 6 April 2007, lasgouttes
@@ -348,6 +348,9 @@ currentFormat = 103
 # Incremented to format 103, 27 July 2023 by rikiheck
 # Allow e.g. \roman{section} in PrettyFormat
 
+# Incremented to format 104, 28 July 2023 by rikiheck
+# RefFormat for counters and PrettyFormat for floats
+
 # Do not forget to document format change in Customization
 # Manual (section "Declaring a new text class").
 
@@ -595,7 +598,7 @@ def convert(lines, end_format):
                 i += 1
             continue
 
-        if 101 <= format <= 102:
+        if 101 <= format <= 103:
             # nothing to do.
             i += 1
             continue

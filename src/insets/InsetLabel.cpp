@@ -193,15 +193,24 @@ void InsetLabel::updateBuffer(ParIterator const & it, UpdateType, bool const /*d
 		if (active_counter_ != from_ascii("equation")) {
 			counter_value_ = cnts.theCounter(active_counter_, lang->code());
 			pretty_counter_ = cnts.prettyCounter(active_counter_, lang->code());
+			docstring prex;
+			split(label, prex, ':');
+			if (prex == label) {
+				// No prefix found
+				formatted_counter_ = pretty_counter_;
+			} else
+				formatted_counter_ = cnts.formattedCounter(active_counter_, prex, lang->code());
 		} else {
 			// For equations, the counter value and pretty counter
 			// value will be set by the parent InsetMathHull.
 			counter_value_ = from_ascii("#");
 			pretty_counter_ = from_ascii("");
+			formatted_counter_ = from_ascii("");
 		}
 	} else {
 		counter_value_ = from_ascii("#");
 		pretty_counter_ = from_ascii("#");
+		formatted_counter_ = from_ascii("#");
 	}
 }
 
@@ -215,10 +224,10 @@ void InsetLabel::addToToc(DocIterator const & cpit, bool output_active,
 	if (buffer().insetLabel(label, true) != this)
 		output_active = false;
 
-	// We put both  active and inactive labels to the outliner
+	// We put both active and inactive labels to the outliner
 	shared_ptr<Toc> toc = backend.toc("label");
 	TocItem toc_item = TocItem(cpit, 0, screen_label_, output_active);
-	toc_item.prettyStr(pretty_counter_);
+	toc_item.prettyStr(formatted_counter_);
 	toc->push_back(toc_item);
 	// The refs get assigned only to the active label. If no active one exists,
 	// assign the (BROKEN) refs to the first inactive one.

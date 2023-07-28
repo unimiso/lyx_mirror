@@ -61,6 +61,7 @@ bool Counter::read(Lexer & lex)
 		CT_INITIALVALUE,
 		CT_GUINAME,
 		CT_LATEXNAME,
+		CT_REFFORMAT,
 		CT_END
 	};
 
@@ -72,6 +73,7 @@ bool Counter::read(Lexer & lex)
 		{ "labelstringappendix", CT_LABELSTRING_APPENDIX },
 		{ "latexname", CT_LATEXNAME },
 		{ "prettyformat", CT_PRETTYFORMAT },
+		{ "refformat", CT_REFFORMAT },
 		{ "within", CT_WITHIN }
 	};
 
@@ -110,6 +112,15 @@ bool Counter::read(Lexer & lex)
 				lex.next();
 				prettyformat_ = lex.getDocString();
 				break;
+			case CT_REFFORMAT: {
+				lex.next();
+				docstring const key = lex.getDocString();
+				lex.next();
+				docstring const value = lex.getDocString();
+				ref_formats_[key] = value;
+				LYXERR0("refformat: " << key << " => " << value);
+				break;
+			}
 			case CT_LABELSTRING:
 				lex.next();
 				labelstring_ = lex.getDocString();
@@ -131,11 +142,12 @@ bool Counter::read(Lexer & lex)
 				getout = true;
 				break;
 		}
-		if (prettyformat_ == "") { // fall back on GuiName if PrettyFormat is empty
-			if (guiname_ == "")
+		// fall back on GuiName if PrettyFormat is empty
+		if (prettyformat_.empty()) {
+			if (guiname_.empty())
 				prettyformat_ = from_ascii("##");
 			else
-				prettyformat_ = "## (" + guiname_ + " counter)";
+				prettyformat_ = "## (" + guiname_ + ")";
 		}
 	}
 
@@ -186,6 +198,15 @@ void Counter::step()
 void Counter::reset()
 {
 	value_ = initial_value_;
+}
+
+
+docstring const & Counter::refFormat(docstring const & prefix) const
+{
+	map<docstring, docstring>::const_iterator it = ref_formats_.find(prefix);
+	if (it == ref_formats_.end())
+		return prettyformat_;
+	return it->second;
 }
 
 
@@ -598,6 +619,23 @@ docstring Counters::counterLabel(docstring const & format,
 	}
 	//lyxerr << "DONE! label=" << label << endl;
 	return label;
+}
+
+
+docstring Counters::formattedCounter(docstring const & name,
+			docstring const & prex, string const & lang) const
+{
+	CounterList::const_iterator it = counterList_.find(name);
+	if (it == counterList_.end())
+		return from_ascii("#");
+	Counter const & ctr = it->second;
+
+	docstring const value = theCounter(name, lang);
+	docstring const & format =
+		translateIfPossible(counterLabel(ctr.refFormat(prex), lang), lang);
+	if (format.empty())
+		return value;
+	return subst(format, from_ascii("##"), value);
 }
 
 

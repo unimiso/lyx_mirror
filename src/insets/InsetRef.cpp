@@ -404,7 +404,7 @@ docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
 		else if (cmd == "eqref")
 			display_string = '(' + value + ')';
 		else if (cmd == "formatted") {
-			display_string = il->prettyCounter();
+			display_string = il->formattedCounter();
 			if (buffer().params().use_refstyle && getParam("caps") == "true")
 				capitalize(display_string);
 			// it is hard to see what to do about plurals...

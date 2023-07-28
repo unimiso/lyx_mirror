@@ -59,7 +59,7 @@ namespace lyx {
 // You should also run the development/tools/updatelayouts.py script,
 // to update the format of all of our layout files.
 //
-int const LAYOUT_FORMAT = 103; // rkh: allow counter specs in PrettyFormat
+int const LAYOUT_FORMAT = 104; // rkh: RefFormat for counters
 
 
 // Layout format for the current lyx file format. Controls which format is
@@ -1412,6 +1412,7 @@ bool TextClass::readFloat(Lexer & lexrc)
 		FT_ALLOWS_SIDEWAYS,
 		FT_ALLOWS_WIDE,
 		FT_REQUIRES,
+		FT_PRETTYFORMAT,
 		FT_END
 	};
 
@@ -1435,6 +1436,7 @@ bool TextClass::readFloat(Lexer & lexrc)
 		{ "listname", FT_LISTNAME },
 		{ "numberwithin", FT_WITHIN },
 		{ "placement", FT_PLACEMENT },
+		{ "prettyformat", FT_PRETTYFORMAT },
 		{ "refprefix", FT_REFPREFIX },
 		{ "requires", FT_REQUIRES },
 		{ "style", FT_STYLE },
@@ -1463,6 +1465,7 @@ bool TextClass::readFloat(Lexer & lexrc)
 	string type;
 	string within;
 	string required;
+	docstring prettyformat;
 	bool usesfloat = true;
 	bool ispredefined = false;
 	bool allowswide = true;
@@ -1566,6 +1569,10 @@ bool TextClass::readFloat(Lexer & lexrc)
 			lexrc.next();
 			htmltag = lexrc.getString();
 			break;
+		case FT_PRETTYFORMAT:
+			lexrc.next();
+			prettyformat = lexrc.getDocString();
+			break;
 		case FT_DOCBOOKATTR:
 			lexrc.next();
 			docbookattr = lexrc.getString();
@@ -1624,13 +1631,13 @@ bool TextClass::readFloat(Lexer & lexrc)
 		// each float has its own counter
 		counters_.newCounter(from_ascii(type), from_ascii(within),
 				docstring(), docstring(),
-				bformat(_("%1$s ##"), _(name)),
+				prettyformat.empty() ? bformat(_("%1$s ##"), _(name)) : prettyformat,
 				bformat(_("%1$s (Float)"), _(name)));
 		// also define sub-float counters
 		docstring const subtype = "sub-" + from_ascii(type);
 		counters_.newCounter(subtype, from_ascii(type),
 				"\\alph{" + subtype + "}", docstring(),
-				bformat(_("Sub-%1$s ##"), _(name)),
+				prettyformat.empty() ? bformat(_("Sub-%1$s ##"), _(name)) : prettyformat,
 				bformat(_("Sub-%1$s (Float)"), _(name)));
 	}
 	return getout;
