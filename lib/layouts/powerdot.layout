@@ -569,6 +569,7 @@ Float
 	UsesFloatPkg          false
 	ListCommand           listoftables
 	RefPrefix             tab
+	PrettyFormat          "Table ##"
 End
 
 
@@ -586,6 +587,7 @@ Float
 	UsesFloatPkg          false
 	ListCommand           listoffigures
 	RefPrefix             fig
+	PrettyFormat          "Figure ##"
 End
 
 
@@ -602,6 +604,7 @@ Float
 	IsPredefined          false
 	UsesFloatPkg          true
 	RefPrefix             alg
+	PrettyFormat          "Algorithm ##"
 End
 
 ###
@@ -609,21 +612,25 @@ End
 ###
 Counter enumi
 	GuiName "Numbered List (Level 1)"
+	PrettyFormat         "(\arabic{enumi})"
 End
 
 Counter enumii
 	GuiName "Numbered List (Level 2)"
   Within        enumi
+	PrettyFormat         "(\arabic{enumii})"
 End
 
 Counter enumiii
 	GuiName "Numbered List (Level 3)"
   Within        enumii
+	PrettyFormat         "(\arabic{enumiii})"
 End
 
 Counter enumiv
 	GuiName "Numbered List (Level 4)"
   Within        enumiii
+	PrettyFormat         "(\arabic{enumiv})"
 End
 
 Counter bibitem

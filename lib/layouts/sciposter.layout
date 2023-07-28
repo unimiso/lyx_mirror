@@ -97,6 +97,7 @@ Float
 	IsPredefined          true
 	UsesFloatPkg          false
 	RefPrefix             alg
+	PrettyFormat          "Algorithm ##"
 End
 
 Float
@@ -111,6 +112,7 @@ Float
 	UsesFloatPkg          false
 	ListCommand           listoffigures
 	RefPrefix             fig
+	PrettyFormat          "Figure ##"
 End
 
 Float
@@ -125,6 +127,7 @@ Float
 	UsesFloatPkg          false
 	ListCommand           listoftables
 	RefPrefix             tab
+	PrettyFormat          "Table ##"
 End
 
 InsetLayout "Flex:Giant"

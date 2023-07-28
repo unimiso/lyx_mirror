@@ -18,42 +18,49 @@ Counter example
 	GuiName Example
 	Within               chapter
 	LabelString          "(\arabic{example})"
+	PrettyFormat         "(\arabic{example})"
 End
 
 Counter examplei
 	GuiName              "Numbered Example (Multiline)"
 	Within               chapter
 	LabelString          "(\arabic{examplei})"
+	PrettyFormat         "(\arabic{examplei})"
 End
 
 Counter subexample
 	GuiName              Subexample
 	Within               examplei
 	LabelString          "\theexamplei (\alph{subexample})"
+	PrettyFormat         "\theexamplei (\alph{subexample})"
 End
 
 Counter subexamplei
 	GuiName              Subexample
 	Within               examplei
 	LabelString          "\theexamplei (\alph{subexamplei})"
+	PrettyFormat         "\theexamplei (\alph{subexamplei})"
 End
 
 Counter subexampleii
 	GuiName              Subexample
 	Within               examplei
 	LabelString          "\theexamplei (\alph{subexampleii})"
+	PrettyFormat         "\theexamplei (\alph{subexampleii})"
 End
 
 Counter subexampleiii
 	GuiName              Subexample
 	Within               examplei
 	LabelString          "\theexamplei (\alph{subexampleiii})"
+	PrettyFormat         "\theexamplei (\alph{subexampleiii})"
 End
 
 Counter subexampleiv
 	GuiName              Subexample
 	Within               examplei
 	LabelString          "\theexamplei (\alph{subexampleiv})"
+	PrettyFormat         "\theexamplei (\alph{subexampleiv})"
 End
 
 #
@@ -598,5 +605,6 @@ Float
 	ListName              "List of Tableaux"
 	IsPredefined          false
 	UsesFloatPkg          true
+	PrettyFormat          "Tableaux ##"
 End
 

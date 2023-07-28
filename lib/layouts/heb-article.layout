@@ -11,6 +11,12 @@ Input article
 
 Counter theorem
 	Within	section
+	RefFormat thm "Theorem \thesection.\arabic{theorem}"
+	RefFormat cor "Corollary \thesection.\arabic{theorem}"
+	RefFormat lem "Lemma \thesection.\arabic{theorem}"
+	RefFormat claim "Claim \thesection.\arabic{theorem}"
+	RefFormat def "Definition \thesection.\arabic{theorem}"
+	RefFormat rem "Remark \thesection.\arabic{theorem}"
 End
 
 Style Theorem

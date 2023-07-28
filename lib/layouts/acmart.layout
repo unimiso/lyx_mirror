@@ -571,6 +571,13 @@ OutlinerName thm "Definitions & Theorems"
 Counter theorem
 	GuiName Theorem
 	Within                section
+	RefFormat thm "Theorem \arabic{theorem}"
+	RefFormat cor "Corollary \arabic{theorem}"
+	RefFormat lem "Lemma \arabic{theorem}"
+	RefFormat prop "Lemma \arabic{theorem}"
+	RefFormat conj "Conjecture \arabic{theorem}"
+	RefFormat def "Definition \arabic{theorem}"
+	RefFormat exa "Example \arabic{theorem}"
 End
 
 Style Theorem

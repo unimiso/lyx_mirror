@@ -30,6 +30,7 @@ Counter equation
 	GuiName Equation
 	Within chapter
 	LabelString "\thechapter.\arabic{equation}"
+	PrettyFormat "equation \thechapter.\arabic{equation}"
 End
 
 

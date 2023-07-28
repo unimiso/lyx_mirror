@@ -8,12 +8,14 @@ Counter chapter
 	Within                ""
 	LabelString	      "\arabic{chapter}"
 	LabelStringAppendix   "\Alph{chapter}"
+	PrettyFormat "Chapter ##"
 End
 
 Counter section
 	GuiName Section
 	Within                chapter
 	LabelString	      ""
+	PrettyFormat "Section ##"
 End
 
 Float
@@ -41,4 +43,5 @@ End
 Counter footnote
 	GuiName Footnote
 	Within		      chapter
+	PrettyFormat 	"footnote \arabic{footnote}"
 End

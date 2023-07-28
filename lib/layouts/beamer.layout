@@ -1730,6 +1730,7 @@ Float
   IsPredefined     true
   UsesFloatPkg     false
   ListCommand      listoftables
+  PrettyFormat     "Table ##"
 End
 
 Float
@@ -1743,6 +1744,7 @@ Float
   IsPredefined     true
   UsesFloatPkg     false
   ListCommand      listoffigures
+  PrettyFormat     "Figure ##"
 End
 
 

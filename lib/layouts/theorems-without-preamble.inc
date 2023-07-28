@@ -84,6 +84,7 @@ End
 
 Counter		corollary
 	GuiName Corollary
+	PrettyFormat "Corollary ##"
 End
 Style Corollary
 	CopyStyle	Theorem
@@ -106,6 +107,7 @@ End
 
 Counter		lemma
 	GuiName Lemma
+	PrettyFormat "Lemma ##"
 End
 Style Lemma
 	CopyStyle	Theorem
@@ -128,6 +130,7 @@ End
 
 Counter		proposition
 	GuiName Proposition
+	PrettyFormat "Proposition ##"
 End
 Style Proposition
 	CopyStyle	Theorem
@@ -150,6 +153,7 @@ End
 
 Counter		prop
 	GuiName Prop(osition)
+	PrettyFormat "Proposition ##"
 End
 Style Prop
 	CopyStyle	Theorem
@@ -172,6 +176,7 @@ End
 
 Counter		conjecture
 	GuiName Conjecture
+	PrettyFormat "Conjecture ##"
 End
 Style Conjecture
 	CopyStyle	Theorem
@@ -201,6 +206,7 @@ End
 
 Counter		fact
 	GuiName Fact
+	PrettyFormat "Fact ##"
 End
 Style Fact
 	CopyStyle	Theorem
@@ -223,6 +229,7 @@ End
 
 Counter		definition
 	GuiName Definition
+	PrettyFormat "Definition ##"
 End
 Style Definition
 	CopyStyle	Theorem
@@ -253,6 +260,7 @@ End
 
 Counter		example
 	GuiName Example
+	PrettyFormat "Example ##"
 End
 Style Example
 	CopyStyle	Conjecture
@@ -274,6 +282,7 @@ End
 
 Counter		problem
 	GuiName Problem
+	PrettyFormat "Problem ##"
 End
 Style Problem
 	CopyStyle	Definition
@@ -298,7 +307,8 @@ End
 
 Counter		prob
 	GuiName Prob(lem)
-  Within	chapter
+	Within	chapter
+	PrettyFormat "Problem ##"
 End
 # Prob does not copy a style to avoid preamble code
 Style Prob
@@ -336,6 +346,7 @@ End
 
 Counter		solution
 	GuiName Solution
+	PrettyFormat "Solution ##"
 End
 Style Solution
 	CopyStyle	Problem
@@ -378,6 +389,7 @@ End
 
 Counter		exercise
 	GuiName Exercise
+	PrettyFormat "Exercise ##"
 End
 Style Exercise
 	CopyStyle	Definition
@@ -401,6 +413,7 @@ End
 
 Counter		remark
 	GuiName Remark
+	PrettyFormat "Remark ##"
 End
 Style Remark
 	CopyStyle	Conjecture
@@ -442,6 +455,7 @@ End
 
 Counter		case
 	GuiName Case
+	PrettyFormat "Case ##"
 End
 Style Case
 	CopyStyle	Remark
@@ -465,6 +479,7 @@ End
 
 Counter		property
 	GuiName Property
+	PrettyFormat "Property ##"
 End
 Style Property
 	CopyStyle	Claim
@@ -488,6 +503,7 @@ End
 
 Counter		question
 	GuiName Question
+	PrettyFormat "Question ##"
 End
 Style Question
 	CopyStyle	Claim
@@ -511,6 +527,7 @@ End
 
 Counter		note
 	GuiName Note
+	PrettyFormat "Note ##"
 End
 Style Note
 	CopyStyle	Claim

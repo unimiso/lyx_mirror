@@ -431,6 +431,7 @@ End
 Counter theorem
 	GuiName Theorem
   Within	section
+  PrettyFormat "Theorem ##"
 End
 Style Theorem
   ResetArgs      1
@@ -448,6 +449,7 @@ End
 Counter remark
 	GuiName Remark
   Within	section
+  PrettyFormat "Remark ##"
 End
 Style Remark
   LabelString	"Remark \theremark."
@@ -460,6 +462,7 @@ End
 Counter corollary
 	GuiName Corollary
   Within	section
+  PrettyFormat "Corollary ##"
 End
 Style Corollary
   LabelString	"Corollary \thecorollary."
@@ -468,6 +471,7 @@ End
 Counter lemma
 	GuiName Lemma
   Within	section
+  PrettyFormat "Lemma ##"
 End
 Style Lemma
   LabelString	"Lemma \thelemma."
@@ -484,6 +488,7 @@ End
 Counter question
 	GuiName Question
   Within	section
+  PrettyFormat "Question ##"
 End
 Style Question
   LabelString	"Question \thequestion."
@@ -495,6 +500,7 @@ End
 Counter claim
 	GuiName Claim
   Within	section
+  PrettyFormat "Claim ##"
 End
 Style Claim
   LabelCounter	claim
@@ -507,6 +513,7 @@ End
 Counter conjecture
 	GuiName Conjecture
   Within	section
+  PrettyFormat "Conjecture ##"
 End
 Style Conjecture
   LabelString	"Conjecture \theconjecture."
@@ -518,6 +525,7 @@ End
 Counter prop
 	GuiName Prop(osition)
   Within	section
+  PrettyFormat "Proposition ##"
 End
 
 Counter appendix

@@ -17,4 +17,5 @@ Counter equation
 	GuiName Equation
 	Within section
 	LabelString "\thesection.\arabic{equation}"
+	PrettyFormat "(\thesection.\arabic{equation})"
 End

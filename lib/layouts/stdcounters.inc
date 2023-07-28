@@ -94,6 +94,6 @@ End
 
 Counter thanks
 	GuiName "Footnote (Title)"
-	PrettyFormat         "Footnote ##"
+	PrettyFormat         "Footnote \arabic{footnote}"
 	LabelString	     "\fnsymbol{thanks}"
 End

@@ -320,6 +320,7 @@ Float
 	IsPredefined	false
 	UsesFloatPkg	true
 	RefPrefix		alg
+	PrettyFormat    "Algorithm ##"
 End
 
 
@@ -335,6 +336,7 @@ Float
 	Style			plain
 	Type			video
 	UsesFloatPkg	false
+	PrettyFormat    "Video ##"
 End
 
 

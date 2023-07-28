@@ -201,6 +201,11 @@ Style Axiom
 	EndPreamble
 End
 
+Counter case
+	GuiName Case
+	PrettyFormat "Case ##"
+End
+
 Style Case
 	CopyStyle	Remark
 	LatexName	case
@@ -307,12 +312,22 @@ Style Proposition
 	EndPreamble
 End
 
+Counter remark
+	GuiName Remark
+	PrettyFormat "Remark ##"
+End
+
 Style Remark
 	LatexName	remark
 	LabelString	"Remark \theremark."
 	Preamble
 		\newtheorem{remark}{Remark}
 	EndPreamble
+End
+
+Counter solution
+	GuiName Solution
+	PrettyFormat "Solution ##"
 End
 
 Style Solution
@@ -323,6 +338,11 @@ Style Solution
 	Preamble
 		\newtheorem{solution}{Solution}
 	EndPreamble
+End
+
+Counter summary
+	GuiName Summary
+	PrettyFormat "Summary ##"
 End
 
 Style Summary
@@ -349,15 +369,3 @@ Style Proof
 	EndPreamble
 End
 
-Counter case
-	GuiName Case
-End
-Counter remark
-	GuiName Remark
-End
-Counter summary
-	GuiName Summary
-End
-Counter solution
-	GuiName Solution
-End

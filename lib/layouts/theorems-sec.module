@@ -15,6 +15,21 @@ Counter theorem
 	GuiName Theorem
 	Within section
 	LaTeXName thm
+	RefFormat thm "Theorem \thesection.\arabic{theorem}"
+	RefFormat cor "Corollary \thesection.\arabic{theorem}"
+	RefFormat lem "Lemma \thesection.\arabic{theorem}"
+	RefFormat prop "Lemma \thesection.\arabic{theorem}"
+	RefFormat conj "Conjecture \thesection.\arabic{theorem}"
+	RefFormat def "Definition \thesection.\arabic{theorem}"
+	RefFormat exa "Example \thesection.\arabic{theorem}"
+	RefFormat prob "Problem \thesection.\arabic{theorem}"
+	RefFormat exer "Exercise \thesection.\arabic{theorem}"
+	RefFormat solu "Solution \thesection.\arabic{theorem}"
+	RefFormat rem "Remark \thesection.\arabic{theorem}"
+	RefFormat claim "Claim \thesection.\arabic{theorem}"
+	RefFormat fact "Fact \thesection.\arabic{theorem}"
+	RefFormat cri "Criterion \thesection.\arabic{theorem}"
+	RefFormat alg "Algorithm \thesection.\arabic{theorem}"
 End
 
 Style Theorem
