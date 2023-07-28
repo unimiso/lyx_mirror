@@ -2434,7 +2434,7 @@ void Buffer::getLabelList(vector<std::tuple<docstring, docstring, docstring>> & 
 	shared_ptr<Toc> toc = d->toc_backend.toc("label");
 	for (auto const & tocit : *toc) {
 		if (tocit.depth() == 0) {
-			list.push_back(make_tuple(tocit.str(), tocit.asString(),tocit.prettyStr()));
+			list.push_back(make_tuple(tocit.str(), tocit.asString(), tocit.prettyStr()));
 		}
 	}
 }
