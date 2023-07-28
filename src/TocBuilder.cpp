@@ -61,13 +61,13 @@ void TocBuilder::captionItem(DocIterator const & dit, docstring const & s,
 		stack_.top().is_captioned = true;
 	} else {
 		// This is a new entry.
-		pop();
 		// the dit is at the float's level, e.g. for the contextual menu of
 		// outliner entries
 		DocIterator captionable_dit = dit;
 		captionable_dit.pop_back();
 		pushItem(captionable_dit, s, output_active, true);
 		(*toc_)[stack_.top().pos].setAction(func);
+		pop();
 	}
 }
 
