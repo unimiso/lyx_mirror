@@ -118,7 +118,7 @@ bool Counter::read(Lexer & lex)
 				lex.next();
 				docstring const value = lex.getDocString();
 				ref_formats_[key] = value;
-				LYXERR0("refformat: " << key << " => " << value);
+				// LYXERR0("refformat: " << key << " => " << value);
 				break;
 			}
 			case CT_LABELSTRING:
