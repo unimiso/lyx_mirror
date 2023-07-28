@@ -4,7 +4,7 @@
 #
 # Detailed format description is available in the customization manual
 
-Format 103
+Format 104
 
 Provides stdinsets 1
 
