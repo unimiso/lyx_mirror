@@ -19961,6 +19961,103 @@ tbp
 \end_inset
 
 .
+\change_inserted -584632292 1690588297
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -584632292 1690593080
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588298
+PrettyFormat
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588298
+string
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+=
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+] A format for use with formatted references to this counter.
+ For example,
+ one might want to have references to tables appear as 
+\begin_inset Quotes eld
+\end_inset
+
+Table 2
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The string may contain 
+\begin_inset Quotes eld
+\end_inset
+
+##
+\begin_inset Quotes erd
+\end_inset
+
+ or a counter specification.
+ (See the documentation for 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588298
+LabelString
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Counters"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.) The former will be replaced by the counter number itself.
+ So,
+ for sections,
+ it would be:
+ Section ##,
+ or perhaps:
+ section 
+\backslash
+arabic{section} (which might render as:
+ section 2.7).
 \end_layout
 
 \begin_layout Description
@@ -21156,6 +21253,8 @@ status collapsed
 
 \change_inserted -712698321 1690357753
 AllowedOccurrencesPerItem
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21170,6 +21269,8 @@ status collapsed
 
 \emph on
 0
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21186,6 +21287,8 @@ status collapsed
 
 \change_inserted -712698321 1690357747
 1
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21199,6 +21302,8 @@ status collapsed
 
 \change_inserted -712698321 1690357774
 AllowedOccurrences
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -21723,7 +21828,7 @@ and
  the label.
  See 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "subsec:Font-description"
 nolink "false"
 
@@ -26094,7 +26199,13 @@ Section 2.4
 \end_inset
 
 .
- The string should contain 
+ The string 
+\change_deleted -584632292 1690588038
+should 
+\change_inserted -584632292 1690588041
+may 
+\change_unchanged
+contain 
 \begin_inset Quotes eld
 \end_inset
 
@@ -26102,12 +26213,180 @@ Section 2.4
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -584632292 1690588059
+ or a counter specification as in 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588059
+LabelString
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
- This will be replaced by the counter number itself.
+ Th
+\change_inserted -584632292 1690588078
+e former
+\change_deleted -584632292 1690588076
+is
+\change_unchanged
+ will be replaced by the counter number itself.
  So,
  for sections,
  it would be:
- Section ##.
+ Section ##
+\change_inserted -584632292 1690588159
+,
+ or perhaps:
+ 
+\backslash
+S
+\backslash
+arabic{section} (which might render as §2.7)
+\change_unchanged
+.
+\change_inserted -584632292 1690587966
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -584632292 1690588264
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690587970
+RefFormat
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690587966
+string
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690587981
+string
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+] For use with `formatted references',
+ specifically when a single counter is used with multiple sorts of styles.
+ For example,
+ the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588222
+theorem
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ counter is often used for all sorts of theorem-like environments:
+ Theorem,
+ Lemma,
+ eetc.
+ The first argument gives a prefix used in the labels (e.g.,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+thm
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+lem
+\begin_inset Quotes erd
+\end_inset
+
+),
+ and the second a formatting string,
+ as for 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588181
+LabelString
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588177
+PrettyFormat
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ If this is not given,
+ then 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1690588264
+PrettyFormat
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ is used.
 \end_layout
 
 \begin_layout Description
