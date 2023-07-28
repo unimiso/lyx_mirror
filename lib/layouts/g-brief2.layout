@@ -6,7 +6,7 @@
 #          Thomas Hartkens <thomas@hartkens.de>
 
 # Input general definitions
-Format 102
+Format 103
 Input stdfloats.inc
 Input stdcounters.inc
 Input stdinsets.inc

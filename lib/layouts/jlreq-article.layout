@@ -9,7 +9,7 @@
 # With non-LuaLaTeX:	everyhook
 # With LuaLaTeX:	luatexja, luatexja-adjust
 
-Format 102
+Format 103
 
 # Input general definitions
 Input article.layout

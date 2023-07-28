@@ -9,7 +9,7 @@
 
 # Author: Richard Kimberly Heck <rikiheck@lyx.org>
 
-Format 102
+Format 103
 
 Counter theorem
 	GuiName Theorem

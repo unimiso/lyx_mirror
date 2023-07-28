@@ -5,7 +5,7 @@
 # Author: Martin Vermeer <martin.vermeer@hut.fi>
 
 
-Format 102
+Format 103
 Input aguplus.inc
 
 ClassOptions

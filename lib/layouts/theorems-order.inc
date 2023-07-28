@@ -1,7 +1,7 @@
 # Sets the order of the main theorem environments
 # Author: Richard Kimberly Heck
 
-Format 102
+Format 103
 
 #Get the order right
 Style Theorem
