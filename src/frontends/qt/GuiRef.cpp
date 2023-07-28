@@ -453,11 +453,11 @@ void GuiRef::redoRefs()
 	// Do we have a prefix-less label at all?
 	bool noprefix = false;
 	vector<std::tuple<docstring, docstring,docstring>>::const_iterator iter;
-	for (iter = refs_.begin(); iter != refs_.end(); ++iter) {
+	for (auto const & ref : refs_) {
 		// first: plain label name, second: gui name, third: pretty name
-		QString const lab = toqstr(std::get<0>(*iter));
-		refsNames.append({lab, toqstr(std::get<1>(*iter)),
-				    toqstr(std::get<2>(*iter))});
+		QString const lab = toqstr(get<0>(ref));
+		refsNames.append({lab, toqstr(get<1>(ref)),
+					toqstr(get<2>(*iter))});
 		if (groupCB->isChecked()) {
 			if (lab.contains(":")) {
 				QString const pref = lab.split(':')[0];
