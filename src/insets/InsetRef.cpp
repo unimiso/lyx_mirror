@@ -487,11 +487,11 @@ void InsetRef::updateBuffer(ParIterator const & it, UpdateType, bool const /*del
 			if (cmd == "formatted") {
 				bool const isPlural = getParam("plural") == "true";
 				bool const isCaps = getParam("caps") == "true";
-				if (isPlural)
-					label += from_ascii("+");
 				if (isCaps) {
 					// up arrow (shift key) symbol
 					label += docstring(1, char_type(0x21E7));
+					if (isPlural)
+						label += from_ascii("+");
 				}
 			}
 			label += from_ascii(": ");
