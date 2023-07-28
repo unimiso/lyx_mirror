@@ -611,7 +611,7 @@ docstring Counters::prettyCounter(docstring const & name,
 
 	docstring const value = theCounter(name, lang);
 	docstring const & format =
-	    translateIfPossible(ctr.prettyFormat(), lang);
+		translateIfPossible(counterLabel(ctr.prettyFormat(), lang), lang);
 	if (format.empty())
 		return value;
 	return subst(format, from_ascii("##"), value);
