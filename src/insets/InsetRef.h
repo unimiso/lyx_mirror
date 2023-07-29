@@ -117,6 +117,10 @@ private:
 	docstring screenLabel() const override;
 	//@}
 
+	///
+	docstring displayString(docstring const & ref, std::string const & cmd,
+			std::string const & language = std::string()) const;
+
 	/// \return the label with things that need to be escaped escaped
 	docstring getEscapedLabel(OutputParams const &) const;
 

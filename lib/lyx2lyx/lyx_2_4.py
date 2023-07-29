@@ -5548,6 +5548,12 @@ def revert_hequotes(document):
             document.body[i] = "\\begin_inset Quotes pld"
 
 
+def revert_formatted_refs(document):
+    i = find_token(document.header, "\\use_formatted_ref", 0)
+    if i != -1:
+        del document.header[i]
+
+
 ##
 # Conversion hub
 #
@@ -5627,11 +5633,14 @@ convert = [
            [615, [convert_acknowledgment,convert_ack_theorems]],
            [616, [convert_empty_macro]],
            [617, [convert_cov_options]],
-           [618, []]
+           [618, []],
+           [619, []]
           ]
 
-revert =  [[617, [revert_hequotes]],
-	   [616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
+
+revert =  [[618, [revert_formatted_refs]],
+           [617, [revert_hequotes]],
+           [616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
            [615, [revert_empty_macro]],
            [614, [revert_ack_theorems,revert_acknowledgment]],
            [613, [revert_hyper_other]],

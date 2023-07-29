@@ -606,6 +606,8 @@ public:
 	std::string output_sync_macro;
 	/// use refstyle? or prettyref?
 	bool use_refstyle;
+	/// use formatted references in the workarea?
+	bool use_formatted_ref;
 	/// use minted? or listings?
 	bool use_minted;
 	//output line numbering

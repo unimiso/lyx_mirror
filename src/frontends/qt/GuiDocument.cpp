@@ -1626,6 +1626,8 @@ GuiDocument::GuiDocument(GuiView & lv)
 		this, SLOT(change_adaptor()));
 	connect(latexModule->refstyleCB, SIGNAL(clicked()),
 		this, SLOT(change_adaptor()));
+	connect(latexModule->refFormattedCB, SIGNAL(clicked()),
+		this, SLOT(change_adaptor()));
 
 	latexModule->optionsLE->setValidator(new NoNewLineValidator(
 		latexModule->optionsLE));
@@ -3563,6 +3565,7 @@ void GuiDocument::applyView()
 	// date
 	bp_.suppress_date = latexModule->suppressDateCB->isChecked();
 	bp_.use_refstyle  = latexModule->refstyleCB->isChecked();
+	bp_.use_formatted_ref  = latexModule->refFormattedCB->isChecked();
 
 	// biblio
 	string const engine =
@@ -4067,6 +4070,7 @@ void GuiDocument::paramsToDialog()
 	// date
 	latexModule->suppressDateCB->setChecked(bp_.suppress_date);
 	latexModule->refstyleCB->setChecked(bp_.use_refstyle);
+	latexModule->refFormattedCB->setChecked(bp_.use_formatted_ref);
 
 	// biblio
 	string const cite_engine = bp_.citeEngine();

@@ -488,6 +488,7 @@ BufferParams::BufferParams()
 	shell_escape = false;
 	output_sync = false;
 	use_refstyle = true;
+	use_formatted_ref = false;
 	use_minted = false;
 	use_lineno = false;
 
@@ -1205,6 +1206,8 @@ string BufferParams::readToken(Lexer & lex, string const & token,
 		lex >> output_sync_macro;
 	} else if (token == "\\use_refstyle") {
 		lex >> use_refstyle;
+	} else if (token == "\\use_formatted_ref") {
+		lex >> use_formatted_ref;
 	} else if (token == "\\use_minted") {
 		lex >> use_minted;
 	} else if (token == "\\use_lineno") {
@@ -1433,6 +1436,7 @@ void BufferParams::writeFile(ostream & os, Buffer const * buf) const
 	   << "\n\\suppress_date " << convert<string>(suppress_date)
 	   << "\n\\justification " << convert<string>(justification)
 	   << "\n\\use_refstyle " << use_refstyle
+	   << "\n\\use_formatted_ref " << use_formatted_ref
 	   << "\n\\use_minted " << use_minted
 	   << "\n\\use_lineno " << use_lineno
 	   << '\n';

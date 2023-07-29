@@ -5342,6 +5342,10 @@ void Buffer::Impl::setLabel(ParIterator & it, UpdateType utype) const
 
 void Buffer::updateBuffer(ParIterator & parit, UpdateType utype, bool const deleted) const
 {
+	// if fomatted references are shown in workarea update buffer accordingly
+	if (params().use_formatted_ref)
+		utype = OutputUpdate;
+
 	pushIncludedBuffer(this);
 	// LASSERT: Is it safe to continue here, or should we just return?
 	LASSERT(parit.pit() == 0, /**/);

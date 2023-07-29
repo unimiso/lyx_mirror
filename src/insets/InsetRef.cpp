@@ -382,11 +382,11 @@ void InsetRef::docbook(XMLStream & xs, OutputParams const &) const
 }
 
 
-docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
+docstring InsetRef::displayString(docstring const & ref, string const & cmd,
+		string const & language) const
+
 {
-	docstring const & ref = getParam("reference");
 	InsetLabel const * il = buffer().insetLabel(ref, true);
-	string const & cmd = params().getCmdName();
 	docstring display_string;
 
 	if (il && !il->counterValue().empty()) {
@@ -397,11 +397,11 @@ docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
 		else if (cmd == "vref")
 			// normally, would be "ref on page #", but we have no pages
 			display_string = value;
-		else if (cmd == "pageref" || cmd == "vpageref")
+		else if (cmd == "pageref" || cmd == "vpageref") {
 			// normally would be "on page #", but we have no pages.
-			display_string = translateIfPossible(from_ascii("elsewhere"),
-			        op.local_font->language()->lang());
-		else if (cmd == "eqref")
+			display_string =
+				translateIfPossible(from_ascii("elsewhere"), language);
+		} else if (cmd == "eqref")
 			display_string = '(' + value + ')';
 		else if (cmd == "formatted") {
 			display_string = il->formattedCounter();
@@ -418,14 +418,21 @@ docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
 			// in that section. So this is not trivial.
 			display_string = il->prettyCounter();
 	} else
-			display_string = ref;
+		display_string = ref;
+	return display_string;
+}
 
+
+docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
+	{
+	docstring const & ref = getParam("reference");
+	string const & cmd = params().getCmdName();
 	// FIXME What we'd really like to do is to be able to output some
 	// appropriate sort of text here. But to do that, we need to associate
 	// some sort of counter with the label, and we don't have that yet.
 	docstring const attr = "href=\"#" + xml::cleanAttr(ref) + '"';
 	xs << xml::StartTag("a", to_utf8(attr));
-	xs << display_string;
+	xs << displayString(ref, cmd, op.local_font->language()->lang());;
 	xs << xml::EndTag("a");
 	return docstring();
 }
@@ -520,14 +527,21 @@ void InsetRef::updateBuffer(ParIterator const & it, UpdateType, bool const /*del
 		label += getParam("name");
 	}
 
+	bool const use_formatted_ref = buffer().params().use_formatted_ref;
 	unsigned int const maxLabelChars = 24;
-	if (label.size() > maxLabelChars) {
+	// Show label in tooltip when formatted references are shown in the work
+	// area or it is too long
+	if (use_formatted_ref || label.size() > maxLabelChars) {
 		tooltip_ = label;
 		support::truncateWithEllipsis(label, maxLabelChars);
 	} else
 		tooltip_ = from_ascii("");
 
-	screen_label_ = label;
+	if (use_formatted_ref && cmd != "pageref" && cmd != "vpageref"
+			&& cmd != "vref" && cmd != "labelonly")
+		screen_label_ = displayString(ref, cmd);
+	else
+		screen_label_ = label;
 	broken_ = false;
 	setBroken(broken_);
 }
