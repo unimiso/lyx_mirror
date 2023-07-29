@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-07-28 08:31+0200\n"
-"PO-Revision-Date: 2023-07-28 06:45+0000\n"
+"POT-Creation-Date: 2023-07-29 14:43+0200\n"
+"PO-Revision-Date: 2023-07-29 13:05+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -6935,6 +6935,11 @@ msgstr "Axióma"
 msgid "Case"
 msgstr "Prípad"
 
+#: lib/layouts/AEA.layout:206 lib/layouts/elsart.layout:546
+#: lib/layouts/theorems-without-preamble.inc:458
+msgid "Case ##"
+msgstr "Prípad ##"
+
 #: lib/layouts/AEA.layout:205 lib/layouts/theorems-without-preamble.inc:450
 msgid "Case \\thecase."
 msgstr "Prípad \\thecase."
@@ -7282,6 +7287,11 @@ msgstr "Tvrdenie"
 msgid "Remark"
 msgstr "Pripomienka"
 
+#: lib/layouts/AEA.layout:317 lib/layouts/ijmpd.layout:452
+#: lib/layouts/theorems-without-preamble.inc:416
+msgid "Remark ##"
+msgstr "Pripomienka ##"
+
 #: lib/layouts/AEA.layout:309 lib/layouts/ijmpc.layout:439
 #: lib/layouts/ijmpd.layout:453 lib/layouts/theorems-ams-bytype.inc:325
 #: lib/layouts/theorems-ams-chap-bytype.inc:411
@@ -7312,6 +7322,10 @@ msgstr "Pripomienka \\theremark."
 #: lib/layouts/theorems.inc:298 lib/layouts/theorems.inc:301
 msgid "Solution"
 msgstr "Riešenie"
+
+#: lib/layouts/AEA.layout:330 lib/layouts/theorems-without-preamble.inc:349
+msgid "Solution ##"
+msgstr "Riešenie ##"
 
 #: lib/layouts/AEA.layout:319 lib/layouts/theorems-ams-bytype.inc:301
 #: lib/layouts/theorems-ams-chap-bytype.inc:383
@@ -7345,6 +7359,10 @@ msgstr "Riešenie \\thesolution."
 #: lib/layouts/theorems-counters-extended-bytype.inc:25 lib/examples/Articles:0
 msgid "Summary"
 msgstr "Súhrn"
+
+#: lib/layouts/AEA.layout:345 lib/layouts/elsart.layout:528
+msgid "Summary ##"
+msgstr "Súhrn ##"
 
 #: lib/layouts/AEA.layout:333 src/frontends/qt/Menus.cpp:1801
 #: src/frontends/qt/Menus.cpp:1816
@@ -9472,6 +9490,12 @@ msgstr ""
 msgid "List of Algorithms"
 msgstr "Zoznam algoritmov"
 
+#: lib/layouts/algorithm2e.module:31 lib/layouts/powerdot.layout:607
+#: lib/layouts/revtex4-x.inc:323 lib/layouts/sciposter.layout:100
+#: lib/layouts/stdfloats.inc:54
+msgid "Algorithm ##"
+msgstr "Algoritmus ##"
+
 #: lib/layouts/amsart.layout:3 lib/layouts/amsbook.layout:3
 #: lib/examples/Articles:0
 msgid "American Mathematical Society (AMS)"
@@ -10543,11 +10567,21 @@ msgstr "Mód prezentácie"
 msgid "Presentation"
 msgstr "Prezentácia"
 
+#: lib/layouts/beamer.layout:1733 lib/layouts/powerdot.layout:572
+#: lib/layouts/sciposter.layout:130 lib/layouts/stdfloats.inc:23
+msgid "Table ##"
+msgstr "Tabuľka ##"
+
 #: lib/layouts/beamer.layout:1736 lib/layouts/powerdot.layout:577
 #: lib/layouts/powerdot.layout:634 lib/layouts/sciposter.layout:104
 #: lib/layouts/stdfloats.inc:28
 msgid "Figure"
 msgstr "Obrázok"
+
+#: lib/layouts/beamer.layout:1747 lib/layouts/powerdot.layout:590
+#: lib/layouts/sciposter.layout:115 lib/layouts/stdfloats.inc:39
+msgid "Figure ##"
+msgstr "Obrázok ##"
 
 #: lib/layouts/beamerposter.layout:3 lib/examples/Articles:0
 msgid "Beamerposter"
@@ -10697,9 +10731,17 @@ msgstr "Skripty"
 msgid "Act Number"
 msgstr "Čítač act"
 
+#: lib/layouts/broadway.layout:28
+msgid "Act ##"
+msgstr "Act ##"
+
 #: lib/layouts/broadway.layout:32
 msgid "Scene Number"
 msgstr "Čítač scéna"
+
+#: lib/layouts/broadway.layout:34
+msgid "Scene ##"
+msgstr "Scéna ##"
 
 #: lib/layouts/broadway.layout:36 lib/layouts/hollywood.layout:41
 msgid "Dialogue"
@@ -12212,6 +12254,10 @@ msgstr "Rovnica"
 msgid "\\thesection.\\arabic{equation}"
 msgstr "\\thesection.\\arabic{equation}"
 
+#: lib/layouts/eqs-within-sections.module:20
+msgid "(\\thesection.\\arabic{equation})"
+msgstr "(\\thesection.\\arabic{equation})"
+
 #: lib/layouts/europasscv.layout:3 lib/examples/Articles:0
 msgid "Europass CV (2013)"
 msgstr "Europass CV (2013)"
@@ -13705,6 +13751,10 @@ msgstr "Otázka"
 msgid "Question \\thequestion."
 msgstr "Otázka \\thequestion."
 
+#: lib/layouts/ijmpc.layout:469 lib/layouts/ijmpd.layout:503
+msgid "Claim ##"
+msgstr "Nárok ##"
+
 #: lib/layouts/ijmpc.layout:472 lib/layouts/ijmpd.layout:501
 #: lib/layouts/theorems-ams-bytype.inc:356
 #: lib/layouts/theorems-ams-chap-bytype.inc:446
@@ -13736,9 +13786,34 @@ msgstr "Int. Journal of Modern Physics D"
 msgid "Comby"
 msgstr "Comby"
 
+#: lib/layouts/ijmpd.layout:434
+msgid "Theorem ##"
+msgstr "Teoréma ##"
+
+#: lib/layouts/ijmpd.layout:465 lib/layouts/theorems-without-preamble.inc:87
+msgid "Corollary ##"
+msgstr "Korolár ##"
+
+#: lib/layouts/ijmpd.layout:474 lib/layouts/theorems-without-preamble.inc:110
+msgid "Lemma ##"
+msgstr "Lemma ##"
+
+#: lib/layouts/ijmpd.layout:491 lib/layouts/theorems-without-preamble.inc:506
+msgid "Question ##"
+msgstr "Otázka ##"
+
+#: lib/layouts/ijmpd.layout:516 lib/layouts/theorems-without-preamble.inc:179
+msgid "Conjecture ##"
+msgstr "Domnienka ##"
+
 #: lib/layouts/ijmpd.layout:519 lib/layouts/theorems-without-preamble.inc:152
 msgid "Prop(osition)"
 msgstr "Tvrdenie(prop)"
+
+#: lib/layouts/ijmpd.layout:528 lib/layouts/theorems-without-preamble.inc:133
+#: lib/layouts/theorems-without-preamble.inc:156
+msgid "Proposition ##"
+msgstr "Tvrdenie ##"
 
 #: lib/layouts/initials.module:2
 msgid "Initials (Drop Caps)"
@@ -14757,6 +14832,10 @@ msgstr "Tablo"
 #: lib/layouts/linguistics.module:517
 msgid "List of Tableaux"
 msgstr "Zoznam tablov"
+
+#: lib/layouts/linguistics.module:608
+msgid "Tableaux ##"
+msgstr "Tablá ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -16120,18 +16199,34 @@ msgstr "Vložte sem text pre ľavý stĺpec (pravý stĺpec v hlavnom odstavci)"
 msgid "Numbered List (Level 1)"
 msgstr "Číslovaná listina (Úroveň 1)"
 
+#: lib/layouts/powerdot.layout:615 lib/layouts/stdcounters.inc:52
+msgid "(\\arabic{enumi})"
+msgstr "(\\arabic{enumi})"
+
 #: lib/layouts/powerdot.layout:615 lib/layouts/scrclass.inc:49
 #: lib/layouts/stdcounters.inc:55
 msgid "Numbered List (Level 2)"
 msgstr "Číslovaná listina (Úroveň 2)"
 
+#: lib/layouts/powerdot.layout:621
+msgid "(\\arabic{enumii})"
+msgstr "(\\arabic{enumii})"
+
 #: lib/layouts/powerdot.layout:620 lib/layouts/stdcounters.inc:61
 msgid "Numbered List (Level 3)"
 msgstr "Číslovaná listina (Úroveň 3)"
 
+#: lib/layouts/powerdot.layout:627
+msgid "(\\arabic{enumiii})"
+msgstr "(\\arabic{enumiii})"
+
 #: lib/layouts/powerdot.layout:625 lib/layouts/stdcounters.inc:67
 msgid "Numbered List (Level 4)"
 msgstr "Číslovaná listina (Úroveň 4)"
+
+#: lib/layouts/powerdot.layout:633
+msgid "(\\arabic{enumiv})"
+msgstr "(\\arabic{enumiv})"
 
 #: lib/layouts/powerdot.layout:630 lib/layouts/stdcounters.inc:73
 msgid "Bibliography Item"
@@ -16289,6 +16384,10 @@ msgstr "Video"
 #: lib/layouts/revtex4-x.inc:331
 msgid "List of Videos"
 msgstr "Zoznam videí"
+
+#: lib/layouts/revtex4-x.inc:339
+msgid "Video ##"
+msgstr "Video ##"
 
 #: lib/layouts/revtex4-x.inc:341
 msgid "Videos"
@@ -16458,6 +16557,10 @@ msgstr "KOMA-Script kniha"
 #: lib/layouts/scrbook.layout:32
 msgid "\\thechapter.\\arabic{equation}"
 msgstr "\\thechapter.\\arabic{equation}"
+
+#: lib/layouts/scrbook.layout:33
+msgid "equation \\thechapter.\\arabic{equation}"
+msgstr "rovnica \\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrclass.inc:51
 msgid "\\alph{enumii})"
@@ -17172,6 +17275,10 @@ msgstr "Kapitola ##"
 msgid "Section ##"
 msgstr "Sekcia ##"
 
+#: lib/layouts/numreport.inc:46
+msgid "footnote \\arabic{footnote}"
+msgstr "poznámka pod čiarou \\arabic{footnote}"
+
 #: lib/layouts/stdcounters.inc:40 lib/layouts/stdcounters.inc:46
 msgid "Paragraph ##"
 msgstr "Odstavec ##"
@@ -17184,9 +17291,17 @@ msgstr "\\arabic{enumi}."
 msgid "\\roman{enumiii}."
 msgstr "\\roman{enumiii}."
 
+#: lib/layouts/stdcounters.inc:66
+msgid "(\\roman{enumiii})"
+msgstr "(\\roman{enumiii})"
+
 #: lib/layouts/stdcounters.inc:69
 msgid "\\Alph{enumiv}."
 msgstr "\\Alph{enumiv}."
+
+#: lib/layouts/stdcounters.inc:73
+msgid "(\\Alph{enumiv})"
+msgstr "(\\Alph{enumiv})"
 
 #: lib/layouts/stdcounters.inc:82
 msgid "Equation ##"
@@ -17196,9 +17311,9 @@ msgstr "Rovnica ##"
 msgid "\\superarabic{footnote}"
 msgstr "\\superarabic{footnote}"
 
-#: lib/layouts/stdcounters.inc:87 lib/layouts/stdcounters.inc:92
-msgid "Footnote ##"
-msgstr "Poznámka pri päte ##"
+#: lib/layouts/stdcounters.inc:92 lib/layouts/stdcounters.inc:97
+msgid "Footnote \\arabic{footnote}"
+msgstr "Poznámka pod čiarou \\arabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:93
 msgid "\\fnsymbol{thanks}"
@@ -18199,6 +18314,10 @@ msgid "Case (Level 1)"
 msgstr "Prípad (Úroveň 1)"
 
 #: lib/layouts/theorems-case.inc:13
+msgid "Case \\arabic{casei}"
+msgstr "Prípad \\arabic{casei}"
+
+#: lib/layouts/theorems-case.inc:13
 msgid "Case \\arabic{casei}."
 msgstr "Prípad \\arabic{casei}."
 
@@ -18210,6 +18329,10 @@ msgstr "Prípad (Úroveň 2)"
 msgid "Case \\roman{caseii}."
 msgstr "Prípad \\roman{caseii}."
 
+#: lib/layouts/theorems-case.inc:20
+msgid "Case \\roman{caseii}"
+msgstr "Prípad \\roman{caseii}"
+
 #: lib/layouts/theorems-case.inc:21
 msgid "Case (Level 3)"
 msgstr "Prípad (Úroveň 3)"
@@ -18217,6 +18340,10 @@ msgstr "Prípad (Úroveň 3)"
 #: lib/layouts/theorems-case.inc:23
 msgid "Case \\alph{caseiii}."
 msgstr "Prípad \\alph{caseiii}."
+
+#: lib/layouts/theorems-case.inc:26
+msgid "Case \\alph{caseiii}"
+msgstr "Prípad \\alph{caseiii}"
 
 #: lib/layouts/theorems-case.inc:26
 msgid "Case (Level 4)"
@@ -18257,6 +18384,46 @@ msgstr ""
 "Číslovanie mat. viet a pod. podľa kapitoly. (čiže číslovanie sa nuluje na "
 "začiatku každej kapitoly). Použiť tento modul len s takou triedou "
 "dokumentov, ktorá podporuje prostredie kapitoly."
+
+#: lib/layouts/theorems-counters-bytype.inc:30
+msgid "Fact \\arabic{theorem}"
+msgstr "Fact \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-bytype.inc:48
+msgid "Exercise \\arabic{theorem}"
+msgstr "Príklad \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-bytype.inc:53
+msgid "Solution \\arabic{theorem}"
+msgstr "Riešenie \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:16
+msgid "Axiom \\arabic{theorem}"
+msgstr "Axióma \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:20
+msgid "Condition \\arabic{theorem}"
+msgstr "Predpoklad \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:28
+msgid "Notation \\arabic{theorem}"
+msgstr "Notácia \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:32
+msgid "Summary \\arabic{theorem}"
+msgstr "Súhrn \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:36
+msgid "Conclusion \\arabic{theorem}"
+msgstr "Záver \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:40
+msgid "Assumption \\arabic{theorem}"
+msgstr "Domnienka \\arabic{theorem}"
+
+#: lib/layouts/theorems-counters-extended-bytype.inc:44
+msgid "Question \\arabic{theorem}"
+msgstr "Otázka \\arabic{theorem}"
 
 #: lib/layouts/theorems-named.module:3
 msgid "Standard Theorems (Nameable)"
@@ -18395,6 +18562,23 @@ msgstr "Alternatívne voliteľné meno alebo titul"
 msgid "Prop \\theprop."
 msgstr "Téza \\theprop."
 
+#: lib/layouts/theorems-without-preamble.inc:209
+msgid "Fact ##"
+msgstr "Fakt ##"
+
+#: lib/layouts/theorems-without-preamble.inc:232
+msgid "Definition ##"
+msgstr "Definícia ##"
+
+#: lib/layouts/theorems-without-preamble.inc:263
+msgid "Example ##"
+msgstr "Príklad ##"
+
+#: lib/layouts/theorems-without-preamble.inc:285
+#: lib/layouts/theorems-without-preamble.inc:311
+msgid "Problem ##"
+msgstr "Problém ##"
+
 #: lib/layouts/theorems-without-preamble.inc:300
 msgid "Prob(lem)"
 msgstr "Prob(lém)"
@@ -18423,9 +18607,21 @@ msgstr "Návestie problému"
 msgid "Label of the corresponding problem"
 msgstr "Návestie korešpondujúce problému"
 
+#: lib/layouts/theorems-without-preamble.inc:392
+msgid "Exercise ##"
+msgstr "Úloha ##"
+
+#: lib/layouts/theorems-without-preamble.inc:482
+msgid "Property ##"
+msgstr "Vlastnosť ##"
+
 #: lib/layouts/theorems-without-preamble.inc:473
 msgid "Property \\theproperty."
 msgstr "Vlastnosť \\theproperty."
+
+#: lib/layouts/theorems-without-preamble.inc:530
+msgid "Note ##"
+msgstr "Poznámka ##"
 
 #: lib/layouts/todonotes.module:2
 msgid "TODO Notes"
@@ -18631,9 +18827,17 @@ msgstr "Celá šírka"
 msgid "Margin Figure"
 msgstr "Krajný obrázok"
 
+#: lib/layouts/tufte-book.layout:258
+msgid "Margin Figure ##"
+msgstr "Krajný obrázok ##"
+
 #: lib/layouts/tufte-book.layout:265
 msgid "Margin Table"
 msgstr "Krajná tabuľka"
+
+#: lib/layouts/tufte-book.layout:263
+msgid "Margin Table ##"
+msgstr "Krajná tabuľka ##"
 
 #: lib/layouts/tufte-book.layout:271
 msgid "MarginTable"
