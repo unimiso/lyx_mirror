@@ -631,7 +631,7 @@ docstring Counters::formattedCounter(docstring const & name,
 	Counter const & ctr = it->second;
 
 	docstring const value = theCounter(name, lang);
-	docstring const & format =
+	docstring const format =
 		translateIfPossible(counterLabel(ctr.refFormat(prex), lang), lang);
 	if (format.empty())
 		return value;
