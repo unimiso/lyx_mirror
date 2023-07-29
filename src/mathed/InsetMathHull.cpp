@@ -315,6 +315,7 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 			continue;
 		if (label_[row]) {
 			label_[row]->setPrettyCounter(_("Equation") + " " + numbers_[row]);
+			label_[row]->setFormattedCounter(_("Equation") + " " + numbers_[row]);
 			label_[row]->addToToc(pit, output_active, utype, backend);
 		}
 		docstring label = nicelabel(row);

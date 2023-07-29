@@ -33,6 +33,8 @@ public:
 	docstring const & formattedCounter() const { return formatted_counter_; }
 	///
 	void setPrettyCounter(docstring pc) { pretty_counter_ = pc; }
+        ///
+        void setFormattedCounter(docstring fc) { formatted_counter_ = fc; }
 	///
 	int rowFlags() const override { return CanBreakBefore | CanBreakAfter; }
 	/// Updates only the label string, doesn't handle undo nor references.
