@@ -490,9 +490,9 @@ void InsetRef::updateBuffer(ParIterator const & it, UpdateType, bool const /*del
 				if (isCaps) {
 					// up arrow (shift key) symbol
 					label += docstring(1, char_type(0x21E7));
-					if (isPlural)
-						label += from_ascii("+");
 				}
+				if (isPlural)
+					label += from_ascii("+");
 			}
 			label += from_ascii(": ");
 			break;
