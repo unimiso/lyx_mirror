@@ -184,6 +184,26 @@ void InsetCommand::validate(LaTeXFeatures & features) const
 }
 
 
+bool InsetCommand::isChangedByCurrentAuthor() const
+{
+	InsetIterator it = begin(buffer().inset());
+	InsetIterator const itend = end(buffer().inset());
+	for (; it != itend; ++it) {
+		if (&*it == this)
+			break;
+	}
+	if (it == itend) {
+		LYXERR0("Unable to find inset!");
+		// to be on the safe side.
+		return true;
+	}
+	Paragraph const & ourpara = it.paragraph();
+	pos_type const ourpos = it.pos();
+	Change const & change = ourpara.lookupChange(ourpos);
+	return change.currentAuthor();
+}
+
+
 void InsetCommand::changeCmdName(string const & new_name)
 {
 	string const & old_name = getCmdName();
@@ -196,21 +216,7 @@ void InsetCommand::changeCmdName(string const & new_name)
 		// But we need to make sure that the inset isn't one
 		// that the current author inserted. Otherwise, we might
 		// delete ourselves!
-		InsetIterator it = begin(buffer().inset());
-		InsetIterator const itend = end(buffer().inset());
-		for (; it != itend; ++it) {
-			if (&*it == this)
-				break;
-		}
-		if (it == itend) {
-			LYXERR0("Unable to find inset!");
-			p_.setCmdName(new_name);
-			return;
-		}
-		Paragraph const & ourpara = it.paragraph();
-		pos_type const ourpos = it.pos();
-		Change const & change = ourpara.lookupChange(ourpos);
-		if (change.currentAuthor()) {
+		if (isChangedByCurrentAuthor()) {
 			p_.setCmdName(new_name);
 			return;
 		}
@@ -247,7 +253,7 @@ void InsetCommand::doDispatch(Cursor & cur, FuncRequest & cmd)
 			cur.noScreenUpdate();
 		else {
 			cur.recordUndo();
-			if (buffer().masterParams().track_changes) {
+			if (buffer().masterParams().track_changes && !isChangedByCurrentAuthor()) {
 				// With change tracking, we insert a new inset and
 				// delete the old one
 				string const data = InsetCommand::params2string(p);

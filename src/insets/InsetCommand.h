@@ -124,6 +124,10 @@ protected:
 	void setCmdName(std::string const & n) { p_.setCmdName(n); }
 	///
 	void changeCmdName(std::string const & new_name);
+	/// was this inset changed by the current author?
+	/// if we're unable to find out, we return true, because of
+	/// how this is used.
+	bool isChangedByCurrentAuthor() const;
 	//@}
 
 private:
