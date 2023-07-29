@@ -20,6 +20,7 @@
 #include "Cursor.h"
 #include "FuncRequest.h"
 #include "FuncStatus.h"
+#include "InsetIterator.h"
 #include "Lexer.h"
 #include "LyX.h"
 #include "MetricsInfo.h"
@@ -191,7 +192,30 @@ void InsetCommand::changeCmdName(string const & new_name)
 
 	if (buffer().masterParams().track_changes) {
 		// With change tracking, we insert a new inset and
-		// delete the old one
+		// delete the old one.
+		// But we need to make sure that the inset isn't one
+		// that the current author inserted. Otherwise, we might
+		// delete ourselves!
+		InsetIterator it = begin(buffer().inset());
+		InsetIterator const itend = end(buffer().inset());
+		for (; it != itend; ++it) {
+			if (&*it == this)
+				break;
+		}
+		if (it == itend) {
+			LYXERR0("Unable to find inset!");
+			p_.setCmdName(new_name);
+			return;
+		}
+		Paragraph const & ourpara = it.paragraph();
+		pos_type const ourpos = it.pos();
+		Change const & change = ourpara.lookupChange(ourpos);
+		if (change.currentAuthor()) {
+			p_.setCmdName(new_name);
+			return;
+		}
+
+		// OK, so this is not an inset the current author inserted
 		InsetCommandParams p(p_.code());
 		p = p_;
 		p.setCmdName(new_name);
