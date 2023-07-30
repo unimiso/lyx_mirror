@@ -2617,50 +2617,42 @@ void GuiDocument::fontScToggled(bool state)
 
 void GuiDocument::updateExtraOpts()
 {
-	bool const tex_fonts = !fontModule->osFontsCB->isChecked();
 	QString font;
-	if (tex_fonts)
-		font = fontModule->fontsRomanCO->getData(
-				fontModule->fontsRomanCO->currentIndex());
+	font = fontModule->fontsRomanCO->getData(
+			fontModule->fontsRomanCO->currentIndex());
 	bool const rm_opts = providesExtraOpts(font);
-	if (tex_fonts)
-		font = fontModule->fontsSansCO->getData(
-				fontModule->fontsSansCO->currentIndex());
+	font = fontModule->fontsSansCO->getData(
+			fontModule->fontsSansCO->currentIndex());
 	bool const sf_opts = providesExtraOpts(font);
-	if (tex_fonts)
-		font = fontModule->fontsTypewriterCO->getData(
-				fontModule->fontsTypewriterCO->currentIndex());
+	font = fontModule->fontsTypewriterCO->getData(
+			fontModule->fontsTypewriterCO->currentIndex());
 	bool const tt_opts = providesExtraOpts(font);
-	fontModule->fontspecRomanLA->setEnabled(!tex_fonts || rm_opts);
-	fontModule->fontspecRomanLE->setEnabled(!tex_fonts || rm_opts);
-	fontModule->fontspecSansLA->setEnabled(!tex_fonts || sf_opts);
-	fontModule->fontspecSansLE->setEnabled(!tex_fonts || sf_opts);
-	fontModule->fontspecTypewriterLA->setEnabled(!tex_fonts || tt_opts);
-	fontModule->fontspecTypewriterLE->setEnabled(!tex_fonts || tt_opts);
+	fontModule->fontspecRomanLA->setEnabled(rm_opts);
+	fontModule->fontspecRomanLE->setEnabled(rm_opts);
+	fontModule->fontspecSansLA->setEnabled(sf_opts);
+	fontModule->fontspecSansLE->setEnabled(sf_opts);
+	fontModule->fontspecTypewriterLA->setEnabled(tt_opts);
+	fontModule->fontspecTypewriterLE->setEnabled(tt_opts);
 }
 
 
 void GuiDocument::updateFontOptions()
 {
-	bool const tex_fonts = !fontModule->osFontsCB->isChecked();
 	QString font;
-	if (tex_fonts)
-		font = fontModule->fontsSansCO->getData(
-				fontModule->fontsSansCO->currentIndex());
+	font = fontModule->fontsSansCO->getData(
+			fontModule->fontsSansCO->currentIndex());
 	bool scalable = providesScale(font);
 	fontModule->scaleSansSB->setEnabled(scalable);
 	fontModule->scaleSansLA->setEnabled(scalable);
 	fontModule->fontSansOsfCB->setEnabled(providesOSF(font));
-	if (tex_fonts)
-		font = fontModule->fontsTypewriterCO->getData(
-				fontModule->fontsTypewriterCO->currentIndex());
+	font = fontModule->fontsTypewriterCO->getData(
+			fontModule->fontsTypewriterCO->currentIndex());
 	scalable = providesScale(font);
 	fontModule->scaleTypewriterSB->setEnabled(scalable);
 	fontModule->scaleTypewriterLA->setEnabled(scalable);
 	fontModule->fontTypewriterOsfCB->setEnabled(providesOSF(font));
-	if (tex_fonts)
-		font = fontModule->fontsRomanCO->getData(
-				fontModule->fontsRomanCO->currentIndex());
+	font = fontModule->fontsRomanCO->getData(
+			fontModule->fontsRomanCO->currentIndex());
 	fontModule->fontScCB->setEnabled(providesSC(font));
 	fontModule->fontOsfCB->setEnabled(providesOSF(font));
 	updateExtraOpts();
@@ -2869,20 +2861,18 @@ void GuiDocument::updateMathFonts(QString const & rm)
 
 void GuiDocument::romanChanged(int item)
 {
-	if (fontModule->osFontsCB->isChecked())
-		return;
 	QString const font = fontModule->fontsRomanCO->getData(item);
-	fontModule->fontScCB->setEnabled(providesSC(font));
 	fontModule->fontOsfCB->setEnabled(providesOSF(font));
 	updateExtraOpts();
+	if (fontModule->osFontsCB->isChecked())
+		return;
+	fontModule->fontScCB->setEnabled(providesSC(font));
 	updateMathFonts(font);
 }
 
 
 void GuiDocument::sansChanged(int item)
 {
-	if (fontModule->osFontsCB->isChecked())
-		return;
 	QString const font = fontModule->fontsSansCO->getData(item);
 	bool const scalable = providesScale(font);
 	fontModule->scaleSansSB->setEnabled(scalable);
@@ -2894,8 +2884,6 @@ void GuiDocument::sansChanged(int item)
 
 void GuiDocument::ttChanged(int item)
 {
-	if (fontModule->osFontsCB->isChecked())
-		return;
 	QString const font = fontModule->fontsTypewriterCO->getData(item);
 	bool scalable = providesScale(font);
 	fontModule->scaleTypewriterSB->setEnabled(scalable);
@@ -5204,7 +5192,7 @@ bool GuiDocument::providesOSF(QString const & font) const
 	if (fontModule->osFontsCB->isChecked())
 		// FIXME: we should check if the fonts really
 		// have OSF support. But how?
-		return true;
+		return font != "default";
 	return theLaTeXFonts().getLaTeXFont(
 				qstring_to_ucs4(font)).providesOSF(ot1(),
 								   completeFontset(),
@@ -5226,7 +5214,7 @@ bool GuiDocument::providesSC(QString const & font) const
 bool GuiDocument::providesScale(QString const & font) const
 {
 	if (fontModule->osFontsCB->isChecked())
-		return true;
+		return font != "default";
 	return theLaTeXFonts().getLaTeXFont(
 				qstring_to_ucs4(font)).providesScale(ot1(),
 								     completeFontset(),
@@ -5237,7 +5225,7 @@ bool GuiDocument::providesScale(QString const & font) const
 bool GuiDocument::providesExtraOpts(QString const & font) const
 {
 	if (fontModule->osFontsCB->isChecked())
-		return true;
+		return font != "default";
 	return theLaTeXFonts().getLaTeXFont(
 				qstring_to_ucs4(font)).providesMoreOptions(ot1(),
 								     completeFontset(),
