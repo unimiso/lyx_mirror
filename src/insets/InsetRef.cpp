@@ -537,11 +537,10 @@ void InsetRef::updateBuffer(ParIterator const & it, UpdateType, bool const /*del
 	} else
 		tooltip_ = from_ascii("");
 
-	if (use_formatted_ref && cmd != "pageref" && cmd != "vpageref"
-			&& cmd != "vref" && cmd != "labelonly")
-		screen_label_ = displayString(ref, cmd);
-	else
-		screen_label_ = label;
+	screen_label_ = label;
+	// If use_formatted_ref is active, this will be overwritten in addToToc.
+	// (We can't do it now because it might be a forward-reference
+	// and so the reference might not be in the label cache yet.
 	broken_ = false;
 	setBroken(broken_);
 }
@@ -566,9 +565,14 @@ void InsetRef::addToToc(DocIterator const & cpit, bool output_active,
 			toc2->push_back(TocItem(cpit, 0, screenLabel(), output_active));
 		}
 		// This InsetRef has already been taken care of in InsetLabel::addToToc().
+		bool const use_formatted_ref = buffer().params().use_formatted_ref;
+		string const & cmd = getCmdName();
+		docstring const & ref = getParam("reference");
+		if (use_formatted_ref && cmd != "pageref" && cmd != "vpageref"
+			    && cmd != "vref" && cmd != "labelonly")
+			screen_label_ = displayString(ref, cmd);
 		return;
 	}
-
 	// It seems that this reference does not point to any valid label.
 	broken_ = true;
 	setBroken(broken_);
