@@ -31,12 +31,12 @@ public:
 	docstring const & prettyCounter() const { return pretty_counter_; }
 	///
 	docstring const & formattedCounter() const { return formatted_counter_; }
-        ///
-        void setCounterValue(docstring cv) { counter_value_ = cv; }
+	///
+	void setCounterValue(docstring cv) { counter_value_ = cv; }
 	///
 	void setPrettyCounter(docstring pc) { pretty_counter_ = pc; }
-        ///
-        void setFormattedCounter(docstring fc) { formatted_counter_ = fc; }
+	///
+	void setFormattedCounter(docstring fc) { formatted_counter_ = fc; }
 	///
 	int rowFlags() const override { return CanBreakBefore | CanBreakAfter; }
 	/// Updates only the label string, doesn't handle undo nor references.

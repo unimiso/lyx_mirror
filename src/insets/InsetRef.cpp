@@ -564,13 +564,16 @@ void InsetRef::addToToc(DocIterator const & cpit, bool output_active,
 			shared_ptr<Toc> toc2 = backend.toc("brokenrefs");
 			toc2->push_back(TocItem(cpit, 0, screenLabel(), output_active));
 		}
-		// This InsetRef has already been taken care of in InsetLabel::addToToc().
+
+		// Code for display of formatted references
 		bool const use_formatted_ref = buffer().params().use_formatted_ref;
-		string const & cmd = getCmdName();
-		docstring const & ref = getParam("reference");
-		if (use_formatted_ref && cmd != "pageref" && cmd != "vpageref"
-			    && cmd != "vref" && cmd != "labelonly")
-			screen_label_ = displayString(ref, cmd);
+		if (use_formatted_ref) {
+			string const & cmd = getCmdName();
+			docstring const & ref = getParam("reference");
+			if (cmd != "pageref" && cmd != "vpageref" && cmd != "vref" &&
+					cmd != "labelonly")
+				screen_label_ = displayString(ref, cmd);
+		}
 		return;
 	}
 	// It seems that this reference does not point to any valid label.
