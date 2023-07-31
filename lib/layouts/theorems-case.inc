@@ -15,21 +15,21 @@ Counter casei
 End
 Counter caseii
 	GuiName "Case (Level 2)"
-        Within casei
-        LabelString "Case \roman{caseii}."
-        PrettyFormat "Case \roman{caseii}"
+	Within casei
+	LabelString "Case \roman{caseii}."
+	PrettyFormat "Case \roman{caseii}"
 End
 Counter caseiii
 	GuiName "Case (Level 3)"
-        Within caseii
-        LabelString "Case \alph{caseiii}."
-        PrettyFormat "Case \alph{caseiii}"
+	Within caseii
+	LabelString "Case \alph{caseiii}."
+	PrettyFormat "Case \alph{caseiii}"
 End
 Counter caseiv
 	GuiName "Case (Level 4)"
-        Within caseiii
-        PrettyFormat "Case \arabic{caseiv}"
-        LabelString "Case \arabic{caseiv}."
+	Within caseiii
+	PrettyFormat "Case \arabic{caseiv}"
+	LabelString "Case \arabic{caseiv}."
 End
 
 Style Case
