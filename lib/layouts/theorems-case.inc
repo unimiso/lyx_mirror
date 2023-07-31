@@ -28,7 +28,7 @@ End
 Counter caseiv
 	GuiName "Case (Level 4)"
         Within caseiii
-        PrettyForamt "Case \arabic{caseiv}"
+        PrettyFormat "Case \arabic{caseiv}"
         LabelString "Case \arabic{caseiv}."
 End
 
