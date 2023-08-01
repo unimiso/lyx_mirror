@@ -48,4 +48,6 @@ Style Hanging
       \everypar={\hangpara}}{\par}
     }
   EndPreamble
+  DocBookTag             para
+  DocBookAttr            role='hanging'
 End

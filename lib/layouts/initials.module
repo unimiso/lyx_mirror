@@ -21,7 +21,9 @@ InsetLayout Flex:Initial
 	  Size		Large
 	EndFont
 	Requires	lettrine
-	ResetsFont true
+	ResetsFont  true
+    DocBookTag             para
+    DocBookAttr            role='hanging'
 End
 
 Style Initial
@@ -34,16 +36,23 @@ Style Initial
 	Argument 1
 	  LabelString	"Options"
 	  Tooltip	"Option(s) for the initial"
+	  DocBookTag    NONE
 	EndArgument
 	Argument 2
 	  Mandatory	1
 	  LabelString	"Initial"
 	  Tooltip	"Initial letter(s)"
+	  DocBookTag      phrase
+	  DocBookAttr     role='initial'
+	  DocBookTagType  inline
 	EndArgument
 	Argument 3
 	  Mandatory	1
 	  LabelString	"Rest of Initial"
 	  Tooltip	"Rest of initial word or text"
+	  DocBookTag      phrase
+	  DocBookAttr     role='rest-of-initial'
+	  DocBookTagType  inline
 	EndArgument
 	LabelSep	x
 	ParIndent	MMM
@@ -56,5 +65,7 @@ Style Initial
 	LabelFont
 	  Series	Bold
 	EndFont
+    DocBookTag             para
+    DocBookAttr            role='paragraph-with-initial'
 End
 
