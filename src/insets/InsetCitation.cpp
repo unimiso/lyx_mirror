@@ -632,12 +632,12 @@ void InsetCitation::docbook(XMLStream & xs, OutputParams const &) const
 	// DocBook does not support having multiple citations in one tag, so that we have to deal with formatting here.
 	docstring citations = getParam("key");
 	if (citations.find(',') == string::npos) {
-		xs << xml::CompTag("biblioref", "endterm=\"" + to_utf8(xml::cleanID(citations)) + "\"");
+		xs << xml::CompTag("biblioref", "linkend=\"" + to_utf8(xml::cleanID(citations)) + "\"");
 	} else {
 		size_t pos = 0;
 		while (pos != string::npos) {
 			pos = citations.find(',');
-			xs << xml::CompTag("biblioref", "endterm=\"" + to_utf8(xml::cleanID(citations.substr(0, pos))) + "\"");
+			xs << xml::CompTag("biblioref", "linkend=\"" + to_utf8(xml::cleanID(citations.substr(0, pos))) + "\"");
 			citations.erase(0, pos + 1);
 
 			if (pos != string::npos) {
