@@ -232,7 +232,7 @@ Style Example*
 	BabelPreamble
 	  \addto\captions$$lang{\renewcommand{\examplename}{_(Example)}}
 	EndBabelPreamble
-	DocBookWrapperTag     informalexample
+	DocBookWrapperTag     example
 	DocBookTag            para
 	DocBookAttr           ""
 End
