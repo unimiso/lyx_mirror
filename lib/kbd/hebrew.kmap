@@ -97,4 +97,8 @@
 \kmap < >
 \kmap > <
 
-
+# Add missing symbols:
+\kmap D ־	# Shift+Gimel = Maqqaf
+\kmap F ֿ	# Shift+Kaf = Rafe
+\kmap K ׳	# Shift+Lamed = Geresh
+\kmap L ״ 	# Shift+Kaf Sofit = Gershayim
