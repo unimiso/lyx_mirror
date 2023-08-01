@@ -38,6 +38,16 @@ InsetLayout Flex:Multiple_Columns
 	DocBookTag      IGNORE
   EndArgument
   ResetsFont        true
+
+  # The current DocBook implementation is quite lacking, but it would require
+  # a lot more C++ code to have perfect output. The major problem: not all
+  # elements within a column should be wrapped in an item. It has been
+  # designed for pure text (like in Modules > Page Layout > Multiple Columns,
+  # the excerpt of "The Adventure of the Empty House"), it produces wrong
+  # output for lists (such as Document classes > Articles > Astronomy >
+  # Supported environments, the Columns flex only contains a list). Columns
+  # within columns are not supported either (as in Modules > Page Layout >
+  # Multiple Columns > Columns inside Columns).
   DocBookWrapperTag NONE
   DocBookTag        NONE
   DocBookNotInPara  true
