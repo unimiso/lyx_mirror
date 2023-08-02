@@ -113,6 +113,9 @@ buttonid doPrompt(docstring const & title, docstring const & question,
 	QMessageBox msg_box(QMessageBox::Information,
 			toqstr(title), toqstr(question),
 			QMessageBox::NoButton, qApp->focusWidget());
+#ifdef Q_OS_MAC
+	msg_box.setWindowModality(Qt::WindowModal);
+#endif
 	b[0] = msg_box.addButton(b1.empty() ? "OK" : toqstr(b1),
 					QMessageBox::ActionRole);
 	if (!b2.empty())
