@@ -88,7 +88,7 @@ ${LangFileString} InstallRunning "Program instalasi sedang berjalan!"
 ${LangFileString} AlreadyInstalled "LyX ${APP_VERSION} sudah pernah diinstal!$\r$\n\
 				Installing over existing installations is not recommended if the installed version$\r$\n\
 				is a test release or if you have problems with your existing LyX installation.$\r$\n\
-				In these cases better reinstall LyX.$\r$\n\
+				In these cases better uninstall LyX first.$\r$\n\
 				Dou you nevertheles want to install LyX over the existing version?"
 ${LangFileString} NewerInstalled "Anda akan memasang versi LyX yang lama dari yang sudah terpasang.$\r$\n\
 				  Jika memang dikehendaki, anda harus menghapus dulu LyX yang ada, LyX $R9."

@@ -82,7 +82,7 @@ ${LangFileString} InstallRunning "Instalátor je již spuštěn!"
 ${LangFileString} AlreadyInstalled "LyX ${APP_VERSION} je již nainstalován!$\r$\n\
 				Installing over existing installations is not recommended if the installed version$\r$\n\
 				is a test release or if you have problems with your existing LyX installation.$\r$\n\
-				In these cases better reinstall LyX.$\r$\n\
+				In these cases better uninstall LyX first.$\r$\n\
 				Dou you nevertheles want to install LyX over the existing version?"
 ${LangFileString} NewerInstalled "You are trying to install an older version of LyX than what you have installed.$\r$\n\
 				  If you really want this, you must uninstall the existing LyX $R9 before."

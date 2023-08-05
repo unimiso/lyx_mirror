@@ -88,7 +88,7 @@ ${LangFileString} InstallRunning "Instalatzailea jadanik exekutatzen ari da."
 ${LangFileString} AlreadyInstalled "LyX ${APP_VERSION} jadanik instalatuta dago!$\r$\n\
 				Installing over existing installations is not recommended if the installed version$\r$\n\
 				is a test release or if you have problems with your existing LyX installation.$\r$\n\
-				In these cases better reinstall LyX.$\r$\n\
+				In these cases better uninstall LyX first.$\r$\n\
 				Dou you nevertheles want to install LyX over the existing version?"
 ${LangFileString} NewerInstalled "Instalatuta dagoen LyX baino bertsio zaharragoa instalatzen saiatzen ari zara.$\r$\n\
 				  Hori egitea nahi baduzu, lehenbizi existitzen den LyX $R9 desinstalatu beharko duzu."
