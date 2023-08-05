@@ -21,6 +21,7 @@
 
 #include <QCloseEvent>
 #include <QDialogButtonBox>
+#include <QColorDialog>
 
 using namespace std;
 
@@ -281,6 +282,24 @@ QString GuiDialog::browseRelToSub(
 		return reloutname;
 }
 
+
+QColor GuiDialog::getColor(const QColor &initial, QWidget *parent)
+{
+	const QColor color = QColorDialog::getColor(initial, parent);
+	if (guiApp->platformName() == "cocoa") {
+		QWidget * dialog = parent->window();
+		// On Mac explicitly activate the parents top-level widget
+		// See #10740
+		dialog->raise();
+		dialog->activateWindow();
+	}
+	return color;
+}
+
+QColor GuiDialog::getColor(const QColor &initial)
+{
+	return getColor(initial, asQWidget());
+}
 
 } // namespace frontend
 } // namespace lyx

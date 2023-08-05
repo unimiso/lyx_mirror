@@ -178,6 +178,9 @@ public:
 		QString const & label2 = QString(),
 		QString const & dir2 = QString());
 
+	static QColor getColor(const QColor &initial, QWidget *parent);
+	QColor getColor(const QColor &initial);
+
 private:
 	ButtonController bc_;
 	/// are we updating ?

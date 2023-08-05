@@ -73,7 +73,6 @@
 #include <QAbstractItemModel>
 #include <QButtonGroup>
 #include <QColor>
-#include <QColorDialog>
 #include <QCloseEvent>
 #include <QDirIterator>
 #include <QFontDatabase>
@@ -2293,8 +2292,7 @@ void GuiDocument::setCustomMargins(bool custom)
 
 void GuiDocument::changeBackgroundColor()
 {
-	QColor const & newColor = QColorDialog::getColor(
-		rgb2qcolor(set_backgroundcolor), asQWidget());
+	QColor const & newColor = getColor(rgb2qcolor(set_backgroundcolor));
 	if (!newColor.isValid())
 		return;
 	// set the color
@@ -2322,8 +2320,7 @@ void GuiDocument::deleteBackgroundColor()
 
 void GuiDocument::changeFontColor()
 {
-	QColor const & newColor = QColorDialog::getColor(
-		rgb2qcolor(set_fontcolor), asQWidget());
+	QColor const & newColor = getColor(rgb2qcolor(set_fontcolor));
 	if (!newColor.isValid())
 		return;
 	//  set the color
@@ -2351,8 +2348,7 @@ void GuiDocument::deleteFontColor()
 
 void GuiDocument::changeNoteFontColor()
 {
-	QColor const & newColor = QColorDialog::getColor(
-		rgb2qcolor(set_notefontcolor), asQWidget());
+	QColor const & newColor = getColor(rgb2qcolor(set_notefontcolor));
 	if (!newColor.isValid())
 		return;
 	// set the color
@@ -2378,8 +2374,7 @@ void GuiDocument::deleteNoteFontColor()
 
 void GuiDocument::changeBoxBackgroundColor()
 {
-	QColor const & newColor = QColorDialog::getColor(
-		rgb2qcolor(set_boxbgcolor), asQWidget());
+	QColor const & newColor = getColor(rgb2qcolor(set_boxbgcolor));
 	if (!newColor.isValid())
 		return;
 	// set the color

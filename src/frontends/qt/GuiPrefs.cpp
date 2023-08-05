@@ -56,7 +56,6 @@
 
 #include <QAbstractItemModel>
 #include <QCheckBox>
-#include <QColorDialog>
 #include <QFontDatabase>
 #include <QHeaderView>
 #include <QLineEdit>
@@ -1056,7 +1055,7 @@ void PrefColors::changeColor()
 		return;
 
 	QString const color = newcolors_[size_t(row)];
-	QColor const c = QColorDialog::getColor(QColor(color), qApp->focusWidget());
+	QColor const c = form_->getColor(QColor(color));
 
 	if (setColor(row, c, color)) {
 		setDisabledResets();

@@ -16,6 +16,7 @@
 
 #include "ColorCache.h"
 #include "GuiApplication.h"
+#include "GuiDialog.h"
 #include "Validator.h"
 #include "qt_helpers.h"
 
@@ -32,7 +33,6 @@
 #include <QPixmap>
 #include <QIcon>
 #include <QColor>
-#include <QColorDialog>
 
 
 using namespace std;
@@ -290,7 +290,7 @@ void GuiIndices::toggleColor(QTreeWidgetItem * item)
 		return;
 
 	QColor const initial = rgb2qcolor(index->color());
-	QColor ncol = QColorDialog::getColor(initial, qApp->focusWidget());
+	QColor ncol = GuiDialog::getColor(initial, this);
 	if (!ncol.isValid())
 		return;
 

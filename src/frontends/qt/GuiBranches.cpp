@@ -15,6 +15,7 @@
 
 #include "ColorCache.h"
 #include "GuiApplication.h"
+#include "GuiDialog.h"
 #include "Validator.h"
 #include "qt_helpers.h"
 
@@ -35,7 +36,6 @@
 #include <QPixmap>
 #include <QIcon>
 #include <QColor>
-#include <QColorDialog>
 
 #ifdef KeyPress
 #undef KeyPress
@@ -341,7 +341,7 @@ void GuiBranches::toggleColor(QTreeWidgetItem * item)
 	else
 		guiApp->getRgbColor(lcolor.getFromLyXName(bcolor), rgbcol);
 	QColor const initial = rgb2qcolor(rgbcol);
-	QColor ncol = QColorDialog::getColor(initial, qApp->focusWidget());
+	QColor ncol = GuiDialog::getColor(initial, this);
 	if (!ncol.isValid())
 		return;
 
