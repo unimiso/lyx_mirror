@@ -823,7 +823,7 @@ void GuiGraphics::dispatchParams()
 }
 
 
-QString GuiGraphics::browse(QString const & in_name) const
+QString GuiGraphics::browse(QString const & in_name)
 {
 	QString const title = qt_("Select graphics file");
 

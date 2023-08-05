@@ -359,7 +359,7 @@ void GuiInclude::browse()
 }
 
 
-QString GuiInclude::browse(QString const & in_name, Type in_type) const
+QString GuiInclude::browse(QString const & in_name, Type in_type)
 {
 	QString const title = qt_("Select document to include");
 

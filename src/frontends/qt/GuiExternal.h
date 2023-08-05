@@ -68,7 +68,7 @@ private:
 
 	///
 	QString browse(QString const & input_file,
-				 QString const & template_name) const;
+				 QString const & template_name);
 
 	///
 	MapType extra_;

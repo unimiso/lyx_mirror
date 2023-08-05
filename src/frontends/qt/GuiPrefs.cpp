@@ -80,124 +80,6 @@ using namespace lyx::support;
 using namespace lyx::support::os;
 
 namespace lyx {
-namespace frontend {
-
-/////////////////////////////////////////////////////////////////////
-//
-// Browser Helpers
-//
-/////////////////////////////////////////////////////////////////////
-
-/** Launch a file dialog and return the chosen file.
-	filename: a suggested filename.
-	title: the title of the dialog.
-	filters: *.ps etc.
-	dir1 = (name, dir), dir2 = (name, dir): extra buttons on the dialog.
-*/
-QString browseFile(QString const & filename,
-	QString const & title,
-	QStringList const & filters,
-	bool save = false,
-	QString const & label1 = QString(),
-	QString const & dir1 = QString(),
-	QString const & label2 = QString(),
-	QString const & dir2 = QString(),
-	QString const & fallback_dir = QString())
-{
-	QString lastPath = ".";
-	if (!filename.isEmpty())
-		lastPath = onlyPath(filename);
-	else if(!fallback_dir.isEmpty())
-		lastPath = fallback_dir;
-
-	FileDialog dlg(title);
-	dlg.setButton1(label1, dir1);
-	dlg.setButton2(label2, dir2);
-
-	FileDialog::Result result;
-
-	if (save)
-		result = dlg.save(lastPath, filters, onlyFileName(filename));
-	else
-		result = dlg.open(lastPath, filters, onlyFileName(filename));
-
-	return result.second;
-}
-
-
-/** Launch a file dialog and return the chosen directory.
-	pathname: a suggested pathname.
-	title: the title of the dialog.
-	dir1 = (name, dir), dir2 = (name, dir): extra buttons on the dialog.
-*/
-QString browseDir(QString const & pathname,
-	QString const & title,
-	QString const & label1 = QString(),
-	QString const & dir1 = QString(),
-	QString const & label2 = QString(),
-	QString const & dir2 = QString())
-{
-	QString lastPath = ".";
-	if (!pathname.isEmpty())
-		lastPath = onlyPath(pathname);
-
-	FileDialog dlg(title);
-	dlg.setButton1(label1, dir1);
-	dlg.setButton2(label2, dir2);
-
-	FileDialog::Result const result =
-		dlg.opendir(lastPath, onlyFileName(pathname));
-
-	return result.second;
-}
-
-
-} // namespace frontend
-
-
-QString browseRelToParent(QString const & filename, QString const & relpath,
-	QString const & title, QStringList const & filters, bool save,
-	QString const & label1, QString const & dir1,
-	QString const & label2, QString const & dir2)
-{
-	QString const fname = makeAbsPath(filename, relpath);
-
-	QString const outname =
-		frontend::browseFile(fname, title, filters, save, label1, dir1, label2, dir2);
-
-	QString const reloutname =
-		toqstr(makeRelPath(qstring_to_ucs4(outname), qstring_to_ucs4(relpath)));
-
-	if (reloutname.startsWith("../"))
-		return outname;
-	else
-		return reloutname;
-}
-
-
-QString browseRelToSub(QString const & filename, QString const & relpath,
-	QString const & title, QStringList const & filters, bool save,
-	QString const & label1, QString const & dir1,
-	QString const & label2, QString const & dir2)
-{
-	QString const fname = makeAbsPath(filename, relpath);
-
-	QString const outname =
-		frontend::browseFile(fname, title, filters, save, label1, dir1, label2, dir2);
-
-	QString const reloutname =
-		toqstr(makeRelPath(qstring_to_ucs4(outname), qstring_to_ucs4(relpath)));
-
-	QString testname = reloutname;
-	testname.remove(QRegularExpression("^(\\.\\./)+"));
-
-	if (testname.contains("/"))
-		return outname;
-	else
-		return reloutname;
-}
-
-
 
 /////////////////////////////////////////////////////////////////////
 //
@@ -1478,7 +1360,7 @@ void PrefPaths::updateRC(LyXRC const & rc)
 
 void PrefPaths::selectExampledir()
 {
-	QString file = browseDir(internalPath(exampleDirED->text()),
+	QString file = form_->browseDir(internalPath(exampleDirED->text()),
 		qt_("Select directory for example files"));
 	if (!file.isEmpty())
 		exampleDirED->setText(file);
@@ -1487,7 +1369,7 @@ void PrefPaths::selectExampledir()
 
 void PrefPaths::selectTemplatedir()
 {
-	QString file = browseDir(internalPath(templateDirED->text()),
+	QString file = form_->browseDir(internalPath(templateDirED->text()),
 		qt_("Select a document templates directory"));
 	if (!file.isEmpty())
 		templateDirED->setText(file);
@@ -1496,7 +1378,7 @@ void PrefPaths::selectTemplatedir()
 
 void PrefPaths::selectTempdir()
 {
-	QString file = browseDir(internalPath(tempDirED->text()),
+	QString file = form_->browseDir(internalPath(tempDirED->text()),
 		qt_("Select a temporary directory"));
 	if (!file.isEmpty())
 		tempDirED->setText(file);
@@ -1505,7 +1387,7 @@ void PrefPaths::selectTempdir()
 
 void PrefPaths::selectBackupdir()
 {
-	QString file = browseDir(internalPath(backupDirED->text()),
+	QString file = form_->browseDir(internalPath(backupDirED->text()),
 		qt_("Select a backups directory"));
 	if (!file.isEmpty())
 		backupDirED->setText(file);
@@ -1514,7 +1396,7 @@ void PrefPaths::selectBackupdir()
 
 void PrefPaths::selectWorkingdir()
 {
-	QString file = browseDir(internalPath(workingDirED->text()),
+	QString file = form_->browseDir(internalPath(workingDirED->text()),
 		qt_("Select a document directory"));
 	if (!file.isEmpty())
 		workingDirED->setText(file);
@@ -1523,7 +1405,7 @@ void PrefPaths::selectWorkingdir()
 
 void PrefPaths::selectThesaurusdir()
 {
-	QString file = browseDir(internalPath(thesaurusDirED->text()),
+	QString file = form_->browseDir(internalPath(thesaurusDirED->text()),
 		qt_("Set the path to the thesaurus dictionaries"));
 	if (!file.isEmpty())
 		thesaurusDirED->setText(file);
@@ -1532,7 +1414,7 @@ void PrefPaths::selectThesaurusdir()
 
 void PrefPaths::selectHunspelldir()
 {
-	QString file = browseDir(internalPath(hunspellDirED->text()),
+	QString file = form_->browseDir(internalPath(hunspellDirED->text()),
 		qt_("Set the path to the Hunspell dictionaries"));
 	if (!file.isEmpty())
 		hunspellDirED->setText(file);
@@ -3718,6 +3600,12 @@ QString GuiPreferences::browseLibFile(QString const & dir,
 	guilyxfiles_->passParams(fromqstr(dir));
 	guilyxfiles_->selectItem(name);
 	guilyxfiles_->exec();
+	
+	if (frontend::guiApp->platformName() == "cocoa") {
+		QWidget * dialog_ = asQWidget();
+		dialog_->raise();
+		dialog_->activateWindow();
+	}
 
 	QString const result = uifile_;
 
@@ -3756,7 +3644,7 @@ QString GuiPreferences::browsekbmap(QString const & file)
 
 
 QString GuiPreferences::browse(QString const & file,
-	QString const & title) const
+	QString const & title)
 {
 	return browseFile(file, title, QStringList(), true);
 }

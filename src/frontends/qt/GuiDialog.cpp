@@ -10,12 +10,14 @@
 
 #include <config.h>
 
+#include "FileDialog.h"
+#include "GuiApplication.h"
 #include "GuiDialog.h"
-
 #include "GuiView.h"
 #include "qt_helpers.h"
 
 #include "support/debug.h"
+#include "support/filetools.h"
 
 #include <QCloseEvent>
 #include <QDialogButtonBox>
@@ -155,6 +157,130 @@ void GuiDialog::updateView()
 
 	setUpdatesEnabled(true);
 }
+
+QString GuiDialog::browseFile(QString const & filename,
+	QString const & title,
+	QStringList const & filters,
+	bool save,
+	QString const & label1,
+	QString const & dir1,
+	QString const & label2,
+	QString const & dir2,
+	QString const & fallback_dir)
+{
+	QString lastPath = ".";
+	if (!filename.isEmpty())
+		lastPath = onlyPath(filename);
+	else if(!fallback_dir.isEmpty())
+		lastPath = fallback_dir;
+
+	FileDialog dlg(title);
+	dlg.setButton1(label1, dir1);
+	dlg.setButton2(label2, dir2);
+
+	FileDialog::Result result;
+
+	if (save)
+		result = dlg.save(lastPath, filters, onlyFileName(filename));
+	else
+		result = dlg.open(lastPath, filters, onlyFileName(filename));
+
+	if (guiApp->platformName() == "cocoa") {
+		QWidget * dialog = asQWidget();
+		dialog->raise();
+		dialog->activateWindow();
+	}
+
+	return result.second;
+}
+
+
+/** Launch a file dialog and return the chosen directory.
+	pathname: a suggested pathname.
+	title: the title of the dialog.
+	dir1 = (name, dir), dir2 = (name, dir): extra buttons on the dialog.
+*/
+QString GuiDialog::browseDir(QString const & pathname,
+	QString const & title,
+	QString const & label1,
+	QString const & dir1,
+	QString const & label2,
+	QString const & dir2)
+{
+	QString lastPath = ".";
+	if (!pathname.isEmpty())
+		lastPath = onlyPath(pathname);
+
+	FileDialog dlg(title);
+	dlg.setButton1(label1, dir1);
+	dlg.setButton2(label2, dir2);
+
+	FileDialog::Result const result =
+		dlg.opendir(lastPath, onlyFileName(pathname));
+	
+	if (guiApp->platformName() == "cocoa") {
+		QWidget * dialog = asQWidget();
+		dialog->raise();
+		dialog->activateWindow();
+	}
+
+	return result.second;
+}
+
+QString GuiDialog::browseRelToParent(
+	QString const & filename,
+	QString const & relpath,
+	QString const & title,
+	QStringList const & filters,
+	bool save,
+	QString const & label1,
+	QString const & dir1,
+	QString const & label2,
+	QString const & dir2)
+{
+	QString const fname = makeAbsPath(filename, relpath);
+
+	QString const outname =
+		browseFile(fname, title, filters, save, label1, dir1, label2, dir2);
+
+	QString const reloutname =
+		toqstr(support::makeRelPath(qstring_to_ucs4(outname), qstring_to_ucs4(relpath)));
+
+	if (reloutname.startsWith("../"))
+		return outname;
+	else
+		return reloutname;
+}
+
+
+QString GuiDialog::browseRelToSub(
+	QString const & filename,
+	QString const & relpath,
+	QString const & title,
+	QStringList const & filters,
+	bool save,
+	QString const & label1,
+	QString const & dir1,
+	QString const & label2,
+	QString const & dir2)
+{
+	QString const fname = makeAbsPath(filename, relpath);
+
+	QString const outname =
+		browseFile(fname, title, filters, save, label1, dir1, label2, dir2);
+
+	QString const reloutname =
+		toqstr(support::makeRelPath(qstring_to_ucs4(outname), qstring_to_ucs4(relpath)));
+
+	QString testname = reloutname;
+	testname.remove(QRegularExpression("^(\\.\\./)+"));
+
+	if (testname.contains("/"))
+		return outname;
+	else
+		return reloutname;
+}
+
 
 } // namespace frontend
 } // namespace lyx

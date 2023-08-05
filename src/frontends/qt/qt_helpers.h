@@ -120,47 +120,6 @@ support::FileName imageLibFileSearch(QString & dir, QString const & name,
 				QString const & ext = QString(),
 				support::search_mode mode = support::must_exist);
 
-/** Wrappers around browseFile which try to provide a filename
-	relative to relpath.
-
-\param title: title for dialog
-
-\param filters: *.ps, etc
-
-\param save: whether to save dialog info (current path, etc) for next use.
-
-The \param labelN and \param dirN arguments provide for extra buttons
-in the dialog (e.g., "Templates" and a path to that directory).
-
-The difference between the functions concerns when we think we have a
-relative path.
-
-In \c browseRelToParent, we return a relative path only if it IS NOT of
-	the form "../../foo.txt".
-
-In \c browseRelToSub, we return a relative path only if it IS of the
- form "../../foo.txt".
-*/
-QString browseRelToParent(QString const & filename,
-	QString const & relpath,
-	QString const & title,
-	QStringList const & filters,
-	bool save = false,
-	QString const & label1 = QString(),
-	QString const & dir1 = QString(),
-	QString const & label2 = QString(),
-	QString const & dir2 = QString());
-
-QString browseRelToSub(QString const & filename,
-	QString const & relpath,
-	QString const & title,
-	QStringList const & filters,
-	bool save = false,
-	QString const & label1 = QString(),
-	QString const & dir1 = QString(),
-	QString const & label2 = QString(),
-	QString const & dir2 = QString());
-
 /** Build filelists of all available bst/cls/sty-files. Done through
 *  kpsewhich and an external script, saved in *Files.lst.
 *  \param arg: cls, sty, bst, or bib, as required by TeXFiles.py.

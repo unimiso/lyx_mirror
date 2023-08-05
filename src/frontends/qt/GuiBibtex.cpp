@@ -491,7 +491,7 @@ void GuiBibtex::applyView()
 }
 
 
-QString GuiBibtex::browseBib(QString const & in_name) const
+QString GuiBibtex::browseBib(QString const & in_name)
 {
 	QString const label1 = qt_("D&ocuments");
 	QString const dir1 = toqstr(lyxrc.document_path);
@@ -501,7 +501,7 @@ QString GuiBibtex::browseBib(QString const & in_name) const
 }
 
 
-QString GuiBibtex::browseBst(QString const & in_name) const
+QString GuiBibtex::browseBst(QString const & in_name)
 {
 	QString const label1 = qt_("D&ocuments");
 	QString const dir1 = toqstr(lyxrc.document_path);

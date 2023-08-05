@@ -80,7 +80,7 @@ private:
 	void enableControls(bool enable);
 
 	/// browse for a file
-	QString browse(QString const & in_name) const;
+	QString browse(QString const & in_name);
 	/// retrieve the buffer from the specified filename
 	Buffer const * bufferFromFileName(std::string const & file) const;
 

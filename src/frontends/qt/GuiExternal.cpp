@@ -682,7 +682,7 @@ static QStringList templateFilters(QString const & template_name)
 
 
 QString GuiExternal::browse(QString const & input,
-				     QString const & template_name) const
+				     QString const & template_name)
 {
 	QString const title = qt_("Select external file");
 	QString const bufpath = bufferFilePath();

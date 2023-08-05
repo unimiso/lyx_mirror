@@ -92,7 +92,7 @@ public:
 	QString browsekbmap(QString const & file);
 
 	/// general browse
-	QString browse(QString const & file, QString const & title) const;
+	QString browse(QString const & file, QString const & title);
 
 	/// set a color
 	void setColor(ColorCode col, QString const & hex);

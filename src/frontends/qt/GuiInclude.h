@@ -79,7 +79,7 @@ private:
 	/// update
 	void updateContents() override {}
 	/// Browse for a file
-	QString browse(QString const &, Type) const;
+	QString browse(QString const &, Type);
 
 private:
 	///

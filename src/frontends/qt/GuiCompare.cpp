@@ -153,7 +153,7 @@ void GuiCompare::selectOldFile()
 }
 
 
-QString GuiCompare::browse(QString const & in_name) const
+QString GuiCompare::browse(QString const & in_name)
 {
 	QString const title = qt_("Select document");
 

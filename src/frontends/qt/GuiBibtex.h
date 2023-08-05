@@ -56,9 +56,9 @@ private:
 	void updateContents() override;
 
 	/// Browse for a .bib file
-	QString browseBib(QString const & in_name) const;
+	QString browseBib(QString const & in_name);
 	/// Browse for a .bst file
-	QString browseBst(QString const & in_name) const;
+	QString browseBst(QString const & in_name);
 	/// get the list of bst files
 	QStringList bibStyles() const;
 	/// get the list of bib files

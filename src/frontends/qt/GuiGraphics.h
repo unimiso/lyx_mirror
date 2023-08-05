@@ -71,7 +71,7 @@ private:
 	/// does the bounding box differ from the file?
 	bool isChangedBB();
 	/// Browse for a file
-	QString browse(QString const &) const;
+	QString browse(QString const &);
 	/// Read the Bounding Box from a eps or ps-file
 	std::string readBoundingBox(std::string const & file);
 	/// test if file exist
