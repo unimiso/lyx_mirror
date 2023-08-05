@@ -459,8 +459,13 @@ public Q_SLOTS:
 
 class GuiShortcutDialog : public QDialog, public Ui::shortcutUi
 {
+	Q_OBJECT
 public:
 	GuiShortcutDialog(QWidget * parent);
+
+public Q_SLOTS:
+	void on_lfunLE_textChanged();
+
 };
 
 

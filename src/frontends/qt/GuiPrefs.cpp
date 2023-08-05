@@ -2793,6 +2793,14 @@ GuiShortcutDialog::GuiShortcutDialog(QWidget * parent) : QDialog(parent)
 	Ui::shortcutUi::setupUi(this);
 	QDialog::setModal(true);
 	lfunLE->setValidator(new NoNewLineValidator(lfunLE));
+	on_lfunLE_textChanged();
+}
+
+
+void GuiShortcutDialog::on_lfunLE_textChanged()
+{
+	QPushButton * ok = buttonBox->button(QDialogButtonBox::Ok);
+	ok->setEnabled(!lfunLE->text().isEmpty());
 }
 
 
