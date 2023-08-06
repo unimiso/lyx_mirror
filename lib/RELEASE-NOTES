@@ -102,6 +102,7 @@
   add dependencies for poppler-utils and libtiff-tools to workaround
   the problem.
 
+* LyX now supports hebrew and hungarian quotation styles.
 
 !!!The following pref variables were added in 2.4:
 
