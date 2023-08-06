@@ -191,7 +191,7 @@ Format 5
 #  -: "Control-Command-V"            # Apply formatting settings to the selected object (Paste Ruler Command)
 \bind "C-M-v"                        "primary-selection-paste"
 #  +: "Command-W"                    # Close the frontmost window - modern applications map this to close tab or window if it's the last one
-\bind "C-w"                          "buffer-close"
+\bind "C-w"                          "view-close"
 #  +: "Shift-Command-W"              # Close a file and its associated windows - modern applications map this close window
 \bind "C-S-w"                        "window-close"
 #  +: "Option-Command-W"             # Close all windows in the application without quitting it
