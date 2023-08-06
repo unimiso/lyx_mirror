@@ -4891,8 +4891,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 			if (theClipboard().isInternal())
 				pasteFromStack(cur, bv->buffer().errorList("Paste"), 0);
 			else if (theClipboard().hasTextContents()) {
-				if (pasteClipboardText(cur, bv->buffer().errorList("Paste"),
-				                       !cur.paragraph().parbreakIsNewline(),
+				if (pasteClipboardText(cur, bv->buffer().errorList("Paste"), 0,
 					                   Clipboard::AnyTextType))
 					tryGraphics = false;
 			}
