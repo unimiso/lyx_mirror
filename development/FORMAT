@@ -7,6 +7,11 @@ changes happened in particular if possible. A good example would be
 
 -----------------------
 
+2023-08-01 Udi Fogiel <udifoglle@gmail.com>
+ 	* Format incremented to 618: Hebrew quote style
+ 	  New buffer param \quotes_style hebrew
+ 	  \begin_inset Quotes d{l,r}{d,s}
+
 2023-07-20 Jürgen Spitzmüller <spitz@lyx.org> 
 	* Format incremented to 617: Update covington support in linguistics module:
 	- Support enviroment option of example and examples

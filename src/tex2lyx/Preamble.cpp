@@ -137,6 +137,9 @@ const char * const known_swiss_quotes_languages[] = {"albanian",
 "armenian", "basque", "churchslavonic", "german-ch", "german-ch-old",
 "norsk", "nynorsk", "turkmen", "ukrainian", "vietnamese", 0};
 
+/// languages with hebrew quotes (.lyx names)
+const char * const known_hebrew_quotes_languages[] = {"hebrew", 0};
+
 /// known language packages from the times before babel
 const char * const known_old_language_packages[] = {"french", "frenchle",
 "frenchpro", "german", "ngerman", "pmfrench", 0};
@@ -3173,7 +3176,7 @@ void Preamble::parse(Parser & p, string const & forceclass,
 	// Finally, set the quote style.
 	// LyX knows the following quotes styles:
 	// british, cjk, cjkangle, danish, english, french, german,
-	// polish, russian, swedish and swiss
+	// polish, russian, swedish, swiss, and hebrew
 	// conversion list taken from
 	// https://en.wikipedia.org/wiki/Quotation_mark,_non-English_usage
 	// (quotes for kazakh are unknown)
@@ -3210,6 +3213,10 @@ void Preamble::parse(Parser & p, string const & forceclass,
 	// swiss
 	else if (is_known(h_language, known_swiss_quotes_languages))
 		h_quotes_style = "swiss";
+	// hebrew
+	else if (is_known(h_language, known_hebrew_quotes_languages))
+		h_quotes_style = "hebrew";
+	
 	// english
 	else if (is_known(h_language, known_english_quotes_languages))
 		h_quotes_style = "english";

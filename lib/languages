@@ -57,6 +57,7 @@
 #   - french:	  <<text>>		``text''	(outward guillemets -- 66_99)
 #   - frenchin:   <<text>>		<<text>>	(French Imprimerie Nationale style)
 #   - german:	  ,,text``		,text`		(99/66 -- 9/6)
+#   - hebrew:	  ''text,,		'text,		(99/99 -- 9/9)
 #   - hungarian:  ,,text''		>>text<<	(99/99 -- double inward guillemets)
 #   - polish:	  ,,text''		,text'		(99/99 -- 9/9)
 #   - russian:    <<text>>		,,text``       	(outward guillemets -- 99/66)
@@ -850,12 +851,12 @@ Language hebrew
 	PolyglossiaName  hebrew
 	XindyName        hebrew
 	Encoding         cp1255
-	QuoteStyle       english
+	QuoteStyle       hebrew
 	InternalEncoding true
 	# babel-hebrew expects the encoding for *other* languages last:
 	FontEncoding    HE8,T1|LHE,T1
 	## Use font encoding HE8 if the Culmus fonts are installed and
-	# work around too simple test for article-like classes in rlbabel.def.
+	# work around to simple test for article-like classes in rlbabel.def.
 	PreBabelPreamble
 	  \IfFileExists{he8david.fd}{%
 	    \providecommand{\HeblatexEncoding}{HE8}

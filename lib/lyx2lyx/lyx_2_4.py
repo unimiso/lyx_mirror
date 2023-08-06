@@ -5525,6 +5525,27 @@ def revert_expreambles(document):
     revert_flex_inset(document.body, "Subexample Preamble", "\\subexpreamble")
     revert_flex_inset(document.body, "Example Postamble", "\\expostamble")
     revert_flex_inset(document.body, "Subexample Postamble", "\\subexpostamble")
+    
+def revert_hequotes(document):
+    " Revert Hebrew Quotation marks "
+    
+    i = find_token(document.header, "\\quotes_style hebrew", 0)
+    if i != -1:
+        document.header[i] = "\\quotes_style english"
+
+    i = 0
+    while True:
+        i = find_token(document.body, "\\begin_inset Quotes d")
+        if i == -1:
+            return
+        if document.body[i] == "\\begin_inset Quotes dld":
+            document.body[i] = "\\begin_inset Quotes prd"
+        elif document.body[i] == "\\begin_inset Quotes drd":
+            document.body[i] = "\\begin_inset Quotes pld"
+        elif document.body[i] == "\\begin_inset Quotes dls":
+            document.body[i] = "\\begin_inset Quotes prd"
+        elif document.body[i] == "\\begin_inset Quotes drs":
+            document.body[i] = "\\begin_inset Quotes pld"
 
 
 ##
@@ -5605,10 +5626,12 @@ convert = [
            [614, [convert_hyper_other]],
            [615, [convert_acknowledgment,convert_ack_theorems]],
            [616, [convert_empty_macro]],
-           [617, [convert_cov_options]]
+           [617, [convert_cov_options]],
+           [618, []]
           ]
 
-revert =  [[616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
+revert =  [[617, [revert_hequotes]],
+	   [616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
            [615, [revert_empty_macro]],
            [614, [revert_ack_theorems,revert_acknowledgment]],
            [613, [revert_hyper_other]],

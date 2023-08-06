@@ -3479,6 +3479,7 @@ void LyXAction::init()
  *                      'french' for <<french>> quote style (with ``inner quotation'')\n
  *                      'frenchin' for <<frenchin>> quote style (with <<inner quotation>>) ["in" = Imprimerie Nationale]\n
  *                      'german' for ,,German`` quote style (with ,inner quotation`)\n
+ *			'hebrew' for ''hebrew,, quote style (with 'inner quotation,)\n
  *                      'plain' for "Plain" quote style (with 'inner quotation')\n
  *                      'polish' for ,,Polish'' quote style (with ,inner quotation')\n
  *                      'swedish' for ''Swedish'' quote style (with 'inner quotation')\n

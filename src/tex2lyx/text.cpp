@@ -504,6 +504,8 @@ string guessQuoteStyle(string const & in, bool const opening)
 			res = "hrd";
 		else if (preamble.quotesStyle() == "swedish")
 			res = opening ? "sld" : "srd";
+		else if (preamble.quotesStyle() == "hebrew")
+			res = "dld";
 	} else if (in == "els") {// `
 		if (preamble.quotesStyle() == "german")
 			res = "grs";
@@ -516,6 +518,8 @@ string guessQuoteStyle(string const & in, bool const opening)
 			res = "brd";
 		else if (preamble.quotesStyle() == "swedish")
 			res = opening ? "sls" : "srs";
+		else if (preamble.quotesStyle() == "hebrew")
+			res = "dls";
 	} else if (in == "ard") {// >>
 		if (preamble.quotesStyle() == "swiss")
 			res = "cld";
@@ -547,9 +551,13 @@ string guessQuoteStyle(string const & in, bool const opening)
 			res = "hld";
 		else if (preamble.quotesStyle() == "russian")
 			res = "rls";
+		else if (preamble.quotesStyle() == "hebrew")
+			res = "drd";
 	} else if (in == "gls") {// ,
 		if (preamble.quotesStyle() == "polish")
 			res = "pls";
+		else if (preamble.quotesStyle() == "hebrew")
+			res = "drs";
 	}
 	return res;
 }

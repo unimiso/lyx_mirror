@@ -53,6 +53,8 @@ enum class QuoteStyle : int {
 	///
 	Hungarian,
 	///
+	Hebrew,
+	///
 	Dynamic
 };
 
