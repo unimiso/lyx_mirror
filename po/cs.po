@@ -6914,9 +6914,8 @@ msgstr "Případ"
 
 #: lib/layouts/AEA.layout:206 lib/layouts/elsart.layout:546
 #: lib/layouts/theorems-without-preamble.inc:458
-#, fuzzy
 msgid "Case ##"
-msgstr "Případ #."
+msgstr "Případ ##"
 
 #: lib/layouts/AEA.layout:213 lib/layouts/theorems-without-preamble.inc:464
 msgid "Case \\thecase."
@@ -7267,9 +7266,8 @@ msgstr "Poznámka"
 
 #: lib/layouts/AEA.layout:317 lib/layouts/ijmpd.layout:452
 #: lib/layouts/theorems-without-preamble.inc:416
-#, fuzzy
 msgid "Remark ##"
-msgstr "Remark #."
+msgstr "Poznámka ##"
 
 #: lib/layouts/AEA.layout:322 lib/layouts/ijmpc.layout:439
 #: lib/layouts/ijmpd.layout:455 lib/layouts/theorems-ams-bytype.inc:325
@@ -7303,9 +7301,8 @@ msgid "Solution"
 msgstr "Řešení"
 
 #: lib/layouts/AEA.layout:330 lib/layouts/theorems-without-preamble.inc:349
-#, fuzzy
 msgid "Solution ##"
-msgstr "Solution #."
+msgstr "Řešení ##"
 
 #: lib/layouts/AEA.layout:337 lib/layouts/theorems-ams-bytype.inc:301
 #: lib/layouts/theorems-ams-chap-bytype.inc:383
@@ -7341,9 +7338,8 @@ msgid "Summary"
 msgstr "Souhrn"
 
 #: lib/layouts/AEA.layout:345 lib/layouts/elsart.layout:528
-#, fuzzy
 msgid "Summary ##"
-msgstr "Souhrn"
+msgstr "Souhrn ##"
 
 #: lib/layouts/AEA.layout:356 src/frontends/qt/Menus.cpp:1804
 #: src/frontends/qt/Menus.cpp:1819
@@ -9458,9 +9454,8 @@ msgstr "Seznam algoritmů"
 #: lib/layouts/algorithm2e.module:31 lib/layouts/powerdot.layout:607
 #: lib/layouts/revtex4-x.inc:323 lib/layouts/sciposter.layout:100
 #: lib/layouts/stdfloats.inc:54
-#, fuzzy
 msgid "Algorithm ##"
-msgstr "Algorithm #."
+msgstr "Algoritmus ##"
 
 #: lib/layouts/amsart.layout:3 lib/layouts/amsbook.layout:3
 #: lib/examples/Articles:0
@@ -10542,9 +10537,8 @@ msgstr "Presentation"
 
 #: lib/layouts/beamer.layout:1733 lib/layouts/powerdot.layout:572
 #: lib/layouts/sciposter.layout:130 lib/layouts/stdfloats.inc:23
-#, fuzzy
 msgid "Table ##"
-msgstr "Tabulka"
+msgstr "Tabulka ##"
 
 #: lib/layouts/beamer.layout:1738 lib/layouts/powerdot.layout:578
 #: lib/layouts/powerdot.layout:641 lib/layouts/sciposter.layout:105
@@ -10554,9 +10548,8 @@ msgstr "Obrázek"
 
 #: lib/layouts/beamer.layout:1747 lib/layouts/powerdot.layout:590
 #: lib/layouts/sciposter.layout:115 lib/layouts/stdfloats.inc:39
-#, fuzzy
 msgid "Figure ##"
-msgstr "Obrázek"
+msgstr "Obrázek ##"
 
 #: lib/layouts/beamerposter.layout:3 lib/examples/Articles:0
 msgid "Beamerposter"
@@ -10707,18 +10700,16 @@ msgid "Act Number"
 msgstr "Act Number"
 
 #: lib/layouts/broadway.layout:28
-#, fuzzy
 msgid "Act ##"
-msgstr "Část ##"
+msgstr "Act ##"
 
 #: lib/layouts/broadway.layout:33
 msgid "Scene Number"
 msgstr "Scene Number"
 
 #: lib/layouts/broadway.layout:34
-#, fuzzy
 msgid "Scene ##"
-msgstr "Scene"
+msgstr "Scene ##"
 
 #: lib/layouts/broadway.layout:38 lib/layouts/hollywood.layout:41
 msgid "Dialogue"
@@ -11921,7 +11912,7 @@ msgstr "Optional argument for the thanks statement"
 
 #: lib/layouts/elsart.layout:330 lib/layouts/theorems-counters-bytype.inc:7
 msgid "Theorem \\arabic{theorem}"
-msgstr "Theorem \\arabic{theorem}"
+msgstr "Věta \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:365
 msgid "PROOF."
@@ -11933,50 +11924,50 @@ msgstr "Lemma \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:396 lib/layouts/theorems-counters-bytype.inc:12
 msgid "Corollary \\arabic{theorem}"
-msgstr "Corollary \\arabic{theorem}"
+msgstr "Důsledek \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:408 lib/layouts/theorems-counters-bytype.inc:22
 msgid "Proposition \\arabic{theorem}"
-msgstr "Proposition \\arabic{theorem}"
+msgstr "Tvrzení \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:420
 #: lib/layouts/theorems-counters-extended-bytype.inc:6
 msgid "Criterion \\arabic{theorem}"
-msgstr "Criterion \\arabic{theorem}"
+msgstr "Kritérium \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:432
 #: lib/layouts/theorems-counters-extended-bytype.inc:11
 msgid "Algorithm \\arabic{theorem}"
-msgstr "Algorithm \\arabic{theorem}"
+msgstr "Algoritmus \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:444 lib/layouts/theorems-counters-bytype.inc:35
 msgid "Definition \\arabic{theorem}"
-msgstr "Definition \\arabic{theorem}"
+msgstr "Definice \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:463 lib/layouts/theorems-counters-bytype.inc:26
 msgid "Conjecture \\arabic{theorem}"
-msgstr "Conjecture \\arabic{theorem}"
+msgstr "Hypotéza \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:475 lib/layouts/theorems-counters-bytype.inc:39
 msgid "Example \\arabic{theorem}"
-msgstr "Example \\arabic{theorem}"
+msgstr "Příklad \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:485 lib/layouts/theorems-counters-bytype.inc:43
 msgid "Problem \\arabic{theorem}"
-msgstr "Problem \\arabic{theorem}"
+msgstr "Úloha \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:496 lib/layouts/theorems-counters-bytype.inc:58
 msgid "Remark \\arabic{theorem}"
-msgstr "Remark \\arabic{theorem}"
+msgstr "Poznámka \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:507
 #: lib/layouts/theorems-counters-extended-bytype.inc:24
 msgid "Note \\arabic{theorem}"
-msgstr "Note \\arabic{theorem}"
+msgstr "Poznámka \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:518 lib/layouts/theorems-counters-bytype.inc:62
 msgid "Claim \\arabic{theorem}"
-msgstr "Claim \\arabic{theorem}"
+msgstr "Tvrzení \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:535
 msgid "Summary \\arabic{summ}"
@@ -12236,9 +12227,8 @@ msgid "\\thesection.\\arabic{equation}"
 msgstr "\\thesection.\\arabic{equation}"
 
 #: lib/layouts/eqs-within-sections.module:20
-#, fuzzy
 msgid "(\\thesection.\\arabic{equation})"
-msgstr "\\thesection.\\arabic{equation}"
+msgstr "(\\thesection.\\arabic{equation})"
 
 #: lib/layouts/europasscv.layout:3 lib/examples/Articles:0
 msgid "Europass CV (2013)"
@@ -13736,9 +13726,8 @@ msgid "Question \\thequestion."
 msgstr "Question \\thequestion."
 
 #: lib/layouts/ijmpc.layout:469 lib/layouts/ijmpd.layout:503
-#, fuzzy
 msgid "Claim ##"
-msgstr "Tvrzení #."
+msgstr "Tvrzení ##"
 
 #: lib/layouts/ijmpc.layout:473 lib/layouts/ijmpd.layout:507
 #: lib/layouts/theorems-ams-bytype.inc:356
@@ -13772,29 +13761,24 @@ msgid "Comby"
 msgstr "Comby"
 
 #: lib/layouts/ijmpd.layout:434
-#, fuzzy
 msgid "Theorem ##"
-msgstr "Theorem #."
+msgstr "Theorem ##"
 
 #: lib/layouts/ijmpd.layout:465 lib/layouts/theorems-without-preamble.inc:87
-#, fuzzy
 msgid "Corollary ##"
-msgstr "Corollary #."
+msgstr "Důsledek ##"
 
 #: lib/layouts/ijmpd.layout:474 lib/layouts/theorems-without-preamble.inc:110
-#, fuzzy
 msgid "Lemma ##"
-msgstr "Lemma #."
+msgstr "Lemma ##"
 
 #: lib/layouts/ijmpd.layout:491 lib/layouts/theorems-without-preamble.inc:506
-#, fuzzy
 msgid "Question ##"
-msgstr "Question #."
+msgstr "Otázka ##"
 
 #: lib/layouts/ijmpd.layout:516 lib/layouts/theorems-without-preamble.inc:179
-#, fuzzy
 msgid "Conjecture ##"
-msgstr "Conjecture #."
+msgstr "Hypotéza ##"
 
 #: lib/layouts/ijmpd.layout:526 lib/layouts/theorems-without-preamble.inc:155
 msgid "Prop(osition)"
@@ -13802,9 +13786,8 @@ msgstr "Tvrz(ení)"
 
 #: lib/layouts/ijmpd.layout:528 lib/layouts/theorems-without-preamble.inc:133
 #: lib/layouts/theorems-without-preamble.inc:156
-#, fuzzy
 msgid "Proposition ##"
-msgstr "Proposition #."
+msgstr "Tvrzení ##"
 
 #: lib/layouts/initials.module:2
 msgid "Initials (Drop Caps)"
@@ -14959,9 +14942,8 @@ msgid "List of Tableaux"
 msgstr "Seznam tabel"
 
 #: lib/layouts/linguistics.module:608
-#, fuzzy
 msgid "Tableaux ##"
-msgstr "Tablo"
+msgstr "Tablo ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -15699,9 +15681,8 @@ msgid "Section ##"
 msgstr "Sekce ##"
 
 #: lib/layouts/numreport.inc:46
-#, fuzzy
 msgid "footnote \\arabic{footnote}"
-msgstr "\\superarabic{footnote}"
+msgstr "poznámka pod čarou \\arabic{footnote}"
 
 #: lib/layouts/numrevtex.inc:9
 msgid "\\Roman{section}."
@@ -16297,36 +16278,32 @@ msgid "Numbered List (Level 1)"
 msgstr "Očíslovaný seznam (úroveň 1)"
 
 #: lib/layouts/powerdot.layout:615 lib/layouts/stdcounters.inc:52
-#, fuzzy
 msgid "(\\arabic{enumi})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumi})"
 
 #: lib/layouts/powerdot.layout:619 lib/layouts/stdcounters.inc:56
 msgid "Numbered List (Level 2)"
 msgstr "Očíslovaný seznam (úroveň 2)"
 
 #: lib/layouts/powerdot.layout:621
-#, fuzzy
 msgid "(\\arabic{enumii})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumii})"
 
 #: lib/layouts/powerdot.layout:625 lib/layouts/stdcounters.inc:63
 msgid "Numbered List (Level 3)"
 msgstr "Očíslovaný seznam (úroveň 3)"
 
 #: lib/layouts/powerdot.layout:627
-#, fuzzy
 msgid "(\\arabic{enumiii})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumiii})"
 
 #: lib/layouts/powerdot.layout:631 lib/layouts/stdcounters.inc:70
 msgid "Numbered List (Level 4)"
 msgstr "Očíslovaný seznam (úroveň 4)"
 
 #: lib/layouts/powerdot.layout:633
-#, fuzzy
 msgid "(\\arabic{enumiv})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumiv})"
 
 #: lib/layouts/powerdot.layout:637 lib/layouts/stdcounters.inc:77
 msgid "Bibliography Item"
@@ -16486,9 +16463,8 @@ msgid "List of Videos"
 msgstr "List of Videos"
 
 #: lib/layouts/revtex4-x.inc:339
-#, fuzzy
 msgid "Video ##"
-msgstr "Video"
+msgstr "Video ##"
 
 #: lib/layouts/revtex4-x.inc:343
 msgid "Videos"
@@ -16660,9 +16636,8 @@ msgid "\\thechapter.\\arabic{equation}"
 msgstr "\\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrbook.layout:33
-#, fuzzy
 msgid "equation \\thechapter.\\arabic{equation}"
-msgstr "\\thechapter.\\arabic{equation}"
+msgstr "rovnice \\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrclass.inc:49
 msgid "\\alph{enumii})"
@@ -17379,18 +17354,16 @@ msgid "\\roman{enumiii}."
 msgstr "\\roman{enumiii}."
 
 #: lib/layouts/stdcounters.inc:66
-#, fuzzy
 msgid "(\\roman{enumiii})"
-msgstr "\\roman{enumiii}."
+msgstr "(\\roman{enumiii})"
 
 #: lib/layouts/stdcounters.inc:72
 msgid "\\Alph{enumiv}."
 msgstr "\\Alph{enumiv}."
 
 #: lib/layouts/stdcounters.inc:73
-#, fuzzy
 msgid "(\\Alph{enumiv})"
-msgstr "\\Alph{enumiv}."
+msgstr "(\\Alph{enumiv})"
 
 #: lib/layouts/stdcounters.inc:86
 msgid "Equation ##"
@@ -17401,9 +17374,8 @@ msgid "\\superarabic{footnote}"
 msgstr "\\superarabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:92 lib/layouts/stdcounters.inc:97
-#, fuzzy
 msgid "Footnote \\arabic{footnote}"
-msgstr "\\superarabic{footnote}"
+msgstr "Poznámka pod čarou \\arabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:98
 msgid "\\fnsymbol{thanks}"
@@ -18400,9 +18372,8 @@ msgid "Case (Level 1)"
 msgstr "Případ (úroveň 1)"
 
 #: lib/layouts/theorems-case.inc:13
-#, fuzzy
 msgid "Case \\arabic{casei}"
-msgstr "Případ \\arabic{casei}."
+msgstr "Případ \\arabic{casei}"
 
 #: lib/layouts/theorems-case.inc:14
 msgid "Case \\arabic{casei}."
@@ -18417,9 +18388,8 @@ msgid "Case \\roman{caseii}."
 msgstr "Případ \\roman{caseii}."
 
 #: lib/layouts/theorems-case.inc:20
-#, fuzzy
 msgid "Case \\roman{caseii}"
-msgstr "Případ \\roman{caseii}."
+msgstr "Případ \\roman{caseii}"
 
 #: lib/layouts/theorems-case.inc:23
 msgid "Case (Level 3)"
@@ -18430,18 +18400,16 @@ msgid "Case \\alph{caseiii}."
 msgstr "Případ \\alph{caseiii}."
 
 #: lib/layouts/theorems-case.inc:26
-#, fuzzy
 msgid "Case \\alph{caseiii}"
-msgstr "Případ \\alph{caseiii}."
+msgstr "Případ \\alph{caseiii}"
 
 #: lib/layouts/theorems-case.inc:29
 msgid "Case (Level 4)"
 msgstr "Případ (úroveň 4)"
 
 #: lib/layouts/theorems-case.inc:31
-#, fuzzy
 msgid "Case \\arabic{caseiv}"
-msgstr "Případ \\arabic{caseiv}."
+msgstr "Případ \\arabic{caseiv}"
 
 #: lib/layouts/theorems-case.inc:32
 msgid "Case \\arabic{caseiv}."
@@ -18480,54 +18448,44 @@ msgstr ""
 "prostředí kapitol."
 
 #: lib/layouts/theorems-counters-bytype.inc:30
-#, fuzzy
 msgid "Fact \\arabic{theorem}"
-msgstr "Note \\arabic{theorem}"
+msgstr "Fakt \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:48
-#, fuzzy
 msgid "Exercise \\arabic{theorem}"
-msgstr "Example \\arabic{theorem}"
+msgstr "Cvičení \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:53
-#, fuzzy
 msgid "Solution \\arabic{theorem}"
-msgstr "Proposition \\arabic{theorem}"
+msgstr "Řešení \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:16
-#, fuzzy
 msgid "Axiom \\arabic{theorem}"
-msgstr "Claim \\arabic{theorem}"
+msgstr "Axiom \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:20
-#, fuzzy
 msgid "Condition \\arabic{theorem}"
-msgstr "Criterion \\arabic{theorem}"
+msgstr "Podmínka \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:28
-#, fuzzy
 msgid "Notation \\arabic{theorem}"
-msgstr "Note \\arabic{theorem}"
+msgstr "Značení \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:32
-#, fuzzy
 msgid "Summary \\arabic{theorem}"
-msgstr "Lemma \\arabic{theorem}"
+msgstr "Souhrn \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:36
-#, fuzzy
 msgid "Conclusion \\arabic{theorem}"
-msgstr "Claim \\arabic{theorem}"
+msgstr "Závěr \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:40
-#, fuzzy
 msgid "Assumption \\arabic{theorem}"
-msgstr "Proposition \\arabic{theorem}"
+msgstr "Předpoklad \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:44
-#, fuzzy
 msgid "Question \\arabic{theorem}"
-msgstr "Definition \\arabic{theorem}"
+msgstr "Otázka \\arabic{theorem}"
 
 #: lib/layouts/theorems-named.module:3
 msgid "Standard Theorems (Nameable)"
@@ -18665,25 +18623,21 @@ msgid "Prop \\theprop."
 msgstr "Prop \\theprop."
 
 #: lib/layouts/theorems-without-preamble.inc:209
-#, fuzzy
 msgid "Fact ##"
-msgstr "Fact #:"
+msgstr "Fakt ##"
 
 #: lib/layouts/theorems-without-preamble.inc:232
-#, fuzzy
 msgid "Definition ##"
-msgstr "Definition #."
+msgstr "Definice ##"
 
 #: lib/layouts/theorems-without-preamble.inc:263
-#, fuzzy
 msgid "Example ##"
-msgstr "Example #."
+msgstr "Příklad ##"
 
 #: lib/layouts/theorems-without-preamble.inc:285
 #: lib/layouts/theorems-without-preamble.inc:311
-#, fuzzy
 msgid "Problem ##"
-msgstr "Problem #."
+msgstr "Úloha ##"
 
 #: lib/layouts/theorems-without-preamble.inc:309
 msgid "Prob(lem)"
@@ -18707,11 +18661,11 @@ msgstr "# [počet prob]"
 
 #: lib/layouts/theorems-without-preamble.inc:378
 msgid "Label of Problem"
-msgstr "Značka problému"
+msgstr "Značka úlohy"
 
 #: lib/layouts/theorems-without-preamble.inc:379
 msgid "Label of the corresponding problem"
-msgstr "Značka odpovídajícího problému"
+msgstr "Značka odpovídající úlohy"
 
 #: lib/layouts/theorems-without-preamble.inc:392
 #, fuzzy
@@ -18869,18 +18823,16 @@ msgid "Margin Figure"
 msgstr "Margin Figure"
 
 #: lib/layouts/tufte-book.layout:258
-#, fuzzy
 msgid "Margin Figure ##"
-msgstr "Margin Figure"
+msgstr "Margin Figure ##"
 
 #: lib/layouts/tufte-book.layout:262
 msgid "Margin Table"
 msgstr "Margin Table"
 
 #: lib/layouts/tufte-book.layout:263
-#, fuzzy
 msgid "Margin Table ##"
-msgstr "Margin Table"
+msgstr "Margin Table ##"
 
 #: lib/layouts/tufte-book.layout:269
 msgid "MarginTable"
@@ -28516,7 +28468,7 @@ msgstr "Nelze znovunačíst dokument %1$s"
 
 #: src/Buffer.cpp:5726
 msgid "File deleted from disk"
-msgstr ""
+msgstr "Soubor smazán z disku"
 
 #: src/Buffer.cpp:5727
 #, c-format
@@ -28524,7 +28476,7 @@ msgid ""
 "The file\n"
 "  %1$s\n"
 "has been deleted from disk!"
-msgstr ""
+msgstr "Soubor\n  %1$s\nbyl smazán z disku!"
 
 #: src/BufferParams.cpp:535
 msgid ""
