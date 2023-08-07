@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-07-29 14:43+0200\n"
-"PO-Revision-Date: 2023-07-29 13:05+0000\n"
+"POT-Creation-Date: 2023-08-01 11:34+0200\n"
+"PO-Revision-Date: 2023-08-01 09:36+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -18348,6 +18348,10 @@ msgstr "Prípad \\alph{caseiii}"
 #: lib/layouts/theorems-case.inc:26
 msgid "Case (Level 4)"
 msgstr "Prípad (Úroveň 4)"
+
+#: lib/layouts/theorems-case.inc:31
+msgid "Case \\arabic{caseiv}"
+msgstr "Prípad \\arabic{caseiv}"
 
 #: lib/layouts/theorems-case.inc:28
 msgid "Case \\arabic{caseiv}."
