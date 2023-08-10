@@ -605,6 +605,6 @@ Float
 	ListName              "List of Tableaux"
 	IsPredefined          false
 	UsesFloatPkg          true
-	PrettyFormat          "Tableaux ##"
+	PrettyFormat          "Tableau ##"
 End
 
