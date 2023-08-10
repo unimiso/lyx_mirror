@@ -4880,8 +4880,13 @@ void GuiView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 				? Qt::Vertical : Qt::Horizontal);
 			TabWorkArea * twa = addTabWorkArea();
 			GuiWorkArea * wa = twa->addWorkArea(*doc_buffer, *this);
+
+			// set cursor to same position as current view.
+			// TODO: would be good to *scroll* to same position also
+			//       so that the display is the same (#12689)
 			DocIterator cur = bv->cursor();
 			wa->bufferView().moveToPosition(cur.pit(), cur.pos(), 0, 0);
+
 			setCurrentWorkArea(wa);
 			break;
 		}
