@@ -1659,10 +1659,16 @@ void InsetMathHull::eol(TeXMathStream & os, row_type row, bool fragile, bool lat
                         bool last_eoln) const
 {
 	if (numberedType()) {
+		bool const for_preview =
+			(os.output() == TeXMathStream::wsPreview);
 		if (label_[row]) {
-			docstring const name =
-				latex ? escape(label_[row]->getParam("name"))
-				      : label_[row]->getParam("name");
+			// Use utf8 strings for previewed labels when possible
+			bool use_utf8 = for_preview &&
+				(buffer().params().useNonTeXFonts ||
+				 buffer().params().encoding().package() == Encoding::japanese);
+			docstring const name = (latex && !use_utf8)
+				? escape(label_[row]->getParam("name"))
+				: label_[row]->getParam("name");
 			os << "\\label{" + name + '}';
 		}
 		if (type_ != hullMultline) {
@@ -1671,7 +1677,7 @@ void InsetMathHull::eol(TeXMathStream & os, row_type row, bool fragile, bool lat
 			else if (numbered_[row]  == NOTAG)
 				os<< "\\notag ";
 		}
-		if (os.output() == TeXMathStream::wsPreview && !numbers_[row].empty()) {
+		if (for_preview && !numbers_[row].empty()) {
 			os << "\\global\\def\\theequation{" << numbers_[row] << "}\n";
 		}
 
