@@ -1065,7 +1065,7 @@ endif
 \def\oiint{\oiintop\nolimits}       mathop  &#x222F;        esint
 \def\sqint{\sqintop\nolimits}       mathop  &#x2A16;        esint
 \def\sqiint{\sqiintop\nolimits}     mathop  esint
-\def\dotsint{\dotsintop\nolimits}   mathop  &#x222B;&#x22EF;&#x222B;
+\def\dotsint{\dotsintop\nolimits}   mathop  &#x222B;&#x22EF;&#x222B;        esint
 \def\ointctrclockwise{\ointctrclockwiseop\nolimits} mathop  &#x2232;        esint
 \def\ointclockwise{\ointclockwiseop\nolimits}       mathop  &#x2232;        esint
 
