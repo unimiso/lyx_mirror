@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 617
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -16328,6 +16328,123 @@ tbp
 status collapsed
 
 \begin_layout Plain Layout
+PrettyFormat
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+string
+\end_layout
+
+\end_inset
+
+=""] Ein Format,
+ das für 
+\emph on
+formatierte Querverweise
+\emph default
+ auf einen Zähler verwendet wird.
+ Möchte man zum Beispiel Verweise auf Tabellen als 
+\begin_inset Quotes gld
+\end_inset
+
+Tabelle
+\begin_inset space ~
+\end_inset
+
+2
+\begin_inset Quotes grd
+\end_inset
+
+ ausgegeben haben,
+ kann die Zeichenkette 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+##
+\end_layout
+
+\end_inset
+
+ oder eine Zählerspezifikation enthalten (für letzteres siehe die Dokumentation von 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+LabelString
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:Zähler"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+).
+ Im ersteren Fall werden die Zeichen 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+##
+\end_layout
+
+\end_inset
+
+ später durch die referenzierte Nummer ersetzt.
+ Für Abschnitte würde man also beispielsweise 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Abschnitt ##
+\end_layout
+
+\end_inset
+
+ verwenden.
+ Eine andere Möglichkeit wäre 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+S
+\backslash
+,
+\backslash
+arabic{section}
+\end_layout
+
+\end_inset
+
+;
+ dies würde als §
+\begin_inset space \thinspace{}
+\end_inset
+
+2.7 ausgegeben).
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 RefPrefix
 \end_layout
 
@@ -21678,7 +21795,7 @@ Abschnitt
 \end_inset
 
  haben,
- sollte der String 
+ kann die Zeichenkette 
 \begin_inset Flex Code
 status collapsed
 
@@ -21688,9 +21805,29 @@ status collapsed
 
 \end_inset
 
+ oder eine Zählerspezifikation wie in 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+LabelString
+\end_layout
+
+\end_inset
+
  enthalten.
- Diese Zeichen werden später durch die referenzierte Abschnittsnummer ersetzt.
- Für Abschnitte würde man also 
+ Im ersteren Fall werden die Zeichen 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+##
+\end_layout
+
+\end_inset
+
+ später durch die referenzierte Abschnittsnummer ersetzt.
+ Für Abschnitte würde man also beispielsweise 
 \begin_inset Flex Code
 status collapsed
 
@@ -21701,6 +21838,148 @@ Abschnitt ##
 \end_inset
 
  verwenden.
+ Eine andere Möglichkeit wäre 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+S
+\backslash
+,
+\backslash
+arabic{section}
+\end_layout
+
+\end_inset
+
+;
+ dies würde als §
+\begin_inset space \thinspace{}
+\end_inset
+
+2.7 ausgegeben).
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+RefFormat
+\end_layout
+
+\end_inset
+
+ [
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+string
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+string
+\end_layout
+
+\end_inset
+
+] Für die Verwendung mit 
+\begin_inset Quotes gld
+\end_inset
+
+Formatierten Querverweisen
+\begin_inset Quotes grd
+\end_inset
+
+ gedacht,
+ vor allem dann,
+ wenn ein einzelner Zähler mit verschiedenen Stilvarianten verwendet wird.
+ So wird etwa der Zähler 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+theorem
+\end_layout
+
+\end_inset
+
+ oft mit verschiedenartigen Theoremvarianten verwendet:
+ Theorem,
+ Lemma etc.
+ Das erste String-Argument spezifiziert ein Präfix,
+ das in den Marken verwendet wird (bspw.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+thm
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Quotes gld
+\end_inset
+
+lem
+\begin_inset Quotes grd
+\end_inset
+
+),
+ das zweite eine Formatierungsangabe,
+ wie Sie auch für 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+LabelString
+\end_layout
+
+\end_inset
+
+ oder 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+PrettyFormat
+\end_layout
+
+\end_inset
+
+ verwendet wird.
+ Wenn 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+RefFormat
+\end_layout
+
+\end_inset
+
+ nicht definiert ist,
+ wird auf 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+PrettyFormat
+\end_layout
+
+\end_inset
+
+ zurückgegriffen.
 \end_layout
 
 \begin_layout Description
