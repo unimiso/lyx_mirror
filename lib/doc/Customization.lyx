@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 617
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -26247,10 +26247,34 @@ is
 ,
  or perhaps:
  
+\change_deleted -712698321 1691671418
+
 \backslash
 S
 \backslash
-arabic{section} (which might render as §2.7)
+arabic{section}
+\change_inserted -712698321 1691671418
+
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1691671418
+
+\backslash
+S
+\backslash
+arabic{section}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -584632292 1690588159
+ (which might render as §2.7)
 \change_unchanged
 .
 \change_inserted -584632292 1690587966
@@ -26322,7 +26346,11 @@ theorem
  counter is often used for all sorts of theorem-like environments:
  Theorem,
  Lemma,
- eetc.
+ 
+\change_deleted -712698321 1691671691
+e
+\change_inserted -584632292 1690588264
+etc.
  The first argument gives a prefix used in the labels (e.g.,
  
 \begin_inset Quotes eld
