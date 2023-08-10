@@ -116,8 +116,8 @@ public:
 				  UpdateType utype, TocBackend & backend) const override;
 	///
 	std::string contextMenuName() const override;
-	/// Force inset into LTR environment if surroundings are RTL
-	bool forceLTR(OutputParams const &) const override { return true; }
+	/// Force inset into LTR environment if surroundings are RTL (only needed in pdfTeX)
+	bool forceLTR(OutputParams const & runparams) const override { return !runparams.isFullUnicode(); }
 	///
 	void doDispatch(Cursor & cur, FuncRequest & cmd) override;
 	///
