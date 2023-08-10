@@ -37,6 +37,8 @@ InsertTableWidget::InsertTableWidget(QWidget * parent)
 {
 	init();
 	setMouseTracking(true);
+	// display tooltip without any delay
+	setStyle(new ProxyStyle(style()));
 }
 
 
@@ -120,11 +122,7 @@ void InsertTableWidget::mouseMoveEvent(QMouseEvent * event)
 	if (bottom_ != b0 || right_ != r0) {
 		update();
 		QString const status = QString("%1x%2").arg(bottom_).arg(right_);
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-		QToolTip::showText(event->globalPosition().toPoint(), status , this);
-#else
-		QToolTip::showText(event->globalPos(), status , this);
-#endif
+		setToolTip(status);
 	}
 }
 
