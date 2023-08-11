@@ -826,6 +826,10 @@ void GuiCitation::init()
 
 	buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 	buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+
+	// apply filter
+	if (!filter_->text().isEmpty())
+		findText(filter_->text(), true);
 }
 
 
