@@ -2617,8 +2617,7 @@ void GuiDocument::fontScToggled(bool state)
 
 void GuiDocument::updateExtraOpts()
 {
-	QString font;
-	font = fontModule->fontsRomanCO->getData(
+	QString font = fontModule->fontsRomanCO->getData(
 			fontModule->fontsRomanCO->currentIndex());
 	bool const rm_opts = providesExtraOpts(font);
 	font = fontModule->fontsSansCO->getData(
@@ -2638,8 +2637,7 @@ void GuiDocument::updateExtraOpts()
 
 void GuiDocument::updateFontOptions()
 {
-	QString font;
-	font = fontModule->fontsSansCO->getData(
+	QString font = fontModule->fontsSansCO->getData(
 			fontModule->fontsSansCO->currentIndex());
 	bool scalable = providesScale(font);
 	fontModule->scaleSansSB->setEnabled(scalable);
@@ -4466,6 +4464,8 @@ void GuiDocument::paramsToDialog()
 		sansChanged(fontModule->fontsSansCO->currentIndex());
 		ttChanged(fontModule->fontsTypewriterCO->currentIndex());
 	}
+	// Handle options enabling
+	updateFontOptions();
 
 	if (!bp_.fonts_cjk.empty())
 		fontModule->cjkFontLE->setText(
