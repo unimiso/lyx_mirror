@@ -498,6 +498,7 @@ Language canadien
 	BabelName        acadian
 	PolyglossiaName  french
 	PolyglossiaOpts  "variant=canadian"
+	ActiveChars      ;!?:
 	XindyName        french
 	QuoteStyle       french
 	Encoding         iso8859-15
@@ -705,6 +706,7 @@ Language french
 	GuiName          "French"
 	HasGuiSupport    true
 	BabelName        french
+	ActiveChars      ;!?:
 	PolyglossiaName  french
 	XindyName        french
 	QuoteStyle       french

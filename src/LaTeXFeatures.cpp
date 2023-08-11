@@ -1284,6 +1284,14 @@ string const LaTeXFeatures::getPackages() const
 	// The rest of these packages are somewhat more complicated
 	// than those above.
 
+	// Babel languages with activated colon (such as French) break
+	// with prettyref. Work around that.
+	if (!runparams_.isFullUnicode() && useBabel()
+	    && mustProvide("prettyref") && contains(getActiveChars(), ':')) {
+		packages << "% Make prettyref compatible with babel active colon\n"
+			 << "\\def\\prettyref#1{\\expandafter\\@prettyref\\detokenize{#1:}}\n";
+	}
+
 	if (mustProvide("changebar")) {
 		packages << "\\usepackage";
 		if (runparams_.flavor == Flavor::LaTeX
