@@ -289,9 +289,11 @@ bool findOne(BufferView * bv, docstring const & searchstr,
 	     bool find_del, bool check_wrap, bool const auto_wrap,
 	     bool instant, bool onlysel)
 {
+	bool const had_selection = bv->cursor().selection();
+
 	// Clean up previous selections with empty searchstr on instant
 	if (searchstr.empty() && instant) {
-		if (bv->cursor().selection()) {
+		if (had_selection) {
 			bv->setCursor(bv->cursor().selectionBegin());
 			bv->clearSelection();
 		}
@@ -301,9 +303,10 @@ bool findOne(BufferView * bv, docstring const & searchstr,
 	if (!searchAllowed(searchstr))
 		return false;
 
-	DocIterator const endcur = forward ? bv->cursor().selectionEnd() : bv->cursor().selectionBegin();
+	DocIterator const startcur = bv->cursor().selectionBegin();
+	DocIterator const endcur = bv->cursor().selectionEnd();
 
-	if (onlysel && bv->cursor().selection()) {
+	if (onlysel && had_selection) {
 		docstring const matchstring = bv->cursor().selectionAsString(false);
 		docstring const lcmatchsting = support::lowercase(matchstring);
 		if (matchstring == searchstr || (!case_sens && lcmatchsting == lowercase(searchstr))) {
@@ -329,11 +332,11 @@ bool findOne(BufferView * bv, docstring const & searchstr,
 
 	int match_len = forward
 		? findForward(cur, endcur, match, find_del, onlysel)
-		: findBackwards(cur, endcur, match, find_del, onlysel);
+		: findBackwards(cur, startcur, match, find_del, onlysel);
 
 	if (match_len > 0)
 		bv->putSelectionAt(cur, match_len, !forward);
-	else if (onlysel && bv->cursor().selection()) {
+	else if (onlysel && had_selection) {
 		docstring q = _("The search string was not found within the selection.\n"
 				"Continue search outside?");
 		int search_answer = frontend::Alert::prompt(_("Search outside selection?"),
@@ -347,7 +350,6 @@ bool findOne(BufferView * bv, docstring const & searchstr,
 		return false;
 	}
 	else if (check_wrap) {
-		DocIterator cur_orig(bv->cursor());
 		bool wrap = auto_wrap;
 		if (!auto_wrap) {
 			docstring q;
@@ -380,7 +382,13 @@ bool findOne(BufferView * bv, docstring const & searchstr,
 				    find_del, false, false, false, false))
 				return true;
 		}
-		bv->cursor().setCursor(cur_orig);
+		bv->setCursor(startcur);
+
+		// restore original selection
+		if (had_selection) {
+			bv->cursor().resetAnchor();
+			bv->setCursorSelectionTo(endcur);
+		}
 		return false;
 	}
 
