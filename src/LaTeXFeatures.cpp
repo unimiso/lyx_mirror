@@ -1289,7 +1289,18 @@ string const LaTeXFeatures::getPackages() const
 	if (!runparams_.isFullUnicode() && useBabel()
 	    && mustProvide("prettyref") && contains(getActiveChars(), ':')) {
 		packages << "% Make prettyref compatible with babel active colon\n"
-			 << "\\def\\prettyref#1{\\expandafter\\@prettyref\\detokenize{#1:}}\n";
+			    "\\bgroup\n"
+			    "\\makeatletter\n"
+			    "\\catcode`:=13\n"
+			    "\\gdef\\prettyref#1{\\@prettyref#1:}\n"
+			    "\\gdef\\@prettyref#1:#2:{%\n"
+			    " 	\\expandafter\\ifx\\csname pr@#1\\endcsname\\relax\n"
+			    "		\\PackageWarning{prettyref}{Reference format #1\\space undefined}%\n"
+			    "		\\ref{#1:#2}%\n"
+			    "	\\else\n"
+			    "		\\csname pr@#1\\endcsname{#1:#2}%\n"
+			    "	\\fi}\n"
+			    "\\egroup\n";
 	}
 
 	if (mustProvide("changebar")) {
