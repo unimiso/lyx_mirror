@@ -363,7 +363,7 @@ msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-07-23 17:32+0200\n"
-"PO-Revision-Date: 2023-07-25 18:08+0200\n"
+"PO-Revision-Date: 2023-08-13 16:26+0200\n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
 "Language-Team: lyxfr\n"
 "Language: fr\n"
@@ -12611,7 +12611,7 @@ msgstr "endnote"
 #: lib/layouts/foottoend.module:20 lib/layouts/foottoend.module:23
 #: lib/layouts/memoir.layout:326 lib/layouts/memoir.layout:329
 msgid "Notes[[Endnotes]]"
-msgstr "Notes en fin de document"
+msgstr "Notes"
 
 #: lib/layouts/enotez.module:2
 msgid "Endnotes (Extended)"
