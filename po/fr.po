@@ -363,7 +363,7 @@ msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-07-23 17:32+0200\n"
-"PO-Revision-Date: 2023-07-24 11:52+0200\n"
+"PO-Revision-Date: 2023-07-25 18:08+0200\n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
 "Language-Team: lyxfr\n"
 "Language: fr\n"
@@ -16113,15 +16113,15 @@ msgstr ""
 
 #: lib/layouts/mwart.layout:3
 msgid "Polish Article (MW Bundle)"
-msgstr "Article polonais (MW Bundle)"
+msgstr "Article polonais (paquet MW)"
 
 #: lib/layouts/mwbk.layout:3
 msgid "Polish Book (MW Bundle)"
-msgstr "Book polonais (MW Bundle)"
+msgstr "Livre polonais (paquet MW)"
 
 #: lib/layouts/mwrep.layout:3
 msgid "Polish Report (MW Bundle)"
-msgstr "Report polonais (MW Bundle)"
+msgstr "Rapport polonais (paquet MW)"
 
 #: lib/layouts/natbibapa.module:2
 msgid "APA Style with Natbib"
