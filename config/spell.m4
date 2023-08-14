@@ -61,7 +61,7 @@ AC_DEFUN([LYX_HAVE_HUNSPELL_CXXABI],
 [
   AC_MSG_CHECKING([whether hunspell C++ (rather than C) ABI is provided])
   save_CXXFLAGS=$CXXFLAGS
-  CXXFLAGS="$ENCHANT_CFLAGS $AM_CXXFLAGS $CXXFLAGS"
+  CXXFLAGS="$HUNSPELL_CFLAGS $AM_CXXFLAGS $CXXFLAGS"
 
 # in the C++ ABI, stem() returns a vector, in the C ABI, it returns an int
   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <hunspell/hunspell.hxx>]], [[Hunspell sp("foo", "bar");
