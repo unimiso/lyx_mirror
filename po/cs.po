@@ -18668,23 +18668,20 @@ msgid "Label of the corresponding problem"
 msgstr "Značka odpovídající úlohy"
 
 #: lib/layouts/theorems-without-preamble.inc:392
-#, fuzzy
 msgid "Exercise ##"
-msgstr "Exercise #."
+msgstr "Cvičení ##"
 
 #: lib/layouts/theorems-without-preamble.inc:482
-#, fuzzy
 msgid "Property ##"
-msgstr "Property #."
+msgstr "Vlastnost ##"
 
 #: lib/layouts/theorems-without-preamble.inc:488
 msgid "Property \\theproperty."
 msgstr "Vlastnost \\theproperty."
 
 #: lib/layouts/theorems-without-preamble.inc:530
-#, fuzzy
 msgid "Note ##"
-msgstr "Note #."
+msgstr "Poznámka ##"
 
 #: lib/layouts/todonotes.module:2
 msgid "TODO Notes"
