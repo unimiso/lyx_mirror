@@ -5310,14 +5310,17 @@ Dialog * GuiView::findOrBuild(string const & name, bool hide_it)
 		return dialog;
 
 	dialog = build(name);
-	d.dialogs_[name].reset(dialog);
-	// Force a uniform style for group boxes
-	// On Mac non-flat works better, on Linux flat is standard
-	flatGroupBoxes(dialog->asQWidget(), guiApp->platformName() != "cocoa");
-	if (lyxrc.allow_geometry_session)
-		dialog->restoreSession();
-	if (hide_it)
-		dialog->hideView();
+	if (dialog) {
+
+		d.dialogs_[name].reset(dialog);
+		// Force a uniform style for group boxes
+		// On Mac non-flat works better, on Linux flat is standard
+		flatGroupBoxes(dialog->asQWidget(), guiApp->platformName() != "cocoa");
+		if (lyxrc.allow_geometry_session)
+			dialog->restoreSession();
+		if (hide_it)
+			dialog->hideView();
+		}
 	return dialog;
 }
 
