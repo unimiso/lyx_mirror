@@ -67,6 +67,8 @@ GuiErrorList::GuiErrorList(GuiView & lv)
 		this, SLOT(viewLog()));
 	connect(showAnywayPB, SIGNAL(clicked()),
 		this, SLOT(showAnyway()));
+	connect(errorsLW, SIGNAL(itemClicked(QListWidgetItem *)),
+		this, SLOT(select()));
 	connect(errorsLW, SIGNAL(currentRowChanged(int)),
 		this, SLOT(select()));
 
