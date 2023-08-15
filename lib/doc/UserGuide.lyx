@@ -10224,14 +10224,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10244,7 +10242,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10268,7 +10265,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -36876,7 +36872,11 @@ file
 
 \end_inset
 
- (filled by JabRef) or 
+ (filled by JabRef
+\change_inserted 5863208 1692129620
+ and Zotero
+\change_inserted -712698321 1598509157
+) or 
 \begin_inset Flex Code
 status collapsed
 
