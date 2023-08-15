@@ -1274,34 +1274,40 @@ string const LaTeXFeatures::getPackages() const
 	// also unknown packages can be requested. They are silently
 	// swallowed now. We should change this eventually.
 
+	// Simple hooks to add things before or after a given "simple"
+	// feature. Useful if loading order matters.
+	map<string, string> before_simplefeature_;
+	map<string, string> after_simplefeature_;
+
+	// Babel languages with activated colon (such as French) break
+	// with prettyref. Work around that.
+	if (mustProvide("prettyref") && !runparams_.isFullUnicode()
+	    && useBabel() && contains(getActiveChars(), ':')) {
+		before_simplefeature_["prettyref"] =
+				"% Make prettyref compatible with babel active colon\n"
+				"% (make ':' active in prettyref definitions)\n"
+				"\\edef\\lyxsavedcolcatcode{\\the\\catcode`\\:}\n"
+				"\\catcode`:=13\n";
+		after_simplefeature_["prettyref"] =
+				"% restore original catcode for :\n"
+				"\\catcode`\\:=\\lyxsavedcolcatcode\\relax\n";
+	}
+	
 	//  These are all the 'simple' includes.  i.e
 	//  packages which we just \usepackage{package}
+	//  potentially preceded and followed by the hook code
 	for (char const * feature : simplefeatures) {
-		if (mustProvide(feature))
+		if (mustProvide(feature)) {
+			if (before_simplefeature_.find(feature) != before_simplefeature_.end())
+				packages << before_simplefeature_[feature];
 			packages << "\\usepackage{" << feature << "}\n";
+			if (after_simplefeature_.find(feature) != after_simplefeature_.end())
+				packages << after_simplefeature_[feature];
+		}
 	}
 
 	// The rest of these packages are somewhat more complicated
 	// than those above.
-
-	// Babel languages with activated colon (such as French) break
-	// with prettyref. Work around that.
-	if (!runparams_.isFullUnicode() && useBabel()
-	    && mustProvide("prettyref") && contains(getActiveChars(), ':')) {
-		packages << "% Make prettyref compatible with babel active colon\n"
-			    "\\bgroup\n"
-			    "\\makeatletter\n"
-			    "\\catcode`:=13\n"
-			    "\\gdef\\prettyref#1{\\@prettyref#1:}\n"
-			    "\\gdef\\@prettyref#1:#2:{%\n"
-			    " 	\\expandafter\\ifx\\csname pr@#1\\endcsname\\relax\n"
-			    "		\\PackageWarning{prettyref}{Reference format #1\\space undefined}%\n"
-			    "		\\ref{#1:#2}%\n"
-			    "	\\else\n"
-			    "		\\csname pr@#1\\endcsname{#1:#2}%\n"
-			    "	\\fi}\n"
-			    "\\egroup\n";
-	}
 
 	if (mustProvide("changebar")) {
 		packages << "\\usepackage";
