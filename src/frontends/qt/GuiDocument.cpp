@@ -2424,6 +2424,25 @@ void GuiDocument::updateQuoteStyles(bool const set)
 			langModule->quoteStyleCO->addItem(
 				toqstr(quoteparams.getGuiLabel(qs, langdef)), static_cast<int>(qs));
 	}
+	// Use document serif font to assure quotation marks are distinguishable
+	QFont comboFont(toqstr(lyxrc.roman_font_name),
+			langModule->quoteStyleCO->fontInfo().pointSize() * 1.4, -1, false);
+	QFontMetrics fm(comboFont);
+	// calculate width of the widest item in the set font
+	int qswidth = 0;
+	for (int i = 0; i < langModule->quoteStyleCO->count(); ++i) {
+		langModule->quoteStyleCO->setItemData(i, QVariant(comboFont), Qt::FontRole);
+		QString str = langModule->quoteStyleCO->itemText(i);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
+		qswidth = max(qswidth, fm.horizontalAdvance(str));
+#else
+		qswidth = max(qswidth, fm.width(str));
+#endif
+	}
+	// add scrollbar width and margin to width
+	qswidth += langModule->quoteStyleCO->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+	qswidth += langModule->quoteStyleCO->view()->autoScrollMargin();
+	langModule->quoteStyleCO->view()->setMinimumWidth(qswidth);
 	if (set && has_default)
 		// (re)set to the default style
 		langModule->quoteStyleCO->setCurrentIndex(0);
