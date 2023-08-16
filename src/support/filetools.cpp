@@ -38,8 +38,10 @@
 #include "support/Systemcall.h"
 #include "support/qstring_helpers.h"
 #include "support/TempFile.h"
+#include "support/textutils.h"
 
 #include <QDir>
+#include <QUrl>
 
 #include "support/lassert.h"
 
@@ -939,6 +941,22 @@ string const getExtension(string const & name)
 				   name.length() - (last_dot + 1));
 	else
 		return string();
+}
+
+
+docstring const provideScheme(docstring const & name, docstring const & scheme)
+{
+	QUrl url(toqstr(name));
+	if (!url.scheme().isEmpty())
+		// Has a scheme. Return as is.
+		return name;
+	if (scheme == from_ascii("doi")) {
+		// check if it is the pure DOI (without URL)
+		if (isDigitASCII(name[1]))
+			return from_ascii("https://doi.org/") + name;
+	}
+	url.setScheme(toqstr(scheme));
+	return qstring_to_ucs4(url.toString());
 }
 
 

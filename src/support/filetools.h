@@ -240,6 +240,9 @@ addExtension(std::string const & name, std::string const & extension);
 /// Return the extension of the file (not including the .)
 std::string const getExtension(std::string const & name);
 
+/// Provide a scheme (such as "file") if not present. Assumes absolute path input.
+docstring const provideScheme(docstring const & name, docstring const & scheme);
+
 /** \return the name that LyX will give to the unzipped file \p zipped_file
   if the second argument of unzipFile() is empty.
  */

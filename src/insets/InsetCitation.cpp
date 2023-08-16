@@ -35,6 +35,7 @@
 #include "support/debug.h"
 #include "support/docstream.h"
 #include "support/FileNameList.h"
+#include "support/filetools.h"
 #include "support/gettext.h"
 #include "support/lstrings.h"
 
@@ -225,14 +226,15 @@ void InsetCitation::openCitation()
 		        << " citation search pattern: " << lyxrc.citation_search_pattern);
 		docstring locator;
 		if (!file.empty()) {
-			locator = file;
+			locator = provideScheme(file, from_ascii("file"));
 		} else if (!doi.empty()) {
-			locator = doi;
+			locator = provideScheme(doi, from_ascii("doi"));
 		} else if (!url.empty()) {
 			locator = url;
 		} else {
 			locator = "EXTERNAL " + titledata;
 		}
+		LYXERR(Debug::INSETS, "Resolved locator: " << locator);
 		FuncRequest cmd = FuncRequest(LFUN_CITATION_OPEN, locator);
 		lyx::dispatch(cmd);
 	}
