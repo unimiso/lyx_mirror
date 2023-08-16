@@ -626,10 +626,11 @@ void LayoutBox::selected(int index)
 	}
 
 	// get selection
-	QModelIndex mindex = d->filterModel_->mapToSource(
-		d->filterModel_->index(index, 1));
-	docstring const layoutName = qstring_to_ucs4(
-		d->model_->itemFromIndex(mindex)->text());
+	// get the index of the untranslated layout name (which is in column 1)
+	QModelIndex const lindex = d->filterModel_->index(index, 1);
+	QModelIndex const mindex = d->filterModel_->mapToSource(lindex);
+	QString const qlayout = d->model_->itemFromIndex(mindex)->text();
+	docstring const layoutName = qstring_to_ucs4(qlayout);
 
 	// find corresponding text class
 	if (d->text_class_->hasLayout(layoutName)) {
