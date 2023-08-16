@@ -618,18 +618,18 @@ void LayoutBox::updateContents(bool reset)
 
 void LayoutBox::selected(int index)
 {
-	// get selection
-	QModelIndex mindex = d->filterModel_->mapToSource(
-		d->filterModel_->index(index, 1));
-	docstring layoutName = qstring_to_ucs4(
-		d->model_->itemFromIndex(mindex)->text());
 	d->owner_.setFocus();
-
 	if (!d->text_class_) {
 		updateContents(false);
 		d->resetFilter();
 		return;
 	}
+
+	// get selection
+	QModelIndex mindex = d->filterModel_->mapToSource(
+		d->filterModel_->index(index, 1));
+	docstring const layoutName = qstring_to_ucs4(
+		d->model_->itemFromIndex(mindex)->text());
 
 	// find corresponding text class
 	if (d->text_class_->hasLayout(layoutName)) {
@@ -639,7 +639,7 @@ void LayoutBox::selected(int index)
 		d->resetFilter();
 		return;
 	}
-	LYXERR0("ERROR (layoutSelected): layout " << layoutName << " not found!");
+	LYXERR0("ERROR (LayoutBox::Selected): layout " << layoutName << " not found!");
 }
 
 
