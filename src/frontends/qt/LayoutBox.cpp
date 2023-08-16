@@ -590,7 +590,6 @@ void LayoutBox::updateContents(bool reset)
 	d->model_->clear();
 	DocumentClass::const_iterator lit = d->text_class_->begin();
 	DocumentClass::const_iterator len = d->text_class_->end();
-
 	for (; lit != len; ++lit) {
 		docstring const & name = lit->name();
 		bool const useEmpty = d->inset_->forcePlainLayout() || d->inset_->usePlainLayout();

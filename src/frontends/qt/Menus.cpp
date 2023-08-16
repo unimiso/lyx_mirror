@@ -2438,7 +2438,6 @@ void Menus::Impl::expand(MenuDefinition const & frommenu,
 		case MenuItem::InfoArguments:
 			tomenu.expandInfoArguments(bv);
 			break;
-			
 
 		case MenuItem::Toc:
 			tomenu.expandToc(buf);
@@ -2664,28 +2663,25 @@ void Menus::fillMenuBar(QMenuBar * qmb, GuiView * view, bool initial)
 		bv = view->currentBufferView();
 	d->expand(d->menubar_, menu, bv);
 
-	MenuDefinition::const_iterator m = menu.begin();
-	MenuDefinition::const_iterator end = menu.end();
+	for (auto const & m : menu) {
 
-	for (; m != end; ++m) {
-
-		if (m->kind() != MenuItem::Submenu) {
-			LYXERR(Debug::GUI, "\tERROR: not a submenu " << m->label());
+		if (m.kind() != MenuItem::Submenu) {
+			LYXERR(Debug::GUI, "\tERROR: not a submenu " << m.label());
 			continue;
 		}
 
-		LYXERR(Debug::GUI, "menu bar item " << m->label()
-			<< " is a submenu named " << m->submenuname());
+		LYXERR(Debug::GUI, "menu bar item " << m.label()
+			<< " is a submenu named " << m.submenuname());
 
-		QString name = m->submenuname();
+		QString name = m.submenuname();
 		if (!d->hasMenu(name)) {
 			LYXERR(Debug::GUI, "\tERROR: " << name
 				<< " submenu has no menu!");
 			continue;
 		}
 
-		Menu * menuptr = new Menu(view, m->submenuname(), true);
-		menuptr->setTitle(label(*m));
+		Menu * menuptr = new Menu(view, m.submenuname(), true);
+		menuptr->setTitle(label(m));
 
 #if defined(Q_OS_MAC)
 		// On Mac OS with Qt/Cocoa, the menu is not displayed if there is no action
