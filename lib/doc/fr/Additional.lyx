@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 616
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -2418,7 +2418,6 @@ amsart:
  le format standard d'article AMS,
  voir 
 \family sans
-\lang english
 Fichier\SpecialChar menuseparator
 Ouvrir un Exemple\SpecialChar menuseparator
 Articles\SpecialChar menuseparator
@@ -2430,7 +2429,6 @@ amsbook:
  le format standard de livre AMS (en réalité de monographie),
  voir 
 \family sans
-\lang english
 Fichier\SpecialChar menuseparator
 Ouvrir un Exemple\SpecialChar menuseparator
 Livres\SpecialChar menuseparator
@@ -2438,8 +2436,6 @@ American Mathematical Society (AMS);
 \end_layout
 
 \begin_layout Enumerate
-
-\lang english
 amsproc:
  le format standard AMS pour les actes de congrès ou assimilés.
 \end_layout
@@ -2956,6 +2952,574 @@ En plus,
  ces environnements se servent automatiquement des paquetages de polices AMS-\SpecialChar LaTeX
  et AMS.
  Il faut qu'ils soient disponibles sur votre système pour pouvoir utiliser ces environnements.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Extra-font-sizes"
+
+\end_inset
+
+Tailles de police supplémentaires
+\end_layout
+
+\begin_layout Standard
+La collection 
+\begin_inset Quotes cld
+\end_inset
+
+Tailles de police supplémentaires
+\begin_inset Quotes crd
+\end_inset
+
+ fournit les classes de document article (avec les tailles de police supplémentaires),
+ lettre (avec les tailles de police supplémentaires),
+ livre (avec les tailles de police supplémentaires) et rapport (avec les tailles de police supplémentaires),
+ qui utilisent respectivement les classes de document 
+\family typewriter
+article.cls
+\family default
+,
+ 
+\family typewriter
+book.cls
+\family default
+,
+ 
+\family typewriter
+letter.cls
+\family default
+ et 
+\family typewriter
+report.cls
+\family default
+ mais offrent les tailles de base supplémentaires 8,
+ 9,
+ 14,
+ 17 et 20 dans la fenêtre
+\family sans
+\bar under
+ D
+\bar default
+ocument\SpecialChar menuseparator
+Paramètres\SpecialChar menuseparator
+Polices
+\family default
+.
+\end_layout
+
+\begin_layout Subsection
+Hébreu
+\end_layout
+
+\begin_layout Standard
+Les classes de document
+\family sans
+ article hébreu
+\family default
+ et 
+\family sans
+lettre hébreu
+\family default
+ utilisent les classes de document 
+\family typewriter
+article.cl
+\family sans
+s
+\family default
+ et 
+\family typewriter
+letter.cls
+\family default
+ pour faciliter l’utilisation de l'hébreu avec \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Japanese"
+
+\end_inset
+
+Japonais (classes standard)
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ inclut une collection de paquets qui visent à faciliter la saisie des documents en japonais.
+ Les paquets ont été développés à différentes époques,
+ de ce fait ils supportent des moteurs de mise en page et des fonctionnalités différentes.
+ La présente collection est la plus ancienne.
+ elle ajuste les classes standard \SpecialChar LaTeX
+ aux spécifications de la mise en page du japonais,
+ pour l'écriture horizontale ou verticale.
+ La collection inclut 
+\family sans
+Article japonais (classe standard)
+\family default
+,
+ 
+\family sans
+Article japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+ (classe standard,
+ écriture verticale),
+
+\family default
+ 
+\family sans
+Livre japonais
+\family default
+ (classe standard)
+\family sans
+ 
+\family default
+,
+ 
+\family sans
+Livre japonais
+\family default
+ (classe standard
+\family sans
+,
+ écriture verticale)
+\family default
+,
+ 
+\family sans
+Rapport japonais
+\family default
+ (classe standard),
+\family sans
+
+\begin_inset space \thinspace{}
+\end_inset
+
+ Rapport japonais
+\family default
+ (classe standard
+\family sans
+,
+ écriture verticale),
+ 
+\family default
+qui fonctionnent toutes avec les moteurs 
+\begin_inset Quotes cld
+\end_inset
+
+classiques
+\begin_inset Quotes crd
+\end_inset
+
+ appropriés au japonais,
+ p\SpecialChar LaTeX
+ et up\SpecialChar LaTeX
+.
+\end_layout
+
+\begin_layout Standard
+Pour l'utilisation avec le moteur plus récent Lua\SpecialChar LaTeX
+,
+ la collection inclut également les classes spécifiques
+\family sans
+ Article japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX),
+ Article japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX,
+ écriture verticale),
+ Livre japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX),
+
+\family default
+ 
+\family sans
+Livre japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX,
+ écriture verticale),
+
+\family default
+ 
+\family sans
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Rapport japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX) et
+\begin_inset space \thinspace{}
+\end_inset
+
+Rapport japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe standard pour LuaTeX,
+ écriture verticale) fournies par le paquetage
+\family default
+ \SpecialChar LaTeX
+ latexja.
+\end_layout
+
+\begin_layout Standard
+Les modèles pour ces classes Lua\SpecialChar LaTeX
+ peuvent être trouvés via 
+\family sans
+Fichier\SpecialChar menuseparator
+Nouveau avec modèle
+\family default
+ dans les catégories respectives (
+\family sans
+Articles
+\family default
+,
+ Livres ou Rapports).
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Japanese-JS"
+
+\end_inset
+
+
+\lang french
+Japonais (paquet JS)
+\end_layout
+
+\begin_layout Standard
+Cette collection inclut des versions améliorées des classes de 
+\family sans
+Japonais (classes standard)
+\family default
+ (voir
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Japanese"
+
+\end_inset
+
+).
+ Elle contient 
+\family sans
+Article japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet JS) et
+\family default
+ 
+\family sans
+Livre japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet JS)
+\family default
+.
+ Une classe pour un rapport peut être obtenue en utilisant 
+\family sans
+Livre japonais (paquet JS)
+\family default
+ avec l'option 
+\family sans
+report
+\family default
+ dans 
+\family sans
+Document\SpecialChar menuseparator
+Paramètres\SpecialChar menuseparator
+Classes de document\SpecialChar menuseparator
+Options de classe\SpecialChar menuseparator
+
+\family default
+Réglable.
+ Toutes ces classes fonctionnent avec les moteurs 
+\begin_inset Quotes cld
+\end_inset
+
+classiques
+\begin_inset Quotes crd
+\end_inset
+
+ adaptés au japonais,
+ p\SpecialChar LaTeX
+ et up\SpecialChar LaTeX
+.
+\end_layout
+
+\begin_layout Standard
+Pour l'utilisation avec le moteur plus récent Lua\SpecialChar LaTeX
+,
+ la collection inclut aussi les classes spécifiques
+\family sans
+ Article japonais (paquet JS pour LuaTeX),
+ Livre japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet JS pour LuaTeX)
+\family default
+,
+ et
+\family sans
+ Rapport japonais 
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet JS)
+\family default
+,
+ fournies par le paquet \SpecialChar LaTeX
+ 
+\family sans
+luatexja
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Les modèles pour les classes Lua\SpecialChar LaTeX
+ se trouvent via 
+\family sans
+Fichier\SpecialChar menuseparator
+Nouveau avec modèle dans leurs catégories respectives
+\family default
+ (
+\family sans
+articles
+\family default
+,
+ livres ou 
+\family sans
+Rapports
+\family default
+).
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Japanese-BX"
+
+\end_inset
+
+Japonais (paquet BX)
+\end_layout
+
+\begin_layout Standard
+Ce paquet contient les classes de document
+\family sans
+ Article japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet BX)
+\family default
+,
+
+\family sans
+ Livre japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet BX)
+\family default
+,
+ et Rapport japonais
+\family sans
+
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet BX)
+\family default
+ qui fournissent des classes de document autres pour les documents japonais.
+ En outre,
+ une classe Transparents japonais
+\family sans
+
+\begin_inset space \thinspace{}
+\end_inset
+
+(paquet BX)
+\family default
+ pour créer des présentations est incluse.
+ Au contraire des classes 
+\family sans
+de Classes standard
+\family default
+ et 
+\family sans
+paquet JS
+\family default
+ (sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Japanese"
+
+\end_inset
+
+ et 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Japanese-JS"
+
+\end_inset
+
+),
+ qui ne permettent d'utiliser directement que p\SpecialChar LaTeX
+ et up\SpecialChar LaTeX
+ (et Lua\SpecialChar LaTeX
+ 
+\family sans
+uniquement via les classes supplémentaires fournies par le paquetage
+\family default
+ \SpecialChar LaTeX
+
+\family sans
+ luatexja
+\family default
+),
+ les classes de ce paquet peuvent être utilisées avec pdf\SpecialChar LaTeX
+,
+ Xe\SpecialChar LaTeX
+ et Lua\SpecialChar LaTeX
+ directement,
+ grâce aux paquetages appropriés permettant de typographier le japonais.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Japanese-JLReq"
+
+\end_inset
+
+Japonais (classe JLReq)
+\end_layout
+
+\begin_layout Standard
+Ce paquet émane de la classe 
+\family sans
+jlreq
+\family default
+ qui est conforme aux standards des 
+\emph on
+Spécifications pour la mise en page des textes en japonais
+\emph default
+,
+ définies par le Consortium de la Toile (W3C,
+ voir
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.w3.org/TR/jlreq/?lang=en
+\end_layout
+
+\end_inset
+
+).
+ Il peut être utilisé avec Lua\SpecialChar LaTeX
+ aussi bien qu'avec p\SpecialChar LaTeX
+ et up\SpecialChar LaTeX
+.
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ fournit des formats pour
+\family sans
+ Article japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe JLReq)
+\family default
+,
+
+\family sans
+ Livre japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe JLReq)
+\family default
+,
+ et 
+\family sans
+Japanese Rapport japonais
+\begin_inset space \thinspace{}
+\end_inset
+
+(classe JLReq),
+ tous dérivés de la classe \SpecialChar LaTeX
+
+\family default
+ 
+\family sans
+jlreq
+\family default
+ via des options de classe particulières.
+\end_layout
+
+\begin_layout Standard
+Un exemple d'article est disponible via
+\family sans
+ Fichier\SpecialChar menuseparator
+Ouvrir un exemple\SpecialChar menuseparator
+Articles\SpecialChar menuseparator
+Article japonais (classe JLReq)
+\family default
+.
+ La documentation en anglais est disponible ici:
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://mirrors.ctan.org/macros/jptex/latex/jlreq/jlreq.pdf
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
