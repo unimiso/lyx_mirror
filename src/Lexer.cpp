@@ -233,7 +233,7 @@ bool Lexer::Pimpl::setFile(FileName const & filename)
 {
 		if (gz_.is_open() || istream::off_type(is.tellg()) > -1)
 			LYXERR0("Error in LyXLex::setFile: file or stream already set.");
-		gz_.open(filename.toFilesystemEncoding().c_str(), ios::in);
+		gz_.open(filename.toSafeFilesystemEncoding().c_str(), ios::in);
 		is.rdbuf(&gz_);
 		name = filename.absFileName();
 		lineno = 0;
