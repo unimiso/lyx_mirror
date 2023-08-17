@@ -1098,11 +1098,12 @@ void Paragraph::Private::latexInset(BufferParams const & bparams,
 	odocstream::pos_type const len = os.os().tellp();
 
 	if (inset->forceLTR(runparams)
-	    // babel with Xe/LuaTeX does not need a switch
+	    // babel with LuaTeX does not need a switch
+	    // babel with XeTeX needs a switch only if bidi is used
 	    // and \L is not defined there.
-	    && (!runparams.isFullUnicode() || !runparams.use_babel)
+	    && (!runparams.isFullUnicode() || bparams.useBidiPackage(runparams) || runparams.use_polyglossia)
 	    && running_font.isRightToLeft()) {
-		if (runparams.use_polyglossia) {
+		if (bparams.useBidiPackage(runparams) || runparams.use_polyglossia) {
 			// (lua)bidi
 			// Displayed environments go in an LTR environment
 			if (disp_env) {
@@ -2070,12 +2071,16 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 	//   => checked for Hebrew!
 	// * In arabic_arabi, brackets are transformed to Arabic
 	//   Ornate Parentheses. Is this is really wanted?
+	//   => Yes, in file ararabeyes.enc from the arabi bundle
+	//      the slot of the left bracket (slot 91) is encoded as
+	//      "ornaterightparenthesis". This is also the reason
+	//      brackets don't need to be mirrored with arabi
 
 	string const & lang = getFontSettings(bparams, pos).language()->lang();
 	char_type uc = c;
 
 	// 1. In the following languages, parentheses need to be reversed.
-	//    Also with polyglodia/luabidi
+	//    Also with polyglossia/luabidi
 	bool const reverseparens = (lang == "hebrew" || rp.use_polyglossia);
 
 	// 2. In the following languages, brackets don't need to be reversed.
