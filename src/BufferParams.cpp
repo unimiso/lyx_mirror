@@ -2948,6 +2948,33 @@ bool BufferParams::isLiterate() const
 }
 
 
+bool BufferParams::hasPackageOption(string const package, string const opt) const
+{
+	for (auto const & p : documentClass().packageOptions())
+		if (package == p.first && opt == p.second)
+			return true;
+	return false;
+}
+
+
+bool BufferParams::useBidiPackage(OutputParams const & rp) const
+{
+	return (rp.use_polyglossia
+		// as of babel 3.29, bidi=bidi-* is supported by babel
+		// So we check whether we use a respective version and
+		// whethert bidi-r or bidi-l have been requested either via class
+		// or package options
+		|| (rp.use_babel
+		    && LaTeXFeatures::isAvailableAtLeastFrom("babel", 2019, 4, 3)
+		    && (hasPackageOption("babel", "bidi-r")
+			|| hasPackageOption("babel", "bidi-l")
+			|| contains(options, "bidi-r")
+			|| contains(options, "bidi-l")))
+		)
+		&& rp.flavor == Flavor::XeTeX;
+}
+
+
 void BufferParams::readPreamble(Lexer & lex)
 {
 	if (lex.getString() != "\\begin_preamble")

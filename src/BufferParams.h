@@ -49,6 +49,7 @@ class LayoutFile;
 class LayoutFileIndex;
 class Length;
 class Lexer;
+class OutputParams;
 class otexstream;
 class PDFOptions;
 class Spacing;
@@ -194,6 +195,10 @@ public:
 	bool isLatex() const;
 	/// returns \c true if the buffer contains a Wed document
 	bool isLiterate() const;
+	/// Is this package option requested?
+	bool hasPackageOption(std::string const package, std::string const opt) const;
+	/// Do we use the bidi package (which does some reordering and stuff)?
+	bool useBidiPackage(OutputParams const & rp) const;
 
 	/// return the format of the buffer on a string
 	std::string bufferFormat() const;

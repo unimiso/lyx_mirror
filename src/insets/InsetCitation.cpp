@@ -543,7 +543,7 @@ bool InsetCitation::forceLTR(OutputParams const & rp) const
 	// We have to force LTR for numeric references
 	// [= bibliography, plain BibTeX, numeric natbib
 	// and biblatex]. Except for XeTeX/bidi. See #3005.
-	if (rp.useBidiPackage())
+	if (buffer().masterParams().useBidiPackage(rp))
 		return false;
 	return (buffer().masterParams().citeEngine() == "basic"
 		|| buffer().masterParams().citeEngineType() == ENGINE_TYPE_NUMERICAL);

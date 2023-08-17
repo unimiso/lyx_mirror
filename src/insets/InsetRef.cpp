@@ -611,7 +611,7 @@ bool InsetRef::forceLTR(OutputParams const & rp) const
 	// * Parentheses are automatically swapped with XeTeX/bidi 
 	//   [not with LuaTeX/luabidi] (see #11626).
 	// FIXME: Re-Audit all other RTL cases.
-	if (rp.useBidiPackage())
+	if (buffer().masterParams().useBidiPackage(rp))
 		return false;
 	return (getCmdName() != "nameref" || !buffer().masterParams().useNonTeXFonts);
 }

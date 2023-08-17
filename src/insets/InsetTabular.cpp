@@ -3180,7 +3180,7 @@ void Tabular::TeXRow(otexstream & os, row_type row,
 	// Luabibdi (used by LuaTeX) behaves like classic
 	bool const bidi_rtl =
 		runparams.local_font->isRightToLeft()
-		&& runparams.useBidiPackage();
+		&& buffer().params().useBidiPackage(runparams);
 	bool const ct = !buffer().params().output_changes;
 	idx_type lastcell =
 		bidi_rtl ? getFirstCellInRow(row, ct) : getLastCellInRow(row, ct);
@@ -3352,7 +3352,7 @@ void Tabular::latex(otexstream & os, OutputParams const & runparams) const
 	// order for RTL (#9686). Thus we use this list.
 	bool const bidi_rtl =
 		runparams.local_font->isRightToLeft()
-		&& runparams.useBidiPackage();
+		&& buffer().params().useBidiPackage(runparams);
 	list<col_type> columns;
 	list<col_type> logical_columns;
 	for (col_type cl = 0; cl < ncols(); ++cl) {

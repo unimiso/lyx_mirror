@@ -51,10 +51,4 @@ bool OutputParams::isFullUnicode() const
 			|| flavor == Flavor::XeTeX;
 }
 
-
-bool OutputParams::useBidiPackage() const
-{
-	return use_polyglossia && flavor == Flavor::XeTeX;
-}
-
 } // namespace lyx

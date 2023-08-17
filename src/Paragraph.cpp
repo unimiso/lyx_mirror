@@ -2055,7 +2055,7 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 	// or if we use poylglossia/bidi (XeTeX)
 	// or with babel and Xe/LuaTeX.
 	if (!getFontSettings(bparams, pos).isRightToLeft()
-	    || rp.useBidiPackage()
+	    || bparams.useBidiPackage(rp)
 	    || (rp.use_babel && rp.isFullUnicode()))
 		return c;
 
@@ -2548,7 +2548,7 @@ int Paragraph::Private::startTeXParParams(BufferParams const & bparams,
 	// RTL in classic (PDF)LaTeX (without the Bidi package)
 	// Luabibdi (used by LuaTeX) behaves like classic
 	bool const rtl_classic = owner_->getParLanguage(bparams)->rightToLeft()
-		&& !runparams.useBidiPackage();
+		&& !bparams.useBidiPackage(runparams);
 
 	switch (curAlign) {
 	case LYX_ALIGN_NONE:
@@ -2612,7 +2612,7 @@ bool Paragraph::Private::endTeXParParams(BufferParams const & bparams,
 	// RTL in classic (PDF)LaTeX (without the Bidi package)
 	// Luabibdi (used by LuaTeX) behaves like classic
 	bool const rtl_classic = owner_->getParLanguage(bparams)->rightToLeft()
-		&& !runparams.useBidiPackage();
+		&& !bparams.useBidiPackage(runparams);
 
 	switch (curAlign) {
 	case LYX_ALIGN_NONE:

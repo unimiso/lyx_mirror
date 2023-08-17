@@ -426,7 +426,7 @@ int Font::latexWriteStartChanges(otexstream & os, BufferParams const & bparams,
 	// the numbers are written Left-to-Right. ArabTeX package
 	// and bidi (polyglossia with XeTeX) reorder the number automatically
 	// but the packages used for Hebrew and Farsi (Arabi) do not.
-	if (!runparams.useBidiPackage()
+	if (!bparams.useBidiPackage(runparams)
 	    && !runparams.pass_thru
 	    && bits_.number() == FONT_ON
 	    && prev.fontInfo().number() != FONT_ON
@@ -604,7 +604,7 @@ int Font::latexWriteEndChanges(otexstream & os, BufferParams const & bparams,
 	// the numbers are written Left-to-Right. ArabTeX package
 	// and bidi (polyglossia with XeTeX) reorder the number automatically
 	// but the packages used for Hebrew and Farsi (Arabi) do not.
-	if (!runparams.useBidiPackage()
+	if (!bparams.useBidiPackage(runparams)
 	    && !runparams.pass_thru
 	    && bits_.number() == FONT_ON
 	    && next.fontInfo().number() != FONT_ON
