@@ -2052,15 +2052,16 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 {
 	char_type c = d->text_[pos];
 
-	// Return unchanged character in LTR languages
-	// or if we use XeTeX
-	// or with babel and LuaTeX.
+	// Return unchanged character
+	// 1. in all LTR languages
+	// 2. if we use XeTeX (both with babel and polyglossia)
+	// 3. if we use LuaTeX with babel
 	if (!getFontSettings(bparams, pos).isRightToLeft()
 	    || rp.flavor == Flavor::XeTeX
 	    || (rp.use_babel && rp.flavor == Flavor::LuaTeX))
 		return c;
 
-	// Without polyglossia/bidi, we need to account for some special cases.
+	// For the remaining cases, we need to account for some special cases.
 	// FIXME This needs to be audited!
 	// Check if:
 	// * The input is as expected for all delimiters
@@ -2079,15 +2080,19 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 	string const & lang = getFontSettings(bparams, pos).language()->lang();
 	char_type uc = c;
 
-	// 1. With polyglossia/luabidi all delimiters need to be mirrored,
-	//    regardless of the languge, or script.
-	// 2. In the following languages, parentheses need to be mirrored.
-	bool const reverseparens = (lang == "hebrew" || rp.use_polyglossia);
-
-	// 3. In the following languages, brackets don't need to be mirrored.
-	bool const reversebrackets = (lang != "arabic_arabtex"
-			&& lang != "arabic_arabi"
-			&& lang != "farsi") || rp.use_polyglossia;
+	// These are the cases where we need to mirror delimiters in RTL context
+	// in the remaining cases (polyglossia + LuaTeX or classic [pdf]latex):
+	// 1. With polyglossia and LuaTeX (luabidi) parentheses and brackets
+	//    need to be mirrored in RTL, regardless of the language, or script.
+	// 2. In the languages that follow, parentheses need to be mirrored
+	//    in classic (pdf)latex
+	bool const reverseparens = (rp.use_polyglossia || lang == "hebrew");
+	// 3. In all RTL languages except for those that follow, brackets
+	//    need to be mirrored in classic (pdf)latex
+	bool const reversebrackets = rp.use_polyglossia
+			|| (lang != "arabic_arabtex"
+			    && lang != "arabic_arabi"
+			    && lang != "farsi");
 
 	// Now swap delimiters if needed.
 	switch (c) {
