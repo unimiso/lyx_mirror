@@ -1522,11 +1522,23 @@ Language thai
 	  \DeclareRobustCommand{\copyright}{%
 	    \ifmmode{\nfss@text{\textcopyright}}\else\textcopyright\fi}
 	  \DeclareTextSymbol{\textcopyright}{LTH}{8}
+	  %
           % set up Thai fonts as substitue for the default families
-          \usepackage{substitutefont}
-          \substitutefont{LTH}{\rmdefault}{norasi}
-          \substitutefont{LTH}{\sfdefault}{garuda}
-          \substitutefont{LTH}{\ttdefault}{ttypist}
+	  % The 'substitutefont' package is obsolete now, since commands
+	  % from the LaTeX kernel can be used instead. See here:
+	  %   https://ctan.org/pkg/substitutefont
+	  %   https://www.latex-project.org/news/latex2e-news/ltnews31.pdf
+	  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+	  \IfFormatAtLeastTF{2020/02/01}{%
+	    \DeclareFontFamilySubstitution{LTH}{\rmdefault}{norasi}
+	    \DeclareFontFamilySubstitution{LTH}{\sfdefault}{garuda}
+	    \DeclareFontFamilySubstitution{LTH}{\ttdefault}{ttypist}
+	  }{%
+	    \usepackage{substitutefont}
+	    \substitutefont{LTH}{\rmdefault}{norasi}
+	    \substitutefont{LTH}{\sfdefault}{garuda}
+	    \substitutefont{LTH}{\ttdefault}{ttypist}
+	  }
 	EndPostBabelPreamble
 End
 
