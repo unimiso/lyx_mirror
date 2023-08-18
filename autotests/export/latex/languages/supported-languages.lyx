@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 599
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -84,62 +84,62 @@ enumitem
 \branch only-as-document-language
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch babel-only
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch non-TeX-fonts-only
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch polyglossia-only
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch debug
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch conflict-es-gl
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch conflict-mk
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch conflict-babel-non-TeX-fonts
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch standalone
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch CJK
 \selected 0
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch conflict-ko
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \branch conflict-luatex
 \selected 1
 \filename_suffix 0
-\color #faf0e6
+\color background background
 \end_branch
 \index Stichwortverzeichnis
 \shortcut idx
@@ -165,6 +165,7 @@ enumitem
 \html_css_as_file 0
 \html_be_strict false
 \docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -179,7 +180,8 @@ Languages supported by LyX
 \end_layout
 
 \begin_layout Standard
-With language examples that work with both, 
+With language examples that work with both,
+ 
 \emph on
 Babel
 \emph default
@@ -222,7 +224,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -350,8 +353,7 @@ status open
 \lang afrikaans
 Afrikaans
 \emph default
- is een van die elf amptelike tale van Suid-Afrika en daarnaas ook 'n belangrike
- taal van Namibië.
+ is een van die elf amptelike tale van Suid-Afrika en daarnaas ook 'n belangrike taal van Namibië.
 \end_layout
 
 \end_inset
@@ -379,7 +381,8 @@ Albanian
 \lang albanian
 Shqipja
 \emph default
- është gjuha zyrtare e Shqipërisë, dhe e Kosovës.
+ është gjuha zyrtare e Shqipërisë,
+ dhe e Kosovës.
 \end_layout
 
 \begin_layout Labeling
@@ -414,9 +417,7 @@ status open
 \begin_layout Quote
 
 \lang amharic
-አማርኛ ፡ የኢትዮጵያ ፡ መደበኛ ፡ ቋንቋ ፡ ነው። ከሴማዊ ፡ ቋንቋዎች ፡ እንደ ፡ ዕብራይስጥ ፡ ወይም ፡ ዓረብኛ
- ፡ አንዱ ፡ ነው። በአፍሪካ ፡ ውስጥ ፡ ደግሞ ፡ ከምዕራብ ፡ አፍሪካው ፡ ሐውሳና ፡ ከምሥራቅ ፡ አፍሪካው ፡
- ስዋሂሊ ፡ ቀጥሎ ፡ 
+አማርኛ ፡ የኢትዮጵያ ፡ መደበኛ ፡ ቋንቋ ፡ ነው። ከሴማዊ ፡ ቋንቋዎች ፡ እንደ ፡ ዕብራይስጥ ፡ ወይም ፡ ዓረብኛ ፡ አንዱ ፡ ነው። በአፍሪካ ፡ ውስጥ ፡ ደግሞ ፡ ከምዕራብ ፡ አፍሪካው ፡ ሐውሳና ፡ ከምሥራቅ ፡ አፍሪካው ፡ ስዋሂሊ ፡ ቀጥሎ ፡ 
 \lang english
 3
 \lang amharic
@@ -471,13 +472,14 @@ status open
 
 \lang arabic_arabi
 اللُّغَة العَرَبِيّة هي أكثر اللغات تحدثاً ونطقاً ضمن مجموعة اللغات السامية،
- وإحدى أكثر اللغات انتشاراً في العالم، يتحدثها أكثر من 
+ وإحدى أكثر اللغات انتشاراً في العالم،
+ يتحدثها أكثر من 
 \begin_inset Formula $467$
 \end_inset
 
- مليون نسمة، ويتوزع متحدثوها في الوطن العربي، بالإضافة إلى العديد من المناطق
- الأخرى المجاورة كالأحواز وتركيا وتشاد ومالي والسنغال وإرتيريا وإثيوبيا
- وجنوب السودان وإيران.
+ مليون نسمة،
+ ويتوزع متحدثوها في الوطن العربي،
+ بالإضافة إلى العديد من المناطق الأخرى المجاورة كالأحواز وتركيا وتشاد ومالي والسنغال وإرتيريا وإثيوبيا وجنوب السودان وإيران.
 \end_layout
 
 \begin_layout Standard
@@ -570,9 +572,10 @@ status open
 
 \lang arabic_arabtex
 اللُّغَة العَرَبِيّة هي أكثر اللغات تحدثاً ونطقاً ضمن مجموعة اللغات السامية،
- وإحدى أكثر اللغات انتشاراً في العالم، يتحدثها أكثر من 467 مليون نسمة، ويتوزع
- متحدثوها في الوطن العربي، بالإضافة إلى العديد من المناطق الأخرى المجاورة
- كالأحواز وتركيا وتشاد ومالي والسنغال وإرتيريا وإثيوبيا وجنوب السودان وإيران.
+ وإحدى أكثر اللغات انتشاراً في العالم،
+ يتحدثها أكثر من 467 مليون نسمة،
+ ويتوزع متحدثوها في الوطن العربي،
+ بالإضافة إلى العديد من المناطق الأخرى المجاورة كالأحواز وتركيا وتشاد ومالي والسنغال وإرتيريا وإثيوبيا وجنوب السودان وإيران.
 \end_layout
 
 \end_inset
@@ -587,8 +590,7 @@ LyX arabic_arabtex
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Babel arabtex (dummy babel language for arabic_arabtex to be able to switch
- the language the way of the ArabTeX-package)
+Babel arabtex (dummy babel language for arabic_arabtex to be able to switch the language the way of the ArabTeX-package)
 \end_layout
 
 \begin_layout Labeling
@@ -620,8 +622,8 @@ status open
 \lang armenian
 Հայերեն
 \emph default
- (ավանդական՝ հայերէն), հնդեվրոպական լեզվաընտանիքի առանձին ճյուղ հանդիսացող
- լեզու։
+ (ավանդական՝ հայերէն),
+ հնդեվրոպական լեզվաընտանիքի առանձին ճյուղ հանդիսացող լեզու։
 \end_layout
 
 \begin_layout Quote
@@ -665,8 +667,8 @@ status open
 \lang asturian
 L'asturianu
 \emph default
- ye una llingua romance propia d'Asturies, perteneciente al subgrupu asturllioné
-s.
+ ye una llingua romance propia d'Asturies,
+ perteneciente al subgrupu asturllionés.
 
 \lang english
  
@@ -706,11 +708,14 @@ Azərbaycan dili
 \emph on
 Azərbaycanca
 \emph default
-, 
+,
+ 
 \emph on
 Azərbaycan türkcəsi
 \emph default
-, tarixi adı: 
+,
+ tarixi adı:
+ 
 \emph on
 Türk
 \emph default
@@ -722,10 +727,9 @@ dili
 \emph on
 Türkcə
 \emph default
-)[11] — Azərbaycan Respublikasının və Rusiya Federasiyasının Dağıstan Respublika
-sının rəsmi dövlət dilidir.
- Altay dilləri ailəsinin türk dilləri şöbəsinin Oğuz sinfinin Qərb qrupuna
- daxildir.
+)[11] —
+ Azərbaycan Respublikasının və Rusiya Federasiyasının Dağıstan Respublikasının rəsmi dövlət dilidir.
+ Altay dilləri ailəsinin türk dilləri şöbəsinin Oğuz sinfinin Qərb qrupuna daxildir.
 \end_layout
 
 \end_inset
@@ -773,8 +777,10 @@ Basque
 Euskara
 \emph default
  Euskal Herriko hizkuntza da.
- Hizkuntza isolatua da, ez baitzaio ahaidetasunik aurkitu, eta morfologiari
- dagokionez, hizkuntza ergatiboa da.
+ Hizkuntza isolatua da,
+ ez baitzaio ahaidetasunik aurkitu,
+ eta morfologiari dagokionez,
+ hizkuntza ergatiboa da.
 \end_layout
 
 \begin_layout Labeling
@@ -812,9 +818,9 @@ status open
 \lang belarusian
 Белару́ская мо́ва
 \emph default
- — загрожаная мова ўсходняе групы славянскае галіны індаэўрапейскае сям’і
- моваў, на якой размаўляюць беларусы і частка прадстаўнікоў этнічных мяншыняў
- Беларусі.
+ —
+ загрожаная мова ўсходняе групы славянскае галіны індаэўрапейскае сям’і моваў,
+ на якой размаўляюць беларусы і частка прадстаўнікоў этнічных мяншыняў Беларусі.
 \end_layout
 
 \end_inset
@@ -843,8 +849,8 @@ LangCode be_BY
 \end_layout
 
 \begin_layout Itemize
-Until 2018-08-25 (babel-belarusian 1.4), the babel option was "belarusianb"
- but the language name "belarusian" (without trailing "b").
+Until 2018-08-25 (babel-belarusian 1.4),
+ the babel option was "belarusianb" but the language name "belarusian" (without trailing "b").
 \end_layout
 
 \begin_layout Itemize
@@ -861,8 +867,8 @@ inverted 0
 status open
 
 \begin_layout Quote
-বাংলা ভাষা একটি ইন্দো-আর্য ভাষা, যা দক্ষিণ এশিয়ার বাঙালি জাতির প্রধান কথ্য
- ও লেখ্য ভাষা। মাতৃভাষীর সংখ্যায় বাংলা ইন্দো-আর্য ভাষা পরিবারের দ্বিতীয়,
+বাংলা ভাষা একটি ইন্দো-আর্য ভাষা,
+ যা দক্ষিণ এশিয়ার বাঙালি জাতির প্রধান কথ্য ও লেখ্য ভাষা। মাতৃভাষীর সংখ্যায় বাংলা ইন্দো-আর্য ভাষা পরিবারের দ্বিতীয়,
  ইন্দো-ইউরোপীয় ভাষা পরিবারের চতুর্থ ও বিশ্বের ষষ্ঠ বৃহত্তম ভাষা।
 \end_layout
 
@@ -901,9 +907,8 @@ status open
 \lang bosnian
 Bosanski jezik
 \emph default
- je južnoslavenski standardni jezik zasnovan na štokavskom narječju koji
- koriste uglavnom Bošnjaci, ali i značajan broj ostalih osoba bosanskohercegovač
-kog porijekla.
+ je južnoslavenski standardni jezik zasnovan na štokavskom narječju koji koriste uglavnom Bošnjaci,
+ ali i značajan broj ostalih osoba bosanskohercegovačkog porijekla.
 \end_layout
 
 \end_inset
@@ -928,8 +933,7 @@ Breton
 \begin_layout Quote
 
 \lang breton
-Ur yezh keltiek a orin eus an Enez Vreizh (Breizh-Veur/Preden) hag eus skourr
- ar yezhoù predenek eo ar 
+Ur yezh keltiek a orin eus an Enez Vreizh (Breizh-Veur/Preden) hag eus skourr ar yezhoù predenek eo ar 
 \emph on
 brezhoneg
 \emph default
@@ -965,8 +969,7 @@ status open
 \emph off
 \lang bulgarian
 Бъ̀лгарският езѝк е индоевропейски език от групата на южнославянските езици.
- Той е официалният език на Република България и един от 23-те официални
- езика на Европейския съюз.
+ Той е официалният език на Република България и един от 23-те официални езика на Европейския съюз.
 \end_layout
 
 \end_inset
@@ -1025,7 +1028,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1147,8 +1151,13 @@ Catalan
 \lang catalan
 Català
 \emph default
-: Llengua històricament parlada a Catalunya, Andorra, País Valencià, les
- illes Balears, la Catalunya Nord, l'Alguer i la Franja de Ponent.
+:
+ Llengua històricament parlada a Catalunya,
+ Andorra,
+ País Valencià,
+ les illes Balears,
+ la Catalunya Nord,
+ l'Alguer i la Franja de Ponent.
 \end_layout
 
 \begin_layout Labeling
@@ -1213,7 +1222,8 @@ status open
 \lang chinese-simplified
 汉字
 \lang english
-; 
+;
+ 
 \end_layout
 
 \end_inset
@@ -1278,7 +1288,8 @@ status open
 \lang chinese-traditional
 漢字
 \lang english
-; 
+;
+ 
 \end_layout
 
 \end_inset
@@ -1297,9 +1308,9 @@ Requires CJK
 \end_layout
 
 \begin_layout Itemize
-The different CJK languages (simplified and traditional Chinese, Japanese,
- and Korean) require different fonts but only one CJK-font can be set in
- the preamble.
+The different CJK languages (simplified and traditional Chinese,
+ Japanese,
+ and Korean) require different fonts but only one CJK-font can be set in the preamble.
 \end_layout
 
 \begin_layout Subsection*
@@ -1321,9 +1332,7 @@ status open
 \emph on
 црькъвьнословѣньскꙑ славєнскій ѧꙁꙑкъ
 \emph default
- · богоуслоужєбьнъ ѩꙁꙑкъ ѥстъ · ижє мъногꙑ православьнꙑ црькъви словѣньскъ
- странъ польꙃоуѭтъ ⁙ Црькъвьнословѣньскъ ѩꙁꙑкъ словѣньска ѩꙁꙑка нꙑнєшьнъ
- фѡнитїчьскъ и грамматїчьскъ иꙁводъ ѥстъ · сѫщии жє с І҄В вѣка ѥстъ
+ · богоуслоужєбьнъ ѩꙁꙑкъ ѥстъ · ижє мъногꙑ православьнꙑ црькъви словѣньскъ странъ польꙃоуѭтъ ⁙ Црькъвьнословѣньскъ ѩꙁꙑкъ словѣньска ѩꙁꙑка нꙑнєшьнъ фѡнитїчьскъ и грамматїчьскъ иꙁводъ ѥстъ · сѫщии жє с І҄В вѣка ѥстъ
 \end_layout
 
 \end_inset
@@ -1394,8 +1403,8 @@ Croatian
 \lang croatian
 Hrvatski jezik
 \emph default
- skupni je naziv za nacionalni standardni jezik Hrvata, te za skup narječja
- i govora kojima govore ili su nekada govorili Hrvati.
+ skupni je naziv za nacionalni standardni jezik Hrvata,
+ te za skup narječja i govora kojima govore ili su nekada govorili Hrvati.
 \end_layout
 
 \begin_layout Labeling
@@ -1423,9 +1432,11 @@ Czech
 \lang czech
 Čeština
 \emph default
- neboli český jazyk je západoslovanský jazyk, nejbližší slovenštině, poté
- lužické srbštině a polštině.
- Patří mezi slovanské jazyky, do rodiny jazyků indoevropských.
+ neboli český jazyk je západoslovanský jazyk,
+ nejbližší slovenštině,
+ poté lužické srbštině a polštině.
+ Patří mezi slovanské jazyky,
+ do rodiny jazyků indoevropských.
 \end_layout
 
 \begin_layout Labeling
@@ -1444,9 +1455,8 @@ LangCode cs_CZ
 \end_layout
 
 \begin_layout Itemize
-Sometimes, documents with Czech or Slovak text and a table fail to compile
- (incompatibility of array or multirow packages with Babel-Czech and Babel-Slova
-k).
+Sometimes,
+ documents with Czech or Slovak text and a table fail to compile (incompatibility of array or multirow packages with Babel-Czech and Babel-Slovak).
 \end_layout
 
 \begin_layout Subsection*
@@ -1459,8 +1469,8 @@ Danish
 \lang danish
 Dansk
 \emph default
- er et nordgermansk sprog af den østnordiske (kontinentale) gruppe, der
- tales af ca.
+ er et nordgermansk sprog af den østnordiske (kontinentale) gruppe,
+ der tales af ca.
  seks millioner mennesker.
  Det er stærkt påvirket af plattysk.
 \end_layout
@@ -1502,8 +1512,7 @@ status open
 
 \lang divehi
 ދިވެހިބަހަކީ ދިވެހިރާއްޖޭގެ ރަސްމީ ބަހެވެ.
- މި ބަހުން ވާހަކަ ދައްކައި އުޅެނީ ދިވެހިރާއްޖޭގެ އަހުލުވެރިންގެ އިތުރުން
- ހިންދުސްތާނުގެ މަލިކު ގެ އަހުލުވެރިންނެވެ.
+ މި ބަހުން ވާހަކަ ދައްކައި އުޅެނީ ދިވެހިރާއްޖޭގެ އަހުލުވެރިންގެ އިތުރުން ހިންދުސްތާނުގެ މަލިކު ގެ އަހުލުވެރިންނެވެ.
 \end_layout
 
 \end_inset
@@ -1542,10 +1551,10 @@ Het
 \emph on
 Nederlands
 \emph default
- is een West-Germaanse taal en de moedertaal van de meeste inwoners van
- Nederland, België en Suriname.
- In de Europese Unie spreken ongeveer 23 miljoen mensen Nederlands als eerste
- taal, en een bijkomende vijf miljoen als tweede taal.
+ is een West-Germaanse taal en de moedertaal van de meeste inwoners van Nederland,
+ België en Suriname.
+ In de Europese Unie spreken ongeveer 23 miljoen mensen Nederlands als eerste taal,
+ en een bijkomende vijf miljoen als tweede taal.
 \end_layout
 
 \begin_layout Labeling
@@ -1572,10 +1581,10 @@ English
 \emph on
 English
 \emph default
- is a West Germanic language that is closely related to Frisian and Low
- Saxon.
+ is a West Germanic language that is closely related to Frisian and Low Saxon.
  Its vocabulary has been significantly influenced by other Germanic languages,
- particularly Norse, and to a greater extent by Latin and French.
+ particularly Norse,
+ and to a greater extent by Latin and French.
 \end_layout
 
 \begin_layout Labeling
@@ -1715,15 +1724,16 @@ Esperanto
 \lang esperanto
 Esperanto
 \emph default
-, origine 
+,
+ origine 
 \emph on
 la Lingvo Internacia
 \emph default
-, estas la plej disvastigita internacia planlingvo.
- En 1887 Esperanton parolis nur manpleno da homoj; Esperanto havis unu el
- la plej malgrandaj lingvo-komunumoj de la mondo.
- Ĝi funkciis dekomence kiel lingvo de alternativa komunikado kaj de arta
- kreivo.
+,
+ estas la plej disvastigita internacia planlingvo.
+ En 1887 Esperanton parolis nur manpleno da homoj;
+ Esperanto havis unu el la plej malgrandaj lingvo-komunumoj de la mondo.
+ Ĝi funkciis dekomence kiel lingvo de alternativa komunikado kaj de arta kreivo.
 \end_layout
 
 \begin_layout Labeling
@@ -1751,14 +1761,17 @@ Estonian
 \lang estonian
 Eesti keel
 \emph default
- (varasem nimetus: maakeel) on läänemeresoome lõunarühma kuuluv keel.
+ (varasem nimetus:
+ maakeel) on läänemeresoome lõunarühma kuuluv keel.
  Selle lähemad sugulased on läänemeresoome keeled vadja ja liivi keel.
 \end_layout
 
 \begin_layout Quote
 
 \lang estonian
-Tähed f, š, z ja ž esinevad ainult võõrsõnades (nt šokolaad).
+Tähed f,
+ š,
+ z ja ž esinevad ainult võõrsõnades (nt šokolaad).
 \end_layout
 
 \begin_layout Labeling
@@ -1812,8 +1825,8 @@ Dummy paragraph to set language inside quote
 
 \lang farsi
 «فارسی» و «پارسی» به اینجا تغییر مسیر دارند.
- برای دیگر کاربردهای این دو، فارسی (ابهامزدایی) و پارسی (ابهامزدایی) را
- ببینید.
+ برای دیگر کاربردهای این دو،
+ فارسی (ابهامزدایی) و پارسی (ابهامزدایی) را ببینید.
 \end_layout
 
 \end_inset
@@ -1873,7 +1886,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2024,9 +2038,9 @@ Finnish
 Suomen kieli
 \emph default
  (suomi) on uralilaisten kielten itämerensuomalaiseen ryhmään kuuluva kieli.
- Sitä puhuu äidinkielenään Suomessa 4,9 miljoonaa ja toisena kielenä 0,5
- miljoonaa henkilöä.
- Suurimmat suomea puhuvat vähemmistöt ovat Ruotsissa, Norjassa ja Venäjällä.
+ Sitä puhuu äidinkielenään Suomessa 4,9 miljoonaa ja toisena kielenä 0,5 miljoonaa henkilöä.
+ Suurimmat suomea puhuvat vähemmistöt ovat Ruotsissa,
+ Norjassa ja Venäjällä.
 \end_layout
 
 \begin_layout Labeling
@@ -2069,7 +2083,8 @@ langue d’oïl
 \begin_inset space ~
 \end_inset
 
-», qui est la langue de la partie septentrionale du pays).
+»,
+ qui est la langue de la partie septentrionale du pays).
 \end_layout
 
 \end_inset
@@ -2117,8 +2132,9 @@ status open
 \begin_layout Quote
 
 \lang canadien
-Deuxième province la plus peuplée du Canada, derrière l'Ontario, le Québec
- compte une population composée d'une grande majorité de francophones.
+Deuxième province la plus peuplée du Canada,
+ derrière l'Ontario,
+ le Québec compte une population composée d'une grande majorité de francophones.
 \end_layout
 
 \end_inset
@@ -2152,8 +2168,9 @@ Il
 \emph on
 furlan
 \emph default
- e je une lenghe romanze de famee des lenghis retichis, che e je fevelade
- soredut intal Friûl, ma ancje vie pal mont.
+ e je une lenghe romanze de famee des lenghis retichis,
+ che e je fevelade soredut intal Friûl,
+ ma ancje vie pal mont.
 \end_layout
 
 \begin_layout Labeling
@@ -2187,8 +2204,8 @@ O
 \emph on
 galego
 \emph default
- é a lingua románica propia da nacionalidade histórica de Galicia, onde
- é usada de xeito habitual por máis de dous millóns de persoas.
+ é a lingua románica propia da nacionalidade histórica de Galicia,
+ onde é usada de xeito habitual por máis de dous millóns de persoas.
 \end_layout
 
 \end_inset
@@ -2208,8 +2225,8 @@ O
 \emph on
 galego
 \emph default
- é a lingua románica propia da nacionalidade histórica de Galicia, onde
- é usada de xeito habitual por máis de dous millóns de persoas.
+ é a lingua románica propia da nacionalidade histórica de Galicia,
+ onde é usada de xeito habitual por máis de dous millóns de persoas.
 \end_layout
 
 \end_inset
@@ -2256,8 +2273,10 @@ status open
 \lang georgian
 ქართული ენა
 \emph default
- — ქართველების მშობლიური ენა, საქართველოს სახელმწიფო ენა (აფხაზეთის ავტონომიურ
- რესპუბლიკაში, მასთან ერთად სახელმწიფო ენად აღიარებულია აფხაზური ენა).
+ —
+ ქართველების მშობლიური ენა,
+ საქართველოს სახელმწიფო ენა (აფხაზეთის ავტონომიურ რესპუბლიკაში,
+ მასთან ერთად სახელმწიფო ენად აღიარებულია აფხაზური ენა).
  ქართულ ენაზე 5 მილიონზე მეტი ადამიანი ლაპარაკობს.
 \end_layout
 
@@ -2287,8 +2306,8 @@ Script Georgian
 \end_layout
 
 \begin_layout Itemize
-No T8K, T8M fonts encoding definitions in TeXLive16 (but in CTAN package
- 
+No T8K,
+ T8M fonts encoding definitions in TeXLive16 (but in CTAN package 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2301,7 +2320,8 @@ georgian
 
 \begin_layout Itemize
 Babel-Georgian claims to work with non-TeX fonts.
- However, it selects the obsolete font encodings EU1/EU2 resulting in 
+ However,
+ it selects the obsolete font encodings EU1/EU2 resulting in 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2342,13 +2362,19 @@ Deutsch
 \begin_layout Quote
 
 \lang ngerman
-Ihr Sprachraum umfasst Deutschland, Österreich, die Deutschschweiz, Liechtenstei
-n, Luxemburg, Ostbelgien, Südtirol, das Elsass und Lothringen sowie Nordschleswi
-g.
- Außerdem ist sie eine Minderheitensprache in einigen europäischen und außereuro
-päischen Ländern, z.
+Ihr Sprachraum umfasst Deutschland,
+ Österreich,
+ die Deutschschweiz,
+ Liechtenstein,
+ Luxemburg,
+ Ostbelgien,
+ Südtirol,
+ das Elsass und Lothringen sowie Nordschleswig.
+ Außerdem ist sie eine Minderheitensprache in einigen europäischen und außereuropäischen Ländern,
+ z.
  B.
- in Rumänien und Südafrika, sowie Nationalsprache im afrikanischen Namibia.
+ in Rumänien und Südafrika,
+ sowie Nationalsprache im afrikanischen Namibia.
 \end_layout
 
 \begin_layout Labeling
@@ -2381,7 +2407,8 @@ spelling)
 \begin_layout Quote
 
 \lang german
-Für alle, die die Rechtschreibreform 1996 für puren Stuß halten.
+Für alle,
+ die die Rechtschreibreform 1996 für puren Stuß halten.
 \end_layout
 
 \begin_layout Labeling
@@ -2562,9 +2589,9 @@ Greek
 \emph on
 ελληνική γλώσσα
 \emph default
- είναι μια από τις ινδοευρωπαϊκές γλώσσες και αποτελεί το μοναδικό μέλος
- ενός ανεξάρτητου κλάδου, αυτής της οικογένειας γλωσσών, ενώ είναι η επίσημη
- γλώσσα της Ελλάδος και της Κύπρου.
+ είναι μια από τις ινδοευρωπαϊκές γλώσσες και αποτελεί το μοναδικό μέλος ενός ανεξάρτητου κλάδου,
+ αυτής της οικογένειας γλωσσών,
+ ενώ είναι η επίσημη γλώσσα της Ελλάδος και της Κύπρου.
 \end_layout
 
 \begin_layout Labeling
@@ -2574,7 +2601,8 @@ Babel greek
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Polyglossia greek, variant=monotonic
+Polyglossia greek,
+ variant=monotonic
 \end_layout
 
 \begin_layout Labeling
@@ -2592,8 +2620,8 @@ Babel-Greek allows only one Greek variant per document.
 \end_layout
 
 \begin_layout Itemize
-With TeX-Fonts, Latin letters in Greek text are converted to Greek according
- to the 
+With TeX-Fonts,
+ Latin letters in Greek text are converted to Greek according to the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2641,9 +2669,11 @@ status open
 \begin_layout Quote
 
 \lang ancientgreek
-Ὅτι μὲν ὑμεῖς, ὦ ἄνδρες Ἀθηναῖοι, πεπόνθατε ὑπὸ τῶν ἐμῶν κατηγόρων, οὐκ
- οἶδα· ἐγὼ δ' οὖν καὶ αὐτὸς ὑπ' αὐτῶν ὀλίγου ἐμαυτοῦ ἐπελαθόμην, οὕτω πιθανῶς
- ἔλεγον.
+Ὅτι μὲν ὑμεῖς,
+ ὦ ἄνδρες Ἀθηναῖοι,
+ πεπόνθατε ὑπὸ τῶν ἐμῶν κατηγόρων,
+ οὐκ οἶδα· ἐγὼ δ' οὖν καὶ αὐτὸς ὑπ' αὐτῶν ὀλίγου ἐμαυτοῦ ἐπελαθόμην,
+ οὕτω πιθανῶς ἔλεγον.
  Καίτοι ἀληθές γε ὡς ἔπος εἰπεῖν οὐδὲν εἰρήκασιν.
 \end_layout
 
@@ -2700,9 +2730,7 @@ status open
 \begin_layout Quote
 
 \lang polutonikogreek
-Ἡ δ' ἀπὸ τῆς Ἑλλάδος ἀποδημία του ἐγένετο πρόξενος πολλῶν ἀδίκων κρίσεων
- περὶ προσώπων καὶ πραγμάτων καὶ πρῶτα πρῶτα τῆς περὶ ἧς ἀνωτέρω ἔγινε λόγος
- πρὸς τὸν κλῆρον συμπεριφορᾶς του.
+Ἡ δ' ἀπὸ τῆς Ἑλλάδος ἀποδημία του ἐγένετο πρόξενος πολλῶν ἀδίκων κρίσεων περὶ προσώπων καὶ πραγμάτων καὶ πρῶτα πρῶτα τῆς περὶ ἧς ἀνωτέρω ἔγινε λόγος πρὸς τὸν κλῆρον συμπεριφορᾶς του.
 \end_layout
 
 \end_inset
@@ -2765,9 +2793,11 @@ Dummy paragraph to set language inside quote
 \begin_layout Quote
 
 \lang hebrew
-עִבְרִית היא שפה שמית, ממשפחת השפות האפרו-אסיאתיות, הידועה כשפתם של היהודים
- ושל השומרונים, אשר ניב מודרני שלה (עברית ישראלית) הוא שפתה הרשמית של מדינת
- ישראל, מעמד שעוגן בשנת
+עִבְרִית היא שפה שמית,
+ ממשפחת השפות האפרו-אסיאתיות,
+ הידועה כשפתם של היהודים ושל השומרונים,
+ אשר ניב מודרני שלה (עברית ישראלית) הוא שפתה הרשמית של מדינת ישראל,
+ מעמד שעוגן בשנת
 \family roman
 \series medium
 \shape up
@@ -2798,7 +2828,8 @@ Dummy paragraph to set language inside quote
 \color inherit
 2018
 \numeric off
- בחוק יסוד: ישראל – מדינת הלאום של העם היהודי.
+ בחוק יסוד:
+ ישראל – מדינת הלאום של העם היהודי.
 \end_layout
 
 \end_inset
@@ -2838,7 +2869,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2970,7 +3002,8 @@ LangCode he_IL
 With non-standard article-like classes (i.e.
  document classes not defining 
 \backslash
-chapter), numbered sections and 
+chapter),
+ numbered sections and 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2986,20 +3019,25 @@ Hebrew TeX fonts are not included with TeXLive.
 \end_layout
 
 \begin_layout Itemize
-With XeTeX there is a decent selection of free-licensed fonts, e.g.:
+With XeTeX there is a decent selection of free-licensed fonts,
+ e.g.:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Serif: David/Frank Ruhl (Culmus or Google fonts).
+Serif:
+ David/Frank Ruhl (Culmus or Google fonts).
 \end_layout
 
 \begin_layout Itemize
-Sans-serif: DejaVu Sans Serif, Alef
+Sans-serif:
+ DejaVu Sans Serif,
+ Alef
 \end_layout
 
 \begin_layout Itemize
-Monospace: Miriam Libre (Culmus or Google Fonts).
+Monospace:
+ Miriam Libre (Culmus or Google Fonts).
 \end_layout
 
 \begin_layout Itemize
@@ -3035,10 +3073,7 @@ status open
 \lang hindi
 हिंदी
 \emph default
- विश्व की एक प्रमुख भाषा है एवं भारत की राजभाषा है। केंद्रीय स्तर पर भारत
- में दूसरी आधिकारिक भाषा अंग्रेजी है। यह हिंदुस्तानी भाषा की एक मानकीकृत
- रूप है जिसमें संस्कृत के तत्सम तथा तद्भव शब्दों का प्रयोग अधिक है और अरबी-फ़ारस
-ी शब्द कम हैं।
+ विश्व की एक प्रमुख भाषा है एवं भारत की राजभाषा है। केंद्रीय स्तर पर भारत में दूसरी आधिकारिक भाषा अंग्रेजी है। यह हिंदुस्तानी भाषा की एक मानकीकृत रूप है जिसमें संस्कृत के तत्सम तथा तद्भव शब्दों का प्रयोग अधिक है और अरबी-फ़ारसी शब्द कम हैं।
 \end_layout
 
 \end_inset
@@ -3072,10 +3107,12 @@ A
 \emph on
 magyar nyelv
 \emph default
- az uráli nyelvcsalád tagja, a finnugor nyelvek közé tartozó ugor nyelvek
- egyike.
- Legközelebbi rokonai a manysi és a hanti nyelv, majd utánuk az udmurt,
- a komi, a mari és a mordvin nyelvek.
+ az uráli nyelvcsalád tagja,
+ a finnugor nyelvek közé tartozó ugor nyelvek egyike.
+ Legközelebbi rokonai a manysi és a hanti nyelv,
+ majd utánuk az udmurt,
+ a komi,
+ a mari és a mordvin nyelvek.
 \end_layout
 
 \begin_layout Labeling
@@ -3103,10 +3140,9 @@ Icelandic
 \lang icelandic
 Íslenska
 \emph default
- er vesturnorrænt, germanskt og indóevrópskt tungumál sem er einkum talað
- og ritað á Íslandi og er móðurmál langflestra Íslendinga.
- Það hefur tekið minni breytingum frá fornnorrænu en önnur norræn mál og
- er skyldara norsku og færeysku en sænsku og dönsku.
+ er vesturnorrænt,
+ germanskt og indóevrópskt tungumál sem er einkum talað og ritað á Íslandi og er móðurmál langflestra Íslendinga.
+ Það hefur tekið minni breytingum frá fornnorrænu en önnur norræn mál og er skyldara norsku og færeysku en sænsku og dönsku.
 \end_layout
 
 \begin_layout Labeling
@@ -3125,8 +3161,7 @@ LangCode is_IS
 \end_layout
 
 \begin_layout Itemize
-The nordic characters ð and Þ are missing in LaTeX 7-bit (OT1) fonts (Computer
- Modern).
+The nordic characters ð and Þ are missing in LaTeX 7-bit (OT1) fonts (Computer Modern).
 \end_layout
 
 \begin_layout Subsection*
@@ -3139,8 +3174,7 @@ Indonesian
 \lang bahasa
 Bahasa Indonesia
 \emph default
- adalah bentuk standar bahasa Melayu yang dijadikan sebagai bahasa resmi
- Republik Indonesia dan bahasa persatuan bangsa Indonesia
+ adalah bentuk standar bahasa Melayu yang dijadikan sebagai bahasa resmi Republik Indonesia dan bahasa persatuan bangsa Indonesia
 \end_layout
 
 \begin_layout Labeling
@@ -3168,10 +3202,8 @@ Interlingua
 \lang interlingua
 Interlingua
 \emph default
- es un lingua auxiliar international naturalistic basate super le vocabulos
- commun al major linguas europee e super un grammatica anglo-romance simple,
- initialmente publicate in 1951 per International Auxiliary Language Association
- (IALA).
+ es un lingua auxiliar international naturalistic basate super le vocabulos commun al major linguas europee e super un grammatica anglo-romance simple,
+ initialmente publicate in 1951 per International Auxiliary Language Association (IALA).
 \end_layout
 
 \begin_layout Labeling
@@ -3200,8 +3232,8 @@ Is ceann de na teangacha Ceilteacha í
 \emph on
 an Ghaeilge
 \emph default
-, agus ceann den dtrí cinn de theangacha Ceilteacha ar a dtugtar na teangacha
- Gaelacha go háirithe.
+,
+ agus ceann den dtrí cinn de theangacha Ceilteacha ar a dtugtar na teangacha Gaelacha go háirithe.
 \end_layout
 
 \begin_layout Labeling
@@ -3258,6 +3290,7 @@ status open
 日本語
 \series default
 （にほんご、にっぽんご[注 1]）は、主に日本国内や日本人同士の間で使用されている言語である。
+
 \end_layout
 
 \end_inset
@@ -3294,8 +3327,7 @@ XeTeX and LuaTeX work only with non-TeX fonts.
 \end_layout
 
 \begin_layout Itemize
-Does not work as secondary language unless the document encoding is set
- to one of the special 
+Does not work as secondary language unless the document encoding is set to one of the special 
 \begin_inset Quotes gld
 \end_inset
 
@@ -3307,8 +3339,7 @@ Does not work as secondary language unless the document encoding is set
 \end_layout
 
 \begin_layout Itemize
-Wrong characters/encoding in the PDF-bookmarks (toc) can be fixed with the
- 
+Wrong characters/encoding in the PDF-bookmarks (toc) can be fixed with the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3345,6 +3376,7 @@ status open
 日本語
 \series default
 （にほんご、にっぽんご[注 1]）は、主に日本国内や日本人同士の間で使用されている言語である。
+
 \end_layout
 
 \end_inset
@@ -3371,6 +3403,7 @@ status open
 日本語
 \series default
 （にほんご、にっぽんご[注 1]）は、主に日本国内や日本人同士の間で使用されている言語である。
+
 \end_layout
 
 \end_inset
@@ -3409,13 +3442,14 @@ Requires CJK
 \end_layout
 
 \begin_layout Itemize
-The different CJK languages (simplified and traditional Chinese, Japanese,
- and Korean) require different fonts but only one CJK-font can be set in
- the preamble.
+The different CJK languages (simplified and traditional Chinese,
+ Japanese,
+ and Korean) require different fonts but only one CJK-font can be set in the preamble.
 \end_layout
 
 \begin_layout Itemize
-Package clash CJK, Arabi/Farsi
+Package clash CJK,
+ Arabi/Farsi
 \end_layout
 
 \begin_layout Itemize
@@ -3470,8 +3504,8 @@ Font setup with
 \emph on
 luatexja-fontspec
 \emph default
- affects some non-Japanese characters (here, missing U+2059 FIVE DOT PUNCTUATION
- (Church Slavonic) and some typographical quotes).
+ affects some non-Japanese characters (here,
+ missing U+2059 FIVE DOT PUNCTUATION (Church Slavonic) and some typographical quotes).
 \end_layout
 
 \end_deeper
@@ -3487,9 +3521,7 @@ status open
 \begin_layout Quote
 
 \lang kannada
-ದ್ರಾವಿಡ ಭಾಷೆಗಳಲ್ಲಿ ಪ್ರಾಮುಖ್ಯವುಳ್ಳ ಭಾಷೆಯೂ ಭಾರತದ ಪುರಾತನವಾದ ಭಾಷೆಗಳಲ್ಲಿ ಒಂದೂ
- ಆಗಿರುವ ಕನ್ನಡ ಭಾಷೆಯನ್ನು ಅದರ ವಿವಿಧ ರೂಪಗಳಲ್ಲಿ ಸುಮಾರು ೪೫ ದಶಲಕ್ಷ ಜನರು ಆಡು ನುಡಿಯಾಗಿ
- ಬಳಸುತ್ತಲಿದ್ದಾರೆ.
+ದ್ರಾವಿಡ ಭಾಷೆಗಳಲ್ಲಿ ಪ್ರಾಮುಖ್ಯವುಳ್ಳ ಭಾಷೆಯೂ ಭಾರತದ ಪುರಾತನವಾದ ಭಾಷೆಗಳಲ್ಲಿ ಒಂದೂ ಆಗಿರುವ ಕನ್ನಡ ಭಾಷೆಯನ್ನು ಅದರ ವಿವಿಧ ರೂಪಗಳಲ್ಲಿ ಸುಮಾರು ೪೫ ದಶಲಕ್ಷ ಜನರು ಆಡು ನುಡಿಯಾಗಿ ಬಳಸುತ್ತಲಿದ್ದಾರೆ.
  ಕನ್ನಡ ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಆಡಳಿತ ಭಾಷೆ.
 \end_layout
 
@@ -3520,8 +3552,13 @@ Kazakh
 \begin_layout Quote
 
 \lang kazakh
-Қазақ тілі (латын: qazaq tili) — Қазақстан Республикасының мемлекеттік тілі,
- сонымен қатар Ресей, Өзбекстан, Қытай, Моңғолия жəне т.б.
+Қазақ тілі (латын:
+ qazaq tili) —
+ Қазақстан Республикасының мемлекеттік тілі,
+ сонымен қатар Ресей,
+ Өзбекстан,
+ Қытай,
+ Моңғолия жəне т.б.
  елдерде тұратын қазақтардың ана тілі.
 \end_layout
 
@@ -3549,8 +3586,8 @@ Setting text to this language has only effect on spell-checking.
 \end_layout
 
 \begin_layout Itemize
-For documents using only Cyrillic (and basic Latin) letters, you may get
- rid of the auto-inserted 
+For documents using only Cyrillic (and basic Latin) letters,
+ you may get rid of the auto-inserted 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3573,11 +3610,11 @@ Custom T2A
 \end_layout
 
 \begin_layout Itemize
-The correct font encoding for Kazakz with Cyrillic is T2C which contains
- required letters like the turned e (
+The correct font encoding for Kazakz with Cyrillic is T2C which contains required letters like the turned e (
 \backslash
 textschwa).
- However, LyX currently would override this with 
+ However,
+ LyX currently would override this with 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3591,10 +3628,11 @@ textcyrillic
 \end_layout
 
 \begin_layout Itemize
-As of 2018, Kazakh is written in Cyrillic or Latin in Kazakhstan and in
- Cyrillic in Mongolia.
- Kazakh speakers in China, Iran, and Afghanistan also use an Arabic-derived
- alphabet.
+As of 2018,
+ Kazakh is written in Cyrillic or Latin in Kazakhstan and in Cyrillic in Mongolia.
+ Kazakh speakers in China,
+ Iran,
+ and Afghanistan also use an Arabic-derived alphabet.
 \end_layout
 
 \begin_layout Subsection*
@@ -3622,8 +3660,7 @@ status open
 \lang english
 khmer
 \lang khmer
- ខេមរភាសាខ្មែរ គឺជាភាសារបស់ ប្រជាជាតិខ្មែរ ។ ភាសាសំស្ក្រឹត និងភាសាបាលីបានជួយបង្ក
-ើ ភាសា ព្រោះភាសាខ្មែរបានខ្ចីពាក្យច្រើនពីភាសាអស់នោះ ។
+ ខេមរភាសាខ្មែរ គឺជាភាសារបស់ ប្រជាជាតិខ្មែរ ។ ភាសាសំស្ក្រឹត និងភាសាបាលីបានជួយបង្កើ ភាសា ព្រោះភាសាខ្មែរបានខ្ចីពាក្យច្រើនពីភាសាអស់នោះ ។
 \end_layout
 
 \end_inset
@@ -3675,13 +3712,17 @@ status open
 \emph on
 한국말
 \emph default
-(韓國-), 
+(韓國-),
+ 
 \emph on
 조선말
 \emph default
-(朝鮮-)은 대한민국과 조선민주주의인민공 국, 옌볜 조선족 자치주의 공용어로, 대한민국에서는 한국어 또는 한국말이라고 부르고, 조선
- 주주의인민공화국에서는 조선말, 중화인민공화국과 일본에서는 조선어(朝鮮語)라고 부 며, 러시아와 중앙아시아의 고려인들 사이에서는
- 고려말(高麗-)이라고 부른다.
+(朝鮮-)은 대한민국과 조선민주주의인민공 국,
+ 옌볜 조선족 자치주의 공용어로,
+ 대한민국에서는 한국어 또는 한국말이라고 부르고,
+ 조선 주주의인민공화국에서는 조선말,
+ 중화인민공화국과 일본에서는 조선어(朝鮮語)라고 부 며,
+ 러시아와 중앙아시아의 고려인들 사이에서는 고려말(高麗-)이라고 부른다.
 \end_layout
 
 \end_inset
@@ -3719,7 +3760,8 @@ status open
 
 \end_inset
 
- Hangul), Chinese
+ Hangul),
+ Chinese
 \end_layout
 
 \begin_layout Labeling
@@ -3733,9 +3775,9 @@ Requires CJK or Polyglossia
 \end_layout
 
 \begin_layout Itemize
-The different CJK languages (simplified and traditional Chinese, Japanese,
- and Korean) require different fonts but only one CJK-font can be set in
- the preamble.
+The different CJK languages (simplified and traditional Chinese,
+ Japanese,
+ and Korean) require different fonts but only one CJK-font can be set in the preamble.
 \end_layout
 
 \begin_layout Itemize
@@ -3768,7 +3810,8 @@ and error message
 \begin_layout LyX-Code
 [
 \backslash
-directlua]:1: You cannot set field spec in a node of type glue 
+directlua]:1:
+ You cannot set field spec in a node of type glue 
 \end_layout
 
 \begin_layout Standard
@@ -3777,7 +3820,8 @@ It seems that
 \emph on
 gloss-korean.ldf
 \emph default
- (unnumbered Version from Debian/stable, Mar
+ (unnumbered Version from Debian/stable,
+ Mar
 \begin_inset space ~
 \end_inset
 
@@ -3865,7 +3909,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4031,10 +4076,11 @@ Latin
 \lang latin
 Lingua Latina
 \emph default
-, sive sermo Latinus, est lingua Indoeuropaea, qua primum Latini universi
- et Romani antiqui in primis loquebantur, quamobrem interdum etiam lingua
- Latia (in Latio enim sueta) et lingua Romana (nam imperii Romani sermo
- sollemnis) appellatur.
+,
+ sive sermo Latinus,
+ est lingua Indoeuropaea,
+ qua primum Latini universi et Romani antiqui in primis loquebantur,
+ quamobrem interdum etiam lingua Latia (in Latio enim sueta) et lingua Romana (nam imperii Romani sermo sollemnis) appellatur.
 \end_layout
 
 \begin_layout Labeling
@@ -4059,8 +4105,9 @@ Latvian
 \begin_layout Quote
 
 \lang latvian
-Latviešu valoda ir dzimtā valoda apmēram 1,7 miljoniem cilvēku, galvenokārt
- Latvijā, kur tā ir vienīgā valsts valoda.
+Latviešu valoda ir dzimtā valoda apmēram 1,7 miljoniem cilvēku,
+ galvenokārt Latvijā,
+ kur tā ir vienīgā valsts valoda.
  Latviešu valoda pieder pie indoeiropiešu valodu saimes baltu valodu grupas.
 \end_layout
 
@@ -4096,8 +4143,8 @@ Lietuvių kalba
  – daugiausia vartotojų turinti rytų baltų kalba.
  Baltų kalbos kilusios iš baltų prokalbės.
  Lietuviškai šneka apie 3 mln.
- žmonių Lietuvoje, šiek tiek Baltarusijoje ir Lenkijos šiaurės rytuose (vadinamo
-s lietuvių kalbos salos).
+ žmonių Lietuvoje,
+ šiek tiek Baltarusijoje ir Lenkijos šiaurės rytuose (vadinamos lietuvių kalbos salos).
 \end_layout
 
 \begin_layout Labeling
@@ -4129,8 +4176,7 @@ L7x
 \begin_inset Quotes grd
 \end_inset
 
- font encoding that is required to let LaTeX correctly auto-hyphenate words
- containing special letters like 
+ font encoding that is required to let LaTeX correctly auto-hyphenate words containing special letters like 
 \begin_inset Quotes gld
 \end_inset
 
@@ -4161,7 +4207,8 @@ TeX Gyre
 
 \begin_deeper
 \begin_layout Standard
-For a wider choice of fonts, use the 
+For a wider choice of fonts,
+ use the 
 \family sans
 Document\SpecialChar menuseparator
 Settings\SpecialChar menuseparator
@@ -4198,8 +4245,9 @@ status open
 \lang macedonian
 Македонски јазик
 \emph default
- — јужнословенски јазик, дел од групата на словенски јазици од јазичното
- семејство на индоевропски јазици.
+ —
+ јужнословенски јазик,
+ дел од групата на словенски јазици од јазичното семејство на индоевропски јазици.
  Македонскиот е службен и национален јазик во Македонија.
 \end_layout
 
@@ -4234,7 +4282,11 @@ LangCode mk_MK
 \end_layout
 
 \begin_layout Itemize
-Conflict with Belarusian, Bulgarian, Mongolian, Russian, and Ukrainian.
+Conflict with Belarusian,
+ Bulgarian,
+ Mongolian,
+ Russian,
+ and Ukrainian.
 \end_layout
 
 \begin_layout Subsection*
@@ -4247,9 +4299,9 @@ Malay
 \lang bahasam
 Bahasa Melayu
 \emph default
- ialah sejenis bahasa Melayu-Polinesia di bawah keluarga bahasa Austronesia
- yang telah digunakan di wilayah Malaysia, Indonesia, dan persekitarannya
- sejak melebihi 1,000 tahun lalu.
+ ialah sejenis bahasa Melayu-Polinesia di bawah keluarga bahasa Austronesia yang telah digunakan di wilayah Malaysia,
+ Indonesia,
+ dan persekitarannya sejak melebihi 1,000 tahun lalu.
 \end_layout
 
 \begin_layout Labeling
@@ -4264,7 +4316,8 @@ Polyglossia bahasam
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Script Latin, Arabic (not supported)
+Script Latin,
+ Arabic (not supported)
 \end_layout
 
 \begin_layout Labeling
@@ -4284,8 +4337,7 @@ status open
 \begin_layout Quote
 
 \lang malayalam
-ഇന്ത്യയിൽ പ്രധാനമായും കേരള സംസ്ഥാനത്തിലും ലക്ഷദ്വീപിലും പുതുച്ചേരിയുടെ ഭാഗമായ
- മയ്യഴിയിലും സംസാരിക്കപ്പെടുന്ന ഭാഷയാണ് മലയാളം.
+ഇന്ത്യയിൽ പ്രധാനമായും കേരള സംസ്ഥാനത്തിലും ലക്ഷദ്വീപിലും പുതുച്ചേരിയുടെ ഭാഗമായ മയ്യഴിയിലും സംസാരിക്കപ്പെടുന്ന ഭാഷയാണ് മലയാളം.
 \end_layout
 
 \end_inset
@@ -4323,8 +4375,7 @@ status open
 मराठी भाषा ही इंडो-युरोपीय भाषाकुलातील एक भाषा आहे.
  भारतातील प्रमुख २२ भाषांपैकी मराठी एक आहे.
  महाराष्ट्र आणि गोवा ह्या राज्यांची मराठी ही अधिकृत राजभाषा आहे.
- मराठी मातृभाषा असणाऱ्या लोकसंख्येनुसार मराठी ही जगातील पंधरावी व भारतातील
- तिसरी भाषा आहे.
+ मराठी मातृभाषा असणाऱ्या लोकसंख्येनुसार मराठी ही जगातील पंधरावी व भारतातील तिसरी भाषा आहे.
 \end_layout
 
 \end_inset
@@ -4364,7 +4415,8 @@ status open
 \begin_layout Quote
 
 \lang mongolian
-Монгол үндэстний эрт эдүгээ цагийн хэл аялгуу, үсэг бичгийг хамтад нь 
+Монгол үндэстний эрт эдүгээ цагийн хэл аялгуу,
+ үсэг бичгийг хамтад нь 
 \emph on
 Монгол хэл
 \emph default
@@ -4478,8 +4530,7 @@ North Sami
 \lang samin
 Davvisámegiella
 \emph default
- gullá sámegielaid oarjesámegielaid davvejovkui ovttas julev- ja bihtánsámegiela
-in.
+ gullá sámegielaid oarjesámegielaid davvejovkui ovttas julev- ja bihtánsámegielain.
  Eará oarjesámegielat leat ubmisámegiella ja lullisámegiella.
 \end_layout
 
@@ -4500,7 +4551,8 @@ LangCode se_NO
 status open
 
 \begin_layout Plain Layout
-(why country code Norway? Also spoken in Sweden and Finland)
+(why country code Norway?
+ Also spoken in Sweden and Finland)
 \end_layout
 
 \end_inset
@@ -4527,9 +4579,11 @@ Norwegian
 Norsk
 \emph default
  er et nordisk språk som snakkes som morsmål av rundt 5 millioner mennesker,
- først og fremst i Norge, hvor det er offisielt språk.
- Norsk, svensk og dansk utgjør sammen de fastlandsnordiske språkene, et
- kontinuum av mer eller mindre innbyrdes forståelige dialekter i Skandinavia.
+ først og fremst i Norge,
+ hvor det er offisielt språk.
+ Norsk,
+ svensk og dansk utgjør sammen de fastlandsnordiske språkene,
+ et kontinuum av mer eller mindre innbyrdes forståelige dialekter i Skandinavia.
 \end_layout
 
 \begin_layout Labeling
@@ -4561,15 +4615,18 @@ Norwegian
 \lang nynorsk
 Nynorsk
 \emph default
-, før 1929 offisielt kalla 
+,
+ før 1929 offisielt kalla 
 \emph on
 landsmål
 \emph default
-, er sidan jamstillingsvedtaket av 12.
+,
+ er sidan jamstillingsvedtaket av 12.
 \begin_inset space ~
 \end_inset
 
-mai 1885 ei av to offisielle målformer av norsk; den andre forma er bokmål.
+mai 1885 ei av to offisielle målformer av norsk;
+ den andre forma er bokmål.
  Nynorsk blir i dag nytta av om lag 10–15% av innbyggjarane i Noreg.
 \end_layout
 
@@ -4608,10 +4665,8 @@ occitan
 \emph on
 lenga d'òc
 \emph default
-) es una lenga romanica parlada en Occitània e pels occitans emigrats de
- pel monde.
- Es una lenga fòrça similara al catalan que d'unes considèran aquel coma
- un dialècte.
+) es una lenga romanica parlada en Occitània e pels occitans emigrats de pel monde.
+ Es una lenga fòrça similara al catalan que d'unes considèran aquel coma un dialècte.
 \end_layout
 
 \end_inset
@@ -4636,7 +4691,8 @@ Piedmontese
 \begin_layout Quote
 
 \lang piedmontese
-Ël piemontèis a l'é na lenga romanza, visadì derivà dal latin.
+Ël piemontèis a l'é na lenga romanza,
+ visadì derivà dal latin.
 \end_layout
 
 \begin_layout Labeling
@@ -4662,10 +4718,11 @@ Polish
 
 \emph on
 \lang polish
-Język polski, polszczyzna
+Język polski,
+ polszczyzna
 \emph default
- – język naturalny należący do grupy języków zachodniosłowiańskich, stanowiącej
- część rodziny języków indoeuropejskich.
+ – język naturalny należący do grupy języków zachodniosłowiańskich,
+ stanowiącej część rodziny języków indoeuropejskich.
 \end_layout
 
 \begin_layout Labeling
@@ -4698,12 +4755,13 @@ A
 \emph on
 língua portuguesa
 \emph default
-, também designada 
+,
+ também designada 
 \emph on
 português
 \emph default
-, é uma língua românica flexiva ocidental originada no galego-português
- falado no Reino da Galiza e no norte de Portugal.
+,
+ é uma língua românica flexiva ocidental originada no galego-português falado no Reino da Galiza e no norte de Portugal.
 \end_layout
 
 \begin_layout Labeling
@@ -4737,8 +4795,7 @@ Portuguese
 \begin_layout Quote
 
 \lang brazilian
-Brasil é o único país na América onde se fala majoritariamente a língua
- portuguesa e o maior país lusófono do planeta.
+Brasil é o único país na América onde se fala majoritariamente a língua portuguesa e o maior país lusófono do planeta.
 \end_layout
 
 \begin_layout Labeling
@@ -4766,11 +4823,11 @@ Romanian
 \lang romanian
 Limba română
 \emph default
- este o limbă indo-europeană, din grupul italic și din subgrupul oriental
- al limbilor romanice.
- De asemenea, este înregistrată ca limbă de stat atât în România cât și
- în Republica Moldova, unde circa 75% din populație o consideră limbă maternă
- (inclusiv sub denumirea de „
+ este o limbă indo-europeană,
+ din grupul italic și din subgrupul oriental al limbilor romanice.
+ De asemenea,
+ este înregistrată ca limbă de stat atât în România cât și în Republica Moldova,
+ unde circa 75% din populație o consideră limbă maternă (inclusiv sub denumirea de „
 \emph on
 limba moldovenească
 \emph default
@@ -4803,9 +4860,9 @@ Il
 \emph on
 rumantsch dal Grischun
 \emph default
- che vegn discurrì en il chantun Grischun fa part da las linguas neolatinas
- e vegn numnà en la lingua da mintgadi ‹rumantsch› (sursilvan: ‹romontsch›
- / puter: ‹rumauntsch›).
+ che vegn discurrì en il chantun Grischun fa part da las linguas neolatinas e vegn numnà en la lingua da mintgadi ‹rumantsch› (sursilvan:
+ ‹romontsch› / puter:
+ ‹rumauntsch›).
 \end_layout
 
 \begin_layout Labeling
@@ -4835,8 +4892,9 @@ status open
 \begin_layout Quote
 
 \lang russian
-Ру́сский язы́к — один из восточнославянских языков, национальный язык русского
- народа.
+Ру́сский язы́к —
+ один из восточнославянских языков,
+ национальный язык русского народа.
  Является одним из наиболее распространённых языков мира.
 \end_layout
 
@@ -4853,8 +4911,9 @@ status open
 \begin_layout Quote
 
 \lang russian
-Ру́сский язы́к — один из восточнославянских языков, национальный язык русского
- народа.
+Ру́сский язы́к —
+ один из восточнославянских языков,
+ национальный язык русского народа.
  Является одним из наиболее распространённых языков мира.
 \end_layout
 
@@ -4900,7 +4959,9 @@ inverted 0
 status open
 
 \begin_layout Verse
-Бѣлый, блѣдный, бѣдный бѣсъ
+Бѣлый,
+ блѣдный,
+ бѣдный бѣсъ
 \end_layout
 
 \begin_layout Verse
@@ -4968,10 +5029,8 @@ status open
 \lang sanskrit
 संस्कृतम्
 \emph default
- जगतः एकतमा अतिप्राचीना समृद्धा शास्त्रीया च भाषा वर्तते। संस्कृतं भारतस्य
- जगत: वा भाषास्वेकतमा प्राचीनतमा। भारती सुरभारती अमरभारती अमरवाणी सुरवाणी
- गीर्वाणवाणी गीर्वाणी देववाणी देवभाषा संस्कृता वाक् दैवीवाक् इत्यादिभिः
- नामभिः एतद्भाषा प्रसिद्धा।
+ जगतः एकतमा अतिप्राचीना समृद्धा शास्त्रीया च भाषा वर्तते। संस्कृतं भारतस्य जगत:
+ वा भाषास्वेकतमा प्राचीनतमा। भारती सुरभारती अमरभारती अमरवाणी सुरवाणी गीर्वाणवाणी गीर्वाणी देववाणी देवभाषा संस्कृता वाक् दैवीवाक् इत्यादिभिः नामभिः एतद्भाषा प्रसिद्धा।
 \end_layout
 
 \end_inset
@@ -5019,8 +5078,7 @@ Gaidhlig (Scottish Gaelic)
 a' Ghàidhlig
 \emph default
 .
- 'S i ball den teaghlach de chànanan Ceilteach dhen mheur Ghoidhealach a
- tha anns a' Ghàidhlig.
+ 'S i ball den teaghlach de chànanan Ceilteach dhen mheur Ghoidhealach a tha anns a' Ghàidhlig.
 \end_layout
 
 \begin_layout Labeling
@@ -5047,10 +5105,9 @@ Scots
 \emph on
 Scots
 \emph default
- (or "Lallans") is a Wast Germanic leid o the Anglic varietie that's spaken
- on the Lawlands an Northren Isles o Scotland an en tha stewartrie o Ulster
- en Ireland.
- En maist airts, it's spaken anent tha Scots Gaelic an Inglis leids.
+ (or "Lallans") is a Wast Germanic leid o the Anglic varietie that's spaken on the Lawlands an Northren Isles o Scotland an en tha stewartrie o Ulster en Ireland.
+ En maist airts,
+ it's spaken anent tha Scots Gaelic an Inglis leids.
 \end_layout
 
 \begin_layout Itemize
@@ -5077,8 +5134,8 @@ status open
 Српски језик
 \emph default
  припада словенској групи језика породице индоевропских језика.
- Српски језик је званичан у Србији, Босни и Херцеговини и Црној Гори и говори
- га око 12 милиона људи.
+ Српски језик је званичан у Србији,
+ Босни и Херцеговини и Црној Гори и говори га око 12 милиона људи.
  Такође је мањински језик у државама централне и источне Европе.
 \end_layout
 
@@ -5128,7 +5185,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5257,8 +5315,8 @@ LangCode sr_RS
 \end_layout
 
 \begin_layout Itemize
-Up to Version 3.0 (2019-01-12), input encoding and font encoding were set
- document-wide to 
+Up to Version 3.0 (2019-01-12),
+ input encoding and font encoding were set document-wide to 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5282,7 +5340,8 @@ babel-serbianc
 \begin_inset Quotes erd
 \end_inset
 
-, overriding LyX settings and leading to errors in multi-lingual documents.
+,
+ overriding LyX settings and leading to errors in multi-lingual documents.
  
 \end_layout
 
@@ -5313,7 +5372,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5375,13 +5435,15 @@ Serbian (Latin)
 \begin_layout Quote
 
 \lang serbian-latin
-Ako bismo zanemarili do sada jasno nepotvrđene naučne hipoteze (koje imaju
- osnova) o prethodnim slovenskim (pa time i srpskim) pismima, može se reći
- da se, u različitim razdobljima 
+Ako bismo zanemarili do sada jasno nepotvrđene naučne hipoteze (koje imaju osnova) o prethodnim slovenskim (pa time i srpskim) pismima,
+ može se reći da se,
+ u različitim razdobljima 
 \emph on
 srpski
 \emph default
- pisao latinicom, glagoljicom, ćirilicom i arapskim pismom.
+ pisao latinicom,
+ glagoljicom,
+ ćirilicom i arapskim pismom.
 \end_layout
 
 \begin_layout Labeling
@@ -5415,7 +5477,8 @@ Slovak
 Slovenčina
 \emph default
  patrí do skupiny západoslovanských jazykov.
- Slovenčina je oficiálne úradným jazykom Slovenska, Vojvodiny a od 1.
+ Slovenčina je oficiálne úradným jazykom Slovenska,
+ Vojvodiny a od 1.
  mája 2004 jedným z jazykov Európskej únie.
 \end_layout
 
@@ -5444,8 +5507,8 @@ Slovene
 \lang slovene
 Slovenščina
 \emph default
- je združeni naziv za uradni knjižni jezik Slovencev in skupno ime za narečja
- in govore, ki jih govorijo ali so jih nekoč govorili Slovenci.
+ je združeni naziv za uradni knjižni jezik Slovencev in skupno ime za narečja in govore,
+ ki jih govorijo ali so jih nekoč govorili Slovenci.
 \end_layout
 
 \begin_layout Labeling
@@ -5481,12 +5544,15 @@ Sorbian
 \lang lowersorbian
 Dolnoserbšćina
 \emph default
-, 
+,
+ 
 \emph on
 dolnoserbska rěc
 \emph default
- jo jadna z dweju rěcowu Serbow, kotaraž se wužywa w Dolnej Łužycy, w pódpołdnjo
-wej Bramborskej, na pódzajtšu Nimskej.
+ jo jadna z dweju rěcowu Serbow,
+ kotaraž se wužywa w Dolnej Łužycy,
+ w pódpołdnjowej Bramborskej,
+ na pódzajtšu Nimskej.
 \end_layout
 
 \begin_layout Labeling
@@ -5511,8 +5577,9 @@ Upper Sorbian
 \begin_layout Quote
 
 \lang uppersorbian
-Hornjoserbšćina je zapadosłowjanska rěč, kotraž so w Hornjej Łužicy wokoło
- městow Budyšin, Kamjenc a Wojerecy rěči.
+Hornjoserbšćina je zapadosłowjanska rěč,
+ kotraž so w Hornjej Łužicy wokoło městow Budyšin,
+ Kamjenc a Wojerecy rěči.
  Jako słowjanska rěč hornjoserbšćina k indoeuropskim rěčam słuša.
 \end_layout
 
@@ -5552,10 +5619,9 @@ español
 castellano
 \emph default
  es una lengua romance procedente del latín hablado.
- Pertenece al grupo ibérico y es originaria de Castilla, reino medieval
- de la península ibérica.
- Es la segunda lengua del mundo por el número de personas que la hablan
- como lengua materna tras el chino mandarín.
+ Pertenece al grupo ibérico y es originaria de Castilla,
+ reino medieval de la península ibérica.
+ Es la segunda lengua del mundo por el número de personas que la hablan como lengua materna tras el chino mandarín.
 \end_layout
 
 \end_inset
@@ -5587,7 +5653,8 @@ galician
 \begin_inset Quotes erd
 \end_inset
 
-: Command 
+:
+ Command 
 \backslash
 quoting already defined.
 \end_layout
@@ -5638,12 +5705,9 @@ Swedish
 \lang swedish
 Svenska
 \emph default
- är ett östnordiskt språk som talas av drygt elva miljoner personer främst
- i Sverige där språket har en dominant ställning som huvudspråk, men även
- som det ena nationalspråket i Finland och som enda officiella språk på
- Åland.
- Svenska är nära besläktat och i hög grad ömsesidigt begripligt med danska
- och norska.
+ är ett östnordiskt språk som talas av drygt elva miljoner personer främst i Sverige där språket har en dominant ställning som huvudspråk,
+ men även som det ena nationalspråket i Finland och som enda officiella språk på Åland.
+ Svenska är nära besläktat och i hög grad ömsesidigt begripligt med danska och norska.
 \end_layout
 
 \begin_layout Labeling
@@ -5676,11 +5740,13 @@ inverted 0
 status open
 
 \begin_layout Quote
-Variants of the Syriac alphabet: Esṭrangelā (
+Variants of the Syriac alphabet:
+ Esṭrangelā (
 \lang syriac
 ܐܣܛܪܢܓܠܐ
 \lang english
-), Serṭā (
+),
+ Serṭā (
 \lang syriac
 ܣܪܛܐ
 \lang english
@@ -5718,7 +5784,8 @@ LangCode syr_SY
 status open
 
 \begin_layout Plain Layout
-classical Syriac: syc (ISO 639-3)
+classical Syriac:
+ syc (ISO 639-3)
 \end_layout
 
 \end_inset
@@ -5741,9 +5808,9 @@ status open
 \lang tamil
 தமிழ் மொழி
 \emph default
- தமிழர்களினதும், தமிழ் பேசும் பலரதும் தாய்மொழி ஆகும்.
- தமிழ் திராவிட மொழிக் குடும்பத்தின் முதன்மையான மொழிகளில் ஒன்றும் செம்மொழியும்
- ஆகும்.
+ தமிழர்களினதும்,
+ தமிழ் பேசும் பலரதும் தாய்மொழி ஆகும்.
+ தமிழ் திராவிட மொழிக் குடும்பத்தின் முதன்மையான மொழிகளில் ஒன்றும் செம்மொழியும் ஆகும்.
 \end_layout
 
 \end_inset
@@ -5778,9 +5845,9 @@ status open
 \begin_layout Quote
 
 \lang telugu
-ఆంధ్ర ప్రదేశ్, తెలంగాణ రాష్ట్రాల అధికార భాష తెలుగు.
- భారత దేశంలో తెలుగు మాతృభాషగా మాట్లాడే 8.7 కోట్ల (2001) జనాభాతో ప్రాంతీయ
- భాషలలో మొదటి స్థానంలో ఉంది.
+ఆంధ్ర ప్రదేశ్,
+ తెలంగాణ రాష్ట్రాల అధికార భాష తెలుగు.
+ భారత దేశంలో తెలుగు మాతృభాషగా మాట్లాడే 8.7 కోట్ల (2001) జనాభాతో ప్రాంతీయ భాషలలో మొదటి స్థానంలో ఉంది.
 \end_layout
 
 \end_inset
@@ -5822,10 +5889,7 @@ status open
 \emph on
 ภาษาไทยกลาง
 \emph default
- เป็นภาษาราชการและภาษาประจำชาติของประเทศไทย ภาษาไทยเป็นภาษาในกลุ่มภาษาไท
- ซึ่งเป็นกลุ่มย่อยของตระกูลภาษาไท-กะได สันนิษฐานว่า ภาษาในตระกูลนี้มีถิ่นกำเนิดจ
-ากทางตอนใต้ของประเทศจีน และนักภาษาศาสตร์บางส่วนเสนอว่า ภาษาไทยน่าจะมีความเชื่อมโ
-ยงกับตระกูลภาษาออสโตร-เอเชียติก ตระกูลภาษาออสโตรนีเซียน และตระกูลภาษาจีน-ทิเบต
+ เป็นภาษาราชการและภาษาประจำชาติของประเทศไทย ภาษาไทยเป็นภาษาในกลุ่มภาษาไท ซึ่งเป็นกลุ่มย่อยของตระกูลภาษาไท-กะได สันนิษฐานว่า ภาษาในตระกูลนี้มีถิ่นกำเนิดจากทางตอนใต้ของประเทศจีน และนักภาษาศาสตร์บางส่วนเสนอว่า ภาษาไทยน่าจะมีความเชื่อมโยงกับตระกูลภาษาออสโตร-เอเชียติก ตระกูลภาษาออสโตรนีเซียน และตระกูลภาษาจีน-ทิเบต
 \end_layout
 
 \end_inset
@@ -5886,7 +5950,8 @@ status collapsed
 
 \begin_layout Plain Layout
 E.g.
- an option clash when also using Hebrew, which loads 
+ an option clash when also using Hebrew,
+ which loads 
 \emph on
 inputenc 
 \emph default
@@ -5901,7 +5966,8 @@ babel.
 \end_layout
 
 \begin_layout Itemize
-For emphasized text with TeX fonts other than CM or LM, load 
+For emphasized text with TeX fonts other than CM or LM,
+ load 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5926,7 +5992,8 @@ babel
 .
 
 \emph default
- In the user preamble, write
+ In the user preamble,
+ write
 \end_layout
 
 \begin_deeper
@@ -5977,8 +6044,7 @@ status open
 \lang tibetan
 བོད་ཀྱི་སྐད་ཡིག་
 \emph default
-ནི་བོད་ཡུལ་དང་དེའི་ཉེ་འཁོར་གྱི་ས་ཁུལ་ཏེ། བལ་ཡུལ་དང་། འབྲུག འབྲས་ལྗོངས། ལ་དྭགས་ནས
-་ལྷོ་མོན་རོང་སོགས་སུ་བེད་སྤྱོད་བྱེད་པའི་སྐད་ཡིག་སྟེ།
+ནི་བོད་ཡུལ་དང་དེའི་ཉེ་འཁོར་གྱི་ས་ཁུལ་ཏེ། བལ་ཡུལ་དང་། འབྲུག འབྲས་ལྗོངས། ལ་དྭགས་ནས་ལྷོ་མོན་རོང་སོགས་སུ་བེད་སྤྱོད་བྱེད་པའི་སྐད་ཡིག་སྟེ།
 \end_layout
 
 \end_inset
@@ -6015,10 +6081,9 @@ Türkçe
 \emph on
 Türk dili
 \emph default
-, batıda Balkanlar’dan başlayıp doğuda Hazar Denizi sahasına kadar konuşulan
- Türki diller dil ailesine ait sondan eklemeli bir dil.
- Türki diller ailesinin Oğuz dil grubundan Osmanlı Türkçesinin devamını
- oluşturur.
+,
+ batıda Balkanlar’dan başlayıp doğuda Hazar Denizi sahasına kadar konuşulan Türki diller dil ailesine ait sondan eklemeli bir dil.
+ Türki diller ailesinin Oğuz dil grubundan Osmanlı Türkçesinin devamını oluşturur.
 \end_layout
 
 \begin_layout Labeling
@@ -6046,7 +6111,8 @@ Turkmen
 \lang turkmen
 Türkmen dili
 \emph default
-: Türkmenistanyň resmi dilidir.
+:
+ Türkmenistanyň resmi dilidir.
  Türkmen dili - türki dilleriň oguz dilleri toparyna degişlidir.
 \end_layout
 
@@ -6091,7 +6157,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6229,9 +6296,14 @@ status open
 \lang ukrainian
 Украї́нська мо́ва
 \emph default
- (історичні назви — ру́ська, руси́нська) — національна мова українців.
+ (історичні назви —
+ ру́ська,
+ руси́нська) —
+ національна мова українців.
  Належить до слов'янської групи індоєвропейської мовної сім'ї.
- Число мовців — близько 45 млн, більшість яких живе в Україні.
+ Число мовців —
+ близько 45 млн,
+ більшість яких живе в Україні.
 \end_layout
 
 \end_inset
@@ -6280,10 +6352,8 @@ status open
 \begin_layout Quote
 
 \lang urdu
-اُردُو لشکری زبان (یا جدید معیاری اردو) ہندوستانی زبان کی معیاری قسم ہے۔
- یہ پاکستان کی قومی اور رابطہ عامہ کی زبان ہے، جبکہ بھارت کی چھے ریاستوں
- کی دفتری زبان کا درجہ رکھتی ہے۔ آئین ہند کے مطابق اسے 22 دفتری شناخت زبانوں
- میں شامل کیا جاچکا ہے۔
+اُردُو لشکری زبان (یا جدید معیاری اردو) ہندوستانی زبان کی معیاری قسم ہے۔ یہ پاکستان کی قومی اور رابطہ عامہ کی زبان ہے،
+ جبکہ بھارت کی چھے ریاستوں کی دفتری زبان کا درجہ رکھتی ہے۔ آئین ہند کے مطابق اسے 22 دفتری شناخت زبانوں میں شامل کیا جاچکا ہے۔
 \end_layout
 
 \end_inset
@@ -6303,7 +6373,8 @@ Polyglossia urdu
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-Script Urdu (<Persian<Arabic, RTL)
+Script Urdu (<Persian<Arabic,
+ RTL)
 \end_layout
 
 \begin_layout Labeling
@@ -6326,7 +6397,8 @@ status open
 \lang vietnamese
 Tiếng Việt
 \emph default
-, còn gọi 
+,
+ còn gọi 
 \emph on
 tiếng Việt Nam
 \emph default
@@ -6334,8 +6406,8 @@ tiếng Việt Nam
 \emph on
 Việt ngữ
 \emph default
-, là ngôn ngữ của người Việt (người Kinh) và là ngôn ngữ chính thức tại
- Việt Nam
+,
+ là ngôn ngữ của người Việt (người Kinh) và là ngôn ngữ chính thức tại Việt Nam
 \end_layout
 
 \end_inset
@@ -6384,7 +6456,8 @@ languagename
 \begin_inset Quotes erd
 \end_inset
 
-, the input encoding 
+,
+ the input encoding 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6519,9 +6592,10 @@ Welsh
 \begin_layout Quote
 
 \lang welsh
-Aelod o'r gangen Frythonaidd o'r ieithoedd Celtaidd a siaredir yn frodorol
- yng Nghymru, gan Gymry a phobl eraill ar wasgar yn Lloegr, a chan gymuned
- fechan yn Y Wladfa, yr Ariannin yw'r Gymraeg (hefyd 
+Aelod o'r gangen Frythonaidd o'r ieithoedd Celtaidd a siaredir yn frodorol yng Nghymru,
+ gan Gymry a phobl eraill ar wasgar yn Lloegr,
+ a chan gymuned fechan yn Y Wladfa,
+ yr Ariannin yw'r Gymraeg (hefyd 
 \emph on
 Cymraeg
 \emph default
