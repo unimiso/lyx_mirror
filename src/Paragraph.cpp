@@ -2053,11 +2053,11 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 	char_type c = d->text_[pos];
 
 	// Return unchanged character in LTR languages
-	// or if we use poylglossia/bidi (XeTeX)
-	// or with babel and Xe/LuaTeX.
+	// or if we use XeTeX
+	// or with babel and LuaTeX.
 	if (!getFontSettings(bparams, pos).isRightToLeft()
-	    || bparams.useBidiPackage(rp)
-	    || (rp.use_babel && rp.isFullUnicode()))
+	    || rp.flavor == Flavor::XeTeX
+	    || (rp.use_babel && rp.flavor == Flavor::LuaTeX))
 		return c;
 
 	// Without polyglossia/bidi, we need to account for some special cases.
@@ -2079,14 +2079,15 @@ char_type Paragraph::getUChar(BufferParams const & bparams,
 	string const & lang = getFontSettings(bparams, pos).language()->lang();
 	char_type uc = c;
 
-	// 1. In the following languages, parentheses need to be reversed.
-	//    Also with polyglossia/luabidi
+	// 1. With polyglossia/luabidi all delimiters need to be mirrored,
+	//    regardless of the languge, or script.
+	// 2. In the following languages, parentheses need to be mirrored.
 	bool const reverseparens = (lang == "hebrew" || rp.use_polyglossia);
 
-	// 2. In the following languages, brackets don't need to be reversed.
-	bool const reversebrackets = lang != "arabic_arabtex"
+	// 3. In the following languages, brackets don't need to be mirrored.
+	bool const reversebrackets = (lang != "arabic_arabtex"
 			&& lang != "arabic_arabi"
-			&& lang != "farsi";
+			&& lang != "farsi") || rp.use_polyglossia;
 
 	// Now swap delimiters if needed.
 	switch (c) {
