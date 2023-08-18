@@ -13,7 +13,6 @@
 #include <config.h>
 
 #include "GuiProgress.h"
-#include "ui_ToggleWarningUi.h"
 
 #include "qt_helpers.h"
 
@@ -23,9 +22,10 @@
 #include "support/Systemcall.h"
 
 #include <QApplication>
-#include <QTime>
+#include <QCheckBox>
 #include <QMessageBox>
 #include <QSettings>
+#include <QTime>
 
 
 namespace lyx {
