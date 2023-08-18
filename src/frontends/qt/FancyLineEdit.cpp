@@ -15,10 +15,6 @@
 
 #include "FancyLineEdit.h"
 
-#if QT_VERSION < 0x050200
-#include "GuiApplication.h"
-#endif
-
 #include <QEvent>
 #include <QDebug>
 #include <QString>

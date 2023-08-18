@@ -1028,10 +1028,7 @@ public:
 struct GuiApplication::Private
 {
 	Private(): language_model_(nullptr), meta_fake_bit(NoModifier),
-		global_menubar_(nullptr)
-	#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-		, last_state_(Qt::ApplicationInactive)
-	#endif
+		global_menubar_(nullptr), last_state_(Qt::ApplicationInactive)
 	{
 	#if (QT_VERSION >= 0x050400)
 	#if defined(Q_OS_WIN) || defined(Q_CYGWIN_WIN)
@@ -1112,10 +1109,8 @@ struct GuiApplication::Private
 
 	/// Only used on mac.
 	QMenuBar * global_menubar_;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 	/// Holds previous application state on Mac
 	Qt::ApplicationState last_state_;
-#endif
 
 #if defined(Q_OS_MAC) && (QT_VERSION < 0x060000)
 	/// Linkback mime handler for MacOSX.
@@ -1156,7 +1151,7 @@ GuiApplication::GuiApplication(int & argc, char ** argv)
 	QCoreApplication::setOrganizationName(app_name);
 	QCoreApplication::setOrganizationDomain("lyx.org");
 	QCoreApplication::setApplicationName(lyx_package);
-#if QT_VERSION >= 0x050100 && QT_VERSION < 0x060000
+#if QT_VERSION < 0x060000
 	QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 
@@ -1195,10 +1190,8 @@ GuiApplication::GuiApplication(int & argc, char ** argv)
 	setupApplescript();
 	appleCleanupEditMenu();
 	appleCleanupViewMenu();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 	connect(this, SIGNAL(applicationStateChanged(Qt::ApplicationState)),
 			this, SLOT(onApplicationStateChanged(Qt::ApplicationState)));
-#endif
 #endif
 
 #if defined(QPA_XCB)
@@ -2954,11 +2947,7 @@ namespace {
 
 QFont const GuiApplication::typewriterSystemFont()
 {
-#if QT_VERSION >= 0x050200
 	QFont font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-#else
-	QFont font("monospace");
-#endif
 	if (!isFixedPitch(font)) {
 		// try to enforce a real monospaced font
 		font.setStyleHint(QFont::Monospace);
@@ -3452,7 +3441,6 @@ void GuiApplication::onLastWindowClosed()
 }
 
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 void GuiApplication::onApplicationStateChanged(Qt::ApplicationState state)
 {
 	std::string name = "unknown";
@@ -3479,7 +3467,6 @@ void GuiApplication::onApplicationStateChanged(Qt::ApplicationState state)
 	LYXERR(Debug::GUI, "onApplicationStateChanged..." << name);
 	d->last_state_ = state;
 }
-#endif
 
 
 void GuiApplication::startLongOperation() {

@@ -1122,11 +1122,9 @@ void GuiView::updateLockToolbars()
 		if (tb && tb->isMovable())
 			toolbarsMovable_ = true;
 	}
-#if QT_VERSION >= 0x050200
 	// set unified mac toolbars only when not movable as recommended:
 	// https://doc.qt.io/qt-5/qmainwindow.html#unifiedTitleAndToolBarOnMac-prop
 	setUnifiedTitleAndToolBarOnMac(!toolbarsMovable_);
-#endif
 }
 
 

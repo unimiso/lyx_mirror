@@ -351,7 +351,6 @@ UIFILES = \
 	TextLayoutUi.ui \
 	ThesaurusUi.ui \
 	TocUi.ui \
-	ToggleWarningUi.ui \
 	ViewSourceUi.ui \
 	VSpaceUi.ui \
 	WorkAreaUi.ui \

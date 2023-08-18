@@ -1503,11 +1503,9 @@ TabWorkArea::TabWorkArea(QWidget * parent)
 
 	QObject::connect(this, SIGNAL(currentChanged(int)),
 		this, SLOT(on_currentTabChanged(int)));
-#if QT_VERSION >= 0x050200
 	// Fix for #11835
 	QObject::connect(this, SIGNAL(tabBarClicked(int)),
 		this, SLOT(on_currentTabChanged(int)));
-#endif
 
 	closeBufferButton = new QToolButton(this);
 	closeBufferButton->setPalette(pal);
