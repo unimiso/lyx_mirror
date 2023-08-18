@@ -6006,13 +6006,14 @@ usepackage{fonts-tlwg}}
 \end_layout
 
 \begin_layout Standard
-or set up the font substitutes with the 
+or set up the font substitutes with 
+\backslash
+DeclareFontFamilySubstitution (if you have a LaTeX kernel older than February 2020,
+ you can use the now-deprecated 
 \emph on
 substitutefont 
 \emph default
-package
-\emph on
-.
+package).
 \end_layout
 
 \end_deeper
