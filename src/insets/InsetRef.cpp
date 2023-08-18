@@ -260,12 +260,12 @@ void InsetRef::latex(otexstream & os, OutputParams const & rp) const
 {
 	string const & cmd = getCmdName();
 	docstring const & data = getEscapedLabel(rp);
-	bool const hyper_on = buffer().params().pdfoptions().use_hyperref;
+	bool const hyper_on = buffer().masterParams().pdfoptions().use_hyperref;
 
 	if (rp.inulemcmd > 0)
 		os << "\\mbox{";
 
-	if (buffer().params().use_refstyle && cmd == "eqref") {
+	if (buffer().masterParams().use_refstyle && cmd == "eqref") {
 		// we advertise this as printing "(n)", so we'll do that, at least
 		// for refstyle, since refstlye's own \eqref prints, by default,
 		// "equation n". if one wants \eqref, one can get it by using a
@@ -281,7 +281,7 @@ void InsetRef::latex(otexstream & os, OutputParams const & rp) const
 		docstring prefix;
 		bool const use_caps     = getParam("caps") == "true";
 		bool const use_plural   = getParam("plural") == "true";
-		bool const use_refstyle = buffer().params().use_refstyle;
+		bool const use_refstyle = buffer().masterParams().use_refstyle;
 		docstring const fcmd =
 			getFormattedCmd(data, label, prefix, use_refstyle, use_caps);
 		os << fcmd;
@@ -576,7 +576,7 @@ void InsetRef::validate(LaTeXFeatures & features) const
 		docstring const data = getEscapedLabel(features.runparams());
 		docstring label;
 		docstring prefix;
-		bool const use_refstyle = buffer().params().use_refstyle;
+		bool const use_refstyle = buffer().masterParams().use_refstyle;
 		bool const use_caps   = getParam("caps") == "true";
 		docstring const fcmd =
 			getFormattedCmd(data, label, prefix, use_refstyle, use_caps);
