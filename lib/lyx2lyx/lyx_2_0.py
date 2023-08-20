@@ -378,7 +378,7 @@ def revert_splitindex(document):
         l = re.compile(r'\\begin_inset Index (.*)$')
         m = l.match(line)
         itype = m.group(1)
-        if itype == "idx" or indices == "false":
+        if itype == "idx" or useindices == "false":
             document.body[i] = "\\begin_inset Index"
         else:
             k = find_end_of_inset(document.body, i)
@@ -2189,7 +2189,7 @@ def convert_passthru(document):
             break
           ne = find_end_of_inset(document.body, ns)
           if ne == -1 or ne > end:
-            document.warning("Can't find end of inset at line " + str(nb))
+            document.warning("Can't find end of inset at line " + str(ne))
             ns += 1
             continue
           if document.body[ne + 1] == "":

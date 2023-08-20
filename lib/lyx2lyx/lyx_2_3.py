@@ -1427,7 +1427,7 @@ def revert_multibib(document):
         }
 
     if multibib not in units.keys():
-        document.warning("Unknown multibib value `%s'!" % nultibib)
+        document.warning("Unknown multibib value `%s'!" % multibib)
         return
     unit = units[multibib]
     btunit = False

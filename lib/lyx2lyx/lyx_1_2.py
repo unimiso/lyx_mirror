@@ -745,8 +745,8 @@ def update_longtables(document):
         for j in range(rows):
             i = find_token(body, '<row', i)
 
-            self.endfoot = false                # footer row
-            self.endlastfoot = false        # last footer row
+            row_info[i].endfoot = false            # footer row
+            row_info[i].endlastfoot = false        # last footer row
             if row_info[j].endhead:
                 insert_attribute(body, i, 'endhead="true"')
 
