@@ -383,6 +383,22 @@ bool Inset::showInsetDialog(BufferView * bv) const
 void Inset::doDispatch(Cursor & cur, FuncRequest &cmd)
 {
 	switch (cmd.action()) {
+	// FIXME: The LFUN_MOUSE_MOTION case is a potential fix for #12418, and maybe also
+	// #12820 and #12279. This needs to be tested in the pre-release. Also it might
+	// add slight regressions with inset selection (when selection starts on the button
+	// of an inset).
+	// After this has been tested (by Mac users primarily), this comment should be
+	// updated if the fix is kept or after it has been modified.
+	case LFUN_MOUSE_MOTION:
+		// Do not attempt to select while hovering the inset button only (#12418).
+		if (!cur.selection() && cmd.button() == mouse_button::button1
+		    && clickable(cur.bv(), cmd.x(), cmd.y())) {
+			cur.noScreenUpdate();
+			cur.dispatched();
+		} else
+			cur.undispatched();
+		break;
+
 	case LFUN_MOUSE_RELEASE:
 		// if the derived inset did not explicitly handle mouse_release,
 		// we assume we request the settings dialog
