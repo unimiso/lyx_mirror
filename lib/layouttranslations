@@ -101,7 +101,7 @@ Translation bg
 End
 
 Translation ca
-	"Acknowledgement" "Agraiment"
+	"Acknowledgement" "Agraïment"
 	"Acknowledgment" "Agraïment"
 	"Algorithm" "Algorisme"
 	"Assumption" "Assumpció"
@@ -389,7 +389,7 @@ Translation en_GB
 End
 
 Translation es
-	"Acknowledgement" "Agradecimientos"
+	"Acknowledgement" "Agradecimiento"
 	"Acknowledgment" "Agradecimiento"
 	"Algorithm" "Algoritmo"
 	"Assumption" "Suposición"
