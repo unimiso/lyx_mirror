@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.3\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-21 22:37+0200\n"
-"PO-Revision-Date: 2017-11-27 00:04+0100\n"
-"Last-Translator: Ignacio García <ignacio.gmorales@gmail.com>\n"
+"POT-Creation-Date: 2023-08-21 22:39+0200\n"
+"PO-Revision-Date: 2023-08-21 06:04+0200\n"
+"Last-Translator: Daniel <d3vf4n@tutanota.com>\n"
 "Language-Team: Spanish <lyx-docs@lists.lyx.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/frontends/qt/ui/AboutUi.ui:27
 msgid "Version"
@@ -1029,7 +1029,7 @@ msgstr "Tachado"
 
 #: src/frontends/qt/ui/CharacterUi.ui:254 src/frontends/qt/GuiPrefs.cpp:93
 msgid "Language Settings"
-msgstr "Configuración de la Idioma"
+msgstr "Configuración del idioma"
 
 #: src/frontends/qt/ui/CharacterUi.ui:265 src/frontends/qt/ui/LanguageUi.ui:22
 #: src/frontends/qt/ui/SpellcheckerUi.ui:28
@@ -8710,17 +8710,16 @@ msgid "List of Charts"
 msgstr "Índice de diagramas"
 
 #: lib/layouts/achemso.layout:254
-#, fuzzy
 msgid "Graphs[[mathematical]]"
-msgstr "Grafo"
+msgstr "Gráficos"
 
 #: lib/layouts/achemso.layout:260 lib/layouts/achemso.layout:272
 msgid "Graph[[mathematical]]"
-msgstr "Grafo"
+msgstr "Gráfico"
 
 #: lib/layouts/achemso.layout:266
 msgid "List of Graphs[[mathematical]]"
-msgstr "Índice de Grafos"
+msgstr "Índice de Gráficos"
 
 #: lib/layouts/achemso.layout:302
 msgid "SupplementalInfo"
@@ -12109,11 +12108,11 @@ msgstr "reprint_reqs_to:"
 #: lib/layouts/elsart.layout:570 lib/layouts/svcommon.inc:625
 #: lib/layouts/svmult.layout:158
 msgid "Acknowledgment"
-msgstr "Agradecimientos"
+msgstr "Agradecimiento"
 
 #: lib/layouts/egs.layout:634
 msgid "Acknowledgment."
-msgstr "Agradecimientos."
+msgstr "Agradecimiento."
 
 #: lib/layouts/elsart.layout:3
 msgid "Elsevier (Obsolete Version)"
@@ -12336,33 +12335,32 @@ msgstr ""
 #: lib/layouts/enotez.module:15 lib/layouts/enotez.module:36
 #: lib/layouts/foottoend.module:31 lib/layouts/foottoenotez.module:26
 #: lib/layouts/memoir.layout:307
-#, fuzzy
 msgid "Endnotes"
 msgstr "Notas finales"
 
 #: lib/layouts/endnotes.module:16 lib/layouts/enotez.module:16
 #: lib/layouts/memoir.layout:308
 msgid "Endnote ##"
-msgstr "Notas finales ##"
+msgstr "Nota final ##"
 
 #: lib/layouts/endnotes.module:19 lib/layouts/enotez.module:19
 #: lib/layouts/foottoend.module:16 lib/layouts/foottoenotez.module:17
 #: lib/layouts/jlreq-common.inc:129 lib/layouts/jlreq-common.inc:135
 #: lib/layouts/memoir.layout:311
 msgid "Endnote"
-msgstr "Notas finales"
+msgstr "Nota final"
 
 #: lib/layouts/endnotes.module:29 lib/layouts/enotez.module:29
 #: lib/layouts/memoir.layout:321
 msgid "endnote"
 msgstr "nota final"
 
+# Esta cadena no hay que traducirla.
 #: lib/layouts/endnotes.module:32 lib/layouts/endnotes.module:35
 #: lib/layouts/foottoend.module:20 lib/layouts/foottoend.module:23
 #: lib/layouts/memoir.layout:326 lib/layouts/memoir.layout:329
-#, fuzzy
 msgid "Notes[[Endnotes]]"
-msgstr "Nota[[RecuadroNota]]"
+msgstr "Notes"
 
 #: lib/layouts/enotez.module:2
 #, fuzzy
@@ -15269,20 +15267,19 @@ msgstr "significado"
 
 #: lib/layouts/linguistics.module:596
 msgid "Tableaux"
-msgstr ""
+msgstr "Tablas"
 
 #: lib/layouts/linguistics.module:600
 msgid "Tableau"
-msgstr "Tableau"
+msgstr "Tabla"
 
 #: lib/layouts/linguistics.module:605
 msgid "List of Tableaux"
-msgstr "Índice de Tableaux"
+msgstr "Índice de Tablas"
 
 #: lib/layouts/linguistics.module:608
-#, fuzzy
 msgid "Tableau ##"
-msgstr "Tableau"
+msgstr "Tabla ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -17831,7 +17828,7 @@ msgstr "Entradas de índice"
 
 #: lib/layouts/stdinsets.inc:16
 msgid "Listings"
-msgstr "Listados de código"
+msgstr "Índices"
 
 #: lib/layouts/stdinsets.inc:19
 #, fuzzy
@@ -17849,17 +17846,17 @@ msgstr "ERT"
 
 #: lib/layouts/stdinsets.inc:298 lib/layouts/stdinsets.inc:304
 msgid "Listings[[List of Listings]]"
-msgstr "Listados de código"
+msgstr "Índices"
 
 #: lib/layouts/stdinsets.inc:321 lib/layouts/stdinsets.inc:327
 #: src/insets/InsetTOC.cpp:77
 msgid "List of Listings"
-msgstr "Listados de código"
+msgstr "Listado de índices"
 
 #: lib/layouts/stdinsets.inc:355 src/frontends/qt/GuiDocument.cpp:1828
 #: src/frontends/qt/GuiDocument.cpp:4999
 msgid "Listings[[inset]]"
-msgstr "Listado de código"
+msgstr "Índices"
 
 #: lib/layouts/stdinsets.inc:423
 msgid "Idx"
@@ -21776,7 +21773,7 @@ msgstr "Configuración de la información...|f"
 
 #: lib/ui/stdmenus.inc:153
 msgid "Listings Settings...|g"
-msgstr "Configuración de listados de código...|l"
+msgstr "Configuración de índices...|l"
 
 #: lib/ui/stdmenus.inc:157
 msgid "Table Settings...|a"
@@ -22133,7 +22130,7 @@ msgstr "Campo texto"
 
 #: lib/ui/stdmenus.inc:380
 msgid "List/Contents/References|/"
-msgstr ""
+msgstr "Índices/Contenido/Referencias|/"
 
 #: lib/ui/stdmenus.inc:381
 msgid "Float|a"
@@ -22407,7 +22404,7 @@ msgstr "General|G"
 
 #: lib/ui/stdmenus.inc:512
 msgid "List of Listings|L"
-msgstr "Listados de código|L"
+msgstr "Listado de Índices|L"
 
 #: lib/ui/stdmenus.inc:513
 msgid "Nomenclature|N"
@@ -39320,15 +39317,15 @@ msgstr ""
 msgid "Unknown user"
 msgstr "Usuario desconocido"
 
+#, fuzzy
+#~ msgid "Enter text"
+#~ msgstr "LyX: Introducir texto"
+
 #~ msgid "&Backup documents, every"
 #~ msgstr "Hacer copias de &seguridad cada"
 
 #~ msgid "&minutes"
 #~ msgstr "&minutos"
-
-#, fuzzy
-#~ msgid "Enter text"
-#~ msgstr "LyX: Introducir texto"
 
 #~ msgid "Acknowledgement"
 #~ msgstr "Agradecimientos"

@@ -17,14 +17,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-21 22:37+0200\n"
-"PO-Revision-Date: 2008-07-28 17:53+0100\n"
-"Last-Translator: joan <joan@montane.cat>\n"
+"POT-Creation-Date: 2023-08-21 22:39+0200\n"
+"PO-Revision-Date: 2023-08-21 06:05+0200\n"
+"Last-Translator: Daniel <d3vf4n@tutanota.com>\n"
 "Language-Team: Catalan\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/frontends/qt/ui/AboutUi.ui:27
 msgid "Version"
@@ -3480,7 +3481,7 @@ msgstr "LaTeX"
 #: src/frontends/qt/ui/OutputUi.ui:43
 #, fuzzy
 msgid "LaTeX Output Options"
-msgstr "Opcions matetmàtiques"
+msgstr "Opcions matemàtiques"
 
 #: src/frontends/qt/ui/OutputUi.ui:51
 msgid "Enable forward/reverse search between editor and output (e.g., SyncTeX)"
@@ -3518,9 +3519,8 @@ msgid "&XHTML"
 msgstr "HTML"
 
 #: src/frontends/qt/ui/OutputUi.ui:155
-#, fuzzy
 msgid "XHTML Output Options"
-msgstr "Opcions matetmàtiques"
+msgstr "Opcions matemàtiques"
 
 #: src/frontends/qt/ui/OutputUi.ui:164
 #, fuzzy
@@ -3582,7 +3582,7 @@ msgstr "DocBook"
 #: src/frontends/qt/ui/OutputUi.ui:303
 #, fuzzy
 msgid "DocBook Output Options"
-msgstr "Opcions matetmàtiques"
+msgstr "Opcions matemàtiques"
 
 #: src/frontends/qt/ui/OutputUi.ui:323
 msgid ""
@@ -5336,9 +5336,8 @@ msgid "Define hanging indentation/label length for the nomenclature list."
 msgstr ""
 
 #: src/frontends/qt/ui/PrintNomenclUi.ui:22
-#, fuzzy
 msgid "&List Indentation:"
-msgstr "&Sagnat"
+msgstr "&Sagnat:"
 
 #: src/frontends/qt/ui/PrintNomenclUi.ui:39
 #, fuzzy
@@ -7106,7 +7105,6 @@ msgstr "Agraïments"
 #: lib/layouts/AEA.layout:135 lib/layouts/aa.layout:181
 #: lib/layouts/agutex.layout:205 lib/layouts/copernicus.layout:427
 #: lib/layouts/egs.layout:610
-#, fuzzy
 msgid "Acknowledgments."
 msgstr "Agraïments."
 
@@ -7277,9 +7275,8 @@ msgstr "Cas"
 
 #: lib/layouts/AEA.layout:206 lib/layouts/elsart.layout:546
 #: lib/layouts/theorems-without-preamble.inc:458
-#, fuzzy
 msgid "Case ##"
-msgstr "Cas núm."
+msgstr "Cas ##"
 
 #: lib/layouts/AEA.layout:213 lib/layouts/theorems-without-preamble.inc:464
 #, fuzzy
@@ -7631,9 +7628,8 @@ msgstr "Comentari"
 
 #: lib/layouts/AEA.layout:317 lib/layouts/ijmpd.layout:452
 #: lib/layouts/theorems-without-preamble.inc:416
-#, fuzzy
 msgid "Remark ##"
-msgstr "Comentari núm."
+msgstr "Comentari ##"
 
 #: lib/layouts/AEA.layout:322 lib/layouts/ijmpc.layout:439
 #: lib/layouts/ijmpd.layout:455 lib/layouts/theorems-ams-bytype.inc:325
@@ -7668,9 +7664,8 @@ msgid "Solution"
 msgstr "Solució"
 
 #: lib/layouts/AEA.layout:330 lib/layouts/theorems-without-preamble.inc:349
-#, fuzzy
 msgid "Solution ##"
-msgstr "Solució núm."
+msgstr "Solució ##"
 
 #: lib/layouts/AEA.layout:337 lib/layouts/theorems-ams-bytype.inc:301
 #: lib/layouts/theorems-ams-chap-bytype.inc:383
@@ -7707,9 +7702,8 @@ msgid "Summary"
 msgstr "Resum"
 
 #: lib/layouts/AEA.layout:345 lib/layouts/elsart.layout:528
-#, fuzzy
 msgid "Summary ##"
-msgstr "Resum"
+msgstr "Resum ##"
 
 #: lib/layouts/AEA.layout:356 src/frontends/qt/Menus.cpp:1804
 #: src/frontends/qt/Menus.cpp:1819
@@ -8656,7 +8650,6 @@ msgid "Subject headings:"
 msgstr "Encapçalaments d'assumpte:"
 
 #: lib/layouts/aastex.layout:365
-#, fuzzy
 msgid "[Acknowledgments]"
 msgstr "[Agraïments]"
 
@@ -8983,49 +8976,40 @@ msgid "Abbreviations:"
 msgstr "Variació:"
 
 #: lib/layouts/achemso.layout:206
-#, fuzzy
 msgid "Schemes"
-msgstr "Escena"
+msgstr "Esquemes"
 
 #: lib/layouts/achemso.layout:210 lib/layouts/achemso.layout:222
-#, fuzzy
 msgid "Scheme"
-msgstr "Escena"
+msgstr "Esquema"
 
 #: lib/layouts/achemso.layout:216
-#, fuzzy
 msgid "List of Schemes"
-msgstr "Llista de branques"
+msgstr "Índex d'esquemes"
 
 #: lib/layouts/achemso.layout:230
-#, fuzzy
 msgid "Charts"
-msgstr "hat"
+msgstr "Diagrames"
 
 #: lib/layouts/achemso.layout:234 lib/layouts/achemso.layout:246
-#, fuzzy
 msgid "Chart"
-msgstr "hat"
+msgstr "Diagrama"
 
 #: lib/layouts/achemso.layout:240
-#, fuzzy
 msgid "List of Charts"
-msgstr "Llista de branques"
+msgstr "Índex de diagrames"
 
 #: lib/layouts/achemso.layout:254
-#, fuzzy
 msgid "Graphs[[mathematical]]"
 msgstr "Gràfics"
 
 #: lib/layouts/achemso.layout:260 lib/layouts/achemso.layout:272
-#, fuzzy
 msgid "Graph[[mathematical]]"
-msgstr "Gràfics"
+msgstr "Gràfic"
 
 #: lib/layouts/achemso.layout:266
-#, fuzzy
 msgid "List of Graphs[[mathematical]]"
-msgstr "Llista de gràfics"
+msgstr "Índex de gràfics"
 
 #: lib/layouts/achemso.layout:302
 #, fuzzy
@@ -9056,13 +9040,12 @@ msgid "bibnote"
 msgstr "nota"
 
 #: lib/layouts/achemso.layout:344
-#, fuzzy
 msgid "Chemistry"
-msgstr "infty"
+msgstr "Química"
 
 #: lib/layouts/achemso.layout:347
 msgid "chemistry"
-msgstr ""
+msgstr "química"
 
 #: lib/layouts/achemso.layout:359 lib/layouts/achemso.layout:362
 #: lib/languages:1048
@@ -9322,7 +9305,7 @@ msgstr ""
 
 #: lib/layouts/acmart.layout:394
 msgid "ISBN: "
-msgstr ""
+msgstr "ISBN: "
 
 #: lib/layouts/acmart.layout:398
 msgid "ACM DOI"
@@ -9457,7 +9440,7 @@ msgstr ""
 #: lib/layouts/powerdot.layout:585 lib/layouts/sciposter.layout:110
 #: lib/layouts/stdfloats.inc:34 lib/layouts/tufte-book.layout:293
 msgid "List of Figures"
-msgstr "Llista de figures"
+msgstr "Índex de figures"
 
 #: lib/layouts/acmart.layout:558
 msgid "Margin table (sigchi-a only)"
@@ -9467,7 +9450,7 @@ msgstr ""
 #: lib/layouts/powerdot.layout:567 lib/layouts/sciposter.layout:125
 #: lib/layouts/stdfloats.inc:18 lib/layouts/tufte-book.layout:277
 msgid "List of Tables"
-msgstr "Llista de taules"
+msgstr "Índex de taules"
 
 #: lib/layouts/acmart.layout:569 lib/layouts/theorems-ams-bytype.inc:28
 #: lib/layouts/theorems-ams-chap-bytype.inc:70 lib/layouts/theorems-ams.inc:25
@@ -9500,9 +9483,8 @@ msgstr ""
 #: lib/layouts/theorems-ams-chap-bytype.inc:97 lib/layouts/theorems-ams.inc:52
 #: lib/layouts/theorems-bytype.inc:49
 #: lib/layouts/theorems-without-preamble.inc:62 lib/layouts/theorems.inc:52
-#, fuzzy
 msgid "Theorem \\thetheorem."
-msgstr "Teorema \\arabic{theorem}."
+msgstr "Teorema \\thetheorem."
 
 #: lib/layouts/acmart.layout:622 lib/layouts/heb-article.layout:74
 #: lib/layouts/theorems-ams.inc:84 lib/layouts/theorems.inc:84
@@ -9645,11 +9627,11 @@ msgstr "Referència"
 
 #: lib/layouts/acmsiggraph-0-92.layout:137
 msgid "ISBN"
-msgstr ""
+msgstr "ISBN"
 
 #: lib/layouts/acmsiggraph-0-92.layout:140
 msgid "ISBN:"
-msgstr ""
+msgstr "ISBN:"
 
 #: lib/layouts/acmsiggraph-0-92.layout:144 lib/layouts/sigplanconf.layout:127
 #, fuzzy
@@ -9667,14 +9649,12 @@ msgid "TOG article DOI"
 msgstr ""
 
 #: lib/layouts/acmsiggraph-0-92.layout:184 lib/layouts/acmsiggraph.layout:160
-#, fuzzy
 msgid "PDF author"
-msgstr "Autor índex general:"
+msgstr "Autor del PDF"
 
 #: lib/layouts/acmsiggraph-0-92.layout:187 lib/layouts/acmsiggraph.layout:163
-#, fuzzy
 msgid "PDF author:"
-msgstr "Autor índex general:"
+msgstr "Autor del PDF:"
 
 #: lib/layouts/acmsiggraph-0-92.layout:198
 #: lib/layouts/acmsiggraph-0-92.layout:203
@@ -9761,9 +9741,8 @@ msgstr "Títol curt"
 
 #: lib/layouts/acmsiggraph-0-92.layout:339 lib/layouts/acmsiggraph.layout:295
 #: lib/layouts/jss.layout:186 lib/layouts/jss.layout:188
-#, fuzzy
 msgid "E-mail"
-msgstr "Corre electrònic"
+msgstr "Correu electrònic"
 
 #: lib/layouts/acmsiggraph.layout:3
 msgid "ACM SIGGRAPH (older than 0.91, obsolete)"
@@ -9999,14 +9978,13 @@ msgstr ""
 #: lib/layouts/algorithm2e.module:26 lib/layouts/powerdot.layout:603
 #: lib/layouts/revtex4-x.inc:319 lib/layouts/stdfloats.inc:50
 msgid "List of Algorithms"
-msgstr "Llista d'algorismes"
+msgstr "Índex d'algorismes"
 
 #: lib/layouts/algorithm2e.module:31 lib/layouts/powerdot.layout:607
 #: lib/layouts/revtex4-x.inc:323 lib/layouts/sciposter.layout:100
 #: lib/layouts/stdfloats.inc:54
-#, fuzzy
 msgid "Algorithm ##"
-msgstr "Algorisme"
+msgstr "Algorisme ##"
 
 #: lib/layouts/amsart.layout:3 lib/layouts/amsbook.layout:3
 #: lib/examples/Articles:0
@@ -12604,14 +12582,12 @@ msgstr ""
 #: lib/layouts/egs.layout:620 lib/layouts/elsart.layout:564
 #: lib/layouts/elsart.layout:570 lib/layouts/svcommon.inc:625
 #: lib/layouts/svmult.layout:158
-#, fuzzy
 msgid "Acknowledgment"
-msgstr "Agraïments"
+msgstr "Agraïment"
 
 #: lib/layouts/egs.layout:634
-#, fuzzy
 msgid "Acknowledgment."
-msgstr "Agraïments."
+msgstr "Agraïment."
 
 #: lib/layouts/elsart.layout:3
 msgid "Elsevier (Obsolete Version)"
@@ -12850,35 +12826,32 @@ msgstr ""
 #: lib/layouts/enotez.module:15 lib/layouts/enotez.module:36
 #: lib/layouts/foottoend.module:31 lib/layouts/foottoenotez.module:26
 #: lib/layouts/memoir.layout:307
-#, fuzzy
 msgid "Endnotes"
-msgstr "nota"
+msgstr "Notes al final"
 
 #: lib/layouts/endnotes.module:16 lib/layouts/enotez.module:16
 #: lib/layouts/memoir.layout:308
-#, fuzzy
 msgid "Endnote ##"
-msgstr "nota"
+msgstr "Nota al final ##"
 
 #: lib/layouts/endnotes.module:19 lib/layouts/enotez.module:19
 #: lib/layouts/foottoend.module:16 lib/layouts/foottoenotez.module:17
 #: lib/layouts/jlreq-common.inc:129 lib/layouts/jlreq-common.inc:135
 #: lib/layouts/memoir.layout:311
-#, fuzzy
 msgid "Endnote"
-msgstr "nota"
+msgstr "Nota al final"
 
 #: lib/layouts/endnotes.module:29 lib/layouts/enotez.module:29
 #: lib/layouts/memoir.layout:321
-#, fuzzy
 msgid "endnote"
-msgstr "notafinal"
+msgstr "nota al final"
 
+# Aquesta cadena no s'ha de traduir.
 #: lib/layouts/endnotes.module:32 lib/layouts/endnotes.module:35
 #: lib/layouts/foottoend.module:20 lib/layouts/foottoend.module:23
 #: lib/layouts/memoir.layout:326 lib/layouts/memoir.layout:329
 msgid "Notes[[Endnotes]]"
-msgstr ""
+msgstr "Notes"
 
 #: lib/layouts/enotez.module:2
 #, fuzzy
@@ -13238,9 +13211,8 @@ msgid "Name of the language"
 msgstr "No hi ha llengua"
 
 #: lib/layouts/europasscv.layout:491 lib/layouts/europecv.layout:335
-#, fuzzy
 msgid "Listening"
-msgstr "Llistat"
+msgstr "Comprensió oral"
 
 #: lib/layouts/europasscv.layout:492 lib/layouts/europecv.layout:336
 msgid "Level how good you think you can listen"
@@ -15898,24 +15870,20 @@ msgid "meaning"
 msgstr "significat"
 
 #: lib/layouts/linguistics.module:596
-#, fuzzy
 msgid "Tableaux"
-msgstr "Taula"
+msgstr "Quadres"
 
 #: lib/layouts/linguistics.module:600
-#, fuzzy
 msgid "Tableau"
-msgstr "Taula"
+msgstr "Quadre"
 
 #: lib/layouts/linguistics.module:605
-#, fuzzy
 msgid "List of Tableaux"
-msgstr "Llista de taules"
+msgstr "Índex de quadres"
 
 #: lib/layouts/linguistics.module:608
-#, fuzzy
 msgid "Tableau ##"
-msgstr "Taula"
+msgstr "Taula ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -17624,18 +17592,16 @@ msgid "Video"
 msgstr ""
 
 #: lib/layouts/revtex4-x.inc:332
-#, fuzzy
 msgid "List of Videos"
-msgstr "Llista de diapositives"
+msgstr "LList of vídeos"
 
 #: lib/layouts/revtex4-x.inc:339
 msgid "Video ##"
-msgstr ""
+msgstr "Vídeo ##"
 
 #: lib/layouts/revtex4-x.inc:343
-#, fuzzy
 msgid "Videos"
-msgstr "Llista de diapositives"
+msgstr "Vídeos"
 
 #: lib/layouts/revtex4-x.inc:346
 #, fuzzy
@@ -18679,7 +18645,7 @@ msgstr "Entrada d'índex|I"
 
 #: lib/layouts/stdinsets.inc:16
 msgid "Listings"
-msgstr "Llistats"
+msgstr "Codi de programació"
 
 #: lib/layouts/stdinsets.inc:19
 #, fuzzy
@@ -18697,20 +18663,18 @@ msgid "ERT"
 msgstr "ERT"
 
 #: lib/layouts/stdinsets.inc:298 lib/layouts/stdinsets.inc:304
-#, fuzzy
 msgid "Listings[[List of Listings]]"
-msgstr "Llista de llistes"
+msgstr "Índexs"
 
 #: lib/layouts/stdinsets.inc:321 lib/layouts/stdinsets.inc:327
 #: src/insets/InsetTOC.cpp:77
 msgid "List of Listings"
-msgstr "Llista de llistes"
+msgstr "Llistat d'índexs"
 
 #: lib/layouts/stdinsets.inc:355 src/frontends/qt/GuiDocument.cpp:1828
 #: src/frontends/qt/GuiDocument.cpp:4999
-#, fuzzy
 msgid "Listings[[inset]]"
-msgstr "Paràmetres de llistats"
+msgstr "Paràmetres dels índexs"
 
 #: lib/layouts/stdinsets.inc:423
 msgid "Idx"
@@ -18751,11 +18715,11 @@ msgstr "Vista preliminar LyX"
 
 #: lib/layouts/stdinsets.inc:794 lib/layouts/stdinsets.inc:802
 msgid "see equation[[nomencl]]"
-msgstr ""
+msgstr "veure equació"
 
 #: lib/layouts/stdinsets.inc:795 lib/layouts/stdinsets.inc:803
 msgid "page[[nomencl]]"
-msgstr ""
+msgstr "pàgina"
 
 #: lib/layouts/stdinsets.inc:796 lib/layouts/stdinsets.inc:804
 msgid "Nomenclature[[output]]"
@@ -21980,9 +21944,8 @@ msgid "Verbatim (marked blanks)|b"
 msgstr ""
 
 #: lib/ui/stdcontext.inc:333 lib/ui/stdcontext.inc:613
-#, fuzzy
 msgid "Listing|L"
-msgstr "Llistat"
+msgstr "Llistat d'índexs|L"
 
 #: lib/ui/stdcontext.inc:337 lib/ui/stdcontext.inc:617
 #, fuzzy
@@ -23179,7 +23142,7 @@ msgstr "Caràcter especial|p"
 
 #: lib/ui/stdmenus.inc:378
 msgid "Formatting|o"
-msgstr ""
+msgstr "Formatació|o"
 
 #: lib/ui/stdmenus.inc:379
 #, fuzzy
@@ -23188,7 +23151,7 @@ msgstr "Text:"
 
 #: lib/ui/stdmenus.inc:380
 msgid "List/Contents/References|/"
-msgstr ""
+msgstr "Índexs/Continguts/Referències|/"
 
 #: lib/ui/stdmenus.inc:381
 msgid "Float|a"
@@ -23230,7 +23193,7 @@ msgstr "Referència creuada...|R"
 
 #: lib/ui/stdmenus.inc:391
 msgid "Label...|L"
-msgstr "Etiqueta...|L"
+msgstr "Etiqueta...|E"
 
 #: lib/ui/stdmenus.inc:394
 #, fuzzy
@@ -23260,21 +23223,19 @@ msgstr "Hiperenllaç &generat"
 
 #: lib/ui/stdmenus.inc:401
 msgid "Footnote|F"
-msgstr "Nota a peu de pàgina|F"
+msgstr "Nota a peu de pàgina|p"
 
 #: lib/ui/stdmenus.inc:402
 msgid "Marginal Note|M"
-msgstr "Nota al marge|M"
+msgstr "Nota al marge|m"
 
 #: lib/ui/stdmenus.inc:403
-#, fuzzy
 msgid "Program Listing[[Menu]]"
-msgstr "Inicialització del programa"
+msgstr "Codi de programació"
 
 #: lib/ui/stdmenus.inc:409 src/insets/Inset.cpp:95
-#, fuzzy
 msgid "TeX Code"
-msgstr "Codi TeX: "
+msgstr "Codi TeX:"
 
 #: lib/ui/stdmenus.inc:410
 #, fuzzy
@@ -23472,14 +23433,14 @@ msgstr "ImatgeRaster"
 msgid "Wrapped Table|T"
 msgstr "Taula|T"
 
+# També Índex general.
 #: lib/ui/stdmenus.inc:509
 msgid "Table of Contents|C"
-msgstr "Taula de continguts|C"
+msgstr "Taula de continguts|c"
 
 #: lib/ui/stdmenus.inc:512
-#, fuzzy
 msgid "List of Listings|L"
-msgstr "Llista de llistes"
+msgstr "Llistat d'índexs|L"
 
 #: lib/ui/stdmenus.inc:513
 msgid "Nomenclature|N"
@@ -23529,9 +23490,8 @@ msgid "Insert New Branch...|I"
 msgstr ""
 
 #: lib/ui/stdmenus.inc:570
-#, fuzzy
 msgid "Cancel Export|P"
-msgstr "Cancel.la l'exportació"
+msgstr "Cancel·la l'exportació"
 
 #: lib/ui/stdmenus.inc:572
 msgid "Change Tracking|C"
@@ -24255,7 +24215,7 @@ msgstr "Fraccions"
 #: lib/ui/stdtoolbars.inc:222 lib/ui/stdtoolbars.inc:445
 #: src/frontends/qt/GuiDocument.cpp:1815
 msgid "Fonts"
-msgstr "Tipus de lletra"
+msgstr "Tipografia"
 
 #: lib/ui/stdtoolbars.inc:223 lib/ui/stdtoolbars.inc:358
 msgid "Functions"
@@ -25044,9 +25004,8 @@ msgid "underleftrightarrow"
 msgstr "underleftrightarrow"
 
 #: lib/ui/stdtoolbars.inc:504
-#, fuzzy
 msgid "cancel"
-msgstr "Cancel·la"
+msgstr "cancel·la"
 
 #: lib/ui/stdtoolbars.inc:505
 #, fuzzy
@@ -26605,9 +26564,8 @@ msgid "gemini"
 msgstr ""
 
 #: lib/ui/stdtoolbars.inc:920
-#, fuzzy
 msgid "cancer"
-msgstr "Cancel·la"
+msgstr "càncer"
 
 #: lib/ui/stdtoolbars.inc:921
 #, fuzzy
@@ -31723,7 +31681,7 @@ msgstr "Sobreescriu-ho &tot"
 
 #: src/Exporter.cpp:51 src/frontends/qt/GuiView.cpp:822
 msgid "&Cancel export"
-msgstr "Cancel.la l'exportació"
+msgstr "Cancel·la l'exportació"
 
 #: src/Exporter.cpp:97
 msgid "Couldn't copy file"
@@ -34875,7 +34833,7 @@ msgstr ""
 
 #: src/frontends/qt/GuiDocument.cpp:1596 src/frontends/qt/GuiDocument.cpp:1826
 msgid "Math Options"
-msgstr "Opcions matetmàtiques"
+msgstr "Matemàtiques"
 
 #: src/frontends/qt/GuiDocument.cpp:1650 src/frontends/qt/GuiDocument.cpp:2992
 #, fuzzy, c-format
@@ -37000,9 +36958,8 @@ msgid ""
 msgstr ""
 
 #: src/frontends/qt/GuiView.cpp:818
-#, fuzzy
 msgid "Cancel Export?"
-msgstr "Cancel.la l'exportació"
+msgstr "Cancel·la l'exportació"
 
 #: src/frontends/qt/GuiView.cpp:819
 msgid "Do you want to cancel the background export process?"
@@ -37859,9 +37816,10 @@ msgstr "Altres barres d'eines"
 msgid "Master Documents"
 msgstr "Document mestre"
 
+# També es pot dir índex analític.
 #: src/frontends/qt/Menus.cpp:1538
 msgid "Index List|I"
-msgstr "Llista d'índexs|I"
+msgstr "Índex alfabètic|a"
 
 #: src/frontends/qt/Menus.cpp:1543
 msgid "Index Entry|d"
@@ -40482,6 +40440,11 @@ msgstr ""
 msgid "Unknown user"
 msgstr "Usuari desconegut"
 
+#, fuzzy
+#~| msgid "LyX: Enter text"
+#~ msgid "Enter text"
+#~ msgstr "LyX: Introduïu text"
+
 #~ msgid "Version goes here"
 #~ msgstr "1.6.x"
 
@@ -40666,9 +40629,6 @@ msgstr "Usuari desconegut"
 
 #~ msgid "Close this dialog"
 #~ msgstr "Tanca aquest quadre"
-
-#~ msgid "LyX: Enter text"
-#~ msgstr "LyX: Introduïu text"
 
 #~ msgid "DefSkip"
 #~ msgstr "DefSkip"
