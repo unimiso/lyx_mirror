@@ -756,6 +756,14 @@ contributors = [
                  "31 May 2007",
                  u"RTL/BiDi-related fixes"),
 
+     contributor(u"Daniel Fernández",
+                 "d3vf4n () tutanota ! com",
+                 "GPL",
+                 "Re: Contribution License",
+                 "m=169260363732687",
+                 "21 Aug 2023",
+                 u"es/ca translations"),
+
      contributor(u"Udi Fogiel",
                  "udifoglle () gmail ! com",
                  "GPL",
