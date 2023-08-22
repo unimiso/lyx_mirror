@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -30,6 +30,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -66,7 +68,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -97,16 +99,16 @@ Lo más importante que hay que saber para usar \SpecialChar LyX
 
 \begin_layout Enumerate
 \SpecialChar LyX
- viene con una excelente documentación (por favor,
- ¡úsela!).
- Comience con el menú 
+ viene con una excelente documentación,
+ por favor ¡úsela!
+ Puede comenzar con el menú 
 \family sans
 Ayuda\SpecialChar menuseparator
 Introducción
 \family default
 ,
  que da una introducción muy breve a la documentación.
- Después aprenda a usar \SpecialChar LyX
+ Después puede aprender a usar \SpecialChar LyX
  con 
 \family sans
 Ayuda\SpecialChar menuseparator
@@ -118,26 +120,22 @@ Tutorial
 \begin_layout Enumerate
 \SpecialChar LyX
  es lo que llamamos un 
-\begin_inset Quotes eld
-\end_inset
-
+\emph on
 procesador de documentos
-\begin_inset Quotes erd
-\end_inset
-
+\emph default
 .
  Por su diseño,
  es distinto a los procesadores de texto convencionales,
- haciendo que resulte más sencilla la tarea de escribir documentos.
- Pero sólo un poco distinto,
+ haciendo que resulte más sencilla la tarea de escribir documentos;
+ pero solo un poco distinto,
  no se asuste.
  La documentación le dejará todo claro.
 \end_layout
 
 \begin_layout Enumerate
-La salida de \SpecialChar LyX
- tiene un aspecto impecable.
- Ejecute el menú 
+Los documentos producidos con \SpecialChar LyX
+ tienen un aspecto impecable.
+ Seleccione el menú 
 \family sans
 Documento\SpecialChar menuseparator
 Ver
@@ -161,26 +159,17 @@ arg   "buffer-view"
 \end_layout
 
 \begin_layout Enumerate
-Sí,
- \SpecialChar LyX
- puede imitar casi toda la funcionalidad de \SpecialChar LaTeX
-.
- Y sí,
- \SpecialChar LyX
- puede importar ficheros \SpecialChar LaTeX
+\SpecialChar LyX
+ puede imitar (casi) toda la funcionalidad de \SpecialChar LaTeX
+ y también puede importar ficheros \SpecialChar LaTeX
 .
  Los usuarios experimentados de \SpecialChar LaTeX
- deberían leer el capítulo 
-\begin_inset Quotes eld
-\end_inset
-
+ deberían leer la sección 
+\emph on
 \SpecialChar LyX
  para usuarios de \SpecialChar LaTeX
 
-\begin_inset Quotes erd
-\end_inset
-
-,
+\emph default
  y hojear el resto del 
 \emph on
 Tutorial
@@ -208,12 +197,8 @@ Personalización
 \end_layout
 
 \begin_layout Enumerate
-La página de \SpecialChar LyX
+El sitio web de \SpecialChar LyX
  en Internet está en
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Flex URL
 status collapsed
 
@@ -225,11 +210,10 @@ https://www.lyx.org/WebEs.Home
 \end_inset
 
 .
- Consiga allí información sobre el programa,
- subscríbase a la(s) lista(s) de correo,
- obtenga el tour gráfico de \SpecialChar LyX
-:
- 
+ Allí podrá encontrar información sobre el programa,
+ suscribirse a la(s) lista(s) de correo,
+ ver la introducción a \SpecialChar LyX
+ en imágenes (
 \begin_inset Flex URL
 status collapsed
 
@@ -240,19 +224,16 @@ https://www.lyx.org/WebEs.Walkthrough
 
 \end_inset
 
-,
- y muchas más cosas.
+) y muchas más cosas.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
-Nota para usuarios de Linux:
+Nota para usuarios de GNU/Linux:
 
 \series default
- Comprueba,
- por favor,
- que los paquetes de idioma de la distribución \SpecialChar LaTeX
+ compruebe que los paquetes de idioma de la distribución \SpecialChar LaTeX
  
 \family sans
 \SpecialChar TeX
@@ -263,33 +244,25 @@ Nota para usuarios de Linux:
 Live
 \family default
  están instalados,
- si no,
- habrá errores \SpecialChar LaTeX
-.
+ sino \SpecialChar LaTeX
+ le dará errores.
 \begin_inset Newline newline
 \end_inset
 
 Por ejemplo,
- en las distribuciones Linux 
+ en las distribuciones 
 \family sans
-(K,X)Ubuntu
+Kubuntu,
+ Xubuntu
 \family default
  y 
 \family sans
 Debian
 \family default
  el nombre del paquete para el idioma español es 
-\begin_inset Quotes eld
-\end_inset
-
-
 \family typewriter
 texlive-lang-spanish
 \family default
-
-\begin_inset Quotes erd
-\end_inset
-
 .
 \begin_inset Newline newline
 \end_inset

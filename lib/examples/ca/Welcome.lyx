@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -30,6 +30,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -66,7 +68,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -91,18 +93,14 @@ Benvingut al \SpecialChar LyX
 \end_layout
 
 \begin_layout Section*
-Les 
-\begin_inset Formula $n$
-\end_inset
-
- primeres coses que cal saber per utilitzar el \SpecialChar LyX
+El més important a saber quan utilitzeu el \SpecialChar LyX
 
 \end_layout
 
 \begin_layout Enumerate
 El \SpecialChar LyX
- inclou una documentació excel·lent —
-Utilitzeu-la,
+ inclou una documentació excel·lent:
+ utilitzeu-la,
  si us plau!
  Podeu començar per 
 \family sans
@@ -110,8 +108,8 @@ Ajuda\SpecialChar menuseparator
 Introducció
 \family default
 ,
- que proporciona una breu introducció de la documentació disponible.
- A continuació podeu aprendre a utilitzar \SpecialChar LyX
+ que proporciona una breu introducció a la documentació disponible.
+ A continuació podeu aprendre a utilitzar el \SpecialChar LyX
  mitjançant 
 \family sans
 Ajuda\SpecialChar menuseparator
@@ -123,36 +121,24 @@ Tutorial
 \begin_layout Enumerate
 El \SpecialChar LyX
  és el que s'anomena un 
-\begin_inset Quotes eld
-\end_inset
-
-processador de documents.
-\begin_inset Quotes erd
-\end_inset
-
- El disseny del \SpecialChar LyX
- és diferent del dels processadors de texts normals —
-fa senzilla l'escriptura de documents.
+\emph on
+processador de documents
+\emph default
+,
+ però està fet diferent dels processadors de text normals per a fer més senzill escriure documents.
  Això sí,
  només una mica diferent,
  que ningú no s'espanti!
- La documentació ho aclarirà tot.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-No us havia dit encara que cal llegir la documentació?
-\end_layout
-
-\end_inset
-
-
+ La documentació us ho aclarirà tot.
 \end_layout
 
 \begin_layout Enumerate
-Els documents \SpecialChar LyX
+Els documents fets amb el \SpecialChar LyX
  tenen un aspecte formidable!
- Proveu de seleccionar 
+ Podeu comprovar\SpecialChar nobreakdash
+ho ara mateix,
+ amb aquest document,
+ fent clic en 
 \family sans
 \lang english
 Document\SpecialChar menuseparator
@@ -167,75 +153,65 @@ View
 (pdflatex)]
 \family default
 \lang catalan
- ara mateix per veure-ho.
+ o en la icona 
+\begin_inset Info
+type  "icon"
+arg   "buffer-view"
+\end_inset
+
+ de la barra d'eines.
 \end_layout
 
 \begin_layout Enumerate
-Sí,
- el \SpecialChar LyX
+El \SpecialChar LyX
  pot imitar (gairebé) tota la funcionalitat de \SpecialChar LaTeX
-.
- A més a més,
- el \SpecialChar LyX
- pot importar fitxers \SpecialChar LaTeX
+ i també importar fitxers \SpecialChar LaTeX
 .
  Els usuaris de \SpecialChar LaTeX
- amb experiència es poden saltar la resta del 
+ amb experiència poden fer una lectura més superficial del 
 \emph on
 Tutorial
 \emph default
 ,
- i llegir el capítol 
-\begin_inset Quotes eld
-\end_inset
-
-
+ llevat de la secció 
 \emph on
 \SpecialChar LyX
  per a usuaris de \SpecialChar LaTeX
 
 \emph default
-
-\begin_inset Quotes erd
-\end_inset
-
-.
+,
+ que haurien de llegir amb més atenció.
  (Per a tots els altres:
  no us preocupeu,
  no cal saber \SpecialChar LaTeX
- per utilitzar el \SpecialChar LyX
-.) 
+ per a utilitzar el \SpecialChar LyX
+).
 \end_layout
 
 \begin_layout Enumerate
 El \SpecialChar LyX
- té moltes utilitats per qui vulgui fer servir idiomes diferents de l'anglès.
+ té moltes utilitats per als qui fan servir idiomes diferents de l'anglès.
  A més,
  les associacions de tecles (
 \emph on
 keybindings
 \emph default
 ),
- barra d'eines (
+ barres d'eines (
 \emph on
 toolbars
 \emph default
-),
- i moltes altres característiques i funcinalitas són configurables en gran manera (bàsicament heu d'editar el fitxer 
-\family typewriter
-lyxrc
-\family default
-).
+) i moltes altres característiques i funcionalitats son configurables en gran manera.
  Vegeu 
 \family sans
 Ajuda\SpecialChar menuseparator
 Personalització
 \family default
- per més detalls.
+ per a més detalls.
 \end_layout
 
 \begin_layout Enumerate
-La pàgina web del \SpecialChar LyX
+El lloc web del \SpecialChar LyX
  és 
 \begin_inset Flex URL
 status collapsed
@@ -248,13 +224,12 @@ https://www.lyx.org
 \end_inset
 
 .
- Obtingueu informació sobre el \SpecialChar LyX
+ Allà podeu obtenir informació sobre el \SpecialChar LyX
 ,
- subscriviu-vos a les llistes de correu de \SpecialChar LyX
-,
- passegeu-vos pel \SpecialChar LyX
- Graphical Tour:
- 
+ subscriure\SpecialChar nobreakdash
+vos a les llistes de correu,
+ veure la introducció en imatges del \SpecialChar LyX
+ (
 \begin_inset Flex URL
 status collapsed
 
@@ -265,19 +240,17 @@ https://www.lyx.org/Walkthrough
 
 \end_inset
 
-,
- i molt més.
+) i molt més.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
-\lang english
-Note for Linux users:
-
+Nota per als usuaris de GNU/Linux
 \series default
- Please check that the language packages for the \SpecialChar LaTeX
- distribution 
+:
+ assegureu-vos de tenir instal·lats els paquets d'idiomes necessaris de la vostra distribució \SpecialChar LaTeX
+ (
 \family sans
 \SpecialChar TeX
 
@@ -286,45 +259,44 @@ Note for Linux users:
 
 Live
 \family default
- are installed.
- Otherwise you will get \SpecialChar LaTeX
- errors.
+),
+ sinó \SpecialChar LaTeX
+ us donarà errors.
 \begin_inset Newline newline
 \end_inset
 
-For example on the Linux distributions 
+Per exemple,
+ en els sistemes operatius 
 \family sans
-(K,X)Ubuntu
+Kubuntu
 \family default
- and 
+,
+ 
+\family sans
+Xubuntu
+\family default
+ i 
 \family sans
 Debian
 \family default
- the package name for the German language is 
-\begin_inset Quotes eld
-\end_inset
-
-
+ el paquet d'idioma del castellà és 
 \family typewriter
-texlive-lang-german
+texlive-lang-spanish
 \family default
-
-\begin_inset Quotes erd
-\end_inset
-
 .
+ El català,
+ en canvi,
+ no té un paquet propi i la compatibilitat de \SpecialChar LaTeX
+ amb el català s'aconsegueix instal·lant el paquet del castellà.
 \begin_inset Newline newline
 \end_inset
 
-After the installation of the language packages you must use the \SpecialChar LyX
- menu 
+Un cop instal·lats els paquets d'diomes,
+ heu d'actualitzar la base de dades del \SpecialChar LyX
+ via 
 \family sans
-Tools
-\family default
-\SpecialChar menuseparator
-
-\family sans
-Reconfigure
+Eines\SpecialChar menuseparator
+Reconfigura
 \family default
 .
 \end_layout
