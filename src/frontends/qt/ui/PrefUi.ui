@@ -164,7 +164,7 @@
         <item>
          <widget class="QSpinBox" name="lastfilesSB">
           <property name="maximum">
-           <number>9</number>
+           <number>99</number>
           </property>
          </widget>
         </item>
