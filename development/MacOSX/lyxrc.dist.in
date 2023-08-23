@@ -26,7 +26,7 @@ Format 24
 # SCREEN & FONTS SECTION ############################
 #
 
-\screen_font_roman "Times"
+\screen_font_roman "Times New Roman"
 \screen_font_sans "Helvetica"
 \screen_font_typewriter "Courier"
 \open_buffers_in_tabs false
