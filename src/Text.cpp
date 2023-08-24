@@ -5223,6 +5223,7 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 		bvcur.setMark(false);
 		switch (cmd.button()) {
 		case mouse_button::button1:
+			bvcur.setClickPos(cmd.x(), cmd.y());
 			if (!bvcur.selection())
 				// Set the cursor
 				bvcur.resetAnchor();
@@ -5314,6 +5315,8 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 	case LFUN_MOUSE_RELEASE:
 		switch (cmd.button()) {
 		case mouse_button::button1:
+			// unregister last mouse press position
+			cur.bv().cursor().setClickPos(-1, -1);
 			// Cursor was set at LFUN_MOUSE_PRESS or LFUN_MOUSE_MOTION time.
 			// If there is a new selection, update persistent selection;
 			// otherwise, single click does not clear persistent selection

@@ -714,6 +714,7 @@ bool CursorData::confirmDeletion(bool const before) const
 Cursor::Cursor(BufferView & bv)
 	: CursorData(&bv.buffer()), bv_(&bv),
 	  x_target_(-1), textTargetOffset_(0),
+	  x_clickpos_(-1), y_clickpos_(-1),
 	  beforeDispatchPosX_(0), beforeDispatchPosY_(0)
 {}
 
@@ -1378,6 +1379,13 @@ void Cursor::updateTextTargetOffset()
 	int y;
 	getPos(x, y);
 	textTargetOffset_ = x - x_target_;
+}
+
+
+void Cursor::setClickPos(int x, int y)
+{
+	x_clickpos_ = x;
+	y_clickpos_ = y;
 }
 
 
