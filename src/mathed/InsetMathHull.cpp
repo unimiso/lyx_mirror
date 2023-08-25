@@ -274,6 +274,32 @@ void InsetMathHull::updateBuffer(ParIterator const & it, UpdateType utype, bool 
 		if (label_[i])
 			label_[i]->updateBuffer(it, utype, deleted);
 	}
+        // set up equation numbers
+
+	// compute first and last item
+	row_type first = nrows();
+	for (row_type row = 0; row != nrows(); ++row)
+		if (numbered(row)) {
+			first = row;
+			break;
+		}
+	if (first != nrows()) {
+		row_type last = nrows() - 1;
+		for (; last != 0; --last)
+			if (numbered(last))
+				break;
+
+		for (row_type row = 0; row != nrows(); ++row) {
+			if (!numbered(row))
+				continue;
+			if (label_[row]) {
+				label_[row]->setCounterValue(numbers_[row]);
+				label_[row]->setPrettyCounter("(" + numbers_[row] + ")");
+				label_[row]->setFormattedCounter("(" + numbers_[row] + ")");
+			}
+		}
+	}
+
 	// pass down
 	InsetMathGrid::updateBuffer(it, utype, deleted);
 }
@@ -304,9 +330,8 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 		if (numbered(last))
             break;
 
-    TocBuilder & b = backend.builder("equation");
-    // add equation numbers
-	b.pushItem(pit, docstring(), output_active);
+	TocBuilder & b = backend.builder("equation");
+        b.pushItem(pit, docstring(), output_active);
 	if (first != last)
 		b.argumentItem(bformat(from_ascii("(%1$s-%2$s)"),
 		                       numbers_[first], numbers_[last]));
@@ -321,8 +346,6 @@ void InsetMathHull::addToToc(DocIterator const & pit, bool output_active,
 		if (!numbered(row))
 			continue;
 		if (label_[row]) {
-			label_[row]->setPrettyCounter(_("Equation") + " " + numbers_[row]);
-			label_[row]->setFormattedCounter(_("Equation") + " " + numbers_[row]);
 			label_[row]->addToToc(pit, output_active, utype, backend);
 		}
 		docstring label = nicelabel(row);

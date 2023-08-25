@@ -31,6 +31,8 @@ public:
 	docstring const & prettyCounter() const { return pretty_counter_; }
 	///
 	docstring const & formattedCounter() const { return formatted_counter_; }
+        ///
+        void setCounterValue(docstring cv) { counter_value_ = cv; }
 	///
 	void setPrettyCounter(docstring pc) { pretty_counter_ = pc; }
         ///
