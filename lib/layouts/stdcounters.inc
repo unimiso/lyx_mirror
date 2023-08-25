@@ -88,7 +88,6 @@ End
 
 Counter footnote
 	GuiName Footnote
-	LabelString          "\superarabic{footnote}"
 	PrettyFormat         "Footnote \arabic{footnote}"
 End
 
