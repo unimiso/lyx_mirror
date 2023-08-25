@@ -118,6 +118,7 @@ logicalmkup
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -10224,12 +10225,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10242,6 +10245,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10265,6 +10269,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -33789,6 +33794,35 @@ Capitalized
 refstyle
 \series default
  package.
+\change_inserted -584632292 1692991077
+
+\begin_inset Newline newline
+\end_inset
+
+If you activate the option 
+\begin_inset Quotes eld
+\end_inset
+
+Format cross-references in work area
+\begin_inset Quotes erd
+\end_inset
+
+,
+ \SpecialChar LyX
+ will attempt to display the formatted reference as it would appear in output,
+ e.g.,
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+Theorem 1
+\begin_inset Quotes erd
+\end_inset
+
+,
+ rather than just displaying the label.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description

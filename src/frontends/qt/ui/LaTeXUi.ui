@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>332</width>
-    <height>442</height>
+    <width>446</width>
+    <height>431</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -207,8 +207,11 @@
    </item>
    <item row="6" column="0" colspan="4">
     <widget class="QCheckBox" name="refFormattedCB">
+     <property name="toolTip">
+      <string>Attempt to display formatted cross-references as they would appear in the output, e.g., as &quot;Theorem 1&quot; rather than just as the label.</string>
+     </property>
      <property name="text">
-      <string>Indicate cross-reference output in the work area</string>
+      <string>Format cross-references in work area</string>
      </property>
     </widget>
    </item>
