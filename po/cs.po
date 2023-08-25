@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lyx 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-25 22:02+0200\n"
+"POT-Creation-Date: 2023-08-25 21:52+0200\n"
 "PO-Revision-Date: 2023-07-27 01:09-0800\n"
 "Last-Translator: Pavel Sanda <sanda@lyx.org>\n"
 "Language-Team: Czech <LL@li.org>\n"
@@ -2634,12 +2634,11 @@ msgstr "V&lastní:"
 msgid ""
 "Attempt to display formatted cross-references as they would appear in the "
 "output, e.g., as \"Theorem 1\" rather than just as the label."
-msgstr ""
+msgstr "Pokusí se zobrazit formátovaný křížový odkaz tak, jak se objeví na výstupu, např. \"Věta 1\" namísto pouhé značky."
 
 #: src/frontends/qt/ui/LaTeXUi.ui:214
-#, fuzzy
 msgid "Format cross-references in work area"
-msgstr "Vložit křížový odkaz"
+msgstr "Formátovat křížové odkazy v editačním okně"
 
 #: src/frontends/qt/ui/LanguageUi.ui:39
 msgid "&Quote style:"
@@ -14938,7 +14937,6 @@ msgid "List of Tableaux"
 msgstr "Seznam tabel"
 
 #: lib/layouts/linguistics.module:608
-#, fuzzy
 msgid "Tableau ##"
 msgstr "Tablo ##"
 
@@ -38277,7 +38275,7 @@ msgstr "Soubory použité LyX-em"
 
 #: src/support/debug.cpp:63
 msgid "Workarea events"
-msgstr "Události na pracovní ploše"
+msgstr "Události v editačním okně"
 
 #: src/support/debug.cpp:64
 msgid "Clipboard handling"
