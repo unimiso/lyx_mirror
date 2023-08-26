@@ -10225,14 +10225,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10245,7 +10243,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10269,7 +10266,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -33800,13 +33796,25 @@ refstyle
 \end_inset
 
 If you activate the option 
+\change_deleted -712698321 1693042040
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -584632292 1692991077
+
+\family sans
 Format cross-references in work area
+\change_deleted -712698321 1693042041
+
+\family default
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -584632292 1692991077
 ,
  \SpecialChar LyX
  will attempt to display the formatted reference as it would appear in output,
