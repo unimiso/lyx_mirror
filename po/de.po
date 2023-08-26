@@ -94,8 +94,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-26 11:39+0200\n"
-"PO-Revision-Date: 2023-08-26 11:41+0200\n"
+"POT-Creation-Date: 2023-08-26 12:06+0200\n"
+"PO-Revision-Date: 2023-08-26 12:07+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -110,11 +110,11 @@ msgid "Version"
 msgstr "Version"
 
 #: src/frontends/qt/ui/AboutUi.ui:141
-msgid "Library directory"
+msgid "System directory"
 msgstr "Systemverzeichnis"
 
 #: src/frontends/qt/ui/AboutUi.ui:153
-msgid "Open library directory in file browser"
+msgid "Open system directory in file browser"
 msgstr "Systemverzeichnis im Dateimanager öffnen"
 
 #: src/frontends/qt/ui/AboutUi.ui:156
@@ -39031,6 +39031,12 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Unbekannter Benutzer"
+
+#~ msgid "Library directory"
+#~ msgstr "Systemverzeichnis"
+
+#~ msgid "Open library directory in file browser"
+#~ msgstr "Systemverzeichnis im Dateimanager öffnen"
 
 #~ msgid "Enter text"
 #~ msgstr "Text eingeben"
