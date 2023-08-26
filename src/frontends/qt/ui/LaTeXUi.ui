@@ -211,7 +211,7 @@
       <string>Attempt to display formatted cross-references as they would appear in the output, e.g., as &quot;Theorem 1&quot; rather than just as the label.</string>
      </property>
      <property name="text">
-      <string>Format cross-references in work area</string>
+      <string>Format cross-references in the &amp;work area</string>
      </property>
     </widget>
    </item>
