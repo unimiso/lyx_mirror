@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-01 11:34+0200\n"
-"PO-Revision-Date: 2023-08-01 09:36+0000\n"
+"POT-Creation-Date: 2023-08-26 14:28+0200\n"
+"PO-Revision-Date: 2023-08-26 12:35+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -25,13 +25,13 @@ msgstr ""
 msgid "Version"
 msgstr "Verzia"
 
-#: src/frontends/qt/ui/AboutUi.ui:150
-msgid "Library directory"
-msgstr "Adresár systému"
+#: src/frontends/qt/ui/AboutUi.ui:141
+msgid "System directory"
+msgstr "Systémový adresár"
 
-#: src/frontends/qt/ui/AboutUi.ui:162
-msgid "Open library directory in file browser"
-msgstr "Otvorí adresár knižnice v prehliadači"
+#: src/frontends/qt/ui/AboutUi.ui:153
+msgid "Open system directory in file browser"
+msgstr "Otvoriť systémový adresár v prehliadači"
 
 #: src/frontends/qt/ui/AboutUi.ui:165
 msgid "[[do]]&Open"
@@ -2650,6 +2650,18 @@ msgstr ""
 #: src/frontends/qt/ui/LaTeXUi.ui:90
 msgid "Cus&tom:"
 msgstr "&Vlastné:"
+
+#: src/frontends/qt/ui/LaTeXUi.ui:211
+msgid ""
+"Attempt to display formatted cross-references as they would appear in the "
+"output, e.g., as \"Theorem 1\" rather than just as the label."
+msgstr ""
+"Pokúsi sa zobraziť formátovanú krížovú referenciu tak, ako by sa objavila vo "
+"výstupe, napr. ako \"Veta 1\" a nie len ako značka."
+
+#: src/frontends/qt/ui/LaTeXUi.ui:214
+msgid "Format cross-references in the &work area"
+msgstr "&Formátovať krížovú referenciu v pracovnej ploche"
 
 #: src/frontends/qt/ui/LaTeXUi.ui:106
 msgid "&Graphics driver:"
@@ -6170,10 +6182,6 @@ msgid ""
 msgstr ""
 "Prepni medzi dostupnými prehľadmi (obsah, zoznam obrázkov, zoznam tabuliek a "
 "iné)"
-
-#: src/frontends/qt/ui/ToggleWarningUi.ui:14
-msgid "Enter text"
-msgstr "Vložiť text"
 
 #: src/frontends/qt/ui/ToggleWarningUi.ui:62
 #: src/frontends/qt/GuiProgress.cpp:194
@@ -14834,8 +14842,8 @@ msgid "List of Tableaux"
 msgstr "Zoznam tablov"
 
 #: lib/layouts/linguistics.module:608
-msgid "Tableaux ##"
-msgstr "Tablá ##"
+msgid "Tableau ##"
+msgstr "Tablo ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -17306,10 +17314,6 @@ msgstr "(\\Alph{enumiv})"
 #: lib/layouts/stdcounters.inc:82
 msgid "Equation ##"
 msgstr "Rovnica ##"
-
-#: lib/layouts/stdcounters.inc:87
-msgid "\\superarabic{footnote}"
-msgstr "\\superarabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:92 lib/layouts/stdcounters.inc:97
 msgid "Footnote \\arabic{footnote}"
@@ -38512,6 +38516,15 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Neznámy používateľ"
+
+#~ msgid "Library directory"
+#~ msgstr "Adresár systému"
+
+#~ msgid "Open library directory in file browser"
+#~ msgstr "Otvorí adresár knižnice v prehliadači"
+
+#~ msgid "Enter text"
+#~ msgstr "Vložiť text"
 
 #~ msgid "Equation "
 #~ msgstr "Rovnica "
