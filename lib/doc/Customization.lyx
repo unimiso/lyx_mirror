@@ -103,6 +103,7 @@ logicalmkup
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -289,7 +290,13 @@ This chapter aims to help you to find your way through the \SpecialChar LyX
  configuration files.
  Before continuing to read this chapter,
  you should find out where your \SpecialChar LyX
- library and user directories are by using 
+ 
+\change_deleted -712698321 1693046672
+library
+\change_inserted -712698321 1693046674
+system
+\change_unchanged
+ and user directories are by using 
 \begin_inset Flex Noun
 status collapsed
 
@@ -305,7 +312,13 @@ LyX
 \end_inset
 
 .
- The library directory is the place where \SpecialChar LyX
+ The 
+\change_deleted -712698321 1693046679
+library
+\change_inserted -712698321 1693046679
+system
+\change_unchanged
+ directory is the place where \SpecialChar LyX
  places its system-wide configuration files;
  the user directory is where you can place your modified versions.
  We will call the former 
