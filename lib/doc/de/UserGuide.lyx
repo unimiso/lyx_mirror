@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 616
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -125,6 +125,7 @@ logicalmkup
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -9301,12 +9302,10 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim
-
 Dies ist Unformatiert.
 \end_layout
 
 \begin_layout Verbatim
-
 Die folgenden 2 Zeilen sind leer:
 \end_layout
 
@@ -9319,7 +9318,6 @@ Die folgenden 2 Zeilen sind leer:
 \end_layout
 
 \begin_layout Verbatim
-
 Fast alles ist in Unformatiert erlaubt:"%&$§#~'`
 \backslash
 }][{|
@@ -9345,7 +9343,6 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim*
-
 Dies ist Unformatiert*.
 \end_layout
 
@@ -30428,6 +30425,32 @@ Großschreibung
 refstyle
 \series default
  aktiviert.
+\begin_inset Newline newline
+\end_inset
+
+Wenn Sie die Option 
+\family sans
+Querverweise im Arbeitsbereich formatieren
+\family default
+ aktivieren,
+ versucht \SpecialChar LyX
+ den formatierten Querverwies so anzuzeigen,
+ wie er in der Ausgabe erscheinen wird,
+ also bspw.
+ als 
+\begin_inset Quotes gld
+\end_inset
+
+Theorem
+\begin_inset space ~
+\end_inset
+
+1
+\begin_inset Quotes grd
+\end_inset
+
+,
+ statt nur die Marke abzubilden.
 \end_layout
 
 \begin_layout Description
