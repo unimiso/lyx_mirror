@@ -138,7 +138,7 @@
          <item>
           <widget class="QGroupBox" name="gridGroupBox">
            <property name="title">
-            <string>Library directory</string>
+            <string>System directory</string>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
             <item row="0" column="2">
@@ -150,7 +150,7 @@
                </sizepolicy>
               </property>
               <property name="toolTip">
-               <string>Open library directory in file browser</string>
+               <string>Open system directory in file browser</string>
               </property>
               <property name="text">
                <string>[[do]]&amp;Open</string>
@@ -169,7 +169,7 @@
                <cursorShape>IBeamCursor</cursorShape>
               </property>
               <property name="text">
-               <string notr="true">Library directory goes here.</string>
+               <string notr="true">System directory goes here.</string>
               </property>
               <property name="textFormat">
                <enum>Qt::PlainText</enum>
