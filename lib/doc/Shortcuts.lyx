@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -18,9 +18,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
+\font_roman_osf false
 \font_sans_osf false
 \font_typewriter_osf false
-\font_roman_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -71,12 +71,17 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
-\tracking_changes false
-\postpone_fragile_content false
+\tablestyle default
+\tracking_changes true
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict true
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\author -1463541724 "Daniel" d3vf4n@tutanota.com
 \end_header
 
 \begin_body
@@ -84,6 +89,40 @@
 \begin_layout Title
 \SpecialChar LyX
  Keyboard Shortcuts
+\change_inserted -1463541724 1693128412
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693128496
+All environments were 
+\family typewriter
+subsection*
+\family default
+,
+ except the last one which was a 
+\family typewriter
+section*
+\family default
+.
+\begin_inset Newline newline
+\end_inset
+
+I have switched all environments to 
+\family typewriter
+section*
+\family default
+.
+ If this is not desired undo the change.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Author
@@ -92,7 +131,11 @@ By the \SpecialChar LyX
 \end_layout
 
 \begin_layout Standard
-This file lists the currently used shortcuts defined in bind file 
+This file lists
+\change_inserted -1463541724 1693127460
+ some of
+\change_unchanged
+ the currently used shortcuts defined in bind file 
 \family typewriter
 
 \begin_inset Info
@@ -111,13 +154,42 @@ Editing\SpecialChar menuseparator
 Shortcuts
 \family default
  as described in section 
+\change_deleted -1463541724 1693120592
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
+
+\emph on
 Shortcuts
+\change_inserted -1463541724 1693120614
+
+\emph default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693120640
+Comply to styling rules for the documentation:
+ Introduction section 2.2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -1463541724 1693120589
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  of the \SpecialChar LyX
  
 \emph on
@@ -126,7 +198,7 @@ User's Guide
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Buffer
 \end_layout
 
@@ -487,7 +559,7 @@ arg   "buffer-previous"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Edit
 \end_layout
 
@@ -1211,7 +1283,7 @@ arg   "bookmark-goto 0"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Greek Symbols
 \end_layout
 
@@ -2331,7 +2403,7 @@ arg   "math-insert \\Psi"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Mathematical Symbols
 \end_layout
 
