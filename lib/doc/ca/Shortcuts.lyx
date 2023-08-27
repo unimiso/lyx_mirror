@@ -3,11 +3,11 @@
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin /systemlyxdir/doc/es/
+\origin /systemlyxdir/doc/ca/
 \textclass article
 \use_default_options false
 \maintain_unincluded_children no
-\language spanish
+\language catalan
 \language_package default
 \inputencoding utf8
 \fontencoding auto
@@ -56,9 +56,10 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
-\index Índice
+\index Index
 \shortcut idx
 \color #008000
 \end_index
@@ -74,84 +75,33 @@
 \papersides 1
 \paperpagestyle empty
 \tablestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \change_bars false
 \postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
-\html_be_strict false
+\html_be_strict true
 \docbook_table_output 0
 \docbook_mathml_prefix 1
-\author -1463541724 "Daniel" d3vf4n@tutanota.com
 \end_header
 
 \begin_body
 
 \begin_layout Title
-Atajos de teclado en \SpecialChar LyX
-
-\change_inserted -1463541724 1693128237
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted -1463541724 1693128522
-
-\lang english
-All environments were 
-\family typewriter
-subsection*
-\family default
-,
- except the last one which was a 
-\family typewriter
-section*
-\family default
-.
-\begin_inset Newline newline
-\end_inset
-
-I have switched all environments to 
-\family typewriter
-Section*
-\family default
-.
- If this is not desired undo the change.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
+Dreceres de teclat en \SpecialChar LyX
 
 \end_layout
 
 \begin_layout Author
-Por el equipo 
-\change_inserted -1463541724 1693127436
-de 
-\change_unchanged
-\SpecialChar LyX
+Per l'equip del \SpecialChar LyX
 
 \end_layout
 
 \begin_layout Standard
-Este archivo contiene 
-\change_inserted -1463541724 1693127260
-algunos
-\change_deleted -1463541724 1693127259
-la lista
-\change_unchanged
- de los atajos de teclado definidos actualmente en el archivo 
-\change_deleted -1463541724 1693126422
-bind
-\change_inserted -1463541724 1693126427
-de asociaciones de teclas
-\change_unchanged
- 
+Aquest fitxer mostra algunes de les dreceres de teclat del \SpecialChar LyX
+,
+ definides en el fitxer d'associacions de tecles 
 \family typewriter
 
 \begin_inset Info
@@ -162,59 +112,17 @@ arg   "bind_file"
 
 \family default
 .
- 
-\change_inserted -1463541724 1693127278
-Puede cambiar los atajos en 
-\change_deleted -1463541724 1693126458
-You can change the shortcuts en el menú
-\change_unchanged
- 
+ Podeu escollir un altre fitxer d'associacions de tecles o modificar-ne les dreceres de teclat des de 
 \family sans
-Herramientas\SpecialChar menuseparator
-Preferencias\SpecialChar menuseparator
-Edición\SpecialChar menuseparator
-Atajos
-\change_deleted -1463541724 1693127306
- 
-\change_inserted -1463541724 1693127306
-
-\begin_inset space ~
-\end_inset
-
-
-\change_unchanged
-de
-\change_deleted -1463541724 1693127308
- 
-\change_inserted -1463541724 1693127328
-
-\begin_inset space ~
-\end_inset
-
-
-\change_unchanged
-teclado
-\change_inserted -1463541724 1693126476
-
+Eines\SpecialChar menuseparator
+Preferències\SpecialChar menuseparator
+Edició\SpecialChar menuseparator
+Dreceres
 \family default
-.
- Para más información consulte
-\change_deleted -1463541724 1693126480
- as described in section
-\change_inserted -1463541724 1693126481
- la sección
-\change_unchanged
- 
-\change_deleted -1463541724 1693126371
-
-\begin_inset Quotes eld
-\end_inset
-
-Shortcuts
-\change_inserted -1463541724 1693127095
-
+;
+ per a més informació consulteu la secció 
 \family sans
-Atajos
+Dreceres
 \begin_inset space ~
 \end_inset
 
@@ -222,222 +130,51 @@ de
 \begin_inset space ~
 \end_inset
 
-teclado
-\change_deleted -1463541724 1693126376
-
+teclat
 \family default
-
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_unchanged
- 
-\change_deleted -1463541724 1693126385
-of the
-\change_inserted -1463541724 1693127345
- de la
-\change_unchanged
- 
-\change_deleted -1463541724 1693126491
-\SpecialChar LyX
-
-\change_unchanged
- 
-\emph on
-Guía
-\change_deleted -1463541724 1693126356
- 
-\change_inserted -1463541724 1693126356
-
+ de la 
+\family sans
+Guia
 \begin_inset space ~
 \end_inset
 
-
-\change_unchanged
-del
-\change_deleted -1463541724 1693126359
- 
-\change_inserted -1463541724 1693126359
-
+de
 \begin_inset space ~
 \end_inset
 
-
-\change_unchanged
-Usuario
-\emph default
+l'usuari
+\family default
 .
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1463541724 1693128698
-Las combinaciones de teclas en este documento se actualizan automáticamente cuando se cambian en las preferencias.
- Por eso no es posible por ahora traducir en \SpecialChar LyX
- la notación de las teclas.
- Teclas equivalentes en español:
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1463541724 1693128698
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1463541724 1693128698
-
-\family sans
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Tab
-\family default
-:
-
-\family sans
- Tabulador
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-PgUp
-\family default
-:
-
-\family sans
- AvPág
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Shift
-\family default
-:
- 
-\family sans
-Mayúsculas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Space
-\family default
-:
-
-\family sans
- Espacio
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Return
-\family default
-:
-
-\family sans
- Retorno
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Right
-\family default
-:
-
-\family sans
- Derecha
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family sans
-Left
-\family default
-:
-
-\family sans
- Izquierda
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section*
+Document
+\begin_inset Note Note
+status collapsed
 
-\change_deleted -1463541724 1693127411
-Buffer
-\change_inserted -1463541724 1693127417
-Documento
-\change_unchanged
+\begin_layout Plain Layout
+REVISAR:
+ És possible que 
+\begin_inset Quotes fld
+\end_inset
+
+document
+\begin_inset Quotes frd
+\end_inset
+
+ no sigui una traducció adient de 
+\begin_inset Quotes fld
+\end_inset
+
+buffer
+\begin_inset Quotes frd
+\end_inset
+
+ en tots els contextos.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -456,7 +193,7 @@ Documento
 \begin_inset Text
 
 \begin_layout Plain Layout
- Acción 
+Acció
 \end_layout
 
 \end_inset
@@ -465,7 +202,7 @@ Documento
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -474,7 +211,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Acción
+Acció
 \end_layout
 
 \end_inset
@@ -483,7 +220,7 @@ Acción
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -492,7 +229,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Acción
+Acció
 \end_layout
 
 \end_inset
@@ -501,7 +238,7 @@ Acción
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -512,7 +249,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Nuevo
+Nou
 \end_layout
 
 \end_inset
@@ -535,7 +272,7 @@ arg   "buffer-new"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ver DVI
+Veure DVI
 \end_layout
 
 \end_inset
@@ -558,7 +295,7 @@ arg   "buffer-view dvi"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Maestro Ver DVI
+Veure mestre DVI
 \end_layout
 
 \end_inset
@@ -583,7 +320,7 @@ arg   "master-buffer-view dvi"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Abrir
+Obrir
 \end_layout
 
 \end_inset
@@ -606,7 +343,7 @@ arg   "file-open"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ver PS
+Veure PS
 \end_layout
 
 \end_inset
@@ -629,7 +366,7 @@ arg   "buffer-view ps"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Maestro Ver PS
+Veure mestre PS
 \end_layout
 
 \end_inset
@@ -654,7 +391,7 @@ arg   "master-buffer-view ps"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cerrar
+Tancar
 \end_layout
 
 \end_inset
@@ -677,7 +414,7 @@ arg   "buffer-close"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ver PDF
+Veure PDF
 \end_layout
 
 \end_inset
@@ -700,7 +437,7 @@ arg   "buffer-view pdf"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Maestro Ver PDF
+Veure mestre PDF
 \end_layout
 
 \end_inset
@@ -725,7 +462,7 @@ arg   "master-buffer-view pdf"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Guardar
+Desar
 \end_layout
 
 \end_inset
@@ -748,7 +485,7 @@ arg   "buffer-write"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Siguiente
+Següent
 \end_layout
 
 \end_inset
@@ -799,13 +536,7 @@ arg   "buffer-previous"
 \end_layout
 
 \begin_layout Section*
-Edi
-\change_inserted -1463541724 1693126522
-ción
-\change_deleted -1463541724 1693126521
-tar
-\change_unchanged
-
+Edició
 \end_layout
 
 \begin_layout Standard
@@ -821,7 +552,7 @@ tar
 \begin_inset Text
 
 \begin_layout Plain Layout
-Acción
+Acció
 \end_layout
 
 \end_inset
@@ -830,7 +561,7 @@ Acción
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -839,7 +570,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Acción
+Acció
 \end_layout
 
 \end_inset
@@ -848,7 +579,7 @@ Acción
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -882,7 +613,7 @@ arg   "copy"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Negrita
+Negreta
 \end_layout
 
 \end_inset
@@ -907,7 +638,7 @@ arg   "font-bold"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pegar
+Enganxar
 \end_layout
 
 \end_inset
@@ -930,7 +661,7 @@ arg   "paste"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Énfasis
+Èmfasi
 \end_layout
 
 \end_inset
@@ -955,7 +686,7 @@ arg   "font-emph"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cortar
+Retallar
 \end_layout
 
 \end_inset
@@ -978,7 +709,7 @@ arg   "cut"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Máquina de escribir
+Mecanogràfic
 \end_layout
 
 \end_inset
@@ -1003,7 +734,7 @@ arg   "font-typewriter"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Deshacer
+Desfer
 \end_layout
 
 \end_inset
@@ -1026,7 +757,7 @@ arg   "undo"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Subrayado
+Subratllar
 \end_layout
 
 \end_inset
@@ -1051,7 +782,7 @@ arg   "font-underline"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rehacer
+Refer
 \end_layout
 
 \end_inset
@@ -1074,7 +805,22 @@ arg   "redo"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Versalitas
+Versaletes
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+El \SpecialChar LyX
+ anomena a aquest estil de lletra 
+\emph on
+noun
+\emph default
+ perquè el fa servir per a noms personals.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1099,7 +845,7 @@ arg   "font-noun"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Espacio normal
+Espai normal
 \end_layout
 
 \end_inset
@@ -1122,7 +868,34 @@ arg   "space-insert normal"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Línea nueva
+Línia nova
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+REVISAR:
+ potser canviar a 
+\begin_inset Quotes fld
+\end_inset
+
+canvi de línia
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+fi de línia
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1147,7 +920,7 @@ arg   "newline-insert newline"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Espacio delgado
+Espai prim
 \end_layout
 
 \end_inset
@@ -1170,7 +943,7 @@ arg   "space-insert thin"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Salto de línea
+Salt de línia
 \end_layout
 
 \end_inset
@@ -1195,7 +968,7 @@ arg   "newline-insert linebreak"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Añadir columna
+Afegir columna
 \end_layout
 
 \end_inset
@@ -1218,7 +991,7 @@ arg   "tabular-feature append-column"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Añadir fila
+Afegir fila
 \end_layout
 
 \end_inset
@@ -1243,7 +1016,7 @@ arg   "tabular-feature append-row"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Eliminar columna
+Suprimir columna
 \end_layout
 
 \end_inset
@@ -1266,7 +1039,7 @@ arg   "tabular-feature delete-column"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Eliminar fila
+Suprimir fila
 \end_layout
 
 \end_inset
@@ -1339,7 +1112,7 @@ arg   "tabular-feature copy-row"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Buscar
+Cercar
 \end_layout
 
 \end_inset
@@ -1362,7 +1135,7 @@ arg   "word-find"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Corrector ortográfico
+Revisió ortogràfica
 \end_layout
 
 \end_inset
@@ -1387,7 +1160,7 @@ arg   "dialog-show spellchecker"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Guardar marcador 1
+Desar punt d'interès 1
 \end_layout
 
 \end_inset
@@ -1410,7 +1183,7 @@ arg   "bookmark-save 1"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Aumentar profundidad
+Augmentar profunditat
 \end_layout
 
 \end_inset
@@ -1435,7 +1208,7 @@ arg   "depth-increment"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ir a marcador 1
+Anar punt d'interès 1
 \end_layout
 
 \end_inset
@@ -1458,7 +1231,7 @@ arg   "bookmark-goto 1"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Disminuir profundidad
+Disminuir profunditat
 \end_layout
 
 \end_inset
@@ -1483,7 +1256,7 @@ arg   "depth-decrement"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ir a último marcador
+Anar últim punt d'interès
 \end_layout
 
 \end_inset
@@ -1529,7 +1302,7 @@ arg   "bookmark-goto 0"
 \end_layout
 
 \begin_layout Section*
-Símbolos griegos
+Símbols grecs
 \end_layout
 
 \begin_layout Standard
@@ -1547,7 +1320,7 @@ Símbolos griegos
 \begin_inset Text
 
 \begin_layout Plain Layout
- Símbolo 
+Símbol
 \end_layout
 
 \end_inset
@@ -1556,7 +1329,7 @@ Símbolos griegos
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -1565,7 +1338,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
- Símbolo
+Símbol
 \end_layout
 
 \end_inset
@@ -1574,7 +1347,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -1583,7 +1356,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Símbolo
+Símbol
 \end_layout
 
 \end_inset
@@ -1592,7 +1365,7 @@ Símbolo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -1603,7 +1376,6 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
- 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -1684,7 +1456,6 @@ arg   "math-insert \\Delta"
 \begin_inset Text
 
 \begin_layout Plain Layout
- 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -1765,7 +1536,6 @@ arg   "math-insert \\varepsilon"
 \begin_inset Text
 
 \begin_layout Plain Layout
- 
 \begin_inset Formula $\chi$
 \end_inset
 
@@ -2649,7 +2419,7 @@ arg   "math-insert \\Psi"
 \end_layout
 
 \begin_layout Section*
-Símbolos matemáticos
+Símbols matemàtics
 \end_layout
 
 \begin_layout Standard
@@ -2667,7 +2437,7 @@ Símbolos matemáticos
 \begin_inset Text
 
 \begin_layout Plain Layout
- Símbolo 
+Símbol
 \end_layout
 
 \end_inset
@@ -2676,7 +2446,7 @@ Símbolos matemáticos
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -2685,7 +2455,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
- Símbolo
+Símbol
 \end_layout
 
 \end_inset
@@ -2694,7 +2464,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -2703,7 +2473,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Símbolo
+Símbol
 \end_layout
 
 \end_inset
@@ -2712,7 +2482,7 @@ Símbolo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -2723,7 +2493,7 @@ Atajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Modo matemático
+Matemàtiques
 \end_layout
 
 \end_inset
@@ -2800,7 +2570,7 @@ arg   "math-insert \\bar"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ecuación presentada
+Presentació
 \end_layout
 
 \end_inset
@@ -2877,7 +2647,6 @@ arg   "math-insert \\dot"
 \begin_inset Text
 
 \begin_layout Plain Layout
- 
 \begin_inset Formula $\sum$
 \end_inset
 
@@ -3841,7 +3610,7 @@ arg   "math-insert \\superseteq"
 \end_layout
 
 \begin_layout Section*
-Delimitadores
+Delimitadors
 \end_layout
 
 \begin_layout Standard
@@ -3849,11 +3618,11 @@ Delimitadores
 <lyxtabular version="3" rows="3" columns="6">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
-<column alignment="left" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
-<column alignment="left" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
-<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -3868,7 +3637,7 @@ Delimitador
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -3886,7 +3655,7 @@ Delimitador
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -3904,7 +3673,7 @@ Delimitador
 \begin_inset Text
 
 \begin_layout Plain Layout
-Atajo
+Drecera
 \end_layout
 
 \end_inset
@@ -3995,7 +3764,6 @@ arg   "math-delim rangle langle"
 \begin_inset Text
 
 \begin_layout Plain Layout
- 
 \begin_inset Formula $\left[\,\right]$
 \end_inset
 
