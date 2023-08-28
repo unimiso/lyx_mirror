@@ -414,7 +414,8 @@ EOF1
 QMAKE_EXTRA_VARIABLES = MISSING
 qtHaveModule(core)		{QT += core} else {MISSING += core}
 qtHaveModule(concurrent)	{QT += concurrent} else {MISSING += concurrent}
-qtHaveModule(gui)		{QT += gui gui-private} else {MISSING += gui}
+qtHaveModule(gui)		{QT += gui} else {MISSING += gui}
+qtHaveModule(gui-private)	{QT += gui-private} else {MISSING += gui-private}
 qtHaveModule(svg)		{QT += svg} else {MISSING += svg}
 qtHaveModule(svgwidgets)	{QT += svgwidgets} else {MISSING += svgwidgets}
 qtHaveModule(widgets)		{QT += widgets} else {MISSING += widgets}
