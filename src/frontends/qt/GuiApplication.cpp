@@ -3495,7 +3495,7 @@ bool GuiApplication::longOperationStarted() {
 
 #if defined(QPA_XCB)
 bool GuiApplication::nativeEventFilter(const QByteArray & eventType,
-				       void * message, long *)
+				       void * message, QINTPTR *)
 {
 	if (!current_view_ || eventType != "xcb_generic_event_t")
 		return false;

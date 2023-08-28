@@ -121,8 +121,13 @@ public:
 	bool notify(QObject * receiver, QEvent * event) override;
 	void commitData(QSessionManager & sm);
 #if defined(QPA_XCB)
+#if (QT_VERSION < 0x060000)
+#define QINTPTR long
+#else
+#define QINTPTR qintptr
+#endif
 	virtual bool nativeEventFilter(const QByteArray & eventType, void * message,
-	                               long * result) override;
+	                               QINTPTR * result) override;
 #endif
 	//@}
 
