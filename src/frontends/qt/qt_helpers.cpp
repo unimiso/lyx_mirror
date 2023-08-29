@@ -33,9 +33,12 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QLineEdit>
+#include <QMessageBox>
 #include <QLocale>
 #include <QPalette>
+#include <QPushButton>
 #include <QSet>
+#include <QSettings>
 #include <QTextLayout>
 #include <QTextDocument>
 #include <QToolTip>
@@ -292,9 +295,44 @@ void showDirectory(FileName const & directory)
 				qstring_to_ucs4(qurl.toString())));
 }
 
-void showTarget(string const & target, string const & pdfv, string const & psv)
+void showTarget(string const & target, string const & docpath,
+		string const & pdfv, string const & psv)
 {
 	LYXERR(Debug::INSETS, "Showtarget:" << target << "\n");
+
+	// security measure: ask user before opening if document is not marked trusted.
+	QSettings settings;
+	if (!settings.value("trusted documents/" + toqstr(docpath), false).toBool()) {
+		QCheckBox * dontShowAgainCB = new QCheckBox();
+		dontShowAgainCB->setText(qt_("&Trust this document and do not ask me again!"));
+		dontShowAgainCB->setToolTip(qt_("If you check this, LyX will open all targets without asking for the given document in the future."));
+		docstring const warn =
+			prefixIs(target, "EXTERNAL ") ?
+					bformat(_("LyX will search your directory for files with the following keywords in their name "
+						  "and then open it in an external application, if a file is found:\n"
+						  "'%1$s'\n"
+						  "Be aware that this might entail security infringements!\n"
+						  "Only do this if you trust origin of the document and the keywords used!\n"
+						  "How do you want to proceed?"), from_utf8(target).substr(9, docstring::npos))
+				      : bformat(_("LyX wants to open the following link in an external application:\n"
+						  "%1$s\n"
+						  "Be aware that this might entail security infringements!\n"
+						  "Only do this if you trust origin of the document and the target of the link!\n"
+						  "How do you want to proceed?"), from_utf8(target));
+		QMessageBox box(QMessageBox::Warning, qt_("Open external target?"), toqstr(warn),
+				QMessageBox::NoButton, qApp->focusWidget());
+		QPushButton * openButton = box.addButton(qt_("&Open Target"), QMessageBox::ActionRole);
+		box.addButton(QMessageBox::Abort);
+		box.setCheckBox(dontShowAgainCB);
+		box.setDefaultButton(QMessageBox::Abort);
+		box.exec();
+		if (box.clickedButton() != openButton)
+			return;
+		if (dontShowAgainCB->isChecked())
+			settings.setValue("trusted documents/"
+				+ toqstr(docpath), true);
+	}
+	
 	if (prefixIs(target, "EXTERNAL ")) {
 		if (!lyxrc.citation_search)
 			return;

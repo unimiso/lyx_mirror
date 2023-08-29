@@ -93,8 +93,10 @@ void setMessageColour(std::list<QWidget *> highlighted,
 void showDirectory(support::FileName const & directory);
 /// handle request for showing citation content - shows pdf/ps or
 /// web page in target; external script can be used for pdf/ps view
+/// \p docpath holds the document path,
 /// \p pdfv takes a pad viewer, \p psv a ps viewer
 void showTarget(std::string const & target,
+		std::string const & docpath,
 		std::string const & pdfv,
 		std::string const & psv);
 

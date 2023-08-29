@@ -5071,12 +5071,13 @@ void GuiView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 			break;
 
 		case LFUN_CITATION_OPEN: {
+			LASSERT(doc_buffer, break);
 			string pdfv, psv;
 			if (theFormats().getFormat("pdf"))
 				pdfv = theFormats().getFormat("pdf")->viewer();
 			if (theFormats().getFormat("ps"))
 				psv = theFormats().getFormat("ps")->viewer();
-			frontend::showTarget(argument, pdfv, psv);
+			frontend::showTarget(argument, doc_buffer->absFileName(), pdfv, psv);
 			break;
 		}
 
