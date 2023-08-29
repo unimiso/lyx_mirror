@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -63,6 +63,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Stichwortverzeichnis
@@ -106,7 +107,7 @@ vom \SpecialChar LyX
 
 \begin_layout Standard
 \noindent
-Diese Datei listet die derzeit definierten Tastenkürzel der Tastenkürzeldatei 
+Diese Datei listet die wichtigsten der derzeit definierten Tastenkürzel der Tastenkürzeldatei 
 \family sans
 cua
 \family default
@@ -130,7 +131,7 @@ Tastenkürzel
  des Benutzerhandbuchs beschrieben ist.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Speicher
 \end_layout
 
@@ -491,7 +492,7 @@ arg   "buffer-previous"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Editieren
 \end_layout
 
@@ -1215,7 +1216,7 @@ arg   "bookmark-goto 0"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Griechische Symbole
 \end_layout
 
@@ -2335,7 +2336,7 @@ arg   "math-insert \\Psi"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Mathematische Symbole
 \end_layout
 
@@ -3528,7 +3529,7 @@ arg   "math-insert \\superseteq"
 \end_layout
 
 \begin_layout Section*
-Delimiters
+Trennzeichen
 \end_layout
 
 \begin_layout Standard
@@ -3546,7 +3547,7 @@ Delimiters
 \begin_inset Text
 
 \begin_layout Plain Layout
-Delimiter
+Trennzeichen
 \end_layout
 
 \end_inset
@@ -3564,7 +3565,7 @@ Tastenkürzel
 \begin_inset Text
 
 \begin_layout Plain Layout
-Delimiter
+Trennzeichen
 \end_layout
 
 \end_inset
@@ -3582,7 +3583,7 @@ Tastenkürzel
 \begin_inset Text
 
 \begin_layout Plain Layout
-Delimiter
+Trennzeichen
 \end_layout
 
 \end_inset
