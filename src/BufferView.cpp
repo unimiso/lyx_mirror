@@ -2651,7 +2651,7 @@ void BufferView::mouseEventDispatch(FuncRequest const & cmd0)
 	// Put anchor at the same position.
 	cur.resetAnchor();
 
-	cur.beginUndoGroup();
+	old.beginUndoGroup();
 
 	// Try to dispatch to an non-editable inset near this position
 	// via the temp cursor. If the inset wishes to change the real
@@ -2673,7 +2673,7 @@ void BufferView::mouseEventDispatch(FuncRequest const & cmd0)
 			cursor().fixIfBroken();
 	}
 
-	cur.endUndoGroup();
+	old.endUndoGroup();
 
 	// Do we have a selection?
 	theSelection().haveSelection(cursor().selection());
