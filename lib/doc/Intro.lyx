@@ -1140,7 +1140,7 @@ Some of you may have printed out the manuals.
  which looks like this:
  
 \begin_inset Graphics
-	filename /home/paf/lyx/devel/lib/doc/clipart/footnote.png
+	filename clipart/footnote.png
 	scale 95
 
 \end_inset
@@ -1169,7 +1169,7 @@ In the printed manuals,
  all cross-references appear as light-grey boxes like the following:
  
 \begin_inset Graphics
-	filename /home/paf/lyx/devel/lib/doc/clipart/reference.png
+	filename clipart/reference.png
 	scale 95
 
 \end_inset
