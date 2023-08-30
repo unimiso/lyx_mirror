@@ -2648,7 +2648,7 @@ bool Text::changeDepthAllowed(Cursor const & cur, DEPTH_CHANGE type) const
 }
 
 
-void Text::changeDepth(Cursor const & cur, DEPTH_CHANGE type)
+void Text::changeDepth(Cursor & cur, DEPTH_CHANGE type)
 {
 	LBUFERR(this == cur.text());
 	pit_type const beg = cur.selBegin().pit();
@@ -2667,6 +2667,7 @@ void Text::changeDepth(Cursor const & cur, DEPTH_CHANGE type)
 		}
 		max_depth = par.getMaxDepthAfter();
 	}
+	cur.setCurrentFont();
 	// this handles the counter labels, and also fixes up
 	// depth values for follow-on (child) paragraphs
 	cur.forceBufferUpdate();

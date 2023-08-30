@@ -94,7 +94,7 @@ public:
 	};
 	/// Increase or decrease the nesting depth of the selected paragraph(s)
 	/// FIXME: replace Cursor with DocIterator.
-	void changeDepth(Cursor const & cur, DEPTH_CHANGE type);
+	void changeDepth(Cursor & cur, DEPTH_CHANGE type);
 
 	/// Returns whether something would be changed by changeDepth
 	/// FIXME: replace Cursor with DocIterator.
