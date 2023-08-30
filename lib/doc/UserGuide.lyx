@@ -10225,12 +10225,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10243,6 +10245,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10266,6 +10269,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -37126,7 +37130,7 @@ name
 
 \begin_layout Standard
 
-\change_inserted -712698321 1598527586
+\change_inserted -712698321 1693402434
 The pattern syntax uses specific keywords.
  These are basically Bib\SpecialChar TeX
  fields (such as 
@@ -37170,6 +37174,39 @@ Customization manual
 Cite format description
 \emph default
 .
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -712698321 1693402437
+Security implications
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1693402479
+Note that any document (or mainly 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1693402454
+.bib
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ file in this case) coming from a third party might contain malicious links or otherwise malformed URLs and we suggest you do not use this feature for other documents than those you prepared yourself.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1693402467
+For that reason the searching on disk is disabled by default and you will be asked for confirmation of viewing all the links (both can be bypassed,
+ but beware what you are doing).
 \change_unchanged
 
 \end_layout

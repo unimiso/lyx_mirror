@@ -9302,10 +9302,12 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim
+
 Dies ist Unformatiert.
 \end_layout
 
 \begin_layout Verbatim
+
 Die folgenden 2 Zeilen sind leer:
 \end_layout
 
@@ -9318,6 +9320,7 @@ Die folgenden 2 Zeilen sind leer:
 \end_layout
 
 \begin_layout Verbatim
+
 Fast alles ist in Unformatiert erlaubt:"%&$§#~'`
 \backslash
 }][{|
@@ -9343,6 +9346,7 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim*
+
 Dies ist Unformatiert*.
 \end_layout
 
@@ -33609,6 +33613,37 @@ status collapsed
 Beschreibung des Literaturverweisformats
 \emph default
 ).
+\end_layout
+
+\begin_layout Subsubsection
+Sicherheitsbedenken
+\end_layout
+
+\begin_layout Standard
+Bitte beachten Sie unbedingt,
+ dass Dokumente (vor allem 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+.bib
+\end_layout
+
+\end_inset
+
+-Dateien in diesem Fall),
+ die von dritten Personen kommen,
+ bösartige Links oder anderweitig korrupte URLs enthalten können.
+ Wir empfehlen Ihnen daher,
+ das hier beschriebene Feature nur für Dokumente zu verwenden,
+ die Sie selbst erstellt haben.
+\end_layout
+
+\begin_layout Standard
+Aus diesem Grund ist die Suche nach Dateien auf der Festplatte auch per Voreinstellung deaktiviert,
+ und wenn Sie Links zu öffnen versuchen,
+ werden Sie jedes Mal um Bestätigung gefragt (das können Sie abschalten,
+ aber tun Sie dies nicht unbedacht!).
 \end_layout
 
 \begin_layout Section

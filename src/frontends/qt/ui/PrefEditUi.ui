@@ -113,7 +113,7 @@
         <item>
          <widget class="QCheckBox" name="citationSearchCB">
           <property name="toolTip">
-           <string>If this is activated, LyX will search your disk for matching files when clicking on &quot;Try to Open Citation Content...&quot; in the citation context menu</string>
+           <string>If this is activated, LyX will search your disk for matching files when clicking on &quot;Try to Open Citation Content...&quot; in the citation context menu. Note the security implications described in User Guide, 6.6.4.</string>
           </property>
           <property name="statusTip">
            <string/>
