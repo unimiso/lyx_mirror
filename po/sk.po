@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-26 14:28+0200\n"
-"PO-Revision-Date: 2023-08-26 12:35+0000\n"
+"POT-Creation-Date: 2023-08-30 19:39+0200\n"
+"PO-Revision-Date: 2023-08-30 18:12+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -4249,10 +4249,12 @@ msgstr "Kurzor &sleduje posuvník"
 #: src/frontends/qt/ui/PrefEditUi.ui:116
 msgid ""
 "If this is activated, LyX will search your disk for matching files when "
-"clicking on \"Try to Open Citation Content...\" in the citation context menu"
+"clicking on \"Try to Open Citation Content...\" in the citation context "
+"menu. Note the security implications described in User Guide, 6.6.4."
 msgstr ""
 "Keď aktivované, LyX bude hľadať vhodné súbory vo vašom disku pri kliknutí na "
-"\"Skús otvoriť obsah citácie…\" v menu kontextu citácie"
+"\"Skús otvoriť obsah citácie…\" v menu kontextu citácie. Všimnite si "
+"bezpečnostné dôsledky opísané v užívateľskej príručke, 6.6.4."
 
 #: src/frontends/qt/ui/PrefEditUi.ui:119
 msgid "Search &drive for cited files"
@@ -36127,6 +36129,50 @@ msgstr "Skript 'lyxpaperview' zlyhal."
 msgid "No file was found using the pattern `%1$s'."
 msgstr "Nenašiel sa žiadny súbor zodpovedajúci vzoru `%1$s'."
 
+#: src/frontends/qt/qt_helpers.cpp:335
+msgid "Multiple files found!"
+msgstr "Nájdených viacero súborov!"
+
+#: src/frontends/qt/qt_helpers.cpp:336
+msgid "Select the file that should be opened:"
+msgstr "Vyberte súbor, ktorý sa má otvoriť:"
+
+#: src/frontends/qt/qt_helpers.cpp:348
+msgid "&Trust this document and do not ask me again!"
+msgstr "Dôverujte tomuto dokumentu a viac sa na to nepýtajte!"
+
+#: src/frontends/qt/qt_helpers.cpp:349
+msgid ""
+"If you check this, LyX will open all targets without asking for the given "
+"document in the future."
+msgstr ""
+"Ak toto zaškrtnete, LyX v budúcnosti otvorí všetky ciele bez toho, aby si to "
+"pre daný dokument vyžadoval."
+
+#: src/frontends/qt/qt_helpers.cpp:350
+#, c-format
+msgid ""
+"LyX wants to open the following target in an external application:\n"
+"%1$s\n"
+"Be aware that this might entail security infringements!\n"
+"Only do this if you trust origin of the document and the target of the "
+"link!\n"
+"How do you want to proceed?"
+msgstr ""
+"LyX chce otvoriť nasledujúci cieľ v externej aplikácii:\n"
+"%1$s\n"
+"Majte na pamäti, že to môže viesť k narušeniu bezpečnosti!\n"
+"Urobte to len vtedy, ak dôverujete pôvodu dokumentu a cieľu odkazu!\n"
+"Ako chcete pokračovať?"
+
+#: src/frontends/qt/qt_helpers.cpp:355
+msgid "Open external target?"
+msgstr "Otvoriť externý cieľ?"
+
+#: src/frontends/qt/qt_helpers.cpp:357
+msgid "&Open Target"
+msgstr "&Otvoriť Cieľ"
+
 #: src/frontends/qt/qt_helpers.cpp:322
 #, c-format
 msgid "The target `%1$s' could not be resolved."
@@ -43997,3 +44043,10 @@ msgstr "Neznámy používateľ"
 
 #~ msgid "End Editing Externally..."
 #~ msgstr "Externú úpravu dokončiť…"
+
+#~ msgid ""
+#~ "If this is activated, LyX will search your disk for matching files when "
+#~ "clicking on \"Try to Open Citation Content...\" in the citation context menu"
+#~ msgstr ""
+#~ "Keď aktivované, LyX bude hľadať vhodné súbory vo vašom disku pri kliknutí na "
+#~ "\"Skús otvoriť obsah citácie…\" v menu kontextu citácie"
