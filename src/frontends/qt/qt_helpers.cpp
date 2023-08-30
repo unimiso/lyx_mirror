@@ -14,6 +14,7 @@
 
 #include "qt_helpers.h"
 
+#include "Format.h"
 #include "LengthCombo.h"
 #include "LyXRC.h"
 
@@ -32,6 +33,7 @@
 #include <QComboBox>
 #include <QDesktopServices>
 #include <QDir>
+#include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QLocale>
@@ -295,30 +297,61 @@ void showDirectory(FileName const & directory)
 				qstring_to_ucs4(qurl.toString())));
 }
 
-void showTarget(string const & target, string const & docpath,
-		string const & pdfv, string const & psv)
+void showTarget(string const & target_in, Buffer const & buf)
 {
-	LYXERR(Debug::INSETS, "Showtarget:" << target << "\n");
+	LYXERR(Debug::INSETS, "Showtarget:" << target_in << "\n");
 
+	string target = target_in;
+	string const & docpath = buf.absFileName();
+
+	bool const is_external = prefixIs(target, "EXTERNAL ");
+	if (is_external) {
+		if (!lyxrc.citation_search)
+			return;
+		string tmp, tar;
+		tar = split(target, tmp, ' ');
+		string const scriptcmd = subst(lyxrc.citation_search_view, "$${python}", os::python());
+		string const command = scriptcmd + " " + tar;
+		cmd_ret const ret = runCommand(commandPrep(command));
+		if (!ret.valid) {
+			// Script failed
+			frontend::Alert::error(_("Could not open file"),
+				_("The lyxpaperview script failed."));
+			return;
+		}
+		// lyxpaperview returns a \n-separated list of paths
+		vector<string> targets = getVectorFromString(rtrim(ret.result, "\n"), "\n");
+		if (targets.empty()) {
+			frontend::Alert::error(_("Could not open file"),
+				bformat(_("No file was found using the pattern `%1$s'."),
+					from_utf8(tar)));
+			return;
+		}
+		if (targets.size() > 1) {
+			QStringList files;
+			for (auto const & t : targets)
+				files << toqstr(t);
+			bool ok;
+			QString file = QInputDialog::getItem(nullptr, qt_("Multiple files found!"),
+							     qt_("Select the file that should be opened:"),
+							     files, 0, false, &ok);
+			if (!ok || file.isEmpty())
+				return;
+			target = fromqstr(file);
+		} else
+			target = targets.front();
+	}
 	// security measure: ask user before opening if document is not marked trusted.
 	QSettings settings;
 	if (!settings.value("trusted documents/" + toqstr(docpath), false).toBool()) {
 		QCheckBox * dontShowAgainCB = new QCheckBox();
 		dontShowAgainCB->setText(qt_("&Trust this document and do not ask me again!"));
 		dontShowAgainCB->setToolTip(qt_("If you check this, LyX will open all targets without asking for the given document in the future."));
-		docstring const warn =
-			prefixIs(target, "EXTERNAL ") ?
-					bformat(_("LyX will search your directory for files with the following keywords in their name "
-						  "and then open it in an external application, if a file is found:\n"
-						  "'%1$s'\n"
-						  "Be aware that this might entail security infringements!\n"
-						  "Only do this if you trust origin of the document and the keywords used!\n"
-						  "How do you want to proceed?"), from_utf8(target).substr(9, docstring::npos))
-				      : bformat(_("LyX wants to open the following link in an external application:\n"
-						  "%1$s\n"
-						  "Be aware that this might entail security infringements!\n"
-						  "Only do this if you trust origin of the document and the target of the link!\n"
-						  "How do you want to proceed?"), from_utf8(target));
+		docstring const warn = bformat(_("LyX wants to open the following target in an external application:\n"
+						 "%1$s\n"
+						 "Be aware that this might entail security infringements!\n"
+						 "Only do this if you trust origin of the document and the target of the link!\n"
+						 "How do you want to proceed?"), from_utf8(target));
 		QMessageBox box(QMessageBox::Warning, qt_("Open external target?"), toqstr(warn),
 				QMessageBox::NoButton, qApp->focusWidget());
 		QPushButton * openButton = box.addButton(qt_("&Open Target"), QMessageBox::ActionRole);
@@ -332,33 +365,23 @@ void showTarget(string const & target, string const & docpath,
 			settings.setValue("trusted documents/"
 				+ toqstr(docpath), true);
 	}
-	
-	if (prefixIs(target, "EXTERNAL ")) {
-		if (!lyxrc.citation_search)
-			return;
-		string tmp, tar, opts;
-		tar = split(target, tmp, ' ');
-		if (!pdfv.empty())
-			opts = " -v \"" + pdfv + "\"";
-		if (!psv.empty())
-			opts += " -w \"" + psv + "\"";
-		if (!opts.empty())
-			opts += " ";
-		Systemcall one;
-		string const viewer = subst(lyxrc.citation_search_view, "$${python}", os::python());
-		string const command = viewer + " " + opts + tar;
-		int const result = one.startscript(Systemcall::Wait, command);
-		if (result == 1)
-			// Script failed
-			frontend::Alert::error(_("Could not open file"),
-				_("The lyxpaperview script failed."));
-		else if (result == 2)
-			frontend::Alert::error(_("Could not open file"),
-				bformat(_("No file was found using the pattern `%1$s'."),
-					from_utf8(tar)));
-		return;
-	}
-	if (!QDesktopServices::openUrl(QUrl(toqstr(target), QUrl::TolerantMode)))
+
+	bool success = false;
+	QUrl url = is_external
+		? QUrl::fromLocalFile(toqstr(target))
+		: QUrl(toqstr(target), QUrl::TolerantMode);
+	if (url.isLocalFile()) {
+		// For local files, we use our own viewers
+		// (QDesktopServices employs xdg-open which
+		// does not yet work everywhere)
+		FileName fn(fromqstr(url.path()));
+		string const format = theFormats().getFormatFromFile(fn);
+		success = theFormats().view(buf, fn, format);
+	} else
+		// For external files, we rely on QDesktopServices
+		success =  QDesktopServices::openUrl(url);
+
+	if (!success)
 		frontend::Alert::error(_("Could not open file"),
 			bformat(_("The target `%1$s' could not be resolved."),
 				from_utf8(target)));

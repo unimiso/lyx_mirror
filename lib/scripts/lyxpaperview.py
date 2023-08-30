@@ -10,19 +10,10 @@
 # Full author contact details are available in file CREDITS
 
 # This script searches the home directory for a PDF or PS
-# file with a name containing year and author. If found,
-# it opens the file in a viewer. 
+# file with a name containing specific keywords (year and author by default).
+# If found, it returns the path(s), separated by \n.
 
-import getopt, os, sys, subprocess
-
-pdf_viewers = ('pdfview', 'kpdf', 'okular', 'qpdfview --unique',
-               'evince', 'xreader', 'kghostview', 'xpdf', 'SumatraPDF',
-               'acrobat', 'acroread', 'mupdf',
-               'gv', 'ghostview', 'AcroRd32', 'gsview64', 'gsview32')
-
-ps_viewers = ("kghostview", "okular", "qpdfview --unique",
-              "evince", "xreader", "gv", "ghostview -swap",
-              "gsview64", "gsview32")
+import os, sys, subprocess
 
 def message(message):
     sys.stderr.write("lyxpaperview: %s\n" % message)
@@ -32,7 +23,7 @@ def error(message):
     exit(1)
 
 def usage(prog_name):
-    msg = "Usage: %s [-v pdfviewer] [-w psviewer] titletoken-1 [titletoken-2] ... [titletoken-n]\n" \
+    msg = "Usage: %s titletoken-1 [titletoken-2] ... [titletoken-n]\n" \
           "    Each title token must occur in the filename (at an arbitrary position).\n" \
           "    You might use quotes to enter multi-word tokens"
     return  msg % prog_name
@@ -66,13 +57,6 @@ def find_exe(candidates):
     return None
 
 
-def find_exe_or_terminate(candidates):
-    exe = find_exe(candidates)
-    if exe == None:
-        error("Unable to find executable from '%s'" % " ".join(candidates))
-
-    return exe
-
 def find(args, path):
     if os.name != 'nt':
         # use locate if possible (faster)
@@ -84,10 +68,9 @@ def find(args, path):
                    # have this already
                    continue
                px = subprocess.Popen(['grep', '-i', arg], stdin=px.stdout, stdout=subprocess.PIPE)
-            p4 = subprocess.Popen(['head', '-n 1'], stdin=px.stdout, stdout=subprocess.PIPE)
             p1.stdout.close()
-            output = p4.communicate()
-            return output[0].decode("utf8")[:-1]# strip trailing '\n'
+            output = px.communicate()
+            return output[0].decode("utf8").strip('\n')
      # FIXME add something for windows as well?
      # Maybe dir /s /b %WINDIR%\*author* | findstr .*year.*\."ps pdf"
 
@@ -107,44 +90,14 @@ def find(args, path):
 def main(argv):
     progname = argv[0]
     
-    opts, args = getopt.getopt(sys.argv[1:], "v:w:")
-    pdfviewer = ""
-    psviewer = ""
-    for o, v in opts:
-      if o == "-v":
-        pdfviewer = v
-      if o == "-w":
-        psviewer = v
+    args = sys.argv[1:]
     
     if len(args) < 1:
       error(usage(progname))
 
     result = find(args, path = os.environ["HOME"])
-    if result == "":
-        message("no document found!")
-        exit(2)
-    else:
-        message("found document %s" % result)
-
-    viewer = ""
-    if result.lower().endswith('.ps'):
-        if psviewer == "":
-            viewer = find_exe_or_terminate(ps_viewers)
-        else:
-            viewer = psviewer
-    else:
-        if pdfviewer == "":
-           viewer = find_exe_or_terminate(pdf_viewers)
-        else:
-            viewer = pdfviewer
-    
-    cmdline = viewer.split(" -", 1)
-
-    if len(cmdline) == 1:
-        subprocess.Popen([viewer, result], stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-    elif len(cmdline) == 2:
-        subprocess.Popen([cmdline[0], "-" + cmdline[1] , result], stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-    
+     
+    print(result)
     exit(0)
 
 if __name__ == "__main__":
