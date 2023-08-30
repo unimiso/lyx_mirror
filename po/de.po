@@ -94,8 +94,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-26 12:06+0200\n"
-"PO-Revision-Date: 2023-08-26 12:07+0200\n"
+"POT-Creation-Date: 2023-08-30 15:41+0200\n"
+"PO-Revision-Date: 2023-08-30 15:48+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -4387,11 +4387,14 @@ msgstr "Cursor folgt Sc&rollbar"
 #: src/frontends/qt/ui/PrefEditUi.ui:116
 msgid ""
 "If this is activated, LyX will search your disk for matching files when "
-"clicking on \"Try to Open Citation Content...\" in the citation context menu"
+"clicking on \"Try to Open Citation Content...\" in the citation context "
+"menu. Note the security implications described in User Guide, 6.6.4."
 msgstr ""
 "Wenn dies aktiviert ist sucht LyX auf Ihrer Festplatte nach passenden "
 "Dateien, wenn Sie \"Versuche Literaturverweis-Inhalt zu öffnen...\" im "
-"Kontextmenü eines Literaturverweises anklicken."
+"Kontextmenü eines Literaturverweises anklicken. "
+"Bitte beachten Sie die Sicherheitshinweise im Benutzerhandbuch, Abschnitt"
+" 6.6.4."
 
 #: src/frontends/qt/ui/PrefEditUi.ui:122
 msgid "Search &drive for cited files"
@@ -20371,7 +20374,7 @@ msgid "Copy as Reference|R"
 msgstr "Als Querverweis kopieren|k"
 
 #: lib/ui/stdcontext.inc:61 lib/ui/stdcontext.inc:376 lib/ui/stdmenus.inc:108
-#: lib/ui/stdtoolbars.inc:89 src/Text.cpp:4938 src/mathed/InsetMathNest.cpp:570
+#: lib/ui/stdtoolbars.inc:89 src/Text.cpp:4939 src/mathed/InsetMathNest.cpp:570
 msgid "Cut"
 msgstr "Ausschneiden"
 
@@ -20381,7 +20384,7 @@ msgid "Copy"
 msgstr "Kopieren"
 
 #: lib/ui/stdcontext.inc:63 lib/ui/stdcontext.inc:378 lib/ui/stdmenus.inc:110
-#: lib/ui/stdtoolbars.inc:91 src/Text.cpp:4883
+#: lib/ui/stdtoolbars.inc:91 src/Text.cpp:4884
 #: src/frontends/qt/GuiToolbar.cpp:464 src/mathed/InsetMathGrid.cpp:1566
 #: src/mathed/InsetMathNest.cpp:539
 msgid "Paste"
@@ -29248,8 +29251,8 @@ msgstr ""
 "%1$s\n"
 "ist nicht lesbar."
 
-#: src/BufferView.cpp:3723 src/frontends/qt/qt_helpers.cpp:315
-#: src/frontends/qt/qt_helpers.cpp:318 src/frontends/qt/qt_helpers.cpp:324
+#: src/BufferView.cpp:3723 src/frontends/qt/qt_helpers.cpp:318
+#: src/frontends/qt/qt_helpers.cpp:325 src/frontends/qt/qt_helpers.cpp:385
 #: src/output.cpp:39
 msgid "Could not open file"
 msgstr "Die Datei konnte nicht geöffnet werden"
@@ -31494,31 +31497,31 @@ msgstr ", Zeichen: 0x"
 msgid ", Boundary: "
 msgstr ", Grenze: "
 
-#: src/Text.cpp:2824
+#: src/Text.cpp:2825
 msgid "No font change defined."
 msgstr "Keine Schriftänderung definiert."
 
-#: src/Text.cpp:3530
+#: src/Text.cpp:3531
 msgid "Math editor mode"
 msgstr "Mathe-Editor-Modus"
 
-#: src/Text.cpp:3532
+#: src/Text.cpp:3533
 msgid "No valid math formula"
 msgstr "Keine gültige Matheformel"
 
-#: src/Text.cpp:3540 src/mathed/InsetMathNest.cpp:1047
+#: src/Text.cpp:3541 src/mathed/InsetMathNest.cpp:1047
 msgid "Already in regular expression mode"
 msgstr "Bereits im Regexp-Modus"
 
-#: src/Text.cpp:3553
+#: src/Text.cpp:3554
 msgid "Regexp editor mode"
 msgstr "Regexp-Editor-Modus"
 
-#: src/Text.cpp:3924
+#: src/Text.cpp:3925
 msgid "Action flattens document structure"
 msgstr "Vorgang flacht die Dokumentstruktur ab"
 
-#: src/Text.cpp:3925
+#: src/Text.cpp:3926
 msgid ""
 "This action will cause some headings that have been on different level "
 "before to be on the same level since there is no more lower or higher "
@@ -31529,48 +31532,48 @@ msgstr ""
 "Unterparagraph), auf derselben Stufe sein, da das Ende der Hierarchieskala "
 "nach oben oder unten erreicht ist. Trotzdem fortfahren?"
 
-#: src/Text.cpp:3930
+#: src/Text.cpp:3931
 msgid "&Yes, continue nonetheless"
 msgstr "&Ja, trotzdem fortfahren"
 
-#: src/Text.cpp:3931
+#: src/Text.cpp:3932
 msgid "&No, quit operation"
 msgstr "&Nein, Vorgang abbrechen"
 
-#: src/Text.cpp:4972
+#: src/Text.cpp:4973
 msgid "Layout "
 msgstr "Format "
 
-#: src/Text.cpp:4973 src/Text.cpp:5554
+#: src/Text.cpp:4974 src/Text.cpp:5555
 msgid " not known"
 msgstr " unbekannt"
 
-#: src/Text.cpp:5553
+#: src/Text.cpp:5554
 msgid "Table Style "
 msgstr "Tabellenstil"
 
-#: src/Text.cpp:5746 src/frontends/qt/GuiApplication.cpp:1883
+#: src/Text.cpp:5747 src/frontends/qt/GuiApplication.cpp:1883
 msgid "Missing argument"
 msgstr "Fehlendes Argument"
 
-#: src/Text.cpp:5911
+#: src/Text.cpp:5912
 msgid "Invalid argument (number exceeds stack size)!"
 msgstr "Ungültiges Argument (Zahl größer als Zwischenspeicher)!"
 
-#: src/Text.cpp:5915
+#: src/Text.cpp:5916
 msgid "Invalid argument (must be a non-negative number)!"
 msgstr "Ungültiges Argument (muss eine nicht-negative Zahl sein)!"
 
-#: src/Text.cpp:5920 src/Text.cpp:5934
+#: src/Text.cpp:5921 src/Text.cpp:5935
 #, c-format
 msgid "Text properties applied: %1$s"
 msgstr "Angewendete Texteigenschaften: %1$s"
 
-#: src/Text.cpp:6093
+#: src/Text.cpp:6094
 msgid "Path to thesaurus directory not set!"
 msgstr "Pfad zum Thesaurus-Wörterbuch nicht festlegt!"
 
-#: src/Text.cpp:6094
+#: src/Text.cpp:6095
 msgid ""
 "The path to the thesaurus directory has not been specified.\n"
 "The thesaurus is not functional.\n"
@@ -31582,7 +31585,7 @@ msgstr ""
 "Im Benutzerhandbuch, Abschnitt 6.15.11, finden Sie Hinweise,\n"
 "um den Thesaurus einzurichten."
 
-#: src/Text.cpp:6220 src/Text.cpp:6231
+#: src/Text.cpp:6221 src/Text.cpp:6232
 msgid "Paragraph layout set"
 msgstr "Absatzformat festgelegt"
 
@@ -35728,7 +35731,7 @@ msgid "LyX Document Backups (*.lyx~)"
 msgstr "LyX-Dokument-Backups (*.lyx~)"
 
 #: src/frontends/qt/GuiView.cpp:2852 src/frontends/qt/GuiView.cpp:4602
-#: src/frontends/qt/qt_helpers.cpp:609
+#: src/frontends/qt/qt_helpers.cpp:670
 msgid "All Files"
 msgstr "Alle Dateien "
 
@@ -36231,7 +36234,7 @@ msgstr "Bitte geben Sie das Dokument zunächst aus."
 msgid "Couldn't proceed."
 msgstr "Konnte nicht fortfahren."
 
-#: src/frontends/qt/GuiView.cpp:5439
+#: src/frontends/qt/GuiView.cpp:5435
 msgid "Disable Shell Escape"
 msgstr "Erlaubnis zum Aufruf externer Programme widerrufen"
 
@@ -36602,43 +36605,88 @@ msgstr ""
 "LyX bietet keine LaTeX-Unterstützung für Dateinamen, die eines der folgenden "
 "Zeichen enthalten:\n"
 
-#: src/frontends/qt/qt_helpers.cpp:283
+#: src/frontends/qt/qt_helpers.cpp:288
 msgid "Invalid URL"
 msgstr "Ungültige URL"
 
-#: src/frontends/qt/qt_helpers.cpp:284
+#: src/frontends/qt/qt_helpers.cpp:289
 #, c-format
 msgid "The URL `%1$s' could not be resolved."
 msgstr "Die URL ,%1$s` konnte nicht aufgelöst werden."
 
-#: src/frontends/qt/qt_helpers.cpp:290
+#: src/frontends/qt/qt_helpers.cpp:295
 msgid "URL could not be accessed"
 msgstr "URL nicht zugänglich."
 
-#: src/frontends/qt/qt_helpers.cpp:291
+#: src/frontends/qt/qt_helpers.cpp:296
 #, c-format
 msgid "The URL `%1$s' could not be opened although it exists!"
 msgstr "Die URL ,%1$s` konnte nicht geöffnet werden, obwohl sie existiert!"
 
-#: src/frontends/qt/qt_helpers.cpp:316
+#: src/frontends/qt/qt_helpers.cpp:319
 msgid "The lyxpaperview script failed."
 msgstr "Das Skript lyxpaperview ist fehlgeschlagen."
 
-#: src/frontends/qt/qt_helpers.cpp:319
+#: src/frontends/qt/qt_helpers.cpp:326
 #, c-format
 msgid "No file was found using the pattern `%1$s'."
 msgstr "Mit dem Suchmuster ,%1$s` konnte keine Datei gefunden werden."
 
-#: src/frontends/qt/qt_helpers.cpp:325
+#: src/frontends/qt/qt_helpers.cpp:335
+msgid "Multiple files found!"
+msgstr "Mehrere Dateien gefunden!"
+
+#: src/frontends/qt/qt_helpers.cpp:336
+msgid "Select the file that should be opened:"
+msgstr "Wählen Sie die Datei, die geöffnet werden soll:"
+
+#: src/frontends/qt/qt_helpers.cpp:348
+msgid "&Trust this document and do not ask me again!"
+msgstr "Diesem Dokument &vertrauen und nicht noch einmal fragen!"
+
+#: src/frontends/qt/qt_helpers.cpp:349
+msgid ""
+"If you check this, LyX will open all targets without asking for the given "
+"document in the future."
+msgstr ""
+"Wenn Sie dies wählen, wird LyX alle Ziele in diesem Dokument zukünftig ohne"
+" zu fragen öffnen."
+
+#: src/frontends/qt/qt_helpers.cpp:350
+#, c-format
+msgid ""
+"LyX wants to open the following target in an external application:\n"
+"%1$s\n"
+"Be aware that this might entail security infringements!\n"
+"Only do this if you trust origin of the document and the target of the "
+"link!\n"
+"How do you want to proceed?"
+msgstr ""
+"LyX möchte das folgende Ziel in einem externen Programm öffnen:\n"
+"%1$s\n"
+"Bedenken Sie, dass dies ein Sicherheitsrisiko sein kann!\n"
+"Tun Sie das nur, wenn Sie der Quelle des Dokuments und dem Ziel des Links"
+" vertrauen!\n"
+"Wie möchten Sie fortfahren?"
+
+#: src/frontends/qt/qt_helpers.cpp:355
+msgid "Open external target?"
+msgstr "Externes Ziel öffnen?"
+
+#: src/frontends/qt/qt_helpers.cpp:357
+msgid "&Open Target"
+msgstr "Verweis&ziel öffnen"
+
+#: src/frontends/qt/qt_helpers.cpp:386
 #, c-format
 msgid "The target `%1$s' could not be resolved."
 msgstr "Das Verweisziel ,%1$s` konnte nicht aufgelöst werden."
 
-#: src/frontends/qt/qt_helpers.cpp:361
+#: src/frontends/qt/qt_helpers.cpp:422
 msgid "Could not update TeX information"
 msgstr "Die TeX-Informationen konnten nicht aktualisiert werden"
 
-#: src/frontends/qt/qt_helpers.cpp:362
+#: src/frontends/qt/qt_helpers.cpp:423
 #, c-format
 msgid "The script `%1$s' failed."
 msgstr "Das Skript ,%1$s` ist fehlgeschlagen."
