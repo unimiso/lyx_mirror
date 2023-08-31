@@ -262,4 +262,13 @@ extern LyXErr lyxerr;
 	} while (0)
 
 
+/** Helper debug macro for quick and dirty logging. For example
+ *   int var = 2;
+ *   LYXERR0(_v_(var) << _v_(var + 1));
+ * yields
+ *   var=2 var + 1=3
+ * Not a great typesetting, but it is handy in debugging sessions.
+ */
+#define _v_(var) #var"=" << var << " "
+
 #endif
