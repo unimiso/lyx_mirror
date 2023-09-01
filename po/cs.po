@@ -20,14 +20,12 @@ msgid "Version"
 msgstr "Verze"
 
 #: src/frontends/qt/ui/AboutUi.ui:141
-#, fuzzy
 msgid "System directory"
-msgstr "Žádný systémový adresář"
+msgstr "Systémový adresář"
 
 #: src/frontends/qt/ui/AboutUi.ui:153
-#, fuzzy
 msgid "Open system directory in file browser"
-msgstr "Otevřít uživatelský adresář v průzkumníku souborů"
+msgstr "Otevřít systémový adresář v průzkumníku souborů"
 
 #: src/frontends/qt/ui/AboutUi.ui:156
 msgid "[[do]]&Open"
@@ -2641,9 +2639,8 @@ msgstr ""
 "např. \"Věta 1\" namísto pouhé značky."
 
 #: src/frontends/qt/ui/LaTeXUi.ui:214
-#, fuzzy
 msgid "Format cross-references in the &work area"
-msgstr "Formátovat křížové odkazy v editačním okně"
+msgstr "Formátovat křížové odkazy v &editačním okně"
 
 #: src/frontends/qt/ui/LanguageUi.ui:39
 msgid "&Quote style:"
@@ -4199,14 +4196,13 @@ msgid "Cursor &follows scrollbar"
 msgstr "&Kurzor následuje posuvník"
 
 #: src/frontends/qt/ui/PrefEditUi.ui:116
-#, fuzzy
 msgid ""
 "If this is activated, LyX will search your disk for matching files when "
 "clicking on \"Try to Open Citation Content...\" in the citation context "
 "menu. Note the security implications described in User Guide, 6.6.4."
 msgstr ""
 "LyX bude prohledávat odpovídající soubory na lokálním disku pokud zvolíte "
-"\"Zkusit otevřít obsah citace...\" v kontextovém menu citace."
+"\"Zkusit otevřít obsah citace...\" v kontextovém menu citace. Tato volba může mít vliv na bezpečnost aplikace. Přečtěte si Uživatelskou příručku, sekce 6.6.4."
 
 #: src/frontends/qt/ui/PrefEditUi.ui:122
 msgid "Search &drive for cited files"
@@ -36106,25 +36102,22 @@ msgid "No file was found using the pattern `%1$s'."
 msgstr "Nebyl nalezen žádný soubor odpovídající hledané masce `%1$s'."
 
 #: src/frontends/qt/qt_helpers.cpp:335
-#, fuzzy
 msgid "Multiple files found!"
-msgstr "Soubor nenalezen!"
+msgstr "Nalezeno více souborů!"
 
 #: src/frontends/qt/qt_helpers.cpp:336
-#, fuzzy
 msgid "Select the file that should be opened:"
-msgstr "Nastavit ladící výpisy, které mají být zobrazeny"
+msgstr "Vyberte soubor, který má být otevřen:"
 
 #: src/frontends/qt/qt_helpers.cpp:348
 msgid "&Trust this document and do not ask me again!"
-msgstr ""
+msgstr "&Důvěřovat tomuto dokumentu a znova se neptat."
 
 #: src/frontends/qt/qt_helpers.cpp:349
-#, fuzzy
 msgid ""
 "If you check this, LyX will open all targets without asking for the given "
 "document in the future."
-msgstr "Při zaškrtnutí vás již LyX nebude příště pro tento případ varovat."
+msgstr "Při zaškrtnutí se budou v budoucnu otevírat všechny odkazy z tohoto dokumentu bez dotazování."
 
 #: src/frontends/qt/qt_helpers.cpp:350
 #, c-format
@@ -36136,16 +36129,19 @@ msgid ""
 "link!\n"
 "How do you want to proceed?"
 msgstr ""
+"LyX chce otevřít následující odkaz v externí aplikaci:\n"
+"%1$s\n"
+"Uvědomte si, že to může znamenat narušení bezpečnosti!\n"
+"Odkaz otevírejte pouze v případě, že důvěřujete původu tohoto dokumentu a odkazu samotnému.\n"
+"Jak chcete pokračovat?"
 
 #: src/frontends/qt/qt_helpers.cpp:355
-#, fuzzy
 msgid "Open external target?"
-msgstr "Přepsat externí soubor?"
+msgstr "Otevřít externí odkaz?"
 
 #: src/frontends/qt/qt_helpers.cpp:357
-#, fuzzy
 msgid "&Open Target"
-msgstr "Otevřít cíl...|O"
+msgstr "&Otevřít odkaz"
 
 #: src/frontends/qt/qt_helpers.cpp:386
 #, c-format
