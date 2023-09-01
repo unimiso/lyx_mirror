@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -50,11 +50,13 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 12
 \spacing single
 \use_hyperref true
 \pdf_title "Introducció al LyX"
-\pdf_author "LyX Team, translation: Joan Montané"
+\pdf_author "LyX Team, translation: Joan Montané, Daniel Fernández"
 \pdf_subject "LyX-documentation Introducció"
 \pdf_keywords "LyX, Documentation"
 \pdf_bookmarks true
@@ -88,6 +90,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Índex
@@ -100,13 +103,13 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tablestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \change_bars false
 \postpone_fragile_content false
@@ -115,6 +118,7 @@
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\author -1463541724 "Daniel" d3vf4n@tutanota.com
 \end_header
 
 \begin_body
@@ -125,7 +129,11 @@ Introducció al \SpecialChar LyX
 \end_layout
 
 \begin_layout Author
-per l'Equip \SpecialChar LyX
+per l'Equip 
+\change_inserted -1463541724 1693302089
+del 
+\change_unchanged
+\SpecialChar LyX
 
 \begin_inset Foot
 status collapsed
@@ -175,39 +183,128 @@ Què és el \SpecialChar LyX
 \begin_layout Standard
 El \SpecialChar LyX
  és un sistema de preparació de documents.
- És excel·lent per crear articles tècnics i matemàtics complexos,
+ És excel·lent per
+\change_inserted -1463541724 1692555204
+ a
+\change_unchanged
+ crear articles tècnics 
+\change_inserted -1463541724 1692555075
+complexos amb matemàtiques
+\change_deleted -1463541724 1692555082
+i matemàtics complexos
+\change_unchanged
+,
  referències creuades,
  bibliografies,
  índexs,
  etc.
- És molt bo per a documents de qualsevol longitud en les tasques de processament més habituals:
- paginació i divisió automàtica de seccions,
- correcció ortogràfica,
+ 
+\change_inserted -1463541724 1692555102
+També 
+\change_deleted -1463541724 1692555103
+É
+\change_inserted -1463541724 1692555104
+é
+\change_unchanged
+s molt bo per a documents de qualsevol longitud en les tasques de processament més habituals:
+ paginació
+\change_inserted -1463541724 1692555435
+,
+ numeració automàtica de seccions,
+
+\change_deleted -1463541724 1692555441
+ i divisió automàtica de seccions,
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692555462
+peus de pàgina,
+ enllaços,
+ 
+\change_unchanged
+correcció ortogràfica,
  etc.
- També es pot fer servir per escriure cartes a la mare,
+ També es pot fer servir per
+\change_inserted -1463541724 1692555524
+ a tasques més simples,
+ com ara
+\change_unchanged
+ escriure cartes a la mare
+\change_deleted -1463541724 1692555529
+,
+\change_inserted -1463541724 1692555529
+;
+
+\change_unchanged
  encara que per a això hi ha programes més senzills.
  És clar que no és la millor eina per a crear cartells,
- fulls de propaganda o avisos (després explicarem el perquè),
+ fulls de propaganda o 
+\change_deleted -1463541724 1692555557
+avisos
+\change_inserted -1463541724 1692555566
+anuncis de publicitat
+\change_unchanged
+ (després explicarem el perquè),
  tot i això,
- amb una mica d'esforç també es pot fer tot això.
+ amb una mica d'esforç també es pot 
+\change_deleted -1463541724 1692969581
+fer
+\change_inserted -1463541724 1692969583
+aconseguir
+\change_deleted -1463541724 1692969581
+ tot això
+\change_unchanged
+.
  Aquí teniu alguns exemples dels usos més freqüents:
  informes,
  cartes,
  discursos i tesis,
  apunts,
- conferències,
+ 
+\change_inserted -1463541724 1692555620
+actes de 
+\change_unchanged
+conferències,
  documentació de programari,
  llibres,
  articles de publicacions científiques,
  guions de cinema i teatre,
- presentacions comercials \SpecialChar ldots
+ presentacions
+\change_inserted -1463541724 1692555657
+,
+ etc.
+
+\change_deleted -1463541724 1692555659
+ comercials \SpecialChar ldots
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 El \SpecialChar LyX
- és un programa que dóna un enfocament modern a l'escriptura de documents amb ordinador fent servir un paradigma de llenguatge de disseny,
- un enfocament que trenca amb la tradició obsoleta del 
+ és un programa que d
+\change_inserted -1463541724 1692659658
+o
+\change_deleted -1463541724 1692659658
+ó
+\change_unchanged
+na un enfocament modern a l'escriptura de documents amb ordinador fent servir un paradigma de llenguatge de 
+\change_deleted -1463541724 1692555757
+disseny
+\change_inserted -1463541724 1692555766
+marques
+\change_unchanged
+,
+ 
+\change_deleted -1463541724 1692555773
+un enfocament que
+\change_inserted -1463541724 1692555779
+aquest punt de vista
+\change_unchanged
+ trenca amb 
+\change_deleted -1463541724 1692555810
+la tradició obsoleta del 
 \begin_inset Quotes eld
 \end_inset
 
@@ -215,89 +312,263 @@ com una màquina d'escriure
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692555822
+el concepte tradicional obsolet de redactar com en una màquina d'escriure
+\change_unchanged
 .
- Està dissenyat per autors que desitgen una presentació professional amb rapidesa i un esforç mínim sense haver de ser especialista en composició gràfica;
+ Està dissenyat per 
+\change_inserted -1463541724 1692556022
+a 
+\change_unchanged
+autors que desitgen una presentació professional amb rapidesa i un esforç mínim sense haver de ser especialista en 
+\change_inserted -1463541724 1692969838
+tipografies i 
+\change_unchanged
+composició gràfica;
  aquesta tasca la realitza majoritàriament l'ordinador,
  no l'autor,
  que amb el \SpecialChar LyX
- pot concentrar-se en els continguts.
+ pot concentrar
+\change_deleted -1463541724 1692659744
+-
+\change_inserted -1463541724 1692659758
+\SpecialChar nobreakdash
+
+\change_unchanged
+se en els continguts.
 \end_layout
 
 \begin_layout Standard
 Part del repte inicial en l'ús del \SpecialChar LyX
  es troba en el canvi de forma de pensar que l'usuari ha de fer.
- En altre temps només teníem màquines d'escriure per crear documents,
- així que vam aprendre alguns trucs per a superar les limitacions.
+ En altre temps només teníem màquines d'escriure per 
+\change_inserted -1463541724 1692556059
+a 
+\change_unchanged
+crear documents,
+ així que vam aprendre alguns trucs per a superar
+\change_inserted -1463541724 1692556068
+-ne
+\change_unchanged
+ les limitacions.
  Subratllar,
  que bàsicament és sobreescriure amb el caràcter
+\change_inserted -1463541724 1692556076
+ 
+\change_deleted -1463541724 1692556085
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -1463541724 1692556085
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
 _
+\change_inserted -1463541724 1692556087
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_deleted -1463541724 1692556087
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 ,
  es va convertir en una forma de ressaltar el text.
  Per crear una taula,
- s'establia a mà l'ample de cada columna i es posaven les tabulacions necessàries.
+ 
+\change_deleted -1463541724 1692556105
+s'establia
+\change_inserted -1463541724 1692556109
+havíeu de calcular
+\change_unchanged
+ a mà l'ampl
+\change_inserted -1463541724 1692556113
+ada
+\change_deleted -1463541724 1692556113
+e
+\change_unchanged
+ de cada columna i 
+\change_deleted -1463541724 1692556128
+es posaven 
+\change_unchanged
+les tabulacions necessàries.
  Amb les cartes i altres texts amb alineament a la dreta passava el mateix.
  A més,
- el guionatge de paraules a final de línia requeria ser molt curós i previsor.
+ 
+\change_inserted -1463541724 1692659939
+la
+\change_deleted -1463541724 1692659939
+el
+\change_unchanged
+ 
+\change_deleted -1463541724 1692556183
+guionatge
+\change_inserted -1463541724 1692659929
+divisió
+\change_unchanged
+ de paraules a final de línia requeria ser molt curós i previsor.
 \end_layout
 
 \begin_layout Standard
 En altres paraules,
- ens hem habituat a preocupar-nos pel petits detalls de 
+ ens hem habituat a preocupar
+\change_inserted -1463541724 1692659975
+\SpecialChar nobreakdash
+
+\change_deleted -1463541724 1692659967
+-
+\change_unchanged
+nos pel
+\change_inserted -1463541724 1692556235
+s
+\change_unchanged
+ petits detalls de 
+\change_deleted -1463541724 1692556207
+
 \begin_inset Quotes eld
 \end_inset
 
-quin caràcter va en quin lloc
+
+\change_unchanged
+quin caràcter va 
+\change_deleted -1463541724 1692556221
+en quin lloc
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692660005
+on i,
+\change_deleted -1463541724 1692659991
 .
- Com a conseqüència,
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692660009
+c
+\change_deleted -1463541724 1692660009
+C
+\change_unchanged
+om a conseqüència,
  gairebé tots els processadors de text es basen en aquesta mentalitat.
- Encara empren tabuladors per afegir espais en blanc.
- Encara us heu d'amoïnar de en quina part exacta de la pàgina sortirà cada cosa.
+ Encara empren tabuladors per 
+\change_inserted -1463541724 1692615948
+a 
+\change_unchanged
+afegir espais en blanc.
+ Encara us heu d'amoïnar 
+\change_deleted -1463541724 1692556262
+de
+\change_inserted -1463541724 1692556262
+per
+\change_unchanged
+ en quina part exacta de la pàgina sortirà cada cosa.
  Ressaltar text significa canviar el tipus de lletra,
  semblant a canviar la roda d'una màquina d'escriure.
  Aquesta és la filosofia subjacent en un processador de text del tipus WYSIWYG:
  
+\change_deleted -1463541724 1692579408
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
+
+\emph on
 What You See Is What You Get
+\change_deleted -1463541724 1692579417
+
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  (
+\change_deleted -1463541724 1692569315
+
 \begin_inset Quotes eld
 \end_inset
 
-Això que veus és això que obtens
+Això 
+\change_inserted -1463541724 1692569317
+el 
+\change_unchanged
+que veus és 
+\change_deleted -1463541724 1692569325
+això
+\change_inserted -1463541724 1692569327
+el
+\change_unchanged
+ que obtens
+\change_deleted -1463541724 1692569329
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 ).
  Malauradament,
  això es converteix amb freqüència en 
+\change_deleted -1463541724 1692579450
+
 \begin_inset Quotes eld
 \end_inset
 
-Això que veus és tot el que tens
+Això
+\change_inserted -1463541724 1692579452
+
+\emph on
+el
+\change_unchanged
+ que veus és tot el que tens
+\change_deleted -1463541724 1692579460
+
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Standard
 Aquí és on el \SpecialChar LyX
  difereix d'un processador de text normal i corrent.
- No us heu d'amoïnar de que una lletra vagi a un lloc determinat.
- Li dieu al Lyx 
+ No us heu d'amoïnar 
+\change_deleted -1463541724 1692586089
+de
+\change_inserted -1463541724 1692586111
+per on apareixerà cada lletra
+\change_deleted -1463541724 1692586163
+ que una lletra vagi a un lloc determinat.
+\change_inserted -1463541724 1692586163
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692586164
+L
+\change_inserted -1463541724 1692586165
+l
+\change_unchanged
+i dieu al Lyx 
 \emph on
 allò que esteu fent
 \emph default
@@ -305,8 +576,12 @@ allò que esteu fent
  seguint un conjunt de regles anomenat 
 \emph on
 estil
+\change_deleted -1463541724 1692579643
+
 \emph default
 .
+\change_unchanged
+
 \begin_inset Foot
 status collapsed
 
@@ -319,28 +594,117 @@ Si hem de ser sincers,
 
 \end_inset
 
- Vegeu un petit exemple:
+
+\change_inserted -1463541724 1692579646
+.
+
+\change_unchanged
+ Vege
+\change_deleted -1463541724 1692660351
+u
+\change_inserted -1463541724 1692660351
+m
+\change_unchanged
+ un petit exemple:
 \end_layout
 
 \begin_layout Standard
-Suposeu que escriviu un informe.
- Voleu que comenci amb una secció anomenada 
+Suposeu que escriviu un informe
+\change_inserted -1463541724 1692586246
+ i
+\change_deleted -1463541724 1692586245
+.
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692586247
+V
+\change_inserted -1463541724 1692586247
+v
+\change_unchanged
+oleu que comenci amb una secció anomenada 
+\change_deleted -1463541724 1692586252
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -1463541724 1692586253
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
 Introducció
+\change_deleted -1463541724 1692586255
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692586255
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_unchanged
 .
- Així doncs,
- us dirigiu al menú del processador de text que canvia la mida de la lletra i trieu un nova mida.
- Després canvieu també a negreta.
- Tot seguit escriviu:
  
+\change_deleted -1463541724 1692586262
+Així doncs,
+ u
+\change_inserted -1463541724 1692586262
+U
+\change_unchanged
+s dirigiu al menú del processador de text que canvia la mida de la lletra i trieu un
+\change_inserted -1463541724 1692586280
+a
+\change_unchanged
+ nova mida
+\change_deleted -1463541724 1692586286
+.
+\change_inserted -1463541724 1692586286
+,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692586298
+Després 
+\change_unchanged
+canvieu també 
+\change_inserted -1463541724 1692586308
+el tipus 
+\change_unchanged
+a negreta
+\change_deleted -1463541724 1692586314
+.
+
+\change_inserted -1463541724 1692586314
+ i
+\change_unchanged
+ 
+\change_deleted -1463541724 1692586321
+Tot seguit
+\change_inserted -1463541724 1692586322
+finalment
+\change_unchanged
+ escriviu:
+ 
+\change_deleted -1463541724 1692569341
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -1463541724 1692569341
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
 1.
 \begin_inset space ~
 \end_inset
@@ -350,96 +714,334 @@ Introducció
 \end_inset
 
 Introducció
+\change_deleted -1463541724 1692569344
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692569345
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_unchanged
 .
  Per descomptat,
- si més tard decidiu que aquesta secció pertany a alguna altra part del document.
+ si més tard decidiu 
+\change_deleted -1463541724 1692660442
+que
+\change_inserted -1463541724 1692660443
+canviar de lloc
+\change_unchanged
+ aquesta secció
+\change_deleted -1463541724 1692660462
+ pertany a alguna altra part del document.
+\change_inserted -1463541724 1692660462
+,
+
+\change_unchanged
  o bé inseriu una nova secció anterior a aquesta,
- heu de canviar la numeració a la secció i a totes les seccions posterior,
- a més de les corresponents entrades en l'índex.
+ h
+\change_inserted -1463541724 1692660491
+aur
+\change_unchanged
+eu de canviar la numeració 
+\change_deleted -1463541724 1692660499
+a
+\change_inserted -1463541724 1692660499
+de
+\change_unchanged
+ la secció i 
+\change_deleted -1463541724 1692660514
+a
+\change_inserted -1463541724 1692660514
+de
+\change_unchanged
+ totes les seccions posterior
+\change_inserted -1463541724 1692660517
+s
+\change_unchanged
+,
+ a més de les corresponents entrades en l'índex
+\change_inserted -1463541724 1692660537
+ general o taula de continguts
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
 Al \SpecialChar LyX
 ,
- en la llista desplegable a l'esquerra de la barra de botons,
+ 
+\change_deleted -1463541724 1692615279
+en
+\change_inserted -1463541724 1692615281
+aneu a
+\change_unchanged
+ la llista desplegable a l'esquerra de la barra de botons,
  seleccioneu 
 \family sans
 Secció
+\change_deleted -1463541724 1692660563
+
 \family default
 ,
+
+\change_unchanged
  i escriviu 
+\change_deleted -1463541724 1692660575
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -1463541724 1692660575
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
 Introducció
+\change_deleted -1463541724 1692660577
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692660577
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_unchanged
 .
  Això és tot.
- Si retalleu i enganxeu la secció,
- serà numerada automàticament —
+ Si retalleu i enganxeu la secció
+\change_inserted -1463541724 1692660651
+ a qualsevol altre lloc
+\change_unchanged
+,
+ serà numerada automàticament
+\change_deleted -1463541724 1692660658
+ —
 a qualsevol part—
+
+\change_unchanged
 .
  I si introduïu correctament referències a aquesta secció (inserint una etiqueta de referència creuada),
  el \SpecialChar LyX
- les actualitzarà automàticament a través de tot el document,
+ les actualitzarà automàticament 
+\change_deleted -1463541724 1692660776
+a través
+\change_inserted -1463541724 1692660776
+en
+\change_unchanged
+ de tot el document,
  de manera que mai no haureu d'escriure un número de secció.
+
+\change_deleted -1463541724 1692660760
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Veiem ara el problema de la consistència.
  Cinc dies més tard,
- obriu l'informe i comenceu la secció 4.
- Però heu oblidat que estàveu usant lletra en negreta de 18
+ obriu l'informe i comenceu la secció
+\change_deleted -1463541724 1692660849
+ 
+\change_inserted -1463541724 1692660849
+
+\begin_inset space ~
+\end_inset
+
+
+\change_unchanged
+4
+\change_deleted -1463541724 1692660858
+.
+\change_inserted -1463541724 1692660858
+,
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692660859
+p
+\change_deleted -1463541724 1692660859
+P
+\change_unchanged
+erò heu oblidat que estàveu usant lletra en negreta de 18
 \begin_inset space \thinspace{}
 \end_inset
 
-punts,
- i useu la de 16,
- així que acabeu escrivint l'encapçalament de la secció 4 amb un tipus de lletra diferent al que vau emprar a la secció 1.
- Aquest problema no existeix al \SpecialChar LyX
+punts
+\change_deleted -1463541724 1692660869
+,
+
+\change_unchanged
+ i useu la de 16
+\change_deleted -1463541724 1692660875
+,
+\change_inserted -1463541724 1692660875
 .
- L'ordinador s'encarrega de tota la feina feixuga de portar el compte de mides i tipus de lletra,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692660877
+a
+\change_inserted -1463541724 1692660877
+A
+\change_unchanged
+ixí que acabeu escrivint l'encapçalament de la secció
+\change_deleted -1463541724 1692660884
+ 
+\change_inserted -1463541724 1692660891
+
+\begin_inset space ~
+\end_inset
+
+
+\change_unchanged
+4 amb un tipus de lletra diferent 
+\change_deleted -1463541724 1692660900
+a
+\change_inserted -1463541724 1692660903
+de
+\change_unchanged
+l que vau emprar a la secció
+\change_deleted -1463541724 1692661070
+ 
+\change_inserted -1463541724 1692661070
+
+\begin_inset space ~
+\end_inset
+
+
+\change_unchanged
+1.
+ Aquest problema no existeix al \SpecialChar LyX
+
+\change_deleted -1463541724 1692661081
+.
+\change_inserted -1463541724 1692661081
+:
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692661083
+L
+\change_inserted -1463541724 1692661083
+l
+\change_unchanged
+'ordinador s'encarrega de tota la feina feixuga de portar el compte de
+\change_inserted -1463541724 1692661119
+ les
+\change_unchanged
+ mides i tipus de lletra,
  no l'autor.
  Al cap i a la fi,
- per això està l'ordinador.
+ per 
+\change_inserted -1463541724 1692661129
+a 
+\change_unchanged
+això està l'ordinador.
 \end_layout
 
 \begin_layout Standard
 Un altre exemple.
  Suposeu que esteu fent una llista.
- En altre processadors de tex una llista és només un seqüència de tabuladors i salts de línia.
- Necessiteu pensar on posar l'etiqueta de cada element de a llista,
- que ha de ser aquesta etiqueta,
- quantes línies en blanc s'han de posar entre cada element,
+ En altre
+\change_inserted -1463541724 1692661151
+s
+\change_unchanged
+ processadors de tex
+\change_inserted -1463541724 1692661153
+t
+\change_unchanged
+ una llista és només un seqüència de tabuladors i salts de línia.
+ 
+\change_deleted -1463541724 1692661196
+Necessiteu
+\change_inserted -1463541724 1692661199
+Heu de
+\change_unchanged
+ pensar on posar 
+\change_deleted -1463541724 1692661763
+l'etiqueta
+\change_inserted -1463541724 1692661766
+el pic
+\change_unchanged
+ de cada element de 
+\change_inserted -1463541724 1692661770
+l
+\change_unchanged
+a llista,
+ 
+\change_inserted -1463541724 1692661806
+triar el pic,
+\change_deleted -1463541724 1692661813
+que ha de ser aquesta etiqueta,
+
+\change_unchanged
+ quantes línies en blanc 
+\change_deleted -1463541724 1692661825
+s'han de
+\change_unchanged
+ posar entre cada element,
  etc.
  Amb el \SpecialChar LyX
 ,
  només teniu dues preocupacions:
- quina classe de llista és,
- i que hi posareu.
+ quina classe de llista és
+\change_deleted -1463541724 1692661912
+,
+
+\change_unchanged
+ i qu
+\change_inserted -1463541724 1692661842
+è
+\change_deleted -1463541724 1692661841
+e
+\change_unchanged
+ hi posareu.
  Això és tot.
 \end_layout
 
 \begin_layout Standard
 Així doncs,
- la idea essencial darrere del \SpecialChar LyX
+ la idea 
+\change_deleted -1463541724 1692661947
+essencial darrere
+\change_inserted -1463541724 1692661948
+fonamental
+\change_unchanged
+ del \SpecialChar LyX
  és especificar 
 \emph on
 allò
 \emph default
  que esteu fent,
- i no pas 
+ 
+\change_deleted -1463541724 1692661959
+i 
+\change_unchanged
+no pas 
 \emph on
 com
 \emph default
  fer-ho.
  En comptes de 
+\change_inserted -1463541724 1692662003
+
+\emph on
+el que veus és el que obtens
+\change_deleted -1463541724 1692661991
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -447,9 +1049,23 @@ Això que veus és allò que obtens
 \begin_inset Quotes erd
 \end_inset
 
- (WYSIWIG),
+
+\change_unchanged
+
+\emph default
+ (WYSIW
+\change_inserted -1463541724 1692660619
+Y
+\change_deleted -1463541724 1692660619
+I
+\change_unchanged
+G),
  el model del \SpecialChar LyX
  és 
+\change_deleted -1463541724 1692662030
+
+\emph on
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -457,24 +1073,136 @@ Això que veus és allò que vols dir
 \begin_inset Quotes erd
 \end_inset
 
- (WYSIWIM).
- És una idea poderosa que simplifica molt els mecanismes de l'escriptura de documents.
- I per això el \SpecialChar LyX
- no és idoni per crear pòsters i fulls de propaganda —
-en aquesta casos 
+
+\change_inserted -1463541724 1692662037
+el que veus és el que vols dir
+\change_unchanged
+
+\emph default
+ (WYSIW
+\change_inserted -1463541724 1692660623
+Y
+\change_deleted -1463541724 1692660622
+I
+\change_unchanged
+M)
+\change_deleted -1463541724 1692662053
+.
+\change_inserted -1463541724 1692662053
+,
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692662074
+que é
+\change_deleted -1463541724 1692662073
+É
+\change_unchanged
+s una idea poderosa que simplifica molt 
+\change_deleted -1463541724 1692662095
+els mecanismes de
+\change_unchanged
+ l'escriptura de documents.
+ 
+\change_deleted -1463541724 1692662109
+I p
+\change_inserted -1463541724 1692662109
+P
+\change_unchanged
+er
+\change_inserted -1463541724 1692662110
+ò
+\change_unchanged
+ això
+\change_inserted -1463541724 1692662115
+ també fa que
+\change_unchanged
+ el \SpecialChar LyX
+ no 
+\change_inserted -1463541724 1692662120
+sigui
+\change_deleted -1463541724 1692662119
+és
+\change_unchanged
+ idoni per 
+\change_inserted -1463541724 1692662126
+a 
+\change_unchanged
+crear pòsters i fulls de propaganda
+\change_inserted -1463541724 1692662134
+:
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692662136
+—
+
+\change_unchanged
+en aquest
+\change_deleted -1463541724 1692662141
+a
+\change_inserted -1463541724 1692662141
+s
+\change_unchanged
+ casos 
 \emph on
 sí
 \emph default
  voleu especificar exactament on va cada cosa perquè no hi ha unitats funcionals com paràgrafs,
  seccions,
- etc—
+ etc
+\change_deleted -1463541724 1692662187
+—
+
+\change_unchanged
 .
- Això significa que el \SpecialChar LyX
- ha perdut funcionalitat,
- significa simplement que no és l'eina adient per aquestes tasques —
-per clavar un clau no empreu un tornavís—
-.
+ Això 
+\change_deleted -1463541724 1692662198
+significa
+\change_inserted -1463541724 1692662199
+no vol dir
+\change_unchanged
+ que 
+\change_inserted -1463541724 1692662204
+a
+\change_deleted -1463541724 1692662204
+e
+\change_unchanged
+l \SpecialChar LyX
  
+\change_deleted -1463541724 1692662210
+ha perdut funcionalitat
+\change_inserted -1463541724 1692662213
+li manquin funcions
+\change_unchanged
+,
+ significa simplement que no és l'eina adient per aquestes tasques
+\change_inserted -1463541724 1692662225
+:
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692662226
+—
+
+\change_unchanged
+per clavar un clau no empre
+\change_inserted -1463541724 1692662233
+m
+\change_deleted -1463541724 1692662232
+u
+\change_unchanged
+ un tornavís
+\change_deleted -1463541724 1692662238
+—
+
+\change_unchanged
+.
+
+\change_deleted -1463541724 1692662238
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -496,7 +1224,12 @@ Tabuladors
 \end_layout
 
 \begin_layout Itemize
-Espais en blanc addicionals (p.ex.
+Espais en blanc addicionals (p.
+
+\change_inserted -1463541724 1692783577
+ 
+\change_unchanged
+ex.
  pitgeu 
 \family sans
 Retorn
@@ -511,11 +1244,41 @@ Espai
 \begin_layout Standard
 Els tabuladors,
  així com els regles (que us mostren la posició dels elements a la pàgina),
- són inútils al \SpecialChar LyX
+ 
+\change_inserted -1463541724 1692783615
+son
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ inútils al \SpecialChar LyX
+
+\change_deleted -1463541724 1692783873
 .
- El programa s'amoïna d'on ha d'anar cada cosa,
+\change_inserted -1463541724 1692783873
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692783877
+E
+\change_inserted -1463541724 1692783878
+e
+\change_unchanged
+l programa s'
+\change_deleted -1463541724 1692783882
+amoïna
+\change_inserted -1463541724 1692783886
+encarrega
+\change_unchanged
+ d'on ha d'anar cada cosa,
  no pas l'autor.
- Amb els espais en blanc addicionals ocorre el mateix,
+ Amb els espais en blanc addicionals ocorre el mateix
+\change_deleted -1463541724 1692783925
+,
+\change_inserted -1463541724 1692783925
+:
+
+\change_unchanged
  el \SpecialChar LyX
  els afegeix allà on calgui,
  segons el context.
@@ -524,8 +1287,28 @@ Els tabuladors,
 \end_layout
 
 \begin_layout Standard
-Aquí teniu algunes coses disponibles al \SpecialChar LyX
- però que no s'usen de la forma que podríeu pensar:
+
+\change_deleted -1463541724 1692784078
+Aquí teniu a
+\change_inserted -1463541724 1692784078
+A
+\change_unchanged
+lgunes coses disponibles al \SpecialChar LyX
+ però que no 
+\change_deleted -1463541724 1692784097
+s'usen
+\change_inserted -1463541724 1692784099
+s'utilitzen
+\change_unchanged
+ 
+\change_deleted -1463541724 1692784112
+de la forma que
+\change_inserted -1463541724 1692784120
+com 
+\change_deleted -1463541724 1692784115
+ 
+\change_unchanged
+podríeu pensar:
 \end_layout
 
 \begin_layout Itemize
@@ -537,8 +1320,17 @@ Salts de pàgina
 \end_layout
 
 \begin_layout Itemize
-Espai entre línies (p.ex.
- espai simple,
+Espai entre línies (p.
+
+\change_inserted -1463541724 1692784145
+ 
+\change_unchanged
+ex.
+ espai
+\change_inserted -1463541724 1692784149
+at
+\change_unchanged
+ simple,
  doble,
  etc.)
 \end_layout
@@ -549,11 +1341,25 @@ Espai en blanc,
 \end_layout
 
 \begin_layout Itemize
-Pòlisses i mides de lletra
+
+\change_inserted -1463541724 1692784178
+Fonts tipogràfiques 
+\change_deleted -1463541724 1692784181
+Pòlisses
+\change_unchanged
+ i mides de lletra
 \end_layout
 
 \begin_layout Itemize
-Estil de lletra (negreta,
+
+\change_inserted -1463541724 1692784192
+Tipus o 
+\change_deleted -1463541724 1692784193
+E
+\change_inserted -1463541724 1692784193
+e
+\change_unchanged
+stil de lletra (negreta,
  cursiva,
  subratllat,
  etc.)
@@ -563,22 +1369,104 @@ Estil de lletra (negreta,
 Encara que existeixen al \SpecialChar LyX
 ,
  normalment no es necessiten.
- El programa s'amoïna d'aquesta coses,
- actuant en conseqüència segon el que estigueu fent.
- Diferents parts del document són automàticament canviades a diferent mida i estil de lletra.
- El sagnat de paràgraf depèn del context;
- diferents tipus de paràgraf se sagnen de manera diferent.
- Els salts de pàgina es gestionen automàticament.
- En general,
- l'espai entre línies i entre paràgrafs és variable,
- triat pel \SpecialChar LyX
+ El programa s'
+\change_deleted -1463541724 1692784227
+amoïna
+\change_inserted -1463541724 1692784228
+encarrega
+\change_unchanged
+ d'aquest
+\change_deleted -1463541724 1692784232
+a
+\change_inserted -1463541724 1692784232
+es
+\change_unchanged
+ coses,
+ actuant en conseqüència segon
+\change_inserted -1463541724 1692784247
+s
+\change_unchanged
+ el que estigueu fent.
+ 
+\change_inserted -1463541724 1692784260
+Per exemple,
+ a 
+\change_deleted -1463541724 1692784262
+D
+\change_inserted -1463541724 1692784262
+d
+\change_unchanged
+iferents parts del document
+\change_inserted -1463541724 1692784277
+ la mida i l'estil de lletra es canvien automàticament
+\change_deleted -1463541724 1692784287
+ són automàticament canviades a diferent mida i estil de lletra.
+\change_inserted -1463541724 1692784287
+,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692784289
+E
+\change_inserted -1463541724 1692784289
+e
+\change_unchanged
+l sagnat de paràgraf depèn del context
+\change_deleted -1463541724 1692784503
+;
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692784506
+—
+
+\change_unchanged
+diferents tipus de paràgraf
+\change_inserted -1463541724 1692784534
+s
+\change_unchanged
+ se sagnen de manera diferent
+\change_inserted -1463541724 1692784541
+—
+,
+\change_deleted -1463541724 1692784540
 .
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692784546
+e
+\change_deleted -1463541724 1692784546
+E
+\change_unchanged
+ls salts de pàgina es gestionen automàticament.
+ En general
+\change_deleted -1463541724 1692784558
+,
+
+\change_unchanged
+ l'espai entre 
+\change_inserted -1463541724 1692784567
+paraules,
+ entre 
+\change_unchanged
+línies i entre paràgrafs és variable,
+ triat pel \SpecialChar LyX
+
+\change_deleted -1463541724 1692784338
+.
+\change_unchanged
+
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
 Podeu ajustar totes aquestes característiques (només unes poques requereixen coneixements de \SpecialChar LaTeX
-),
+)
+\change_deleted -1463541724 1692784445
+,
+
+\change_unchanged
  tant per a tot el document com per a una part concreta.
  Vegeu la 
 \emph on
@@ -592,31 +1480,75 @@ de
 
 l'usuari
 \emph default
- i/o 
+ 
+\change_deleted -1463541724 1692784411
+i/
+\change_unchanged
+o 
 \emph on
 Característiques
+\change_inserted -1463541724 1692784426
+
+\begin_inset space ~
+\end_inset
+
+addicionals
+\change_deleted -1463541724 1692784423
+
 \begin_inset space ~
 \end_inset
 
 
 \emph default
-esteses per a més detalls.
+esteses
+\change_unchanged
+ per a més detalls.
 \end_layout
 
 \end_inset
 
 
+\change_inserted -1463541724 1692784339
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Finalment,
- hi ha certes àrees on les que el \SpecialChar LyX
+ hi ha certes àrees 
+\change_deleted -1463541724 1693567453
+on
+\change_inserted -1463541724 1693567453
+en
+\change_unchanged
+ 
+\change_deleted -1463541724 1693567455
+les
+\change_unchanged
+ qu
+\change_inserted -1463541724 1693567457
+è
+\change_deleted -1463541724 1693567456
+e
+\change_unchanged
+ el \SpecialChar LyX
  (i \SpecialChar LaTeX
-) supera a molts dels processadors de text:
+) supera 
+\change_deleted -1463541724 1692784595
+a
+\change_unchanged
+ molts dels processadors de text:
 \end_layout
 
 \begin_layout Itemize
-Divisió de paraula a final de línia
+Divisió de paraul
+\change_inserted -1463541724 1692784606
+es
+\change_deleted -1463541724 1692784605
+a
+\change_unchanged
+ a final de línia
 \end_layout
 
 \begin_layout Itemize
@@ -628,7 +1560,11 @@ Matemàtiques
 \end_layout
 
 \begin_layout Itemize
-Taules i quadres
+Taules
+\change_deleted -1463541724 1692784615
+ i quadres
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -637,18 +1573,76 @@ Referències creuades
 
 \begin_layout Standard
 Per descomptat,
- molts processadors de text moderns gestionen símbols matemàtics,
+ molts processadors de text moderns 
+\change_deleted -1463541724 1692784983
+gestionen
+\change_inserted -1463541724 1692784984
+incorporen
+\change_unchanged
+ símbols matemàtics,
  taules,
- divisió de paraules a final de línia,
- i fins i tot comencen a aproximar-se a les definicions d'estil i al concepte WYSIWYM.
- Tot i això,
- acaben de començar a incloure aquestes característiques,
+ divisió de paraules a final de línia
+\change_deleted -1463541724 1692785006
+,
+
+\change_unchanged
+ i
+\change_inserted -1463541724 1692785008
+,
+
+\change_unchanged
+ fins i tot
+\change_inserted -1463541724 1692785038
+,
+ s'han apropat al concepte WYSIWYM incloent
+\change_deleted -1463541724 1692785043
+ comencen a aproximar-se a les
+\change_unchanged
+ definicions d'estil
+\change_inserted -1463541724 1692785051
+s
+\change_deleted -1463541724 1692785057
+ i al concepte WYSIWYM
+\change_unchanged
+.
+ 
+\change_inserted -1463541724 1692785069
+Però això ho han començat a fer fa poc
+\change_deleted -1463541724 1692785079
+Tot i això,
+ acaben de començar a incloure aquestes característiques
+\change_unchanged
+,
  mentre que el \SpecialChar LyX
  està construït sobre el sistema de processament de documents \SpecialChar LaTeX
+
+\change_inserted -1463541724 1692785090
+,
+\change_deleted -1463541724 1692785089
 .
- El \SpecialChar LaTeX
- porta més de 20 anys amb elles,
- i 
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692785099
+El \SpecialChar LaTeX
+
+\change_inserted -1463541724 1692785102
+que
+\change_unchanged
+ porta més de 20 anys
+\change_inserted -1463541724 1692785112
+ de vida
+\change_deleted -1463541724 1692785130
+ amb elles,
+
+\change_unchanged
+ i
+\change_inserted -1463541724 1692785133
+,
+ simplement,
+
+\change_unchanged
+ 
 \emph on
 funciona
 \emph default
@@ -662,25 +1656,49 @@ Què és el \SpecialChar LaTeX
 
 \begin_layout Standard
 El \SpecialChar LaTeX
- és un sistema de preparació de documents dissenyat per en Leslie Lamport el 1985.
+ és un sistema de preparació de documents dissenyat per en 
+\noun on
+Leslie Lamport
+\noun default
+ el 1985
+\change_deleted -1463541724 1692785143
+.
+\change_unchanged
+
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
 La font d'informació d'aquesta secció és 
+\change_deleted -1463541724 1692785179
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \emph on
 A Guide to \SpecialChar LaTeX2e
 
 \emph default
 ,
+\change_deleted -1463541724 1692785175
+
 \begin_inset Quotes erd
 \end_inset
 
- d'en Helmut Kopka i en Patrick Daly,
+
+\change_unchanged
+ d'en 
+\noun on
+Helmut Kopka
+\noun default
+ i en 
+\noun on
+Patrick Daly
+\noun default
+,
  que figura en la bibliografia de la 
 \emph on
 Guia
@@ -691,75 +1709,220 @@ de
 \begin_inset space ~
 \end_inset
 
-l'usuari.
+l'usuari
+\emph default
+.
+
+\emph on
  
 \end_layout
 
 \end_inset
 
- Fou desenvolupat a partir d'un llenguatge de tipografia anomenat \SpecialChar TeX
+
+\change_inserted -1463541724 1692785144
+.
+
+\change_unchanged
+ Fou desenvolupat a partir d'un llenguatge de
+\change_inserted -1463541724 1692785274
+ composició
+\change_unchanged
+ tipogr
+\change_inserted -1463541724 1692785283
+à
+\change_deleted -1463541724 1692785282
+a
+\change_unchanged
+fi
+\change_inserted -1463541724 1692785284
+c
+\change_unchanged
+a anomenat \SpecialChar TeX
 ,
- creat per en Donald Knuth el 1984.
+ creat per en 
+\noun on
+Donald Knuth
+\noun default
+ el 1984.
  El \SpecialChar TeX
- pren una seqüència d'ordres tipogràfiques,
- escrites en un guió en un fitxer ASCII i els executa.
+ pren una seqüència d'
+\change_inserted -1463541724 1692785335
+instruccions de composició 
+\change_deleted -1463541724 1692785326
+ordres 
+\change_unchanged
+tipogràfi
+\change_inserted -1463541724 1692785340
+ca
+\change_deleted -1463541724 1692785339
+ques
+\change_unchanged
+,
+ escrites en un guió en un fitxer ASCII
+\change_inserted -1463541724 1692785349
+,
+
+\change_unchanged
+ i 
+\change_deleted -1463541724 1692785354
+e
+\change_unchanged
+l
+\change_inserted -1463541724 1692785355
+e
+\change_unchanged
+s executa.
  Molts dels 
+\change_deleted -1463541724 1692785361
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
+
+\emph on
 trucs
+\change_deleted -1463541724 1692785363
+
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
- del procés d'impressió foren modelats per en Knuth com algorismes de computació i incorporats al \SpecialChar TeX
+
+\change_inserted -1463541724 1692785386
+ que feien servir les imprentes en
+\change_unchanged
+ 
+\change_deleted -1463541724 1692785387
+d
+\change_unchanged
+el procés d'impressió foren modelats per en 
+\noun on
+Knuth
+\noun default
+ com algorismes
+\change_deleted -1463541724 1692785402
+ de computació
+\change_unchanged
+ i incorporats al \SpecialChar TeX
 ,
  d'aquí la seva excel·lent aparença impresa.
  La sortida directa del \SpecialChar TeX
  és el format 
-\emph on
+\family typewriter
 pdf
-\emph default
+\family default
  (
+\change_deleted -1463541724 1692785472
+
 \begin_inset Quotes eld
 \end_inset
 
-portable document format
-\begin_inset Quotes erd
-\end_inset
 
-) o el format anomenat 
+\change_unchanged
+
 \emph on
-dvi
-\emph default
- (
-\begin_inset Quotes eld
-\end_inset
+portable document format
+\change_deleted -1463541724 1692785479
 
-device independent
+\emph default
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
+) o el format anomenat 
+\family typewriter
+dvi
+\family default
+ (
+\change_deleted -1463541724 1692785484
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\change_unchanged
+
+\emph on
+device independent
+\change_deleted -1463541724 1692785489
+
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_unchanged
 ).
  El format 
-\emph on
+\family typewriter
 dvi
-\emph default
- se sol emprar per a vistes preliminars i després és pot convertir a altres formats com ara el PostScript.
+\family default
+ se sol emprar per a vistes preliminars i després és pot convertir a altres formats
+\change_inserted -1463541724 1692785751
+,
+
+\change_unchanged
+ com ara el PostScript.
  
 \end_layout
 
 \begin_layout Standard
 El \SpecialChar TeX
- no és només un motor de tipografia,
- també us permet definir macroinstruccions.
+ no és només un motor de 
+\change_deleted -1463541724 1692785766
+tipografia
+\change_inserted -1463541724 1692785775
+composició tipogràfica
+\change_unchanged
+,
+ també 
+\change_deleted -1463541724 1692785779
+us 
+\change_unchanged
+permet definir macroinstruccions.
  En realitat,
  la majoria dels usuaris de \SpecialChar TeX
- està emprant un paquet de macroinstruccions que en Knuth creà per amagar molts dels detalls del procés de composició tipogràfica.
- Aquí és on Leslie Lamport entra en escena.
- En Leslie cercava un paquet de macroinstruccions que fos més orientat a l'usuari que al tipògraf,
- amb un conjunt d'ordres per a composar coses com seccions,
+ està emprant un paquet de macroinstruccions que en 
+\noun on
+Knuth
+\noun default
+ creà per amagar molts dels detalls del procés de composició tipogràfica.
+ Aquí és on 
+\noun on
+Leslie Lamport
+\noun default
+ entra en escena.
+ En 
+\noun on
+Leslie
+\noun default
+ cercava un paquet de macroinstruccions que fos més orientat a l'usuari que al tipògraf,
+ amb un conjunt d'ordres per a compo
+\change_inserted -1463541724 1692787562
+ndre
+\change_deleted -1463541724 1692787563
+sar
+\change_unchanged
+ coses com 
+\change_inserted -1463541724 1692785817
+ara 
+\change_unchanged
+seccions,
  taules o fórmules de manera consistent i uniforme.
- Això és com va néixer el \SpecialChar LaTeX
+ Aix
+\change_inserted -1463541724 1692787552
+í
+\change_deleted -1463541724 1692787551
+ò
+\change_unchanged
+ és com va néixer el \SpecialChar LaTeX
 .
  
 \end_layout
@@ -767,7 +1930,13 @@ El \SpecialChar TeX
 \begin_layout Standard
 Paral·lelament al desenvolupament i creixement del \SpecialChar LaTeX
 ,
- altres persones anaren creant els seus propis paquets personalitzats de macroinstruccions pel \SpecialChar TeX
+ altres persones anaren creant els seus propis paquets personalitzats de macroinstruccions 
+\change_deleted -1463541724 1693227002
+pel
+\change_inserted -1463541724 1693227002
+de
+\change_unchanged
+ \SpecialChar TeX
 ,
  alguns per a fer diapositives,
  altres per a escriure articles en publicacions matemàtiques,
@@ -775,22 +1944,109 @@ Paral·lelament al desenvolupament i creixement del \SpecialChar LaTeX
  Per a fer això,
  alguns van emprar directament \SpecialChar TeX
 ,
- altres van començar a modificar \SpecialChar LaTeX
+ 
+\change_inserted -1463541724 1692787936
+mentre que 
+\change_unchanged
+altres van començar a modificar 
+\change_inserted -1463541724 1692787949
+el 
+\change_unchanged
+\SpecialChar LaTeX
 .
  Per evitar confusió i unificar criteris,
  un equip d'experts en \SpecialChar LaTeX
  començaren a treballar a finals dels 80 en el \SpecialChar LaTeX2e
 ,
- la versió actual del programa.
- Aquesta nova versió de \SpecialChar LaTeX
- té ordres que proporcionen una interfície més fàcil d'usar per a la creació de macroinstruccions,
- ajuda en l'ús de noves pòlisses tipogràfiques i altres millores.
- Per dret propi,
- el \SpecialChar LaTeX
- és en si mateix un ampli llenguatge!
- Usuaris de tot el món han estat creant les seves pròpies contribucions per al \SpecialChar LaTeX
+ la versió actual del 
+\change_inserted -1463541724 1692787990
+\SpecialChar LaTeX
+
+\change_deleted -1463541724 1692787973
+programa
+\change_unchanged
+.
+ Aquesta nova versió de
+\change_inserted -1463541724 1692788014
+l
+\change_unchanged
+ \SpecialChar LaTeX
+ té ordres que
+\change_inserted -1463541724 1692788024
+ faciliten
+\change_unchanged
+ 
+\change_deleted -1463541724 1692788031
+proporcionen una interfície més fàcil d'usar per a
+\change_unchanged
+ la creació de macroinstruccions,
+ 
+\change_deleted -1463541724 1692788042
+ajuda en
+\change_unchanged
+ l'ús de noves 
+\change_inserted -1463541724 1692788050
+fonts
+\change_deleted -1463541724 1692788048
+pòlisses
+\change_unchanged
+ tipogràfiques i altres millores.
+ 
+\change_deleted -1463541724 1692788069
+Per dret propi
+\change_inserted -1463541724 1692788072
+De fet
+\change_unchanged
 ,
- que es van afegint a les originals.
+ el \SpecialChar LaTeX
+ 
+\change_inserted -1463541724 1692788079
+ha arribat a ésser
+\change_deleted -1463541724 1692788081
+és
+\change_unchanged
+ en s
+\change_deleted -1463541724 1692788084
+i
+\change_inserted -1463541724 1692788084
+í
+\change_unchanged
+ mateix un 
+\change_deleted -1463541724 1692788098
+ampli
+\change_unchanged
+ llenguatge
+\change_inserted -1463541724 1692788104
+ molt ampli
+\change_unchanged
+!
+ Usuaris de tot el món 
+\change_deleted -1463541724 1692788214
+han estat
+\change_unchanged
+ cre
+\change_deleted -1463541724 1692788218
+a
+\change_inserted -1463541724 1692788218
+e
+\change_unchanged
+n
+\change_deleted -1463541724 1692788219
+t
+\change_unchanged
+ les seves pròpies contribucions 
+\change_deleted -1463541724 1692788226
+per
+\change_unchanged
+ al \SpecialChar LaTeX
+,
+ que
+\change_inserted -1463541724 1692788244
+ n'estenen la funcionalitat més enllà dels paquets originals
+\change_deleted -1463541724 1692788262
+ es van afegint a les originals
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -803,33 +2059,143 @@ classe
 \emph default
  és un conjunt de macroinstruccions \SpecialChar LaTeX
  que descriuen un nou tipus de document,
- com un llibre o un article.
+ com 
+\change_inserted -1463541724 1692788308
+ara 
+\change_unchanged
+un llibre o un article.
  Hi ha classes per a transparències,
- per a publicacions de física,
- matemàtiques\SpecialChar ldots
+ per a publicacions de física
+\change_deleted -1463541724 1692788318
 ,
- fins i tot moltes universitats tenen un classe per al disseny de les tesis pròpies!
+
+\change_inserted -1463541724 1692788318
+ o
+\change_unchanged
+ matemàtiques
+\change_inserted -1463541724 1692788655
+,
+ etc.
+\change_deleted -1463541724 1692788658
+\SpecialChar ldots
+,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692788661
+f
+\change_inserted -1463541724 1692788661
+F
+\change_unchanged
+ins i tot moltes universitats tenen un classe per al
+\change_inserted -1463541724 1692788683
+ format de
+\change_unchanged
+ 
+\change_deleted -1463541724 1692788692
+disseny de
+\change_unchanged
+ les tesis 
+\change_inserted -1463541724 1692788705
+i treballs 
+\change_unchanged
+pr
+\change_inserted -1463541724 1692788709
+o
+\change_deleted -1463541724 1692788709
+ò
+\change_unchanged
+pi
+\change_deleted -1463541724 1692788711
+e
+\change_unchanged
+s!
  Un 
 \emph on
 estil
 \emph default
- es diferencia d'una classe ena que no defineix un tipus de document nou,
+ es diferencia d'una classe en
+\change_deleted -1463541724 1692788718
+a
+\change_unchanged
+ qu
+\change_inserted -1463541724 1692788720
+è
+\change_deleted -1463541724 1692788719
+e
+\change_unchanged
+ no defineix un tipus de document nou,
  sinó un 
 \emph on
 comportament
 \emph default
- diferent que pot ser usat en qualsevol document.
+ diferent que pot ser u
+\change_deleted -1463541724 1692788738
+s
+\change_inserted -1463541724 1692788741
+tilitz
+\change_unchanged
+at en qualsevol document.
  Per exemple,
- al \SpecialChar LyX
- els marges de pàgina i l'interlineat hi ha dos fitxers d'estil de \SpecialChar LaTeX
- diferents dissenyats amb aquesta fi.
+ 
+\change_deleted -1463541724 1692788760
+a
+\change_inserted -1463541724 1692788760
+e
+\change_unchanged
+l \SpecialChar LyX
+
+\change_inserted -1463541724 1692788776
+ controla
+\change_unchanged
+ els marges de pàgina i l'interlineat 
+\change_deleted -1463541724 1692788801
+hi ha
+\change_inserted -1463541724 1692788802
+mitjançant
+\change_unchanged
+ dos fitxers d'estil 
+\change_deleted -1463541724 1692788808
+de
+\change_unchanged
+ \SpecialChar LaTeX
+
+\change_deleted -1463541724 1692788821
+ diferents
+\change_inserted -1463541724 1692788821
+,
+
+\change_unchanged
+ dissenyats amb aquesta fi.
  Hi ha fitxers d'estil per a un munt de coses:
  imprimir sobres o etiquetes,
- canviar la sangria,
- afegir tipus de lletra nous,
+ canviar 
+\change_deleted -1463541724 1692788848
+la
+\change_inserted -1463541724 1692788854
+el tipus de sagnat
+\change_deleted -1463541724 1692788857
+ sangria
+\change_unchanged
+,
+ afegir 
+\change_inserted -1463541724 1692788870
+fonts tipogràfiques noves
+\change_deleted -1463541724 1692788873
+tipus de lletra nous
+\change_unchanged
+,
  manipular gràfics,
- personalitzar els encapçalaments o la bibliografia,
- alterar la col·locació i l'aparença de notes a peu de pàgina,
+ personalitzar els encapçalaments
+\change_inserted -1463541724 1692788890
+ de pàgina
+\change_unchanged
+ o la bibliografia,
+ alterar la col·locació i l'aparença de
+\change_inserted -1463541724 1692788915
+ les
+\change_unchanged
+ notes a peu de pàgina,
  taules i figures,
  personalitzar llistes,
  etc.
@@ -841,7 +2207,18 @@ Aquí teniu un resum:
 
 \begin_layout Description
 \SpecialChar TeX
- Llenguatge de composició amb capacitat per a macroinstruccions.
+ Llenguatge de composició 
+\change_inserted -1463541724 1692788437
+tipogràfica 
+\change_unchanged
+amb capacitat per a macroinstruccions
+\change_inserted -1463541724 1692788466
+\SpecialChar endofsentence
+
+\change_deleted -1463541724 1692788461
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -854,28 +2231,77 @@ Aquí teniu un resum:
 
 \begin_layout Description
 classes:
- Descripcions d'un tipus de document,
- fent servir el \SpecialChar LaTeX
+ Descripcions d'un tipus de document
+\change_deleted -1463541724 1692788612
+,
+
+\change_inserted -1463541724 1692788620
+ a fer
+\change_unchanged
+ 
+\change_deleted -1463541724 1692788625
+fent
+\change_unchanged
+ servir
+\change_inserted -1463541724 1692788632
+ amb
+\change_unchanged
+ el \SpecialChar LaTeX
 \SpecialChar endofsentence
 
 \end_layout
 
 \begin_layout Description
 estils:
- Alteren algun aspecte del comportament normal del \SpecialChar LaTeX
+ 
+\change_inserted -1463541724 1692788536
+Descripcions del comportament d'algun element particular del \SpecialChar LaTeX
+
+\change_deleted -1463541724 1692788547
+Alteren algun aspecte del comportament normal del \SpecialChar LaTeX
+
+\change_inserted -1463541724 1692788547
+\SpecialChar endofsentence
+
+\change_deleted -1463541724 1692788472
 .
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
 \SpecialChar LyX
 :
- Processador de text visual,
+ Processador de text visual
+\change_inserted -1463541724 1693227233
+ de paradigma
+\change_deleted -1463541724 1693227202
+,
+
+\change_unchanged
  WYSIWYM,
- que usa tota la potència del \SpecialChar LaTeX
- per al treball d'impressió.
+ que 
+\change_deleted -1463541724 1692788984
+usa tota la potència del
+\change_inserted -1463541724 1692788986
+fa servir el
+\change_unchanged
+ \SpecialChar LaTeX
+ per 
+\change_deleted -1463541724 1692789000
+al treball d'impressió
+\change_inserted -1463541724 1692789012
+a la composició visual dels documents\SpecialChar endofsentence
+
+\change_deleted -1463541724 1692788474
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1463541724 1692789036
 El \SpecialChar LaTeX
  és la raó per la que el \SpecialChar LyX
  es diferencia d'altres processadors de text.
@@ -893,6 +2319,8 @@ El \SpecialChar LaTeX
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1463541724 1692789036
 Igual que el \SpecialChar LaTeX
 ,
  el \SpecialChar LyX
@@ -902,6 +2330,38 @@ allò
 \emph default
  que esteu escrivint.
  L'ordinador s'encarrega de gestionar la seva aparença.
+\change_inserted -1463541724 1692789040
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1463541724 1692789055
+Aquesta secció tracta d'explicar la diferència entre el \SpecialChar LyX
+ i altres processadors de text;
+ en poques paraules:
+ la diferència és el \SpecialChar LaTeX
+.
+ Amb \SpecialChar LaTeX
+ en la capa d'accés i processament de les dades (
+\emph on
+back-end
+\emph default
+),
+ el \SpecialChar LyX
+ facilita que us concentreu en el 
+\emph on
+contingut
+\emph default
+ del document,
+ no pas en la seva 
+\emph on
+presentació
+\emph default
+,
+ de la qual ja s'encarrega el programa.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -909,39 +2369,146 @@ Navegar per la documentació
 \end_layout
 
 \begin_layout Standard
-Per facilitar les respostes a les preguntes i descriure totes les característiques del \SpecialChar LyX
+Per 
+\change_inserted -1463541724 1692814132
+a 
+\change_unchanged
+facilitar
+\change_inserted -1463541724 1692814224
+ que trobeu
+\change_unchanged
+ les respostes a les
+\change_inserted -1463541724 1692814239
+ vostres
+\change_unchanged
+ preguntes i descriure totes les característiques del \SpecialChar LyX
 ,
- la documentació s'ha dividit en diversos fitxers.
- Cada un d'ells té un propòsit concret.
+ la documentació s'ha dividit en diversos fitxers
+\change_deleted -1463541724 1692814257
+.
+\change_inserted -1463541724 1692814257
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692814262
+C
+\change_inserted -1463541724 1692814263
+c
+\change_unchanged
+ada
+\change_inserted -1463541724 1692814266
+scun
+\change_unchanged
+ 
+\change_deleted -1463541724 1692814272
+un
+\change_unchanged
+ d'ells té un propòsit concret
+\change_deleted -1463541724 1692814384
+.
+\change_inserted -1463541724 1692814385
+,
+
+\change_unchanged
  com veureu més endavant.
  Tot i això,
  abans que topeu amb algun d'aquest fitxers,
  hauríeu de llegir aquest mateix fitxer en primer lloc,
- ja que conté molta informació i comentaris útils que us poden fer estalviar temps.
+ ja que conté molta informació i comentaris útils que us poden 
+\change_deleted -1463541724 1692814673
+fer
+\change_unchanged
+ estalviar temps.
 \end_layout
 
 \begin_layout Standard
-Confiem en que el desenvolupament del \SpecialChar LyX
+Confiem en qu
+\change_inserted -1463541724 1692814679
+è
+\change_deleted -1463541724 1692814678
+e
+\change_unchanged
+ el desenvolupament del \SpecialChar LyX
  mai no finalitzarà,
- així doncs alguna documentació pot estar incompleta o desfasada,
- encara que procurem mantenir-la al dia.
+ així doncs alguna
+\change_inserted -1463541724 1692814702
+ part de la
+\change_unchanged
+ documentació pot estar incompleta o desfasada,
+ 
+\change_deleted -1463541724 1692814714
+encara
+\change_inserted -1463541724 1692814715
+malgrat
+\change_unchanged
+ 
+\change_deleted -1463541724 1692814718
+que
+\change_unchanged
+ procurem mantenir-la al dia.
  Com la resta del \SpecialChar LyX
 ,
- els manuals són la feina d'un grup de voluntaris que tenen una 
+ els manuals 
+\change_inserted -1463541724 1692783615
+son
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ la feina d'un grup de voluntaris que tenen una 
+\change_deleted -1463541724 1692814734
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted -1463541724 1692814735
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
 feina de veritat
+\change_deleted -1463541724 1692814737
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692814737
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_unchanged
 ,
  família,
- plats que rentar,
- cubells del gat que netejar,
+ plats 
+\change_inserted -1463541724 1692814744
+per
+\change_deleted -1463541724 1692814743
+que
+\change_unchanged
+ rentar,
+ cubells del gat 
+\change_inserted -1463541724 1692814751
+per
+\change_deleted -1463541724 1692814748
+que
+\change_unchanged
+ netejar,
  etc.
  (Si voleu ajudar,
- assegureu-vos de llegir la secció
+ assegureu
+\change_deleted -1463541724 1693325723
+-
+\change_inserted -1463541724 1693325723
+\SpecialChar nobreakdash
+
+\change_unchanged
+vos de llegir la secció
 \begin_inset space ~
 \end_inset
 
@@ -960,10 +2527,47 @@ nolink "false"
 
 \begin_layout Standard
 També podeu fer-nos un favor:
- si qualsevol coa d'aquest manuals us sembla confusa,
- poc clar o errònia,
- no dubteu en fer-nos-ho saber!
- Podeu posar-vos en contacte amb els encarregats actuals escrivint a 
+ si qualsevol co
+\change_inserted -1463541724 1692814789
+s
+\change_unchanged
+a d'aquest
+\change_inserted -1463541724 1692814792
+s
+\change_unchanged
+ manuals us sembla confusa,
+ poc clar
+\change_inserted -1463541724 1692814796
+a
+\change_unchanged
+ o errònia,
+ no dubteu en fer
+\change_deleted -1463541724 1693325730
+-
+\change_inserted -1463541724 1693325730
+\SpecialChar nobreakdash
+
+\change_unchanged
+nos
+\change_deleted -1463541724 1693325733
+-
+\change_inserted -1463541724 1693325733
+\SpecialChar nobreakdash
+
+\change_unchanged
+ho saber!
+ Podeu posar
+\change_deleted -1463541724 1693325741
+-
+\change_inserted -1463541724 1693325741
+\SpecialChar nobreakdash
+
+\change_unchanged
+vos en contacte amb els encarregats actuals
+\change_inserted -1463541724 1693227573
+ de la documentació
+\change_unchanged
+ escrivint a 
 \begin_inset CommandInset href
 LatexCommand href
 target "lyx-docs@lists.lyx.org"
@@ -973,9 +2577,28 @@ literal "false"
 \end_inset
 
 .
- Si teniu preguntes que no tenen una resposta evident a la documentació,
+\change_inserted -1463541724 1692814964
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1463541724 1692837796
+On trobar ajuda
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1463541724 1692814962
+ 
+\change_unchanged
+Si teniu preguntes que no tenen una resposta evident a la documentació,
  i necessiteu ajuda ràpidament,
- hi ha una llista de correu activa d'usuaris amb els que podeu posar en contacte:
+ hi ha una llista de correu activa d'usuaris amb els que podeu posar
+\change_inserted -1463541724 1692814857
+-vos
+\change_unchanged
+ en contacte:
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -986,6 +2609,44 @@ literal "false"
 \end_inset
 
 .
+
+\change_inserted -1463541724 1693325685
+ També n'hi ha una específica en castellà 
+\begin_inset CommandInset href
+LatexCommand href
+target "lyx-es@lists.lyx.org"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+ No cal registrar-se en les llistes per a escriure-hi,
+ tot i que resulta convenient.
+ Per a més informació sobre les llistes de correu del \SpecialChar LyX
+ aneu al seu 
+\begin_inset CommandInset href
+LatexCommand href
+name "lloc web"
+target "https://www.lyx.org/MailingLists"
+literal "false"
+
+\end_inset
+
+.
+ El projecte també disposa d'una wiki 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://wiki.lyx.org/"
+literal "false"
+
+\end_inset
+
+ on podreu trobar resposta a moltes preguntes,
+ tutorials i exemples sobre com aconseguir fer determinades coses en el \SpecialChar LyX
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -993,52 +2654,222 @@ El Format dels manuals
 \end_layout
 
 \begin_layout Standard
-Alguns llegireu els manuals en versió per imprimir.
- Altres podeu estar llegint-los en la pantalla del \SpecialChar LyX
+Alguns llegireu els manuals en versió 
+\change_deleted -1463541724 1693306446
+per
+\change_unchanged
+ impr
+\change_deleted -1463541724 1693306449
+imir
+\change_inserted -1463541724 1693306450
+esa
+\change_deleted -1463541724 1693306449
 .
- Hi ha algunes diferències entre la versió per imprimir i el fitxer \SpecialChar LyX
+\change_inserted -1463541724 1692816136
+;
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692816138
+a
+\change_deleted -1463541724 1692816137
+A
+\change_unchanged
+ltres 
+\change_deleted -1463541724 1692816157
+podeu estar llegint-los
+\change_unchanged
+ en la pantalla del \SpecialChar LyX
 .
- En primer lloc,
- el títol està simplement al principi del document,
- no en un pàgina separada comen algunes de les versions per imprimir.
- Ni les notes a peu de pàgina ni l'índex general es troben visibles.
- Per obrir una nota a peu de pàgina,
- que apareix d'aquesta forma:
+ Hi ha algunes diferències entre la versió 
+\change_deleted -1463541724 1693306463
+per
+\change_inserted -1463541724 1693306464
+impresa
+\change_deleted -1463541724 1693306468
+ imprimir
+\change_unchanged
+ i el fitxer \SpecialChar LyX
+.
+ En 
+\change_deleted -1463541724 1692817996
+primer lloc
+\change_inserted -1463541724 1692818005
+el \SpecialChar LyX
+
+\change_unchanged
+,
+ el títol està
+\change_deleted -1463541724 1693307037
+ simplement
+\change_unchanged
+ al principi del document,
+ no en un
+\change_inserted -1463541724 1692816232
+a
+\change_unchanged
+ pàgina separada com
+\change_inserted -1463541724 1692816220
+ 
+\change_unchanged
+en algunes de les versions 
+\change_deleted -1463541724 1693306494
+per imprimir
+\change_inserted -1463541724 1693306497
+impreses
+\change_deleted -1463541724 1693306494
+.
+\change_inserted -1463541724 1692818020
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692818023
+Ni 
+\change_unchanged
+les notes a peu de pàgina 
+\change_deleted -1463541724 1692818029
+n
+\change_unchanged
+i l'índex general 
+\change_inserted -1463541724 1692837549
+no 
+\change_deleted -1463541724 1692837495
+es
+\change_inserted -1463541724 1692837495
+son
+\change_unchanged
+ 
+\change_deleted -1463541724 1692837502
+troben
+\change_unchanged
+ visibles.
+ Per 
+\change_inserted -1463541724 1692837569
+a 
+\change_unchanged
+obrir una nota a peu de pàgina
+\change_deleted -1463541724 1692837628
+,
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692837631
+—
+
+\change_deleted -1463541724 1693307081
+que apareix d'aquesta forma
+\change_inserted -1463541724 1693307088
+tenen aquest aspecte
+\change_unchanged
+:
  
 \begin_inset Graphics
-	filename ../clipart/footnote.png
-	scale 75
+	filename clipart/notapeu.png
+	height 1.1em
 
 \end_inset
 
+
+\change_inserted -1463541724 1692837625
+—
+
+\change_deleted -1463541724 1692837624
 ,
- pitgeu sobre el quadre gris amb el botó esquerre del ratolí.
- Per veure l'índex general,
- pitgeu al seu quadre gris o en menú 
+
+\change_unchanged
+ pitgeu sobre el 
+\change_inserted -1463541724 1692839044
+re
+\change_unchanged
+quadre gris amb el botó esquerre del ratolí.
+ Per 
+\change_inserted -1463541724 1692837871
+a 
+\change_unchanged
+veure l'índex general
+\change_inserted -1463541724 1692837880
+ o taula de continguts
+\change_deleted -1463541724 1693306377
+,
+
+\change_unchanged
+ pitgeu al seu 
+\change_inserted -1463541724 1692839036
+re
+\change_unchanged
+quadre gris
+\change_inserted -1463541724 1692838896
+,
+ això mostrarà els continguts en un plafó lateral;
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1693307329
+o també podeu obrir el menú
+\change_deleted -1463541724 1693307159
+o en menú
+\change_unchanged
+ 
 \family sans
-Navega,
+Navega
+\change_deleted -1463541724 1693307346
 
 \family default
+,
+\change_inserted -1463541724 1692839899
+\SpecialChar endofsentence
+
+\change_deleted -1463541724 1692838610
  això fa que els continguts es despleguin automàticament.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 En els manuals impresos,
- totes les referències creuades apareixen amb els números reals per capítols,
+ totes les referències creuades apareixen amb els números reals 
+\change_deleted -1463541724 1692839923
+per
+\change_inserted -1463541724 1692839923
+dels
+\change_unchanged
+ capítols,
  seccions,
  subseccions i altres.
  Tot i això,
- en pantalla les referències creuades es mostren amb aquest requadre gris:
+ en 
+\change_inserted -1463541724 1692839225
+l'editor
+\change_deleted -1463541724 1692839220
+pantalla
+\change_inserted -1463541724 1692839206
+ del \SpecialChar LyX
+
+\change_unchanged
+ les referències creuades es mostren amb 
+\change_deleted -1463541724 1692839243
+aquest
+\change_inserted -1463541724 1692839243
+un
+\change_unchanged
+ requadre gris
+\change_inserted -1463541724 1692839606
+ com aquest
+\change_unchanged
+:
  
 \begin_inset Graphics
-	filename ../clipart/reference.png
-	scale 75
+	filename clipart/referencia.png
+	height 1.1em
 
 \end_inset
 
 .
  Si pitgeu en aquest tipus de requadre amb el botó esquerre,
  apareix un quadre de diàleg amb una llista de totes les referències creuades del document.
+
+\change_deleted -1463541724 1692839694
  En aquest només hi ha una anomenada 
 \begin_inset Quotes eld
 \end_inset
@@ -1048,12 +2879,39 @@ sec:Contrib
 \end_inset
 
 .
- Podeu anar a aquesta secció fent clic dret sobre el quadre o pitjant el botó 
+
+\change_unchanged
+ Podeu anar a 
+\change_deleted -1463541724 1693307585
+aquesta
+\change_inserted -1463541724 1693307590
+l'element
+\change_unchanged
+ 
+\change_inserted -1463541724 1693307598
+referenciat
+\change_deleted -1463541724 1693307600
+secció
+\change_unchanged
+ fent clic dret sobre el 
+\change_inserted -1463541724 1692840271
+re
+\change_unchanged
+quadre
+\change_inserted -1463541724 1692841071
+,
+
+\change_unchanged
+ o pitjant el botó 
+\change_deleted -1463541724 1692839144
+
 \family sans
 
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 Vés
 \begin_inset space ~
 \end_inset
@@ -1063,41 +2921,128 @@ a
 \end_inset
 
 l'etiqueta
+\change_deleted -1463541724 1692839140
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
- en el quadre de diàleg.
- Tornar a la posició anterior és igual de fàcil pitjant 
+
+\change_unchanged
+ en el quadre de diàleg
+\change_deleted -1463541724 1692841084
+.
+\change_inserted -1463541724 1693307635
+;
+ en aquest últim cas
+\change_unchanged
+ 
+\change_deleted -1463541724 1692841092
+T
+\change_inserted -1463541724 1692841093
+t
+\change_unchanged
+ornar a la posició anterior és igual de fàcil 
+\change_deleted -1463541724 1692841032
+pitjant
+\change_inserted -1463541724 1692841037
+amb el botó
+\change_unchanged
+ 
+\change_deleted -1463541724 1692839151
+
 \family sans
 
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 Vés
 \begin_inset space ~
 \end_inset
 
 enrere
+\change_deleted -1463541724 1692839158
+
 \family default
-''.
+''
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-Un cop aclarides algunes diferències entre les versions d'impressió i en pantalla d'aquest fitxer,
- podem seguir fent una ullada al seu format.
- Tant en tant veureu coses en diferents tipus de lletra:
+Un cop aclarides algunes diferències entre l
+\change_deleted -1463541724 1693308046
+es
+\change_inserted -1463541724 1693308046
+a
+\change_unchanged
+ versi
+\change_inserted -1463541724 1693308041
+ó
+\change_deleted -1463541724 1693308041
+ons
+\change_unchanged
+ 
+\change_inserted -1463541724 1693306799
+impresa
+\change_deleted -1463541724 1693306795
+d'impressió
+\change_unchanged
+ i 
+\change_deleted -1463541724 1693307830
+en pantalla
+\change_inserted -1463541724 1693308098
+la vista del \SpecialChar LyX
+
+\change_unchanged
+ d'aquest fitxer,
+ podem 
+\change_deleted -1463541724 1692841115
+seguir
+\change_inserted -1463541724 1692841118
+començar a
+\change_unchanged
+ fe
+\change_inserted -1463541724 1692841122
+r
+\change_deleted -1463541724 1692841120
+nt
+\change_unchanged
+ una ullada al seu format.
+ 
+\change_inserted -1463541724 1692841138
+De 
+\change_deleted -1463541724 1692841139
+T
+\change_inserted -1463541724 1692841139
+t
+\change_unchanged
+ant en tant veureu coses en diferents tipus
+\change_inserted -1463541724 1692839312
+ o estils
+\change_unchanged
+ de lletra:
 \end_layout
 
 \begin_layout Itemize
 El tipus 
+\change_deleted -1463541724 1692841658
+
 \emph on
-lletra cursiva
+lletra 
+\change_unchanged
+cursiva
 \emph default
  s'usa per èmfasi en general,
  raonaments genèrics,
- títols de llibres,
+ títols de llibres
+\change_inserted -1463541724 1693306851
+ i manuals
+\change_unchanged
+,
  seccions d'altres manuals i notes d'autor.
 \end_layout
 
@@ -1106,19 +3051,69 @@ El tipus
 \family typewriter
 mecanogràfic
 \family default
- s'usa per a programes i noms de fitxer,
+ 
+\change_inserted -1463541724 1693308163
+(també anomenat d'amplada fixa) 
+\change_unchanged
+s'
+\change_inserted -1463541724 1692841331
+utilitza
+\change_deleted -1463541724 1692841328
+usa
+\change_unchanged
+ per a 
+\change_inserted -1463541724 1692841215
+noms de 
+\change_unchanged
+programes i 
+\change_deleted -1463541724 1692841222
+noms de
+\change_unchanged
+ fitxer
+\change_inserted -1463541724 1692839377
+s
+\change_unchanged
+,
  codi i funcions del \SpecialChar LyX
 .
 \end_layout
 
 \begin_layout Itemize
 El tipus 
+\change_inserted -1463541724 1692839509
+
 \family sans
+pal sec 
+\family default
+o
+\family sans
+ 
+\change_unchanged
 Sans Serif
 \family default
- s'usa per a menús,
+ 
+\change_deleted -1463541724 1692841345
+s'usa 
+\change_inserted -1463541724 1692841348
+es fa servir 
+\change_unchanged
+per a menús,
  botons,
- o noms de menús emergents,
+ 
+\change_deleted -1463541724 1692839543
+o 
+\change_unchanged
+noms de 
+\change_deleted -1463541724 1692841366
+menús
+\change_inserted -1463541724 1692841581
+quadres de diàleg
+\change_unchanged
+ 
+\change_deleted -1463541724 1692841571
+emergents,
+
+\change_unchanged
  i noms de tecles.
 \end_layout
 
@@ -1127,19 +3122,45 @@ L'estil
 \noun on
  Versaletes
 \noun default
- s'usa per a noms propis de persones.
+ s'u
+\change_inserted -1463541724 1692841422
+tilitza
+\change_deleted -1463541724 1692841420
+sa
+\change_unchanged
+ per a noms propis de persones.
 \end_layout
 
 \begin_layout Itemize
-El tipus 
+
+\change_deleted -1463541724 1692841403
+El tipus
+\change_inserted -1463541724 1692841404
+L'estil
+\change_unchanged
+ 
+\change_deleted -1463541724 1692841408
+
 \series bold
-Negreta
+N
+\change_inserted -1463541724 1692841408
+n
+\change_unchanged
+egreta
 \series default
- s'usa per a codi \SpecialChar LaTeX
+ 
+\change_deleted -1463541724 1693308202
+s'usa
+\change_inserted -1463541724 1693308204
+es fa servir
+\change_unchanged
+ per a codi \SpecialChar LaTeX
 .
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1463541724 1692841859
 Respecte a les tecles de menú i dreceres de teclat,
  probablement us remetrem a la secció 
 \emph on
@@ -1174,11 +3195,28 @@ esteses
 Additional.lyx
 \family default
 ).
- Quan necessitem fer referència a associacions de tecles,
- usarem la següent convenció:
+ 
+\change_unchanged
+Quan necessitem fer referència a associacions de tecles,
+ 
+\change_deleted -1463541724 1692841886
+usarem
+\change_inserted -1463541724 1692841887
+farem servir
+\change_unchanged
+ la següent convenció:
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -1463541724 1692841924
+
+\family sans
+Ctrl+
+\change_deleted -1463541724 1692841914
+
+\family default
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -1190,6 +3228,8 @@ C-
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
  indica la tecla 
 \family sans
 Control
@@ -1198,17 +3238,25 @@ Control
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1463541724 1692842054
 \begin_inset Quotes eld
 \end_inset
 
 
 \family sans
 S-
+\change_inserted -1463541724 1692842059
+Maj+
+\change_deleted -1463541724 1692842054
+
 \family default
 
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
  indica la tecla 
 \family sans
 Majúscules (Shift)
@@ -1217,6 +3265,15 @@ Majúscules (Shift)
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -1463541724 1692842097
+
+\family sans
+Alt+
+\change_deleted -1463541724 1692842094
+
+\family default
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -1228,282 +3285,589 @@ M-
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
  indica la tecla 
+\change_inserted -1463541724 1692842113
+
 \family sans
+Alt (
+\change_unchanged
 Meta
+\change_inserted -1463541724 1693308254
+
 \family default
+ en alguns teclats).
+\change_deleted -1463541724 1692842120
 ,
  que en la majoria dels teclats serà la tecla 
 \family sans
 Alt
 \family default
 .
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1463541724 1692842176
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 F1
+\change_deleted -1463541724 1692842178
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  \SpecialChar ldots
  
+\change_deleted -1463541724 1692842179
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 F12
+\change_deleted -1463541724 1692842180
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
- són les tecles de funció.
+
+\change_unchanged
+ 
+\change_inserted -1463541724 1692783615
+son
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ les tecles de funció.
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1463541724 1692842254
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Esc
+\change_deleted -1463541724 1692842252
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
- és la tecla d'escapada.
+
+\change_unchanged
+ és la tecla d'escapa
+\change_inserted -1463541724 1692842249
+ment
+\change_deleted -1463541724 1692842248
+da
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1463541724 1692842260
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Esquerra
+\change_deleted -1463541724 1692842262
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842267
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842268
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Dreta
+\change_deleted -1463541724 1692842270
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842271
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842272
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Amunt
+\change_deleted -1463541724 1692842274
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842276
+ i
+\change_unchanged
  
+\change_deleted -1463541724 1692842278
+
 \begin_inset Quotes eld
 \end_inset
 
 
+\change_unchanged
+
 \family sans
 Avall
+\change_deleted -1463541724 1692842280
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 :
- són autoexplicatives (també s'anomenen tecles de direcció o cursors).
+ 
+\change_deleted -1463541724 1692842311
+són autoexplicatives (també s'anomenen
+\change_inserted -1463541724 1692842314
+les
+\change_unchanged
+ tecles de direcció o cursors
+\change_deleted -1463541724 1692842305
+)
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Itemize
 
+\change_deleted -1463541724 1692842361
+
 \family sans
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 Inser
+\change_deleted -1463541724 1692842359
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842358
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842357
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Supr
+\change_deleted -1463541724 1692842350
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842349
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842345
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Inici
+\change_deleted -1463541724 1692842343
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842353
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842340
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Fin
+\change_deleted -1463541724 1692842338
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842336
+,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692842334
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Av Pàg
+\change_deleted -1463541724 1692842330
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692842329
+ i
+\change_unchanged
  
+\change_deleted -1463541724 1692842326
+
 \begin_inset Quotes eld
 \end_inset
 
 
+\change_unchanged
+
 \family sans
 Re Pàg
+\change_deleted -1463541724 1692842325
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 :
- són les 6 tecles que apareixen sobre els cursors a la majoria de teclats de PC.
  
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ les 6 tecles que apareixen sobre els cursors 
+\change_deleted -1463541724 1692842448
+a
+\change_inserted -1463541724 1692842448
+en
+\change_unchanged
+ la majoria de teclats de PC.
+ 
+\change_deleted -1463541724 1692842421
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Av Pàg
+\change_deleted -1463541724 1692842416
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
- y 
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692842424
+y
+\change_inserted -1463541724 1692842425
+i
+\change_unchanged
+ 
+\change_deleted -1463541724 1692842405
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Re Pàg
+\change_deleted -1463541724 1692842402
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
- també són anomenades 
+
+\change_unchanged
+ també 
+\change_inserted -1463541724 1692783615
+son
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ anomenades 
+\change_deleted -1463541724 1692842394
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 
 \family sans
 Anterior
+\change_deleted -1463541724 1692842397
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  i 
+\change_deleted -1463541724 1692842398
+
 \begin_inset Quotes eld
 \end_inset
 
 
+\change_unchanged
+
 \family sans
 Següent
+\change_deleted -1463541724 1692842400
+
 \family default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  en alguns teclats.
 \end_layout
 
 \begin_layout Itemize
 
+\change_deleted -1463541724 1692842734
+
 \family sans
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 Retorn
+\change_deleted -1463541724 1692842734
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 
 \family default
  i 
+\change_deleted -1463541724 1692842736
+
 \family sans
 
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 Intro
+\change_deleted -1463541724 1692842737
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 
 \family default
  es refereixen totes dues a la mateixa tecla.
- Alguns teclats l'etiqueten com a 
+ Alguns teclats l'etiqueten com 
+\change_deleted -1463541724 1692843348
+a
+\change_unchanged
+ 
+\change_deleted -1463541724 1692843335
+
 \begin_inset Quotes eld
 \end_inset
 
-Return,
+
+\change_inserted -1463541724 1692843336
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_unchanged
+Return
+\change_deleted -1463541724 1692843326
+,
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -1463541724 1692843330
+
+\begin_inset Quotes frd
+\end_inset
+
+,
+
+\change_unchanged
  altres com 
+\change_inserted -1463541724 1692843357
+
+\begin_inset Quotes fld
+\end_inset
+
+
+\change_deleted -1463541724 1692843356
+
 \begin_inset Quotes eld
 \end_inset
 
-Enter,
+
+\change_unchanged
+Enter
+\change_inserted -1463541724 1692843478
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\change_deleted -1463541724 1692843354
+,
 \begin_inset Quotes erd
 \end_inset
 
- fins i tot alguns tenen dues tecles.
- El \SpecialChar LyX
- les tracta totes com la mateixa tecla,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692843368
+fins
+\change_unchanged
+ i 
+\change_deleted -1463541724 1692843370
+tot
+\change_unchanged
+ alguns tenen 
+\change_inserted -1463541724 1692843389
+ambdues
+\change_deleted -1463541724 1692843392
+dues tecles
+\change_unchanged
+.
+ 
+\change_inserted -1463541724 1692843520
+Per al
+\change_deleted -1463541724 1692843521
+El
+\change_unchanged
+ \SpecialChar LyX
+ 
+\change_deleted -1463541724 1692843525
+les tracta
+\change_unchanged
+ totes
+\change_inserted -1463541724 1692843528
+ son
+\change_unchanged
+ 
+\change_deleted -1463541724 1692843530
+com
+\change_unchanged
+ la mateixa tecla,
  així doncs,
  usarem 
 \family sans
@@ -1514,9 +3878,33 @@ Retorn
 Intro
 \family default
  indistintament.
+\change_inserted -1463541724 1692843563
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1463541724 1692860173
+Podeu consultar la llista actual de les dreceres de teclat del \SpecialChar LyX
+ en 
+\family sans
+Ajuda\SpecialChar menuseparator
+Dreceres
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+teclat
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1463541724 1692841829
 També veureu de tant en tant coses como 
 \begin_inset Quotes eld
 \end_inset
@@ -1569,6 +3957,8 @@ emacs
  les combinacions corresponen al sistema predeterminat CUA.
  Si us agrada Emacs,
  hauríeu de ser prou eixerit per llegir la documentació i imaginar les combinacions escaients..
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -1576,7 +3966,13 @@ Unitats emprades als manuals
 \end_layout
 
 \begin_layout Standard
-Per entendre les unitat emprades en aquesta documentació,
+Per entendre les unitat emprades en aquesta documentació
+\change_inserted -1463541724 1693308600
+ us pot ajudar
+\change_deleted -1463541724 1693308583
+,
+
+\change_unchanged
  la taula
 \begin_inset space ~
 \end_inset
@@ -1589,6 +3985,11 @@ nolink "false"
 
 \end_inset
 
+
+\change_inserted -1463541724 1693308606
+,
+ que
+\change_unchanged
  descriu totes les unitats disponibles al \SpecialChar LyX
 .
 \end_layout
@@ -1667,7 +4068,11 @@ mm
 \begin_inset Text
 
 \begin_layout Plain Layout
-millímetre
+mil
+\change_inserted -1463541724 1692844027
+·
+\change_unchanged
+límetre
 \end_layout
 
 \end_inset
@@ -2118,7 +4523,22 @@ Els manuals
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1463541724 1693309503
+Podeu trobar tots els manuals de la documentació en el menú 
+\family sans
+Ajuda
+\family default
+.
+ Donem a continuació una descripció dels manuals bàsics:
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1463541724 1693309512
 La llista següent descriu els continguts de cada un dels fitxers de documentació:
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -2128,28 +4548,56 @@ Introducció Aquest fitxer.
 \begin_layout Description
 Tutorial Si sou novell en l'ús del \SpecialChar LyX
 ,
- i mai no heu emprat el \SpecialChar LaTeX
+ i mai no heu emprat
+\change_deleted -1463541724 1693322727
+ el
+\change_unchanged
+ \SpecialChar LaTeX
 ,
  hauríeu de començar per aquí.
- Si ja heu emprat el \SpecialChar LaTeX
+ Si ja 
+\change_inserted -1463541724 1692918252
+l'
+\change_unchanged
+heu emprat
+\change_deleted -1463541724 1692918267
+ el \SpecialChar LaTeX
 ,
+
+\change_unchanged
  també hauríeu de llegir el 
 \emph on
 Tutorial
 \emph default
 ,
  començant per la secció 
+\change_deleted -1463541724 1692859947
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
+
+\emph on
 \SpecialChar LyX
  per a usuaris de \SpecialChar LaTeX
+
+\change_deleted -1463541724 1692859952
+
+\emph default
 
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 .
- (Tampoc us vindria malament fullejar la resta del document).
+ (Tampoc
+\change_inserted -1463541724 1692918228
+ no
+\change_unchanged
+ us vindria malament fullejar la resta del document).
 \end_layout
 
 \begin_layout Description
@@ -2169,10 +4617,38 @@ l
 \emph on
 '
 \emph default
-usuari La documentació principal.
- Intentarem cobrir aquí la major part de les opcions i característiques bàsiques del \SpecialChar LyX
+usuari La 
+\change_inserted -1463541724 1692917650
+part principal de la 
+\change_unchanged
+documentació
+\change_deleted -1463541724 1692917654
+ principal
+\change_unchanged
 .
- El manual principal suposa que heu llegit el 
+ Intentarem cobrir aquí la major part de les 
+\change_deleted -1463541724 1692918462
+opcions
+\change_inserted -1463541724 1692918467
+funcions
+\change_unchanged
+ i característiques bàsiques del \SpecialChar LyX
+.
+ 
+\change_deleted -1463541724 1693323489
+El
+\change_inserted -1463541724 1693323493
+Aquest
+\change_unchanged
+ manual
+\change_deleted -1463541724 1692917698
+ principal
+\change_unchanged
+ 
+\change_inserted -1463541724 1692918496
+pre
+\change_unchanged
+suposa que heu llegit el 
 \emph on
 Tutorial
 \emph default
@@ -2200,10 +4676,36 @@ l'usuari
  Explica amb detall l'ús de taules,
  gràfics,
  flotants,
- notes i quadres.
+ notes
+\change_inserted -1463541724 1692918965
+,
+ inclusió de codi de programació
+\change_unchanged
+ i 
+\change_deleted -1463541724 1693323894
+quadres
+\change_inserted -1463541724 1693323916
+marcs envolupants
+\change_unchanged
+.
  A més a més,
  conté molts trucs d'experts en \SpecialChar LaTeX
 .
+\change_inserted -1463541724 1692860058
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1463541724 1692953793
+Matemàtiques Ampliació de la 
+\emph on
+Guia de l'usuari
+\emph default
+.
+ Explica en detall com escriure tot tipus de fórmules matemàtiques.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -2211,7 +4713,13 @@ Característiques
 \begin_inset space ~
 \end_inset
 
-esteses Ampliació de la 
+
+\change_deleted -1463541724 1692860016
+esteses
+\change_inserted -1463541724 1692860021
+addicionals
+\change_unchanged
+ Ampliació de la 
 \emph on
 Guia
 \begin_inset space ~
@@ -2224,17 +4732,78 @@ de
 l'usuari
 \emph default
 .
- Documenta l'ús d'ordres pures de \SpecialChar LaTeX
+ Documenta l'ús d'ordres 
+\change_deleted -1463541724 1692919131
+pures
+\change_unchanged
+ de
+\change_inserted -1463541724 1692919145
+l
+\change_unchanged
+ \SpecialChar LaTeX
 ,
- formats addicionals i característiques específiques d'edició.
+ formats
+\change_inserted -1463541724 1693323659
+ (fitxers 
+\emph on
+layout
+\emph default
+)
+\change_unchanged
+ addicionals i característiques específiques d'edició.
 \end_layout
 
 \begin_layout Description
-Personalització Una descripció de característiques avançades del \SpecialChar LyX
+Personalització 
+\change_deleted -1463541724 1692919227
+Una d
+\change_inserted -1463541724 1692919227
+D
+\change_unchanged
+escripció de
+\change_inserted -1463541724 1692919230
+ les
+\change_unchanged
+ característiques avançades del \SpecialChar LyX
 ,
- incloent-hi com personalitzar el comportament global del programa:
+ incloent
+\change_deleted -1463541724 1693323973
+-
+\change_inserted -1463541724 1693323973
+\SpecialChar nobreakdash
+
+\change_unchanged
+hi com personalitzar el comportament global del programa:
  coses com associacions de tecles,
  internacionalització i fitxers de configuració.
+
+\change_inserted -1463541724 1693309134
+ També conté informació sobre els fitxers de format del \SpecialChar LyX
+ (fitxers 
+\emph on
+layout
+\emph default
+),
+ que son necessaris per a poder fer servir classes o paquets \SpecialChar LaTeX
+ amb el \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -1463541724 1693228203
+Dreceres
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+teclat Taules amb les dreceres de teclat definides en el \SpecialChar LyX
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
@@ -2248,14 +4817,63 @@ del
 
 \SpecialChar LaTeX
  El \SpecialChar LyX
- explora el vostre sistema durant la instal·lació.
- Aquest fitxer conté la informació que el \SpecialChar LyX
- ha extret en la instal·lació.
- Examineu-lo per veure si trobeu a mancar alguna cosa que hauríeu de tenir.
+ explora el 
+\change_deleted -1463541724 1692920103
+vostre
+\change_unchanged
+ sistema
+\change_inserted -1463541724 1692920197
+ i genera 
+\change_deleted -1463541724 1692920103
+ durant la instal·lació.
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692920104
+A
+\change_inserted -1463541724 1692920104
+a
+\change_unchanged
+quest fitxer
+\change_inserted -1463541724 1692920107
+,
+ que
+\change_unchanged
+ conté la informació que 
+\change_deleted -1463541724 1692920204
+el \SpecialChar LyX
+
+\change_unchanged
+ ha extret 
+\change_deleted -1463541724 1692919687
+en la instal·lació
+\change_inserted -1463541724 1692920213
+de la distribució \SpecialChar LaTeX
+ instal·lada
+\change_unchanged
+.
+ Examineu
+\change_deleted -1463541724 1693324045
+-
+\change_inserted -1463541724 1693324045
+\SpecialChar nobreakdash
+
+\change_unchanged
+lo per veure si trobeu a mancar 
+\change_deleted -1463541724 1693324061
+alguna cosa
+\change_inserted -1463541724 1693324064
+quelcom
+\change_unchanged
+ que hauríeu de tenir.
 \end_layout
 
 \begin_layout Standard
-Aquests fitxers faran referència uns als altres quan sigui necessari.
+Aquests fitxers faran referència 
+\change_inserted -1463541724 1692920735
+els 
+\change_unchanged
+uns als altres quan sigui necessari.
  Per exemple,
  la 
 \emph on
@@ -2269,10 +4887,18 @@ de
 
 l'usuari
 \emph default
- explica 
-\emph on
-alguna cosa
-\emph default
+ explica algun
+\change_inserted -1463541724 1692921251
+es
+\change_deleted -1463541724 1692921251
+a
+\change_unchanged
+ cos
+\change_inserted -1463541724 1692919812
+es
+\change_deleted -1463541724 1692919811
+a
+\change_unchanged
  sobre la instal·lació i personalització,
  però remet al lector al manual
 \emph on
@@ -2316,9 +4942,13 @@ Tutorial
 \begin_layout Standard
 Si no ho feu,
  podríeu frustrar-vos sense necessitat.
+
+\change_deleted -1463541724 1692921323
  El \SpecialChar LyX
  fa tot el que necessiteu d'un processador de text,
  però d'una manera diferent.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -2340,30 +4970,93 @@ Col·laborar amb el \SpecialChar LyX
 
 \begin_layout Standard
 El \SpecialChar LyX
- està escrit gairebé completament en llenguatge C++ (l'importador \SpecialChar LaTeX
+ està escrit gairebé completament en llenguatge C++ (l'importador 
+\change_inserted -1463541724 1693228312
+de fitxers 
+\change_unchanged
+\SpecialChar LaTeX
  està escrit en Python).
- És un projecte molt extens,
- i per tant no és lliure d'errors,
+ És un projecte molt extens
+\change_deleted -1463541724 1692921417
+,
+
+\change_unchanged
+ i per tant no 
+\change_deleted -1463541724 1692921420
+és
+\change_inserted -1463541724 1692921421
+està
+\change_unchanged
+ lliure d'errors
+\change_deleted -1463541724 1692921424
+,
+
+\change_unchanged
  ni de la necessitat de millores en el codi font.
 \end_layout
 
 \begin_layout Subsubsection
-Informació d'errors
+Informa
+\change_deleted -1463541724 1692921356
+ció
+\change_inserted -1463541724 1692921356
+r
+\change_unchanged
+ d'errors
 \end_layout
 
 \begin_layout Standard
 En usar el \SpecialChar LyX
- és possible que observeu comportaments que es puguin considerar com errors.
- Encara que és estrany,
+ és possible que observeu comportaments que es puguin considerar 
+\change_deleted -1463541724 1692921373
+com
+\change_unchanged
+ errors
+\change_deleted -1463541724 1693228340
+.
+
+\change_inserted -1463541724 1693228346
+ i,
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1693228348
+E
+\change_inserted -1463541724 1693228348
+e
+\change_unchanged
+ncara que és estrany,
  poden ocórrer penjades.
- Els problemes de la interfície d'usuari es consideren error majors per l'equip \SpecialChar LyX
+ Els problemes de la interfície d'usuari es consideren error majors per l'equip 
+\change_inserted -1463541724 1692922169
+del 
+\change_unchanged
+\SpecialChar LyX
 :
- es consideren d'interès especial les indicacions sobre parts de la interfície que trobeu confuses o poc clares.
+ 
+\change_deleted -1463541724 1693228381
+es consideren
+\change_inserted -1463541724 1693228382
+son
+\change_unchanged
+ d'interès especial les indicacions sobre parts de la interfície que trobeu confuses o poc clares.
 \end_layout
 
 \begin_layout Standard
 El \SpecialChar LyX
- té un sistema de seguiment d'errors allotjat a 
+ té un sistema de seguiment d'errors allotjat a
+\change_inserted -1463541724 1693324716
+
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+
+\change_deleted -1463541724 1693324715
+
+\family default
+ 
 \family typewriter
 
 \begin_inset Flex URL
@@ -2377,12 +5070,42 @@ https://www.lyx.org/trac/wiki/BugTrackerHome
 \end_inset
 
 
+\change_inserted -1463541724 1693324628
+
 \family default
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.lyx.org/trac/wiki/BugTrackerHome"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
 .
- Hauríeu de comprovar en aquest sistema abans d'informar de qualsevol error,
- per si s'hagués informat ja de l'error.
+ Hauríeu de 
+\change_deleted -1463541724 1692955562
+comprovar
+\change_inserted -1463541724 1692955567
+cercar
+\change_unchanged
+ en aquest sistema abans d'informar de qualsevol error,
+ per si s
+\change_inserted -1463541724 1692955934
+e n
+\change_unchanged
+'hagués informat ja
+\change_deleted -1463541724 1692955942
+ de l'error
+\change_unchanged
+.
  Si teniu algun comentari referent a un error conegut o voleu informar d'un de nou,
- podeu usar el rastrejador d'errors o enviar un missatge a la llista de correu de desenvolupament,
+ podeu usar el rastrejador d'errors o enviar un missatge a la llista de correu de desenvolupament
+\change_deleted -1463541724 1692956569
+,
+
+\change_unchanged
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -2394,8 +5117,14 @@ literal "false"
 
 .
  Podeu accedir als arxius històrics d'aquesta llista des de l'enllaç del lloc web principal del \SpecialChar LyX
+
+\change_deleted -1463541724 1692956119
 ,
+
+\change_unchanged
  
+\change_deleted -1463541724 1692955631
+
 \family typewriter
 
 \begin_inset Flex URL
@@ -2409,20 +5138,124 @@ https://www.lyx.org/
 \end_inset
 
 
+\change_inserted -1463541724 1692955636
+
 \family default
+
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.lyx.org/MailingLists"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Standard
-Un informe d'errors vàlid ha d'incloure com a mínim la versió de \SpecialChar LyX
- amb la que heu tingut el problema.
- Es prefereixen descripcions precises i detallades – quant més temps inverteixen els desenvolupadors en trobar l'origen de l'error,
- menys temps tenen per a les millores.
- Mencioneu el sistema i versió en el que executeu el \SpecialChar LyX
+Un informe d'errors 
+\change_deleted -1463541724 1692956620
+vàlid
+\change_inserted -1463541724 1692956620
+útil
+\change_unchanged
+ ha d'incloure com a mínim la versió de
+\change_inserted -1463541724 1692956645
+l
+\change_unchanged
+ \SpecialChar LyX
+ amb 
+\change_deleted -1463541724 1692956632
+la
+\change_unchanged
+ qu
+\change_deleted -1463541724 1692956635
+e
+\change_inserted -1463541724 1692956635
+è
+\change_unchanged
+ heu tingut el problema
+\change_deleted -1463541724 1692956703
 .
- Doneu les versions de les biblioteques instal·lades en el vostre sistema i,
+\change_inserted -1463541724 1692956720
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692956715
+Es prefereixen
+\change_inserted -1463541724 1692956715
+i
+\change_unchanged
+ 
+\change_inserted -1463541724 1692956746
+serà més útil encara si afegiu 
+\change_unchanged
+descripcions precises i detallades 
+\change_deleted -1463541724 1692956753
+– quant
+\change_inserted -1463541724 1692955886
+—
+com
+\change_unchanged
+ més temps inverteixen els desenvolupadors en trobar l'origen de l'error,
+ menys temps tenen per a les millores
+\change_inserted -1463541724 1692955889
+—
+
+\change_unchanged
+.
+ Mencioneu el sistema
+\change_inserted -1463541724 1692956856
+ operatiu
+\change_unchanged
+ i
+\change_inserted -1463541724 1692956860
+ la seva
+\change_unchanged
+ versió en 
+\change_deleted -1463541724 1692956898
+el 
+\change_unchanged
+qu
+\change_inserted -1463541724 1692956900
+è
+\change_deleted -1463541724 1692956899
+e
+\change_unchanged
+ executeu el \SpecialChar LyX
+
+\change_deleted -1463541724 1692956949
+.
+\change_inserted -1463541724 1692956949
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692956951
+D
+\change_inserted -1463541724 1692956951
+d
+\change_unchanged
+oneu 
+\change_inserted -1463541724 1692957030
+també 
+\change_unchanged
+les versions de les biblioteques instal·lades en el vostre sistema i,
  si és rellevant,
- les versions dels programes extern que usa el \SpecialChar LyX
+ les versions dels programes extern
+\change_inserted -1463541724 1692957043
+s
+\change_unchanged
+ que 
+\change_deleted -1463541724 1692957047
+usa
+\change_inserted -1463541724 1692957052
+utilitza
+\change_unchanged
+ el \SpecialChar LyX
 .
  Si és un problema relacionat amb la compilació o la configuració,
  incloeu el fitxer 
@@ -2431,6 +5264,25 @@ config.log
 \family default
 ,
  i mencioneu el compilador que empreu.
+
+\change_inserted -1463541724 1693324515
+ Part d'aquesta informació la podeu trobar en el menú 
+\family sans
+Ajuda\SpecialChar menuseparator
+Quant
+\begin_inset space ~
+\end_inset
+
+al
+\begin_inset space ~
+\end_inset
+
+\SpecialChar LyX
+
+\family default
+.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -2439,17 +5291,50 @@ Contribuir amb correccions d'errors i característiques noves
 
 \begin_layout Standard
 Si heu fet canvis en el codi font del \SpecialChar LyX
- que penseu que haurien d'incorporar-se,
- envieu-los com a fitxer 
+ que penseu que haurien d'incorporar
+\change_deleted -1463541724 1693324766
+-
+\change_inserted -1463541724 1693324766
+\SpecialChar nobreakdash
+
+\change_unchanged
+se,
+ envieu-los 
+\change_deleted -1463541724 1692957963
+com a
+\change_inserted -1463541724 1692957964
+en un
+\change_unchanged
+ fitxer 
+\change_deleted -1463541724 1692957612
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
+
+\family typewriter
 diff
+\change_deleted -1463541724 1692957623
+
+\family default
+
 \begin_inset Quotes erd
 \end_inset
 
- (en format unificat) a la llita de desenvolupament mencionada anteriorment,
- juntament amb un fitxer de registre de canvis,
+
+\change_unchanged
+ (en format unificat) a la lli
+\change_inserted -1463541724 1692957981
+s
+\change_unchanged
+ta de desenvolupament mencionada anteriorment,
+ juntament amb un fitxer de registre de canvis
+\change_deleted -1463541724 1692958005
+,
+
+\change_unchanged
  i una descripció del que fa el pedaç.
 \end_layout
 
@@ -2459,12 +5344,26 @@ Contribuir a la documentació
 
 \begin_layout Standard
 La documentació del \SpecialChar LyX
- és estensa;
+ és e
+\change_deleted -1463541724 1692957989
+s
+\change_inserted -1463541724 1692957989
+x
+\change_unchanged
+tensa;
  tot i això,
  el \SpecialChar LyX
  està en desenvolupament continu i cada nova versió afegeix noves característiques.
- Si observeu alguna documentació que necessita millores,
- si trobeu cap error o teniu suggeriments,
+ Si observeu alguna
+\change_inserted -1463541724 1692958103
+ part de la
+\change_unchanged
+ documentació que necessita millores,
+ si 
+\change_inserted -1463541724 1692958116
+hi 
+\change_unchanged
+trobeu cap error o teniu suggeriments,
  aquesta secció us indica com procedir.
 \end_layout
 
@@ -2494,10 +5393,42 @@ Unir-se a l'equip de documentació
 \begin_layout Standard
 El Projecte de Documentació del \SpecialChar LyX
 ,
- como tota la resta del projecte \SpecialChar LyX
+ com
+\change_deleted -1463541724 1692958191
+o
+\change_unchanged
+ tota la resta del projecte \SpecialChar LyX
 ,
- sempre pot aprofitar la teva ajuda!
- Si esteu interessat en col·laborar amb el Projecte de Documentació,
+ sempre pot aprofitar la 
+\change_deleted -1463541724 1692958513
+teva
+\change_inserted -1463541724 1692958513
+vostra
+\change_unchanged
+ ajuda!
+ Si 
+\change_deleted -1463541724 1692958532
+esteu
+\change_inserted -1463541724 1692958533
+teniu
+\change_unchanged
+ inter
+\change_inserted -1463541724 1692958536
+ès
+\change_deleted -1463541724 1692958538
+essat
+\change_unchanged
+ 
+\change_deleted -1463541724 1692958540
+en
+\change_inserted -1463541724 1692958540
+a
+\change_unchanged
+ col·laborar amb el Projecte de Documentació
+\change_deleted -1463541724 1692958551
+,
+
+\change_unchanged
  heu de fer el següent:
 \end_layout
 
@@ -2507,6 +5438,8 @@ Obteniu el darrer codi font del \SpecialChar LyX
 \begin_inset Newline newline
 \end_inset
 
+
+\change_deleted -1463541724 1692958303
 
 \begin_inset Flex URL
 status collapsed
@@ -2519,10 +5452,26 @@ https://www.lyx.org/trac/browser/lyxgit/lib/doc?rev=master
 \end_inset
 
 
+\change_inserted -1463541724 1692958309
+
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.lyx.org/trac/browser/lyxgit/lib/doc?rev=master"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
-Llegiu-lo el 
+Llegiu
+\change_deleted -1463541724 1692958590
+-lo
+\change_unchanged
+ el 
 \emph on
 Tutorial
 \emph default
@@ -2542,7 +5491,13 @@ l'usuari
 \begin_inset Newline newline
 \end_inset
 
-Això és per a donar-vos idees.
+Això és per a donar-vos idees
+\change_deleted -1463541724 1692958353
+.
+\change_inserted -1463541724 1692958368
+,
+ ja que son
+\change_deleted -1463541724 1692958385
  El 
 \emph on
 Tutorial
@@ -2559,14 +5514,38 @@ de
 
 l'usuari
 \emph default
- són,
+ són
+\change_unchanged
+,
  probablement,
- la part més actualitzada de la documentació.
- Hauríeu de ser capça de fer-vos una idea de com desitja que es vegin i es llegeixin els manuals.
+ la part més actualitzada de la documentació
+\change_deleted -1463541724 1692958817
+.
+\change_inserted -1463541724 1692958817
+;
+
+\change_unchanged
+ 
+\change_deleted -1463541724 1692958440
+Hauríeu de ser capça de
+\change_inserted -1463541724 1692958826
+ us ajudaran a
+\change_unchanged
+ fer-vos una idea de com 
+\change_inserted -1463541724 1692958452
+es 
+\change_unchanged
+desitja que es vegin i es llegeixin els manuals.
 \end_layout
 
 \begin_layout Enumerate
-Poseu-vos en contacte amb l'equip a:
+Poseu-vos en contacte amb l'equip 
+\change_inserted -1463541724 1692958845
+via
+\change_deleted -1463541724 1692958844
+a
+\change_unchanged
+:
 \begin_inset Newline newline
 \end_inset
 
@@ -2583,12 +5562,58 @@ literal "false"
 \begin_inset Newline newline
 \end_inset
 
-per a discutir i remodelar propostes.
+per a discutir 
+\change_inserted -1463541724 1692958887
+les vostres 
+\change_deleted -1463541724 1692958869
+i remodelar
+\change_unchanged
+ propostes.
 \end_layout
 
 \begin_layout Standard
-Els canvis que podeu proposar poden anar des de clarificar el text fins a importants reestructuracions importants d'un documents.
- Totes i cada una de les millores són benvingudes gratament.
+
+\change_deleted -1463541724 1692958915
+Els canvis que podeu proposar poden anar
+\change_inserted -1463541724 1692958926
+S'accepten tot tipus de canvis,
+
+\change_unchanged
+ des de clarificar el text
+\change_inserted -1463541724 1692958934
+,
+
+\change_unchanged
+ fins a importants reestructuracions 
+\change_deleted -1463541724 1692958219
+importants
+\change_unchanged
+ 
+\change_deleted -1463541724 1692958224
+d'un
+\change_inserted -1463541724 1692958944
+de la
+\change_unchanged
+ document
+\change_inserted -1463541724 1692958947
+ació
+\change_deleted -1463541724 1692958946
+s
+\change_unchanged
+.
+ Totes i cada
+\change_inserted -1463541724 1692958959
+sc
+\change_deleted -1463541724 1692958959
+ 
+\change_unchanged
+una de les millores 
+\change_inserted -1463541724 1692783615
+son
+\change_deleted -1463541724 1692783615
+són
+\change_unchanged
+ benvingudes gratament.
 \end_layout
 
 \end_body

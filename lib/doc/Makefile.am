@@ -71,6 +71,11 @@ dist_cadoc_DATA = \
 	ca/Intro.lyx \
 	ca/Shortcuts.lyx
 
+caclipartdocdir = $(cadocdir)/clipart
+dist_caclipartdoc_DATA = \
+	ca/clipart/notapeu.png \
+	ca/clipart/referencia.png
+
 csdocdir = $(docdir)/cs
 dist_csdoc_DATA = \
 	cs/Tutorial.lyx
