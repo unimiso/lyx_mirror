@@ -56,6 +56,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Índice
@@ -74,7 +75,7 @@
 \papersides 1
 \paperpagestyle default
 \tablestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \change_bars false
 \postpone_fragile_content false
@@ -83,6 +84,7 @@
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\author -1463541724 "Daniel" d3vf4n@tutanota.com
 \end_header
 
 \begin_body
@@ -100,15 +102,29 @@ Lo más importante que hay que saber para usar \SpecialChar LyX
 \begin_layout Enumerate
 \SpecialChar LyX
  viene con una excelente documentación,
- por favor ¡úsela!
- Puede comenzar con el menú 
+ por favor ¡ús
+\change_inserted -1463541724 1693500073
+a
+\change_deleted -1463541724 1693500073
+e
+\change_unchanged
+la!
+ Puede
+\change_inserted -1463541724 1693500078
+s
+\change_unchanged
+ comenzar con el menú 
 \family sans
 Ayuda\SpecialChar menuseparator
 Introducción
 \family default
 ,
  que da una introducción muy breve a la documentación.
- Después puede aprender a usar \SpecialChar LyX
+ Después puede
+\change_inserted -1463541724 1693500087
+s
+\change_unchanged
+ aprender a usar \SpecialChar LyX
  con 
 \family sans
 Ayuda\SpecialChar menuseparator
@@ -128,14 +144,34 @@ procesador de documentos
  es distinto a los procesadores de texto convencionales,
  haciendo que resulte más sencilla la tarea de escribir documentos;
  pero solo un poco distinto,
- no se asuste.
- La documentación le dejará todo claro.
+ no 
+\change_deleted -1463541724 1693500103
+s
+\change_inserted -1463541724 1693500103
+t
+\change_unchanged
+e asuste
+\change_inserted -1463541724 1693500107
+s
+\change_unchanged
+.
+ La documentación 
+\change_deleted -1463541724 1693500115
+le
+\change_unchanged
+ dejará todo claro.
 \end_layout
 
 \begin_layout Enumerate
 Los documentos producidos con \SpecialChar LyX
  tienen un aspecto impecable.
- Seleccione el menú 
+ Seleccion
+\change_deleted -1463541724 1693500121
+e
+\change_inserted -1463541724 1693500121
+a
+\change_unchanged
+ el menú 
 \family sans
 Documento\SpecialChar menuseparator
 Ver
@@ -148,7 +184,13 @@ Ver
 
 (pdflatex)]
 \family default
- o pulse en la barra de herramientas el botón 
+ o puls
+\change_deleted -1463541724 1693500126
+e
+\change_inserted -1463541724 1693500126
+a
+\change_unchanged
+ en la barra de herramientas el botón 
 \begin_inset Info
 type  "icon"
 arg   "buffer-view"
@@ -176,8 +218,24 @@ Tutorial
 \emph default
 .
  (Al resto de lectores:
- no se preocupe,
- no necesita saber \SpecialChar LaTeX
+ no 
+\change_deleted -1463541724 1693500199
+se
+\change_inserted -1463541724 1693500200
+os
+\change_unchanged
+ preocup
+\change_inserted -1463541724 1693500211
+éis
+\change_deleted -1463541724 1693500209
+e
+\change_unchanged
+,
+ no 
+\change_inserted -1463541724 1693500216
+se 
+\change_unchanged
+necesita saber \SpecialChar LaTeX
  para usar \SpecialChar LyX
 ).
 \end_layout
@@ -199,6 +257,10 @@ Personalización
 \begin_layout Enumerate
 El sitio web de \SpecialChar LyX
  en Internet está en
+\change_inserted -1463541724 1693500782
+ 
+\change_unchanged
+
 \begin_inset Flex URL
 status collapsed
 
@@ -210,8 +272,18 @@ https://www.lyx.org/WebEs.Home
 \end_inset
 
 .
- Allí podrá encontrar información sobre el programa,
- suscribirse a la(s) lista(s) de correo,
+ Allí podrá
+\change_inserted -1463541724 1693500242
+s
+\change_unchanged
+ encontrar información sobre el programa,
+ suscribir
+\change_deleted -1463541724 1693500248
+s
+\change_inserted -1463541724 1693500248
+t
+\change_unchanged
+e a la(s) lista(s) de correo,
  ver la introducción a \SpecialChar LyX
  en imágenes (
 \begin_inset Flex URL
@@ -233,7 +305,13 @@ https://www.lyx.org/WebEs.Walkthrough
 Nota para usuarios de GNU/Linux:
 
 \series default
- compruebe que los paquetes de idioma de la distribución \SpecialChar LaTeX
+ comprueb
+\change_deleted -1463541724 1693500261
+e
+\change_inserted -1463541724 1693500261
+a
+\change_unchanged
+ que los paquetes de idioma de la distribución \SpecialChar LaTeX
  
 \family sans
 \SpecialChar TeX
@@ -245,7 +323,11 @@ Live
 \family default
  están instalados,
  sino \SpecialChar LaTeX
- le dará errores.
+ 
+\change_deleted -1463541724 1693500272
+le
+\change_unchanged
+ dará errores.
 \begin_inset Newline newline
 \end_inset
 
