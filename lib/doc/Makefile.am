@@ -68,7 +68,8 @@ dist_ardoc_DATA = \
 
 cadocdir = $(docdir)/ca
 dist_cadoc_DATA = \
-	ca/Intro.lyx
+	ca/Intro.lyx \
+	ca/Shortcuts.lyx
 
 csdocdir = $(docdir)/cs
 dist_csdoc_DATA = \
