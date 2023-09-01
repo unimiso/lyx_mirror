@@ -741,12 +741,44 @@ A Guide to \SpecialChar LaTeX2e
 
 \emph default
 ,
- by Helmut Kopka and Patrick Daly,
+ by 
+\noun on
+Helmut Kopka
+\noun default
+ and 
+\noun on
+Patrick Daly
+\noun default
+,
  which has an entry in the bibliography of the 
 \emph on
 User's Guide
 \emph default
 \SpecialChar endofsentence
+
+\change_deleted 5863208 1693593461
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693568855
+Changed the fontface of the names in this footnote according to section 2.2.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693568875
+Now ALL names in this document use the same fontface.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -1008,19 +1040,7 @@ Hopefully,
 \begin_inset Quotes eld
 \end_inset
 
-
-\change_inserted -1463541724 1692917953
-r
-\change_deleted -1463541724 1692917953
-R
-\change_unchanged
-eal 
-\change_inserted -1463541724 1692963264
-j
-\change_deleted -1463541724 1692963263
-J
-\change_unchanged
-obs
+Real Jobs
 \begin_inset Quotes erd
 \end_inset
 
