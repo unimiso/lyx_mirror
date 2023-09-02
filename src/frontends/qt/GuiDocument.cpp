@@ -2178,30 +2178,6 @@ void GuiDocument::setMargins()
 		marginsModule->marginCB->setChecked(!bp_.use_geometry);
 		setCustomMargins(!bp_.use_geometry);
 	}
-
-	// set some placeholder text that hint on defaults
-	QString const placeholder = marginsModule->marginCB->isChecked() ?
-		qt_("Class defaults") : qt_("Package defaults");
-	// set tooltip depending on gemoetry state
-	QString const tooltip = marginsModule->marginCB->isChecked() ?
-		qt_("If no value is given, the defaults as set by the class are used.")
-		: qt_("If no value is given, the defaults as set by the geometry package or a package/class overriding geometry's defaults are used.");
-	marginsModule->topLE->setPlaceholderText(placeholder);
-	marginsModule->bottomLE->setPlaceholderText(placeholder);
-	marginsModule->innerLE->setPlaceholderText(placeholder);
-	marginsModule->outerLE->setPlaceholderText(placeholder);
-	marginsModule->headheightLE->setPlaceholderText(placeholder);
-	marginsModule->headsepLE->setPlaceholderText(placeholder);
-	marginsModule->footskipLE->setPlaceholderText(placeholder);
-	marginsModule->columnsepLE->setPlaceholderText(placeholder);
-	marginsModule->topLE->setToolTip(tooltip);
-	marginsModule->bottomLE->setToolTip(tooltip);
-	marginsModule->innerLE->setToolTip(tooltip);
-	marginsModule->outerLE->setToolTip(tooltip);
-	marginsModule->headheightLE->setToolTip(tooltip);
-	marginsModule->headsepLE->setToolTip(tooltip);
-	marginsModule->footskipLE->setToolTip(tooltip);
-	marginsModule->columnsepLE->setToolTip(tooltip);
 }
 
 
@@ -2267,10 +2243,10 @@ void GuiDocument::setCustomMargins(bool custom)
 
 	// set some placeholder text that hint on defaults
 	QString const placeholder = marginsModule->marginCB->isChecked() ?
-		qt_("Class defaults") : qt_("Package defaults");
+		qt_("Default margins") : qt_("Package defaults");
 	// set tooltip depending on gemoetry state
 	QString const tooltip = marginsModule->marginCB->isChecked() ?
-		qt_("If no value is given, the defaults as set by the class are used.")
+		qt_("If no value is given, the defaults as set by the class, a package or the preamble are used.")
 		: qt_("If no value is given, the defaults as set by the geometry package or a package/class overriding geometry's defaults are used.");
 	marginsModule->topLE->setPlaceholderText(placeholder);
 	marginsModule->bottomLE->setPlaceholderText(placeholder);
@@ -2288,7 +2264,6 @@ void GuiDocument::setCustomMargins(bool custom)
 	marginsModule->headsepLE->setToolTip(tooltip);
 	marginsModule->footskipLE->setToolTip(tooltip);
 	marginsModule->columnsepLE->setToolTip(tooltip);
-
 }
 
 
