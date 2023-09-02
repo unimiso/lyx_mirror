@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-08-30 19:39+0200\n"
-"PO-Revision-Date: 2023-08-30 18:12+0000\n"
+"POT-Creation-Date: 2023-09-02 15:08+0200\n"
+"PO-Revision-Date: 2023-09-02 13:13+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -33118,17 +33118,21 @@ msgstr "Áno, &vrátiť a uplatniť"
 msgid "No, &Dismiss Changes"
 msgstr "Nie, zmeny &zahodiť"
 
-#: src/frontends/qt/GuiDocument.cpp:2165 src/frontends/qt/GuiDocument.cpp:2251
-msgid "Class defaults"
-msgstr "Triedne predvoľby"
+#: src/frontends/qt/GuiDocument.cpp:2246
+msgid "Default margins"
+msgstr "Štandardné okraje"
 
 #: src/frontends/qt/GuiDocument.cpp:2165 src/frontends/qt/GuiDocument.cpp:2251
 msgid "Package defaults"
 msgstr "Predvoľby balíka"
 
-#: src/frontends/qt/GuiDocument.cpp:2168 src/frontends/qt/GuiDocument.cpp:2254
-msgid "If no value is given, the defaults as set by the class are used."
-msgstr "Bez danej hodnoty sa použijú triedne predvoľby."
+#: src/frontends/qt/GuiDocument.cpp:2249
+msgid ""
+"If no value is given, the defaults as set by the class, a package or the "
+"preamble are used."
+msgstr ""
+"Bez danej hodnoty sa použijú predvoľby triedy, balíka alebo hodnoty v "
+"preambule."
 
 #: src/frontends/qt/GuiDocument.cpp:2169 src/frontends/qt/GuiDocument.cpp:2255
 msgid ""
@@ -38562,6 +38566,9 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Neznámy používateľ"
+
+#~ msgid "Class defaults"
+#~ msgstr "Triedne predvoľby"
 
 #~ msgid "Library directory"
 #~ msgstr "Adresár systému"
