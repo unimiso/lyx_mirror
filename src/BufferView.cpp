@@ -435,6 +435,12 @@ CoordCache const & BufferView::coordCache() const
 }
 
 
+bool BufferView::hasMathRow(MathData const * cell) const
+{
+	return d->math_rows_.find(cell) != d->math_rows_.end();
+}
+
+
 MathRow const & BufferView::mathRow(MathData const * cell) const
 {
 	auto it = d->math_rows_.find(cell);
@@ -3323,7 +3329,7 @@ bool BufferView::paragraphVisible(DocIterator const & dit) const
 void BufferView::caretPosAndDim(Point & p, Dimension & dim) const
 {
 	Cursor const & cur = cursor();
-	if (cur.inMathed()) {
+	if (cur.inMathed() && hasMathRow(&cur.cell())) {
 		MathRow const & mrow = mathRow(&cur.cell());
 		dim = mrow.caret_dim;
 	} else {

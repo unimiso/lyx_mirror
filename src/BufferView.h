@@ -322,6 +322,8 @@ public:
 	CoordCache const & coordCache() const;
 
 	///
+	bool hasMathRow(MathData const * cell) const;
+	///
 	MathRow const & mathRow(MathData const * cell) const;
 	///
 	void setMathRow(MathData const * cell, MathRow const & mrow);
