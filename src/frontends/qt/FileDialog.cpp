@@ -137,7 +137,8 @@ FileDialog::Result FileDialog::open(QString const & path,
 	FileDialog::Result result;
 	FileDialog::Results results = openMulti(path, filters, suggested, false);
 	result.first = results.first;
-	result.second = results.second.at(0);
+	if (result.first != FileDialog::Later)
+		result.second = results.second.at(0);
 	return result;
 }
 
