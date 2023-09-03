@@ -12379,9 +12379,8 @@ msgstr "Notafinal"
 #: lib/layouts/endnotes.module:32 lib/layouts/endnotes.module:35
 #: lib/layouts/foottoend.module:20 lib/layouts/foottoend.module:23
 #: lib/layouts/memoir.layout:326 lib/layouts/memoir.layout:329
-#, fuzzy
 msgid "Notes[[Endnotes]]"
-msgstr "Nota[[InsertoNota]]"
+msgstr "Notas"
 
 #: lib/layouts/enotez.module:2
 #, fuzzy
