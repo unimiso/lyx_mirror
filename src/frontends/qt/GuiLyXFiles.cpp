@@ -492,6 +492,9 @@ void GuiLyXFiles::updateContents()
 	filesLW->sortItems(0, Qt::AscendingOrder);
 	// redo filter
 	filterLabels();
+	if (!isClosing())
+		// handle buttons
+		bc().setValid(isValid());
 }
 
 
@@ -627,8 +630,6 @@ void GuiLyXFiles::paramsToDialog()
 		setTitle(qt_("New File From Template"));
 	else
 		setTitle(qt_("Open File"));
-
-	bc().setValid(isValid());
 }
 
 
