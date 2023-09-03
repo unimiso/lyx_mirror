@@ -56,6 +56,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Índice
@@ -163,8 +164,8 @@ arg   "bind_file"
 \family default
 .
  
-\change_inserted -1463541724 1693127278
-Puede cambiar los atajos en 
+\change_inserted -1463541724 1693758101
+Puedes cambiar los atajos en 
 \change_deleted -1463541724 1693126458
 You can change the shortcuts en el menú
 \change_unchanged
@@ -194,11 +195,11 @@ de
 
 \change_unchanged
 teclado
-\change_inserted -1463541724 1693126476
+\change_inserted -1463541724 1693758108
 
 \family default
 .
- Para más información consulte
+ Para más información consulta
 \change_deleted -1463541724 1693126480
  as described in section
 \change_inserted -1463541724 1693126481
@@ -277,12 +278,6 @@ Las combinaciones de teclas en este documento se actualizan automáticamente cua
  Por eso no es posible por ahora traducir en \SpecialChar LyX
  la notación de las teclas.
  Teclas equivalentes en español:
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1463541724 1693128698
-
 \end_layout
 
 \begin_layout Standard
@@ -978,7 +973,13 @@ arg   "cut"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -1463541724 1693758124
 Máquina de escribir
+\change_inserted -1463541724 1693758135
+Mecanográfica
+\change_unchanged
+
 \end_layout
 
 \end_inset
