@@ -65,6 +65,9 @@ std::string const python(bool reset = false);
 /// Check for availability of the python interpreter
 bool hasPython();
 
+/// Return information about the ython interper
+std::string const python_info();
+
 ///
 bool isFilesystemCaseSensitive();
 

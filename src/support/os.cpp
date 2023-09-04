@@ -58,7 +58,7 @@ int timeout_ms()
 
 static string const python23_call(string const & binary, bool verbose = false)
 {
-	const string version_info = " -c \"from __future__ import print_function;import sys; print(sys.version_info[:2], end=\\\"\\\")\"";
+	const string version_info = " -c \"from __future__ import print_function; import sys; print(sys.version_info[:2], end='')\"";
 	// Default to "python" if no binary is given.
 	if (binary.empty())
 		return "python -tt";
@@ -142,7 +142,7 @@ static string const find_python_binary()
 		return command;
 
 #ifdef _WIN32
-	// python launcher is not installed, let cmd auto check 
+	// python launcher is not installed, let cmd auto check
 	// PATH for a python.exe
 	command = python23_call("python");
 	if (!command.empty())
@@ -195,6 +195,14 @@ string const python(bool reset)
 bool hasPython()
 {
 	return !(python23_call(python()).empty());
+}
+
+string const python_info()
+{
+	const string info_version = " -c \"from __future__ import print_function; import sys; print('{} ({})'.format(sys.version.split()[0],sys.executable), end='')\"";
+	if (!hasPython())
+		return("None");
+	return (runCommand(python() + info_version).result);
 }
 
 } // namespace os

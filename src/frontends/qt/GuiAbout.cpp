@@ -222,7 +222,7 @@ static QString buildinfo()
 		    << endl;
 #endif
 
-	out << lyx_version_info 
+	out << lyx_version_info
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
 	    << Qt::endl;
 #else
@@ -297,7 +297,7 @@ static QString version(bool const plain = false)
 	else
 		out << "</p><p>";
 #endif
-	out << toqstr(bformat(_("Python detected: %1$s"), from_utf8(os::python())));
+	out << toqstr(bformat(_("Python detected: %1$s"), from_utf8(os::python_info())));
 	if (!plain)
 		out << toqstr("</p></body></html>");
 	return res;
