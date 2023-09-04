@@ -283,11 +283,11 @@ struct BufferView::Private
 	///
 	map<string, Inset *> edited_insets_;
 
-	/// When the row where the cursor lies is scrolled, this
-	/// contains the scroll offset
 	// cache for id of the paragraph which was edited the last time
 	int bookmark_edit_position_;
 
+	/// When the row where the cursor lies is scrolled, this
+	/// contains the scroll offset
 	int horiz_scroll_offset_;
 	/// a slice pointing to the start of the row where the cursor
 	/// is (at last draw time)
