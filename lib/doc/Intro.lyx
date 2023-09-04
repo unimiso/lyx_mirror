@@ -1024,7 +1024,30 @@ To make it easier to answer your questions and describe all of the features of \
  as described below.
  Before you go ploughing into any of those files,
  however,
- you should read this chapter thoroughly,
+ you should read this 
+\change_deleted -1463541724 1693810883
+chapter
+\change_inserted -1463541724 1693810888
+section
+\change_deleted 5863208 1693855500
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693810943
+Does it refer to this section or the whole document?
+ I am going with the former.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ thoroughly,
  since it contains a lot of useful information and commentary that can save you some time.
 \end_layout
 
@@ -1197,7 +1220,46 @@ In the printed manuals,
 .
  If you click on such a box with the left mouse button,
  a dialog box will appear containing a list of all the cross-references in the document.
- You can go to the referenced section by right-clicking on the box or by clicking the button 
+ You can go to the referenced 
+\change_deleted -1463541724 1693811119
+section
+\change_inserted -1463541724 1693811124
+element
+\change_deleted 5863208 1693855665
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693811295
+This seems to be a leftover of past versions of this document in which the section cross-reference in this document was explicitly mentioned,
+ now erased:
+ Spanish and Catalan translations still had those explicit mentions.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1693811291
+Other possible replacement:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+item
+\begin_inset Quotes erd
+\end_inset
+
+.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ by right-clicking on the box or by clicking the button 
 \family sans
 Go
 \begin_inset space ~
@@ -1279,7 +1341,7 @@ Noun Style
 \change_deleted 5863208 1692989367
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2854,15 +2916,21 @@ config.log
 
 \change_inserted 5863208 1692989585
  
+\change_deleted -1463541724 1693810816
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_inserted 5863208 1692989585
 Part of this information can be found in 
 \family sans
 Help\SpecialChar menuseparator
 About
 \family default
 .
+\change_deleted -1463541724 1693810814
+
 \begin_inset Quotes erd
 \end_inset
 
