@@ -492,9 +492,11 @@ void GuiLyXFiles::updateContents()
 	filesLW->sortItems(0, Qt::AscendingOrder);
 	// redo filter
 	filterLabels();
-	if (!isClosing())
+	if (!isClosing()) {
 		// handle buttons
 		bc().setValid(isValid());
+		setLanguage();
+	}
 }
 
 
