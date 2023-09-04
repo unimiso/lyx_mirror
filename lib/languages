@@ -13,7 +13,7 @@
 #	XindyName          <xindyname>
 #	ActiveChars        <activated characters>
 #	QuoteStyle         <british|danish|english|french|frenchin|
-#                           german|polish|russian|swedish|swedishg|swiss|plain>
+#                           german|polish|russian|swedish|swedishg|swiss|hebrew|plain>
 #     	DateFormats        "<long>|<medium>|<short>"
 #	Encoding           <encoding>
 #	FontEncoding       <font encoding|font encoding|...>
