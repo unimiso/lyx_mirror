@@ -337,6 +337,14 @@ BufferView::~BufferView()
 }
 
 
+void BufferView::copySettingsFrom(BufferView const & bv)
+{
+	setCursor(bv.cursor());
+	d->anchor_pit_ = bv.d->anchor_pit_;
+	d->anchor_ypos_ = bv.d->anchor_ypos_;
+}
+
+
 int BufferView::defaultMargin() const
 {
 	// The value used to be hardcoded to 10

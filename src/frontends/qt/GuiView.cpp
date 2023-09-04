@@ -4879,8 +4879,8 @@ void GuiView::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 			TabWorkArea * twa = addTabWorkArea();
 			GuiWorkArea * wa = twa->addWorkArea(*doc_buffer, *this);
 
-			wa->bufferView().setCursor(bv->cursor());
-			dr.screenUpdate(Update::ForceAll | Update::FitCursor);
+			wa->bufferView().copySettingsFrom(*bv);
+			dr.screenUpdate(Update::ForceAll);
 			setCurrentWorkArea(wa);
 			break;
 		}

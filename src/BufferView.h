@@ -108,6 +108,9 @@ public:
 	Buffer & buffer();
 	Buffer const & buffer() const;
 
+	/// Copy cursor and vertical offset information from \c bv
+	void copySettingsFrom(BufferView const & bv);
+
 	///
 	void setFullScreen(bool full_screen) { full_screen_ = full_screen; }
 
