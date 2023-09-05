@@ -65,7 +65,7 @@ std::string const python(bool reset = false);
 /// Check for availability of the python interpreter
 bool hasPython();
 
-/// Return information about the ython interper
+/// Return information about the python interperter (version and path)
 std::string const python_info();
 
 ///
