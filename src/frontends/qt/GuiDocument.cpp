@@ -508,13 +508,13 @@ bool PreambleModule::eventFilter(QObject * sender, QEvent * event)
 {
 	if (sender == findLE) {
 		if (event->type()==QEvent::KeyPress) {
-	        QKeyEvent * key = static_cast<QKeyEvent *>(event);
-	        if ( (key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return) ) {
-	            findText();
+			QKeyEvent * key = static_cast<QKeyEvent *>(event);
+			if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
+				findText();
 				// Return true to filter out the event
 				return true;
-	        }
-	    }
+			}
+		}
 	}
 	return QWidget::eventFilter(sender, event);
 }
