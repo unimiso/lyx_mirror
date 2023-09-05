@@ -17,6 +17,8 @@
 #include "GuiDialog.h"
 #include "GuiIdListModel.h"
 
+#include "LaTeXHighlighter.h"
+
 #include "ui_BiblioUi.h"
 #include "ui_ColorUi.h"
 #include "ui_ChangeTrackingUi.h"
@@ -385,6 +387,8 @@ private:
 	Coords preamble_coords_;
 	BufferId current_id_;
 	unique_ptr<support::TempFile> tempfile_;
+	/// LaTeX syntax highlighter
+	LaTeXHighlighter * highlighter_;
 
 private Q_SLOTS:
 	///

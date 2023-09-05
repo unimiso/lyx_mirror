@@ -28,6 +28,7 @@ public:
 	explicit LaTeXHighlighter(QTextDocument * parent,
 				  bool at_letter = false,
 				  bool keyval = false);
+	void setupColors();
 
 protected:
 	void highlightBlock(QString const & text) override;

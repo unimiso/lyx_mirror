@@ -21,7 +21,6 @@
 #include "GuiIndices.h"
 #include "GuiView.h"
 #include "GuiSelectionManager.h"
-#include "LaTeXHighlighter.h"
 #include "Validator.h"
 
 #include "LayoutFile.h"
@@ -475,12 +474,12 @@ void ModuleSelectionManager::updateDelPB()
 /////////////////////////////////////////////////////////////////////
 
 PreambleModule::PreambleModule(QWidget * parent)
-	: UiWidget<Ui::PreambleUi>(parent), current_id_(nullptr)
+	: UiWidget<Ui::PreambleUi>(parent), current_id_(nullptr),
+	  highlighter_(new LaTeXHighlighter(preambleTE->document(), true))
 {
 	// This is not a memory leak. The object will be destroyed
 	// with this.
 	// @ is letter in the LyX user preamble
-	(void) new LaTeXHighlighter(preambleTE->document(), true);
 	preambleTE->setFont(guiApp->typewriterSystemFont());
 	preambleTE->setWordWrapMode(QTextOption::NoWrap);
 	setFocusProxy(preambleTE);
@@ -514,6 +513,14 @@ bool PreambleModule::eventFilter(QObject * sender, QEvent * event)
 				// Return true to filter out the event
 				return true;
 			}
+		}
+	}
+	if (event->type() == QEvent::ApplicationPaletteChange) {
+		// mode switch: colors need to be updated
+		// and the highlighting redone
+		if (highlighter_) {
+			highlighter_->setupColors();
+			highlighter_->rehighlight();
 		}
 	}
 	return QWidget::eventFilter(sender, event);

@@ -23,6 +23,12 @@ namespace frontend {
 LaTeXHighlighter::LaTeXHighlighter(QTextDocument * parent, bool at_letter, bool keyval)
 	: QSyntaxHighlighter(parent), at_letter_(at_letter), keyval_(keyval)
 {
+	setupColors();
+}
+
+
+void LaTeXHighlighter::setupColors()
+{
 	auto blend = [](QColor color1, QColor color2) {
 		int r = 0.5 * (color1.red() + color2.red());
 		int g = 0.5 * (color1.green() + color2.green());
