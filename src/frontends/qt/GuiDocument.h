@@ -360,6 +360,12 @@ private:
 	/// Track whether we prompted the user about unapplied
 	/// changes
 	bool prompted_;
+	
+	/// LaTeX syntax highlighter
+	LaTeXHighlighter * pdf_options_highlighter_;
+	LaTeXHighlighter * pdf_metadata_highlighter_;
+protected:
+	bool eventFilter(QObject * sender, QEvent * event) override;
 };
 
 

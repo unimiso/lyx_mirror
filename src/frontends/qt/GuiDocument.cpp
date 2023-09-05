@@ -1782,8 +1782,11 @@ GuiDocument::GuiDocument(GuiView & lv)
 		pdfSupportModule->subjectLE));
 	pdfSupportModule->keywordsLE->setValidator(new NoNewLineValidator(
 		pdfSupportModule->keywordsLE));
-	(void) new LaTeXHighlighter(pdfSupportModule->optionsTE->document(), true, true);
-	(void) new LaTeXHighlighter(pdfSupportModule->metadataTE->document(), true, true);
+
+	pdf_options_highlighter_ = new LaTeXHighlighter(
+				pdfSupportModule->optionsTE->document(), true, true);
+	pdf_metadata_highlighter_ = new LaTeXHighlighter(
+				pdfSupportModule->metadataTE->document(), true, true);
 
 	for (int i = 0; backref_opts[i][0]; ++i)
 		pdfSupportModule->backrefCO->addItem(qt_(backref_opts_gui[i]));
@@ -1840,6 +1843,9 @@ GuiDocument::GuiDocument(GuiView & lv)
 	docPS->addPanel(outputModule, N_("Output"));
 	docPS->addPanel(preambleModule, N_("LaTeX Preamble"));
 	docPS->setCurrentPanel("Document Class");
+
+	// Filter out (dark/light) mode changes
+	installEventFilter(this);
 }
 
 
@@ -5388,6 +5394,24 @@ void GuiDocument::setOutputSync(bool on)
 	outputModule->synccustomCB->setEnabled(on);
 	outputModule->synccustomLA->setEnabled(on);
 	change_adaptor();
+}
+
+
+bool GuiDocument::eventFilter(QObject * sender, QEvent * event)
+{
+	if (event->type() == QEvent::ApplicationPaletteChange) {
+		// mode switch: colors need to be updated
+		// and the highlighting redone
+		if (pdf_options_highlighter_) {
+			pdf_options_highlighter_->setupColors();
+			pdf_options_highlighter_->rehighlight();
+		}
+		if (pdf_metadata_highlighter_) {
+			pdf_metadata_highlighter_->setupColors();
+			pdf_metadata_highlighter_->rehighlight();
+		}
+	}
+	return QWidget::eventFilter(sender, event);
 }
 
 
