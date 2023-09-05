@@ -320,7 +320,8 @@ bool ViewSourceWidget::eventFilter(QObject * obj, QEvent * ev)
 		goToCursor();
 		return true;
 	}
-	if (ev->type() == QEvent::ApplicationPaletteChange) {
+	if (ev->type() == QEvent::ApplicationPaletteChange
+	    || ev->type() == QEvent::StyleChange) {
 		// mode switch: colors need to be updated
 		// and the highlighting redone
 		if (highlighter_) {
