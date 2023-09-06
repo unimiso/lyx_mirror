@@ -7,6 +7,10 @@ changes happened in particular if possible. A good example would be
 
 -----------------------
 
+2023-09-06 Richard Kimberly Heck <rikiheck@lyx.org>
+	* Format incremented to 619: New document header \use_formatted_ref
+	  for workarea display purposes only.
+
 2023-08-01 Udi Fogiel <udifoglle@gmail.com>
  	* Format incremented to 618: Hebrew quote style
  	  New buffer param \quotes_style hebrew
