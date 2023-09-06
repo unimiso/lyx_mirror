@@ -1880,7 +1880,8 @@ TabWorkArea * GuiView::addTabWorkArea()
 	QObject::connect(twa, SIGNAL(lastWorkAreaRemoved()),
 			 this, SLOT(on_lastWorkAreaRemoved()));
 
-	d.splitter_->addWidget(twa);
+	d.splitter_->insertWidget(d.splitter_->indexOf(d.currentTabWorkArea()) + 1,
+	                          twa);
 	d.stack_widget_->setCurrentWidget(d.splitter_);
 	return twa;
 }
