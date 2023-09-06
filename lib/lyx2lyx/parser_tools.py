@@ -689,7 +689,8 @@ def count_pars_in_inset(lines, i):
   pars = 0
   for j in range(ins[1], ins[2]):
       m = re.match(r'\\begin_layout (.*)', lines[j])
-      if m and get_containing_inset(lines, j)[1] == ins[1]:
+      found_inset = get_containing_inset(lines, j)
+      if m and found_inset and found_inset[1] == ins[1]:
           pars += 1
 
   return pars
