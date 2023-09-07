@@ -46,7 +46,7 @@ void GuiLabel::paramsToDialog(Inset const * inset)
 {
 	InsetLabel const * label = static_cast<InsetLabel const *>(inset);
 	InsetCommandParams const & params = label->params();
-	keywordED->setText(toqstr(params["name"]));
+	setKeyword(toqstr(params["name"]));
 }
 
 
@@ -63,7 +63,7 @@ bool GuiLabel::initialiseParams(std::string const & sdata)
 	InsetCommandParams p(insetCode());
 	if (!InsetCommand::string2params(sdata, p))
 		return false;
-	keywordED->setText(toqstr(p["name"]));
+	setKeyword(toqstr(p["name"]));
 	return true;
 }
 
@@ -74,6 +74,18 @@ bool GuiLabel::checkWidgets(bool readonly) const
 	if (!InsetParamsWidget::checkWidgets())
 		return false;
 	return !keywordED->text().isEmpty();
+}
+
+
+void GuiLabel::setKeyword(QString const & keyword)
+{
+	keywordED->setText(keyword);
+	// select without prefix
+	int const colonPos = keyword.indexOf(':');
+	if (colonPos == -1)
+		keywordED->selectAll();
+	else
+		keywordED->setSelection(colonPos + 1, keyword.length() - colonPos + 1);
 }
 
 } // namespace frontend

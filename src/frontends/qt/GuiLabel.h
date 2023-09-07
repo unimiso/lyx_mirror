@@ -37,6 +37,8 @@ private:
 	docstring dialogToParams() const override;
 	bool checkWidgets(bool readonly) const override;
 	bool initialiseParams(std::string const &) override;
+	///
+	void setKeyword(QString const & keyword);
 	//@}
 };
 
