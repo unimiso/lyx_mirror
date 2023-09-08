@@ -1901,12 +1901,6 @@ void GuiApplication::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 	}
 
 	case LFUN_LYXFILES_OPEN: {
-		// This is the actual reason for this method (#12106).
-		validateCurrentView();
-		if (!current_view_
-		   || (!lyxrc.open_buffers_in_tabs
-		       && current_view_->documentBufferView() != nullptr))
-			createView();
 		string arg = to_utf8(cmd.argument());
 		if (arg.empty())
 			// set default
@@ -2263,17 +2257,15 @@ void GuiApplication::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 
 	case LFUN_DIALOG_SHOW: {
 		string const name = cmd.getArg(0);
-
-		if ( name == "aboutlyx"
-			|| name == "prefs"
-			|| name == "texinfo"
-			|| name == "progress"
-			|| name == "compare")
+		// Workaround: on Mac OS the application
+		// is not terminated when closing the last view.
+		// With the following dialogs which should still
+		// be usable, create a new one to be able
+		// to dispatch LFUN_DIALOG_SHOW to this view.
+		if (name == "aboutlyx" || name == "compare"
+		    || name == "lyxfiles" || name == "prefs"
+		    || name == "progress" || name == "texinfo")
 		{
-			// work around: on Mac OS the application
-			// is not terminated when closing the last view.
-			// Create a new one to be able to dispatch the
-			// LFUN_DIALOG_SHOW to this view.
 			if (current_view_ == nullptr)
 				createView();
 		}
