@@ -299,10 +299,11 @@ void showDirectory(FileName const & directory)
 
 void showTarget(string const & target_in, Buffer const & buf)
 {
-	LYXERR(Debug::INSETS, "Showtarget:" << target_in << "\n");
+	LYXERR(Debug::INSETS, "Showtarget: " << target_in << "\n");
 
 	string target = target_in;
 	string const & docpath = buf.absFileName();
+	vector<string> targets;
 
 	bool const is_external = prefixIs(target, "EXTERNAL ");
 	if (is_external) {
@@ -320,13 +321,19 @@ void showTarget(string const & target_in, Buffer const & buf)
 			return;
 		}
 		// lyxpaperview returns a \n-separated list of paths
-		vector<string> targets = getVectorFromString(rtrim(ret.result, "\n"), "\n");
+		targets = getVectorFromString(rtrim(ret.result, "\n"), "\n");
 		if (targets.empty()) {
 			frontend::Alert::error(_("Could not open file"),
 				bformat(_("No file was found using the pattern `%1$s'."),
 					from_utf8(tar)));
 			return;
 		}
+	}
+	if (prefixIs(target, "file://")) {
+		// file might have a \n-separated list of paths
+		targets = getVectorFromString(target, "\n");
+	}
+	if (!targets.empty()) {
 		if (targets.size() > 1) {
 			QStringList files;
 			for (auto const & t : targets)

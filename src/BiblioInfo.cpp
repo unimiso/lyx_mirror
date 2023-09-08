@@ -688,30 +688,46 @@ void BibTeXInfo::getLocators(docstring & doi, docstring & url, docstring & file)
 
 		// Jabref case, field has a format:
 		// Description:Location:Filetype;Description:Location:Filetype...
-		// We will grab only first pdf
+		// We will strip out the locations and return an \n-separated list
 		if (!file.empty()) {
-			docstring ret, filedest, tmp;
-			ret = split(file, tmp, ':');
-			tmp = split(ret, filedest, ':');
-			//TODO howto deal with relative directories?
-			FileName f(to_utf8(filedest));
-			if (f.exists())
-				file = "file:///" + filedest;
+			docstring filelist;
+			vector<docstring> files = getVectorFromString(file, from_ascii(";"));
+			for (auto const & f : files) {
+				docstring ret, filedest, tmp;
+				ret = split(f, tmp, ':');
+				tmp = split(ret, filedest, ':');
+				// TODO howto deal with relative directories?
+				FileName fn(to_utf8(filedest));
+				if (fn.exists()) {
+					if (!filelist.empty())
+						filelist += '\n';
+					filelist += "file:///" + filedest;
+				}
+			}
+			if (!filelist.empty())
+				file = filelist;
 		}
 
 		// kbibtex case, format:
 		// file1.pdf;file2.pdf
-		// We will grab only first pdf
+		// We will strip out the locations and return an \n-separated list
 		docstring kfile;
 		if (file.empty())
 			kfile = operator[]("localfile");
 		if (!kfile.empty()) {
-			docstring filedest, tmp;
-			tmp = split(kfile, filedest, ';');
-			//TODO howto deal with relative directories?
-			FileName f(to_utf8(filedest));
-			if (f.exists())
-				file = "file:///" + filedest;
+			docstring filelist;
+			vector<docstring> files = getVectorFromString(kfile, from_ascii(";"));
+			for (auto const & f : files) {
+				// TODO howto deal with relative directories?
+				FileName fn(to_utf8(f));
+				if (fn.exists()) {
+					if (!filelist.empty())
+						filelist += '\n';
+					filelist = "file:///" + f;
+				}
+			}
+			if (!filelist.empty())
+				file = filelist;
 		}
 
 		if (!url.empty())

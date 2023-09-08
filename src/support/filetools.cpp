@@ -946,6 +946,8 @@ string const getExtension(string const & name)
 
 docstring const provideScheme(docstring const & name, docstring const & scheme)
 {
+	if (prefixIs(name, scheme + "://"))
+		return name;
 	QUrl url(toqstr(name));
 	if (!url.scheme().isEmpty())
 		// Has a scheme. Return as is.
