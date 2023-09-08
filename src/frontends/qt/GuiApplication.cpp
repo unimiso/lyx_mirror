@@ -1901,12 +1901,6 @@ void GuiApplication::dispatch(FuncRequest const & cmd, DispatchResult & dr)
 	}
 
 	case LFUN_LYXFILES_OPEN: {
-		// This is the actual reason for this method (#12106).
-		validateCurrentView();
-		if (!current_view_
-		   || (!lyxrc.open_buffers_in_tabs
-		       && current_view_->documentBufferView() != nullptr))
-			createView();
 		string arg = to_utf8(cmd.argument());
 		if (arg.empty())
 			// set default
