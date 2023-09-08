@@ -347,10 +347,10 @@ void showTarget(string const & target_in, Buffer const & buf)
 		QCheckBox * dontShowAgainCB = new QCheckBox();
 		dontShowAgainCB->setText(qt_("&Trust this document and do not ask me again!"));
 		dontShowAgainCB->setToolTip(qt_("If you check this, LyX will open all targets without asking for the given document in the future."));
-		docstring const warn = bformat(_("LyX wants to open the following target in an external application:\n"
-						 "%1$s\n"
-						 "Be aware that this might entail security infringements!\n"
-						 "Only do this if you trust origin of the document and the target of the link!\n"
+		docstring const warn = bformat(_("LyX wants to open the following target in an external application:\n\n"
+						 "%1$s\n\n"
+						 "Be aware that this might entail security infringements!\n\n"
+						 "Only do this if you trust the origin of the document and the target of the link!\n\n"
 						 "How do you want to proceed?"), from_utf8(target));
 		QMessageBox box(QMessageBox::Warning, qt_("Open external target?"), toqstr(warn),
 				QMessageBox::NoButton, qApp->focusWidget());
