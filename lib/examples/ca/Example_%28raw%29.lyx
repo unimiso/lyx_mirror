@@ -1,0 +1,543 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 619
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /systemlyxdir/examples/ca/
+\textclass article
+\use_default_options false
+\maintain_unincluded_children no
+\language catalan
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+AQUEST ÉS EL TÍTOL DEL DOCUMENT 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ el títol hauria de semblar més un títol.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+per en Pepito 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ Pepito és l'AUTOR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+12 de juny de 1972 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ això és una DATA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taula de Continguts 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ seria desitjable no haver d'escriure «Taula de Continguts» explícitament
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Filosofia bàsica...................................1
+\end_layout
+
+\begin_layout Standard
+1.1 Com ho aconsegueix el \SpecialChar LyX
+...............1
+\end_layout
+
+\begin_layout Standard
+1.2 Per què el \SpecialChar LyX
+ és millor?.......................1
+\end_layout
+
+\begin_layout Standard
+2.
+ Característiques del \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Pobre demostració d'altres coses del \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Matemàtiques
+\end_layout
+
+\begin_layout Standard
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Filosofia bàsica
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ Els encapçalaments de secció haurien de destacar més
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La filosofia bàsica del \SpecialChar LyX
+ és que l'autor pugui centrar-se en el contingut del document,
+ no pas en la seva presentació.
+\end_layout
+
+\begin_layout Standard
+1.1 Com ho aconsegueix el \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ fa servir \SpecialChar LaTeX
+,
+ un sistema de preparació de documents dissenyat per en Leslie Lamport el 1985.
+ El \SpecialChar LaTeX
+,
+ al seu torn,
+ fou creat sobre un llenguatge de composició tipogràfica anomenat \SpecialChar TeX
+,
+ creat per en Donald Knuth el 1984.
+ \SpecialChar LaTeX
+ sorgeix amb una filosofia similar a la del \SpecialChar LyX
+.
+ En Leslie Lamport digué un cop (vegeu la referència [1])
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ La CITA BIBLIOGRÀFICA probablement no s'hauria de posar a mà.
+\end_layout
+
+\begin_layout Plain Layout
+Què ocorrerà si afegim una altre referència bibliogràfica abans del llibre d'en Leslie?
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+«La funció del disseny tipogràfic és ajudar al lector a comprendre les idees de l'autor.
+ Perquè un document sigui llegidor,
+ l'estructura visual n'ha de reflectir l'estructura lògica.
+ Les cites i el codi de programació son elements estructural i lògicament diferents,
+ per tant haurien de diferir visualment també.
+ El \SpecialChar LaTeX
+ no comprèn el que escriviu,
+ i per això cal indicar-li explícitament l'estructura lògica del document afegint-hi unes paraules especials:
+ les instruccions \SpecialChar LaTeX
+.
+ Quan un autor escriu un document,
+ hauria de centrar-se en la seva estructura lògica,
+ no pas en la seva aparença.».
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ això és una CITA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.2 Per què el \SpecialChar LyX
+ és millor?
+\end_layout
+
+\begin_layout Standard
+El \SpecialChar LyX
+ pot ésser utilitzat per molta més gent que el \SpecialChar LaTeX
+,
+ perquè és molt més fàcil d'aprendre que el \SpecialChar LaTeX
+,
+ que pràcticament ha esdevingut un llenguatge de programació.
+ \SpecialChar LyX
+ és bàsicament com altres processadors de text,
+ però en comptes d'ésser 
+\begin_inset Quotes fld
+\end_inset
+
+What you see is what you get
+\begin_inset Quotes frd
+\end_inset
+
+ (el que veus és el que obtens) és 
+\begin_inset Quotes fld
+\end_inset
+
+What you see is what you mean
+\begin_inset Quotes frd
+\end_inset
+
+ (el que veus és el que vols dir).
+ Això li permet conjugar la facilitat d'ús dels processadors de text comuns i la potència del \SpecialChar LaTeX
+.
+ A més d'això,
+ el format que fa servir el \SpecialChar LyX
+ és independent del sistema operatiu,
+ lliure i gratuït.
+\end_layout
+
+\begin_layout Standard
+2.
+ Característiques del \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ té moltes característiques que faciliten escriure documents.
+ (Per a què altra cosa voldria algú fer-lo servir?
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ El text entre parèntesis quedaria millor en una nota a peu de pàgina.
+\end_layout
+
+\end_inset
+
+) Estem MOLT CONTENTS
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ Èmfasi!
+\end_layout
+
+\end_inset
+
+ de poder explicar-vos-les.
+ Aquí una llista d'unes poques.
+\end_layout
+
+\begin_layout Standard
+* \SpecialChar LyX
+ s'encarrega dels marges i la numeració de les notes a peu de pàgina,
+ no pas l'autor.
+\end_layout
+
+\begin_layout Standard
+* \SpecialChar LyX
+ permet editar expressions matemàtiques d'una manera molt simple.
+\end_layout
+
+\begin_layout Standard
+Si voleu una exposició més filosòfica de per què el \SpecialChar LyX
+ és millor que molts altres processadors de text,
+ vegeu la secció 1.2,
+ pàgina 1.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ Les REFERÈNCIES CREUADES no s'haurien d'escriure a mà.
+\end_layout
+
+\begin_layout Plain Layout
+Què passarà si canvien els números de les seccions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Qüestionables usos del \SpecialChar LyX
+
+\end_layout
+
+\begin_layout Standard
+L'altre dia escriguérem un programa,
+ era si fa no fa així
+\end_layout
+
+\begin_layout Standard
+5 REMARK UN PROGRAMA MERAVELLÓS
+\end_layout
+
+\begin_layout Standard
+10 PRINT 
+\begin_inset Quotes eld
+\end_inset
+
+HOLA MÓN
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+20 GOTO 10 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ Això és el CODI d'un programa d'ordinador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Després d'aquest esforç científic sense precedents,
+ sorgí el nostre costat més artístic i escriguérem aquest haiku
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ és molt bo
+\end_layout
+
+\begin_layout Standard
+Processador i composició
+\end_layout
+
+\begin_layout Standard
+Estalvia temps tot 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ No és molt bona,
+ però és poesia,
+\end_layout
+
+\begin_layout Plain Layout
+encara que només sigui una ESTROFA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Matemàtiques
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Pista:
+ les expressions matemàtiques s'haurien d'escriure amb el mode matemàtic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La nostra fórmula matemàtica favorita és la solució de l'equació quadràtica.
+ Si ax^2+bx+c=0 (eq.1),
+ aleshores x= -b (més / menys) l'arrel quadrada de b^2-4ac,
+ tot dividit per 2a (eq.
+ 2).
+\end_layout
+
+\begin_layout Standard
+Una altra que ens agrada molt és la de la derivada:
+ f'(x) es defineix com el límit,
+ quan deltax s'atansa a 0,
+ de f(x+deltax) - f(x) entre deltax (eq.
+ 3).
+\end_layout
+
+\begin_layout Standard
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+—
+
+\end_layout
+
+\begin_layout Standard
+REFERÈNCIES
+\end_layout
+
+\begin_layout Standard
+[1] Lamport,
+ Leslie.
+ \SpecialChar LaTeX
+:
+ A Document Preparation System.
+ Addison-Wesley,
+ Reading,
+ Massachusetts,
+ segona edició,
+ 1994.
+\end_layout
+
+\end_body
+\end_document

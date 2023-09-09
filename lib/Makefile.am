@@ -68,6 +68,8 @@ dist_arexamples_DATA = \
 
 caexamplesdir = $(pkgdatadir)/examples/ca
 dist_caexamples_DATA = \
+	examples/ca/Example_%28LyXified%29.lyx \
+	examples/ca/Example_%28raw%29.lyx \
 	examples/ca/Welcome.lyx
 
 cainsetexamplesdir = $(pkgdatadir)/examples/ca/Graphics_and_Insets
