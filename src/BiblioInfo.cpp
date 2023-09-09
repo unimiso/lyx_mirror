@@ -686,16 +686,22 @@ void BibTeXInfo::getLocators(docstring & doi, docstring & url, docstring & file)
 		// get "file" entry from citation record
 		file = operator[]("file");
 
-		// Jabref case, field has a format:
+		// Jabref case, "file" field has a format (depending on exporter):
 		// Description:Location:Filetype;Description:Location:Filetype...
+		// or simply:
+		// Location;Location;...
 		// We will strip out the locations and return an \n-separated list
 		if (!file.empty()) {
 			docstring filelist;
 			vector<docstring> files = getVectorFromString(file, from_ascii(";"));
 			for (auto const & f : files) {
+				// first try if we have Description:Location:Filetype
 				docstring ret, filedest, tmp;
 				ret = split(f, tmp, ':');
 				tmp = split(ret, filedest, ':');
+				if (filedest.empty())
+					// we haven't, so use the whole string
+					filedest = f;
 				// TODO howto deal with relative directories?
 				FileName fn(to_utf8(filedest));
 				if (fn.exists()) {
@@ -708,7 +714,7 @@ void BibTeXInfo::getLocators(docstring & doi, docstring & url, docstring & file)
 				file = filelist;
 		}
 
-		// kbibtex case, format:
+		// kbibtex case, "localfile" field with format:
 		// file1.pdf;file2.pdf
 		// We will strip out the locations and return an \n-separated list
 		docstring kfile;
