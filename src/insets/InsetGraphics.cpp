@@ -321,13 +321,17 @@ void InsetGraphics::outBoundingBox(graphics::BoundingBox & bbox) const
 
 	FileName const file(params().filename.absFileName());
 
+	if (!file.exists())
+		return;
+
 	// No correction is necessary for a vector image
 	bool const zipped = theFormats().isZippedFile(file);
 	FileName const unzipped_file = zipped ? unzipFile(file) : file;
 	string const format = theFormats().getFormatFromFile(unzipped_file);
 	if (zipped)
 		unzipped_file.removeFile();
-	if (theFormats().getFormat(format)->vectorFormat())
+	if (theFormats().getFormat(format)
+	    && theFormats().getFormat(format)->vectorFormat())
 		return;
 
 	// Get the actual image dimensions in pixels
