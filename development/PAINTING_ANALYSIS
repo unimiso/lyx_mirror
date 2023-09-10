@@ -20,9 +20,9 @@ following section. Some actions are proposed.
 
 ** SinglePar update
 
-This flag only has an effect in the current BufferView, but I think it
-is useful in other views too. Doing this will require some work on the
-update pipeline, though.
+This flag only has an effect in the current BufferView and at
+top-level, but I think it is useful in other views too. Doing this
+will require some work on the update pipeline, though.
 
 ** Buffer::change issues
 
@@ -76,11 +76,8 @@ a lot the amount of stuff to redraw.
 It should not be necessary to access the Paragraph object to draw.
 Adding the static elements to Row is a lot of work, but worth it IMO.
 
-** do not add the vertical margin of main text to first/last row
-
-Would make code cleaner. Probably no so difficult.
-
 ** When a paragraph ends with a newline, compute correctly the height of the extra row.
+
 ** Merging bv::updateMetrics and tm::metrics
 
 While the full metrics computation tries hard to limit the number of
@@ -147,6 +144,9 @@ for page up/down) and computed as needed.
 tm::redoParagraph will call Inset::metrics for each inset. In the case
 of text insets, this will invoke recursively tm::metrics, which redoes
 all the paragraphs of the inset.
+
+Then, a single big row is created in tm::tokenizeParagraph, which is
+later broken in multiple rows by tm::breakParagraph.
 
 At the end of the function, bv::updatePosCache is called. It triggers
 a repaint of the document with a NullPainter (a painter that does
