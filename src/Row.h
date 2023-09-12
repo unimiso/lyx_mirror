@@ -288,12 +288,12 @@ public:
 	/**
 	 * if row width is too large, remove all elements after last
 	 * separator and update endpos if necessary. If all that
-	 * remains is a large word, cut it to \param width.
-	 * \param width maximum width of the row.
+	 * remains is a large word, cut it to \c max_width.
+	 * \param max_width maximum width of the row.
 	 * \param next_width available width on next row.
 	 * \return list of elements remaining after breaking.
 	 */
-	Elements shortenIfNeeded(int const width, int const next_width);
+	Elements shortenIfNeeded(int const max_width, int const next_width);
 
 	/**
 	 * If last element of the row is a string, compute its width

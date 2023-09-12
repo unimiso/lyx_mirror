@@ -537,12 +537,12 @@ void moveElements(Row::Elements & from, Row::Elements::iterator const & it,
 }
 
 
-Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
+Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 {
 	// FIXME: performance: if the last element is a string, we would
 	// like to avoid computing its length.
 	finalizeLast();
-	if (empty() || width() <= w)
+	if (empty() || width() <= max_width)
 		return Elements();
 
 	Elements::iterator const beg = elements_.begin();
@@ -552,7 +552,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 	// Search for the first element that goes beyond right margin
 	Elements::iterator cit = beg;
 	for ( ; cit != end ; ++cit) {
-		if (wid + cit->dim.wid > w)
+		if (wid + cit->dim.wid > max_width)
 			break;
 		wid += cit->dim.wid;
 	}
@@ -576,7 +576,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 		 * after itself, and if the row is already short enough after
 		 * this element, then cut right after it.
 		 */
-		if (wid_brk <= w && brk.row_flags & CanBreakAfter) {
+		if (wid_brk <= max_width && brk.row_flags & CanBreakAfter) {
 			end_ = brk.endpos;
 			dim_.wid = wid_brk;
 			moveElements(elements_, cit_brk + 1, tail);
@@ -588,7 +588,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 		 * before itself, and if the row is already short enough before
 		 * this element, then cut right before it.
 		 */
-		if (wid_brk <= w && brk.row_flags & CanBreakBefore && cit_brk != beg) {
+		if (wid_brk <= max_width && brk.row_flags & CanBreakBefore && cit_brk != beg) {
 			end_ = (cit_brk -1)->endpos;
 			dim_.wid = wid_brk;
 			moveElements(elements_, cit_brk, tail);
@@ -600,7 +600,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 		 * - shorter than the natural width of the element, in order to enforce
 		 *   break-up.
 		 */
-		if (brk.splitAt(min(w - wid_brk, brk.dim.wid - 2), next_width, false, tail)) {
+		if (brk.splitAt(min(max_width - wid_brk, brk.dim.wid - 2), next_width, false, tail)) {
 			/* if this element originally did not cause a row overflow
 			 * in itself, and the next item is not breakable and would
 			 * still be too large after breaking, then we will have
@@ -623,7 +623,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 			 */
 			auto const cit_next = cit_brk + 1;
 			int const tail_wid = !tail.empty() ? tail.front().dim.wid : 0;
-			if (wid_brk + cit_brk->dim.wid < w
+			if (wid_brk + cit_brk->dim.wid < max_width
 			    && cit_next != elements_.end()
 			    && tail_wid + cit_next->dim.wid > next_width
 			    && !(cit_next->row_flags & CanBreakInside)) {
@@ -660,7 +660,7 @@ Row::Elements Row::shortenIfNeeded(int const w, int const next_width)
 	 * shorten the row. Let's try to break it again, but force
 	 * splitting this time.
 	 */
-	if (cit->splitAt(w - wid, next_width, true, tail)) {
+	if (cit->splitAt(max_width - wid, next_width, true, tail)) {
 		end_ = cit->endpos;
 		dim_.wid = wid + cit->dim.wid;
 		// If there are other elements, they should be removed.
