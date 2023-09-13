@@ -760,7 +760,6 @@ void Paragraph::acceptChanges(pos_type start, pos_type end)
 				}
 				break;
 		}
-
 	}
 }
 
