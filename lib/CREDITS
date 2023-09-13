@@ -153,6 +153,9 @@
 @bDov Feldstern
 @iE-mail: dfeldstern () fastimap ! com
    RTL/BiDi-related fixes
+@bDaniel Fernández
+@iE-mail: d3vf4n () tutanota ! com
+   es/ca translations
 @bUdi Fogiel
 @iE-mail: udifoglle () gmail ! com
    RTL/BiDi-related fixes
@@ -513,6 +516,9 @@
 @bBernd Rellermeyer
 @iE-mail: bernd.rellermeyer () arcor ! de
    Support for Koma-Script family of classes
+@brenyhp (c/o J-M Lasgouttes)
+@iE-mail: renyhp () disroot ! org
+   Support for hepnames/hepparticles
 @bMichael Ressler
 @iE-mail: mike.ressler () alum ! mit ! edu
    documentation maintainer, AASTeX support

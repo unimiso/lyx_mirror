@@ -1732,6 +1732,14 @@ contributors = [
                  "10 April 2005",
                  u"Support for Koma-Script family of classes"),
 
+     contributor(u"renyhp (c/o J-M Lasgouttes)",
+                 "renyhp () disroot ! org",
+                 "GPL",
+                 "LyX ticket #11804",
+                 "m=169459313128600",
+                 "13 September 2023",
+                 u"Support for hepnames/hepparticles"),
+
      contributor(u"Michael Ressler",
                  "mike.ressler () alum ! mit ! edu",
                  "GPL",
