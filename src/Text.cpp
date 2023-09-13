@@ -3215,7 +3215,7 @@ int deleteSpaces(Paragraph & par, pos_type const from, pos_type to,
 	int pos = from;
 	while (pos < to && num_spaces > 0) {
 		Change const & change = par.lookupChange(pos);
-		if (change.inserted() && change.currentAuthor()) {
+		if (change.inserted() && !change.currentAuthor()) {
 			par.eraseChar(pos, trackChanges);
 			--num_spaces;
 			--to;
