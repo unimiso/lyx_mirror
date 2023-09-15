@@ -305,6 +305,19 @@ int LaTeX::run(TeXErrors & terr)
 	deplog(head); // reads the latex log
 	head.update();
 
+	// Record here (after the first LaTeX run) whether nomencl aux files exist
+	// and have changed.
+	// The programs itself are then launched later after the pagination has settled.
+	FileName const nlofile(changeExtension(file.absFileName(), ".nlo"));
+	// If all nomencl entries are removed, nomencl writes an empty nlo file.
+	// DepTable::hasChanged() returns false in this case, since it does not
+	// distinguish empty files from non-existing files. This is why we need
+	// the extra checks here (to trigger a rerun). Cf. discussions in #8905.
+	// FIXME: Sort out the real problem in DepTable.
+	bool const run_nomencl = head.haschanged(nlofile) || (nlofile.exists() && nlofile.isFileEmpty());
+	FileName const glofile(changeExtension(file.absFileName(), ".glo"));
+	bool const run_nomencl_glo = head.haschanged(glofile);
+
 	// 1
 	// At this point we must run the bibliography processor if needed.
 	// First, check if we're using biber instead of bibtex --
@@ -446,20 +459,13 @@ int LaTeX::run(TeXErrors & terr)
 			iscanres = scanIlgFile(terr);
 		rerun = true;
 	}
-	FileName const nlofile(changeExtension(file.absFileName(), ".nlo"));
-	// If all nomencl entries are removed, nomencl writes an empty nlo file.
-	// DepTable::hasChanged() returns false in this case, since it does not
-	// distinguish empty files from non-existing files. This is why we need
-	// the extra checks here (to trigger a rerun). Cf. discussions in #8905.
-	// FIXME: Sort out the real problem in DepTable.
-	if (head.haschanged(nlofile) || (nlofile.exists() && nlofile.isFileEmpty())) {
+	if (run_nomencl) {
 		int const ret = runMakeIndexNomencl(file, ".nlo", ".nls");
 		if (ret == Systemcall::KILLED || ret == Systemcall::TIMEOUT)
 			return ret;
 		rerun = true;
 	}
-	FileName const glofile(changeExtension(file.absFileName(), ".glo"));
-	if (head.haschanged(glofile)) {
+	if (run_nomencl_glo) {
 		int const ret = runMakeIndexNomencl(file, ".glo", ".gls");
 		if (ret)
 			return ret;
