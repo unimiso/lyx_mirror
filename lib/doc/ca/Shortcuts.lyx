@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 619
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -121,29 +121,13 @@ Dreceres
 \family default
 ;
  per a més informació consulteu la secció 
-\family sans
-Dreceres
-\begin_inset space ~
-\end_inset
-
-de
-\begin_inset space ~
-\end_inset
-
-teclat
-\family default
+\emph on
+Dreceres de teclat
+\emph default
  de la 
-\family sans
-Guia
-\begin_inset space ~
-\end_inset
-
-de
-\begin_inset space ~
-\end_inset
-
-l'usuari
-\family default
+\emph on
+Guia de l'usuari
+\emph default
 .
 \end_layout
 
@@ -730,7 +714,7 @@ arg   "undo"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Subratllar
+Subratllat
 \end_layout
 
 \end_inset
@@ -826,7 +810,7 @@ arg   "space-insert normal"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Línia nova
+Salt de línia tallada
 \end_layout
 
 \end_inset
@@ -874,7 +858,7 @@ arg   "space-insert thin"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Salt de línia
+Salt de línia justificada
 \end_layout
 
 \end_inset
@@ -1066,7 +1050,7 @@ arg   "word-find"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Revisió ortogràfica
+Correcció ortogràfica
 \end_layout
 
 \end_inset

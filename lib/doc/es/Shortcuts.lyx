@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 619
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -214,7 +214,7 @@ teclado
 Shortcuts
 \change_inserted -1463541724 1693127095
 
-\family sans
+\emph on
 Atajos
 \begin_inset space ~
 \end_inset
@@ -226,7 +226,7 @@ de
 teclado
 \change_deleted -1463541724 1693126376
 
-\family default
+\emph default
 
 \begin_inset Quotes erd
 \end_inset
@@ -259,14 +259,16 @@ Guía
 del
 \change_deleted -1463541724 1693126359
  
-\change_inserted -1463541724 1693126359
+\change_inserted -1463541724 1694737748
 
 \begin_inset space ~
 \end_inset
 
-
+u
+\change_deleted -1463541724 1694737746
+U
 \change_unchanged
-Usuario
+suario
 \emph default
 .
 \end_layout
@@ -1123,7 +1125,13 @@ arg   "space-insert normal"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -1463541724 1694716719
 Línea nueva
+\change_inserted -1463541724 1694736478
+Salto de línea cortada
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -1148,7 +1156,13 @@ arg   "newline-insert newline"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Espacio delgado
+Espacio 
+\change_deleted -1463541724 1694736974
+delgado
+\change_inserted -1463541724 1694736974
+fino
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -1172,6 +1186,10 @@ arg   "space-insert thin"
 
 \begin_layout Plain Layout
 Salto de línea
+\change_inserted -1463541724 1694736480
+ justificada
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -2801,7 +2819,13 @@ arg   "math-insert \\bar"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ecuación presentada
+
+\change_deleted -1463541724 1694736900
+Ecuación
+\change_inserted -1463541724 1694736903
+Fórmula
+\change_unchanged
+ presentada
 \end_layout
 
 \end_inset
