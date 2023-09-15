@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 619
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -54,6 +54,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Index
@@ -877,7 +878,48 @@ arg   "space-insert normal"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -1463541724 1694736703
 Newline
+\change_inserted -1463541724 1694737543
+Ragged Linebreak
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1694737644
+Match the names in menu 
+\family sans
+Insert\SpecialChar menuseparator
+Formatting
+\family default
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1694737664
+In Tutorial (section 2.2.2),
+ though,
+ it is mentioned as 
+\begin_inset Quotes eld
+\end_inset
+
+Non-breaking normal break
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -925,7 +967,32 @@ arg   "space-insert thin"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted -1463541724 1694736711
+Justified 
+\change_unchanged
 Linebreak
+\change_inserted -1463541724 1694736736
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1463541724 1694736778
+Match the names in menu 
+\family sans
+Insert\SpecialChar menuseparator
+Formatting
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
