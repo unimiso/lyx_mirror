@@ -360,6 +360,22 @@ private:
 	/// Track whether we prompted the user about unapplied
 	/// changes
 	bool prompted_;
+	/// Cache margin values
+	std::string tmp_leftmargin_;
+	///
+	std::string tmp_topmargin_;
+	///
+	std::string tmp_rightmargin_;
+	///
+	std::string tmp_bottommargin_;
+	///
+	std::string tmp_headheight_;
+	///
+	std::string tmp_headsep_;
+	///
+	std::string tmp_footskip_;
+	///
+	std::string tmp_columnsep_;
 	
 	/// LaTeX syntax highlighter
 	LaTeXHighlighter * pdf_options_highlighter_;

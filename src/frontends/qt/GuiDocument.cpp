@@ -2187,10 +2187,8 @@ void GuiDocument::setMargins()
 	if (extern_geometry) {
 		marginsModule->marginCB->setChecked(false);
 		setCustomMargins(true);
-	} else {
+	} else
 		marginsModule->marginCB->setChecked(!bp_.use_geometry);
-		setCustomMargins(!bp_.use_geometry);
-	}
 }
 
 
@@ -2220,6 +2218,61 @@ void GuiDocument::setColSep()
 
 void GuiDocument::setCustomMargins(bool custom)
 {
+	if (custom) {
+		// Cache current settings
+		tmp_leftmargin_ = widgetsToLength(marginsModule->innerLE,
+						  marginsModule->innerUnit);
+		tmp_topmargin_ = widgetsToLength(marginsModule->topLE,
+						 marginsModule->topUnit);
+		tmp_rightmargin_ = widgetsToLength(marginsModule->outerLE,
+						   marginsModule->outerUnit);
+		tmp_bottommargin_ = widgetsToLength(marginsModule->bottomLE,
+						    marginsModule->bottomUnit);
+		tmp_headheight_ = widgetsToLength(marginsModule->headheightLE,
+						  marginsModule->headheightUnit);
+		tmp_headsep_ = widgetsToLength(marginsModule->headsepLE,
+					       marginsModule->headsepUnit);
+		tmp_footskip_ = widgetsToLength(marginsModule->footskipLE,
+						marginsModule->footskipUnit);
+		tmp_columnsep_ = widgetsToLength(marginsModule->columnsepLE,
+						 marginsModule->columnsepUnit);
+		// clear widgets
+		marginsModule->topLE->clear();
+		marginsModule->bottomLE->clear();
+		marginsModule->innerLE->clear();
+		marginsModule->outerLE->clear();
+		marginsModule->headheightLE->clear();
+		marginsModule->headsepLE->clear();
+		marginsModule->footskipLE->clear();
+		marginsModule->columnsepLE->clear();
+	} else {
+		Length::UNIT const default_unit = Length::defaultUnit();
+		// re-fill chached values
+		lengthToWidgets(marginsModule->topLE,
+				marginsModule->topUnit,
+				tmp_topmargin_, default_unit);
+		lengthToWidgets(marginsModule->bottomLE,
+				marginsModule->bottomUnit,
+				tmp_bottommargin_, default_unit);
+		lengthToWidgets(marginsModule->innerLE,
+				marginsModule->innerUnit,
+				tmp_leftmargin_, default_unit);
+		lengthToWidgets(marginsModule->outerLE,
+				marginsModule->outerUnit,
+				tmp_rightmargin_, default_unit);
+		lengthToWidgets(marginsModule->headheightLE,
+				marginsModule->headheightUnit,
+				tmp_headheight_, default_unit);
+		lengthToWidgets(marginsModule->headsepLE,
+				marginsModule->headsepUnit,
+				tmp_headsep_, default_unit);
+		lengthToWidgets(marginsModule->footskipLE,
+				marginsModule->footskipUnit,
+				tmp_footskip_, default_unit);
+		lengthToWidgets(marginsModule->columnsepLE,
+				marginsModule->columnsepUnit,
+				tmp_columnsep_, default_unit);
+	}
 	marginsModule->topL->setEnabled(!custom);
 	marginsModule->topLE->setEnabled(!custom);
 	marginsModule->topUnit->setEnabled(!custom);
@@ -3989,14 +4042,16 @@ void GuiDocument::applyView()
 
 	Ui::MarginsUi const * m = marginsModule;
 
-	bp_.leftmargin = widgetsToLength(m->innerLE, m->innerUnit);
-	bp_.topmargin = widgetsToLength(m->topLE, m->topUnit);
-	bp_.rightmargin = widgetsToLength(m->outerLE, m->outerUnit);
-	bp_.bottommargin = widgetsToLength(m->bottomLE, m->bottomUnit);
-	bp_.headheight = widgetsToLength(m->headheightLE, m->headheightUnit);
-	bp_.headsep = widgetsToLength(m->headsepLE, m->headsepUnit);
-	bp_.footskip = widgetsToLength(m->footskipLE, m->footskipUnit);
-	bp_.columnsep = widgetsToLength(m->columnsepLE, m->columnsepUnit);
+	if (bp_.use_geometry) {
+		bp_.leftmargin = widgetsToLength(m->innerLE, m->innerUnit);
+		bp_.topmargin = widgetsToLength(m->topLE, m->topUnit);
+		bp_.rightmargin = widgetsToLength(m->outerLE, m->outerUnit);
+		bp_.bottommargin = widgetsToLength(m->bottomLE, m->bottomUnit);
+		bp_.headheight = widgetsToLength(m->headheightLE, m->headheightUnit);
+		bp_.headsep = widgetsToLength(m->headsepLE, m->headsepUnit);
+		bp_.footskip = widgetsToLength(m->footskipLE, m->footskipUnit);
+		bp_.columnsep = widgetsToLength(m->columnsepLE, m->columnsepUnit);
+	}
 
 	// branches
 	branchesModule->apply(bp_);
@@ -4586,31 +4641,33 @@ void GuiDocument::paramsToDialog()
 	// margins
 	Ui::MarginsUi * m = marginsModule;
 
-	setMargins();
+	tmp_leftmargin_ = bp_.leftmargin;
+	tmp_topmargin_ = bp_.topmargin;
+	tmp_rightmargin_ = bp_.rightmargin;
+	tmp_bottommargin_ = bp_.bottommargin;
+	tmp_headheight_ = bp_.headheight;
+	tmp_headsep_ = bp_.headsep;
+	tmp_footskip_ = bp_.footskip;
+	tmp_columnsep_ = bp_.columnsep;
 
 	lengthToWidgets(m->topLE, m->topUnit,
 		bp_.topmargin, default_unit);
-
 	lengthToWidgets(m->bottomLE, m->bottomUnit,
 		bp_.bottommargin, default_unit);
-
 	lengthToWidgets(m->innerLE, m->innerUnit,
 		bp_.leftmargin, default_unit);
-
 	lengthToWidgets(m->outerLE, m->outerUnit,
 		bp_.rightmargin, default_unit);
-
 	lengthToWidgets(m->headheightLE, m->headheightUnit,
 		bp_.headheight, default_unit);
-
 	lengthToWidgets(m->headsepLE, m->headsepUnit,
 		bp_.headsep, default_unit);
-
 	lengthToWidgets(m->footskipLE, m->footskipUnit,
 		bp_.footskip, default_unit);
-
 	lengthToWidgets(m->columnsepLE, m->columnsepUnit,
 		bp_.columnsep, default_unit);
+
+	setMargins();
 
 	// branches
 	updateUnknownBranches();
