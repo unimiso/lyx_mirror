@@ -11,7 +11,7 @@
 # Full author contact details are available in file CREDITS.
 
 # The interface is designed (partially) following the KDE Human Interface
-# Guidelines (http://techbase.kde.org/Projects/Usability/HIG)
+# Guidelines (https://develop.kde.org/hig/)
 
 # Casing Rules:
 # Capitalize all words in the element, with the following exceptions:
@@ -19,7 +19,7 @@
 # * Conjunctions: and, but, for, not, so, yet ...
 # * Prepositions of three or fewer letters: at, for, by, in, to ...
 #   (except when the preposition is part of a verb phrase, such as "Check In")
-# (https://developer.gnome.org/hig-book/unstable/design-text-labels.html.en)
+# (https://developer.gnome.org/hig/guidelines/writing-style.html)
 
 Format 5
 
