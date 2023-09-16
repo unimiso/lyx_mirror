@@ -22,6 +22,7 @@
 #include "support/strfwd.h"
 #include "support/types.h"
 
+#include "insets/InsetCode.h"
 #include "insets/InsetLayout.h"
 
 #include <set>
@@ -533,6 +534,9 @@ private:
 	void collectWords();
 	///
 	void registerWords();
+	///
+	int getInsetPos(InsetCode const code, int startpos,
+			bool ignore_deleted=false) const;
 
 	/// Pimpl away stuff
 	class Private;

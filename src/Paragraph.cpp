@@ -4532,6 +4532,27 @@ bool Paragraph::allowEmpty() const
 }
 
 
+int Paragraph::getInsetPos(InsetCode const code, int startpos,
+			   bool ignore_deleted) const
+{
+	while (startpos != -1) {
+		int found_pos = d->insetlist_.find(code, startpos);
+		if (found_pos == -1)
+			// nothing found
+			return -1;
+		if (isDeleted(found_pos) && ignore_deleted) {
+			// we're not interested in deleted insets
+			if (found_pos + 1 == size())
+				return -1;
+			startpos = found_pos + 1;
+			continue;
+		} else
+			return found_pos;
+	}
+	return -1;
+}
+
+
 bool Paragraph::brokenBiblio() const
 {
 	// There is a problem if there is no bibitem at position 0 in
@@ -4539,10 +4560,10 @@ bool Paragraph::brokenBiblio() const
 	// paragraph or if this paragraph is not supposed to have
 	// a bibitem inset at all.
 	return ((d->layout_->labeltype == LABEL_BIBLIO
-		&& (d->insetlist_.find(BIBITEM_CODE) != 0
-		    || d->insetlist_.find(BIBITEM_CODE, 1) > 0))
+		&& (getInsetPos(BIBITEM_CODE, 0, true) != 0
+		    || getInsetPos(BIBITEM_CODE, 1, true) > 0))
 		|| (d->layout_->labeltype != LABEL_BIBLIO
-		    && d->insetlist_.find(BIBITEM_CODE) != -1));
+		    && getInsetPos(BIBITEM_CODE, 0, true) != -1));
 }
 
 
@@ -4553,7 +4574,7 @@ int Paragraph::fixBiblio(Buffer const & buffer)
 	// cursor cannot be correctly updated.
 
 	bool const track_changes = buffer.params().track_changes;
-	int bibitem_pos = d->insetlist_.find(BIBITEM_CODE);
+	int bibitem_pos = getInsetPos(BIBITEM_CODE, 0, true);
 
 	// The case where paragraph is not BIBLIO
 	if (d->layout_->labeltype != LABEL_BIBLIO) {
@@ -4568,7 +4589,7 @@ int Paragraph::fixBiblio(Buffer const & buffer)
 
 	bool const hasbibitem0 = bibitem_pos == 0;
 	if (hasbibitem0) {
-		bibitem_pos = d->insetlist_.find(BIBITEM_CODE, 1);
+		bibitem_pos = getInsetPos(BIBITEM_CODE, 0, true);
 		// There was an InsetBibitem at pos 0,
 		// and no other one => OK
 		if (bibitem_pos == -1)
@@ -4589,11 +4610,19 @@ int Paragraph::fixBiblio(Buffer const & buffer)
 	// We need to create an inset at the beginning
 	Inset * inset = nullptr;
 	if (bibitem_pos > 0) {
-		// there was one somewhere in the paragraph, let's move it
-		inset = d->insetlist_.release(bibitem_pos);
+		// There was one somewhere in the paragraph, let's move it
+		// * With change tracking, we use a clone
+		//   and leave the old inset at its position
+		//   (marked deleted)
+		// * Without change tracking, we release the inset
+		//   from its previous InsetList position
+		inset = track_changes
+				? new InsetBibitem(const_cast<Buffer *>(&buffer),
+						   getInset(bibitem_pos)->asInsetCommand()->params())
+				: d->insetlist_.release(bibitem_pos);
 		eraseChar(bibitem_pos, track_changes);
 	} else
-		// make a fresh one
+		// No inset found -- make a fresh one
 		inset = new InsetBibitem(const_cast<Buffer *>(&buffer),
 					 InsetCommandParams(BIBITEM_CODE));
 
