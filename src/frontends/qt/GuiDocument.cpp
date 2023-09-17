@@ -1272,7 +1272,7 @@ GuiDocument::GuiDocument(GuiView & lv)
 
 	// margins
 	marginsModule = new UiWidget<Ui::MarginsUi>(this);
-	connect(marginsModule->marginCB, SIGNAL(toggled(bool)),
+	connect(marginsModule->marginCB, SIGNAL(clicked(bool)),
 		this, SLOT(setCustomMargins(bool)));
 	connect(marginsModule->marginCB, SIGNAL(clicked()),
 		this, SLOT(change_adaptor()));
@@ -2187,8 +2187,10 @@ void GuiDocument::setMargins()
 	if (extern_geometry) {
 		marginsModule->marginCB->setChecked(false);
 		setCustomMargins(true);
-	} else
+	} else {
 		marginsModule->marginCB->setChecked(!bp_.use_geometry);
+		setCustomMargins(!bp_.use_geometry);
+	}
 }
 
 
