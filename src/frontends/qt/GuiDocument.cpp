@@ -2218,10 +2218,38 @@ void GuiDocument::setColSep()
 }
 
 
-void GuiDocument::setCustomMargins(bool custom)
+void GuiDocument::setCustomMargins(bool cb_checked)
 {
-	if (custom) {
-		// Cache current settings
+	bool const custom_margins = !cb_checked;
+	if (custom_margins) {
+		Length::UNIT const default_unit = Length::defaultUnit();
+		// fill with chached values
+		lengthToWidgets(marginsModule->topLE,
+				marginsModule->topUnit,
+				tmp_topmargin_, default_unit);
+		lengthToWidgets(marginsModule->bottomLE,
+				marginsModule->bottomUnit,
+				tmp_bottommargin_, default_unit);
+		lengthToWidgets(marginsModule->innerLE,
+				marginsModule->innerUnit,
+				tmp_leftmargin_, default_unit);
+		lengthToWidgets(marginsModule->outerLE,
+				marginsModule->outerUnit,
+				tmp_rightmargin_, default_unit);
+		lengthToWidgets(marginsModule->headheightLE,
+				marginsModule->headheightUnit,
+				tmp_headheight_, default_unit);
+		lengthToWidgets(marginsModule->headsepLE,
+				marginsModule->headsepUnit,
+				tmp_headsep_, default_unit);
+		lengthToWidgets(marginsModule->footskipLE,
+				marginsModule->footskipUnit,
+				tmp_footskip_, default_unit);
+		lengthToWidgets(marginsModule->columnsepLE,
+				marginsModule->columnsepUnit,
+				tmp_columnsep_, default_unit);
+	} else { // default margins
+		// Cache current values
 		tmp_leftmargin_ = widgetsToLength(marginsModule->innerLE,
 						  marginsModule->innerUnit);
 		tmp_topmargin_ = widgetsToLength(marginsModule->topLE,
@@ -2247,64 +2275,38 @@ void GuiDocument::setCustomMargins(bool custom)
 		marginsModule->headsepLE->clear();
 		marginsModule->footskipLE->clear();
 		marginsModule->columnsepLE->clear();
-	} else {
-		Length::UNIT const default_unit = Length::defaultUnit();
-		// re-fill chached values
-		lengthToWidgets(marginsModule->topLE,
-				marginsModule->topUnit,
-				tmp_topmargin_, default_unit);
-		lengthToWidgets(marginsModule->bottomLE,
-				marginsModule->bottomUnit,
-				tmp_bottommargin_, default_unit);
-		lengthToWidgets(marginsModule->innerLE,
-				marginsModule->innerUnit,
-				tmp_leftmargin_, default_unit);
-		lengthToWidgets(marginsModule->outerLE,
-				marginsModule->outerUnit,
-				tmp_rightmargin_, default_unit);
-		lengthToWidgets(marginsModule->headheightLE,
-				marginsModule->headheightUnit,
-				tmp_headheight_, default_unit);
-		lengthToWidgets(marginsModule->headsepLE,
-				marginsModule->headsepUnit,
-				tmp_headsep_, default_unit);
-		lengthToWidgets(marginsModule->footskipLE,
-				marginsModule->footskipUnit,
-				tmp_footskip_, default_unit);
-		lengthToWidgets(marginsModule->columnsepLE,
-				marginsModule->columnsepUnit,
-				tmp_columnsep_, default_unit);
 	}
-	marginsModule->topL->setEnabled(!custom);
-	marginsModule->topLE->setEnabled(!custom);
-	marginsModule->topUnit->setEnabled(!custom);
 
-	marginsModule->bottomL->setEnabled(!custom);
-	marginsModule->bottomLE->setEnabled(!custom);
-	marginsModule->bottomUnit->setEnabled(!custom);
+	marginsModule->topL->setEnabled(custom_margins);
+	marginsModule->topLE->setEnabled(custom_margins);
+	marginsModule->topUnit->setEnabled(custom_margins);
 
-	marginsModule->innerL->setEnabled(!custom);
-	marginsModule->innerLE->setEnabled(!custom);
-	marginsModule->innerUnit->setEnabled(!custom);
+	marginsModule->bottomL->setEnabled(custom_margins);
+	marginsModule->bottomLE->setEnabled(custom_margins);
+	marginsModule->bottomUnit->setEnabled(custom_margins);
 
-	marginsModule->outerL->setEnabled(!custom);
-	marginsModule->outerLE->setEnabled(!custom);
-	marginsModule->outerUnit->setEnabled(!custom);
+	marginsModule->innerL->setEnabled(custom_margins);
+	marginsModule->innerLE->setEnabled(custom_margins);
+	marginsModule->innerUnit->setEnabled(custom_margins);
 
-	marginsModule->headheightL->setEnabled(!custom);
-	marginsModule->headheightLE->setEnabled(!custom);
-	marginsModule->headheightUnit->setEnabled(!custom);
+	marginsModule->outerL->setEnabled(custom_margins);
+	marginsModule->outerLE->setEnabled(custom_margins);
+	marginsModule->outerUnit->setEnabled(custom_margins);
 
-	marginsModule->headsepL->setEnabled(!custom);
-	marginsModule->headsepLE->setEnabled(!custom);
-	marginsModule->headsepUnit->setEnabled(!custom);
+	marginsModule->headheightL->setEnabled(custom_margins);
+	marginsModule->headheightLE->setEnabled(custom_margins);
+	marginsModule->headheightUnit->setEnabled(custom_margins);
 
-	marginsModule->footskipL->setEnabled(!custom);
-	marginsModule->footskipLE->setEnabled(!custom);
-	marginsModule->footskipUnit->setEnabled(!custom);
+	marginsModule->headsepL->setEnabled(custom_margins);
+	marginsModule->headsepLE->setEnabled(custom_margins);
+	marginsModule->headsepUnit->setEnabled(custom_margins);
 
-	bool const enableColSep = !custom &&
-			textLayoutModule->twoColumnCB->checkState() == Qt::Checked;
+	marginsModule->footskipL->setEnabled(custom_margins);
+	marginsModule->footskipLE->setEnabled(custom_margins);
+	marginsModule->footskipUnit->setEnabled(custom_margins);
+
+	bool const enableColSep = custom_margins &&
+			textLayoutModule->twoColumnCB->isChecked();
 	marginsModule->columnsepL->setEnabled(enableColSep);
 	marginsModule->columnsepLE->setEnabled(enableColSep);
 	marginsModule->columnsepUnit->setEnabled(enableColSep);
