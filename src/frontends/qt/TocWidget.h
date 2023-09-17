@@ -102,8 +102,14 @@ private:
 	///
 	bool isSortable()
 		{ return current_type_ != "tableofcontents"; }
+	/// \returns the top-most ancestor of \p descendant
+	QModelIndex getAncestor(QModelIndex const & descendant) const;
+	/// \returns \c true if \p ancestor is an ancestor (parent, grandparent, etc.) of \p descendant
+	bool isAncestor(QModelIndex const & ancestor, QModelIndex const & descendant) const;
+	/// collapse all nodes to \c depth except for the branch of the currently active item
+	void collapseAllOthers(int const depth);
 	///
-	void setTreeDepth(int depth);
+	void setTreeDepth(int depth, bool const maintain_current = false);
 	///
 	void outline(FuncCode func_code);
 	/// finds the inset that is connected to the current item,

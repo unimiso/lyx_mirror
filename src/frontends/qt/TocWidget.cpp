@@ -334,16 +334,20 @@ void TocWidget::on_depthSL_valueChanged(int depth)
 }
 
 
-void TocWidget::setTreeDepth(int depth)
+void TocWidget::setTreeDepth(int depth, bool const maintain_current)
 {
 	depth_ = depth;
 	if (!tocTV->model())
 		return;
 
-	if (depth == 0)
-		tocTV->collapseAll();
-	else
-		tocTV->expandToDepth(depth - 1);
+	if (maintain_current)
+		collapseAllOthers(depth);
+	else {
+		if (depth == 0)
+			tocTV->collapseAll();
+		else
+			tocTV->expandToDepth(depth - 1);
+	}
 }
 
 
@@ -518,7 +522,7 @@ void TocWidget::finishUpdateView()
 	// and outweighted by TocModels::reset() anyway.
 	if (canNavigate()) {
 		if (!persistent_ && !keep_expanded_)
-			setTreeDepth(depth_);
+			setTreeDepth(depth_, true);
 		keep_expanded_ = false;
 		persistentCB->setChecked(persistent_);
 		// select the item at current cursor location
@@ -569,6 +573,62 @@ void TocWidget::filterContents()
 		    && index.parent() != QModelIndex())
 			tocTV->setRowHidden(index.parent().row(),
 					    index.parent().parent(), false);
+	}
+}
+
+
+bool TocWidget::isAncestor(QModelIndex const & ancestor,
+			   QModelIndex const & descendant) const
+{
+	QModelIndex mi = descendant;
+	while (true) {
+		if (ancestor == mi.parent())
+			return true;
+		if (mi == QModelIndex())
+			return false;
+		mi = mi.parent();
+	}
+	return false;
+}
+
+
+QModelIndex TocWidget::getAncestor(QModelIndex const & descendant) const
+{
+	QModelIndex mi = descendant;
+	while (true) {
+		if (mi.parent() == QModelIndex())
+			return mi;
+		mi = mi.parent();
+	}
+	return mi;
+}
+
+
+void TocWidget::collapseAllOthers(int const depth)
+{
+	if (!tocTV->model())
+		return;
+
+	QModelIndexList indices = tocTV->model()->match(
+		tocTV->model()->index(0, 0),
+		Qt::DisplayRole, ".*", -1,
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+		Qt::MatchFlags(Qt::MatchRegularExpression|Qt::MatchRecursive));
+#else
+		// deprecated in Qt 5.15.
+		Qt::MatchFlags(Qt::MatchRegExp|Qt::MatchRecursive));
+#endif
+
+	int size = indices.size();
+	// collapse parents which are not in our ancestry line
+	for (int i = size - 1; i >= 0; i--) {
+		QModelIndex index = indices[i];
+		if (tocTV->isExpanded(index)
+		    && !isAncestor(index, tocTV->currentIndex())) {
+			tocTV->collapse(index);
+			if (depth > 0 && index.parent() == QModelIndex())
+				tocTV->expandRecursively(index, depth - 1);
+		}
 	}
 }
 
