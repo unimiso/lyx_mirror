@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -11,9 +11,9 @@
 \language_package default
 \inputencoding utf8
 \fontencoding auto
-\font_roman "DejaVuSerif" "DejaVu Serif"
-\font_sans "DejaVuSans" "DejaVu Sans"
-\font_typewriter "DejaVuSansMono" "DejaVu Sans Mono"
+\font_roman "default" "DejaVu Serif"
+\font_sans "default" "DejaVu Sans"
+\font_typewriter "default" "DejaVu Sans Mono"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -56,6 +56,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Предметный указатель
@@ -149,11 +150,7 @@ status collapsed
 Вывод программы \SpecialChar LyX
  выглядит потрясающе!
  Чтобы в этом убедиться,
- выберите пункт меню
-\begin_inset Newline newline
-\end_inset
-
-
+ выберите пункт меню 
 \family sans
 Документ\SpecialChar menuseparator
 Просмотреть
@@ -189,9 +186,13 @@ arg   "buffer-view"
 \emph on
 Самоучителя
 \emph default
- и затем приступить к чтению главы «\SpecialChar LyX
+ и затем приступить к чтению раздела 
+\emph on
+\SpecialChar LyX
  для пользователей \SpecialChar LaTeX
-» (всем остальным:
+
+\emph default
+ (всем остальным:
  не беспокойтесь,
  вам необязательно знать \SpecialChar LaTeX
  для работы в \SpecialChar LyX
@@ -285,17 +286,17 @@ Live
 Например,
  в дистрибутивах Linux 
 \family sans
-(K,X)Ubuntu
+Ubuntu
 \family default
  и 
 \family sans
 Debian
 \family default
- пакет поддержки русского языка называется «
+ пакет поддержки русского языка называется 
 \family typewriter
 texlive-lang-cyrillic
 \family default
-».
+.
 \begin_inset Newline newline
 \end_inset
 

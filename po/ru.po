@@ -17325,7 +17325,7 @@ msgstr "Аргумент"
 
 #: lib/layouts/stdinsets.inc:746
 msgid "unlabelled"
-msgstr "без метки"
+msgstr "без номера"
 
 #: lib/layouts/stdinsets.inc:753
 msgid "Preview"
@@ -20575,7 +20575,7 @@ msgstr "Инвертировать вставку|И"
 
 #: lib/ui/stdcontext.inc:538
 msgid "Add Unknown Branch|w"
-msgstr "Добавить неизвестную ветку|н"
+msgstr "Добавить неизвестную ветку"
 
 #: lib/ui/stdcontext.inc:547
 msgid "Insert Reference at Cursor Position|I"

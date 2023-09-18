@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -60,6 +60,7 @@
 \suppress_date true
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Index
@@ -107,7 +108,7 @@
 \end_layout
 
 \begin_layout Standard
-В этом файле приводятся сочетания клавиш из файла привязок 
+В этом файле приводятся основные сочетания клавиш из файла привязок 
 \family typewriter
 
 \begin_inset Info
@@ -138,7 +139,7 @@ arg   "bind_file"
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Буфер
 \end_layout
 
@@ -533,7 +534,7 @@ arg   "master-buffer-view pdf"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Правка
 \end_layout
 
@@ -1261,7 +1262,7 @@ arg   "bookmark-goto 0"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Греческие символы
 \end_layout
 
@@ -2381,7 +2382,7 @@ arg   "math-insert \\Psi"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Математические символы
 \end_layout
 

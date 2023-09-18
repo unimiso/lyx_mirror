@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 614
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -73,6 +73,7 @@ logicalmkup
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \index Предметный указатель
@@ -295,8 +296,8 @@ LatexCommand tableofcontents
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:latexusers"
+nolink "false"
 
 \end_inset
 
@@ -1593,8 +1594,8 @@ Enter
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:docclasses"
+nolink "false"
 
 \end_inset
 
@@ -2241,13 +2242,9 @@ Article
 \begin_layout Standard
 Вот небольшой список некоторых классов документа.
  Для получения более детальной информации обратитесь к разделу 
-\begin_inset Quotes rld
-\end_inset
-
+\emph on
 Специальные классы документов
-\begin_inset Quotes rrd
-\end_inset
-
+\emph default
  в руководстве 
 \emph on
 Дополнительные возможности
@@ -3078,8 +3075,8 @@ Article
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:docclasses"
+nolink "false"
 
 \end_inset
 
@@ -5071,8 +5068,8 @@ arg   "file-open"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:tex2lyx"
+nolink "false"
 
 \end_inset
 
@@ -5324,8 +5321,8 @@ usepackage{foo}
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:preamble"
+nolink "false"
 
 \end_inset
 
@@ -5610,8 +5607,8 @@ BibTeX
 
 \begin_inset CommandInset ref
 LatexCommand ref
-nolink "false"
 reference "sec:bibliographies"
+nolink "false"
 
 \end_inset
 
