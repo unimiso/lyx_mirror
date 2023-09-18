@@ -535,11 +535,8 @@ void TocWidget::finishUpdateView()
 }
 
 
-void TocWidget::filterContents()
+QModelIndexList TocWidget::getIndices()
 {
-	if (!tocTV->model())
-		return;
-
 	QModelIndexList indices = tocTV->model()->match(
 		tocTV->model()->index(0, 0),
 		Qt::DisplayRole, ".*", -1,
@@ -549,6 +546,16 @@ void TocWidget::filterContents()
 		// deprecated in Qt 5.15.
 		Qt::MatchFlags(Qt::MatchRegExp|Qt::MatchRecursive));
 #endif
+	return indices;
+}
+
+
+void TocWidget::filterContents()
+{
+	if (!tocTV->model())
+		return;
+
+	QModelIndexList indices = getIndices();
 
 	bool const show_active =
 		activeFilterCO->currentIndex() != 2;
@@ -609,15 +616,7 @@ void TocWidget::collapseAllOthers(int const depth)
 	if (!tocTV->model())
 		return;
 
-	QModelIndexList indices = tocTV->model()->match(
-		tocTV->model()->index(0, 0),
-		Qt::DisplayRole, ".*", -1,
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-		Qt::MatchFlags(Qt::MatchRegularExpression|Qt::MatchRecursive));
-#else
-		// deprecated in Qt 5.15.
-		Qt::MatchFlags(Qt::MatchRegExp|Qt::MatchRecursive));
-#endif
+	QModelIndexList indices = getIndices();
 
 	int size = indices.size();
 	// collapse parents which are not in our ancestry line

@@ -102,6 +102,8 @@ private:
 	///
 	bool isSortable()
 		{ return current_type_ != "tableofcontents"; }
+	///
+	QModelIndexList getIndices();
 	/// \returns the top-most ancestor of \p descendant
 	QModelIndex getAncestor(QModelIndex const & descendant) const;
 	/// \returns \c true if \p ancestor is an ancestor (parent, grandparent, etc.) of \p descendant
