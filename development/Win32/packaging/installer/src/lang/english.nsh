@@ -8,7 +8,7 @@ Author: Joost Verburg, Uwe Stöhr
 
 ${LangFileString} TEXT_INSTALL_CURRENTUSER "(Installed for Current User)"
 
-${LangFileString} TEXT_WELCOME "This wizard will guide you through the installation of $(^NameDA), $\r$\n\
+${LangFileString} TEXT_WELCOME "This wizard will guide you through the installation of $(^NameDA). $\r$\n\
 				$\r$\n\
 				$_CLICK"
 
