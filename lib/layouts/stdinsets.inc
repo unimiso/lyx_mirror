@@ -469,7 +469,7 @@ End
 InsetLayout Box
 	InheritFont           false
 	LabelFont
-	  Color               foreground
+	  Color               black
 	  Size                Small
 	EndFont
 	MultiPar              true
