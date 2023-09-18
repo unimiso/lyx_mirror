@@ -611,6 +611,19 @@ QModelIndex TocWidget::getAncestor(QModelIndex const & descendant) const
 }
 
 
+int TocWidget::getItemDepth(QModelIndex const & index_in)
+{
+	QModelIndex index = index_in;
+	int depth = 1;
+	while (index.parent().isValid())
+	{
+		index = index.parent();
+		++depth;
+	}
+	return depth;
+}
+
+
 void TocWidget::collapseAllOthers(int const depth)
 {
 	if (!tocTV->model())
@@ -620,11 +633,13 @@ void TocWidget::collapseAllOthers(int const depth)
 
 	int size = indices.size();
 	// collapse parents which are not in our ancestry line
+	// and which exceed the requested depth
 	for (int i = size - 1; i >= 0; i--) {
 		QModelIndex index = indices[i];
 		if (tocTV->isExpanded(index)
 		    && !isAncestor(index, tocTV->currentIndex())) {
-			tocTV->collapse(index);
+			if (depth < getItemDepth(index))
+				tocTV->collapse(index);
 			if (depth > 0 && index.parent() == QModelIndex())
 				tocTV->expandRecursively(index, depth - 1);
 		}

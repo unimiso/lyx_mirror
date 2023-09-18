@@ -108,6 +108,8 @@ private:
 	QModelIndex getAncestor(QModelIndex const & descendant) const;
 	/// \returns \c true if \p ancestor is an ancestor (parent, grandparent, etc.) of \p descendant
 	bool isAncestor(QModelIndex const & ancestor, QModelIndex const & descendant) const;
+	/// \returns depth of the current item
+	int getItemDepth(QModelIndex const & index);
 	/// collapse all nodes to \c depth except for the branch of the currently active item
 	void collapseAllOthers(int const depth);
 	///
