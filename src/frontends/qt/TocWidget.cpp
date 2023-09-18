@@ -637,12 +637,9 @@ void TocWidget::collapseAllOthers(int const depth)
 	for (int i = size - 1; i >= 0; i--) {
 		QModelIndex index = indices[i];
 		if (tocTV->isExpanded(index)
-		    && !isAncestor(index, tocTV->currentIndex())) {
-			if (depth < getItemDepth(index))
-				tocTV->collapse(index);
-			if (depth > 0 && index.parent() == QModelIndex())
-				tocTV->expandRecursively(index, depth - 1);
-		}
+		    && !isAncestor(index, tocTV->currentIndex())
+		    && depth < getItemDepth(index))
+			tocTV->collapse(index);
 	}
 }
 
