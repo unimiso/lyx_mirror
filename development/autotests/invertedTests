@@ -316,6 +316,10 @@ export/examples/(|es/)Curricula_Vitae/Europe_CV_(pdf.*|dvi|lyx22|lyx23)
 # Armenian currently only works with XeTeX and LuaTeX and system fonts
 export/examples/Language_Support/Writing_Armenian_(dvi|dvi3_texF|pdf|pdf2|pdf3|pdf5_texF)
 
+# ! Package hyperxmp Error: hyperref must be loaded before hyperxmp.
+# https://github.com/borisveytsman/acmart/issues/505
+export/templates/Articles/Association_for_Computing_Machinery_%28ACM%29_pdf2
+
 
 # ================================================
 Sublabel: externalissues
