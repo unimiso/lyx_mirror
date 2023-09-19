@@ -2839,6 +2839,10 @@ dist_lettertemplates_DATA = \
 	templates/Letters/KOMA-Script_Letter_%28V._2%29.lyx \
 	templates/Letters/Letter_%28Standard_Class%29.lyx
 
+calettertemplatesdir = $(pkgdatadir)/templates/ca/Letters
+dist_calettertemplates_DATA = \
+	templates/ca/Letters/Letter_%28Standard_Class%29.lyx
+
 obsoletetemplatesdir = $(pkgdatadir)/templates/Obsolete
 dist_obsoletetemplates_DATA = \
 	templates/Obsolete/ACM_SIGGGRAPH_0.92_%28obsolete%29.lyx \
@@ -3211,6 +3215,7 @@ exampleandtemplate_files = \
 			   $(dist_booksvmulttemplates_DATA) \
 			   $(dist_caexamples_DATA) \
 			   $(dist_cainsetexamples_DATA) \
+			   $(dist_calettertemplates_DATA) \
 			   $(dist_csexamples_DATA) \
 			   $(dist_cvexamples_DATA) \
 			   $(dist_daexamples_DATA) \
