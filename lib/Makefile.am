@@ -2843,6 +2843,11 @@ calettertemplatesdir = $(pkgdatadir)/templates/ca/Letters
 dist_calettertemplates_DATA = \
 	templates/ca/Letters/Letter_%28Standard_Class%29.lyx
 
+eslettertemplatesdir = $(pkgdatadir)/templates/es/Letters
+dist_eslettertemplates_DATA = \
+	templates/es/Letters/Letter_%28Standard_Class%29.lyx
+
+
 obsoletetemplatesdir = $(pkgdatadir)/templates/Obsolete
 dist_obsoletetemplates_DATA = \
 	templates/Obsolete/ACM_SIGGGRAPH_0.92_%28obsolete%29.lyx \
@@ -3235,6 +3240,7 @@ exampleandtemplate_files = \
 			   $(dist_esinsetexamples_DATA) \
 			   $(dist_esmoduleexamples_DATA) \
 			   $(dist_espresentationtemplates_DATA) \
+			   $(dist_eslettertemplates_DATA) \
 			   $(dist_euexamples_DATA) \
 			   $(dist_externalexamples_DATA) \
 			   $(dist_faexamples_DATA) \
