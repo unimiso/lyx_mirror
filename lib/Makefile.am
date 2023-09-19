@@ -2847,7 +2847,6 @@ eslettertemplatesdir = $(pkgdatadir)/templates/es/Letters
 dist_eslettertemplates_DATA = \
 	templates/es/Letters/Letter_%28Standard_Class%29.lyx
 
-
 obsoletetemplatesdir = $(pkgdatadir)/templates/Obsolete
 dist_obsoletetemplates_DATA = \
 	templates/Obsolete/ACM_SIGGGRAPH_0.92_%28obsolete%29.lyx \
