@@ -361,7 +361,7 @@ InsetLayout Listings
 	  Family              typewriter
 	EndFont
 	LabelFont
-	  Color               foreground
+	  Color               black
 	  Size                Small
 	EndFont
 	BgColor               listingsbg
