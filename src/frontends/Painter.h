@@ -134,11 +134,16 @@ public:
 	virtual void image(int x, int y, int w, int h,
 		graphics::Image const & image, bool const revert_in_darkmode = false) = 0;
 
+	// Direction for painting text
+	enum Direction { LtR, RtL, Auto };
+
 	/// draw a string at position x, y (y is the baseline).
-	virtual void text(int x, int y, docstring const & str, FontInfo const & f) = 0;
+	virtual void text(int x, int y, docstring const & str, FontInfo const & f,
+	                  Direction const dir = Auto) = 0;
 
 	/// draw a char at position x, y (y is the baseline)
-	virtual void text(int x, int y, char_type c, FontInfo const & f) = 0;
+	virtual void text(int x, int y, char_type c, FontInfo const & f,
+	                  Direction const dir = Auto) = 0;
 
 	/** draw a string at position x, y (y is the baseline). The
 	 * text direction is enforced by the \c Font.

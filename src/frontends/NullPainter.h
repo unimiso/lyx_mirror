@@ -65,10 +65,10 @@ public:
 	void image(int, int, int, int, graphics::Image const &, bool) override {}
 
 	/// draw a string
-	void text(int, int, docstring const &, FontInfo const &) override {}
+	void text(int, int, docstring const &, FontInfo const &, Direction const = Auto) override {}
 
 	/// draw a char
-	void text(int, int, char_type, FontInfo const &) override {}
+	void text(int, int, char_type, FontInfo const &, Direction const = Auto) override {}
 
 	/// draw a string
 	void text(int, int, docstring const &, Font const &, double, double) override {}

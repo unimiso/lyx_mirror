@@ -805,7 +805,7 @@ void drawStrRed(PainterInfo & pi, int x, int y, docstring const & str)
 	FontInfo f = pi.base.font;
 	augmentFont(f, "mathnormal");
 	f.setColor(Color_latex);
-	pi.pain.text(x, y, str, f);
+	pi.pain.text(x, y, str, f, Painter::LtR);
 }
 
 
@@ -814,7 +814,7 @@ void drawStrBlack(PainterInfo & pi, int x, int y, docstring const & str)
 	FontInfo f = pi.base.font;
 	augmentFont(f, "mathnormal");
 	f.setColor(Color_foreground);
-	pi.pain.text(x, y, str, f);
+	pi.pain.text(x, y, str, f, Painter::LtR);
 }
 
 

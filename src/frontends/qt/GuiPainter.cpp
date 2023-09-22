@@ -282,15 +282,15 @@ void GuiPainter::image(int x, int y, int w, int h, graphics::Image const & i,
 }
 
 
-void GuiPainter::text(int x, int y, char_type c, FontInfo const & f)
+void GuiPainter::text(int x, int y, char_type c, FontInfo const & f, Direction const dir)
 {
-	text(x, y, docstring(1, c), f);
+	text(x, y, docstring(1, c), f, dir);
 }
 
 
-void GuiPainter::text(int x, int y, docstring const & s, FontInfo const & f)
+void GuiPainter::text(int x, int y, docstring const & s, FontInfo const & f, Direction const dir)
 {
-	text(x, y, s, f, Auto, 0.0, 0.0);
+	text(x, y, s, f, dir, 0.0, 0.0);
 }
 
 

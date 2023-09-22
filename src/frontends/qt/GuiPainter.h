@@ -116,10 +116,12 @@ public:
 		lyx::graphics::Image const & image, bool const darkmode = false) override;
 
 	/// draw a string at position x, y (y is the baseline).
-	void text(int x, int y, docstring const & str, FontInfo const & f) override;
+	void text(int x, int y, docstring const & str, FontInfo const & f,
+	          Direction const dir = Auto) override;
 
 	/// draw a char at position x, y (y is the baseline)
-	void text(int x, int y, char_type c, FontInfo const & f) override;
+	void text(int x, int y, char_type c, FontInfo const & f,
+	          Direction const dir = Auto) override;
 
 	/** draw a string at position x, y (y is the baseline). The
 	 * text direction is enforced by the \c Font.
@@ -187,9 +189,6 @@ private:
 	void setQPainterPen(QColor const & col,
 		line_style ls = line_solid, int lw = thin_line,
 		Qt::PenJoinStyle js = Qt::BevelJoin);
-
-	// Direction for painting text
-	enum Direction { LtR, RtL, Auto };
 
 	// Real text() method
 	void text(int x, int y, docstring const & s,
