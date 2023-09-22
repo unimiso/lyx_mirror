@@ -298,7 +298,7 @@ void MathData::metrics(MetricsInfo & mi, Dimension & dim, bool tight) const
 	// so that we can set the caret vertical dimensions.
 	mrow.caret_dim.asc = min(dim.asc, fm.maxAscent());
 	mrow.caret_dim.des = min(dim.des, fm.maxDescent());
-	mrow.caret_dim.wid = fm.lineWidth();
+	mrow.caret_dim.wid = max(fm.lineWidth(), 1);
 
 	/// do the same for math cells linearized in the row
 	MathRow caret_row = MathRow(mrow.caret_dim);
