@@ -311,16 +311,19 @@ bool Converters::checkAuth(Converter const & conv, string const & doc_fname,
 	bool const has_shell_escape = contains(conv_command, "-shell-escape")
 				|| contains(conv_command, "-enable-write18");
 	if (conv.latex() && has_shell_escape && !use_shell_escape) {
+		// Only change font if gui is available otherwise Qt6 crashes
+		string const cmd = use_gui ? "<tt>" + conv_command + "</tt>"
+					   : conv_command;
 		docstring const shellescape_warning =
 		      bformat(_("<p>The following LaTeX backend has been "
 		        "configured to allow execution of external programs "
 		        "for any document:</p>"
-		        "<center><p><tt>%1$s</tt></p></center>"
+		        "<center><p>%1$s</p></center>"
 		        "<p>This is a dangerous configuration. Please, "
 		        "consider using the support offered by LyX for "
 		        "allowing this privilege only to documents that "
 			"actually need it, instead.</p>"),
-		        from_utf8(conv_command));
+		        from_utf8(cmd));
 		frontend::Alert::error(_("Security Warning"),
 					shellescape_warning , false);
 	} else if (!conv.latex())
