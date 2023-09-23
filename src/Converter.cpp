@@ -336,21 +336,23 @@ bool Converters::checkAuth(Converter const & conv, string const & doc_fname,
 		? (has_token ? conv_command.insert(token_pos, "-shell-escape ")
 			     : conv_command.append(" -shell-escape"))
 		: conv_command;
+	// Only change font if gui is available otherwise Qt6 crashes
+	string const cmd = use_gui ? "<tt>" + command + "</tt>" : command;
 	docstring const security_warning = (use_shell_escape
 	    ? bformat(_("<p>The following LaTeX backend has been requested "
 	        "to allow execution of external programs:</p>"
-	        "<center><p><tt>%1$s</tt></p></center>"
+	        "<center><p>%1$s</p></center>"
 	        "<p>The external programs can execute arbitrary commands on "
 	        "your system, including dangerous ones, if instructed to do "
 	        "so by a maliciously crafted LyX document.</p>"),
-	      from_utf8(command))
+	      from_utf8(cmd))
 	    : bformat(_("<p>The requested operation requires the use of a "
 	        "converter from %2$s to %3$s:</p>"
-	        "<blockquote><p><tt>%1$s</tt></p></blockquote>"
+	        "<blockquote><p>%1$s</p></blockquote>"
 	        "<p>This external program can execute arbitrary commands on "
 	        "your system, including dangerous ones, if instructed to do "
 	        "so by a maliciously crafted LyX document.</p>"),
-	      from_utf8(command), from_utf8(conv.from()),
+	      from_utf8(cmd), from_utf8(conv.from()),
 	      from_utf8(conv.to())));
 	if (lyxrc.use_converter_needauth_forbidden && !use_shell_escape) {
 		frontend::Alert::error(
