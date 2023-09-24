@@ -8,7 +8,7 @@
 \use_default_options false
 \maintain_unincluded_children no
 \language spanish
-\language_package default
+\language_package \usepackage[spanish,es-noquoting]{babel}
 \inputencoding utf8
 \fontencoding auto
 \font_roman "default" "default"
