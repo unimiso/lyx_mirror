@@ -31,6 +31,7 @@ namespace xml {
 struct StartTag;
 struct EndTag;
 struct CompTag;
+struct NullTag;
 struct ParTag;
 struct FontTag;
 struct CR;
@@ -66,6 +67,8 @@ public:
 	XMLStream & operator<<(int);
 	///
 	XMLStream & operator<<(char);
+	///
+	XMLStream & operator<<(xml::NullTag const &);
 	///
 	XMLStream & operator<<(xml::StartTag const &);
 	///
@@ -271,6 +274,16 @@ struct ParTag : public StartTag
 	explicit ParTag(std::string const & tag, const std::string & attr): StartTag(tag, from_utf8(attr)) {}
 	///
 	~ParTag() override = default;
+};
+
+
+/// A special tag that doesn't produce any XML output, but makes the XMLStream behave as it it output some text.
+struct NullTag : public StartTag
+{
+	///
+	NullTag(): StartTag("NULLTAG", from_utf8(""), true) {}
+	///
+	~NullTag() override = default;
 };
 
 

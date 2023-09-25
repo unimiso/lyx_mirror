@@ -3673,6 +3673,7 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
     // State variables for the main loop.
     auto xs = new XMLStream(os); // XMLStream has no copy constructor: to create a new object, the only solution
     // is to hold a pointer to the XMLStream (xs = XMLStream(os) is not allowed once the first object is built).
+	xs->startDivision(false);
     std::vector<docstring> delayedChars; // When a font tag ends with a space, output it after the closing font tag.
     // This requires to store delayed characters at some point.
 
@@ -3696,8 +3697,8 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
 		if (isDeleted(i))
 			continue;
 
-		// If this is an InsetNewline, generate a new paragraph. Also reset the fonts, so that tags are closed in
-		// this paragraph.
+		// If this is an InsetNewline, generate a new paragraph (this is the reason why generatedParagraphs is a list
+		// of paragraphs). Also reset the fonts, so that tags are closed in this paragraph.
 		if (getInset(i) && getInset(i)->lyxCode() == NEWLINE_CODE) {
 			if (!ignore_fonts_i)
 				xs->closeFontTags();
@@ -3705,11 +3706,14 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
 			// Output one paragraph (i.e. one string entry in generatedParagraphs).
 			generatedParagraphs.push_back(os.str());
 
+			xs->endDivision();
+
 			// Create a new XMLStream for the new paragraph, completely independent of the previous one. This implies
 			// that the string stream must be reset.
 			os.str(from_ascii(""));
 			delete xs;
 			xs = new XMLStream(os);
+			xs->startDivision(false);
 
 			// Restore the fonts for the new paragraph, so that the right tags are opened for the new entry.
 			if (!ignore_fonts_i) {
@@ -3744,10 +3748,11 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
 			vector<xml::FontTag>::const_iterator sen = tagsToOpen.end();
 			for (; sit != sen; ++sit)
 				*xs << *sit;
-
-			tagsToClose.clear();
-			tagsToOpen.clear();
 		}
+
+		// The font tags are no longer useful; free their memory right now.
+		tagsToClose.clear();
+		tagsToOpen.clear();
 
         // Finally, write the next character or inset.
 		if (Inset const * inset = getInset(i)) {
@@ -3781,11 +3786,20 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
 		}
 	}
 
+	// Ensure that the tags are closed at the right place. Otherwise, there might be an open font tag with no content
+	// that no other code cares to close.
+	*xs << xml::NullTag();
+
 	// FIXME, this code is just imported from XHTML
 	// I'm worried about what happens if a branch, say, is itself
 	// wrapped in some font stuff. I think that will not work.
 	if (!ignore_fonts)
 		xs->closeFontTags();
+
+	// Close the potentially remaining tags, like pending font tags.
+	// There is no need to check for ignore_fonts, as these tags won't be
+	// inserted in the stack in the first place if ignore_fonts is false.
+	xs->endDivision();
 
 	// Deal with the delayed characters *after* closing font tags.
 	if (!delayedChars.empty()) {

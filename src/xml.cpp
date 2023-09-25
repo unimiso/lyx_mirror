@@ -287,6 +287,16 @@ XMLStream &XMLStream::operator<<(docstring const &d)
 }
 
 
+XMLStream &XMLStream::operator<<(xml::NullTag const &)
+{
+	is_last_tag_cr_ = false;
+	clearTagDeque();
+	// Don't output anything to os_, by definition of a NullTag (as opposed to text output).
+	escape_ = ESCAPE_ALL;
+	return *this;
+}
+
+
 XMLStream &XMLStream::operator<<(const char *s)
 {
 	is_last_tag_cr_ = false;
