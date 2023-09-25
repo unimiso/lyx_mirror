@@ -574,9 +574,9 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 		--cit_brk;
 		// make a copy of the element to work on it.
 		Element brk = *cit_brk;
-		/* If the current element is an inset that allows breaking row
-		 * after itself, and if the row is already short enough after
-		 * this element, then cut right after it.
+		/* If the current element allows breaking row after itself,
+		 * and if the row is already short enough after this element,
+		 * then cut right after it.
 		 */
 		if (wid_brk <= max_width && brk.row_flags & CanBreakAfter) {
 			end_ = brk.endpos;
@@ -586,9 +586,9 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 		}
 		// assume now that the current element is not there
 		wid_brk -= brk.dim.wid;
-		/* If the current element is an inset that allows breaking row
-		 * before itself, and if the row is already short enough before
-		 * this element, then cut right before it.
+		/* If the current element allows breaking row before itself,
+		 * and if the row is already short enough before this element,
+		 * then cut right before it.
 		 */
 		if (wid_brk <= max_width && brk.row_flags & CanBreakBefore && cit_brk != beg) {
 			end_ = (cit_brk -1)->endpos;
@@ -615,13 +615,14 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 			/* if this element originally did not cause a row overflow
 			 * in itself, and the remainder of the row would still be
 			 * too large after breaking, then we will have issues in
-			 * next row. Thus breaking does not help.
+			 * next row. Thus breaking here does not help.
 			 */
 			if (wid_brk + cit_brk->dim.wid < max_width
 			    && min_row_wid - (wid_brk + brk.dim.wid) >= next_width) {
 				tail.clear();
 				break;
 			}
+			// We have found a proper place where to break this string element.
 			end_ = brk.endpos;
 			*cit_brk = brk;
 			dim_.wid = wid_brk + brk.dim.wid;
