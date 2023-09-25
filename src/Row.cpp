@@ -123,7 +123,7 @@ pos_type Row::Element::x2pos(int &x) const
 }
 
 
-bool Row::Element::splitAt(int const width, int next_width, bool force,
+bool Row::Element::splitAt(int const width, int next_width, SplitType split_type,
                            Row::Elements & tail)
 {
 	// Not a string or already OK.
@@ -142,13 +142,13 @@ bool Row::Element::splitAt(int const width, int next_width, bool force,
 
 	bool const wrap_any = !font.language()->wordWrap();
 	FontMetrics::Breaks breaks = fm.breakString(str, width, next_width,
-                                                isRTL(), wrap_any | force);
+                                                isRTL(), wrap_any || split_type == FORCE);
 
 	/** if breaking did not really work, give up
-	 * case 1: we do not force break and the first element is longer than the limit;
+	 * case 1: split type is FIT and the first element is longer than the limit;
 	 * case 2: the first break occurs at the front of the string
 	 */
-	if ((!force && breaks.front().nspc_wid > width)
+	if ((split_type == FIT && breaks.front().nspc_wid > width)
 	    || (breaks.size() > 1 && breaks.front().len == 0)) {
 		if (dim.wid == 0)
 			dim.wid = fm.width(str);
@@ -548,6 +548,8 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 	Elements::iterator const beg = elements_.begin();
 	Elements::iterator const end = elements_.end();
 	int wid = left_margin;
+	// the smallest row width we know we can achieve by breaking a string.
+	int min_row_wid = dim_.wid;
 
 	// Search for the first element that goes beyond right margin
 	Elements::iterator cit = beg;
@@ -600,14 +602,23 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 		 * - shorter than the natural width of the element, in order to enforce
 		 *   break-up.
 		 */
-		if (brk.splitAt(min(max_width - wid_brk, brk.dim.wid - 2), next_width, false, tail)) {
+		int const split_width =  min(max_width - wid_brk, brk.dim.wid - 2);
+		if (brk.splitAt(split_width, next_width, BEST_EFFORT, tail)) {
+			// if we did not manage to fit a part of the element into
+			// the split_width limit, at least remember that we can
+			// shorten the row if needed.
+			if (brk.dim.wid > split_width) {
+				min_row_wid = wid_brk + brk.dim.wid;
+				tail.clear();
+				continue;
+			}
 			/* if this element originally did not cause a row overflow
 			 * in itself, and the remainder of the row would still be
 			 * too large after breaking, then we will have issues in
 			 * next row. Thus breaking does not help.
 			 */
 			if (wid_brk + cit_brk->dim.wid < max_width
-			    && dim_.wid - (wid_brk + brk.dim.wid) >= next_width) {
+			    && min_row_wid - (wid_brk + brk.dim.wid) >= next_width) {
 				tail.clear();
 				break;
 			}
@@ -641,7 +652,7 @@ Row::Elements Row::shortenIfNeeded(int const max_width, int const next_width)
 	 * shorten the row. Let's try to break it again, but force
 	 * splitting this time.
 	 */
-	if (cit->splitAt(max_width - wid, next_width, true, tail)) {
+	if (cit->splitAt(max_width - wid, next_width, FORCE, tail)) {
 		end_ = cit->endpos;
 		dim_.wid = wid + cit->dim.wid;
 		// If there are other elements, they should be removed.

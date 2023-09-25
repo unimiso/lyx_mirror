@@ -55,6 +55,14 @@ public:
 		// by the initial width
 		MARGINSPACE
 	};
+	enum SplitType {
+		// split string to fit requested width, fail if string remains too long
+		FIT,
+		// if the requested width is too small, accept the first possible break
+		BEST_EFFORT,
+		// cut string at any place, even for languages that wrap at word delimiters
+		FORCE
+	};
 
 /**
  * One element of a Row. It has a set of attributes that can be used
@@ -94,14 +102,12 @@ public:
 		 * not needed or not possible.
 		 * \param width: maximum width of the row.
 		 * \param next_width: available width on next rows.
-		 * \param force: if true, cut string at any place, even for
-		 *   languages that wrap at word delimiters; if false, do not
-		 *   break at all if first element would larger than \c width.
+		 * \param split_type: indicate how the string should be split.
 		 * \param tail: a vector of elements where the remainder of
 		 *   the text will be appended (empty if nothing happened).
 		 */
 		// FIXME: ideally last parameter should be Elements&, but it is not possible.
-		bool splitAt(int width, int next_width, bool force, std::vector<Element> & tail);
+		bool splitAt(int width, int next_width, SplitType split_type, std::vector<Element> & tail);
 		// remove trailing spaces (useful for end of row)
 		void rtrim();
 

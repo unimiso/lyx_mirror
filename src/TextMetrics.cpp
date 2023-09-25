@@ -1150,7 +1150,7 @@ RowList TextMetrics::breakParagraph(Row const & bigrow) const
 		// pile, or the place when we were in main row
 		Row::Element elt = *fcit;
 		Row::Elements tail;
-		elt.splitAt(width - rows.back().width(), next_width, false, tail);
+		elt.splitAt(width - rows.back().width(), next_width, Row::FIT, tail);
 		Row & rb = rows.back();
 		if (elt.type == Row::MARGINSPACE)
 			elt.dim.wid = max(elt.dim.wid, leftMargin(bigrow.pit()) - rb.width());
