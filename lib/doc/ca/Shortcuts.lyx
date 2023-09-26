@@ -75,7 +75,7 @@
 \papersides 1
 \paperpagestyle empty
 \tablestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \change_bars false
 \postpone_fragile_content false
@@ -122,11 +122,23 @@ Dreceres
 ;
  per a més informació consulteu la secció 
 \emph on
-Dreceres de teclat
+
+\begin_inset Info
+type  "l7n"
+arg   "Shortcuts|S"
+\end_inset
+
+
 \emph default
  de la 
 \emph on
-Guia de l'usuari
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
 \emph default
 .
 \end_layout
