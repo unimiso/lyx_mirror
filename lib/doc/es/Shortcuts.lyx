@@ -206,24 +206,22 @@ teclado
  la sección
 \change_unchanged
  
-\change_deleted -1463541724 1693126371
+\change_deleted -1463541724 1693126376
 
 \begin_inset Quotes eld
 \end_inset
 
 Shortcuts
-\change_inserted -1463541724 1693127095
+\change_inserted -1463541724 1695646082
 
 \emph on
-Atajos
-\begin_inset space ~
+
+\begin_inset Info
+type  "l7n"
+arg   "Shortcuts|S"
 \end_inset
 
-de
-\begin_inset space ~
-\end_inset
 
-teclado
 \change_deleted -1463541724 1693126376
 
 \emph default
@@ -245,30 +243,20 @@ of the
 
 \change_unchanged
  
+\change_deleted -1463541724 1695646041
+
 \emph on
-Guía
-\change_deleted -1463541724 1693126356
- 
-\change_inserted -1463541724 1693126356
+Guía del Usuario
+\change_inserted -1463541724 1695646047
 
-\begin_inset space ~
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
 \end_inset
 
 
 \change_unchanged
-del
-\change_deleted -1463541724 1693126359
- 
-\change_inserted -1463541724 1694737748
 
-\begin_inset space ~
-\end_inset
-
-u
-\change_deleted -1463541724 1694737746
-U
-\change_unchanged
-suario
 \emph default
 .
 \end_layout

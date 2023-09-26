@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 619
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -1404,26 +1404,38 @@ sólo
 ),
  tanto para todo el documento como para una parte concreta.
  Véase la 
+\change_deleted -1463541724 1695645383
+
 \emph on
-Guía del 
-\change_inserted -1463541724 1693567606
-u
-\change_deleted -1463541724 1693567605
-U
+Guía del Usuario
+\change_inserted -1463541724 1695645386
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
 \change_unchanged
-suario
+
 \emph default
  
 \change_deleted -1463541724 1693567608
 y/
 \change_unchanged
 o 
+\change_deleted -1463541724 1695645393
+
 \emph on
-Características 
-\change_deleted -1463541724 1693567623
-extendidas
-\change_inserted -1463541724 1693567635
-adicionales
+Características extendidas
+\change_inserted -1463541724 1695645413
+
+\begin_inset Info
+type  "l7n"
+arg   "Additional Features|F"
+\end_inset
+
+
 \change_unchanged
 
 \emph default
@@ -1579,8 +1591,20 @@ Patrick Daly
 \noun default
 ,
  que figura en la bibliografía de la 
+\change_deleted -1463541724 1695645317
+
 \emph on
 Guía del usuario
+\change_inserted -1463541724 1695645321
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
  
@@ -3374,20 +3398,17 @@ Atajos de teclado
 Ayuda
 \family default
 .
-\change_inserted -1463541724 1693650434
+\change_inserted -1463541724 1695646851
 Se puede consultar un resumen de los atajos de teclado definidos actualmente en \SpecialChar LyX
  en 
 \family sans
-Ayuda\SpecialChar menuseparator
-Atajos
-\begin_inset space ~
+
+\begin_inset Info
+type  "menu"
+arg   "help-open Shortcuts"
 \end_inset
 
-de
-\begin_inset space ~
-\end_inset
 
-teclado
 \family default
 \SpecialChar endofsentence
 
@@ -4012,11 +4033,35 @@ los manuales básicos
 \end_layout
 
 \begin_layout Description
-Introducción Este archivo.
+
+\change_deleted -1463541724 1695645071
+Introducción
+\change_inserted -1463541724 1695645079
+
+\begin_inset Info
+type  "l7n"
+arg   "Introduction|I"
+\end_inset
+
+
+\change_unchanged
+ Este archivo.
 \end_layout
 
 \begin_layout Description
-Tutorial Si eres novato en el uso de \SpecialChar LyX
+
+\change_deleted -1463541724 1695645065
+Tutorial
+\change_inserted -1463541724 1695645067
+
+\begin_inset Info
+type  "l7n"
+arg   "Tutorial|T"
+\end_inset
+
+
+\change_unchanged
+ Si eres novato en el uso de \SpecialChar LyX
 
 \change_deleted -1463541724 1693651034
 ,
@@ -4069,6 +4114,8 @@ Tutorial
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1463541724 1695645056
 Guía
 \emph on
 
@@ -4085,7 +4132,17 @@ del
 
 
 \emph default
-usuario La 
+usuario
+\change_inserted -1463541724 1695645060
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_unchanged
+ La 
 \change_inserted -1463541724 1693650758
 parte principal de la 
 \change_unchanged
@@ -4119,20 +4176,56 @@ se
 s
 \change_unchanged
  leído el 
+\change_deleted -1463541724 1695645042
+
 \emph on
 Tutorial
+\change_inserted -1463541724 1695645047
+
+\begin_inset Info
+type  "l7n"
+arg   "Tutorial|T"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1463541724 1695645025
 Objetos
 \begin_inset space ~
 \end_inset
 
-insertados Ampliación de la 
+insertados
+\change_inserted -1463541724 1695645033
+
+\begin_inset Info
+type  "l7n"
+arg   "Embedded Objects|O"
+\end_inset
+
+
+\change_unchanged
+ Ampliación de la 
+\change_inserted -1463541724 1695645011
+
 \emph on
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_deleted -1463541724 1695645014
 Guía del usuario
+\change_unchanged
+
 \emph default
 .
  Explica con detalle el empleo de cuadros,
@@ -4152,12 +4245,30 @@ Guía del usuario
 
 \change_deleted -1463541724 1693650675
 Ecuaciones
-\change_inserted -1463541724 1693650677
-Matemáticas
+\change_inserted -1463541724 1695644940
+
+\begin_inset Info
+type  "l7n"
+arg   "Math|M"
+\end_inset
+
+
 \change_unchanged
  Ampliación de la 
+\change_deleted -1463541724 1695644992
+
 \emph on
 Guía del usuario
+\change_inserted -1463541724 1695645000
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
  Explica en detalle como escribir todo tipo de 
@@ -4170,13 +4281,37 @@ fórmulas y expresiones matemáticas
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1463541724 1695644898
 Características
 \begin_inset space ~
 \end_inset
 
-adicionales Ampliación de la 
+adicionales
+\change_inserted -1463541724 1695644913
+
+\begin_inset Info
+type  "l7n"
+arg   "Additional Features|F"
+\end_inset
+
+
+\change_unchanged
+ Ampliación de la 
+\change_deleted -1463541724 1695645118
+
 \emph on
 Guía del usuario
+\change_inserted -1463541724 1695645122
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
  Documenta el uso de 
@@ -4205,7 +4340,19 @@ layout
 \end_layout
 
 \begin_layout Description
-Personalización Una descripción de características avanzadas de \SpecialChar LyX
+
+\change_deleted -1463541724 1695644888
+Personalización
+\change_inserted -1463541724 1695644894
+
+\begin_inset Info
+type  "l7n"
+arg   "Customization|C"
+\end_inset
+
+
+\change_unchanged
+ Una descripción de características avanzadas de \SpecialChar LyX
 ,
  incluyendo cómo personalizar el comportamiento global del programa:
  cosas como asociaciones de teclas,
@@ -4225,6 +4372,8 @@ layout
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1463541724 1695644856
 Atajos
 \begin_inset space ~
 \end_inset
@@ -4233,11 +4382,23 @@ de
 \begin_inset space ~
 \end_inset
 
-teclado Contiene cuadros con las combinaciones de teclas definidas actualmente en \SpecialChar LyX
+teclado
+\change_inserted -1463541724 1695644866
+
+\begin_inset Info
+type  "l7n"
+arg   "Shortcuts|S"
+\end_inset
+
+
+\change_unchanged
+ Contiene cuadros con las combinaciones de teclas definidas actualmente en \SpecialChar LyX
 .
 \end_layout
 
 \begin_layout Description
+
+\change_deleted -1463541724 1695644814
 Configuración
 \begin_inset space ~
 \end_inset
@@ -4247,6 +4408,16 @@ de
 \end_inset
 
 \SpecialChar LaTeX
+
+\change_inserted -1463541724 1695644834
+
+\begin_inset Info
+type  "l7n"
+arg   "LaTeX Configuration|L"
+\end_inset
+
+
+\change_unchanged
  \SpecialChar LyX
  
 \change_inserted -1463541724 1693655905
@@ -4272,14 +4443,20 @@ Revísalo
 Estos ficheros harán referencia unos a otros cuando sea necesario.
  Por ejemplo,
  la 
+\change_deleted -1463541724 1695644531
+
 \emph on
-Guía del 
-\change_deleted -1463541724 1693655962
-U
-\change_inserted -1463541724 1693655963
-u
+Guía del Usuario
+\change_inserted -1463541724 1695644537
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
 \change_unchanged
-suario
+
 \emph default
  
 \change_deleted -1463541724 1693655973
@@ -4300,7 +4477,19 @@ o
  sobre la instalación y personalización,
  pero remite al lector al manual
 \emph on
- Personalización
+ 
+\change_deleted -1463541724 1695644797
+Personalización
+\change_inserted -1463541724 1695644807
+
+\begin_inset Info
+type  "l7n"
+arg   "Customization|C"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
  para más información.
 \end_layout
@@ -4322,8 +4511,20 @@ De nuevo,
 Si eres novato en el uso de \SpecialChar LyX
 ,
  lee el 
+\change_deleted -1463541724 1695645192
+
 \emph on
 Tutorial
+\change_inserted -1463541724 1695645195
+
+\begin_inset Info
+type  "l7n"
+arg   "Tutorial|T"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
  Ahora\SpecialChar endofsentence
@@ -4617,19 +4818,15 @@ config.log
 \change_unchanged
  y menciona el compilador que usas.
 
-\change_inserted -1463541724 1693657764
+\change_inserted -1463541724 1695646733
  Parte de esta información puede encontrarse en el menú 
 \family sans
-Ayuda\SpecialChar menuseparator
-Acerca
-\begin_inset space ~
+
+\begin_inset Info
+type  "menu"
+arg   "dialog-show aboutlyx"
 \end_inset
 
-de
-\begin_inset space ~
-\end_inset
-
-\SpecialChar LyX
 
 \family default
 .
@@ -4775,12 +4972,36 @@ target "https://www.lyx.org/trac/browser/lyxgit/lib/doc?rev=master"
 
 \begin_layout Enumerate
 Lee el 
+\change_deleted -1463541724 1695644477
+
 \emph on
 Tutorial
+\change_inserted -1463541724 1695644489
+
+\begin_inset Info
+type  "l7n"
+arg   "Tutorial|T"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
  y la 
+\change_deleted -1463541724 1695644498
+
 \emph on
 Guía del usuario
+\change_inserted -1463541724 1695644507
+
+\begin_inset Info
+type  "l7n"
+arg   "User's Guide|U"
+\end_inset
+
+
+\change_unchanged
+
 \emph default
 .
 \begin_inset Newline newline
