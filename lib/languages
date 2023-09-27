@@ -859,15 +859,6 @@ Language hebrew
 	InternalEncoding true
 	# babel-hebrew expects the encoding for *other* languages last:
 	FontEncoding    HE8,T1|LHE,T1
-	## Use font encoding HE8 if the Culmus fonts are installed and
-	# work around to simple test for article-like classes in rlbabel.def.
-	PreBabelPreamble
-	  \IfFileExists{he8david.fd}{%
-	    \providecommand{\HeblatexEncoding}{HE8}
-	    \providecommand{\HeblatexEncodingFile}{he8enc}%
-	  }{}
-	  \providecommand{\l@chapter}{\relax}
-	EndPreBabelPreamble
 	DateFormats      "d MMMM yyyy|d MMM yyyy|dd/MM/yyyy"
 	RTL              true
 	LangCode         he_IL
