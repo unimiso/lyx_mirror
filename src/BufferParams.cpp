@@ -1619,7 +1619,6 @@ void BufferParams::validate(LaTeXFeatures & features) const
 				features.require("ulem");
 				features.require("xcolor");
 				// improves color handling in PDF output
-				features.require("pdfcolmk");
 			} else {
 				features.require("ct-none");
 			}

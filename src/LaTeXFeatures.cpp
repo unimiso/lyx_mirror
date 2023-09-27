@@ -1213,10 +1213,6 @@ string const LaTeXFeatures::getColorOptions() const
 				 << "]{" << package << "}\n";
 	}
 
-	// pdfcolmk must be loaded after color
-	if (mustProvide("pdfcolmk"))
-		colors << "\\usepackage{pdfcolmk}\n";
-
 	// the following 3 color commands must be set after color
 	// is loaded and before pdfpages, therefore add the command
 	// here define the set color
@@ -1396,7 +1392,7 @@ string const LaTeXFeatures::getPackages() const
 		params_.use_package("undertilde") != BufferParams::package_off)
 		packages << "\\usepackage{undertilde}\n";
 
-	// [x]color and pdfcolmk are handled in getColorOptions() above
+	// [x]color is handled in getColorOptions() above
 
 	// makeidx.sty
 	if (isRequired("makeidx") || isRequired("splitidx")) {

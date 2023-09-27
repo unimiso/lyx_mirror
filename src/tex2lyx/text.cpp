@@ -4352,7 +4352,6 @@ void parse_text(Parser & p, ostream & os, unsigned flags, bool outer,
 				if (xcolorulem) {
 					preamble.registerAutomaticallyLoadedPackage("ulem");
 					preamble.registerAutomaticallyLoadedPackage("xcolor");
-					preamble.registerAutomaticallyLoadedPackage("pdfcolmk");
 				}
 			} else {
 				if (xcolorulem) {

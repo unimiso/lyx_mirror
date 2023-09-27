@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties false
@@ -148,6 +148,7 @@ End
 \suppress_date false
 \justification false
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -29160,7 +29161,7 @@ natbib
 \begin_inset Text
 
 \begin_layout Plain Layout
-rotfloat
+rsphrase
 \end_layout
 
 \end_inset
@@ -29234,7 +29235,7 @@ nomencl
 \begin_inset Text
 
 \begin_layout Plain Layout
-rsphrase
+setspace
 \end_layout
 
 \end_inset
@@ -29299,7 +29300,7 @@ lyxskak
 \begin_inset Text
 
 \begin_layout Plain Layout
-pdfcolmk
+pdfpages
 \end_layout
 
 \end_inset
@@ -29308,7 +29309,7 @@ pdfcolmk
 \begin_inset Text
 
 \begin_layout Plain Layout
-setspace
+shapepar
 \end_layout
 
 \end_inset
@@ -29373,7 +29374,7 @@ makeidx
 \begin_inset Text
 
 \begin_layout Plain Layout
-pdfpages
+pifont
 \end_layout
 
 \end_inset
@@ -29382,7 +29383,7 @@ pdfpages
 \begin_inset Text
 
 \begin_layout Plain Layout
-shapepar
+slashed
 \end_layout
 
 \end_inset
@@ -29447,7 +29448,7 @@ marvosym
 \begin_inset Text
 
 \begin_layout Plain Layout
-pifont
+pmboxdraw
 \end_layout
 
 \end_inset
@@ -29456,7 +29457,7 @@ pifont
 \begin_inset Text
 
 \begin_layout Plain Layout
-slashed
+soul
 \end_layout
 
 \end_inset
@@ -29521,7 +29522,7 @@ mathdesign
 \begin_inset Text
 
 \begin_layout Plain Layout
-pmboxdraw
+polyglossia
 \end_layout
 
 \end_inset
@@ -29530,7 +29531,7 @@ pmboxdraw
 \begin_inset Text
 
 \begin_layout Plain Layout
-soul
+splitidx
 \end_layout
 
 \end_inset
@@ -29595,7 +29596,7 @@ mathdots
 \begin_inset Text
 
 \begin_layout Plain Layout
-polyglossia
+prettyref
 \end_layout
 
 \end_inset
@@ -29604,7 +29605,7 @@ polyglossia
 \begin_inset Text
 
 \begin_layout Plain Layout
-splitidx
+subfig
 \end_layout
 
 \end_inset
@@ -29669,7 +29670,7 @@ mathrsfs
 \begin_inset Text
 
 \begin_layout Plain Layout
-prettyref
+pxfonts
 \end_layout
 
 \end_inset
@@ -29678,7 +29679,7 @@ prettyref
 \begin_inset Text
 
 \begin_layout Plain Layout
-subfig
+subscript
 \end_layout
 
 \end_inset
@@ -29743,7 +29744,7 @@ mhchem
 \begin_inset Text
 
 \begin_layout Plain Layout
-pxfonts
+refstyle
 \end_layout
 
 \end_inset
@@ -29752,7 +29753,7 @@ pxfonts
 \begin_inset Text
 
 \begin_layout Plain Layout
-subscript
+tcolorbox
 \end_layout
 
 \end_inset
@@ -29817,7 +29818,7 @@ multicol
 \begin_inset Text
 
 \begin_layout Plain Layout
-refstyle
+rotating
 \end_layout
 
 \end_inset
@@ -29891,7 +29892,7 @@ multirow
 \begin_inset Text
 
 \begin_layout Plain Layout
-rotating
+rotfloat
 \end_layout
 
 \end_inset

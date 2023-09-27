@@ -146,6 +146,7 @@ logicalmkup
 \author 5863208 "ab"
 \author 34634807 "Jean-Pierre"
 \author 47243155 "Jean-Marc"
+\author 193502281 "pc1"
 \author 232239728 "Owner"
 \author 731793113 "Richard Kimberly Heck" rikiheck@lyx.org
 \author 1075283030 "Thibaut"
@@ -36014,7 +36015,13 @@ natbib
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765491
 rotfloat
+\change_inserted 193502281 1695765500
+rsphrase
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36088,7 +36095,13 @@ nomencl
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765498
 rsphrase
+\change_inserted 193502281 1695765504
+setspace
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36153,7 +36166,13 @@ lyxskak
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765346
 pdfcolmk
+\change_inserted 193502281 1695765405
+pdfpages
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36162,7 +36181,13 @@ pdfcolmk
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765503
 setspace
+\change_inserted 193502281 1695765508
+shapepar
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36227,7 +36252,13 @@ makeidx
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765403
 pdfpages
+\change_inserted 193502281 1695765410
+pifont
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36236,7 +36267,13 @@ pdfpages
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765507
 shapepar
+\change_inserted 193502281 1695765512
+slashed
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36301,7 +36338,13 @@ marvosym
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765408
 pifont
+\change_inserted 193502281 1695765466
+pmboxdraw
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36310,7 +36353,13 @@ pifont
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765511
 slashed
+\change_inserted 193502281 1695765515
+soul
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36375,7 +36424,13 @@ mathdesign
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765464
 pmboxdraw
+\change_inserted 193502281 1695765470
+polyglossia
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36384,7 +36439,13 @@ pmboxdraw
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765514
 soul
+\change_inserted 193502281 1695765520
+splitidx
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36449,7 +36510,13 @@ mathdots
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765469
 polyglossia
+\change_inserted 193502281 1695765474
+prettyref
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36458,7 +36525,13 @@ polyglossia
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765519
 splitidx
+\change_inserted 193502281 1695765524
+subfig
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36523,7 +36596,13 @@ mathrsfs
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765473
 prettyref
+\change_inserted 193502281 1695765477
+pxfonts
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36532,7 +36611,13 @@ prettyref
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765523
 subfig
+\change_inserted 193502281 1695765528
+subscript
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36597,7 +36682,13 @@ mhchem
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765476
 pxfonts
+\change_inserted 193502281 1695765482
+refstyle
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36606,7 +36697,13 @@ pxfonts
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765527
 subscript
+\change_inserted 193502281 1695765557
+tcolorbox
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36671,7 +36768,13 @@ multicol
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765481
 refstyle
+\change_inserted 193502281 1695765485
+rotating
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -36745,7 +36848,13 @@ multirow
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted 193502281 1695765484
 rotating
+\change_inserted 193502281 1695765493
+rotfloat
+\change_unchanged
+
 \end_layout
 
 \end_inset
