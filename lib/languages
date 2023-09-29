@@ -1438,6 +1438,7 @@ Language spanish
 	LangCode         es_ES
 	PostBabelPreamble
 	\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+	\deactivatequoting
 	EndPostBabelPreamble
 End
 
@@ -1454,6 +1455,7 @@ Language spanish-mexico
 	LangCode         es_MX
 	PostBabelPreamble
 	\addto\shorthandsspanish{\spanishdeactivate{~<>.}}
+	\deactivatequoting
 	EndPostBabelPreamble
 End
 
