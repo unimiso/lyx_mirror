@@ -1967,7 +1967,7 @@ void MenuDefinition::expandQuotes(BufferView const * bv)
 		add(MenuItem(MenuItem::Command, toqstr(desc), cmd));
 	}
 	if (!main_langdef_qs) {
-		FuncRequest cmd = FuncRequest(LFUN_INSET_MODIFY, subcmd + globalqsc + wildcards);
+		FuncRequest cmd = FuncRequest(LFUN_INSET_MODIFY, subcmd + langqs + wildcards);
 		docstring const desc = (main_dynamic_qs || display_static)
 					? bformat(_("Reset to language default (%1$s, %2$s)|l"),
 						  quoteparams.getGuiLabel(langdefqs), _("static[[Quotes]]"))
