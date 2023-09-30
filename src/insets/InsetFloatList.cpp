@@ -195,11 +195,11 @@ docstring InsetFloatList::xhtml(XMLStream &, OutputParams const & op) const {
 		if (type == "table") {
 			toctype = "table";
 			toclabel = translateIfPossible(from_ascii("List of Tables"),
-			                               op.local_font->language()->lang());
+			                               getLocalOrDefaultLang(op)->lang());
 		} else if (type == "figure") {
 			toctype = "figure";
 			toclabel = translateIfPossible(from_ascii("List of Figures"),
-			                               op.local_font->language()->lang());
+			                               getLocalOrDefaultLang(op)->lang());
 		} else {
 			LYXERR0("Unknown Builtin Float!");
 			return docstring();
@@ -207,7 +207,7 @@ docstring InsetFloatList::xhtml(XMLStream &, OutputParams const & op) const {
 	} else {
 		toctype = to_utf8(getParam("type"));
 		toclabel = translateIfPossible(from_utf8(cit->second.listName()),
-		                               op.local_font->language()->lang());
+		                               getLocalOrDefaultLang(op)->lang());
 	}
 
 	shared_ptr<Toc const> toc = buffer().tocBackend().toc(toctype);

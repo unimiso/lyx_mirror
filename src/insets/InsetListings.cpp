@@ -187,7 +187,8 @@ void InsetListings::latex(otexstream & os, OutputParams const & runparams) const
 		if (!basicstyle.empty())
 			param_string = rtrim(param_string, ",") + ",basicstyle={" + basicstyle + "}";
 	}
-	if (runparams.use_polyglossia && runparams.local_font->isRightToLeft()) {
+	if (runparams.use_polyglossia && runparams.local_font
+	    && runparams.local_font->isRightToLeft()) {
 		// We need to use the *latin switches (#11554)
 		smatch sub;
 		if (regex_match(param_string, sub, reg1))
@@ -248,9 +249,7 @@ void InsetListings::latex(otexstream & os, OutputParams const & runparams) const
 	Encoding const * const save_enc = runparams.encoding;
 
 	Encoding const * const outer_encoding =
-		(runparams.local_font != 0) ?
-			runparams.local_font->language()->encoding()
-			: buffer().params().language->encoding();
+		getLocalOrDefaultLang(runparams)->encoding();
 	Encoding const * fixedlstenc = forcedEncoding(runparams.encoding, outer_encoding);
 	if (fixedlstenc) {
 		// We need to switch to a singlebyte encoding, due to

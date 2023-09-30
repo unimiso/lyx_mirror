@@ -432,7 +432,7 @@ docstring InsetRef::xhtml(XMLStream & xs, OutputParams const & op) const
 	// some sort of counter with the label, and we don't have that yet.
 	docstring const attr = "href=\"#" + xml::cleanAttr(ref) + '"';
 	xs << xml::StartTag("a", to_utf8(attr));
-	xs << displayString(ref, cmd, op.local_font->language()->lang());;
+	xs << displayString(ref, cmd, getLocalOrDefaultLang(op)->lang());
 	xs << xml::EndTag("a");
 	return docstring();
 }

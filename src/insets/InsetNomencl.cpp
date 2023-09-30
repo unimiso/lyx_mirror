@@ -222,7 +222,7 @@ docstring InsetPrintNomencl::xhtml(XMLStream &, OutputParams const & op) const
 	InsetLayout const & il = getLayout();
 	string const & tag = il.htmltag();
 	docstring toclabel = translateIfPossible(from_ascii("Nomenclature"),
-		op.local_font->language()->lang());
+		getLocalOrDefaultLang(op)->lang());
 
 	xs << xml::StartTag("div", "class='nomencl'")
 	   << xml::StartTag(tag, "class='nomencl'")
@@ -333,7 +333,7 @@ void InsetPrintNomencl::docbook(XMLStream & xs, OutputParams const & runparams) 
 	// TODO: At least, that's what was done before...
 
 	docstring toclabel = translateIfPossible(from_ascii("Nomenclature"),
-											 runparams.local_font->language()->lang());
+						 getLocalOrDefaultLang(runparams)->lang());
 
 	xs << xml::StartTag("glossary");
 	xs << xml::CR();

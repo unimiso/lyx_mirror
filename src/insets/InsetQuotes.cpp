@@ -814,7 +814,7 @@ void InsetQuotes::latex(otexstream & os, OutputParams const & runparams) const
 		 || style == QuoteStyle::French
 		 || style == QuoteStyle::FrenchIN)
 		 && level_ == QuoteLevel::Primary
-		 && prefixIs(runparams.local_font->language()->code(), "fr")) {
+		 && prefixIs(getLocalOrDefaultLang(runparams)->code(), "fr")) {
 		// Specific guillemets of French babel
 		// including correct French spacing
 		if (side_ == QuoteSide::Opening)
@@ -826,11 +826,11 @@ void InsetQuotes::latex(otexstream & os, OutputParams const & runparams) const
 		// (ligatures not featured in PDF strings)
 		qstr = quoteparams.getLaTeXQuote(quotechar, "int", rtl_);
 	} else if (runparams.main_fontenc == "T1"
-		   && !runparams.local_font->language()->internalFontEncoding()) {
+		   && !getLocalOrDefaultLang(runparams)->internalFontEncoding()) {
 		// Quotation marks for T1 font encoding
 		// (using ligatures)
 		qstr = quoteparams.getLaTeXQuote(quotechar, "t1");
-	} else if (runparams.local_font->language()->internalFontEncoding()) {
+	} else if (getLocalOrDefaultLang(runparams)->internalFontEncoding()) {
 		// Quotation marks for internal font encodings
 		// (ligatures not featured)
 		qstr = quoteparams.getLaTeXQuote(quotechar, "int", rtl_);

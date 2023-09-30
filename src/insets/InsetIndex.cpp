@@ -1911,7 +1911,7 @@ docstring InsetPrintIndex::xhtml(XMLStream &, OutputParams const & op) const
 	xs << xml::StartTag("div", tocattr);
 	xs << xml::CR();
 	xs << xml::StartTag(lay.htmltag(), lay.htmlGetAttrString());
-	xs << translateIfPossible(indexName, op.local_font->language()->lang());
+	xs << translateIfPossible(indexName, getLocalOrDefaultLang(op)->lang());
 	xs << xml::EndTag(lay.htmltag());
 	xs << xml::CR();
 	xs << xml::StartTag("ul", "class='main'");

@@ -672,4 +672,12 @@ docstring Inset::completionPrefix(Cursor const &) const
 	return docstring();
 }
 
+
+Language const * Inset::getLocalOrDefaultLang(const OutputParams & rp) const
+{
+	return (rp.local_font != nullptr)
+			? rp.local_font->language()
+			: buffer().params().language;
+}
+
 } // namespace lyx

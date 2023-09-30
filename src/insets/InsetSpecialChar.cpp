@@ -421,15 +421,15 @@ void InsetSpecialChar::read(Lexer & lex)
 void InsetSpecialChar::latex(otexstream & os,
 			     OutputParams const & rp) const
 {
-	bool const rtl = rp.local_font->isRightToLeft();
+	bool const rtl = rp.local_font && rp.local_font->isRightToLeft();
 	bool const utf8 = rp.encoding->iconvName() == "UTF-8";
 	string lswitch = "";
 	string lswitche = "";
 	if (rtl && !rp.use_polyglossia) {
 		lswitch = "\\L{";
 		lswitche = "}";
-		if (rp.local_font->language()->lang() == "arabic_arabi"
-		    || rp.local_font->language()->lang() == "farsi")
+		if (getLocalOrDefaultLang(rp)->lang() == "arabic_arabi"
+		    || getLocalOrDefaultLang(rp)->lang() == "farsi")
 			lswitch = "\\textLR{";
 	}
 

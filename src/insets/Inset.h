@@ -54,6 +54,7 @@ class InsetList;
 class InsetMath;
 class InsetTabular;
 class InsetText;
+class Language;
 class LaTeXFeatures;
 class Lexer;
 class MathAtom;
@@ -618,6 +619,9 @@ public:
 	/// Determine the action of backspace and delete: do we select instead of
 	/// deleting if not already selected?
 	virtual bool confirmDeletion() const { return false; }
+	/// Return the local_font's language or the buffer's default language
+	/// if local_font is null
+	Language const * getLocalOrDefaultLang(const OutputParams &) const;
 
 protected:
 	/// Constructors

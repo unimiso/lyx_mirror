@@ -355,7 +355,8 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 	string maybeBeginL;
 	string maybeEndL;
 	bool needEndL = false;
-	if (!runparams.isFullUnicode() && runparams.local_font->isRightToLeft()) {
+	if (!runparams.isFullUnicode()
+	    && runparams.local_font && runparams.local_font->isRightToLeft()) {
 		maybeBeginL = "\\beginL";
 		maybeEndL = "\\endL";
 	}
