@@ -673,7 +673,7 @@ docstring Inset::completionPrefix(Cursor const &) const
 }
 
 
-Language const * Inset::getLocalOrDefaultLang(const OutputParams & rp) const
+Language const * Inset::getLocalOrDefaultLang(OutputParams const & rp) const
 {
 	return (rp.local_font != nullptr)
 			? rp.local_font->language()

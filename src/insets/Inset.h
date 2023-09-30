@@ -621,7 +621,7 @@ public:
 	virtual bool confirmDeletion() const { return false; }
 	/// Return the local_font's language or the buffer's default language
 	/// if local_font is null
-	Language const * getLocalOrDefaultLang(const OutputParams &) const;
+	Language const * getLocalOrDefaultLang(OutputParams const &) const;
 
 protected:
 	/// Constructors
