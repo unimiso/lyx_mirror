@@ -4711,7 +4711,7 @@ def revert_hyper_other(document):
         if target[:4] == "run:":
             del document.body[k]
         else:
-            cmd = "\href{" + target + "}{" + name + "}"
+            cmd = r"\href{" + target + "}{" + name + "}"
             ecmd = put_cmd_in_ert(cmd)
             document.body[i:j+1] = ecmd
         i += 1
