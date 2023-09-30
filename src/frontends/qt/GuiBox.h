@@ -30,7 +30,6 @@ public:
 private Q_SLOTS:
 	void on_innerBoxCO_activated(int);
 	void on_typeCO_activated(int);
-	void on_frameColorCO_currentIndexChanged(int);
 	void initDialog();
 	void on_widthCB_stateChanged(int state);
 	void on_heightCB_stateChanged(int state);
@@ -48,7 +47,7 @@ private:
 	//@}
 
 	/// Fill the color combos
-	void fillComboColor(QComboBox * combo, bool const is_none);
+	void fillComboColor(QComboBox * combo, bool const is_background);
 	/// add and remove special lengths
 	void setSpecial(bool ibox);
 	/// only show valid inner box items

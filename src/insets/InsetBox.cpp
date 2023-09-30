@@ -165,7 +165,7 @@ void InsetBox::setButtonLabel()
 
 	// set the frame color for the inset if the type is Boxed
 	if (btype == Boxed)
-		setFrameColor(lcolor.getFromLaTeXName(params_.framecolor));
+		setFrameColor(lcolor.getFromLaTeXName(getFrameColor(true)));
 	else
 		setFrameColor(Color_collapsibleframe);
 }
@@ -429,8 +429,8 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 		if (separation_string != defaultSep && thickness_string == defaultThick)
 			os << "{\\fboxsep " << from_ascii(separation_string);
 		if (!params_.inner_box && !width_string.empty()) {
-			if (params_.framecolor != "black" || params_.backgroundcolor != "none") {
-				os << maybeBeginL << "\\fcolorbox{" << params_.framecolor << "}{" << params_.backgroundcolor << "}{";
+			if (params_.framecolor != "default" || params_.backgroundcolor != "none") {
+				os << maybeBeginL << "\\fcolorbox{" << getFrameColor() << "}{" << getBackgroundColor() << "}{";
 				os << "\\makebox";
 				needEndL = !maybeBeginL.empty();
 			} else
@@ -448,8 +448,8 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 			if (params_.hor_pos != 'c')
 				os << "[" << params_.hor_pos << "]";
 		} else {
-			if (params_.framecolor != "black" || params_.backgroundcolor != "none") {
-				os << maybeBeginL << "\\fcolorbox{" << params_.framecolor << "}{" << params_.backgroundcolor << "}";
+			if (params_.framecolor != "default" || params_.backgroundcolor != "none") {
+				os << maybeBeginL << "\\fcolorbox{" << getFrameColor() << "}{" << getBackgroundColor() << "}";
 				needEndL = !maybeBeginL.empty();
 			} else {
 				if (!cprotect.empty() && contains(runparams.active_chars, '^')) {
@@ -616,7 +616,7 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 	case Boxed:
 		os << "}";
 		if (!params_.inner_box && !width_string.empty()
-			&& (params_.framecolor != "black" || params_.backgroundcolor != "none"))
+			&& (params_.framecolor != "default" || params_.backgroundcolor != "none"))
 			os << "}";
 		if (separation_string != defaultSep || thickness_string != defaultThick)
 			os << "}";
@@ -809,7 +809,7 @@ void InsetBox::validate(LaTeXFeatures & features) const
 		break;
 	case Boxed:
 		features.require("calc");
-		if (params_.framecolor != "black" || params_.backgroundcolor != "none")
+		if (getFrameColor() != "black" || getBackgroundColor() != "white")
 			features.require("xcolor");
 		break;
 	case ovalbox:
@@ -874,6 +874,22 @@ void InsetBox::string2params(string const & in, InsetBoxParams & params)
 }
 
 
+string const InsetBox::getFrameColor(bool const gui) const
+{
+	if (params_.framecolor == "default")
+		return gui ? "foreground" : "black";
+	return params_.framecolor;
+}
+
+
+string const InsetBox::getBackgroundColor() const
+{
+	if (params_.backgroundcolor == "none")
+		return "white";
+	return params_.backgroundcolor;
+}
+
+
 /////////////////////////////////////////////////////////////////////////
 //
 // InsetBoxParams
@@ -895,7 +911,7 @@ InsetBoxParams::InsetBoxParams(string const & label)
 	  thickness(Length(defaultThick)),
 	  separation(Length(defaultSep)),
 	  shadowsize(Length(defaultShadow)),
-	  framecolor("black"),
+	  framecolor("default"),
 	  backgroundcolor("none")
 {}
 

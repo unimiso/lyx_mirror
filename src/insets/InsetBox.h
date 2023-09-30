@@ -163,6 +163,10 @@ protected:
 private:
 	/// used by the constructors
 	void init();
+	///
+	std::string const getFrameColor(bool const gui = false) const;
+	///
+	std::string const getBackgroundColor() const;
 
 	///
 	friend class InsetBoxParams;

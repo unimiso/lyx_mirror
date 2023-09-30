@@ -133,6 +133,8 @@ GuiBox::GuiBox(QWidget * parent) : InsetParamsWidget(parent)
 	connect(shadowsizeED, SIGNAL(textChanged(QString)), this, SIGNAL(changed()));
 	connect(shadowsizeUnitsLC, SIGNAL(selectionChanged(lyx::Length::UNIT)),
 		this, SIGNAL(changed()));
+	connect(frameColorCO, SIGNAL(currentIndexChanged(int)),
+		this, SIGNAL(changed()));
 	connect(backgroundColorCO, SIGNAL(currentIndexChanged(int)),
 		this, SIGNAL(changed()));
 
@@ -159,15 +161,17 @@ GuiBox::GuiBox(QWidget * parent) : InsetParamsWidget(parent)
 }
 
 
-void GuiBox::fillComboColor(QComboBox * combo, bool const is_none)
+void GuiBox::fillComboColor(QComboBox * combo, bool const is_background)
 {
 	combo->clear();
 	QPixmap coloritem(32, 32);
 	QColor color;
-	// frameColorCO cannot be uncolored
-	if (is_none)
+	// condition on the two possible types
+	if (is_background)
 		combo->addItem(toqstr(translateIfPossible(lcolor.getGUIName(Color_none))),
 			       toqstr(lcolor.getLaTeXName(Color_none)));
+	else
+		combo->addItem(qt_("Default"), toqstr("default"));
 	QList<ColorCode>::const_iterator cit = color_codes_.begin();
 	for (; cit != color_codes_.end(); ++cit) {
 		QString const latexname = toqstr(lcolor.getLaTeXName(*cit));
@@ -214,32 +218,6 @@ void GuiBox::on_typeCO_activated(int index)
 		if (type != "Frameless")
 			widthCB->setChecked(itype != "none");
 		pagebreakCB->setChecked(false);
-	}
-	// assure that the frame color is black for frameless boxes to
-	// provide the color "none"
-	int const b = frameColorCO->findData("black");
-	if (frameless && frameColorCO->currentIndex() != b)
-		frameColorCO->setCurrentIndex(b);
-	changed();
-}
-
-
-void GuiBox::on_frameColorCO_currentIndexChanged(int index)
-{
-	// if there is a non-black frame color the background cannot be uncolored
-	// therefore remove the entry "none" in this case
-	int const n = backgroundColorCO->findData("none");
-	if (index != frameColorCO->findData("black")) {
-		if (n != -1) {
-			if (backgroundColorCO->currentIndex() == n)
-				backgroundColorCO->setCurrentIndex(
-					    backgroundColorCO->findData("white"));
-			backgroundColorCO->removeItem(n);
-		}
-	} else {
-		if (n == -1)
-			backgroundColorCO->insertItem(0, toqstr(translateIfPossible((lcolor.getGUIName(Color_none)))),
-						      toqstr(lcolor.getLaTeXName(Color_none)));
 	}
 	changed();
 }
@@ -486,7 +464,7 @@ docstring GuiBox::dialogToParams() const
 		params.framecolor =
 			fromqstr(frameColorCO->itemData(frameColorCO->currentIndex()).toString());
 	else
-		params.framecolor = "black";
+		params.framecolor = "foreground";
 	if (backgroundColorCO->isEnabled())
 		params.backgroundcolor =
 			fromqstr(backgroundColorCO->itemData(backgroundColorCO->currentIndex()).toString());

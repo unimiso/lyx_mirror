@@ -32,8 +32,8 @@ extern char const * const lyx_version_info;
 
 // Do not remove the comment below, so we get merge conflict in
 // independent branches. Instead add your own.
-#define LYX_FORMAT_LYX 619 // rikiheck: formatted ref
-#define LYX_FORMAT_TEX2LYX 619
+#define LYX_FORMAT_LYX 620 // spitz: default box frame color
+#define LYX_FORMAT_TEX2LYX 620
 
 #if LYX_FORMAT_TEX2LYX != LYX_FORMAT_LYX
 #ifndef _MSC_VER

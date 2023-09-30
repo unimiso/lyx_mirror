@@ -5554,6 +5554,21 @@ def revert_formatted_refs(document):
         del document.header[i]
 
 
+def revert_box_fcolor(document):
+    i = 0
+    while True:
+        i = find_token(document.body, '\\begin_inset Box Boxed', i+1)
+        if i == -1:
+            break
+        j = find_end_of_inset(document.body, i)
+        if j == -1:
+            document.warning("Malformed LyX document: Can't find end of framed box inset at line %d" % i)
+            continue
+        k = find_token(document.body, 'framecolor "default"', i, j)
+        if k != -1:
+            document.body[k] = 'framecolor "black"'
+
+
 ##
 # Conversion hub
 #
@@ -5634,11 +5649,13 @@ convert = [
            [616, [convert_empty_macro]],
            [617, [convert_cov_options]],
            [618, []],
-           [619, []]
+           [619, []],
+           [620, []]
           ]
 
 
-revert =  [[618, [revert_formatted_refs]],
+revert =  [[619, [revert_box_fcolor]],
+           [618, [revert_formatted_refs]],
            [617, [revert_hequotes]],
            [616, [revert_expreambles,revert_exarg2,revert_linggloss2,revert_cov_options]],
            [615, [revert_empty_macro]],

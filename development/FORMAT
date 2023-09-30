@@ -7,6 +7,10 @@ changes happened in particular if possible. A good example would be
 
 -----------------------
 
+2023-09-29 Jürgen Spitzmüller <spitz@lyx.org> 
+	* Format incremented to 620: Add InsetBox "default" framecolor ("foreground"
+	  rather than "black" in GUI). This aligns better with dark mode.
+
 2023-09-06 Richard Kimberly Heck <rikiheck@lyx.org>
 	* Format incremented to 619: New document header \use_formatted_ref
 	  for workarea display purposes only.
