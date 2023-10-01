@@ -430,9 +430,11 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 		if (separation_string != defaultSep && thickness_string == defaultThick)
 			os << "{\\fboxsep " << from_ascii(separation_string);
 		if (!params_.inner_box && !width_string.empty()) {
-			if (params_.framecolor != "default" || params_.backgroundcolor != "none") {
-				os << maybeBeginL << "\\fcolorbox{" << getFrameColor() << "}{" << getBackgroundColor() << "}{";
-				os << "\\makebox";
+			if (useFColorBox()) {
+				os << maybeBeginL
+				   << "\\fcolorbox{" << getFrameColor()
+				   << "}{" << getBackgroundColor()
+				   << "}{" << "\\makebox";
 				needEndL = !maybeBeginL.empty();
 			} else
 				os << "\\framebox";
@@ -449,8 +451,10 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 			if (params_.hor_pos != 'c')
 				os << "[" << params_.hor_pos << "]";
 		} else {
-			if (params_.framecolor != "default" || params_.backgroundcolor != "none") {
-				os << maybeBeginL << "\\fcolorbox{" << getFrameColor() << "}{" << getBackgroundColor() << "}";
+			if (useFColorBox()) {
+				os << maybeBeginL
+				   << "\\fcolorbox{" << getFrameColor()
+				   << "}{" << getBackgroundColor() << "}";
 				needEndL = !maybeBeginL.empty();
 			} else {
 				if (!cprotect.empty() && contains(runparams.active_chars, '^')) {
@@ -616,8 +620,7 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 		break;
 	case Boxed:
 		os << "}";
-		if (!params_.inner_box && !width_string.empty()
-			&& (params_.framecolor != "default" || params_.backgroundcolor != "none"))
+		if (!params_.inner_box && !width_string.empty() && useFColorBox())
 			os << "}";
 		if (separation_string != defaultSep || thickness_string != defaultThick)
 			os << "}";
@@ -810,8 +813,8 @@ void InsetBox::validate(LaTeXFeatures & features) const
 		break;
 	case Boxed:
 		features.require("calc");
-		if (params_.framecolor != "default" || params_.backgroundcolor != "none")
-			// \fcolorbox, which is part of (x)color, is used
+		if (useFColorBox())
+			// \fcolorbox is provided by [x]color
 			features.require("xcolor");
 		break;
 	case ovalbox:
@@ -889,6 +892,15 @@ string const InsetBox::getBackgroundColor() const
 	if (params_.backgroundcolor == "none")
 		return "white";
 	return params_.backgroundcolor;
+}
+
+
+bool InsetBox::useFColorBox() const
+{
+	// we only need an \fcolorbox if the framecolor is something else
+	// than black in the output or if the backgroundcolor is not none
+	// (also needed with white, consider non-white page coloring)
+	return getFrameColor() != "black" || params_.backgroundcolor != "none";
 }
 
 

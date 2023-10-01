@@ -167,6 +167,8 @@ private:
 	std::string const getFrameColor(bool const gui = false) const;
 	///
 	std::string const getBackgroundColor() const;
+	///
+	bool useFColorBox() const;
 
 	///
 	friend class InsetBoxParams;
