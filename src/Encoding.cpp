@@ -204,7 +204,7 @@ bool Encoding::encodable(char_type c) const
 		return true;
 	// platex does not load inputenc: force conversion of supported characters
 	if (package_ == Encoding::japanese
-	    && ((0xb7 <= c && c <= 0x058f) // Latin-1 Supplement ... Armenian
+	    && ((0xb7 <= c && c <= 0x05ff) // Latin-1 Supplement ... Hebrew
 			|| (0x1d00 <= c && c <= 0x218f) // Phonetic Extensions ... Number Forms
 			|| (0x2193 <= c && c <= 0x2aff) // Arrows ... Supplemental Mathematical Operators
 			|| (0xfb00 <= c && c <= 0xfb4f) // Alphabetic Presentation Forms
