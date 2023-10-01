@@ -899,10 +899,9 @@ string const InsetBox::getBackgroundColor() const
 
 bool InsetBox::useFColorBox() const
 {
-	// we only need an \fcolorbox if the framecolor is something else
-	// than black in the output or if the backgroundcolor is not none
-	// (also needed with white, consider non-white page coloring)
-	return getFrameColor() != "black" || params_.backgroundcolor != "none";
+	// we need an \fcolorbox if the framecolor or the backgroundcolor
+	// is non-default. We also do it with black and white for consistency.
+	return params_.framecolor != "default" || params_.backgroundcolor != "none";
 }
 
 
