@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-09-08 11:29+0200\n"
-"PO-Revision-Date: 2023-09-08 09:32+0000\n"
+"POT-Creation-Date: 2023-09-24 15:39+0200\n"
+"PO-Revision-Date: 2023-09-24 13:41+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -4707,7 +4707,7 @@ msgid ""
 "for the current language."
 msgstr ""
 "To môžte špecifikovať decimálny oddeľovač štandardne použitý v dialógu pre "
-"tabuľku. \"Štandardné pre daný jazyk\" vyberie vhodný oddeľovač pre aktuálny "
+"tabuľku. \"Predvolený jazyk\" vyberie vhodný oddeľovač pre aktuálny "
 "jazyk."
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:289
@@ -4727,10 +4727,10 @@ msgstr "Vyberte štandardnú jednotku dĺžky pre LyX dialógy"
 msgid "Default length &unit:"
 msgstr "Štandardná jednotka &dĺžky:"
 
+#: src/frontends/qt/GuiDocument.cpp:1052
 #: src/frontends/qt/ui/PrefLanguageUi.ui:348
-#: src/frontends/qt/GuiDocument.cpp:1040
 msgid "Language Default"
-msgstr "Štandardné pre daný jazyk"
+msgstr "Predvolený jazyk"
 
 #: src/frontends/qt/ui/PrefLatexUi.ui:34
 msgid "&DVI viewer paper size options:"
@@ -29422,17 +29422,17 @@ msgstr "zdedené"
 msgid "ignore"
 msgstr "ignorovať"
 
-#: src/Converter.cpp:315
+#: src/Converter.cpp:317
 #, c-format
 msgid ""
 "<p>The following LaTeX backend has been configured to allow execution of "
-"external programs for any document:</p><center><p><tt>%1$s</tt></p></"
-"center><p>This is a dangerous configuration. Please, consider using the "
-"support offered by LyX for allowing this privilege only to documents that "
-"actually need it, instead.</p>"
+"external programs for any document:</p><center><p>%1$s</p></center><p>This "
+"is a dangerous configuration. Please, consider using the support offered by "
+"LyX for allowing this privilege only to documents that actually need it, "
+"instead.</p>"
 msgstr ""
 "<p>Nasledovný LaTeX backend bol konfigurovaný aby povolil spúšťanie "
-"externých príkazov pre každý dokument:</p><center><p><tt>%1$s</tt></p></"
+"externých príkazov pre každý dokument:</p><center><p>%1$s</p></"
 "center><p>Toto je nebezpečná konfigurácia. Namiesto toho prosím uvážte "
 "použiť podporu ponuky LyXa na povolenie oprávnenia len pre dokumenty ktoré "
 "to naozaj potrebujú.<p>"
@@ -29441,32 +29441,31 @@ msgstr ""
 msgid "Security Warning"
 msgstr "Ochranné varovanie"
 
-#: src/Converter.cpp:337
+#: src/Converter.cpp:342
 #, c-format
 msgid ""
 "<p>The following LaTeX backend has been requested to allow execution of "
-"external programs:</p><center><p><tt>%1$s</tt></p></center><p>The external "
-"programs can execute arbitrary commands on your system, including dangerous "
-"ones, if instructed to do so by a maliciously crafted LyX document.</p>"
-msgstr ""
-"<p>Nasledovný LaTeX backend bol konfigurovaný aby povolil spúšťanie "
-"externých príkazov:</p><center><p><tt>%1$s</tt></p></center><p>Externý "
-"príkaz je schopný spracovať ľubovoľné rozkazy na vašom systéme, vrátane aj "
-"nebezpečné, keď je napr. inštruovaný robiť to zlovoľne vyrobeným lyx "
-"dokumentom.</p> "
-
-#: src/Converter.cpp:344
-#, c-format
-msgid ""
-"<p>The requested operation requires the use of a converter from %2$s to %3$s:"
-"</p><blockquote><p><tt>%1$s</tt></p></blockquote><p>This external program "
+"external programs:</p><center><p>%1$s</p></center><p>The external programs "
 "can execute arbitrary commands on your system, including dangerous ones, if "
 "instructed to do so by a maliciously crafted LyX document.</p>"
 msgstr ""
+"<p>Nasledovný LaTeX backend bol konfigurovaný aby povolil spúšťanie "
+"externých príkazov:</p><center><p>%1$s</p></center><p>Externý príkaz je "
+"schopný spracovať ľubovoľné rozkazy na vašom systéme, vrátane aj nebezpečné, "
+"keď je napr. inštruovaný robiť to zlovoľne vyrobeným lyx dokumentom.</p> "
+
+#: src/Converter.cpp:349
+#, c-format
+msgid ""
+"<p>The requested operation requires the use of a converter from %2$s to %3$s:"
+"</p><blockquote><p>%1$s</p></blockquote><p>This external program can execute "
+"arbitrary commands on your system, including dangerous ones, if instructed "
+"to do so by a maliciously crafted LyX document.</p>"
+msgstr ""
 "<p>Žiadaná operácia požaduje konvertor z %2$s na %3$s:</"
-"p><blockquote><p><tt>%1$s</tt></p></blockquote><p>Tento externý program je "
-"schopný vykonávať ľubovoľné akcie, vrátane nebezpečné keď je napr. "
-"inštruovaný robiť to zlovoľne vyrobeným lyx dokumentom.</p> "
+"p><blockquote><p>%1$s</p></blockquote><p>Tento externý program je schopný "
+"vykonávať ľubovoľné akcie, vrátane nebezpečné keď je napr. inštruovaný robiť "
+"to zlovoľne vyrobeným lyx dokumentom.</p> "
 
 #: src/Converter.cpp:354
 msgid "An external converter is disabled for security reasons"
@@ -32801,9 +32800,9 @@ msgstr ""
 "Načítať 'inputenc' voľbou 'utf8x' pre rozšírenú Unicode-podporu balíkom "
 "'ucs'."
 
-#: src/frontends/qt/GuiDocument.cpp:1041
+#: src/frontends/qt/GuiDocument.cpp:1053
 msgid "Language Default (no inputenc)"
-msgstr "Štandardné pre daný jazyk (bez inputenc)"
+msgstr "Predvolený jazyk (bez inputenc)"
 
 #: src/frontends/qt/GuiDocument.cpp:1043
 msgid ""
@@ -37784,7 +37783,7 @@ msgid ""
 "Change tracking information for tabular row/column is incomplete. I will "
 "ignore this."
 msgstr ""
-"Údaje sledovania zmien pre riadok či stĺpec v tabuľke nie sú kompletné. Budú "
+"Údaje sledovania zmien pre riadok či stĺpec v tabuľke sú neúplné. Budú "
 "ignorované."
 
 #: src/insets/InsetTabular.cpp:5705
@@ -44065,3 +44064,26 @@ msgstr "Neznámy používateľ"
 #~ msgstr ""
 #~ "Keď aktivované, LyX bude hľadať vhodné súbory vo vašom disku pri kliknutí na "
 #~ "\"Skús otvoriť obsah citácie…\" v menu kontextu citácie"
+
+#~ msgid ""
+#~ "<p>The following LaTeX backend has been requested to allow execution of "
+#~ "external programs:</p><center><p><tt>%1$s</tt></p></center><p>The external "
+#~ "programs can execute arbitrary commands on your system, including dangerous "
+#~ "ones, if instructed to do so by a maliciously crafted LyX document.</p>"
+#~ msgstr ""
+#~ "<p>Nasledovný LaTeX backend bol konfigurovaný aby povolil spúšťanie "
+#~ "externých príkazov:</p><center><p><tt>%1$s</tt></p></center><p>Externý "
+#~ "príkaz je schopný spracovať ľubovoľné rozkazy na vašom systéme, vrátane aj "
+#~ "nebezpečné, keď je napr. inštruovaný robiť to zlovoľne vyrobeným lyx "
+#~ "dokumentom.</p> "
+
+#~ msgid ""
+#~ "<p>The requested operation requires the use of a converter from %2$s to %3$s:"
+#~ "</p><blockquote><p><tt>%1$s</tt></p></blockquote><p>This external program "
+#~ "can execute arbitrary commands on your system, including dangerous ones, if "
+#~ "instructed to do so by a maliciously crafted LyX document.</p>"
+#~ msgstr ""
+#~ "<p>Žiadaná operácia požaduje konvertor z %2$s na %3$s:</"
+#~ "p><blockquote><p><tt>%1$s</tt></p></blockquote><p>Tento externý program je "
+#~ "schopný vykonávať ľubovoľné akcie, vrátane nebezpečné keď je napr. "
+#~ "inštruovaný robiť to zlovoľne vyrobeným lyx dokumentom.</p> "
