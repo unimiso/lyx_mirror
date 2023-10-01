@@ -166,7 +166,7 @@ private:
 	///
 	std::string const getFrameColor(bool const gui = false) const;
 	///
-	std::string const getBackgroundColor() const;
+	std::string const getBackgroundColor(bool const custompb = false) const;
 	///
 	bool useFColorBox() const;
 
