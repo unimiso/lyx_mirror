@@ -433,7 +433,7 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 			if (useFColorBox()) {
 				os << maybeBeginL
 				   << "\\fcolorbox{" << getFrameColor()
-				   << "}{" << getBackgroundColor(buffer().params().isbackgroundcolor)
+				   << "}{" << getBackgroundColor()
 				   << "}{" << "\\makebox";
 				needEndL = !maybeBeginL.empty();
 			} else
@@ -454,7 +454,7 @@ void InsetBox::latex(otexstream & os, OutputParams const & runparams) const
 			if (useFColorBox()) {
 				os << maybeBeginL
 				   << "\\fcolorbox{" << getFrameColor()
-				   << "}{" << getBackgroundColor(buffer().params().isbackgroundcolor) << "}";
+				   << "}{" << getBackgroundColor() << "}";
 				needEndL = !maybeBeginL.empty();
 			} else {
 				if (!cprotect.empty() && contains(runparams.active_chars, '^')) {
@@ -887,10 +887,12 @@ string const InsetBox::getFrameColor(bool const gui) const
 }
 
 
-string const InsetBox::getBackgroundColor(bool const custompb) const
+string const InsetBox::getBackgroundColor() const
 {
 	if (params_.backgroundcolor == "none")
-		return custompb ? "page_backgroundcolor" : "white";
+		return buffer().params().isbackgroundcolor
+				? "page_backgroundcolor"
+				: "white";
 	return params_.backgroundcolor;
 }
 
