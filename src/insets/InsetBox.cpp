@@ -810,7 +810,8 @@ void InsetBox::validate(LaTeXFeatures & features) const
 		break;
 	case Boxed:
 		features.require("calc");
-		if (getFrameColor() != "black" || getBackgroundColor() != "white")
+		if (params_.framecolor != "default" || params_.backgroundcolor != "none")
+			// \fcolorbox, which is part of (x)color, is used
 			features.require("xcolor");
 		break;
 	case ovalbox:
