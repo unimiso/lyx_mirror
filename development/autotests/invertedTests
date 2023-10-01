@@ -55,7 +55,6 @@ export/export/lyx2lyx/lyx_2_3_test_lyx(16|20|21|22)
 export/export/lyx2lyx/lyx_2_3_test2_lyx(16|20)
 
 # nonstandard tests failing for unknown reason:
-export/templates/Obsolete/ACM_SIGGGRAPH.*_pdf5_(texF|systemF)
 export/templates/Articles/R_Journal_(dvi3|pdf[45])_systemF
 #export/templates/Articles/Kluwer_.*_systemF
 
