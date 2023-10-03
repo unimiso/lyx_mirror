@@ -229,6 +229,18 @@ bool MathData::addToMathRow(MathRow & mrow, MetricsInfo & mi) const
 	ar->updateMacros(&bv->cursor(), mi.macrocontext,
 	                 InternalUpdate, mi.base.macro_nesting);
 
+	pos_type bspos = -1, espos = -1;
+	Cursor const & cur = bv->cursor();
+	InsetMath const * inset = cur.inset().asInsetMath();
+	if (cur.selection() && inset) {
+		CursorSlice const s1 = cur.selBegin();
+		CursorSlice const s2 = cur.selEnd();
+		// Detect inner selection in this math data.
+		if (s1.idx() == s2.idx() && &inset->cell(s1.idx()) == this) {
+			bspos = s1.pos();
+			espos = s2.pos();
+		}
+	}
 
 	// FIXME: for completion, try to insert the relevant data in the
 	// mathrow (like is done for text rows). We could add a pair of
@@ -240,11 +252,15 @@ bool MathData::addToMathRow(MathRow & mrow, MetricsInfo & mi) const
 	size_t const compl_pos = has_completion ? inlineCompletionPos.pos() : 0;
 
 	for (size_t i = 0 ; i < size() ; ++i) {
+		if (i == bspos)
+			mrow.push_back(MathRow::Element(mi, MathRow::BEGIN_SEL));
 		has_contents |= (*this)[i]->addToMathRow(mrow, mi);
 		if (i + 1 == compl_pos) {
 			mrow.back().compl_text = bv->inlineCompletion();
 			mrow.back().compl_unique_to = bv->inlineCompletionUniqueChars();
 		}
+		if (i + 1 == espos)
+			mrow.push_back(MathRow::Element(mi, MathRow::END_SEL));
 	}
 	return has_contents;
 }

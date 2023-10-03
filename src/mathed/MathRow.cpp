@@ -18,6 +18,7 @@
 #include "BufferView.h"
 #include "ColorSet.h"
 #include "CoordCache.h"
+#include "LyXRC.h"
 #include "MetricsInfo.h"
 
 #include "mathed/InsetMath.h"
@@ -247,6 +248,8 @@ void MathRow::metrics(MetricsInfo & mi, Dimension & dim)
 		Dimension d;
 		switch (e.type) {
 		case DUMMY:
+		case BEGIN_SEL:
+		case END_SEL:
 			break;
 		case INSET:
 			e.inset->metrics(mi, d);
@@ -315,6 +318,7 @@ void MathRow::metrics(MetricsInfo & mi, Dimension & dim)
 
 void MathRow::draw(PainterInfo & pi, int x, int const y) const
 {
+	Changer change_color;
 	CoordCache & coords = pi.base.bv->coordCache();
 	for (Element const & e : elements_) {
 		switch (e.type) {
@@ -350,6 +354,13 @@ void MathRow::draw(PainterInfo & pi, int x, int const y) const
 			if (e.inset)
 				e.inset->afterDraw(pi);
 			x += e.before + e.after;
+			break;
+		case BEGIN_SEL:
+			if (lyxrc.use_system_colors)
+				change_color = pi.base.font.changeColor(Color_selectiontext);
+			break;
+		case END_SEL:
+			change_color = noChange();
 			break;
 		case BOX: {
 			if (e.color == Color_none)
@@ -423,6 +434,12 @@ ostream & operator<<(ostream & os, MathRow::Element const & e)
 			os << ")";
 		if (e.inset)
 			os << "]";
+		break;
+	case MathRow::BEGIN_SEL:
+		os << "<sel>";
+		break;
+	case MathRow::END_SEL:
+		os << "</sel>" ;
 		break;
 	case MathRow::BOX:
 		os << "<" << e.before << "-[]-" << e.after << ">";
