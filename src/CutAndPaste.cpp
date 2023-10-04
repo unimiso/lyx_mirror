@@ -297,7 +297,7 @@ pasteSelectionHelper(DocIterator const & cur, ParagraphList const & parlist,
 			// Only remove deleted text and change
 			// the rest to inserted if ct is active,
 			// otherwise leave markup as is
-			if (buffer.params().track_changes) {
+			if (buffer.params().track_changes && tmpbuf->size() > 0) {
 				if (!isFullyDeleted(insertion))
 					tmpbuf->acceptChanges(0, tmpbuf->size());
 				else
