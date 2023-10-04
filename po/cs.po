@@ -29079,9 +29079,8 @@ msgid "selection"
 msgstr "výběr"
 
 #: src/Color.cpp:267
-#, fuzzy
 msgid "selected math"
-msgstr "výběr - text"
+msgstr "výběr - matematika"
 
 #: src/Color.cpp:268
 msgid "selected text"
@@ -29404,7 +29403,7 @@ msgid "ignore"
 msgstr "ignorovat předchozí"
 
 #: src/Converter.cpp:318
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The following LaTeX backend has been configured to allow execution of "
 "external programs for any document:</p><center><p>%1$s</p></center><p>This "
@@ -29413,7 +29412,7 @@ msgid ""
 "instead.</p>"
 msgstr ""
 "<p>Následující backend LaTeX-u je nakonfigurován pro běh externích programů "
-"pro jakýkoliv dokument:</p><center><p><tt>%1$s</tt></p></center><p>Jedná se "
+"pro jakýkoliv dokument:</p><center><p>%1$s</p></center><p>Jedná se "
 "o nebezpečnou konfiguraci. Rozvažte, zda-li toto privilegium nepovolit pouze "
 "pro vybrané dokumenty, které to ve skutečnosti potřebují.</p>"
 
@@ -29422,7 +29421,7 @@ msgid "Security Warning"
 msgstr "Bezpečnostní upozornění"
 
 #: src/Converter.cpp:342
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The following LaTeX backend has been requested to allow execution of "
 "external programs:</p><center><p>%1$s</p></center><p>The external programs "
@@ -29430,12 +29429,12 @@ msgid ""
 "instructed to do so by a maliciously crafted LyX document.</p>"
 msgstr ""
 "<p>Následující backend LaTeX-u je nakonfigurován pro běh externích programů:"
-"</p><center><p><tt>%1$s</tt></p></center><p>Externí programy mohou spouštět "
+"</p><center><p>%1$s</p></center><p>Externí programy mohou spouštět "
 "libovolné procesy ve vašem systému, včetně škodlivého kódu, pokud bude "
 "podstrčen do LyX-ového dokumentu.</p>"
 
 #: src/Converter.cpp:349
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The requested operation requires the use of a converter from %2$s to %3$s:"
 "</p><blockquote><p>%1$s</p></blockquote><p>This external program can execute "
@@ -29443,7 +29442,7 @@ msgid ""
 "to do so by a maliciously crafted LyX document.</p>"
 msgstr ""
 "<p>Následující operace vyžaduje použití konvertoru z %2$s do %3$s:</"
-"p><blockquote><p><tt>%1$s</tt></p></blockquote><p>Tento externí program může "
+"p><blockquote><p>%1$s</p></blockquote><p>Tento externí program může "
 "spouštět libovolné procesy ve vašem systému, včetně škodlivého kódu, pokud "
 "bude podstrčen do LyX-ového dokumentu.</p>"
 
@@ -33093,20 +33092,18 @@ msgid "No, &Dismiss Changes"
 msgstr "Ne, &odmítnout změny"
 
 #: src/frontends/qt/GuiDocument.cpp:2316
-#, fuzzy
 msgid "Default margins"
-msgstr "&Standardní okraje"
+msgstr "Standardní okraje"
 
 #: src/frontends/qt/GuiDocument.cpp:2316
 msgid "Package defaults"
 msgstr "Výchozí (balíček)"
 
 #: src/frontends/qt/GuiDocument.cpp:2319
-#, fuzzy
 msgid ""
 "If no value is given, the defaults as set by the class, a package or the "
 "preamble are used."
-msgstr "Bez zadání hodnoty bude použita standardní hodnota definovaná třídou."
+msgstr "Bez zadání hodnoty bude použita standardní hodnota definovaná třídou, balíčkem nebo preambulí."
 
 #: src/frontends/qt/GuiDocument.cpp:2320
 msgid ""
@@ -36133,7 +36130,7 @@ msgstr ""
 "dokumentu bez dotazování."
 
 #: src/frontends/qt/qt_helpers.cpp:357
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "LyX wants to open the following target in an external application:\n"
 "\n"
@@ -36147,10 +36144,10 @@ msgid ""
 "How do you want to proceed?"
 msgstr ""
 "LyX chce otevřít následující odkaz v externí aplikaci:\n"
-"%1$s\n"
-"Uvědomte si, že to může znamenat narušení bezpečnosti!\n"
+"\n%1$s\n\n"
+"Uvědomte si, že to může znamenat narušení bezpečnosti!\n\n"
 "Odkaz otevírejte pouze v případě, že důvěřujete původu tohoto dokumentu a "
-"odkazu samotnému.\n"
+"odkazu samotnému.\n\n"
 "Jak chcete pokračovat?"
 
 #: src/frontends/qt/qt_helpers.cpp:362
