@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -30785,6 +30785,14 @@ scroll
 selection
 \lang ngerman
  Hintergrundfarbe des ausgewählten Texts
+\end_layout
+
+\begin_layout Description
+
+\lang english
+selectionmath
+\lang ngerman
+ Vordergrundfarbe von ausgewähltem Text in Mathe-Einfügungen
 \end_layout
 
 \begin_layout Description

@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -37391,6 +37391,16 @@ scroll Color that indicates when a row can be scrolled
 
 \begin_layout Description
 selection Background color of selected text
+\change_inserted -712698321 1696418767
+
+\end_layout
+
+\begin_layout Description
+
+\change_inserted -712698321 1696418836
+selectionmath Foreground color of selected text in math insets
+\change_unchanged
+
 \end_layout
 
 \begin_layout Description
