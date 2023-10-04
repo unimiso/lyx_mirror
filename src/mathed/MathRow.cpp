@@ -356,8 +356,7 @@ void MathRow::draw(PainterInfo & pi, int x, int const y) const
 			x += e.before + e.after;
 			break;
 		case BEGIN_SEL:
-			if (lyxrc.use_system_colors)
-				change_color = pi.base.font.changeColor(Color_selectiontext);
+			change_color = pi.base.font.changeColor(Color_selectionmath);
 			break;
 		case END_SEL:
 			change_color = noChange();

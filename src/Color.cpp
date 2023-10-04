@@ -264,6 +264,7 @@ ColorSet::ColorSet()
 	{ Color_background, N_("background"), "background", Linen, black, "background" },
 	{ Color_foreground, N_("text"), "foreground", black, Linen, "foreground" },
 	{ Color_selection, N_("selection"), "selection", "#add8e6", "#add8e6", "selection" },
+	{ Color_selectionmath, N_("selected math"), "selectionmath", "#00008B", "#00008B", "selectionmath" },
 	{ Color_selectiontext, N_("selected text"), "selectiontext", black, black, "selectiontext" },
 	{ Color_latex, N_("LaTeX text"), "latex", DarkRed, "#D66613", "latex" },
 	{ Color_textlabel1, N_("Text label 1"), "textlabel1", blue, "#86a4ff", "textlabel1" },

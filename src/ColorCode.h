@@ -65,6 +65,8 @@ enum ColorCode {
 	Color_foreground,
 	/// Background color of selected text
 	Color_selection,
+	/// Foreground color of selected math
+	Color_selectionmath,
 	/// Foreground color of selected text
 	Color_selectiontext,
 	/// Text color in LaTeX mode

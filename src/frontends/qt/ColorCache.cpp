@@ -45,6 +45,7 @@ QPalette::ColorRole role(ColorCode col)
 	case Color_selection:
 		return QPalette::Highlight;
 		break;
+	case Color_selectionmath:
 	case Color_selectiontext:
 		return QPalette::HighlightedText;
 		break;

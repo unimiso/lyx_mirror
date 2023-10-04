@@ -697,8 +697,7 @@ void InsetMathHull::draw(PainterInfo & pi, int x, int y) const
 	}
 
 	// Then the equations
-	ColorCode color = pi.selected && lyxrc.use_system_colors
-		? Color_selectiontext : standardColor();
+	ColorCode color = pi.selected ? Color_selectionmath : standardColor();
 	bool const really_change_color = pi.base.font.color() == Color_none;
 	Changer dummy0 = really_change_color ? pi.base.font.changeColor(color)
 		: noChange();
