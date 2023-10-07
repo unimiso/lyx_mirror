@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This DocBook file was created by LyX 2.4.0~RC1.devel
+  See https://www.lyx.org/ for more information -->
+<article xml:lang="en-US" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2">
+<title>Test: deleted text just after the end of formatted text</title>
+<para>incluye el archivo <code>config.log</code> y menciona el compilador que usas.</para>
+</article>

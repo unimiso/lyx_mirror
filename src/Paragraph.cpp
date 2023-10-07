@@ -3721,10 +3721,16 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
 			}
 		}
 
-		// Determine which tags should be opened or closed regarding fonts.
+		// Determine which tags should be opened or closed regarding fonts. Consider the last output character (i.e. not
+		// deleted).
+		int last_output_char = (i == 0) ? 0 : i - 1;
+		if (i > 0) {
+			while (last_output_char > 0 && isDeleted(last_output_char))
+				--last_output_char;
+		}
 		FontInfo const font_old = (i == 0 ?
 				(style.labeltype == LABEL_MANUAL ? style.labelfont : style.font) :
-				getFont(buf.masterBuffer()->params(), i - 1, outerfont).fontInfo());
+				getFont(buf.masterBuffer()->params(), last_output_char, outerfont).fontInfo());
 		Font const font = getFont(buf.masterBuffer()->params(), i, outerfont);
         tie(tagsToOpen, tagsToClose) = computeDocBookFontSwitch(
 				font_old, font, buf.masterBuffer()->params().fonts_default_family, fs);
