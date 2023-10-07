@@ -31,6 +31,7 @@
 #include "LyXRC.h"
 #include "LyXVC.h"
 #include "Lexer.h"
+#include "output_docbook.h"
 #include "Paragraph.h"
 #include "ParIterator.h"
 #include "ParagraphParameters.h"
@@ -54,6 +55,7 @@
 #include "support/Translator.h"
 
 #include <sstream>
+#include <tuple>
 
 #include <QtGui/QImage>
 #include <QDate>
@@ -297,6 +299,7 @@ vector<pair<string,docstring>> InsetInfoParams::getArguments(Buffer const * buf,
 	case FIXDATE_INFO:
 	case DATE_INFO:
 	case MODDATE_INFO: {
+		// TODO: away from a release, use parseDate instead.
 		string const dt = split(name, '@');
 		QDate date;
 		if (itype == "moddate")
@@ -327,6 +330,7 @@ vector<pair<string,docstring>> InsetInfoParams::getArguments(Buffer const * buf,
 	case FIXTIME_INFO:
 	case TIME_INFO:
 	case MODTIME_INFO: {
+		// TODO: away from a release, use parseTime instead.
 		string const tt = split(name, '@');
 		QTime time;
 		if (itype == "modtime")
@@ -1002,6 +1006,7 @@ void InsetInfo::build()
 		break;
 	}
 	case InsetInfoParams::PACKAGE_INFO:
+		// TODO: away from a release, replace with getPackageInfo.
 		// only need to do this once.
 		if (initialized_)
 			break;
@@ -1029,6 +1034,7 @@ void InsetInfo::build()
 		break;
 
 	case InsetInfoParams::TEXTCLASS_INFO: {
+		// TODO: when away from a release, replace with getTextClassInfo.
 		// the TextClass can change
 		LayoutFileList const & list = LayoutFileList::get();
 		bool available = false;
@@ -1097,6 +1103,7 @@ void InsetInfo::build()
 		break;
 	}
 	case InsetInfoParams::L7N_INFO: {
+		// TODO: away from a release, use getNormalizedL7N instead.
 		docstring locstring = _(params_.name);
 		// Remove trailing colons
 		locstring = rtrim(locstring, ":");
@@ -1161,6 +1168,7 @@ void InsetInfo::build()
 		break;
 	}
 	case InsetInfoParams::BUFFER_INFO: {
+		// TODO: away from a release, replace by getBufferInfo.
 		// this could all change, so we will recalculate each time
 		if (params_.name == "name")
 			setText(from_utf8(buffer().fileName().onlyFileName()), params_.lang);
@@ -1173,6 +1181,7 @@ void InsetInfo::build()
 		break;
 	}
 	case InsetInfoParams::VCS_INFO: {
+		// TODO: away from a release, replace by getVCSInfo.
 		// this information could change, in principle, so we will 
 		// recalculate each time through
 		if (!buffer().lyxvc().inUse()) {
@@ -1214,6 +1223,7 @@ void InsetInfo::build()
 	case InsetInfoParams::DATE_INFO:
 	case InsetInfoParams::MODDATE_INFO:
 	case InsetInfoParams::FIXDATE_INFO: {
+		// TODO: away from a release, use parseDate instead.
 		string date_format = params_.name;
 		string const date_specifier = (params_.type == InsetInfoParams::FIXDATE_INFO
 					       && contains(params_.name, '@'))
@@ -1235,6 +1245,7 @@ void InsetInfo::build()
 	case InsetInfoParams::TIME_INFO:
 	case InsetInfoParams::MODTIME_INFO:
 	case InsetInfoParams::FIXTIME_INFO: {
+		// TODO: away from a release, use parseTime instead.
 		string time_format = params_.name;
 		string const time_specifier = (params_.type == InsetInfoParams::FIXTIME_INFO
 					       && contains(params_.name, '@'))
@@ -1278,6 +1289,540 @@ string InsetInfo::contextMenu(BufferView const &, int, int) const
 string InsetInfo::contextMenuName() const
 {
 	return "context-info";
+}
+
+namespace {
+
+// TODO: away from a release, use these functions in InsetInfo::build and InsetInfoParams::getArguments.
+
+QDate parseDate(Buffer const & buffer, const InsetInfoParams & params) {
+	std::string date_format = params.name;
+	std::string const date_specifier = (params.type == InsetInfoParams::FIXDATE_INFO
+	                                    && contains(params.name, '@'))
+	                                   ? split(params.name, date_format, '@') : string();
+
+	if (params.type == InsetInfoParams::MODDATE_INFO)
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+		return QDateTime::fromSecsSinceEpoch(buffer.fileName().lastModified()).date();
+#else
+		return QDateTime::fromTime_t(buffer.fileName().lastModified()).date();
+#endif
+	else if (params.type == InsetInfoParams::FIXDATE_INFO && !date_specifier.empty()) {
+		QDate date = QDate::fromString(toqstr(date_specifier), Qt::ISODate);
+		return (date.isValid()) ? date : QDate::currentDate();
+	} else {
+		if (params.type != InsetInfoParams::DATE_INFO && params.type != InsetInfoParams::FIXDATE_INFO)
+			lyxerr << "Unexpected InsetInfoParams::info_type in parseDate: " << params.type;
+		return QDate::currentDate();
+	}
+}
+
+QTime parseTime(Buffer const & buffer, const InsetInfoParams & params) {
+	std::string time_format = params.name;
+	std::string const date_specifier = (params.type == InsetInfoParams::FIXTIME_INFO
+	                                    && contains(params.name, '@'))
+	                                   ? split(params.name, time_format, '@') : string();
+
+	if (params.type == InsetInfoParams::MODTIME_INFO)
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+		return QDateTime::fromSecsSinceEpoch(buffer.fileName().lastModified()).time();
+#else
+		return QDateTime::fromTime_t(buffer.fileName().lastModified()).time();
+#endif
+	else if (params.type == InsetInfoParams::FIXTIME_INFO && !date_specifier.empty()) {
+		QTime time = QTime::fromString(toqstr(date_specifier), Qt::ISODate);
+		return (time.isValid()) ? time : QTime::currentTime();
+	} else {
+		if (params.type != InsetInfoParams::TIME_INFO && params.type != InsetInfoParams::FIXTIME_INFO)
+			lyxerr << "Unexpected InsetInfoParams::info_type in parseTime: " << params.type;
+		return QTime::currentTime();
+	}
+}
+
+docstring getBufferInfo(Buffer const & buffer, const InsetInfoParams & params) {
+	if (params.name == "name")
+		return from_utf8(buffer.fileName().onlyFileName());
+	else if (params.name == "name-noext")
+		return from_utf8(buffer.fileName().onlyFileNameWithoutExt());
+	else if (params.name == "path")
+		return from_utf8(os::latex_path(buffer.filePath()));
+	else if (params.name == "class")
+		return from_utf8(buffer.params().documentClass().name());
+	else {
+		lyxerr << "Unexpected name for InsetInfoParams::BUFFER_INFO: " << params.name;
+		return from_ascii("");
+	}
+}
+
+docstring getVCSInfo(Buffer const & buffer, const InsetInfoParams & params) {
+	if (!buffer.lyxvc().inUse())
+		return _("No version control!");
+
+	LyXVC::RevisionInfo itype = LyXVC::Unknown;
+	if (params.name == "revision")
+		itype = LyXVC::File;
+	else if (params.name == "revision-abbrev")
+		itype = LyXVC::FileAbbrev;
+	else if (params.name == "tree-revision")
+		itype = LyXVC::Tree;
+	else if (params.name == "author")
+		itype = LyXVC::Author;
+	else if (params.name == "time")
+		itype = LyXVC::Time;
+	else if (params.name == "date")
+		itype = LyXVC::Date;
+
+	string binfo = buffer.lyxvc().revisionInfo(itype);
+	if (binfo.empty())
+		return from_ascii("VCS info unknown!");
+	else
+		return from_utf8(binfo);
+}
+
+docstring getPackageInfo(const InsetInfoParams & params) {
+	// check in packages.lst
+	bool available;
+	// we also allow version check with version separated by blank
+	if (contains(params.name, ' ')) {
+		string name;
+		string const version = split(params.name, name, ' ');
+		int const y = convert<int>(version.substr(0,4));
+		int const m = convert<int>(version.substr(4,2));
+		int const d = convert<int>(version.substr(6,2));
+		available = LaTeXFeatures::isAvailableAtLeastFrom(name, y, m, d);
+	} else
+		available = LaTeXFeatures::isAvailable(params.name);
+
+	return from_ascii(available ? "yes" : "no");
+}
+
+docstring getTextClassInfo(const InsetInfoParams & params) {
+	LayoutFileList const & list = LayoutFileList::get();
+	// params_.name is the class name
+	const bool available = list.haveClass(params.name) && list[params.name].isTeXClassAvailable();
+	return from_ascii(available ? "yes" : "no");
+}
+
+// With C++17, it would be better to have a std::string_view instead of const char *.
+const static std::map<char_type, const char *> keyToString {
+		{0x21b5, "Return[[Key]]"}, // Return
+		{0x21b9, "Tab[[Key]]"}, // Tab both directions (Win)
+		{0x21de, "PgUp"}, // Qt::Key_PageUp
+		{0x21df, "PgDown"}, // Qt::Key_PageDown
+		{0x21e4, "Backtab"}, // Qt::Key_Backtab
+		{0x21e5, "Tab"}, // Qt::Key_Tab
+		{0x21e7, "Shift"}, // Shift
+		{0x21ea, "CapsLock"}, // Qt::Key_CapsLock
+		{0x2303, "Control[[Key]]"}, // Control
+		{0x2318, "Command[[Key]]"}, // CMD
+		{0x2324, "Return[[Key]]"}, // Qt::Key_Enter
+		{0x2325, "Option[[Key]]"}, // Option key
+		{0x2326, "Delete[[Key]]"}, // Qt::Key_Delete
+		{0x232b, "Fn+Del"}, // Qt::Key_Backspace
+		{0x238b, "Esc"}, // Qt::Key_Escape
+};
+
+bool canTranslateKeySequence(const InsetInfoParams & params, const docstring & sequence,
+							 const docstring & seq_untranslated) {
+	bool is_translated = sequence != seq_untranslated;
+	std::string const lcode = params.lang->code();
+	docstring trans;
+
+	for (char_type const c : sequence) {
+		const auto keyMapping = keyToString.find(c);
+		if (keyMapping != keyToString.end()) {
+			is_translated = translateString(from_ascii(keyMapping->second), trans, lcode);
+		}
+	}
+
+	return is_translated;
+}
+
+void docbookShortcutInfo(XMLStream & xs, const InsetInfoParams & params) {
+	// Usually, a keyboard shortcut should be encoded as db:shortcut. However, this element doesn't accept text, hence
+	// the use of db:accel for error cases (not the right semantics, though).
+
+	std::string attr;
+	if (params.type == InsetInfoParams::SHORTCUTS_INFO)
+		attr = R"(role="shorcuts")";
+	else if (params.type == InsetInfoParams::SHORTCUT_INFO)
+		attr = R"(role="shortcut")";
+	else {
+		// Only check for this assertion that exits this function.
+		lyxerr << "Assertion failed! InsetInfoParams::info_type: " << params.type;
+		return;
+	}
+
+	// shortcuts can change, so we need to re-do this each time
+	FuncRequest const func = lyxaction.lookupFunc(params.name);
+	if (func.action() == LFUN_UNKNOWN_ACTION) {
+		xml::openTag(xs, "accel", attr, "inline");
+		xs << _("Unknown action %1$s");
+		xml::closeTag(xs, "accel", "inline");
+		return;
+	}
+
+	KeyMap::Bindings bindings = theTopLevelKeymap().findBindings(func);
+	if (bindings.empty()) {
+		xml::openTag(xs, "accel", attr, "inline");
+		xs << _("undefined");
+		xml::closeTag(xs, "accel", "inline");
+		return;
+	}
+
+	docstring sequence;
+	docstring seq_untranslated;
+	if (params.type == InsetInfoParams::SHORTCUT_INFO) {
+		sequence = bindings.begin()->print(KeySequence::ForGui);
+		seq_untranslated = bindings.begin()->print(KeySequence::ForGui, true);
+	} else if (params.type == InsetInfoParams::SHORTCUTS_INFO) {
+		sequence = theTopLevelKeymap().printBindings(func, KeySequence::ForGui);
+		seq_untranslated = theTopLevelKeymap().printBindings(func, KeySequence::ForGui, true);
+	}
+	// No other possible case.
+
+	Language const * tryguilang = languages.getFromCode(Messages::guiLanguage());
+	// Some info insets use the language of the GUI (if available)
+	Language const * guilang = tryguilang ? tryguilang : params.lang;
+	const bool isTranslated = canTranslateKeySequence(params, sequence, seq_untranslated);
+	const bool isLtr = !isTranslated || (!guilang->rightToLeft() && !params.lang->rightToLeft());
+	attr += std::string(" dir=\"") + (isLtr ? "ltr" : "rtl") + "\"";
+	attr += " action=\"simul\"";
+	xml::openTag(xs, "shortcut", attr, "inline");
+	xml::openTag(xs, "keycombo", "", "inline");
+
+	// QKeySequence returns special characters for keys on the mac
+	// Since these are not included in many fonts, we
+	// re-translate them to textual names (see #10641)
+	odocstringstream ods;
+	string const lcode = params.lang->code();
+	docstring trans;
+	for (char_type const c : sequence) {
+		const auto keyMapping = keyToString.find(c);
+		if (keyMapping != keyToString.end()) {
+			translateString(from_ascii(keyMapping->second), trans, lcode);
+
+			// db:keysym: symbolic name (like Page Up), unlike what is printed on the key (like
+			// ⇞, ↑, ▲, PgUp, Page Up, etc.)
+			xml::openTag(xs, "keysym", "", "inline");
+			xs << trans;
+			xml::closeTag(xs, "keysym", "inline");
+		} else {
+			// db:keycap: this is not a special key, c is really what is printed on the key.
+			xml::openTag(xs, "keycap", "", "inline");
+			xs << c;
+			xml::closeTag(xs, "keycap", "inline");
+		}
+	}
+
+	xml::closeTag(xs, "keycombo", "inline");
+	xml::closeTag(xs, "shortcut", "inline");
+}
+
+docstring getLyxRCInfo(const InsetInfoParams & params) {
+	if (params.name.empty())
+		return _("undefined");
+
+	// this information could change, if the preferences are changed,
+	// so we will recalculate each time through.
+	// FIXME this uses the serialization mechanism to get the info
+	// we want, which i guess works but is a bit strange.
+	ostringstream oss;
+	lyxrc.write(oss, true, params.name);
+	string result = oss.str();
+	if (result.size() < 2) {
+		return _("undefined");
+	}
+
+	string::size_type loc = result.rfind('\n', result.size() - 2);
+	loc = loc == string::npos ? 0 : loc + 1;
+	if (result.size() < loc + params.name.size() + 1
+	    || result.substr(loc + 1, params.name.size()) != params.name) {
+		return _("undefined");
+	}
+
+	// remove leading comments and \\name and space
+	result = result.substr(loc + params.name.size() + 2);
+
+	// remove \n and ""
+	result = rtrim(result, "\n");
+	result = trim(result, "\"");
+
+	if (result.empty())
+		return from_ascii("not set");
+	else
+		return from_utf8(result);
+}
+
+void docbookMenuInfo(XMLStream & xs, Buffer const & buffer, const InsetInfoParams & params) {
+	docstring_list names;
+	FuncRequest func = lyxaction.lookupFunc(params.name);
+	if (func.action() == LFUN_UNKNOWN_ACTION) {
+		xml::openTag(xs, "guimenuitem", "", "inline");
+		xs << _("Unknown action %1$s");
+		xml::closeTag(xs, "guimenuitem", "inline");
+		return;
+	}
+
+	if (func.action() == LFUN_BUFFER_VIEW || func.action() == LFUN_BUFFER_UPDATE) {
+		// The default output format is in the menu without argument,
+		// so strip it here.
+		if (func.argument() == from_ascii(buffer.params().getDefaultOutputFormat()))
+			func = FuncRequest(func.action());
+	}
+
+	// iterate through the menubackend to find it
+	if (!theApp()) {
+		xml::openTag(xs, "guimenuitem", "", "inline");
+		xs << _("Can't determine menu entry for action %1$s in batch mode");
+		xml::closeTag(xs, "guimenuitem", "inline");
+		return;
+	}
+
+	// and we will not keep trying if we fail
+	if (!theApp()->searchMenu(func, names)) {
+		xml::openTag(xs, "guimenuitem", "", "inline");
+		xs << _("No menu entry for action %1$s");
+		xml::closeTag(xs, "guimenuitem", "inline");
+		return;
+	}
+
+	// if found, return its path.
+	Language const * tryguilang = languages.getFromCode(Messages::guiLanguage());
+	// Some info insets use the language of the GUI (if available)
+	Language const * guilang = tryguilang ? tryguilang : params.lang;
+	const bool isLtr = !guilang->rightToLeft();
+	const std::string attr = std::string("dir=\"") + (isLtr ? "ltr" : "rtl") + "\"";
+
+	xml::openTag(xs, "menuchoice", attr, "inline"); // More of an inline tag in this case, as there is no db:shortcut to
+	// accompany the succession of menus.
+
+	for (int i = 0; i < names.size(); ++i) {
+	    docstring const & name = names[i];
+
+		std::string tag;
+		if (i == 0) {
+			tag = "guimenu";
+		} else if (i == names.size() - 1) {
+			tag = "guimenuitem";
+		} else {
+			tag = "guisubmenu";
+		}
+
+		xml::openTag(xs, tag, "", "inline");
+
+		//FIXME: add proper underlines here. This
+		// involves rewriting searchMenu used above to
+		// return a vector of menus. If we do not do
+		// that, we might as well use below
+		// Paragraph::insert on each string (JMarc)
+		// TODO: for DocBook, underlining corresponds to adding db:accel around the letter to underline.
+		xs << name;
+
+		xml::closeTag(xs, tag, "inline");
+	}
+
+	xml::closeTag(xs, "menuchoice", "inline");
+}
+
+void docbookIconInfo(XMLStream & xs, const OutputParams & rp, Buffer * buffer, const InsetInfoParams & params) {
+	FuncRequest func = lyxaction.lookupFunc(params.name);
+	docstring icon_name = frontend::Application::iconName(func, true);
+	FileName file(to_utf8(icon_name));
+	if (file.onlyFileNameWithoutExt() == "unknown") {
+		std::string dir = "images";
+		FileName file2(imageLibFileSearch(dir, params.name, "svgz,png"));
+		if (!file2.empty())
+			file = file2;
+	}
+
+	if (!file.exists())
+		return;
+
+	int percent_scale = 100;
+	if (use_gui) {
+		// Compute the scale factor for the icon such that its
+		// width on screen is equal to 1em in pixels.
+		// The scale factor is rounded to the integer nearest
+		// to the float value of the ratio 100*iconsize/imgsize.
+		int imgsize = QImage(toqstr(file.absFileName())).width();
+		if (imgsize > 0) {
+			int iconsize = Length(1, Length::EM).inPixels(1);
+			percent_scale = (100 * iconsize + imgsize / 2) / imgsize;
+		}
+	}
+
+	InsetGraphicsTight * inset = new InsetGraphicsTight(buffer);
+	InsetGraphicsParams igp;
+	igp.filename = file;
+	igp.lyxscale = percent_scale;
+	igp.scale = string();
+	igp.width = Length(1, Length::EM);
+	if (contains(file.absoluteFilePath(), from_ascii("math"))
+	    || contains(file.absoluteFilePath(), from_ascii("ert-insert"))
+	    || suffixIs(file.onlyPath().absoluteFilePath(), from_ascii("ipa")))
+		igp.darkModeSensitive = true;
+	inset->setParams(igp);
+
+	xml::openTag(xs, "guiicon", "", "inline");
+	inset->docbook(xs, rp);
+	xml::closeTag(xs, "guiicon", "inline");
+}
+
+docstring getLyXInfo(const InsetInfoParams & params) {
+	if (params.name == "version")
+		return from_ascii(lyx_version);
+	else if (params.name == "layoutformat")
+		return convert<docstring>(LAYOUT_FORMAT);
+	else {
+		lyxerr << "Unexpected name for InsetInfoParams::BUFFER_INFO: " << params.name;
+		return from_ascii("");
+	}
+}
+
+docstring getNormalizedL7N(const InsetInfoParams & params) {
+	docstring locstring = _(params.name);
+
+	// Remove trailing colons
+	locstring = rtrim(locstring, ":");
+
+	// Remove menu accelerators
+	if (contains(locstring, from_ascii("|"))) {
+		docstring nlocstring;
+		rsplit(locstring, nlocstring, '|');
+		locstring = nlocstring;
+	}
+
+	// Remove Qt accelerators, but keep literal ampersands
+	locstring = subst(locstring, from_ascii(" & "), from_ascii("</amp;>"));
+	locstring = subst(locstring, from_ascii("&"), docstring());
+	locstring = subst(locstring, from_ascii("</amp;>"), from_ascii(" & "));
+
+	return locstring;
+}
+
+} // namespace
+
+void InsetInfo::docbook(XMLStream & xs, OutputParams const & rp) const
+{
+	// TODO: away from a release, merge some of this code with InsetInfo::build and InsetInfoParams::getArguments.
+	switch (params_.type) {
+	case InsetInfoParams::DATE_INFO:
+	case InsetInfoParams::MODDATE_INFO:
+	case InsetInfoParams::FIXDATE_INFO: {
+		std::string role;
+		switch (params_.type) {
+		case InsetInfoParams::DATE_INFO:
+			role = "current-date";
+			break;
+		case InsetInfoParams::MODDATE_INFO:
+			role = "last-modification-date";
+			break;
+		case InsetInfoParams::FIXDATE_INFO:
+			role = "fix-date";
+			break;
+		default:
+			lyxerr << "Assertion failed! InsetInfoParams::info_type: " << params().type;
+			break;
+		}
+
+		xml::openTag(xs, "date", "role=\"" + role + "\"", "inline");
+		xs << qstring_to_ucs4(parseDate(buffer(), params_).toString(Qt::ISODate));
+		xml::closeTag(xs, "date", "inline");
+		break;
+	}
+
+	case InsetInfoParams::TIME_INFO:
+	case InsetInfoParams::MODTIME_INFO:
+	case InsetInfoParams::FIXTIME_INFO: {
+		std::string role;
+		switch (params_.type) {
+		case InsetInfoParams::TIME_INFO:
+			role = "current-time";
+			break;
+		case InsetInfoParams::MODTIME_INFO:
+			role = "last-modification-time";
+			break;
+		case InsetInfoParams::FIXTIME_INFO:
+			role = "fix-time";
+			break;
+		default:
+			lyxerr << "Assertion failed! InsetInfoParams::info_type: " << params().type;
+			break;
+		}
+
+		// DocBook has no specific element for time, so use a date.
+		xml::openTag(xs, "date", "(role=\"" + role + "\"", "inline");
+		xs << qstring_to_ucs4(parseTime(buffer(), params_).toString(Qt::ISODate));
+		xml::closeTag(xs, "date", "inline");
+		break;
+	}
+
+	case InsetInfoParams::BUFFER_INFO:
+		xml::openTag(xs, "phrase", "role=\"buffer-info " + params_.name + "\"", "inline");
+		xs << getBufferInfo(buffer(), params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+	case InsetInfoParams::VCS_INFO:
+		xml::openTag(xs, "phrase", "role=\"vcs-info " + params_.name + "\"", "inline");
+		xs << getVCSInfo(buffer(), params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+	case InsetInfoParams::PACKAGE_INFO:
+		xml::openTag(xs, "phrase", "role=\"package-availability " + params_.name + "\"", "inline");
+		xs << getPackageInfo(params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+	case InsetInfoParams::TEXTCLASS_INFO:
+		xml::openTag(xs, "phrase", "role=\"textclass-availability " + params_.name + "\"", "inline");
+		xs << getTextClassInfo(params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+
+	case InsetInfoParams::SHORTCUTS_INFO:
+	case InsetInfoParams::SHORTCUT_INFO:
+		docbookShortcutInfo(xs, params_);
+		break;
+		
+	case InsetInfoParams::LYXRC_INFO:
+		xml::openTag(xs, "phrase", "role=\"lyxrc-entry " + params_.name + "\"", "inline");
+		xs << getLyxRCInfo(params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+
+	case InsetInfoParams::MENU_INFO:
+		docbookMenuInfo(xs, buffer(), params_);
+		break;
+	case InsetInfoParams::ICON_INFO:
+		docbookIconInfo(xs, rp, buffer_, params_);
+		break;
+	case InsetInfoParams::LYX_INFO:
+		xml::openTag(xs, "phrase", "role=\"lyx-info " + params_.name + "\"", "inline");
+		xs << getLyXInfo(params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+
+	case InsetInfoParams::L7N_INFO:
+		// TODO: add "its:translate="no"" in the attributes if ITS is globally enabled for LyX (quite rare to have ITS
+		// for DocBook documents).
+		xml::openTag(xs, "phrase", R"(role="localized")", "inline");
+		xs << getNormalizedL7N(params_);
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+
+	case InsetInfoParams::UNKNOWN_INFO:
+		xml::openTag(xs, "phrase", R"(role="unknown")", "inline");
+		xs << from_ascii("Unknown Info!");
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+	default:
+		lyxerr << "Unrecognised InsetInfoParams::info_type: " << params().type;
+
+		xml::openTag(xs, "phrase", R"(role="unrecognized")", "inline");
+		xs << from_ascii("Unrecognized Info!");
+		xml::closeTag(xs, "phrase", "inline");
+		break;
+	}
 }
 
 
