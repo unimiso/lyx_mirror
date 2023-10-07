@@ -1300,7 +1300,8 @@ void docbookParagraphs(Text const &text,
 		}
 
 		// Close all sections before the bibliography.
-		// TODO: Only close all when the bibliography is at the end of the document? Or force to output the bibliography at the end of the document? Or don't care (as allowed by DocBook)?
+		// TODO: Only close all when the bibliography is at the end of the document? Or force to output the bibliography
+		// at the end of the document? Or don't care (as allowed by DocBook)?
 		if (!par->insetList().empty()) {
 			Inset const *firstInset = par->getInset(0);
 			if (firstInset && (firstInset->lyxCode() == BIBITEM_CODE || firstInset->lyxCode() == BIBTEX_CODE)) {
@@ -1326,7 +1327,8 @@ void docbookParagraphs(Text const &text,
 		// Generate the <info> tag if a section was just opened.
 		// Some sections may require abstracts (mostly parts, in books: DocBookForceAbstractTag will not be NONE),
 		// others can still have an abstract (it must be detected so that it can be output at the right place).
-		// TODO: docbookforceabstracttag is a bit contrived here, but it does the job. Having another field just for this would be cleaner, but that's just for <part> and <partintro>, so it's probably not worth the effort.
+		// TODO: docbookforceabstracttag is a bit contrived here, but it does the job. Having another field just for
+		// this would be cleaner, but that's just for <part> and <partintro>, so it's probably not worth the effort.
 		if (isLayoutSectioning(style)) {
 			// This abstract may be found between the next paragraph and the next title.
 			pit_type cpit = std::distance(text.paragraphs().begin(), par);
