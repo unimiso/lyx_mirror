@@ -1127,8 +1127,9 @@ void docbookSimpleAllParagraphs(
 
 	// Then, the content. It starts where the <info> ends.
 	auto par = paragraphs.iterator_at(info.epit);
-	auto end = paragraphs.iterator_at(epit);
-	while (par != end) {
+	auto par_epit = paragraphs.iterator_at(epit);
+	auto par_end = paragraphs.end();
+	while (par != par_epit && par != par_end) {
 		if (!hasOnlyNotes(*par))
 			par = makeAny(text, buf, xs, runparams, par);
 		else
