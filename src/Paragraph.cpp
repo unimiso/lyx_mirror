@@ -3635,11 +3635,11 @@ std::tuple<vector<xml::FontTag>, vector<xml::EndFontTag>> computeDocBookFontSwit
 
 std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring>>
     Paragraph::simpleDocBookOnePar(Buffer const & buf,
-                                                      OutputParams const & runparams,
-                                                      Font const & outerfont,
-                                                      pos_type initial,
-                                                      bool is_last_par,
-                                                      bool ignore_fonts) const
+                                   OutputParams const & runparams,
+                                   Font const & outerfont,
+                                   pos_type initial,
+                                   bool is_last_par,
+                                   bool ignore_fonts) const
 {
 	// Return values: segregation of the content of this paragraph.
 	std::vector<docstring> prependedParagraphs; // Anything that must be output before the main tag of this paragraph.
@@ -3669,6 +3669,7 @@ std::tuple<std::vector<docstring>, std::vector<docstring>, std::vector<docstring
             }
         }
     }
+	rp.lastid = id();
 
     // State variables for the main loop.
     auto xs = new XMLStream(os); // XMLStream has no copy constructor: to create a new object, the only solution

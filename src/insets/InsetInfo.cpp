@@ -1726,9 +1726,20 @@ void InsetInfo::docbook(XMLStream & xs, OutputParams const & rp) const
 			break;
 		}
 
-		xml::openTag(xs, "date", "role=\"" + role + "\"", "inline");
+		// A db:date cannot be nested within a db:date. This case typically happens when the document class defines a
+		// Date layout. In this case, avoid outputting a new db:date. This means that InsetInfo cannot add a role on top
+		// of the previous db:date, hence add it as a comment. (Another solution would be an XML processing instruction,
+		// but this case is not common enough.) Adding the role to the already output tag might have consequences for
+		// some document classes where the layout already has a role or uses the same role for another purpose.
+		const bool isWithinDate = buffer().getParFromID(rp.lastid).top().paragraph().layout().docbooktag() == "date";
+
+		if (!isWithinDate)
+			xml::openTag(xs, "date", "role=\"" + role + "\"", "inline");
+		else
+			xs << XMLStream::ESCAPE_NONE << from_ascii(std::string("<!-- ") + role + " -->");
 		xs << qstring_to_ucs4(parseDate(buffer(), params_).toString(Qt::ISODate));
-		xml::closeTag(xs, "date", "inline");
+		if (!isWithinDate)
+			xml::closeTag(xs, "date", "inline");
 		break;
 	}
 
@@ -1752,9 +1763,17 @@ void InsetInfo::docbook(XMLStream & xs, OutputParams const & rp) const
 		}
 
 		// DocBook has no specific element for time, so use a date.
-		xml::openTag(xs, "date", "(role=\"" + role + "\"", "inline");
+		// See the discussion above (DATE_INFO, MODDATE_INFO, and FIXDATE_INFO) for a discussion about the choices that
+		// have been made.
+		const bool isWithinDate = buffer().getParFromID(rp.lastid).top().paragraph().layout().docbooktag() == "date";
+
+		if (!isWithinDate)
+			xml::openTag(xs, "date", "role=\"" + role + "\"", "inline");
+		else
+			xs << XMLStream::ESCAPE_NONE << from_ascii(std::string("<!-- ") + role + " -->");
 		xs << qstring_to_ucs4(parseTime(buffer(), params_).toString(Qt::ISODate));
-		xml::closeTag(xs, "date", "inline");
+		if (!isWithinDate)
+			xml::closeTag(xs, "date", "inline");
 		break;
 	}
 

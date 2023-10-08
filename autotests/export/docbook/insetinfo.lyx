@@ -91,6 +91,17 @@ Test:
  InsetInfo
 \end_layout
 
+\begin_layout Date
+
+\lang japanese-cjk
+\begin_inset Info
+type  "moddate"
+arg   "long"
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \lang spanish
