@@ -194,7 +194,7 @@
       <item row="2" column="0">
        <widget class="QCheckBox" name="singleCloseTabButtonCB">
         <property name="toolTip">
-         <string>Whether to place close button on each tab or only one in the top left.</string>
+         <string>Whether to place close button on each tab or only one in the top right.</string>
         </property>
         <property name="text">
          <string>Displa&amp;y single close-tab button</string>
