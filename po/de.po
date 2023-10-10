@@ -95,15 +95,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-10-04 13:18+0200\n"
-"PO-Revision-Date: 2023-10-04 13:22+0200\n"
+"POT-Creation-Date: 2023-10-10 08:45+0200\n"
+"PO-Revision-Date: 2023-10-10 08:52+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
-"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: src/frontends/qt/ui/AboutUi.ui:27
@@ -799,7 +799,7 @@ msgid "Add a new branch to the list"
 msgstr "Füge einen neuen Zweig zur Liste hinzu"
 
 #: src/frontends/qt/ui/BranchesUi.ui:116 src/frontends/qt/ui/CitationUi.ui:146
-#: src/frontends/qt/ui/IndicesUi.ui:134 src/CutAndPaste.cpp:477
+#: src/frontends/qt/ui/IndicesUi.ui:134 src/CutAndPaste.cpp:479
 msgid "&Add"
 msgstr "&Hinzufügen"
 
@@ -4317,7 +4317,7 @@ msgid "Use s&ingle instance"
 msgstr "Ein&zelinstanz verwenden"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:197
-msgid "Whether to place close button on each tab or only one in the top left."
+msgid "Whether to place close button on each tab or only one in the top right."
 msgstr ""
 "Zeige den \"Schließen\"-Knopf nicht auf jedem Unterfenster an, sondern "
 "rechts in der Unterfenster-Leiste."
@@ -17807,34 +17807,6 @@ msgstr "Kapitel \\thechapter"
 msgid "Appendix \\thechapter"
 msgstr "Anhang \\thechapter"
 
-#: lib/layouts/stdspecialchars.inc:8 lib/ui/stdmenus.inc:464
-msgid "Ligature Break|k"
-msgstr "Ligaturtrenner|r"
-
-#: lib/layouts/stdspecialchars.inc:17 lib/ui/stdmenus.inc:416
-msgid "End of Sentence|E"
-msgstr "Satzendepunkt|S"
-
-#: lib/layouts/stdspecialchars.inc:26 lib/ui/stdmenus.inc:415
-msgid "Ellipsis|i"
-msgstr "Fortsetzungspunkte|F"
-
-#: lib/layouts/stdspecialchars.inc:36 lib/ui/stdmenus.inc:422
-msgid "Menu Separator|M"
-msgstr "Menütrenner|M"
-
-#: lib/layouts/stdspecialchars.inc:49 lib/ui/stdmenus.inc:463
-msgid "Hyphenation Point|H"
-msgstr "Trennmöglichkeit|ö"
-
-#: lib/layouts/stdspecialchars.inc:56 lib/ui/stdmenus.inc:420
-msgid "Breakable Slash|a"
-msgstr "Umbruchfähiger Schrägstrich|ä"
-
-#: lib/layouts/stdspecialchars.inc:65
-msgid "Protected Hyphen|y"
-msgstr "Geschützter Trennstrich|T"
-
 #: lib/layouts/stdstarsections.inc:109
 msgid "Subparagraph*"
 msgstr "Unterparagraph*"
@@ -21985,6 +21957,14 @@ msgstr "Eingebettete Vorschau|i"
 msgid "Symbols...|b"
 msgstr "Symbole...|b"
 
+#: lib/ui/stdmenus.inc:415
+msgid "Ellipsis|i"
+msgstr "Fortsetzungspunkte|F"
+
+#: lib/ui/stdmenus.inc:416
+msgid "End of Sentence|E"
+msgstr "Satzendepunkt|S"
+
 #: lib/ui/stdmenus.inc:417
 msgid "Plain Quotation Mark|Q"
 msgstr "Nicht-typographisches Anführungszeichen|N"
@@ -21997,9 +21977,17 @@ msgstr "Inneres Anführungszeichen|I"
 msgid "Non-Breaking Hyphen|y"
 msgstr "Geschützter Trennstrich|T"
 
+#: lib/ui/stdmenus.inc:420
+msgid "Breakable Slash|a"
+msgstr "Umbruchfähiger Schrägstrich|ä"
+
 #: lib/ui/stdmenus.inc:421
 msgid "Visible Space|V"
 msgstr "Sichtbares Leerzeichen|L"
+
+#: lib/ui/stdmenus.inc:422
+msgid "Menu Separator|M"
+msgstr "Menütrenner|M"
 
 #: lib/ui/stdmenus.inc:423
 msgid "Phonetic Symbols|P"
@@ -22100,6 +22088,14 @@ msgstr "Vertikaler Abstand...|V"
 #: lib/ui/stdmenus.inc:461
 msgid "Phantom|m"
 msgstr "Phantom|m"
+
+#: lib/ui/stdmenus.inc:463
+msgid "Hyphenation Point|H"
+msgstr "Trennmöglichkeit|ö"
+
+#: lib/ui/stdmenus.inc:464
+msgid "Ligature Break|k"
+msgstr "Ligaturtrenner|r"
 
 #: lib/ui/stdmenus.inc:465
 msgid "Optional Line Break|B"
@@ -27815,12 +27811,12 @@ msgid "LyX Archive (tar.gz)"
 msgstr "LyX-Archiv (tar.gz)"
 
 #: lib/examples/Articles:0
-msgid "Game 2"
-msgstr "Spiel 2"
-
-#: lib/examples/Articles:0
 msgid "Game 1"
 msgstr "Spiel 1"
+
+#: lib/examples/Articles:0
+msgid "Game 2"
+msgstr "Spiel 2"
 
 #: lib/examples/Articles:0
 msgid "Example (LyXified)"
@@ -27840,52 +27836,52 @@ msgid "External Material"
 msgstr "Externes Material"
 
 #: lib/examples/Articles:0
-msgid "Instant Preview"
-msgstr "Eingebettete Vorschau"
-
-#: lib/examples/Articles:0
-msgid "XY-Figure"
-msgstr "XY-Figure"
-
-#: lib/examples/Articles:0
-msgid "Minted File Listing"
-msgstr "Minted-Programmlistings (Dateien)"
-
-#: lib/examples/Articles:0
 msgid "Feynman Diagrams"
 msgstr "Feynman-Diagramme"
+
+#: lib/examples/Articles:0
+msgid "Instant Preview"
+msgstr "Eingebettete Vorschau"
 
 #: lib/examples/Articles:0
 msgid "Itemize Bullets"
 msgstr "Auflistungszeichen"
 
 #: lib/examples/Articles:0
-msgid "XY-Pic"
-msgstr "XY-Pic"
+msgid "Minted File Listing"
+msgstr "Minted-Programmlistings (Dateien)"
 
 #: lib/examples/Articles:0
 msgid "Minted Listings"
 msgstr "Minted-Programmlistings"
 
 #: lib/examples/Articles:0
+msgid "XY-Figure"
+msgstr "XY-Figure"
+
+#: lib/examples/Articles:0
+msgid "XY-Pic"
+msgstr "XY-Pic"
+
+#: lib/examples/Articles:0
 msgid "Graphics and Insets"
 msgstr "Grafiken und Einfügungen"
 
 #: lib/examples/Articles:0
-msgid "Writing Armenian"
-msgstr "Armenisch schreiben"
-
-#: lib/examples/Articles:0
-msgid "Mixing Japanese with other Languages (with platex)"
-msgstr "Japanisch mit anderen Sprachen kombinieren (mit platex)"
+msgid "Localization Test (for Developers)"
+msgstr "Übersetzungstest (für Entwickler)"
 
 #: lib/examples/Articles:0
 msgid "Mixing Japanese with other Languages (with CJKutf8)"
 msgstr "Japanisch mit anderen Sprachen kombinieren (mit CJKutf8)"
 
 #: lib/examples/Articles:0
-msgid "Localization Test (for Developers)"
-msgstr "Übersetzungstest (für Entwickler)"
+msgid "Mixing Japanese with other Languages (with platex)"
+msgstr "Japanisch mit anderen Sprachen kombinieren (mit platex)"
+
+#: lib/examples/Articles:0
+msgid "Writing Armenian"
+msgstr "Armenisch schreiben"
 
 #: lib/examples/Articles:0
 msgid "Language Support"
@@ -27896,36 +27892,40 @@ msgid "Serial Letter 1"
 msgstr "Serienbrief 1"
 
 #: lib/examples/Articles:0
-msgid "Serial Letter 3"
-msgstr "Serienbrief 3"
-
-#: lib/examples/Articles:0
 msgid "Serial Letter 2"
 msgstr "Serienbrief 2"
 
 #: lib/examples/Articles:0
-msgid "Multilingual Captions"
-msgstr "Mehrsprachige Legenden"
+msgid "Serial Letter 3"
+msgstr "Serienbrief 3"
+
+#: lib/examples/Articles:0
+msgid "Hazard and Precautionary Statements"
+msgstr "H- und P-Sätze"
 
 #: lib/examples/Articles:0
 msgid "LilyPond Book"
 msgstr "LilyPond-Buch"
 
 #: lib/examples/Articles:0
-msgid "Noweb Listerrors"
-msgstr "Noweb-Fehlerbericht"
+msgid "Multilingual Captions"
+msgstr "Mehrsprachige Legenden"
 
 #: lib/examples/Articles:0
 msgid "Noweb2LyX"
 msgstr "Noweb2LyX"
 
 #: lib/examples/Articles:0
-msgid "Hazard and Precautionary Statements"
-msgstr "H- und P-Sätze"
+msgid "Noweb Listerrors"
+msgstr "Noweb-Fehlerbericht"
 
 #: lib/examples/Articles:0 src/frontends/qt/GuiDocument.cpp:1825
 msgid "Modules"
 msgstr "Module"
+
+#: lib/examples/Articles:0
+msgid "Beamer (Complex)"
+msgstr "Beamer (komplex)"
 
 #: lib/examples/Articles:0
 msgid "Foils"
@@ -27936,10 +27936,6 @@ msgid "Foils Landslide"
 msgstr "Foils (Querformat)"
 
 #: lib/examples/Articles:0
-msgid "Beamer (Complex)"
-msgstr "Beamer (komplex)"
-
-#: lib/examples/Articles:0
 msgid "Welcome"
 msgstr "Willkommen"
 
@@ -27948,80 +27944,48 @@ msgid "Writing Korean with CJK-ko"
 msgstr "Koreanisch schreiben mit CJK-ko"
 
 #: lib/examples/Articles:0
-msgid "IEEE Transactions Journal"
-msgstr "IEEE Transactions Journal"
+msgid "IEEE Transactions Conference"
+msgstr "IEEE Transactions Conference"
 
 #: lib/examples/Articles:0
 msgid "Mathematical Monthly"
 msgstr "Mathematical Monthly"
 
 #: lib/examples/Articles:0
-msgid "Hebrew Article (KOMA-Script)"
-msgstr "Hebräischer Aufsatz (KOMA-Script)"
+msgid "IEEE Transactions Journal"
+msgstr "IEEE Transactions Journal"
 
 #: lib/examples/Articles:0
 msgid "Springers Global Journal Template (V. 3)"
 msgstr "Springers globale Vorlage für Zeitschriften (V. 3)"
 
 #: lib/examples/Articles:0
-msgid "IEEE Transactions Conference"
-msgstr "IEEE Transactions Conference"
-
-#: lib/examples/Articles:0
-msgid "01 Dedication"
-msgstr "01 Widmung"
+msgid "Hebrew Article (KOMA-Script)"
+msgstr "Hebräischer Aufsatz (KOMA-Script)"
 
 #: lib/examples/Articles:0
 msgid "00 Main File"
 msgstr "00 Hauptdatei"
 
 #: lib/examples/Articles:0
-msgid "08 Appendix"
-msgstr "08 Anhang"
+msgid "01 Dedication"
+msgstr "01 Widmung"
 
 #: lib/examples/Articles:0
 msgid "02 Foreword"
 msgstr "02 Vorwort"
 
 #: lib/examples/Articles:0
-msgid "07 Chapter"
-msgstr "07 Kapitel"
-
-#: lib/examples/Articles:0
-msgid "11 References"
-msgstr "11 Literaturverzeichnis"
-
-#: lib/examples/Articles:0
 msgid "03 Preface"
 msgstr "03 Vorwort"
-
-#: lib/examples/Articles:0
-msgid "05 Acronym"
-msgstr "05 Akronyme"
-
-#: lib/examples/Articles:0
-msgid "09 Glossary"
-msgstr "09 Glossar"
-
-#: lib/examples/Articles:0
-msgid "06 Part"
-msgstr "06 Teil"
-
-#: lib/examples/Articles:0
-msgid "10 Solutions"
-msgstr "10 Lösungen"
 
 #: lib/examples/Articles:0
 msgid "04 Acknowledgements"
 msgstr "04 Danksagungen"
 
 #: lib/examples/Articles:0
-msgid "10 Glossary"
-msgstr "10 Glossar"
-
-#: lib/examples/Articles:0
-msgid "08 Author"
-msgstr "08 Autor"
+msgid "05 Contributor List"
+msgstr "05 Liste der Mitwirkenden"
 
 #: lib/examples/Articles:0
 msgid "06 Acronym"
@@ -28032,24 +27996,52 @@ msgid "07 Part"
 msgstr "07 Teil"
 
 #: lib/examples/Articles:0
+msgid "08 Author"
+msgstr "08 Autor"
+
+#: lib/examples/Articles:0
 msgid "09 Appendix"
 msgstr "09 Anhang"
 
 #: lib/examples/Articles:0
-msgid "05 Contributor List"
-msgstr "05 Liste der Mitwirkenden"
+msgid "10 Glossary"
+msgstr "10 Glossar"
 
 #: lib/examples/Articles:0
-msgid "Simple"
-msgstr "Schlicht"
+msgid "11 References"
+msgstr "11 Literaturverzeichnis"
+
+#: lib/examples/Articles:0
+msgid "05 Acronym"
+msgstr "05 Akronyme"
+
+#: lib/examples/Articles:0
+msgid "06 Part"
+msgstr "06 Teil"
+
+#: lib/examples/Articles:0
+msgid "07 Chapter"
+msgstr "07 Kapitel"
+
+#: lib/examples/Articles:0
+msgid "08 Appendix"
+msgstr "08 Anhang"
+
+#: lib/examples/Articles:0
+msgid "09 Glossary"
+msgstr "09 Glossar"
+
+#: lib/examples/Articles:0
+msgid "10 Solutions"
+msgstr "10 Lösungen"
 
 #: lib/examples/Articles:0
 msgid "Colored"
 msgstr "Farbig"
 
 #: lib/examples/Articles:0
-msgid "Main File"
-msgstr "Hauptdatei"
+msgid "Simple"
+msgstr "Schlicht"
 
 #: lib/examples/Articles:0
 msgid "Chapter 1"
@@ -28058,6 +28050,10 @@ msgstr "Kapitel 1"
 #: lib/examples/Articles:0
 msgid "Chapter 2"
 msgstr "Kapitel 2"
+
+#: lib/examples/Articles:0
+msgid "Main File"
+msgstr "Hauptdatei"
 
 #: lib/examples/Articles:0
 msgid "PhD Thesis"
@@ -28073,12 +28069,12 @@ msgstr ""
 "Japanischer Aufsatz (Standardklasse für LuaTeX%2C vertikale Schreibrichtung)"
 
 #: lib/examples/Articles:0
-msgid "Japanese Report (Standard Class for LuaTeX%2C vertical Writing)"
+msgid "Japanese Book (Standard Class for LuaTeX%2C vertical Writing)"
 msgstr ""
 "Japanisches Buch (Standardklasse für LuaTeX%2C vertikale Schreibrichtung)"
 
 #: lib/examples/Articles:0
-msgid "Japanese Book (Standard Class for LuaTeX%2C vertical Writing)"
+msgid "Japanese Report (Standard Class for LuaTeX%2C vertical Writing)"
 msgstr ""
 "Japanisches Buch (Standardklasse für LuaTeX%2C vertikale Schreibrichtung)"
 
@@ -30078,7 +30074,7 @@ msgstr ""
 msgid "Uncodable content"
 msgstr "Nicht kodierbarer Inhalt"
 
-#: src/CutAndPaste.cpp:473
+#: src/CutAndPaste.cpp:475
 #, c-format
 msgid ""
 "The pasted branch \"%1$s\" is undefined.\n"
@@ -30088,31 +30084,31 @@ msgstr ""
 "\n"
 "Möchten Sie ihn zur Liste der Zweige dieses Dokuments hinzufügen?"
 
-#: src/CutAndPaste.cpp:476
+#: src/CutAndPaste.cpp:478
 msgid "Unknown branch"
 msgstr "Unbekannter Zweig"
 
-#: src/CutAndPaste.cpp:477
+#: src/CutAndPaste.cpp:479
 msgid "&Don't Add"
 msgstr "&Nicht hinzufügen"
 
-#: src/CutAndPaste.cpp:859 src/Text.cpp:455
+#: src/CutAndPaste.cpp:861 src/Text.cpp:455
 #, c-format
 msgid "Layout `%1$s' was not found."
 msgstr "Der Absatzstil ,%1$s` wurde nicht gefunden."
 
-#: src/CutAndPaste.cpp:860 src/Text.cpp:456
+#: src/CutAndPaste.cpp:862 src/Text.cpp:456
 msgid "Layout Not Found"
 msgstr "Absatzstil nicht gefunden"
 
-#: src/CutAndPaste.cpp:891
+#: src/CutAndPaste.cpp:893
 #, c-format
 msgid "Flex inset %1$s is undefined after reloading `%2$s' layout."
 msgstr ""
 "Die Einfügung %1$s ist nach dem Laden des Dokumentformats\n"
 ",%2$s` undefiniert."
 
-#: src/CutAndPaste.cpp:894
+#: src/CutAndPaste.cpp:896
 #, c-format
 msgid ""
 "Flex inset %1$s is undefined because of conversion from `%2$s' layout to "
@@ -30121,7 +30117,7 @@ msgstr ""
 "Der Zeichenstil %1$s ist aufgrund des Wechsels vom\n"
 "Dokumentformat ,%2$s` zu ,%3$s` undefiniert."
 
-#: src/CutAndPaste.cpp:899
+#: src/CutAndPaste.cpp:901
 msgid "Undefined flex inset"
 msgstr "Undefinierter Zeichenstil"
 
@@ -34318,8 +34314,8 @@ msgid ""
 "Enter time format specification, using the following placeholders:\n"
 "* h: the hour without a leading zero (1-12 in AM/PM)\n"
 "* hh: the hour with a leading zero (01-12 in AM/PM)\n"
-"* H: the hour without a leading zero (0-23 in AM/PM)\n"
-"* HH: the hour with a leading zero (00-23 in AM/PM)\n"
+"* H: the hour without a leading zero (0-23)\n"
+"* HH: the hour with a leading zero (00-23)\n"
 "* m: the minute without a leading zero\n"
 "* mm: the minute with a leading zero\n"
 "* s: the second without a leading zero\n"
@@ -34331,10 +34327,10 @@ msgid ""
 "* t: the timezone (e.g. CEST)"
 msgstr ""
 "Geben Sie eine Formatvorgabe an; verwenden Sie die folgenden Platzhalter:\n"
-"* h: Stunde ohne vorang. Null (1-12 in AM/PM-Format)\n"
-"* hh: Stunde mit vorang. Null (01-12 in AM/PM-Format)\n"
-"* H: Stunde ohne vorang. Null (0-23 in AM/PM-Format)\n"
-"* HH: Stunde mit vorang. Null (00-23 in AM/PM-Format)\n"
+"* h: Stunde ohne vor. Null (1-12 im AM/PM-Format)\n"
+"* hh: Stunde mit vor. Null (01-12 im AM/PM-Format)\n"
+"* H: Stunde ohne vorangestellte Null (0-23)\n"
+"* HH: Stunde mit vorangestellte Null (00-23)\n"
 "* m: Minute ohne vorangestellte Null\n"
 "* mm: Minute mit vorangestellter Null\n"
 "* s: Sekunde ohne vorangestellte Null\n"
@@ -39096,6 +39092,9 @@ msgstr ""
 msgid "Unknown user"
 msgstr "Unbekannter Benutzer"
 
+#~ msgid "Protected Hyphen|y"
+#~ msgstr "Geschützter Trennstrich|T"
+
 #~ msgid "Class defaults"
 #~ msgstr "Klassenvoreinstellung"
 
@@ -43637,3 +43636,4 @@ msgstr "Unbekannter Benutzer"
 
 #~ msgid " (auto)"
 #~ msgstr " (automatisch)"
+
