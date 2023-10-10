@@ -1580,7 +1580,7 @@ void xhtmlShortcutInfo(XMLStream & xs, const InsetInfoParams & params) {
 	odocstringstream ods;
 	string const lcode = params.lang->code();
 	docstring trans;
-	for (int i = 0; i < sequence.length(); ++i) {
+	for (size_t i = 0; i < sequence.length(); ++i) {
 	    char_type const c = sequence[i];
 		const auto keyMapping = keyToString.find(c);
 		if (keyMapping != keyToString.end()) {
@@ -1675,7 +1675,7 @@ void docbookMenuInfo(XMLStream & xs, Buffer const & buffer, const InsetInfoParam
 	xml::openTag(xs, "menuchoice", attr, "inline"); // More of an inline tag in this case, as there is no db:shortcut to
 	// accompany the succession of menus.
 
-	for (int i = 0; i < names.size(); ++i) {
+	for (size_t i = 0; i < names.size(); ++i) {
 	    docstring const & name = names[i];
 
 		std::string tag;
@@ -1746,7 +1746,7 @@ void xhtmlMenuInfo(XMLStream & xs, Buffer const & buffer, const InsetInfoParams 
 	// Use bdo instead of span to specify the text direction (dir is only allowed globally or on bdo).
 	xml::openTag(xs, "bdo", attr, "inline");
 
-	for (int i = 0; i < names.size(); ++i) {
+	for (size_t i = 0; i < names.size(); ++i) {
 	    docstring const & name = names[i];
 
 		//FIXME: add proper underlines here. This
