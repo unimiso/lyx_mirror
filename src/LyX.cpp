@@ -354,12 +354,6 @@ int LyX::exec(int & argc, char * argv[])
 		return app.exec();
 	}
 
-	// This one is edited through the preferences dialog.
-	// need to call this before createApplication
-	// because we need to know the Qt style for creating the Application
-	if (!readRcFile("preferences", true))
-		return EXIT_FAILURE;
-
 	// Let the frontend parse and remove all arguments that it knows
 	pimpl_->application_.reset(createApplication(argc, argv));
 
@@ -999,6 +993,10 @@ bool LyX::init()
 	pimpl_->system_converters_ = pimpl_->converters_;
 	pimpl_->system_movers_ = pimpl_->movers_;
 	system_lcolor = lcolor;
+
+	// This one is edited through the preferences dialog.
+	if (!readRcFile("preferences", true))
+		return false;
 
 	// The language may have been set to someting useful through prefs
 	setLocale();

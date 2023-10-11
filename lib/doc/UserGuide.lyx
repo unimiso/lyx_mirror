@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 620
+\lyxformat 618
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -167,7 +167,6 @@ logicalmkup
 \author 5863208 "ab"
 \author 5863344 "Enrico Forestieri"
 \author 244031559 "Yuriy"
-\author 258250489 "eugen"
 \author 274215730 "scott"
 \author 630872221 "Jean-Pierre Chrétien" jeanpierre.chretien@free.fr
 \author 1064312605 "Udi Fogiel"
@@ -58116,33 +58115,6 @@ literal "false"
 \end_inset
 
 .
-\change_inserted 258250489 1697053558
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 258250489 1697054388
-
-\family sans
-User
-\begin_inset space ~
-\end_inset
-
-interface
-\begin_inset space ~
-\end_inset
-
-style
-\family default
- allows you to change the look and feel of \SpecialChar LyX
-'s user interface control elements.
- There may be different choices available on different operating systems.
- On certain operating systems some styles may support dark mode while others don't.
- In order to use dark mode in \SpecialChar LyX
- you may first need to enable it in your system's settings.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection

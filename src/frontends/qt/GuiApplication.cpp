@@ -222,9 +222,6 @@ frontend::Application * createApplication(int & argc, char * argv[])
 #endif
 #endif
 
-	if (!lyxrc.ui_style.empty())
-		frontend::GuiApplication::setStyle(toqstr(lyxrc.ui_style));
-
 	frontend::GuiApplication * guiApp = new frontend::GuiApplication(argc, argv);
 	// I'd rather do that in the constructor, but I do not think that
 	// the palette is accessible there.

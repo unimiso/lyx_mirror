@@ -53,10 +53,6 @@
 
 * Edit > Paste operation now preserves newlines in text by default.
 
-* Dark mode on Windows is possible now by choosing "fusion" user interface style
-  in user interface preferences dialog, your system style has to be set to dark
-  (bug 12832).
-
 
 !!Documents compilation process and images conversion
 
