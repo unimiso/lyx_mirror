@@ -651,7 +651,6 @@ GuiView::GuiView(int id)
 
 	stat_counts_ = new GuiClickableLabel(statusBar());
 	stat_counts_->setAlignment(Qt::AlignCenter);
-	stat_counts_->setFrameStyle(QFrame::StyledPanel);
 	stat_counts_->hide();
 	statusBar()->addPermanentWidget(stat_counts_);
 
