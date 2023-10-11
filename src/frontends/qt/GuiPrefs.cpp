@@ -63,6 +63,7 @@
 #include <QPushButton>
 #include <QSpinBox>
 #include <QString>
+#include <QStyleFactory>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QValidator>
@@ -2494,6 +2495,8 @@ PrefUserInterface::PrefUserInterface(GuiPreferences * form)
 		this, SIGNAL(changed()));
 	connect(iconSetCO, SIGNAL(activated(int)),
 		this, SIGNAL(changed()));
+	connect(uiStyleCO, SIGNAL(activated(int)),
+		this, SIGNAL(changed()));
 	connect(useSystemThemeIconsCB, SIGNAL(clicked()),
 		this, SIGNAL(changed()));
 	connect(lastfilesSB, SIGNAL(valueChanged(int)),
@@ -2516,6 +2519,11 @@ PrefUserInterface::PrefUserInterface(GuiPreferences * form)
 	iconSetCO->addItem(qt_("Classic"), "classic");
 	iconSetCO->addItem(qt_("Oxygen"), "oxygen");
 
+	for (const auto& style : QStyleFactory::keys())
+	{
+		uiStyleCO->addItem(style.toLower());
+	}
+
 	if (guiApp->platformName() != "xcb"
 	    && !guiApp->platformName().contains("wayland"))
 		useSystemThemeIconsCB->hide();
@@ -2526,6 +2534,9 @@ void PrefUserInterface::applyRC(LyXRC & rc) const
 {
 	rc.icon_set = fromqstr(iconSetCO->itemData(
 		iconSetCO->currentIndex()).toString());
+
+	frontend::GuiApplication::setStyle(uiStyleCO->currentText());
+	rc.ui_style = fromqstr(uiStyleCO->currentText());
 
 	rc.ui_file = internal_path(fromqstr(uiFileED->text()));
 	rc.use_system_theme_icons = useSystemThemeIconsCB->isChecked();
@@ -2545,6 +2556,8 @@ void PrefUserInterface::updateRC(LyXRC const & rc)
 	if (iconset < 0)
 		iconset = 0;
 	iconSetCO->setCurrentIndex(iconset);
+	uiStyleCO->setCurrentIndex(uiStyleCO->findText(
+		frontend::GuiApplication::style()->objectName().toLower()));
 	useSystemThemeIconsCB->setChecked(rc.use_system_theme_icons);
 	uiFileED->setText(toqstr(external_path(rc.ui_file)));
 	lastfilesSB->setValue(rc.num_lastfiles);

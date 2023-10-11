@@ -197,6 +197,7 @@ LexerKeyword lyxrcTags[] = {
 	{ "\\texinputs_prefix", LyXRC::RC_TEXINPUTS_PREFIX },
 	{ "\\thesaurusdir_path", LyXRC::RC_THESAURUSDIRPATH },
 	{ "\\ui_file", LyXRC::RC_UIFILE },
+	{ "\\ui_style", LyXRC::RC_UI_STYLE },
 	{ "\\use_converter_cache", LyXRC::RC_USE_CONVERTER_CACHE },
 	{ "\\use_converter_needauth", LyXRC::RC_USE_CONVERTER_NEEDAUTH },
 	{ "\\use_converter_needauth_forbidden", LyXRC::RC_USE_CONVERTER_NEEDAUTH_FORBIDDEN },
@@ -601,6 +602,10 @@ LyXRC::ReturnValues LyXRC::read(Lexer & lexrc, bool check_format)
 
 		case RC_ICON_SET:
 			lexrc >> icon_set;
+			break;
+
+		case RC_UI_STYLE:
+			lexrc >> ui_style;
 			break;
 
 		case RC_USE_SYSTEM_THEME_ICONS:
@@ -1620,6 +1625,15 @@ void LyXRC::write(ostream & os, bool ignore_system_lyxrc, string const & name) c
 		    icon_set != system_lyxrc.icon_set) {
 			os << "\\icon_set \"" << icon_set
 			   << "\"\n";
+		}
+		if (tag != RC_LAST)
+			break;
+		// fall through
+	case RC_UI_STYLE:
+		if (ignore_system_lyxrc ||
+			ui_style != system_lyxrc.ui_style) {
+			os << "\\ui_style \"" << ui_style
+				<< "\"\n";
 		}
 		if (tag != RC_LAST)
 			break;
@@ -2950,6 +2964,7 @@ void actOnUpdatedPrefs(LyXRC const & lyxrc_orig, LyXRC const & lyxrc_new)
 	case LyXRC::RC_GROUP_LAYOUTS:
 	case LyXRC::RC_HUNSPELLDIR_PATH:
 	case LyXRC::RC_ICON_SET:
+	case LyXRC::RC_UI_STYLE:
 	case LyXRC::RC_INDEX_ALTERNATIVES:
 	case LyXRC::RC_INDEX_COMMAND:
 	case LyXRC::RC_JBIBTEX_COMMAND:

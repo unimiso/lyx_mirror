@@ -173,6 +173,7 @@ public:
 		RC_TEXINPUTS_PREFIX,
 		RC_THESAURUSDIRPATH,
 		RC_UIFILE,
+		RC_UI_STYLE,
 		RC_USELASTFILEPOS,
 		RC_USER_EMAIL,
 		RC_USER_INITIALS,
@@ -473,6 +474,8 @@ public:
 	std::string user_initials;
 	/// icon set name
 	std::string icon_set;
+	/// ui style name
+	std::string ui_style;
 	/// whether to use the icons from the theme
 	bool use_system_theme_icons = false;
 	/// True if the TeX engine cannot handle posix paths
