@@ -239,6 +239,18 @@ bool MathData::addToMathRow(MathRow & mrow, MetricsInfo & mi) const
 		if (s1.idx() == s2.idx() && &inset->cell(s1.idx()) == this) {
 			bspos = s1.pos();
 			espos = s2.pos();
+		} else if (s1.idx() != s2.idx()) {
+			// search for this math data and check whether it is selected
+			for (idx_type idx = 0; idx < inset->nargs(); ++idx) {
+				MathData const & c = inset->cell(idx);
+				if (&c == this && inset->idxBetween(idx, s1.idx(), s2.idx())) {
+					// whole cell is selected
+					bspos = 0;
+					espos = size();
+					// no need to continue searchning
+					break;
+				}
+			}
 		}
 	}
 
