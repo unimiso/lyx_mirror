@@ -18,6 +18,7 @@
 #include "BufferView.h"
 #include "ColorSet.h"
 #include "CoordCache.h"
+#include "Cursor.h"
 #include "LyXRC.h"
 #include "MetricsInfo.h"
 
@@ -356,7 +357,11 @@ void MathRow::draw(PainterInfo & pi, int x, int const y) const
 			x += e.before + e.after;
 			break;
 		case BEGIN_SEL:
-			change_color = pi.base.font.changeColor(Color_selectionmath);
+			// Change the color if the selection is indeed active
+			// FIXME: it would be better to make sure that metrics are
+			//   computed again when selection status changes.
+			if (pi.base.bv->cursor().selection())
+				change_color = pi.base.font.changeColor(Color_selectionmath);
 			break;
 		case END_SEL:
 			change_color = noChange();
