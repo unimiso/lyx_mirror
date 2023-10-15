@@ -253,6 +253,8 @@ public:
 
 	// Add a buffer to the current view, do not switch to it.
 	virtual bool unhide(Buffer * buf) = 0;
+	// Apply preferences at the start
+	static void applyPrefs();
 };
 
 /// Return the list of loadable formats.

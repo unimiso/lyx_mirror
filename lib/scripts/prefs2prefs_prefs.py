@@ -168,6 +168,10 @@
 #  Add \screen_width
 #  Add \screen_limit
 
+# Incremented to format 38, by ec
+#   Add option to configure ui style
+#   No conversion necessary.
+
 # NOTE: The format should also be updated in LYXRC.cpp and
 # in configure.py (search for lyxrc_fileformat).
 
@@ -555,5 +559,6 @@ conversions = [
 	[ 34, [rename_cyrillic_kmap_files]],
 	[ 35, [add_dark_color]],
 	[ 36, [add_spellcheck_default]],
-	[ 37, [remove_fullscreen_widthlimit]]
+	[ 37, [remove_fullscreen_widthlimit]],
+	[ 38, []]
 ]

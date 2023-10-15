@@ -1268,6 +1268,11 @@ docstring Application::mathIcon(docstring const & c)
 	return qstring_to_ucs4(findImg(toqstr(c)));
 }
 
+void Application::applyPrefs()
+{
+	if (lyxrc.ui_style != system_lyxrc.ui_style)
+		lyx::frontend::GuiApplication::setStyle(toqstr(lyxrc.ui_style));
+}
 
 FuncStatus GuiApplication::getStatus(FuncRequest const & cmd) const
 {
