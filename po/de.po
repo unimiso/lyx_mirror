@@ -95,8 +95,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-10-15 09:17+0200\n"
-"PO-Revision-Date: 2023-10-15 09:19+0200\n"
+"POT-Creation-Date: 2023-10-15 11:13+0200\n"
+"PO-Revision-Date: 2023-10-15 11:14+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -852,8 +852,8 @@ msgstr "A&lle hinzufügen"
 #: src/Buffer.cpp:4792 src/Buffer.cpp:4902 src/LyXVC.cpp:114 src/LyXVC.cpp:310
 #: src/buffer_funcs.cpp:56 src/frontends/qt/GuiBranches.cpp:226
 #: src/frontends/qt/GuiClipboard.cpp:252 src/frontends/qt/GuiDocument.cpp:3009
-#: src/frontends/qt/GuiParagraph.cpp:177 src/frontends/qt/GuiPrefs.cpp:3321
-#: src/frontends/qt/GuiPrefs.cpp:3344 src/frontends/qt/GuiView.cpp:2903
+#: src/frontends/qt/GuiParagraph.cpp:177 src/frontends/qt/GuiPrefs.cpp:3330
+#: src/frontends/qt/GuiPrefs.cpp:3353 src/frontends/qt/GuiView.cpp:2903
 #: src/frontends/qt/GuiView.cpp:3066 src/frontends/qt/GuiView.cpp:3296
 #: src/frontends/qt/GuiView.cpp:3320 src/frontends/qt/GuiView.cpp:3334
 #: src/frontends/qt/GuiView.cpp:3438 src/frontends/qt/GuiView.cpp:3483
@@ -912,7 +912,8 @@ msgstr "&Größe:"
 #: src/frontends/qt/GuiGraphics.cpp:71 src/frontends/qt/GuiIndex.cpp:46
 #: src/frontends/qt/GuiIndices.cpp:58 src/frontends/qt/GuiListings.cpp:156
 #: src/frontends/qt/GuiListings.cpp:163 src/frontends/qt/GuiPrefs.cpp:2360
-#: src/frontends/qt/GuiPrefs.cpp:2518 src/frontends/qt/GuiPrintNomencl.cpp:47
+#: src/frontends/qt/GuiPrefs.cpp:2518 src/frontends/qt/GuiPrefs.cpp:2522
+#: src/frontends/qt/GuiPrintNomencl.cpp:47
 #: src/frontends/qt/GuiTabularCreate.cpp:107
 #: src/frontends/qt/GuiViewSource.cpp:351
 msgid "Default"
@@ -4115,8 +4116,8 @@ msgid "&Modify"
 msgstr "&Ändern"
 
 #: src/frontends/qt/ui/PrefConvertersUi.ui:286
-#: src/frontends/qt/ui/PrefShortcutsUi.ui:61 src/frontends/qt/GuiPrefs.cpp:3062
-#: src/frontends/qt/GuiPrefs.cpp:3148
+#: src/frontends/qt/ui/PrefShortcutsUi.ui:61 src/frontends/qt/GuiPrefs.cpp:3071
+#: src/frontends/qt/GuiPrefs.cpp:3157
 msgid "Remo&ve"
 msgstr "&Entfernen"
 
@@ -5251,8 +5252,8 @@ msgid ""
 "You can set a custom style here. Note that only certain styles may support "
 "dark mode, e.g. fusion on Windows."
 msgstr ""
-"Hier können Sie einen benutzerdefinierten Stil festlegen. Beachten Sie, dass"
-" nur bestimmte Stile dunklen Modus unterstützen (bspw. fusion unter Windows)."
+"Hier können Sie einen benutzerdefinierten Stil festlegen. Beachten Sie, dass "
+"nur bestimmte Stile dunklen Modus unterstützen (bspw. fusion unter Windows)."
 
 #: src/frontends/qt/ui/PrefUi.ui:126
 msgid "Context Help"
@@ -32363,7 +32364,7 @@ msgstr "Über LyX"
 msgid "About %1"
 msgstr "Über %1"
 
-#: src/frontends/qt/GuiApplication.cpp:784 src/frontends/qt/GuiPrefs.cpp:3458
+#: src/frontends/qt/GuiApplication.cpp:784 src/frontends/qt/GuiPrefs.cpp:3467
 msgid "Preferences"
 msgstr "Einstellungen"
 
@@ -34888,11 +34889,22 @@ msgstr "Klassisch"
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2589
+#: src/frontends/qt/GuiPrefs.cpp:2543
+msgid "Restart needed"
+msgstr "Neus art erforderlich"
+
+#: src/frontends/qt/GuiPrefs.cpp:2544
+msgid ""
+"Resetting the user interface style to 'Default' requires a restart of LyX."
+msgstr ""
+"Das Zurücksetzen des Oberflächenstils auf 'Standard' erfordert einen Neustart"
+" von LyX."
+
+#: src/frontends/qt/GuiPrefs.cpp:2598
 msgid "Document Handling"
 msgstr "Dokument-Handhabung"
 
-#: src/frontends/qt/GuiPrefs.cpp:2680
+#: src/frontends/qt/GuiPrefs.cpp:2689
 msgid ""
 "If this is checked, a backup of the document is created in the current "
 "working directory. The backup file has the same name but the suffix '.lyx~'. "
@@ -34906,7 +34918,7 @@ msgstr ""
 "spezifischen Ordner für diese Sicherungsdateien können Sie im Abschnitt "
 "'Pfade' festlegen."
 
-#: src/frontends/qt/GuiPrefs.cpp:2686
+#: src/frontends/qt/GuiPrefs.cpp:2695
 #, c-format
 msgid ""
 "If this is checked, a backup of the document is created in the backup "
@@ -34920,66 +34932,66 @@ msgstr ""
 "meinVerzeichnis!Dateiname.lyx~). Beachten Sie, dass diese Dateien von "
 "manchen Dateimanagern per Voreinstellung nicht angezeigt werden."
 
-#: src/frontends/qt/GuiPrefs.cpp:2711
+#: src/frontends/qt/GuiPrefs.cpp:2720
 msgid "Control"
 msgstr "Kontrolle"
 
-#: src/frontends/qt/GuiPrefs.cpp:2822
+#: src/frontends/qt/GuiPrefs.cpp:2831
 msgid "Shortcuts"
 msgstr "Tastenkürzel"
 
-#: src/frontends/qt/GuiPrefs.cpp:2829
+#: src/frontends/qt/GuiPrefs.cpp:2838
 msgid "Function"
 msgstr "Funktion"
 
-#: src/frontends/qt/GuiPrefs.cpp:2830
+#: src/frontends/qt/GuiPrefs.cpp:2839
 msgid "Shortcut"
 msgstr "Tastenkürzel"
 
-#: src/frontends/qt/GuiPrefs.cpp:2907
+#: src/frontends/qt/GuiPrefs.cpp:2916
 msgid "Cursor, Mouse and Editing Functions"
 msgstr "Cursor-, Maus- und Bearbeitungsfunktionen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2911
+#: src/frontends/qt/GuiPrefs.cpp:2920
 msgid "Mathematical Symbols"
 msgstr "Mathematische Symbole"
 
-#: src/frontends/qt/GuiPrefs.cpp:2915
+#: src/frontends/qt/GuiPrefs.cpp:2924
 msgid "Document and Window"
 msgstr "Dokument und Arbeitsbereich"
 
-#: src/frontends/qt/GuiPrefs.cpp:2919
+#: src/frontends/qt/GuiPrefs.cpp:2928
 msgid "Font, Layouts and Textclasses"
 msgstr "Schriften, Absatzformate und Textklassen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2923
+#: src/frontends/qt/GuiPrefs.cpp:2932
 msgid "System and Miscellaneous"
 msgstr "System und Verschiedenes"
 
-#: src/frontends/qt/GuiPrefs.cpp:3060 src/frontends/qt/GuiPrefs.cpp:3120
+#: src/frontends/qt/GuiPrefs.cpp:3069 src/frontends/qt/GuiPrefs.cpp:3129
 msgid "Res&tore"
 msgstr "Zurüc&ksetzen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3289 src/frontends/qt/GuiPrefs.cpp:3298
-#: src/frontends/qt/GuiPrefs.cpp:3304 src/frontends/qt/GuiPrefs.cpp:3385
+#: src/frontends/qt/GuiPrefs.cpp:3298 src/frontends/qt/GuiPrefs.cpp:3307
+#: src/frontends/qt/GuiPrefs.cpp:3313 src/frontends/qt/GuiPrefs.cpp:3394
 msgid "Failed to create shortcut"
 msgstr "Erstellen des Tastenkürzels fehlgeschlagen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3290
+#: src/frontends/qt/GuiPrefs.cpp:3299
 msgid "Unknown or invalid LyX function"
 msgstr "Unbekannte oder ungültige LyX-Funktion"
 
-#: src/frontends/qt/GuiPrefs.cpp:3299
+#: src/frontends/qt/GuiPrefs.cpp:3308
 msgid "This LyX function is hidden and cannot be bound."
 msgstr ""
 "Dies ist eine versteckte LyX-Funktion. Sie kann nicht mit einer "
 "Tastenkombination belegt werden."
 
-#: src/frontends/qt/GuiPrefs.cpp:3305
+#: src/frontends/qt/GuiPrefs.cpp:3314
 msgid "Invalid or empty key sequence"
 msgstr "Ungültige oder leere Tastensequenz"
 
-#: src/frontends/qt/GuiPrefs.cpp:3317
+#: src/frontends/qt/GuiPrefs.cpp:3326
 #, c-format
 msgid ""
 "Shortcut `%1$s' is already a prefix for other commands.\n"
@@ -34989,15 +35001,15 @@ msgstr ""
 "Sind Sie sicher, dass Sie dies aufheben und das\n"
 "Tastenkürzel mit %2$s belegen wollen?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3320 src/frontends/qt/GuiPrefs.cpp:3343
+#: src/frontends/qt/GuiPrefs.cpp:3329 src/frontends/qt/GuiPrefs.cpp:3352
 msgid "Redefine shortcut?"
 msgstr "Tastenkürzel neu definieren?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3321 src/frontends/qt/GuiPrefs.cpp:3344
+#: src/frontends/qt/GuiPrefs.cpp:3330 src/frontends/qt/GuiPrefs.cpp:3353
 msgid "&Redefine"
 msgstr "&Neu Definieren"
 
-#: src/frontends/qt/GuiPrefs.cpp:3337
+#: src/frontends/qt/GuiPrefs.cpp:3346
 #, c-format
 msgid ""
 "Shortcut `%1$s' is already bound to %2$s.\n"
@@ -35007,11 +35019,11 @@ msgstr ""
 "Sind Sie sicher, dass Sie dies aufheben und das\n"
 "Tastenkürzel mit %3$s belegen wollen?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3386
+#: src/frontends/qt/GuiPrefs.cpp:3395
 msgid "Can not insert shortcut to the list"
 msgstr "Kann Tastenkürzel nicht in Liste einfügen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3417
+#: src/frontends/qt/GuiPrefs.cpp:3426
 msgid "Identity"
 msgstr "Identität"
 
