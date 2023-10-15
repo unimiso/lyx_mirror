@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 618
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -51483,6 +51483,20 @@ literal "false"
 \end_inset
 
  gegenübergestellt.
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Benutzeroberflächenstil
+\family default
+ ermöglicht es Ihnen,
+ das Aussehen von \SpecialChar LyX
+' Oberfläche und Bedienelementen zu verändern.
+ Auf unterschiedlichen Betriebssystemen stehen hier unterschiedliche Stile zur Auswahl.
+ Manche Stile erlauben auf bestimmten Benutzeroberflächen die Wahl zwischen dunkler und heller Farbgebung.
+ Um den dunklen Modus zu verwenden,
+ müssen Sie ihn gegebenenfalls zunächst in Ihrem Betriebssystem aktivieren.
 \end_layout
 
 \begin_layout Subsubsection
