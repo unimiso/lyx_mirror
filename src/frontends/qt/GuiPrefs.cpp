@@ -2519,10 +2519,16 @@ PrefUserInterface::PrefUserInterface(GuiPreferences * form)
 	iconSetCO->addItem(qt_("Classic"), "classic");
 	iconSetCO->addItem(qt_("Oxygen"), "oxygen");
 
-	uiStyleCO->addItem(toqstr(system_lyxrc.ui_style));
-	for (const auto& style : QStyleFactory::keys())
+	QString uistyletr = (system_lyxrc.ui_style == "default")
+			? qt_("Default")
+			: toqstr(system_lyxrc.ui_style);
+	uiStyleCO->addItem(uistyletr, toqstr(system_lyxrc.ui_style));
+	for (auto const & style : QStyleFactory::keys())
 	{
-		uiStyleCO->addItem(style.toLower());
+		uistyletr = (style == "default")
+				? qt_("Default")
+				: style;
+		uiStyleCO->addItem(style, style.toLower());
 	}
 
 	if (guiApp->platformName() != "xcb"
@@ -2536,9 +2542,11 @@ void PrefUserInterface::applyRC(LyXRC & rc) const
 	rc.icon_set = fromqstr(iconSetCO->itemData(
 		iconSetCO->currentIndex()).toString());
 
-	rc.ui_style = fromqstr(uiStyleCO->currentText());
-	if (rc.ui_style!=system_lyxrc.ui_style)
-		frontend::GuiApplication::setStyle(uiStyleCO->currentText());
+	QString const uistyle = uiStyleCO->itemData(
+		uiStyleCO->currentIndex()).toString();
+	rc.ui_style = fromqstr(uistyle);
+	if (rc.ui_style != system_lyxrc.ui_style)
+		frontend::GuiApplication::setStyle(uistyle);
 
 	rc.ui_file = internal_path(fromqstr(uiFileED->text()));
 	rc.use_system_theme_icons = useSystemThemeIconsCB->isChecked();
@@ -2558,7 +2566,10 @@ void PrefUserInterface::updateRC(LyXRC const & rc)
 	if (iconset < 0)
 		iconset = 0;
 	iconSetCO->setCurrentIndex(iconset);
-	uiStyleCO->setCurrentIndex(uiStyleCO->findText(toqstr(rc.ui_style)));
+	int uistyle = uiStyleCO->findData(toqstr(rc.ui_style));
+	if (uistyle < 0)
+		uistyle = 0;
+	uiStyleCO->setCurrentIndex(uistyle);
 	useSystemThemeIconsCB->setChecked(rc.use_system_theme_icons);
 	uiFileED->setText(toqstr(external_path(rc.ui_file)));
 	lastfilesSB->setValue(rc.num_lastfiles);
