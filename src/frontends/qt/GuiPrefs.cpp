@@ -2537,7 +2537,13 @@ void PrefUserInterface::applyRC(LyXRC & rc) const
 	QString const uistyle = uiStyleCO->itemData(
 		uiStyleCO->currentIndex()).toString();
 	rc.ui_style = fromqstr(uistyle);
-	if (rc.ui_style != system_lyxrc.ui_style)
+	if (rc.ui_style == "default")
+		// FIXME: This should work with frontend::GuiApplication::setStyle(QString())
+		//        Qt bug https://bugreports.qt.io/browse/QTBUG-58268
+		frontend::Alert::warning(_("Restart needed"),
+					 _("Resetting the user interface style to 'Default'"
+					   " requires a restart of LyX."));
+	else
 		frontend::GuiApplication::setStyle(uistyle);
 
 	rc.ui_file = internal_path(fromqstr(uiFileED->text()));
