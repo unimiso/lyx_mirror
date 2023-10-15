@@ -95,7 +95,7 @@
         <item row="2" column="1">
          <widget class="QComboBox" name="uiStyleCO">
           <property name="toolTip">
-           <string>Only certain styles may support dark mode, e.g. fusion on Windows</string>
+           <string>You can set a custom style here. Note that only certain styles may support dark mode, e.g. fusion on Windows.</string>
           </property>
          </widget>
         </item>
