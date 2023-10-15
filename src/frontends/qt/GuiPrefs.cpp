@@ -2519,17 +2519,9 @@ PrefUserInterface::PrefUserInterface(GuiPreferences * form)
 	iconSetCO->addItem(qt_("Classic"), "classic");
 	iconSetCO->addItem(qt_("Oxygen"), "oxygen");
 
-	QString uistyletr = (system_lyxrc.ui_style == "default")
-			? qt_("Default")
-			: toqstr(system_lyxrc.ui_style);
-	uiStyleCO->addItem(uistyletr, toqstr(system_lyxrc.ui_style));
+	uiStyleCO->addItem(qt_("Default"), toqstr("default"));
 	for (auto const & style : QStyleFactory::keys())
-	{
-		uistyletr = (style == "default")
-				? qt_("Default")
-				: style;
 		uiStyleCO->addItem(style, style.toLower());
-	}
 
 	if (guiApp->platformName() != "xcb"
 	    && !guiApp->platformName().contains("wayland"))

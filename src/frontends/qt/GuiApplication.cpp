@@ -1270,7 +1270,7 @@ docstring Application::mathIcon(docstring const & c)
 
 void Application::applyPrefs()
 {
-	if (lyxrc.ui_style != system_lyxrc.ui_style)
+	if (lyxrc.ui_style != "default")
 		lyx::frontend::GuiApplication::setStyle(toqstr(lyxrc.ui_style));
 }
 
