@@ -19606,11 +19606,357 @@ Strg+
 
 -.
  Beachten Sie,
- dass diese Trennhilfen nur Empfehlungen für \SpecialChar LaTeX
+ dass eine Eingabe solcher Trennmöglichkeiten die anderen Stellen,
+ an denen eine Trennung möglich wäre,
+ für dieses konkrete Wort löscht.
+ Möchten Sie einfach nur eine 
+\emph on
+zusätzliche
+\emph default
+ Trennmöglichkeit markieren,
+ können Sie das für deutschen Text mit 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+"-
+\end_layout
+
+\end_inset
+
+ als \SpecialChar TeX
+-Code (siehe Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:TeX-Code-Kästchen"
+nolink "false"
+
+\end_inset
+
+) erreichen (bspw.
+ Diskurs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\begin_inset Quotes gld
+\end_inset
+
+-
+\end_layout
+
+\end_inset
+
+netze).
+ Beachten Sie auch,
+ dass (anders,
+ als Sie das von 
+\begin_inset Quotes gld
+\end_inset
+
+weichen Trennzeichen
+\begin_inset Quotes grd
+\end_inset
+
+ in Textverarbeitungsprogrammen kennen) all diese Trennmöglichkeiten nur Empfehlungen für \SpecialChar LaTeX
  sind.
- Wenn keine Silbentrennung notwendig ist,
+ Wenn keine Silbentrennung notwendig oder die automatische Silbentrennung deaktiviert ist,
  wird \SpecialChar LaTeX
  die Trennhilfen ignorieren.
+\end_layout
+
+\begin_layout Standard
+Wenn Sie Wörter,
+ die \SpecialChar LaTeX
+ nicht korrekt trennt,
+ häufig verwenden,
+ können Sie \SpecialChar LaTeX
+ beibringen,
+ wie man diese trennen soll.
+ Fügen Sie hierzu folgenden Befehl in den \SpecialChar LaTeX
+-Vorspann ein:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{<Trennmuster>}
+\end_layout
+
+\end_inset
+
+.
+ Als Argument dieses Befehls fügen Sie eines oder mehrere Wörter ein,
+ deren Trennmöglichkeiten Sie durch einen Bindestrich markieren,
+ etwa 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{Dis-kurs-netz Dis-kurs-net-ze}
+\end_layout
+
+\end_inset
+
+.
+ Sie können,
+ wenn Sie ein Wort ohne Bindestrich einfügen,
+ \SpecialChar LaTeX
+ auch global anweisen,
+ ein Wort nie zu trennen,
+ bspw.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{Trennmichnicht}
+\end_layout
+
+\end_inset
+
+.
+ Wenn Sie sehr viele solcher Trennausnahmen haben,
+ können Sie sie in einer externen Datei sammeln (bspw.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+meinetrennungen.sty
+\end_layout
+
+\end_inset
+
+) und diese dann mit 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+usepackage{meinetrennungen}
+\end_layout
+
+\end_inset
+
+ in das Dokument einbinden.
+ Stellen Sie sicher,
+ diese Datei an einem Ort zu speichern,
+ an dem \SpecialChar LaTeX
+ sie finden kann (siehe Abschnitt 
+\emph on
+Installation eines neuen \SpecialChar LaTeX
+-Paketes
+\emph default
+ im Handbuch 
+\emph on
+Anpassung
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Beachten Sie,
+ dass die Anweisungen von 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{<trennmuster>}
+\end_layout
+
+\end_inset
+
+ sprach\SpecialChar softhyphen
+unabhängig gelten.
+ Das ist nicht immer erwünscht (denken Sie bspw.
+ an 
+\emph on
+Made
+\emph default
+ im Deutschen,
+ das als 
+\emph on
+Ma-de
+\emph default
+ getrennt werden kann vs.
+ 
+\emph on
+made
+\emph default
+ im Englischen,
+ das nicht getrennt werden darf).
+ Zu diesem Zweck stellen die Sprachpakete 
+\family sans
+babel
+\family default
+ und 
+\family sans
+polyglossia
+\family default
+ spezielle Varianten des Befehls zur Verfügung,
+ die nur für einzelne Sprachen oder Sprachvarianten gelten:
+\end_layout
+
+\begin_layout Itemize
+
+\family sans
+babel
+\family default
+:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+babelhyphenation[<Sprache 1>,<Sprache 2>,
+ \SpecialChar ldots
+]{<Trennmuster>}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family sans
+polyglossia
+\family default
+:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+pghyphenation[<Sprachoptionen>]{<Sprache>}{<Trennmuster>}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verwenden Sie also bspw.,
+ je nachdem,
+ welches Sprachpaket Sie verwenden:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+babelhyphenation[german,ngerman,austrian,naustrian,swissgerman,
+\begin_inset Newline newline
+\end_inset
+
+nswissgerman]{Ma-de}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+pghyphenation{german}{Ma-de}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+um die Trennung in allen deutschen Sprachvarianten zu definieren,
+ oder nur
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+babelhyphenation[naustrian]{Ma-de}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+pghyphenation[variant=austrian]{german}{Ma-de}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für österreichisches Deutsch in neuer Rechtschreibung.
+\end_layout
+
+\begin_layout Standard
+Diese Befehle funktionieren erst,
+ wenn die Sprachpakete geladen sind.
+ Das ist zumeist erst nach dem benutzerdefinierten \SpecialChar LaTeX
+-Vorspann der Fall.
+ Am Besten,
+ Sie fügen Sie in ein 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AtBeginDocument{\SpecialChar ldots
+}
+\end_layout
+
+\end_inset
+
+ ein,
+ so dass sie erst am Ende des \SpecialChar LaTeX
+-Vorspanns ausgeführt werden.
 \end_layout
 
 \begin_layout Standard
@@ -19651,21 +19997,25 @@ Strg+
 \end_inset
 
 - 
-\begin_inset Quotes gld
-\end_inset
+\begin_inset Flex Code
+status collapsed
 
+\begin_layout Plain Layout
 
 \backslash
 -
-\begin_inset Quotes grd
+\end_layout
+
 \end_inset
 
  oder 
-\begin_inset Quotes gld
-\end_inset
+\begin_inset Flex Code
+status collapsed
 
+\begin_layout Plain Layout
 "-
-\begin_inset Quotes grd
+\end_layout
+
 \end_inset
 
  als \SpecialChar TeX
@@ -19754,11 +20104,13 @@ cher\SpecialChar ldots
 
 \begin_layout Enumerate
 Sie benutzen statt des Bindestrichs 
-\begin_inset Quotes gld
-\end_inset
+\begin_inset Flex Code
+status collapsed
 
+\begin_layout Plain Layout
 "=
-\begin_inset Quotes grd
+\end_layout
+
 \end_inset
 
  als \SpecialChar TeX
@@ -19776,11 +20128,13 @@ nolink "false"
 
 ).
  
-\begin_inset Quotes gld
-\end_inset
+\begin_inset Flex Code
+status collapsed
 
+\begin_layout Plain Layout
 "=
-\begin_inset Quotes grd
+\end_layout
+
 \end_inset
 
  wird in der Druckansicht durch den Bindestrich ersetzt,
@@ -19820,21 +20174,25 @@ Weggelassene Wortteile
 Wenn Sie einen Satz wie den folgenden schreiben:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quote
 \noindent
-Weil \SpecialChar LyX
- \SpecialChar LaTeX
- im Hintergrund benutzt,
- unterstützt es viele \SpecialChar LaTeX
--Befehle und -Konstrukte,
+Da \SpecialChar LyX
+ letztlich auf \SpecialChar LaTeX
+ aufbaut,
+ werden viele \SpecialChar LaTeX
+-Befehle und -Konstrukte unterstützt,
  aber nicht alle.
 \end_layout
 
 \begin_layout Standard
-kann es wie hier vorkommen,
- dass die Zeile nach dem '-'-Zeichen umgebrochen wird,
+kann es (wie hier) vorkommen,
+ dass die Zeile direkt nach dem initialen Bindestrich in 
+\emph on
+-Konstrukte
+\emph default
+ umbrochen wird,
  was natürlich Unsinn ist.
- Dann verwendet man am besten den geschützten Trennstrich
+ Dann verwendet man am Besten den geschützten Trennstrich
 \begin_inset Index idx
 range none
 pageformat default
@@ -19886,17 +20244,48 @@ Strg+Alt+
 
 -
 \family default
-):
+),
+ der allerdings die Trennmöglichkeiten im Wort löscht,
+ so dass das ganze Wort entweder auf der Zeile bleibt (wie im folgenden Beispiel,
+ wobei das Wort aus der Einrückung des Zitats herausragt) oder auf die nächste Zeile gelangt:
+\end_layout
+
+\begin_layout Quote
+\noindent
+Da \SpecialChar LyX
+ letztlich auf \SpecialChar LaTeX
+ aufbaut,
+ werden viele \SpecialChar LaTeX
+-Befehle und \SpecialChar nobreakdash
+Konstrukte unterstützt,
+ aber nicht alle.
+\end_layout
+
+\begin_layout Quote
+Weil \SpecialChar LyX
+ letztlich auf \SpecialChar LaTeX
+ aufbaut,
+ werden viele \SpecialChar LaTeX
+-Befehle und \SpecialChar nobreakdash
+Konstrukte unterstützt,
+ aber nicht alle.
 \end_layout
 
 \begin_layout Standard
+Möchte man im Wort Trennungen erlauben,
+ muss man händisch Trennmöglichkeiten einfügen:
+\end_layout
+
+\begin_layout Quote
 \noindent
-Weil \SpecialChar LyX
- \SpecialChar LaTeX
- im Hintergrund benutzt,
- unterstützt es viele \SpecialChar LaTeX
+Da \SpecialChar LyX
+ letztlich auf \SpecialChar LaTeX
+ aufbaut,
+ werden viele \SpecialChar LaTeX
 -Befehle und \SpecialChar nobreakdash
-Konstrukte,
+Kon\SpecialChar softhyphen
+struk\SpecialChar softhyphen
+te unterstützt,
  aber nicht alle.
 \end_layout
 
