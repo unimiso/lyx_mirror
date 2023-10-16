@@ -9302,12 +9302,10 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim
-
 Dies ist Unformatiert.
 \end_layout
 
 \begin_layout Verbatim
-
 Die folgenden 2 Zeilen sind leer:
 \end_layout
 
@@ -9320,7 +9318,6 @@ Die folgenden 2 Zeilen sind leer:
 \end_layout
 
 \begin_layout Verbatim
-
 Fast alles ist in Unformatiert erlaubt:"%&$§#~'`
 \backslash
 }][{|
@@ -9346,7 +9343,6 @@ Unformatiert
 \end_layout
 
 \begin_layout Verbatim*
-
 Dies ist Unformatiert*.
 \end_layout
 
@@ -19781,26 +19777,12 @@ hyphenation{<trennmuster>}
 
 \end_inset
 
- sprach\SpecialChar softhyphen
-unabhängig gelten.
- Das ist nicht immer erwünscht (denken Sie bspw.
- an 
-\emph on
-Made
-\emph default
- im Deutschen,
- das als 
-\emph on
-Ma-de
-\emph default
- getrennt werden kann vs.
- 
-\emph on
-made
-\emph default
- im Englischen,
- das nicht getrennt werden darf).
- Zu diesem Zweck stellen die Sprachpakete 
+ für die Sprache gelten,
+ die eingestellt ist,
+ wenn der Befehl ausgeführt wird (im Vorspann ist dies normalerweise die Hauptsprache des Dokuments).
+ Falls Sie Ausnahmen für andere Sprache definieren wollen oder nicht sicher sein können,
+ welche Sprache gerade aktiv ist,
+ stellen die Sprachpakete 
 \family sans
 babel
 \family default
@@ -19808,8 +19790,7 @@ babel
 \family sans
 polyglossia
 \family default
- spezielle Varianten des Befehls zur Verfügung,
- die nur für einzelne Sprachen oder Sprachvarianten gelten:
+ spezielle Varianten des Befehls zur Verfügung:
 \end_layout
 
 \begin_layout Itemize

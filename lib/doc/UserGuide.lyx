@@ -10226,14 +10226,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10246,7 +10244,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10270,7 +10267,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -22072,7 +22068,7 @@ hyphenation{dis-quo-ta-tion
 
 
 \change_inserted -712698321 1697439035
- You can also use this to globally prevent hyphenation of a word,
+ You can also use this to prevent hyphenation of a word,
  e.
 \begin_inset space \thinspace{}
 \end_inset
@@ -22156,10 +22152,8 @@ Customization
 
 \begin_layout Standard
 
-\change_inserted -712698321 1697441110
-Note,
- however,
- that 
+\change_inserted -712698321 1697456279
+Note that 
 \begin_inset Flex Code
 status collapsed
 
@@ -22175,30 +22169,9 @@ hyphenation{<patterns>}
 
 \end_inset
 
- is language-insensitive.
- This is not always desired,
- think of German 
-\emph on
-Made
-\emph default
- (
-\begin_inset Quotes els
-\end_inset
-
-maggot
-\begin_inset Quotes ers
-\end_inset
-
-) which can be hyphenated as 
-\emph on
-Ma-de
-\emph default
- as opposed to English 
-\emph on
-made
-\emph default
- that must not be hyphenated.
- To this end,
+ applies to the language that is current when the command is issued (in the preamble,
+ this is usually the main language of the document).
+ If you want to define patterns for specific languages without knowing which language is in effect,
  the language packages 
 \family sans
 babel
@@ -22207,7 +22180,7 @@ babel
 \family sans
 polyglossia
 \family default
- provide specific variants of the command that are restricted to individual languages or language varieties:
+ provide specific variants of the command:
 \end_layout
 
 \begin_layout Itemize
