@@ -10226,14 +10226,12 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
-
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
-
 The following 2 lines are empty:
 \end_layout
 
@@ -10246,7 +10244,6 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
-
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10270,7 +10267,6 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
-
 This is Verbatim*.
 \end_layout
 
@@ -21959,7 +21955,23 @@ Hyphenation
 Point
 \family default
 .
- These extra hyphenation points are only recommendations to \SpecialChar LaTeX
+ 
+\change_inserted -584632292 1697420767
+Note that adding hyphenation points disables the default ones:
+ The word will no longer break at the places it previously would have.
+ Note also that 
+\change_deleted -584632292 1697420769
+T
+\change_inserted -584632292 1697420770
+t
+\change_unchanged
+hese 
+\change_deleted -584632292 1697420699
+extra 
+\change_inserted -584632292 1697420772
+added 
+\change_unchanged
+hyphenation points are only recommendations to \SpecialChar LaTeX
 .
  If no hyphenation is necessary,
  \SpecialChar LaTeX
