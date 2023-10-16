@@ -21963,7 +21963,21 @@ Point
 \change_inserted -584632292 1697420767
 Note that adding hyphenation points disables the default ones:
  The word will no longer break at the places it previously would have.
- Note also that 
+ Note also that
+\change_inserted -712698321 1697436627
+,
+ other than with 
+\begin_inset Quotes eld
+\end_inset
+
+soft hyphens
+\begin_inset Quotes erd
+\end_inset
+
+ that are common in word processors,
+
+\change_inserted -584632292 1697420767
+ 
 \change_deleted -584632292 1697420769
 T
 \change_inserted -584632292 1697420770
@@ -21977,7 +21991,11 @@ added
 \change_unchanged
 hyphenation points are only recommendations to \SpecialChar LaTeX
 .
- If no hyphenation is necessary,
+ If no hyphenation is necessary
+\change_inserted -712698321 1697437057
+ or the automatic hyphenation is disabled
+\change_unchanged
+,
  \SpecialChar LaTeX
  will ignore them.
 \change_inserted -584632292 1697420971
@@ -21990,8 +22008,48 @@ hyphenation points are only recommendations to \SpecialChar LaTeX
 If there is a word you use often that \SpecialChar LaTeX
  does not hyphenate correctly,
  you can tell \SpecialChar LaTeX
- how to hyphenate it by adding a command to the preamble,
- e.g.:
+ how to hyphenate it by adding 
+\change_deleted -712698321 1697438612
+a
+\change_inserted -712698321 1697438615
+the 
+\change_deleted -712698321 1697439121
+ 
+\change_inserted -584632292 1697421156
+command
+\change_inserted -712698321 1697439144
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697440886
+
+\backslash
+hyphenation{<patterns>}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -584632292 1697421156
+ to the preamble
+\change_inserted -712698321 1697438635
+ which takes as its argument one or more words with their hyphenation points marked by a hyphen
+\change_inserted -584632292 1697421156
+,
+ e.
+\change_inserted -712698321 1697438465
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\change_inserted -584632292 1697421156
+g.:
  
 \begin_inset Flex Code
 status collapsed
@@ -22001,15 +22059,49 @@ status collapsed
 \change_inserted -584632292 1697421061
 
 \backslash
-hyphenation{dis-quo-ta-tion}
+hyphenation{dis-quo-ta-tion
+\change_inserted -712698321 1697438644
+ dis-quo-ta-tions
+\change_inserted -584632292 1697421061
+}
 \change_unchanged
 
 \end_layout
 
 \end_inset
 
+
+\change_inserted -712698321 1697439035
+ You can also use this to globally prevent hyphenation of a word,
+ e.
+\begin_inset space \thinspace{}
+\end_inset
+
+g.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697439080
+
+\backslash
+hyphenation{unbroken}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -584632292 1697421156
 .
- If there are a lot of these,
+ If there are a lot of these
+\change_inserted -712698321 1697439099
+ hyphenation exceptions
+\change_inserted -584632292 1697421156
+,
  you can collect them in a single file (say,
  
 \begin_inset Flex Code
@@ -22044,9 +22136,272 @@ usepackage{myhyphens}
 
 .
  Make sure to put the file somewhere \SpecialChar LaTeX
- can find it.
+ can find it
+\change_inserted -712698321 1697439496
+ (see the section 
+\emph on
+Installing new \SpecialChar LaTeX
+ files
+\emph default
+ in the 
+\emph on
+Customization
+\emph default
+ manual)
+\change_inserted -584632292 1697421156
+.
+\change_inserted -712698321 1697440371
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1697441110
+Note,
+ however,
+ that 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697440909
+
+\backslash
+hyphenation{<patterns>}
 \change_unchanged
 
+\end_layout
+
+\end_inset
+
+ is language-insensitive.
+ This is not always desired,
+ think of German 
+\emph on
+Made
+\emph default
+ (
+\begin_inset Quotes els
+\end_inset
+
+maggot
+\begin_inset Quotes ers
+\end_inset
+
+) which can be hyphenated as 
+\emph on
+Ma-de
+\emph default
+ as opposed to English 
+\emph on
+made
+\emph default
+ that must not be hyphenated.
+ To this end,
+ the language packages 
+\family sans
+babel
+\family default
+ and 
+\family sans
+polyglossia
+\family default
+ provide specific variants of the command that are restricted to individual languages or language varieties:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441197
+
+\family sans
+babel
+\family default
+:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441197
+
+\backslash
+babelhyphenation[<language 1>,
+ <language 2>,
+ \SpecialChar ldots
+]{<patterns>}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441204
+
+\family sans
+polyglossia
+\family default
+:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441204
+
+\backslash
+pghyphenation[<language options>]{<language>}{<patterns>}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1697441248
+So you can use,
+ depending on which language package you are using:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441311
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441767
+
+\backslash
+babelhyphenation[german,ngerman,austrian,naustrian,swissgerman,
+\begin_inset Newline newline
+\end_inset
+
+nswissgerman]{Ma-de}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441342
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441342
+
+\backslash
+pghyphenation{german}{Ma-de}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1697441379
+in order to define the hyphenation points for all German varieties,
+ or only
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441467
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441467
+
+\backslash
+babelhyphenation[naustrian]{Ma-de}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -712698321 1697441476
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697441476
+
+\backslash
+pghyphenation[variant=austrian]{german}{Ma-de}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1697442003
+in order to define them only for the Austrian variety of German.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -712698321 1697442124
+These commands only work after the language package has been loaded,
+ which is usually after the user preamble.
+ So it is advised that you embrace them in 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1697442087
+
+\backslash
+AtBeginDocument{\SpecialChar ldots
+}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+,
+ which causes them to be issued at the end of the \SpecialChar LaTeX
+ preamble instead.
 \end_layout
 
 \begin_layout Standard
