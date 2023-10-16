@@ -10226,12 +10226,14 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim
+
 This is Verbatim.
 \end_layout
 
 \begin_layout Verbatim
 \noindent
 \align block
+
 The following 2 lines are empty:
 \end_layout
 
@@ -10244,6 +10246,7 @@ The following 2 lines are empty:
 \end_layout
 
 \begin_layout Verbatim
+
 Almost everything is allowed in Verbatim:"%&$§#~'`
 \backslash
 }][{|
@@ -10267,6 +10270,7 @@ Verbatim
 \end_layout
 
 \begin_layout Verbatim*
+
 This is Verbatim*.
 \end_layout
 
@@ -21976,6 +21980,73 @@ hyphenation points are only recommendations to \SpecialChar LaTeX
  If no hyphenation is necessary,
  \SpecialChar LaTeX
  will ignore them.
+\change_inserted -584632292 1697420971
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -584632292 1697421156
+If there is a word you use often that \SpecialChar LaTeX
+ does not hyphenate correctly,
+ you can tell \SpecialChar LaTeX
+ how to hyphenate it by adding a command to the preamble,
+ e.g.:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1697421061
+
+\backslash
+hyphenation{dis-quo-ta-tion}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ If there are a lot of these,
+ you can collect them in a single file (say,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1697421096
+myhyphens.sty
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+) and then import the file via:
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -584632292 1697421113
+
+\backslash
+usepackage{myhyphens}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ Make sure to put the file somewhere \SpecialChar LaTeX
+ can find it.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -22019,7 +22090,11 @@ Non-Breaking
 \change_unchanged
  Hyphen
 \family default
-) or put it into a makebox as described in section 
+) or put it into a makebox as described in 
+\change_inserted -584632292 1697421188
+the 
+\change_unchanged
+section 
 \emph on
 Prevent Hyphenation
 \emph default
