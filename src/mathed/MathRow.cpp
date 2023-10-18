@@ -186,8 +186,8 @@ MathRow::MathRow(MetricsInfo & mi, MathData const * ar)
 	// We go to the end to handle spacing at the end of equation
 	for (int i = 1 ; i != static_cast<int>(elements_.size()) ; ++i) {
 		Element & e = elements_[i];
-
 		Element & bef = elements_[before(i)];
+
 		if (dospacing && e.mclass != MC_UNKNOWN) {
 			int spc = class_spacing(bef.mclass, e.mclass, mi.base);
 			bef.after += spc / 2;
@@ -196,7 +196,15 @@ MathRow::MathRow(MetricsInfo & mi, MathData const * ar)
 		}
 
 		// finally reserve space for markers
-		bef.after = max(bef.after, markerMargin(bef));
+		/* FIXME : the test below avoids that the spacing grows grows
+		 * when a BEGIN/END_SEL element is added (typically start or
+		 * end a selection after a fraction). I would think that the
+		 * code should just go under the e.mclass != MC_UNKNOWN branch
+		 * below, but I am not sure why it has not been done before.
+		 * Therefore, until we double check this, be very conservative
+		 */
+		if (e.type != BEGIN_SEL && e.type != END_SEL)
+			bef.after = max(bef.after, markerMargin(bef));
 		if (e.mclass != MC_UNKNOWN)
 			e.before = max(e.before, markerMargin(e));
 		// for linearized insets (macros...) too
