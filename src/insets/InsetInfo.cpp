@@ -1506,7 +1506,7 @@ void docbookShortcutInfo(XMLStream & xs, const InsetInfoParams & params) {
 	for (char_type const c : sequence) {
 		const auto keyMapping = keyToString.find(c);
 		if (keyMapping != keyToString.end()) {
-			translateString(from_ascii(keyMapping->second), trans, lcode);
+			(void) translateString(from_ascii(keyMapping->second), trans, lcode);
 
 			// db:keysym: symbolic name (like Page Up), unlike what is printed on the key (like
 			// ⇞, ↑, ▲, PgUp, Page Up, etc.)
@@ -1584,7 +1584,7 @@ void xhtmlShortcutInfo(XMLStream & xs, const InsetInfoParams & params) {
 	    char_type const c = sequence[i];
 		const auto keyMapping = keyToString.find(c);
 		if (keyMapping != keyToString.end()) {
-			translateString(from_ascii(keyMapping->second), trans, lcode);
+			(void) translateString(from_ascii(keyMapping->second), trans, lcode);
 			xs << trans;
 		} else {
 			xs << c;
