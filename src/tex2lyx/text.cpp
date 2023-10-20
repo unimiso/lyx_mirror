@@ -4343,21 +4343,10 @@ void parse_text(Parser & p, ostream & os, unsigned flags, bool outer,
 				os << "\n\\change_deleted ";
 			os << author.bufferId() << ' ' << ptime << '\n';
 			parse_text_snippet(p, os, FLAG_ITEM, outer, context);
-			bool xcolorulem = LaTeXPackages::isAvailable("ulem") &&
-			                  LaTeXPackages::isAvailable("xcolor");
-			// No need to test for luatex, since luatex comes in
-			// two flavours (dvi and pdf), like latex, and those
-			// are detected by pdflatex.
-			if (pdflatex || xetex) {
-				if (xcolorulem) {
-					preamble.registerAutomaticallyLoadedPackage("ulem");
-					preamble.registerAutomaticallyLoadedPackage("xcolor");
-				}
-			} else {
-				if (xcolorulem) {
-					preamble.registerAutomaticallyLoadedPackage("ulem");
-					preamble.registerAutomaticallyLoadedPackage("xcolor");
-				}
+			if (LaTeXPackages::isAvailable("ulem")
+			    && LaTeXPackages::isAvailable("xcolor")) {
+				preamble.registerAutomaticallyLoadedPackage("ulem");
+				preamble.registerAutomaticallyLoadedPackage("xcolor");
 			}
 			continue;
 		}
