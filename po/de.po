@@ -95,8 +95,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4git\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-10-15 11:13+0200\n"
-"PO-Revision-Date: 2023-10-15 11:14+0200\n"
+"POT-Creation-Date: 2023-10-21 12:42+0200\n"
+"PO-Revision-Date: 2023-10-21 12:48+0200\n"
 "Last-Translator: Juergen Spitzmueller <spitz@lyx.org>\n"
 "Language-Team: German <lyx-docs@lists.lyx.org>\n"
 "Language: de\n"
@@ -852,8 +852,8 @@ msgstr "A&lle hinzufügen"
 #: src/Buffer.cpp:4792 src/Buffer.cpp:4902 src/LyXVC.cpp:114 src/LyXVC.cpp:310
 #: src/buffer_funcs.cpp:56 src/frontends/qt/GuiBranches.cpp:226
 #: src/frontends/qt/GuiClipboard.cpp:252 src/frontends/qt/GuiDocument.cpp:3009
-#: src/frontends/qt/GuiParagraph.cpp:177 src/frontends/qt/GuiPrefs.cpp:3330
-#: src/frontends/qt/GuiPrefs.cpp:3353 src/frontends/qt/GuiView.cpp:2903
+#: src/frontends/qt/GuiParagraph.cpp:177 src/frontends/qt/GuiPrefs.cpp:3332
+#: src/frontends/qt/GuiPrefs.cpp:3355 src/frontends/qt/GuiView.cpp:2903
 #: src/frontends/qt/GuiView.cpp:3066 src/frontends/qt/GuiView.cpp:3296
 #: src/frontends/qt/GuiView.cpp:3320 src/frontends/qt/GuiView.cpp:3334
 #: src/frontends/qt/GuiView.cpp:3438 src/frontends/qt/GuiView.cpp:3483
@@ -1107,8 +1107,7 @@ msgid "&Language:"
 msgstr "S&prache:"
 
 #: src/frontends/qt/ui/CharacterUi.ui:281
-#: src/frontends/qt/ui/FindAndReplaceUi.ui:495
-#: src/frontends/qt/ui/ListingsUi.ui:334 lib/layouts/bicaption.module:16
+#: src/frontends/qt/ui/FindAndReplaceUi.ui:495 lib/layouts/bicaption.module:16
 #: lib/layouts/europasscv.layout:441 lib/layouts/europasscv.layout:476
 #: lib/layouts/europasscv.layout:483 lib/layouts/europecv.layout:322
 #: lib/layouts/europecv.layout:328 lib/layouts/moderncv.layout:581
@@ -3017,8 +3016,12 @@ msgstr "Erweiterte Zeichentabelle verwenden"
 msgid "&Extended character table"
 msgstr "Erweiterte &Zeichentabelle"
 
+#: src/frontends/qt/ui/ListingsUi.ui:334
+msgid "Language[[Programming]]"
+msgstr "Sprache"
+
 #: src/frontends/qt/ui/ListingsUi.ui:343
-msgid "Lan&guage:"
+msgid "Lan&guage[[Programming]]:"
 msgstr "Sprac&he:"
 
 #: src/frontends/qt/ui/ListingsUi.ui:353
@@ -3170,39 +3173,48 @@ msgid "The available language(s) of the selected file will be displayed here"
 msgstr ""
 "Hier werden die verfügbaren Sprachversionen der ausgewählten Datei angezeigt."
 
-#: src/frontends/qt/ui/MarginsUi.ui:42
+#: src/frontends/qt/ui/MarginsUi.ui:38
+msgid ""
+"Use the margin settings provided by the document class.<br>Note that if this "
+"is unchecked, different defaults may be used."
+msgstr ""
+"Verwende die Randeinstellungen der Dokumentklasse.<br>Beachten Sie, dass die "
+"Voreinstellungen variieren können, je nachdem, ob dies aktiviert ist oder"
+" nicht."
+
+#: src/frontends/qt/ui/MarginsUi.ui:41
 msgid "&Default margins"
 msgstr "&Standardränder"
 
-#: src/frontends/qt/ui/MarginsUi.ui:118
+#: src/frontends/qt/ui/MarginsUi.ui:117
 msgid "&Top:"
 msgstr "&Oben:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:131
+#: src/frontends/qt/ui/MarginsUi.ui:130
 msgid "&Bottom:"
 msgstr "&Unten:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:144
+#: src/frontends/qt/ui/MarginsUi.ui:143
 msgid "&Inner:"
 msgstr "&Innen:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:157
+#: src/frontends/qt/ui/MarginsUi.ui:156
 msgid "O&uter:"
 msgstr "&Außen:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:170
+#: src/frontends/qt/ui/MarginsUi.ui:169
 msgid "Head &sep:"
 msgstr "Abstand zum &Kopf:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:183
+#: src/frontends/qt/ui/MarginsUi.ui:182
 msgid "Head &height:"
 msgstr "&Kopfzeilenhöhe:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:196
+#: src/frontends/qt/ui/MarginsUi.ui:195
 msgid "&Foot skip:"
 msgstr "Abstand zum &Fuß:"
 
-#: src/frontends/qt/ui/MarginsUi.ui:209
+#: src/frontends/qt/ui/MarginsUi.ui:208
 msgid "&Column sep:"
 msgstr "&Spaltenabstand:"
 
@@ -4116,8 +4128,8 @@ msgid "&Modify"
 msgstr "&Ändern"
 
 #: src/frontends/qt/ui/PrefConvertersUi.ui:286
-#: src/frontends/qt/ui/PrefShortcutsUi.ui:61 src/frontends/qt/GuiPrefs.cpp:3071
-#: src/frontends/qt/GuiPrefs.cpp:3157
+#: src/frontends/qt/ui/PrefShortcutsUi.ui:61 src/frontends/qt/GuiPrefs.cpp:3073
+#: src/frontends/qt/GuiPrefs.cpp:3159
 msgid "Remo&ve"
 msgstr "&Entfernen"
 
@@ -32364,7 +32376,7 @@ msgstr "Über LyX"
 msgid "About %1"
 msgstr "Über %1"
 
-#: src/frontends/qt/GuiApplication.cpp:784 src/frontends/qt/GuiPrefs.cpp:3467
+#: src/frontends/qt/GuiApplication.cpp:784 src/frontends/qt/GuiPrefs.cpp:3469
 msgid "Preferences"
 msgstr "Einstellungen"
 
@@ -34889,22 +34901,22 @@ msgstr "Klassisch"
 msgid "Oxygen"
 msgstr "Oxygen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2543
+#: src/frontends/qt/GuiPrefs.cpp:2544
 msgid "Restart needed"
 msgstr "Neus art erforderlich"
 
-#: src/frontends/qt/GuiPrefs.cpp:2544
+#: src/frontends/qt/GuiPrefs.cpp:2545
 msgid ""
 "Resetting the user interface style to 'Default' requires a restart of LyX."
 msgstr ""
-"Das Zurücksetzen des Oberflächenstils auf 'Standard' erfordert einen Neustart"
-" von LyX."
+"Das Zurücksetzen des Oberflächenstils auf 'Standard' erfordert einen "
+"Neustart von LyX."
 
-#: src/frontends/qt/GuiPrefs.cpp:2598
+#: src/frontends/qt/GuiPrefs.cpp:2600
 msgid "Document Handling"
 msgstr "Dokument-Handhabung"
 
-#: src/frontends/qt/GuiPrefs.cpp:2689
+#: src/frontends/qt/GuiPrefs.cpp:2691
 msgid ""
 "If this is checked, a backup of the document is created in the current "
 "working directory. The backup file has the same name but the suffix '.lyx~'. "
@@ -34918,7 +34930,7 @@ msgstr ""
 "spezifischen Ordner für diese Sicherungsdateien können Sie im Abschnitt "
 "'Pfade' festlegen."
 
-#: src/frontends/qt/GuiPrefs.cpp:2695
+#: src/frontends/qt/GuiPrefs.cpp:2697
 #, c-format
 msgid ""
 "If this is checked, a backup of the document is created in the backup "
@@ -34932,66 +34944,66 @@ msgstr ""
 "meinVerzeichnis!Dateiname.lyx~). Beachten Sie, dass diese Dateien von "
 "manchen Dateimanagern per Voreinstellung nicht angezeigt werden."
 
-#: src/frontends/qt/GuiPrefs.cpp:2720
+#: src/frontends/qt/GuiPrefs.cpp:2722
 msgid "Control"
 msgstr "Kontrolle"
 
-#: src/frontends/qt/GuiPrefs.cpp:2831
+#: src/frontends/qt/GuiPrefs.cpp:2833
 msgid "Shortcuts"
 msgstr "Tastenkürzel"
 
-#: src/frontends/qt/GuiPrefs.cpp:2838
+#: src/frontends/qt/GuiPrefs.cpp:2840
 msgid "Function"
 msgstr "Funktion"
 
-#: src/frontends/qt/GuiPrefs.cpp:2839
+#: src/frontends/qt/GuiPrefs.cpp:2841
 msgid "Shortcut"
 msgstr "Tastenkürzel"
 
-#: src/frontends/qt/GuiPrefs.cpp:2916
+#: src/frontends/qt/GuiPrefs.cpp:2918
 msgid "Cursor, Mouse and Editing Functions"
 msgstr "Cursor-, Maus- und Bearbeitungsfunktionen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2920
+#: src/frontends/qt/GuiPrefs.cpp:2922
 msgid "Mathematical Symbols"
 msgstr "Mathematische Symbole"
 
-#: src/frontends/qt/GuiPrefs.cpp:2924
+#: src/frontends/qt/GuiPrefs.cpp:2926
 msgid "Document and Window"
 msgstr "Dokument und Arbeitsbereich"
 
-#: src/frontends/qt/GuiPrefs.cpp:2928
+#: src/frontends/qt/GuiPrefs.cpp:2930
 msgid "Font, Layouts and Textclasses"
 msgstr "Schriften, Absatzformate und Textklassen"
 
-#: src/frontends/qt/GuiPrefs.cpp:2932
+#: src/frontends/qt/GuiPrefs.cpp:2934
 msgid "System and Miscellaneous"
 msgstr "System und Verschiedenes"
 
-#: src/frontends/qt/GuiPrefs.cpp:3069 src/frontends/qt/GuiPrefs.cpp:3129
+#: src/frontends/qt/GuiPrefs.cpp:3071 src/frontends/qt/GuiPrefs.cpp:3131
 msgid "Res&tore"
 msgstr "Zurüc&ksetzen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3298 src/frontends/qt/GuiPrefs.cpp:3307
-#: src/frontends/qt/GuiPrefs.cpp:3313 src/frontends/qt/GuiPrefs.cpp:3394
+#: src/frontends/qt/GuiPrefs.cpp:3300 src/frontends/qt/GuiPrefs.cpp:3309
+#: src/frontends/qt/GuiPrefs.cpp:3315 src/frontends/qt/GuiPrefs.cpp:3396
 msgid "Failed to create shortcut"
 msgstr "Erstellen des Tastenkürzels fehlgeschlagen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3299
+#: src/frontends/qt/GuiPrefs.cpp:3301
 msgid "Unknown or invalid LyX function"
 msgstr "Unbekannte oder ungültige LyX-Funktion"
 
-#: src/frontends/qt/GuiPrefs.cpp:3308
+#: src/frontends/qt/GuiPrefs.cpp:3310
 msgid "This LyX function is hidden and cannot be bound."
 msgstr ""
 "Dies ist eine versteckte LyX-Funktion. Sie kann nicht mit einer "
 "Tastenkombination belegt werden."
 
-#: src/frontends/qt/GuiPrefs.cpp:3314
+#: src/frontends/qt/GuiPrefs.cpp:3316
 msgid "Invalid or empty key sequence"
 msgstr "Ungültige oder leere Tastensequenz"
 
-#: src/frontends/qt/GuiPrefs.cpp:3326
+#: src/frontends/qt/GuiPrefs.cpp:3328
 #, c-format
 msgid ""
 "Shortcut `%1$s' is already a prefix for other commands.\n"
@@ -35001,15 +35013,15 @@ msgstr ""
 "Sind Sie sicher, dass Sie dies aufheben und das\n"
 "Tastenkürzel mit %2$s belegen wollen?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3329 src/frontends/qt/GuiPrefs.cpp:3352
+#: src/frontends/qt/GuiPrefs.cpp:3331 src/frontends/qt/GuiPrefs.cpp:3354
 msgid "Redefine shortcut?"
 msgstr "Tastenkürzel neu definieren?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3330 src/frontends/qt/GuiPrefs.cpp:3353
+#: src/frontends/qt/GuiPrefs.cpp:3332 src/frontends/qt/GuiPrefs.cpp:3355
 msgid "&Redefine"
 msgstr "&Neu Definieren"
 
-#: src/frontends/qt/GuiPrefs.cpp:3346
+#: src/frontends/qt/GuiPrefs.cpp:3348
 #, c-format
 msgid ""
 "Shortcut `%1$s' is already bound to %2$s.\n"
@@ -35019,11 +35031,11 @@ msgstr ""
 "Sind Sie sicher, dass Sie dies aufheben und das\n"
 "Tastenkürzel mit %3$s belegen wollen?"
 
-#: src/frontends/qt/GuiPrefs.cpp:3395
+#: src/frontends/qt/GuiPrefs.cpp:3397
 msgid "Can not insert shortcut to the list"
 msgstr "Kann Tastenkürzel nicht in Liste einfügen"
 
-#: src/frontends/qt/GuiPrefs.cpp:3426
+#: src/frontends/qt/GuiPrefs.cpp:3428
 msgid "Identity"
 msgstr "Identität"
 
@@ -39124,6 +39136,9 @@ msgstr ""
 msgid "Unknown user"
 msgstr "Unbekannter Benutzer"
 
+#~ msgid "Lan&guage:"
+#~ msgstr "Sprac&he:"
+
 #~ msgid "Protected Hyphen|y"
 #~ msgstr "Geschützter Trennstrich|T"
 
@@ -39471,9 +39486,6 @@ msgstr "Unbekannter Benutzer"
 #~ msgstr ""
 #~ "Diese oder die Zielzeile ist eine Mehrfachzeile. Verschieben nicht "
 #~ "möglich."
-
-#~ msgid "Use the margin settings provided by the document class"
-#~ msgstr "Verwende die Randeinstellungen der Dokumentklasse"
 
 #~ msgid "Format: "
 #~ msgstr "Format: "
@@ -43668,4 +43680,5 @@ msgstr "Unbekannter Benutzer"
 
 #~ msgid " (auto)"
 #~ msgstr " (automatisch)"
+
 
