@@ -3903,8 +3903,20 @@ void outline(OutlineOp mode, Cursor & cur, bool local)
 					continue;
 
 				DocumentClass const & tc = buf.params().documentClass();
-				int const newtoclevel =
-					(mode == OutlineIn ? toclevel + 1 : toclevel - 1);
+				int newtoclevel = -1;
+				if (mode == OutlineIn) {
+					if (toclevel == -1 && tc.getTOCLayout().toclevel > 0)
+						// we are at part but don't have a chapter
+						newtoclevel = tc.getTOCLayout().toclevel;
+					else
+						newtoclevel = toclevel + 1;
+				} else {
+					if (tc.getTOCLayout().toclevel == toclevel && tc.min_toclevel() < toclevel)
+						// we are at highest level, but there is still part
+						newtoclevel = tc.min_toclevel();
+					else
+						newtoclevel = toclevel - 1;
+				}
 
 				bool found = false;
 				for (auto const & lay : tc) {
@@ -3939,8 +3951,20 @@ void outline(OutlineOp mode, Cursor & cur, bool local)
 					continue;
 
 				DocumentClass const & tc = buf.params().documentClass();
-				int const newtoclevel =
-					(mode == OutlineIn ? toclevel + 1 : toclevel - 1);
+				int newtoclevel = -1;
+				if (mode == OutlineIn) {
+					if (toclevel == -1 && tc.getTOCLayout().toclevel > 0)
+						// we are at part but don't have a chapter
+						newtoclevel = tc.getTOCLayout().toclevel;
+					else
+						newtoclevel = toclevel + 1;
+				} else {
+					if (tc.getTOCLayout().toclevel == toclevel && tc.min_toclevel() < toclevel)
+						// we are at highest level, but there is still part
+						newtoclevel = tc.min_toclevel();
+					else
+						newtoclevel = toclevel - 1;
+				}
 
 				for (auto const & lay : tc) {
 					if (lay.toclevel == newtoclevel
