@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-10-06 11:15+0200\n"
-"PO-Revision-Date: 2023-10-06 09:17+0000\n"
+"POT-Creation-Date: 2023-10-21 17:40+0200\n"
+"PO-Revision-Date: 2023-10-21 15:40+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -2907,8 +2907,12 @@ msgstr "Použiť rozšírenú tabuľku znakov"
 msgid "&Extended character table"
 msgstr "Rozšírená ta&buľka znakov"
 
+#: src/frontends/qt/ui/ListingsUi.ui:334
+msgid "Language[[Programming]]"
+msgstr "programovací jazyk"
+
 #: src/frontends/qt/ui/ListingsUi.ui:343
-msgid "Lan&guage:"
+msgid "Lan&guage[[Programming]]:"
 msgstr "&Jazyk:"
 
 #: src/frontends/qt/ui/ListingsUi.ui:353
@@ -3058,6 +3062,14 @@ msgstr "&Jazyk Súboru:"
 #: src/frontends/qt/ui/LyXFilesUi.ui:110
 msgid "The available language(s) of the selected file will be displayed here"
 msgstr "Tu sú zobrazené dostupné jazyky vybraného súboru"
+
+#: src/frontends/qt/ui/MarginsUi.ui:38
+msgid ""
+"Use the margin settings provided by the document class.<br>Note that if this "
+"is unchecked, different defaults may be used."
+msgstr ""
+"Použiť nastavenie okrajov z triedy dokumentu.<br>Upozorňujeme, že ak toto "
+"nie je začiarknuté, môžu sa použiť iné predvolené hodnoty."
 
 #: src/frontends/qt/ui/MarginsUi.ui:42
 msgid "&Default margins"
@@ -4180,9 +4192,10 @@ msgstr ""
 msgid "Use s&ingle instance"
 msgstr "Jednoduchá &inštancia"
 
-#: src/frontends/qt/ui/PrefDocHandlingUi.ui:194
-msgid "Whether to place close button on each tab or only one in the top left."
-msgstr "Dať tlačidlo \"Zavrieť\" na každú kartu, alebo len jediné vľavo hore."
+#: src/frontends/qt/ui/PrefDocHandlingUi.ui:197
+msgid "Whether to place close button on each tab or only one in the top right."
+msgstr ""
+"Či umiestniť tlačidlo zatvorenia na každú kartu alebo iba jedno vpravo hore."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:197
 msgid "Displa&y single close-tab button"
@@ -4319,13 +4332,13 @@ msgstr "Skryť ponukovú &lištu"
 msgid "Hide scr&ollbar"
 msgstr "Skryť &posuvník"
 
-#: src/frontends/qt/ui/PrefEditUi.ui:316
+#: src/frontends/qt/ui/PrefUi.ui:254
 msgid "Hide sta&tusbar"
-msgstr "Skryť stavový p&ruh"
+msgstr "Skryť st&avový pruh"
 
-#: src/frontends/qt/ui/PrefEditUi.ui:323
+#: src/frontends/qt/ui/PrefUi.ui:261
 msgid "H&ide tabbar"
-msgstr "Skr&yť lištu pod-okien"
+msgstr "Skryť lištu po&d-okien"
 
 #: src/frontends/qt/ui/PrefEditUi.ui:365
 msgid "&Hide toolbars"
@@ -5092,6 +5105,18 @@ msgstr "Použiť s&ystémové ikony"
 #: src/frontends/qt/ui/PrefUi.ui:48
 msgid "&User interface file:"
 msgstr "&Súbor s užívateľským rozhraním:"
+
+#: src/frontends/qt/ui/PrefUi.ui:88
+msgid "User interface &style:"
+msgstr "&Štýl používateľského rozhrania:"
+
+#: src/frontends/qt/ui/PrefUi.ui:98
+msgid ""
+"You can set a custom style here. Note that only certain styles may support "
+"dark mode, e.g. fusion on Windows."
+msgstr ""
+"Tu si môžete nastaviť vlastný štýl. Upozorňujeme, že tmavý režim môže "
+"podporovať iba určité štýly, napr. fusion v systéme Windows."
 
 #: src/frontends/qt/ui/PrefUi.ui:68
 msgid "&Icon set:"
@@ -30879,14 +30904,14 @@ msgstr ""
 "Cesta, ktorú vám LyX pri voľbe šablóny ponúkne. Prázdnou hodnotou bude "
 "nastavený adresár, z ktorého bol LyX spustený."
 
-#: src/LyXRC.cpp:3455
+#: src/LyXRC.cpp:3470
 msgid ""
 "Specify those directories which should be prepended to the TEXINPUTS "
 "environment variable.\n"
 "A '.' represents the current document directory. Use the OS native format."
 msgstr ""
-"Určite adresári, ktoré by mali byť pridané do premennej TEXINPUTS pred "
-"ostatnými adresármi.\n"
+"Určite adresáre, ktoré by mali byť pridané do premennej prostredia TEXINPUTS "
+"pred ostatnými adresármi.\n"
 "'.' reprezentuje aktuálny adresár dokumentu. Použite miestny formát pre daný "
 "operačný systém."
 
@@ -33849,8 +33874,8 @@ msgid ""
 "Enter time format specification, using the following placeholders:\n"
 "* h: the hour without a leading zero (1-12 in AM/PM)\n"
 "* hh: the hour with a leading zero (01-12 in AM/PM)\n"
-"* H: the hour without a leading zero (0-23 in AM/PM)\n"
-"* HH: the hour with a leading zero (00-23 in AM/PM)\n"
+"* H: the hour without a leading zero (0-23)\n"
+"* HH: the hour with a leading zero (00-23)\n"
 "* m: the minute without a leading zero\n"
 "* mm: the minute with a leading zero\n"
 "* s: the second without a leading zero\n"
@@ -33861,20 +33886,20 @@ msgid ""
 "* ap or a: use am/pm display ('am'/'pm')\n"
 "* t: the timezone (e.g. CEST)"
 msgstr ""
-"Špecifikujte formát času použijúc nasledujúce zástupné symboly:\n"
-"* h: hodina ako číslo bez vedúcej nuly(1-12 vo formáte AM/PM)\n"
-"* hh: hodina ako číslo s vedúcou nulou(01-12 vo formáte AM/PM)\n"
-"* H: hodina ako číslo bez vedúcej nuly(0-23)\n"
-"* HH:  mesiac ako číslo s vedúcou nulou(00-23)\n"
-"* m: minúta ako číslo bez vedúcej nuly\n"
-"* mm: minúta ako číslo s vedúcou nulou\n"
-"* s: sekunda ako číslo bez vedúcej nuly\n"
-"* ss: sekunda ako číslo s vedúcou nulou\n"
-"* z: milisekunda ako číslo bez vedúcej nuly\n"
-"* zzz: milisekunda ako číslo s vedúcimi nulami\n"
-"* AP alebo A: použiť AM/PM displej\n"
-"* ap alebo a: použiť am/pm displej\n"
-"* t: časový pás (napr. CEST)"
+"Špecifikujte formát času pomocou nasledujúcich zástupných symbolov:\n"
+"* h: hodina bez vedúcej nuly(1-12 vo formáte AM/PM)\n"
+"* hh: hodina s vedúcou nulou(01-12 vo formáte AM/PM)\n"
+"* H: hodina bez vedúcej nuly(0-23)\n"
+"* HH: hodina s vedúcou nulou(00-23)\n"
+"* m: minúta bez vedúcej nuly\n"
+"* mm: minúta s vedúcou nulou\n"
+"* s: sekunda bez vedúcej nuly\n"
+"* ss: sekunda s vedúcou nulou\n"
+"* z: milisekunda bez vedúcich núl\n"
+"* zzz: milisekunda s vedúcimi nulami\n"
+"* AP alebo A: použiť zobrazenie AM/PM\n"
+"* ap alebo a: použiť zobrazenie am/pm\n"
+"* t: časové pásmo (napr. CEST),// čas"
 
 #: src/frontends/qt/GuiInfo.cpp:190 src/frontends/qt/GuiInfo.cpp:191
 #: src/frontends/qt/GuiInfo.cpp:208 src/frontends/qt/GuiInfo.cpp:209
@@ -34407,6 +34432,17 @@ msgstr "Klasické"
 #: src/frontends/qt/GuiPrefs.cpp:2634
 msgid "Oxygen"
 msgstr "Oxygen"
+
+#: src/frontends/qt/GuiPrefs.cpp:2544
+msgid "Restart needed"
+msgstr "Reštart je potrebný"
+
+#: src/frontends/qt/GuiPrefs.cpp:2545
+msgid ""
+"Resetting the user interface style to 'Default' requires a restart of LyX."
+msgstr ""
+"Resetovanie štýlu používateľského rozhrania na 'Štandard' vyžaduje reštart "
+"LyXu."
 
 #: src/frontends/qt/GuiPrefs.cpp:2682
 msgid "Document Handling"
@@ -38577,6 +38613,9 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Neznámy používateľ"
+
+#~ msgid "Lan&guage:"
+#~ msgstr "&Jazyk:"
 
 #~ msgid "Class defaults"
 #~ msgstr "Triedne predvoľby"
