@@ -95,6 +95,7 @@ ToolbarSet
 		Separator
 		Item "Toggle emphasis" "font-emph"
 		Item "Toggle noun" "font-noun"
+		DynamicMenu "textstyle-apply" "Apply recent text properties"
 		DynamicMenu "dynamic-char-styles" "Custom text styles"
 		Separator
 		Item "Insert math" "math-mode on"
@@ -148,7 +149,6 @@ ToolbarSet
 		Item "Include file" "dialog-show-new-inset include"
 		Separator
 		Item "Text properties" "dialog-show character"
-		DynamicMenu "textstyle-apply" "Apply recent text properties"
 		Item "Paragraph settings" "layout-paragraph"
 		Item "Thesaurus" "thesaurus-entry"
 	End
