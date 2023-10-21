@@ -6901,9 +6901,17 @@ bool Text::getStatus(Cursor & cur, FuncRequest const & cmd,
 
 	case LFUN_OUTLINE_UP:
 	case LFUN_OUTLINE_DOWN:
-	case LFUN_OUTLINE_IN:
-	case LFUN_OUTLINE_OUT:
 		enable = cur.text()->getTocLevel(cur.pit()) != Layout::NOT_IN_TOC;
+		break;
+	case LFUN_OUTLINE_IN:
+		enable = cur.text()->getTocLevel(cur.pit()) != Layout::NOT_IN_TOC
+			  && cur.text()->getTocLevel(cur.pit()) !=
+				cur.buffer()->params().documentClass().max_toclevel();
+		break;
+	case LFUN_OUTLINE_OUT:
+		enable = cur.text()->getTocLevel(cur.pit()) != Layout::NOT_IN_TOC
+			 && cur.text()->getTocLevel(cur.pit()) !=
+				cur.buffer()->params().documentClass().min_toclevel();
 		break;
 
 	case LFUN_NEWLINE_INSERT:
