@@ -35,8 +35,7 @@
       <bool>true</bool>
      </property>
      <property name="toolTip">
-      <string>Use the margin settings provided by the document class.
-Note that if this is unchecked, different defaults may be used.</string>
+      <string>Use the margin settings provided by the document class.&lt;br&gt;Note that if this is unchecked, different defaults may be used.</string>
      </property>
      <property name="text">
       <string>&amp;Default margins</string>
