@@ -5578,7 +5578,8 @@ void Text::dispatch(Cursor & cur, FuncRequest & cmd)
 						     from_utf8(N_(" not known")));
 		}
 		if (doInsertInset(cur, this, cmd, false, true))
-			cur.posForward();
+			// move inside
+			(void) checkAndActivateInset(cur, true);
 		break;
 	}
 
