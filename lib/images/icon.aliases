@@ -4,3 +4,6 @@
 dialog-toggle dialog-show
 layout_ layout-toggle_
 tabular-feature_set tabular-feature_toggle
+# use same icon for outline-in/out regardless of "local" argument
+outline-in_local outline-in
+outline-out_local outline-out
