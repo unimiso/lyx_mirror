@@ -264,12 +264,15 @@
   splash.lyx to Welcome.lyx).
 
 
-!!!The following new folders have been added to the LyX directory
+!!!The following new files and folders have been added to the LyX directory
 
 * The examples and templates directories have been completely re-organized.
   They are now much more structured (by means of layout categories) and thus
   consist of many new subfolders.
 
+* The file images/icon.aliases provides simple string substitution
+  rules that can be used when searching for an icon. This mechanism
+  can be used to handle icons for renamed lfuns or new arguments.
 
 
 !!!The following preferences files have been removed from the tarball in 2.4:
