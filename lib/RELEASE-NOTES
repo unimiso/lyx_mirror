@@ -323,7 +323,10 @@
 
 !!Known issues in version 2.4.0
 
-* See http://www.lyx.org/trac/wiki/BugTrackerHome
+* Compiling LyX 2.4 on MacOS with Qt6 makes currently LyX unresponsive to 
+  Control-Command keyboard shortcuts (bug #12641).
+
+* For others see http://www.lyx.org/trac/wiki/BugTrackerHome
 
 
 !!Caveats when upgrading from earlier versions to 2.4.x
