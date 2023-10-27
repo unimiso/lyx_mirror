@@ -181,19 +181,15 @@ void InsetMathDelim::mathematica(MathematicaStream & os) const
 
 void InsetMathDelim::mathmlize(MathMLStream & ms) const
 {
-	if (left_.empty() || (left_.size() == 1 && left_[0] == ' ')) {
-		ms << MTag("mrow")
-		   << MTagInline("mo", "form='prefix' fence='true' stretchy='true' symmetric='true'")
-		   << convertDelimToXMLEscape(left_)
-		   << ETagInline("mo");
-	}
-	ms << cell(0);
-	if (right_.empty() || (right_.size() == 1 && right_[0] == ' ')) {
-		ms << MTagInline("mo", "form='postfix' fence='true' stretchy='true' symmetric='true'")
-		   << convertDelimToXMLEscape(right_)
-		   << ETagInline("mo")
-		   << ETag("mrow");
-	}
+	ms << MTag("mrow")
+	   << MTagInline("mo", "form='prefix' fence='true' stretchy='true' symmetric='true'")
+	   << convertDelimToXMLEscape(left_)
+	   << ETagInline("mo")
+	   << cell(0)
+	   << MTagInline("mo", "form='postfix' fence='true' stretchy='true' symmetric='true'")
+	   << convertDelimToXMLEscape(right_)
+	   << ETagInline("mo")
+	   << ETag("mrow");
 }
 
 
