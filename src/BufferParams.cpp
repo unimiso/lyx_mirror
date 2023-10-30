@@ -2179,7 +2179,7 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 			if (!psopt.empty())
 				psopt = "[skip=" + psopt + "]";
 			os << "\\usepackage" + psopt + "{parskip}\n";
-		} else {
+		} else if (!psopt.empty()) {
 			os << "\\setlength{\\parskip}{" + psopt + "}\n";
 		}
 	} else {
