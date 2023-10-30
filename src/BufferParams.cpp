@@ -2153,6 +2153,7 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 	if (paragraph_separation) {
 		// when skip separation
 		string psopt;
+		bool default_skip = false;
 		switch (getDefSkip().kind()) {
 		case VSpace::SMALLSKIP:
 			psopt = "\\smallskipamount";
@@ -2165,6 +2166,7 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 			break;
 		case VSpace::HALFLINE:
 			// default (no option)
+			default_skip = true;
 			break;
 		case VSpace::FULLLINE:
 			psopt = "\\baselineskip";
@@ -2175,12 +2177,20 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 		default:
 			break;
 		}
-		if (!features.isProvided("parskip")) {
+		if (features.isProvided("parskip")) {
+			// package already loaded (with arbitrary options)
+			// change parskip value only
+			if (!psopt.empty())
+				os << "\\setlength{\\parskip}{" + psopt + "}\n";
+			else if (default_skip)
+				// explicitly reset default (might have been changed
+				// in a class or package)
+				os << "\\parskip=.5\\baselineskip plus 2pt\\relax\n";
+		} else {
+			// load parskip package with required option
 			if (!psopt.empty())
 				psopt = "[skip=" + psopt + "]";
 			os << "\\usepackage" + psopt + "{parskip}\n";
-		} else if (!psopt.empty()) {
-			os << "\\setlength{\\parskip}{" + psopt + "}\n";
 		}
 	} else {
 		// when separation by indentation
