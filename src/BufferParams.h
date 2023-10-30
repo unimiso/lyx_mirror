@@ -197,6 +197,8 @@ public:
 	bool isLiterate() const;
 	/// Is this package option requested?
 	bool hasPackageOption(std::string const package, std::string const opt) const;
+	/// Get the options requested for a given package
+	std::string getPackageOptions(std::string const package) const;
 	/// Do we use the bidi package (which does some reordering and stuff)?
 	bool useBidiPackage(OutputParams const & rp) const;
 

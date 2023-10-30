@@ -2187,10 +2187,20 @@ bool BufferParams::writeLaTeX(otexstream & os, LaTeXFeatures & features,
 				// in a class or package)
 				os << "\\parskip=.5\\baselineskip plus 2pt\\relax\n";
 		} else {
-			// load parskip package with required option
+			// load parskip package with required options
+			string psopts;
 			if (!psopt.empty())
-				psopt = "[skip=" + psopt + "]";
-			os << "\\usepackage" + psopt + "{parskip}\n";
+				psopts = "skip=" + psopt;
+			string const xpsopts = getPackageOptions("parskip");
+			if (!xpsopts.empty()) {
+				if (!psopts.empty())
+					psopts += ",";
+				psopts += xpsopts;
+			}
+			os << "\\usepackage";
+			if (!psopts.empty())
+				os << "[" << psopts << "]";
+			os << "{parskip}\n";
 		}
 	} else {
 		// when separation by indentation
@@ -2968,6 +2978,15 @@ bool BufferParams::hasPackageOption(string const package, string const opt) cons
 		if (package == p.first && opt == p.second)
 			return true;
 	return false;
+}
+
+
+string BufferParams::getPackageOptions(string const package) const
+{
+	for (auto const & p : documentClass().packageOptions())
+		if (package == p.first)
+			return p.second;
+	return string();
 }
 
 
