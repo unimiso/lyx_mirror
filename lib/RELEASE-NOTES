@@ -329,7 +329,7 @@
 * Gnome environments defaulting to Wayland + mutter compositor might be missing
   proper window decorations. This is a generic problem which can be for Qt-based
   applications (including LyX) alleviated by setting QT_QPA_PLATFORMTHEME=gnome
-  environment prior to running LyX.
+  environment variable prior to running LyX.
 
 * For others see http://www.lyx.org/trac/wiki/BugTrackerHome
 
