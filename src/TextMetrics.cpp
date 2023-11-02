@@ -520,6 +520,7 @@ bool TextMetrics::redoParagraph(pit_type const pit, bool const align_rows)
 			displayFont(pit, e.pos) : bufferfont;
 		MacroContext mc(&buffer, parPos);
 		MetricsInfo mi(bv_, font.fontInfo(), w, mc, e.pos == 0, tight_);
+		mi.base.outer_font = displayFont(pit, e.pos).fontInfo();
 		e.inset->metrics(mi, dim);
 		/* FIXME: This is a kind of hack. This allows InsetMathHull to
 		 * state that it needs some elbow room beyond its width, in

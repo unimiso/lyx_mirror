@@ -47,6 +47,8 @@ public:
 	BufferView * bv;
 	/// current font
 	FontInfo font;
+	/// font of the containing inset
+	FontInfo outer_font;
 	/// name of current font - mathed specific
 	std::string fontname;
 	/// This is the width available in pixels
