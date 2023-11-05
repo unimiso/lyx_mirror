@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX-2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-10-21 17:40+0200\n"
-"PO-Revision-Date: 2023-10-21 15:40+0000\n"
+"POT-Creation-Date: 2023-11-05 15:40+0100\n"
+"PO-Revision-Date: 2023-11-05 14:44+0000\n"
 "Last-Translator: Kornel Benko <kornel@lyx.org>\n"
 "Language-Team: Slovak <kornel@lyx.org>\n"
 "Language: sk\n"
@@ -33130,21 +33130,13 @@ msgstr "Preambula LaTeX-u"
 msgid "Unapplied changes"
 msgstr "Neuplatnené zmeny"
 
-#: src/frontends/qt/GuiDocument.cpp:1848
+#: src/frontends/qt/GuiDocument.cpp:1861
 msgid ""
-"Some changes in the previous document were not yet applied.\n"
-"Do you want to switch back and apply them?"
+"Some changes in the document were not yet applied.\n"
+"Do you want to apply them before closing or dismiss the changes?"
 msgstr ""
-"Niektoré zmeny v predošlom dokumente sú zatiaľ neuplatnené.\n"
-"Chcete to na tento dokument navrátiť a zmeny uplatniť?"
-
-#: src/frontends/qt/GuiDocument.cpp:1850
-msgid "Yes, &Switch Back"
-msgstr "Áno, &vrátiť a uplatniť"
-
-#: src/frontends/qt/GuiDocument.cpp:1850
-msgid "No, &Dismiss Changes"
-msgstr "Nie, zmeny &zahodiť"
+"Niektoré zmeny v dokumente ešte neboli použité.\n"
+"Chcete ich použiť pred zatvorením alebo zrušiť zmeny?"
 
 #: src/frontends/qt/GuiDocument.cpp:2246
 msgid "Default margins"
@@ -33259,6 +33251,22 @@ msgstr ""
 #: src/frontends/qt/GuiDocument.cpp:4933
 msgid "&Apply"
 msgstr "&Použiť"
+
+#: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:1889
+msgid "&Dismiss Changes"
+msgstr "&Zahodiť zmeny"
+
+#: src/frontends/qt/GuiDocument.cpp:1887
+msgid ""
+"Some changes in the previous document were not yet applied.\n"
+"Do you want to switch back in order to apply them or dismiss the changes?"
+msgstr ""
+"Niektoré zmeny v predošlom dokumente ešte neboli aplikované.\n"
+"Chcete sa na tento dokument vrátiť a zmeny uplatniť, alebo zmeny zahodiť?"
+
+#: src/frontends/qt/GuiDocument.cpp:1889
+msgid "&Switch Back"
+msgstr "&Vrátiť sa"
 
 #: src/frontends/qt/GuiDocument.cpp:3005 src/frontends/qt/GuiDocument.cpp:3306
 #: src/frontends/qt/GuiDocument.cpp:4933
@@ -44130,3 +44138,16 @@ msgstr "Neznámy používateľ"
 #~ "p><blockquote><p><tt>%1$s</tt></p></blockquote><p>Tento externý program je "
 #~ "schopný vykonávať ľubovoľné akcie, vrátane nebezpečné keď je napr. "
 #~ "inštruovaný robiť to zlovoľne vyrobeným lyx dokumentom.</p> "
+
+#~ msgid ""
+#~ "Some changes in the previous document were not yet applied.\n"
+#~ "Do you want to switch back and apply them?"
+#~ msgstr ""
+#~ "Niektoré zmeny v predošlom dokumente sú zatiaľ neuplatnené.\n"
+#~ "Chcete to na tento dokument navrátiť a zmeny uplatniť?"
+
+#~ msgid "Yes, &Switch Back"
+#~ msgstr "Áno, &vrátiť a uplatniť"
+
+#~ msgid "No, &Dismiss Changes"
+#~ msgstr "Nie, zmeny &zahodiť"
