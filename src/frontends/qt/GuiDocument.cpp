@@ -1854,13 +1854,13 @@ void GuiDocument::onClosing(int const id)
 	if (!guiApp || !guiApp->currentView()
 	    || guiApp->currentView()->id() != id
 	    || !bc().policy().buttonStatus(ButtonPolicy::RESTORE))
-		// notthing to do
+		// nothing to do
 		return;
 
 	int const ret = Alert::prompt(_("Unapplied changes"),
 			_("Some changes in the document were not yet applied.\n"
-			"Do you want to apply them before closing?"),
-			1, 1, _("Yes, &Apply"), _("No, &Dismiss Changes"));
+			"Do you want to apply them before closing or dismiss the changes?"),
+			1, 1, _("&Apply"), _("&Dismiss Changes"));
 	if (ret == 0)
 		slotOK();
 }
