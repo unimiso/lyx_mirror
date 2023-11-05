@@ -267,6 +267,8 @@ protected:
 	/// To be called when the buffer view has changed
 	virtual void onBufferViewChanged() = 0;
 	///
+	virtual void onClosing(int) = 0;
+	///
 	void connectToNewInset();
 
 private:

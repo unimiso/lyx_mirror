@@ -66,6 +66,7 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
 	void onBufferViewChanged() override {}
+	void onClosing(int) override {}
 
 public:
 	/** Check whether we may apply our data.

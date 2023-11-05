@@ -48,6 +48,7 @@ protected:
 
 protected Q_SLOTS:
 	void onBufferViewChanged() override {}
+	void onClosing(int) override {}
 };
 
 } // namespace frontend

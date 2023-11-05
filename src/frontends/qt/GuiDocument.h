@@ -96,6 +96,7 @@ public:
 
 public Q_SLOTS:
 	void onBufferViewChanged() override;
+	void onClosing(int) override;
 	// OK button clicked
 	void slotOK();
 	// Apply button clicked

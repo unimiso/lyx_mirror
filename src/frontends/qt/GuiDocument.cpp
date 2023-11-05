@@ -1849,6 +1849,23 @@ GuiDocument::GuiDocument(GuiView & lv)
 }
 
 
+void GuiDocument::onClosing(int const id)
+{
+	if (!guiApp || !guiApp->currentView()
+	    || guiApp->currentView()->id() != id
+	    || !bc().policy().buttonStatus(ButtonPolicy::RESTORE))
+		// notthing to do
+		return;
+
+	int const ret = Alert::prompt(_("Unapplied changes"),
+			_("Some changes in the document were not yet applied.\n"
+			"Do you want to apply them before closing?"),
+			1, 1, _("Yes, &Apply"), _("No, &Dismiss Changes"));
+	if (ret == 0)
+		slotOK();
+}
+
+
 void GuiDocument::onBufferViewChanged()
 {
 	if (switchback_) {
@@ -1868,8 +1885,8 @@ void GuiDocument::onBufferViewChanged()
 		// Only ask if we haven't yet in this cycle
 		int const ret = prompted_ ? 3 : Alert::prompt(_("Unapplied changes"),
 				_("Some changes in the previous document were not yet applied.\n"
-				"Do you want to switch back and apply them?"),
-				1, 1, _("Yes, &Switch Back"), _("No, &Dismiss Changes"));
+				"Do you want to switch back in order to apply them or dismiss the changes?"),
+				1, 1, _("&Switch Back"), _("&Dismiss Changes"));
 		if (ret == 0) {
 			// Switch to previous buffer view and apply
 			switchback_ = true;

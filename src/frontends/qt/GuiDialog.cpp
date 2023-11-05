@@ -34,6 +34,8 @@ GuiDialog::GuiDialog(GuiView & lv, QString const & name, QString const & title)
 {
 	connect(&lv, SIGNAL(bufferViewChanged()),
 	        this, SLOT(onBufferViewChanged()));
+	connect(&lv, SIGNAL(closing(int)),
+		this, SLOT(onClosing(int)));
 
 	// remove question marks from Windows dialogs
 	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
