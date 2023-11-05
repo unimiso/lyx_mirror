@@ -1888,7 +1888,7 @@ void GuiDocument::onBufferViewChanged()
 				"Do you want to switch back in order to apply them or dismiss the changes?"),
 				1, 1, _("&Switch Back"), _("&Dismiss Changes"));
 		if (ret == 0) {
-			// Switch to previous buffer view and apply
+			// Switch to previous buffer view
 			switchback_ = true;
 			// Record that we have asked.
 			prompted_ = true;
