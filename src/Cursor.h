@@ -137,6 +137,7 @@ public:
 	int countInsetsInSelection(InsetCode const & inset) const;
 
 	/// access to normalized selection anchor
+	// FIXME: this should return a full DocIterator
 	CursorSlice normalAnchor() const;
 	/// access to real selection anchor
 	DocIterator const & realAnchor() const { return anchor_; }

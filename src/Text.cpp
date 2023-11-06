@@ -1410,11 +1410,22 @@ void Text::expandWordSel(Cursor & cur)
 	Cursor c = cur;
 	c.selection(false);
 	c.text()->selectWord(c, WHOLE_WORD);
+	// get selection around anchor too.
+	// FIXME: this cursor is not a proper one. normalAnchor() should
+	// return a DocIterator.
+	Cursor a(cur.bv());
+	a.push_back(cur.normalAnchor());
+	a.text()->selectWord(a, WHOLE_WORD);
 	// use the correct word boundary, depending on selection direction
-	if (cur.top() > cur.normalAnchor())
-		cur.pos() = c.selEnd().pos();
-	else
-		cur.pos() = c.selBegin().pos();
+	if (cur.top() > cur.normalAnchor()) {
+		cur.top() = a.selBegin();
+		cur.resetAnchor();
+		cur.top() = c.selEnd();
+	} else {
+		cur.top() = a.selEnd();
+		cur.resetAnchor();
+		cur.top() = c.selBegin();
+	}
 }
 
 
