@@ -552,6 +552,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	case EUFRAK_FAMILY:
 	case RSFS_FAMILY:
 	case STMARY_FAMILY:
+	case WASY_FAMILY:
 	case ESINT_FAMILY:
 	case INHERIT_FAMILY:
 	case IGNORE_FAMILY:
