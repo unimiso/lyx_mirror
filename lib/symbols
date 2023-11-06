@@ -57,6 +57,7 @@ overleftrightarrow  decoration none       amsmath
 overline            decoration none
 overrightarrow      decoration none
 tilde               decoration none
+uline               decoration none       ulem
 underbar            decoration none
 underbrace          decoration none
 underleftarrow      decoration none       amsmath
@@ -68,6 +69,8 @@ underrightarrow     decoration none       amsmath
 #undertilde          decoration none       accents
 undertilde          decoration none       hiddensymbol
 utilde              decoration none       undertilde
+uuline              decoration none       ulem
+uwave               decoration none       ulem
 vec                 decoration none
 widehat             decoration none
 widetilde           decoration none
@@ -156,6 +159,18 @@ cal               oldfont     none    hiddensymbol
 it                oldfont     none    hiddensymbol
 rm                oldfont     none    hiddensymbol
 tt                oldfont     none    hiddensymbol
+
+# textsize commands
+tiny              textsize    none    hiddensymbol
+scriptsize        textsize    none    hiddensymbol
+footnotesize      textsize    none    hiddensymbol
+small             textsize    none    hiddensymbol
+normalsize        textsize    none    hiddensymbol
+large             textsize    none    hiddensymbol
+Large             textsize    none    hiddensymbol
+LARGE             textsize    none    hiddensymbol
+huge              textsize    none    hiddensymbol
+Huge              textsize    none    hiddensymbol
 
 # matrix environments
 Bmatrix           matrix      none

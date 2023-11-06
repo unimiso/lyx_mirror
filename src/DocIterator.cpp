@@ -495,8 +495,6 @@ void DocIterator::backwardPosIgnoreCollapsed()
 }
 
 
-#if 0
-// works, but currently not needed
 void DocIterator::backwardInset()
 {
 	backwardPos();
@@ -514,7 +512,6 @@ void DocIterator::backwardInset()
 		backwardPos();
 	}
 }
-#endif
 
 
 bool DocIterator::hasPart(DocIterator const & it) const

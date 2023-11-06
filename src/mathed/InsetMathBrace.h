@@ -33,6 +33,8 @@ public:
 	void metrics(MetricsInfo & mi, Dimension & dim) const override;
 	///
 	void draw(PainterInfo &, int x, int y) const override;
+	/// we inherit the mode
+	mode_type currentMode() const override { return current_mode_; }
 	///
 	void write(TeXMathStream & os) const override;
 	/// write normalized content
@@ -53,6 +55,8 @@ public:
 	InsetCode lyxCode() const override { return MATH_BRACE_CODE; }
 private:
 	Inset * clone() const override;
+	/// the inherited mode
+	mutable mode_type current_mode_;
 };
 
 

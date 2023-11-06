@@ -43,6 +43,7 @@
 #include "InsetMathSubstack.h"
 #include "InsetMathSymbol.h"
 #include "InsetMathTabular.h"
+#include "InsetMathTextsize.h"
 #include "InsetMathUnderset.h"
 #include "InsetMathUnknown.h"
 #include "InsetMathHull.h"
@@ -488,6 +489,8 @@ MathAtom createInsetMath(docstring const & s, Buffer * buf)
 			return MathAtom(new InsetMathFont(buf, l));
 		if (inset == "oldfont")
 			return MathAtom(new InsetMathFontOld(buf, l));
+		if (inset == "textsize")
+			return MathAtom(new InsetMathTextsize(buf, l));
 		if (inset == "matrix")
 			return MathAtom(new InsetMathAMSArray(buf, s));
 		if (inset == "split")

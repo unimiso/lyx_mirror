@@ -332,6 +332,13 @@ double const hline[] = {
 };
 
 
+double const hline2[] = {
+	1, 0.00, 0.2, 1.0, 0.2,
+	1, 0.00, 0.5, 1.0, 0.5,
+	0
+};
+
+
 double const dot[] = {
 	5, 0.5, 0.5, 0.1, 0.1,
 	0
@@ -409,6 +416,23 @@ double const tilde[] = {
 };
 
 
+double const wave[] = {
+	2, 61,
+	0.00, 0.40,
+	0.01, 0.39, 0.04, 0.21, 0.05, 0.20, 0.06, 0.21, 0.09, 0.39, 0.10, 0.40,
+	0.11, 0.39, 0.14, 0.21, 0.15, 0.20, 0.16, 0.21, 0.19, 0.39, 0.20, 0.40,
+	0.21, 0.39, 0.24, 0.21, 0.25, 0.20, 0.26, 0.21, 0.29, 0.39, 0.30, 0.40,
+	0.31, 0.39, 0.34, 0.21, 0.35, 0.20, 0.36, 0.21, 0.39, 0.39, 0.40, 0.40,
+	0.41, 0.39, 0.44, 0.21, 0.45, 0.20, 0.46, 0.21, 0.49, 0.39, 0.50, 0.40,
+	0.51, 0.39, 0.54, 0.21, 0.55, 0.20, 0.56, 0.21, 0.59, 0.39, 0.60, 0.40,
+	0.61, 0.39, 0.64, 0.21, 0.65, 0.20, 0.66, 0.21, 0.69, 0.39, 0.70, 0.40,
+	0.71, 0.39, 0.74, 0.21, 0.75, 0.20, 0.76, 0.21, 0.79, 0.39, 0.80, 0.40,
+	0.81, 0.39, 0.84, 0.21, 0.85, 0.20, 0.86, 0.21, 0.89, 0.39, 0.90, 0.40,
+	0.91, 0.39, 0.94, 0.21, 0.95, 0.20, 0.96, 0.21, 0.99, 0.39, 1.00, 0.40,
+	0
+};
+
+
 struct deco_struct {
 	double const * data;
 	int angle;
@@ -426,6 +450,9 @@ named_deco_struct deco_table[] = {
 	{"widetilde",           tilde,        0 },
 	{"underbar",            hline,        0 },
 	{"underline",           hline,        0 },
+	{"uline",               hline,        0 },
+	{"uuline",              hline2,       0 },
+	{"uwave",               wave,         0 },
 	{"overline",            hline,        0 },
 	{"underbrace",          brace,        1 },
 	{"overbrace",           brace,        3 },
@@ -703,8 +730,8 @@ void mathed_draw_deco(PainterInfo & pi, int x, int y, int w, int h,
 			pi.pain.ellipse(xc, yc, rx, ry,
 				pi.base.font.color(), Painter::fill_winding);
 		} else {
-			int xp[32];
-			int yp[32];
+			int xp[64];
+			int yp[64];
 			double xshift = (code == 6 ? d[i++] : 0.0);
 			double yshift = (code == 6 ? d[i++] : 0.0);
 			int const n2 = int(d[i++]);

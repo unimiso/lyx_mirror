@@ -432,6 +432,7 @@ SOURCEFILESMATHED = \
 	mathed/InsetMathSubstack.cpp \
 	mathed/InsetMathSymbol.cpp \
 	mathed/InsetMathTabular.cpp \
+	mathed/InsetMathTextsize.cpp \
 	mathed/InsetMathUnderset.cpp \
 	mathed/InsetMathUnknown.cpp \
 	mathed/InsetMathXArrow.cpp \
@@ -503,6 +504,7 @@ HEADERFILESMATHED = \
 	mathed/InsetMathSubstack.h \
 	mathed/InsetMathSymbol.h \
 	mathed/InsetMathTabular.h \
+	mathed/InsetMathTextsize.h \
 	mathed/InsetMathUnderset.h \
 	mathed/InsetMathUnknown.h \
 	mathed/InsetMathXArrow.h \

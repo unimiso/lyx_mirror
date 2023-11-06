@@ -21,6 +21,8 @@
 #include "frontends/FontMetrics.h"
 #include "frontends/Painter.h"
 
+#include <map>
+
 using namespace std;
 
 
@@ -63,7 +65,10 @@ Changer MetricsBase::changeFontSet(string const & name)
 	if (isMathFont(name) || isMathFont(oldname))
 		font = isTextFont(name) ? outer_font : sane_font;
 	augmentFont(font, name);
-	font.setSize(rc->old.font.size());
+	if (isTextFont(name) && isMathFont(oldname))
+		font.setSize(rc->old.outer_font.size());
+	else
+		font.setSize(rc->old.font.size());
 	font.setStyle(rc->old.font.style());
 	if (name == "emph") {
 		font.setColor(oldcolor);
@@ -82,6 +87,30 @@ Changer MetricsBase::changeFontSet(string const & name)
 	 * will complain in C++11 mode, but gcc 4.9 requires this. */
 	return std::move(rc);
 #endif
+}
+
+
+Changer MetricsBase::changeFontSize(string const & size, bool mathmode)
+{
+	map<string, FontSize> sizes = {
+		{"tiny", TINY_SIZE},
+		{"scriptsize", SCRIPT_SIZE},
+		{"footnotesize", FOOTNOTE_SIZE},
+		{"small", SMALL_SIZE},
+		{"normalsize", NORMAL_SIZE},
+		{"large", LARGE_SIZE},
+		{"Large", LARGER_SIZE},
+		{"LARGE", LARGEST_SIZE},
+		{"huge", HUGE_SIZE},
+		{"Huge", HUGER_SIZE}
+	};
+	RefChanger<MetricsBase> rc = make_save(*this);
+	// In math mode we only record the size in outer_font
+	if (mathmode)
+		outer_font.setSize(sizes[size]);
+	else
+		font.setSize(sizes[size]);
+	return rc;
 }
 
 

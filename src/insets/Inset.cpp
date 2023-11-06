@@ -173,6 +173,7 @@ static void build_translator()
 	insetnames[MATH_SUBSTACK_CODE] = InsetName("mathsubstack");
 	insetnames[MATH_SYMBOL_CODE] = InsetName("mathsymbol");
 	insetnames[MATH_TABULAR_CODE] = InsetName("mathtabular");
+	insetnames[MATH_TEXTSIZE_CODE] = InsetName("mathtextsize");
 	insetnames[MATH_UNDERSET_CODE] = InsetName("mathunderset");
 	insetnames[MATH_UNKNOWN_CODE] = InsetName("mathunknown");
 	insetnames[MATH_XARROW_CODE] = InsetName("mathxarrow");

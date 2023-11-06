@@ -2007,7 +2007,7 @@ bool Parser::parse1(InsetMathGrid & grid, unsigned flags,
 						FLAG_ITEM, asMode(mode, l->extra));
 				}
 
-				else if (l->inset == "oldfont") {
+				else if (l->inset == "oldfont" || l->inset == "textsize") {
 					cell->push_back(createInsetMath(t.cs(), buf));
 					parse(cell->back().nucleus()->cell(0),
 						flags | FLAG_ALIGN, asMode(mode, l->extra));

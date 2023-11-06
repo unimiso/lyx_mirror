@@ -215,8 +215,7 @@ public:
 	/// move backward one paragraph
 	void backwardPar();
 	/// move backward one inset
-	/// not used currently, uncomment if you need it
-	//void backwardInset();
+	void backwardInset();
 
 	/// are we some 'extension' (i.e. deeper nested) of the given iterator
 	bool hasPart(DocIterator const & it) const;

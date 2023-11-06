@@ -20,8 +20,10 @@
 #include "InsetMathChar.h"
 #include "InsetMathColor.h"
 #include "InsetMathComment.h"
+#include "InsetMathDecoration.h"
 #include "InsetMathDelim.h"
 #include "InsetMathEnsureMath.h"
+#include "InsetMathFont.h"
 #include "InsetMathHull.h"
 #include "InsetMathRef.h"
 #include "InsetMathScript.h"
@@ -509,13 +511,264 @@ void InsetMathNest::handleNest(Cursor & cur, MathAtom const & nest,
 
 void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 {
+	bool font_changed = false;
 	cur.recordUndoSelection();
 	Font font;
 	bool b;
 	font.fromString(to_utf8(arg), b);
 	if (font.fontInfo().color() != Color_inherit &&
-	    font.fontInfo().color() != Color_ignore)
+	    font.fontInfo().color() != Color_ignore) {
 		handleNest(cur, MathAtom(new InsetMathColor(buffer_, true, font.fontInfo().color())));
+		font_changed = true;
+	}
+
+	docstring im;
+	InsetMathFont const * f = asFontInset();
+
+	switch(font.fontInfo().family()) {
+	case ROMAN_FAMILY:
+		if (!f || (f->name() != "textrm" && f->name() != "mathrm"))
+			im = currentMode() != MATH_MODE ? from_ascii("textrm")
+							: from_ascii("mathrm");
+		break;
+	case SANS_FAMILY:
+		if (!f || (f->name() != "textsf" && f->name() != "mathsf"))
+			im = currentMode() != MATH_MODE ? from_ascii("textsf")
+							: from_ascii("mathsf");
+		break;
+	case TYPEWRITER_FAMILY:
+		if (!f || (f->name() != "texttt" && f->name() != "mathtt"))
+			im = currentMode() != MATH_MODE ? from_ascii("texttt")
+							: from_ascii("mathtt");
+		break;
+	case SYMBOL_FAMILY:
+	case CMR_FAMILY:
+	case CMSY_FAMILY:
+	case CMM_FAMILY:
+	case CMEX_FAMILY:
+	case MSA_FAMILY:
+	case MSB_FAMILY:
+	case DS_FAMILY:
+	case EUFRAK_FAMILY:
+	case RSFS_FAMILY:
+	case STMARY_FAMILY:
+	case ESINT_FAMILY:
+	case INHERIT_FAMILY:
+	case IGNORE_FAMILY:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	switch(font.fontInfo().series()) {
+	case MEDIUM_SERIES:
+		if (!f || (f->name() != "textmd" && f->name() != "mathrm"))
+			im = currentMode() != MATH_MODE ? from_ascii("textmd")
+							: from_ascii("mathrm");
+		break;
+	case BOLD_SERIES:
+		if (!f || (f->name() != "textbf" && f->name() != "mathbf"))
+			im = currentMode() != MATH_MODE ? from_ascii("textbf")
+							: from_ascii("mathbf");
+		break;
+	case INHERIT_SERIES:
+	case IGNORE_SERIES:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	switch(font.fontInfo().shape()) {
+	case UP_SHAPE:
+		if (!f || (f->name() != "textup" && f->name() != "mathrm"))
+			im = currentMode() != MATH_MODE ? from_ascii("textup")
+							: from_ascii("mathrm");
+		break;
+	case ITALIC_SHAPE:
+		if (!f || (f->name() != "textit" && f->name() != "mathit"))
+			im = currentMode() != MATH_MODE ? from_ascii("textit")
+							: from_ascii("mathit");
+		break;
+	case SLANTED_SHAPE:
+		if (!f || f->name() != "textsl")
+			im = currentMode() != MATH_MODE ? from_ascii("textsl")
+							: from_ascii("error");
+		break;
+	case SMALLCAPS_SHAPE:
+		if (!f || f->name() != "textsc")
+			im = currentMode() != MATH_MODE ? from_ascii("textsc")
+							: from_ascii("error");
+		break;
+	case INHERIT_SHAPE:
+	case IGNORE_SHAPE:
+		break;
+	}
+	if (!im.empty() && im != "error") {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	switch(font.fontInfo().size()) {
+	case TINY_SIZE:
+		im = from_ascii("tiny");
+		break;
+	case SCRIPT_SIZE:
+		im = from_ascii("scriptsize");
+		break;
+	case FOOTNOTE_SIZE:
+		im = from_ascii("footnotesize");
+		break;
+	case SMALL_SIZE:
+		im = from_ascii("small");
+		break;
+	case NORMAL_SIZE:
+		im = from_ascii("normalsize");
+		break;
+	case LARGE_SIZE:
+		im = from_ascii("large");
+		break;
+	case LARGER_SIZE:
+		im = from_ascii("Large");
+		break;
+	case LARGEST_SIZE:
+		im = from_ascii("LARGE");
+		break;
+	case HUGE_SIZE:
+		im = from_ascii("huge");
+		break;
+	case HUGER_SIZE:
+		im = from_ascii("Huge");
+		break;
+	case INCREASE_SIZE:
+	case DECREASE_SIZE:
+	case INHERIT_SIZE:
+	case IGNORE_SIZE:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	InsetMathDecoration const * d = asDecorationInset();
+
+	if (font.fontInfo().underbar() == FONT_OFF && d && d->name() == "uline") {
+			lyxerr << "Remove uline" << endl;
+	}
+	if (font.fontInfo().uuline() == FONT_OFF && d && d->name() == "uuline") {
+			lyxerr << "Remove uuline" << endl;
+	}
+	if (font.fontInfo().uwave() == FONT_OFF && d && d->name() == "uwave") {
+			lyxerr << "Remove uwave" << endl;
+	}
+
+	switch(font.fontInfo().underbar()) {
+	case FONT_ON:
+		if (!d || d->name() != "uline")
+			im = from_ascii("uline");
+		break;
+	case FONT_OFF:
+	case FONT_TOGGLE:
+	case FONT_INHERIT:
+	case FONT_IGNORE:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	switch(font.fontInfo().uuline()) {
+	case FONT_ON:
+		if (!d || d->name() != "uuline")
+			im = from_ascii("uuline");
+		break;
+	case FONT_OFF:
+	case FONT_TOGGLE:
+	case FONT_INHERIT:
+	case FONT_IGNORE:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
+
+	switch(font.fontInfo().uwave()) {
+	case FONT_ON:
+		if (!d || d->name() != "uwave")
+			im = from_ascii("uwave");
+		break;
+	case FONT_OFF:
+	case FONT_TOGGLE:
+	case FONT_INHERIT:
+	case FONT_IGNORE:
+		break;
+	}
+	if (!im.empty()) {
+		if (font_changed) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		handleNest(cur, createInsetMath(im, cur.buffer()));
+		im.clear();
+		font_changed = true;
+	}
 
 	// FIXME: support other font changes here as well?
 }

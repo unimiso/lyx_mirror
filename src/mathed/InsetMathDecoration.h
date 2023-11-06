@@ -26,6 +26,10 @@ public:
 	///
 	explicit InsetMathDecoration(Buffer * buf, latexkeys const * key);
 	///
+	InsetMathDecoration * asDecorationInset() override { return this; }
+	///
+	InsetMathDecoration const * asDecorationInset() const override { return this; }
+	///
 	mode_type currentMode() const override;
 	///
 	void draw(PainterInfo &, int x, int y) const override;
@@ -50,6 +54,8 @@ public:
 	///
 	InsetCode lyxCode() const override { return MATH_DECORATION_CODE; }
 	///
+	docstring name() const override;
+	///
 	void mathmlize(MathMLStream &) const override;
 	///
 	void htmlize(HtmlStream &) const override;
@@ -73,6 +79,8 @@ private:
 	mutable int dy_ = 0;
 	/// width for non-wide deco
 	mutable int dw_ = 0;
+	/// mode of the containing inset
+	mutable mode_type outer_mode_;
 };
 
 } // namespace lyx

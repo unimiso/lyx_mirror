@@ -40,7 +40,7 @@ namespace lyx {
 
 
 InsetMathDecoration::InsetMathDecoration(Buffer * buf, latexkeys const * key)
-	: InsetMathNest(buf, 1), key_(key)
+	: InsetMathNest(buf, 1), key_(key), outer_mode_(UNDECIDED_MODE)
 {
 //	lyxerr << " creating deco " << key->name << endl;
 }
@@ -54,7 +54,11 @@ Inset * InsetMathDecoration::clone() const
 
 bool InsetMathDecoration::upper() const
 {
-	return key_->name.substr(0, 5) != "under" && key_->name != "utilde";
+	return key_->name.substr(0, 5) != "under" &&
+	       key_->name != "utilde" &&
+	       key_->name != "uline" &&
+	       key_->name != "uuline" &&
+	       key_->name != "uwave";
 }
 
 
@@ -94,6 +98,9 @@ bool InsetMathDecoration::wide() const
 	return
 			key_->name == "overline" ||
 			key_->name == "underline" ||
+			key_->name == "uline" ||
+			key_->name == "uuline" ||
+			key_->name == "uwave" ||
 			key_->name == "overbrace" ||
 			key_->name == "underbrace" ||
 			key_->name == "overleftarrow" ||
@@ -111,12 +118,21 @@ bool InsetMathDecoration::wide() const
 
 InsetMath::mode_type InsetMathDecoration::currentMode() const
 {
-	return key_->name == "underbar" ? TEXT_MODE : MATH_MODE;
+	if (key_->name == "underbar")
+		return TEXT_MODE;
+
+	if (key_->name == "uline" || key_->name == "uuline" ||
+	    key_->name == "uwave")
+		return outer_mode_;
+
+	return MATH_MODE;
 }
 
 
 void InsetMathDecoration::metrics(MetricsInfo & mi, Dimension & dim) const
 {
+	outer_mode_ = isTextFont(mi.base.fontname) ? TEXT_MODE : MATH_MODE;
+
 	Changer dummy = mi.base.changeEnsureMath(currentMode());
 
 	cell(0).metrics(mi, dim);
@@ -140,6 +156,8 @@ void InsetMathDecoration::metrics(MetricsInfo & mi, Dimension & dim) const
 
 void InsetMathDecoration::draw(PainterInfo & pi, int x, int y) const
 {
+	outer_mode_ = isTextFont(pi.base.fontname) ? TEXT_MODE : MATH_MODE;
+
 	Changer dummy = pi.base.changeEnsureMath(currentMode());
 
 	cell(0).draw(pi, x, y);
@@ -163,7 +181,9 @@ void InsetMathDecoration::draw(PainterInfo & pi, int x, int y) const
 
 void InsetMathDecoration::write(TeXMathStream & os) const
 {
-	MathEnsurer ensurer(os);
+	bool needs_mathmode = currentMode() == MATH_MODE;
+	bool textmode_macro = currentMode() == TEXT_MODE;
+	MathEnsurer ensurer(os, needs_mathmode, true, textmode_macro);
 	if (os.fragile() && protect())
 		os << "\\protect";
 	os << '\\' << key_->name << '{';
@@ -176,6 +196,12 @@ void InsetMathDecoration::write(TeXMathStream & os) const
 void InsetMathDecoration::normalize(NormalStream & os) const
 {
 	os << "[deco " << key_->name << ' ' <<  cell(0) << ']';
+}
+
+
+docstring InsetMathDecoration::name() const
+{
+	return key_->name;
 }
 
 
@@ -215,6 +241,7 @@ namespace {
 		t["overline"] = Attributes(true, "&#x00AF;");
 		t["overrightarrow"] = Attributes(true, "&#x27F6;");
 		t["tilde"] = Attributes(true, "&#x02DC;");
+		t["uline"] = Attributes(false, "&#x00AF;");
 		t["underbar"] = Attributes(false, "&#x0332;");
 		t["underbrace"] = Attributes(false, "&#x23DF;");
 		t["underleftarrow"] = Attributes(false, "&#x27F5;");
@@ -224,6 +251,8 @@ namespace {
 		t["underrightarrow"] = Attributes(false, "&#x27F6;");
 		t["undertilde"] = Attributes(false, "&#x223C;");
 		t["utilde"] = Attributes(false, "&#x223C;");
+		t["uuline"] = Attributes(false, "&#x2017;");
+		t["uwave"] = Attributes(false, "&#x223C;");
 		t["vec"] = Attributes(true, "&#x2192;");
 		t["widehat"] = Attributes(true, "&#x005E;");
 		t["widetilde"] = Attributes(true, "&#x223C;");
@@ -261,7 +290,8 @@ void InsetMathDecoration::htmlize(HtmlStream & os) const
 		return;
 	}
 
-	if (name == "underbar" || name == "underline") {
+	if (name == "underbar" || name == "underline" || name == "uline"
+	    || name == "uuline" || name == "uwave") {
 		os << MTag("span", "class='underbar'") << cell(0) << ETag("span");
 		return;
 	}
@@ -295,7 +325,8 @@ void InsetMathDecoration::validate(LaTeXFeatures & features) const
 		string const name = to_utf8(key_->name);
 		if (name == "bar") {
 			features.addCSSSnippet("span.overbar{border-top: thin black solid;}");
-		} else if (name == "underbar" || name == "underline") {
+		} else if (name == "underbar" || name == "underline" ||
+		           name == "uline" || name == "uuline" || name == "uwave") {
 			features.addCSSSnippet("span.underbar{border-bottom: thin black solid;}");
 		} else {
 			features.addCSSSnippet(

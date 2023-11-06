@@ -58,6 +58,8 @@ public:
 
 	/// Temporarily change a full font.
 	Changer changeFontSet(std::string const & name);
+	/// Temporarily change font size in text mode, only record it in math mode.
+	Changer changeFontSize(std::string const & fontsize, bool mathmode);
 	/// Temporarily change the font to math if needed.
 	Changer changeEnsureMath(Inset::mode_type mode = Inset::MATH_MODE);
 	// Temporarily change to the style suitable for use in fractions
