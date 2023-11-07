@@ -2007,6 +2007,8 @@ bool Cursor::upDownInMath(bool up)
 		// try to find best position within this inset
 		if (!selection())
 			setCursor(bruteFind(*this, xo, yo));
+		// FIXME : this is actually only needed for InsetMathMacro (bug #12952).
+		screenUpdateFlags(Update::SinglePar);
 		return true;
 	}
 
