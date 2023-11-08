@@ -84,7 +84,7 @@ void InsetMathTextsize::write(TeXMathStream & os) const
 
 void InsetMathTextsize::normalize(NormalStream & os) const
 {
-	os << "[font " << key_->name << ' ' << cell(0) << ']';
+	os << "[size " << key_->name << ' ' << cell(0) << ']';
 }
 
 

@@ -511,7 +511,7 @@ void InsetMathNest::handleNest(Cursor & cur, MathAtom const & nest,
 
 void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 {
-	bool font_changed = false;
+	bool include_previous_change = false;
 	cur.recordUndoSelection();
 	Font font;
 	bool b;
@@ -519,7 +519,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	if (font.fontInfo().color() != Color_inherit &&
 	    font.fontInfo().color() != Color_ignore) {
 		handleNest(cur, MathAtom(new InsetMathColor(buffer_, true, font.fontInfo().color())));
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	docstring im;
@@ -559,7 +559,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -568,7 +568,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	switch(font.fontInfo().series()) {
@@ -587,7 +587,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -596,7 +596,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	switch(font.fontInfo().shape()) {
@@ -625,7 +625,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty() && im != "error") {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -634,7 +634,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	switch(font.fontInfo().size()) {
@@ -675,7 +675,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -684,7 +684,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	InsetMathDecoration const * d = asDecorationInset();
@@ -711,7 +711,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -720,7 +720,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	switch(font.fontInfo().uuline()) {
@@ -735,7 +735,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -744,7 +744,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	switch(font.fontInfo().uwave()) {
@@ -759,7 +759,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (font_changed) {
+		if (include_previous_change) {
 			Cursor oldcur = cur;
 			cur.backwardInset();
 			cur.resetAnchor();
@@ -768,7 +768,7 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
-		font_changed = true;
+		include_previous_change = true;
 	}
 
 	// FIXME: support other font changes here as well?
