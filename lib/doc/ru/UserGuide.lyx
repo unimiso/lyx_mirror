@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -125,6 +125,7 @@ logicalmkup
 \suppress_date true
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -8872,6 +8873,7 @@ Return
 \end_layout
 
 \begin_layout Verbatim
+
 Это текст в окружении 
 \begin_inset Quotes rld
 \end_inset
@@ -8886,6 +8888,7 @@ Return
 \begin_layout Verbatim
 \noindent
 \align block
+
 Следующие две строки - пустые:
 \end_layout
 
@@ -8898,6 +8901,7 @@ Return
 \end_layout
 
 \begin_layout Verbatim
+
 В окружении 
 \begin_inset Quotes rld
 \end_inset
@@ -8934,6 +8938,7 @@ Return
 \end_layout
 
 \begin_layout Verbatim*
+
 Это текст в окружении 
 \begin_inset Quotes rld
 \end_inset
@@ -18338,11 +18343,105 @@ status collapsed
 перенос
 \family default
 .
- Эти дополнительные точки переноса являются всего лишь рекомендациями для \SpecialChar LaTeX
+ Учтите,
+ что добавление мягких переносов отключает точки переноса по умолчанию:
+ cлово больше не будет разрываться в тех местах,
+ где оно разрывалось ранее.
+ Эти установленные точки переноса являются всего лишь рекомендациями для \SpecialChar LaTeX
 .
- Если переносить не требуется —
+ Если переносить не требуется или автоматический перенос слов отключен —
  \SpecialChar LaTeX
  их проигнорирует.
+\end_layout
+
+\begin_layout Standard
+Если имеется часто используемое слово,
+ которое \SpecialChar LaTeX
+ переносит неправильно,
+ можно указать \SpecialChar LaTeX
+,
+ как его переносить,
+ добавив в преамбулу команду 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{<шаблоны>}
+\end_layout
+
+\end_inset
+
+,
+ которая принимает в качестве аргумента одно или несколько слов,
+ точки переноса в которых отмечены дефисом,
+ например 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{dis-quo-ta-tion dis-quo-ta-tions}
+\end_layout
+
+\end_inset
+
+.
+ Можно также использовать этот символ для предотвращения переноса в словах,
+ например 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hyphenation{unbroken}
+\end_layout
+
+\end_inset
+
+.
+ Если таких исключений много,
+ можно собрать их в один файл (например,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+myhyphens.sty
+\end_layout
+
+\end_inset
+
+),
+ а затем импортировать этот файл с помощью команды 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+usepackage{myhyphens}
+\end_layout
+
+\end_inset
+
+.
+ Не забудьте поместить этот файл в то место,
+ где \SpecialChar LaTeX
+ сможет его найти (см.
+ раздел 
+\emph on
+Установка новых файлов \SpecialChar LaTeX
+
+\emph default
+ в 
+\emph on
+Руководстве по настройке
+\emph default
+).
 \end_layout
 
 \begin_layout Standard
@@ -18356,7 +18455,7 @@ status collapsed
  можно использовать неразрывный дефис (
 \family sans
 Вставка\SpecialChar menuseparator
-Форматирование\SpecialChar menuseparator
+Специальный символ\SpecialChar menuseparator
 Неразрывный дефис
 \family default
 ) или поместить фразу в 
@@ -47861,6 +47960,22 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Стиль пользовательского интерфейса
+\family default
+ позволяет изменить внешний вид элементов управления пользовательского интерфейса \SpecialChar LyX
+.
+ В разных операционных системах могут быть разные варианты.
+ В некоторых операционных системах одни стили могут поддерживать темный режим,
+ а другие —
+ нет.
+ Для того чтобы использовать темный режим в \SpecialChar LyX
+,
+ необходимо включить его в настройках системы.
 \end_layout
 
 \begin_layout Subsubsection

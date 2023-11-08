@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-11-05 11:07-0500\n"
-"PO-Revision-Date: 2023-03-20 00:18+0100\n"
+"PO-Revision-Date: 2023-11-08 21:50+0100\n"
 "Last-Translator: Yuriy Skalko <yuriy.skalko@gmail.com>\n"
 "Language-Team: Russian <lyx-docs@lists.lyx.org>\n"
 "Language: ru\n"
@@ -26,14 +26,12 @@ msgid "Version"
 msgstr "Версия"
 
 #: src/frontends/qt/ui/AboutUi.ui:141
-#, fuzzy
 msgid "System directory"
-msgstr "Нет системного каталога"
+msgstr "Системный каталог"
 
 #: src/frontends/qt/ui/AboutUi.ui:153
-#, fuzzy
 msgid "Open system directory in file browser"
-msgstr "Открыть каталог пользователя в файловом менеджере"
+msgstr "Открыть системный каталог в файловом менеджере"
 
 #: src/frontends/qt/ui/AboutUi.ui:156
 msgid "[[do]]&Open"
@@ -2658,11 +2656,12 @@ msgid ""
 "Attempt to display formatted cross-references as they would appear in the "
 "output, e.g., as \"Theorem 1\" rather than just as the label."
 msgstr ""
+"Попытаться отобразить форматированные перекрёстные ссылки так, как они будут "
+"выглядеть в выводе, например, как \"Теорема 1\", а не просто в виде метки."
 
 #: src/frontends/qt/ui/LaTeXUi.ui:214
-#, fuzzy
 msgid "Format cross-references in the &work area"
-msgstr "Пометить изменения в рабочей области как "
+msgstr "Форматировать перекрёстные ссылки в рабочей области"
 
 #: src/frontends/qt/ui/LanguageUi.ui:39
 msgid "&Quote style:"
@@ -2687,9 +2686,8 @@ msgid "Use d&ynamic quotation marks"
 msgstr "Использовать динамические кавычки"
 
 #: src/frontends/qt/ui/LanguageUi.ui:87
-#, fuzzy
 msgid "Encoding"
-msgstr "Кодировка:"
+msgstr "Кодировка"
 
 #: src/frontends/qt/ui/LanguageUi.ui:95 src/frontends/qt/ui/LyXFilesUi.ui:32
 #: src/frontends/qt/ui/MathMatrixUi.ui:109
@@ -2889,14 +2887,12 @@ msgid "&Extended character table"
 msgstr "Расширенная таблица символов"
 
 #: src/frontends/qt/ui/ListingsUi.ui:334
-#, fuzzy
 msgid "Language[[Programming]]"
-msgstr "Грамотное программирование"
+msgstr "Язык"
 
 #: src/frontends/qt/ui/ListingsUi.ui:343
-#, fuzzy
 msgid "Lan&guage[[Programming]]:"
-msgstr "Грамотное программирование"
+msgstr "Язык:"
 
 #: src/frontends/qt/ui/ListingsUi.ui:353
 msgid "Select the programming language"
@@ -3048,6 +3044,9 @@ msgid ""
 "Use the margin settings provided by the document class.<br>Note that if this "
 "is unchecked, different defaults may be used."
 msgstr ""
+"Использовать настройки полей, предоставляемые классом документа.<br>Обратите "
+"внимание, что если флажок не установлен, то могут использоваться другие "
+"значения по умолчанию."
 
 #: src/frontends/qt/ui/MarginsUi.ui:41
 msgid "&Default margins"
@@ -3355,9 +3354,8 @@ msgid "&Numbering"
 msgstr "Нумерация"
 
 #: src/frontends/qt/ui/OutputUi.ui:37
-#, fuzzy
 msgid "&LaTeX"
-msgstr "LaTeX"
+msgstr "&LaTeX"
 
 #: src/frontends/qt/ui/OutputUi.ui:43
 msgid "LaTeX Output Options"
@@ -3395,9 +3393,8 @@ msgid "Put fra&gile content out of moving arguments"
 msgstr "Извлекать хрупкое содержимое из перемещаемых аргументов"
 
 #: src/frontends/qt/ui/OutputUi.ui:149
-#, fuzzy
 msgid "&XHTML"
-msgstr "HTML"
+msgstr "&XHTML"
 
 #: src/frontends/qt/ui/OutputUi.ui:155
 msgid "XHTML Output Options"
@@ -3451,9 +3448,8 @@ msgid "&Math output:"
 msgstr "Вывод формул:"
 
 #: src/frontends/qt/ui/OutputUi.ui:297
-#, fuzzy
 msgid "&DocBook"
-msgstr "DocBook"
+msgstr "&DocBook"
 
 #: src/frontends/qt/ui/OutputUi.ui:303
 msgid "DocBook Output Options"
@@ -4117,7 +4113,6 @@ msgid "Backup &original documents when saving"
 msgstr "Создавать резервные копии при сохранении"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:103
-#, fuzzy
 msgid ""
 "If this is checked, LyX saves a temporary copy of changed documents in the "
 "given interval (as #filename.lyx# in the given directory). As opposed to the "
@@ -4126,12 +4121,12 @@ msgid ""
 "emergency file (named filename.lyx.emergency) fails, this snapshot can be at "
 "rescue."
 msgstr ""
-"Если флажок установлен, LyX сохраняет временную копию измененных документов "
+"Если флажок установлен, LyX сохраняет временную копию изменённых документов "
 "в заданном интервале (как #filename.lyx# в заданном каталоге). В отличие от "
 "резервного копирования, задаваемого выше, эта временная копия будет удалена "
 "сразу после сохранения изменений. Если приложение аварийно завершает работу "
-"с несохраненными изменениями и восстановление из аварийного файла не "
-"удается, эта копия может стать спасением."
+"с несохранёнными изменениями и восстановление из аварийного файла (с именем "
+"filename.lyx.emergency) не удаётся, эта копия может стать спасением."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:106
 msgid "Make a&uto-save snapshots every[[ N minutes]]"
@@ -4190,10 +4185,10 @@ msgid "Use s&ingle instance"
 msgstr "Использовать один экземпляр"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:197
-#, fuzzy
 msgid "Whether to place close button on each tab or only one in the top right."
 msgstr ""
-"Поместить кнопку закрытия на каждую вкладку или только в верхний левый угол."
+"Показывать кнопку закрытия на каждой вкладке или только одну в правом "
+"верхнем углу."
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:200
 msgid "Displa&y single close-tab button"
@@ -4259,14 +4254,15 @@ msgid "Cursor &follows scrollbar"
 msgstr "&Курсор следует за полосой прокрутки"
 
 #: src/frontends/qt/ui/PrefEditUi.ui:116
-#, fuzzy
 msgid ""
 "If this is activated, LyX will search your disk for matching files when "
 "clicking on \"Try to Open Citation Content...\" in the citation context "
 "menu. Note the security implications described in User Guide, 6.6.4."
 msgstr ""
 "При включении LyX будет искать подходящие файлы на диске для пункта "
-"\"Открыть источник\" контекстного меню библиографической ссылки"
+"\"Попробовать открыть источник...\" контекстного меню библиографической "
+"ссылки. Учитывайте последствия для безопасности, описанные в Руководстве "
+"пользователя, раздел 6.6.4."
 
 #: src/frontends/qt/ui/PrefEditUi.ui:122
 msgid "Search &drive for cited files"
@@ -4869,9 +4865,9 @@ msgstr ""
 "Разрешены относительные и абсолютные пути. Относительные пути будут "
 "расширены относительно рабочего каталога (WD). Для всех путей, кроме "
 "\"Префикс TEXINPUTS\", WD является каталогом, из которого вы запускаете LyX, "
-"и поэтому может меняться для каждой сессии LyX. Для пути \"Префикс "
-"TEXINPUTS\" WD - это каталог, содержащий текущий документ. Путь \".\" (без "
-"кавычек) является общим примером относительного пути и ссылается на WD."
+"и поэтому может меняться для каждой сессии LyX. Для пути \"Префикс TEXINPUTS"
+"\" WD - это каталог, содержащий текущий документ. Путь \".\" (без кавычек) "
+"является общим примером относительного пути и ссылается на WD."
 
 #: src/frontends/qt/ui/PrefPathsUi.ui:36
 msgid "&PATH prefix:"
@@ -5095,15 +5091,16 @@ msgid "&User interface file:"
 msgstr "&Файл пользовательского интерфейса:"
 
 #: src/frontends/qt/ui/PrefUi.ui:88
-#, fuzzy
 msgid "User interface &style:"
-msgstr "&Файл пользовательского интерфейса:"
+msgstr "&Стиль пользовательского интерфейса:"
 
 #: src/frontends/qt/ui/PrefUi.ui:98
 msgid ""
 "You can set a custom style here. Note that only certain styles may support "
 "dark mode, e.g. fusion on Windows."
 msgstr ""
+"Здесь можно задать пользовательский стиль. Обратите внимание, что только "
+"некоторые стили могут поддерживать тёмный режим, например fusion в Windows."
 
 #: src/frontends/qt/ui/PrefUi.ui:126
 msgid "Context Help"
@@ -5276,9 +5273,8 @@ msgid "Label"
 msgstr "Метка"
 
 #: src/frontends/qt/ui/RefUi.ui:38
-#, fuzzy
 msgid "Reference counter value"
-msgstr "Восстановить сохранённое значение счётчика"
+msgstr "Значение счётчика ссылки"
 
 #: src/frontends/qt/ui/RefUi.ui:63
 msgid "&In[[buffer]]:"
@@ -7007,9 +7003,8 @@ msgstr "Случай"
 
 #: lib/layouts/AEA.layout:206 lib/layouts/elsart.layout:546
 #: lib/layouts/theorems-without-preamble.inc:458
-#, fuzzy
 msgid "Case ##"
-msgstr "Случай #."
+msgstr "Случай ##"
 
 #: lib/layouts/AEA.layout:213 lib/layouts/theorems-without-preamble.inc:464
 msgid "Case \\thecase."
@@ -7360,9 +7355,8 @@ msgstr "Замечание"
 
 #: lib/layouts/AEA.layout:317 lib/layouts/ijmpd.layout:452
 #: lib/layouts/theorems-without-preamble.inc:416
-#, fuzzy
 msgid "Remark ##"
-msgstr "Замечание #."
+msgstr "Замечание ##"
 
 #: lib/layouts/AEA.layout:322 lib/layouts/ijmpc.layout:439
 #: lib/layouts/ijmpd.layout:455 lib/layouts/theorems-ams-bytype.inc:325
@@ -7396,9 +7390,8 @@ msgid "Solution"
 msgstr "Решение"
 
 #: lib/layouts/AEA.layout:330 lib/layouts/theorems-without-preamble.inc:349
-#, fuzzy
 msgid "Solution ##"
-msgstr "Решение #."
+msgstr "Решение ##"
 
 #: lib/layouts/AEA.layout:337 lib/layouts/theorems-ams-bytype.inc:301
 #: lib/layouts/theorems-ams-chap-bytype.inc:383
@@ -7434,9 +7427,8 @@ msgid "Summary"
 msgstr "Резюме"
 
 #: lib/layouts/AEA.layout:345 lib/layouts/elsart.layout:528
-#, fuzzy
 msgid "Summary ##"
-msgstr "Резюме"
+msgstr "Резюме ##"
 
 #: lib/layouts/AEA.layout:356 src/frontends/qt/Menus.cpp:1804
 #: src/frontends/qt/Menus.cpp:1819
@@ -9554,9 +9546,8 @@ msgstr "Список алгоритмов"
 #: lib/layouts/algorithm2e.module:31 lib/layouts/powerdot.layout:607
 #: lib/layouts/revtex4-x.inc:323 lib/layouts/sciposter.layout:100
 #: lib/layouts/stdfloats.inc:54
-#, fuzzy
 msgid "Algorithm ##"
-msgstr "Алгоритм"
+msgstr "Алгоритм ##"
 
 #: lib/layouts/amsart.layout:3 lib/layouts/amsbook.layout:3
 #: lib/examples/Articles:0
@@ -10639,9 +10630,8 @@ msgstr "Презентация"
 
 #: lib/layouts/beamer.layout:1733 lib/layouts/powerdot.layout:572
 #: lib/layouts/sciposter.layout:130 lib/layouts/stdfloats.inc:23
-#, fuzzy
 msgid "Table ##"
-msgstr "Таблица"
+msgstr "Таблица ##"
 
 #: lib/layouts/beamer.layout:1738 lib/layouts/powerdot.layout:578
 #: lib/layouts/powerdot.layout:641 lib/layouts/sciposter.layout:105
@@ -10651,9 +10641,8 @@ msgstr "Рисунок"
 
 #: lib/layouts/beamer.layout:1747 lib/layouts/powerdot.layout:590
 #: lib/layouts/sciposter.layout:115 lib/layouts/stdfloats.inc:39
-#, fuzzy
 msgid "Figure ##"
-msgstr "Рисунок"
+msgstr "Рисунок ##"
 
 #: lib/layouts/beamerposter.layout:3 lib/examples/Articles:0
 msgid "Beamerposter"
@@ -10802,18 +10791,16 @@ msgid "Act Number"
 msgstr "Номер акта"
 
 #: lib/layouts/broadway.layout:28
-#, fuzzy
 msgid "Act ##"
-msgstr "Часть ##"
+msgstr "Акт ##"
 
 #: lib/layouts/broadway.layout:33
 msgid "Scene Number"
 msgstr "Номер сцены"
 
 #: lib/layouts/broadway.layout:34
-#, fuzzy
 msgid "Scene ##"
-msgstr "Сцена"
+msgstr "Сцена ##"
 
 #: lib/layouts/broadway.layout:38 lib/layouts/hollywood.layout:41
 msgid "Dialogue"
@@ -11300,7 +11287,6 @@ msgid "Custom Header/Footer Text"
 msgstr "Настраиваемые колонтитулы"
 
 #: lib/layouts/customHeadersFooters.module:10
-#, fuzzy
 msgid ""
 "Adds environments to define header and footer lines. See the Additional "
 "manual, section Modules > Page Layout > Custom Header/Footer Text, for a "
@@ -11308,6 +11294,7 @@ msgid ""
 "in the menu Document Settings -> Page Layout to 'fancy'!"
 msgstr ""
 "Добавляет окружения для задания строк верхнего и нижнего колонтитулов. "
+"Подробное описание приведено в руководстве по дополнительным возможностям. "
 "ПРИМЕЧАНИЕ: для использования этого модуля вы должны установить для "
 "параметра 'Стиль колонтитулов' (меню Документ -> Настройки -> Макет "
 "страницы) значение 'красивый (fancy)'!"
@@ -12334,9 +12321,8 @@ msgid "\\thesection.\\arabic{equation}"
 msgstr "\\thesection.\\arabic{equation}"
 
 #: lib/layouts/eqs-within-sections.module:20
-#, fuzzy
 msgid "(\\thesection.\\arabic{equation})"
-msgstr "\\thesection.\\arabic{equation}"
+msgstr "(\\thesection.\\arabic{equation})"
 
 #: lib/layouts/europasscv.layout:3 lib/examples/Articles:0
 msgid "Europass CV (2013)"
@@ -12725,7 +12711,7 @@ msgstr ""
 
 #: lib/layouts/fixltx2e.module:2
 msgid "LaTeX Kernel Fixes (Obsolete)"
-msgstr "Исправления ядра LaTeX (устаревшая версия)"
+msgstr "Исправления ядра LaTeX (устаревший)"
 
 #: lib/layouts/fixltx2e.module:11
 msgid ""
@@ -12742,8 +12728,8 @@ msgstr ""
 "обратной совместимости. Если вы используете этот модуль, ваш свёрстанный "
 "документ может выглядеть по-разному на разных версиях LaTeX в зависимости от "
 "версии fixltx2e. Примечание: последние ядра LaTeX (по состоянию на "
-"01-01-2015) включают в себя функции fixltx2e, поэтому модуль \"Fix LaTeX\" "
-"становится устаревшим при использовании новых дистрибутивов LaTeX."
+"01-01-2015) включают в себя функции fixltx2e, поэтому этот модуль становится "
+"устаревшим при использовании новых дистрибутивов LaTeX."
 
 #: lib/layouts/fixme.module:2
 msgid "FiXme Notes"
@@ -13606,9 +13592,8 @@ msgid "Remarks"
 msgstr "Замечания"
 
 #: lib/layouts/heb-article.layout:107
-#, fuzzy
 msgid "Remarks \\thetheorem."
-msgstr "Замечание \\thetheorem."
+msgstr "Замечания \\thetheorem."
 
 #: lib/layouts/heb-article.layout:131 lib/layouts/ijmpc.layout:412
 #: lib/layouts/ijmpd.layout:418
@@ -13835,9 +13820,8 @@ msgid "Question \\thequestion."
 msgstr "Вопрос \\thequestion."
 
 #: lib/layouts/ijmpc.layout:469 lib/layouts/ijmpd.layout:503
-#, fuzzy
 msgid "Claim ##"
-msgstr "Утверждение #."
+msgstr "Утверждение ##"
 
 #: lib/layouts/ijmpc.layout:473 lib/layouts/ijmpd.layout:507
 #: lib/layouts/theorems-ams-bytype.inc:356
@@ -13871,29 +13855,24 @@ msgid "Comby"
 msgstr "Клавиатура"
 
 #: lib/layouts/ijmpd.layout:434
-#, fuzzy
 msgid "Theorem ##"
-msgstr "Теорема #."
+msgstr "Теорема ##"
 
 #: lib/layouts/ijmpd.layout:465 lib/layouts/theorems-without-preamble.inc:87
-#, fuzzy
 msgid "Corollary ##"
-msgstr "Следствие #."
+msgstr "Следствие ##"
 
 #: lib/layouts/ijmpd.layout:474 lib/layouts/theorems-without-preamble.inc:110
-#, fuzzy
 msgid "Lemma ##"
-msgstr "Лемма #."
+msgstr "Лемма ##"
 
 #: lib/layouts/ijmpd.layout:491 lib/layouts/theorems-without-preamble.inc:506
-#, fuzzy
 msgid "Question ##"
-msgstr "Вопрос #."
+msgstr "Вопрос ##"
 
 #: lib/layouts/ijmpd.layout:516 lib/layouts/theorems-without-preamble.inc:179
-#, fuzzy
 msgid "Conjecture ##"
-msgstr "Гипотеза #."
+msgstr "Гипотеза ##"
 
 #: lib/layouts/ijmpd.layout:526 lib/layouts/theorems-without-preamble.inc:155
 msgid "Prop(osition)"
@@ -13901,9 +13880,8 @@ msgstr "Предложение"
 
 #: lib/layouts/ijmpd.layout:528 lib/layouts/theorems-without-preamble.inc:133
 #: lib/layouts/theorems-without-preamble.inc:156
-#, fuzzy
 msgid "Proposition ##"
-msgstr "Предложение #."
+msgstr "Предложение ##"
 
 #: lib/layouts/initials.module:2
 msgid "Initials (Drop Caps)"
@@ -14660,32 +14638,28 @@ msgid "Numbered Example (multiline)"
 msgstr "Нумерованный пример (многострочный)"
 
 #: lib/layouts/linguistics.module:92
-#, fuzzy
 msgid "Example options"
-msgstr "Параметры подпримеров"
+msgstr "Параметры примеров"
 
 #: lib/layouts/linguistics.module:93
-#, fuzzy
 msgid "Examples options|s"
-msgstr "Параметры подпримеров"
+msgstr "Параметры примеров"
 
 #: lib/layouts/linguistics.module:94
-#, fuzzy
 msgid "Add examples options here"
-msgstr "Вставьте здесь настройки подпримеров"
+msgstr "Вставьте здесь параметры примеров"
 
 #: lib/layouts/linguistics.module:106
 msgid "Numbered Examples (consecutive)"
 msgstr "Нумерованные примеры (последовательно)"
 
 #: lib/layouts/linguistics.module:124
-#, fuzzy
 msgid "Judgment|J"
-msgstr "Документ|Д"
+msgstr "Суждение"
 
 #: lib/layouts/linguistics.module:125
 msgid "Grammaticality judgment marker"
-msgstr ""
+msgstr "Маркер оценки грамматичности"
 
 #: lib/layouts/linguistics.module:130
 msgid "Custom Numbering|s"
@@ -14708,43 +14682,36 @@ msgid "Add subexamples options here"
 msgstr "Вставьте здесь настройки подпримеров"
 
 #: lib/layouts/linguistics.module:157
-#, fuzzy
 msgid "Example Preamble"
-msgstr "Преамбула LaTeX"
+msgstr "Преамбула примера"
 
 #: lib/layouts/linguistics.module:162
-#, fuzzy
 msgid "Ex. Preamble"
-msgstr "Преамбула"
+msgstr "Преамбула примера"
 
 #: lib/layouts/linguistics.module:171
-#, fuzzy
 msgid "Subexample Preamble"
-msgstr "Подпример"
+msgstr "Преамбула подпримера"
 
 #: lib/layouts/linguistics.module:174
-#, fuzzy
 msgid "Subex. Preamble"
-msgstr "Подпример"
+msgstr "Преамбула подпримера"
 
 #: lib/layouts/linguistics.module:181
-#, fuzzy
 msgid "Example Postamble"
-msgstr "Пример \\theexample."
+msgstr "Постамбула примера"
 
 #: lib/layouts/linguistics.module:184
 msgid "Ex. Postamble"
-msgstr ""
+msgstr "Постамбула примера"
 
 #: lib/layouts/linguistics.module:187
-#, fuzzy
 msgid "Subexample Postamble"
-msgstr "Подпример"
+msgstr "Постамбула подпримера"
 
 #: lib/layouts/linguistics.module:190
-#, fuzzy
 msgid "Subex. Postamble"
-msgstr "Подпример"
+msgstr "Постамбула подпримера"
 
 #: lib/layouts/linguistics.module:202
 msgid "Interlinear Gloss (2 Lines)"
@@ -14768,14 +14735,12 @@ msgstr "Add digloss options here"
 
 #: lib/layouts/linguistics.module:225 lib/layouts/linguistics.module:226
 #: lib/layouts/linguistics.module:281 lib/layouts/linguistics.module:282
-#, fuzzy
 msgid "Sentence Comment"
-msgstr "Предложение"
+msgstr "Комментарий предложения"
 
 #: lib/layouts/linguistics.module:227 lib/layouts/linguistics.module:283
-#, fuzzy
 msgid "Add an optional sentence comment here"
-msgstr "Add the sentence here"
+msgstr "Добавьте сюда необязательный комментарий к предложению"
 
 #: lib/layouts/linguistics.module:231 lib/layouts/linguistics.module:232
 msgid "Interlinear Gloss"
@@ -14786,15 +14751,13 @@ msgid "Add the inter-linear gloss here"
 msgstr "Add the inter-linear gloss here"
 
 #: lib/layouts/linguistics.module:240 lib/layouts/linguistics.module:241
-#, fuzzy
 msgid "Gloss Comment"
-msgstr "закрывать документ"
+msgstr "Комментарий толкования"
 
 #: lib/layouts/linguistics.module:242 lib/layouts/linguistics.module:298
 #: lib/layouts/linguistics.module:313
-#, fuzzy
 msgid "Add an optional gloss comment here"
-msgstr "Add trigloss options here"
+msgstr "Добавьте сюда необязательный комментарий к толкованию"
 
 #: lib/layouts/linguistics.module:246 lib/layouts/linguistics.module:317
 msgid "Translation"
@@ -14830,16 +14793,15 @@ msgstr "Глоссирование (строка 1)|1"
 
 #: lib/layouts/linguistics.module:289
 msgid "Add the first inter-linear gloss line here"
-msgstr "Add the first inter-linear gloss line here"
+msgstr "Добавьте сюда первую строку комментария к толкованию"
 
 #: lib/layouts/linguistics.module:296
-#, fuzzy
 msgid "Gloss Comment (1)"
-msgstr "закрывать документ"
+msgstr "Комментарий толкования (1)"
 
 #: lib/layouts/linguistics.module:297
 msgid "Gloss Comment (Line 1)"
-msgstr ""
+msgstr "Комментарий толкования (строка 1)"
 
 #: lib/layouts/linguistics.module:302
 msgid "Interlinear Gloss (2)"
@@ -14850,18 +14812,16 @@ msgid "Interlinear Gloss (Line 2)|2"
 msgstr "Глоссирование (строка 2)|2"
 
 #: lib/layouts/linguistics.module:304
-#, fuzzy
 msgid "Add the second inter-linear gloss line here"
-msgstr "Add the first inter-linear gloss line here"
+msgstr "Добавьте сюда вторую строку комментария к толкованию"
 
 #: lib/layouts/linguistics.module:311
-#, fuzzy
 msgid "Gloss Comment (2)"
-msgstr "закрывать документ"
+msgstr "Комментарий толкования (2)"
 
 #: lib/layouts/linguistics.module:312
 msgid "Gloss Comment (Line 2)"
-msgstr ""
+msgstr "Комментарий толкования (строка 1)"
 
 #: lib/layouts/linguistics.module:319
 msgid "Add a translation for the glosse"
@@ -15078,9 +15038,8 @@ msgid "List of Tableaux"
 msgstr "Список таблиц (лингв.)"
 
 #: lib/layouts/linguistics.module:608
-#, fuzzy
 msgid "Tableau ##"
-msgstr "Таблица (лингв.)"
+msgstr "Таблица ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -15822,9 +15781,8 @@ msgid "Section ##"
 msgstr "Раздел ##"
 
 #: lib/layouts/numreport.inc:46
-#, fuzzy
 msgid "footnote \\arabic{footnote}"
-msgstr "\\arabic{footnote}"
+msgstr "footnote \\arabic{footnote}"
 
 #: lib/layouts/numrevtex.inc:9
 msgid "\\Roman{section}."
@@ -16422,36 +16380,32 @@ msgid "Numbered List (Level 1)"
 msgstr "Нумерованный список (уровень 1)"
 
 #: lib/layouts/powerdot.layout:615 lib/layouts/stdcounters.inc:52
-#, fuzzy
 msgid "(\\arabic{enumi})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumi})"
 
 #: lib/layouts/powerdot.layout:619 lib/layouts/stdcounters.inc:56
 msgid "Numbered List (Level 2)"
 msgstr "Нумерованный список (уровень 2)"
 
 #: lib/layouts/powerdot.layout:621
-#, fuzzy
 msgid "(\\arabic{enumii})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumii})"
 
 #: lib/layouts/powerdot.layout:625 lib/layouts/stdcounters.inc:63
 msgid "Numbered List (Level 3)"
 msgstr "Нумерованный список (уровень 3)"
 
 #: lib/layouts/powerdot.layout:627
-#, fuzzy
 msgid "(\\arabic{enumiii})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumiii})"
 
 #: lib/layouts/powerdot.layout:631 lib/layouts/stdcounters.inc:70
 msgid "Numbered List (Level 4)"
 msgstr "Нумерованный список (уровень 4)"
 
 #: lib/layouts/powerdot.layout:633
-#, fuzzy
 msgid "(\\arabic{enumiv})"
-msgstr "\\arabic{enumi}."
+msgstr "(\\arabic{enumiv})"
 
 #: lib/layouts/powerdot.layout:637 lib/layouts/stdcounters.inc:77
 msgid "Bibliography Item"
@@ -16611,9 +16565,8 @@ msgid "List of Videos"
 msgstr "Список видео"
 
 #: lib/layouts/revtex4-x.inc:339
-#, fuzzy
 msgid "Video ##"
-msgstr "Видео"
+msgstr "Видео ##"
 
 #: lib/layouts/revtex4-x.inc:343
 msgid "Videos"
@@ -16660,19 +16613,19 @@ msgid "PACS number:"
 msgstr "Номер PACS:"
 
 #: lib/layouts/rsphrase.module:2
-#, fuzzy
 msgid "Chemistry: Risk and Safety Statements (Obsolete)"
-msgstr "Химия: Утверждения о рисках и безопасности"
+msgstr "Химия: Утверждения о рисках и безопасности (устаревший)"
 
 #: lib/layouts/rsphrase.module:8
-#, fuzzy
 msgid ""
 "Provides two insets and one environment to typeset numbers and phrases of "
 "chemical risk and safety statements. Now obsoleted and officially replaced "
 "by GHS Hazard-Precautionary statement system in the EU."
 msgstr ""
 "Предоставляет две вставки и одно окружение для вёрстки номеров и фраз "
-"утверждений о химическом риске и безопасности."
+"утверждений о химическом риске и безопасности. Сейчас это устарело и "
+"официально заменено в ЕС системой обозначений опасности и предосторожности "
+"GHS."
 
 #: lib/layouts/rsphrase.module:12 lib/layouts/rsphrase.module:17
 msgid "R-S number"
@@ -16785,9 +16738,8 @@ msgid "\\thechapter.\\arabic{equation}"
 msgstr "\\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrbook.layout:33
-#, fuzzy
 msgid "equation \\thechapter.\\arabic{equation}"
-msgstr "\\thechapter.\\arabic{equation}"
+msgstr "формула \\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrclass.inc:49
 msgid "\\alph{enumii})"
@@ -17506,27 +17458,24 @@ msgid "\\roman{enumiii}."
 msgstr "\\roman{enumiii}."
 
 #: lib/layouts/stdcounters.inc:66
-#, fuzzy
 msgid "(\\roman{enumiii})"
-msgstr "\\roman{enumiii}."
+msgstr "(\\roman{enumiii})"
 
 #: lib/layouts/stdcounters.inc:72
 msgid "\\Alph{enumiv}."
 msgstr "\\Alph{enumiv}."
 
 #: lib/layouts/stdcounters.inc:73
-#, fuzzy
 msgid "(\\Alph{enumiv})"
-msgstr "\\Alph{enumiv}."
+msgstr "(\\Alph{enumiv})"
 
 #: lib/layouts/stdcounters.inc:86
 msgid "Equation ##"
 msgstr "Формула ##"
 
 #: lib/layouts/stdcounters.inc:91 lib/layouts/stdcounters.inc:96
-#, fuzzy
 msgid "Footnote \\arabic{footnote}"
-msgstr "\\arabic{footnote}"
+msgstr "Сноска \\arabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:97
 msgid "\\fnsymbol{thanks}"
@@ -18527,9 +18476,8 @@ msgid "Case (Level 1)"
 msgstr "Случай (уровень 1)"
 
 #: lib/layouts/theorems-case.inc:13
-#, fuzzy
 msgid "Case \\arabic{casei}"
-msgstr "Случай \\arabic{casei}."
+msgstr "Случай \\arabic{casei}"
 
 #: lib/layouts/theorems-case.inc:14
 msgid "Case \\arabic{casei}."
@@ -18544,9 +18492,8 @@ msgid "Case \\roman{caseii}."
 msgstr "Случай \\roman{caseii}."
 
 #: lib/layouts/theorems-case.inc:20
-#, fuzzy
 msgid "Case \\roman{caseii}"
-msgstr "Случай \\roman{caseii}."
+msgstr "Случай \\roman{caseii}"
 
 #: lib/layouts/theorems-case.inc:23
 msgid "Case (Level 3)"
@@ -18557,18 +18504,16 @@ msgid "Case \\alph{caseiii}."
 msgstr "Случай \\alph{caseiii}."
 
 #: lib/layouts/theorems-case.inc:26
-#, fuzzy
 msgid "Case \\alph{caseiii}"
-msgstr "Случай \\alph{caseiii}."
+msgstr "Случай \\alph{caseiii}"
 
 #: lib/layouts/theorems-case.inc:29
 msgid "Case (Level 4)"
 msgstr "Случай (уровень 4)"
 
 #: lib/layouts/theorems-case.inc:31
-#, fuzzy
 msgid "Case \\arabic{caseiv}"
-msgstr "Случай \\arabic{caseiv}."
+msgstr "Случай \\arabic{caseiv}"
 
 #: lib/layouts/theorems-case.inc:32
 msgid "Case \\arabic{caseiv}."
@@ -18607,54 +18552,44 @@ msgstr ""
 "окружение \"Глава\"."
 
 #: lib/layouts/theorems-counters-bytype.inc:30
-#, fuzzy
 msgid "Fact \\arabic{theorem}"
-msgstr "Заметка \\arabic{theorem}"
+msgstr "Факт \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:48
-#, fuzzy
 msgid "Exercise \\arabic{theorem}"
-msgstr "Пример \\arabic{theorem}"
+msgstr "Упражнение \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:53
-#, fuzzy
 msgid "Solution \\arabic{theorem}"
-msgstr "Предложение \\arabic{theorem}"
+msgstr "Решение \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:16
-#, fuzzy
 msgid "Axiom \\arabic{theorem}"
-msgstr "Утверждение \\arabic{theorem}"
+msgstr "Аксиома \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:20
-#, fuzzy
 msgid "Condition \\arabic{theorem}"
-msgstr "Критерий \\arabic{theorem}"
+msgstr "Условие \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:28
-#, fuzzy
 msgid "Notation \\arabic{theorem}"
-msgstr "Заметка \\arabic{theorem}"
+msgstr "Обозначение \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:32
-#, fuzzy
 msgid "Summary \\arabic{theorem}"
-msgstr "Лемма \\arabic{theorem}"
+msgstr "Резюме \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:36
-#, fuzzy
 msgid "Conclusion \\arabic{theorem}"
-msgstr "Утверждение \\arabic{theorem}"
+msgstr "Заключение \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:40
-#, fuzzy
 msgid "Assumption \\arabic{theorem}"
-msgstr "Предложение \\arabic{theorem}"
+msgstr "Допущение \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:44
-#, fuzzy
 msgid "Question \\arabic{theorem}"
-msgstr "Определение \\arabic{theorem}"
+msgstr "Вопрос \\arabic{theorem}"
 
 #: lib/layouts/theorems-named.module:3
 msgid "Standard Theorems (Nameable)"
@@ -18794,25 +18729,21 @@ msgid "Prop \\theprop."
 msgstr "Предл. \\theprop."
 
 #: lib/layouts/theorems-without-preamble.inc:209
-#, fuzzy
 msgid "Fact ##"
-msgstr "Факт"
+msgstr "Факт ##"
 
 #: lib/layouts/theorems-without-preamble.inc:232
-#, fuzzy
 msgid "Definition ##"
-msgstr "Определение #."
+msgstr "Определение ##"
 
 #: lib/layouts/theorems-without-preamble.inc:263
-#, fuzzy
 msgid "Example ##"
-msgstr "Пример #."
+msgstr "Пример ##"
 
 #: lib/layouts/theorems-without-preamble.inc:285
 #: lib/layouts/theorems-without-preamble.inc:311
-#, fuzzy
 msgid "Problem ##"
-msgstr "Задача #."
+msgstr "Задача ##"
 
 #: lib/layouts/theorems-without-preamble.inc:309
 msgid "Prob(lem)"
@@ -18843,23 +18774,20 @@ msgid "Label of the corresponding problem"
 msgstr "Метка соответствующей задачи"
 
 #: lib/layouts/theorems-without-preamble.inc:392
-#, fuzzy
 msgid "Exercise ##"
-msgstr "Упражнение #."
+msgstr "Упражнение ##"
 
 #: lib/layouts/theorems-without-preamble.inc:482
-#, fuzzy
 msgid "Property ##"
-msgstr "Свойство #."
+msgstr "Свойство ##"
 
 #: lib/layouts/theorems-without-preamble.inc:488
 msgid "Property \\theproperty."
 msgstr "Предл. \\theproperty."
 
 #: lib/layouts/theorems-without-preamble.inc:530
-#, fuzzy
 msgid "Note ##"
-msgstr "Заметка #."
+msgstr "Заметка ##"
 
 #: lib/layouts/todonotes.module:2
 msgid "TODO Notes"
@@ -18998,18 +18926,16 @@ msgid "Margin Figure"
 msgstr "Рисунок на полях"
 
 #: lib/layouts/tufte-book.layout:258
-#, fuzzy
 msgid "Margin Figure ##"
-msgstr "Рисунок на полях"
+msgstr "Рисунок на полях ##"
 
 #: lib/layouts/tufte-book.layout:262
 msgid "Margin Table"
 msgstr "Таблица на полях"
 
 #: lib/layouts/tufte-book.layout:263
-#, fuzzy
 msgid "Margin Table ##"
-msgstr "Таблица на полях"
+msgstr "Таблица на полях ##"
 
 #: lib/layouts/tufte-book.layout:269
 msgid "MarginTable"
@@ -20716,9 +20642,8 @@ msgid "Edit Externally..."
 msgstr "Править внешним редактором...|ш"
 
 #: lib/ui/stdcontext.inc:374 lib/ui/stdcontext.inc:726
-#, fuzzy
 msgid "End Editing Externally"
-msgstr "Завершить внешнее редактирование..."
+msgstr "Завершить внешнее редактирование"
 
 #: lib/ui/stdcontext.inc:381
 msgid "Split Inset|t"
@@ -21034,9 +20959,8 @@ msgid "Emphasized Page Formatting|z"
 msgstr "Выделенный номер страницы"
 
 #: lib/ui/stdcontext.inc:647
-#, fuzzy
 msgid "Custom Page Formatting...|u"
-msgstr "Пользовательский формат номера страницы..."
+msgstr "Пользовательский формат страницы..."
 
 #: lib/ui/stdcontext.inc:651
 msgid "Insert Subentry|b"
@@ -21979,7 +21903,6 @@ msgid "Optional Line Break|B"
 msgstr "Возможный разрыв строки|р"
 
 #: lib/ui/stdmenus.inc:472
-#, fuzzy
 msgid "Prevent Page Break|g"
 msgstr "Запрет разрыва страницы"
 
@@ -22928,19 +22851,16 @@ msgstr "Обновить другие форматы"
 
 #: lib/ui/stdtoolbars.inc:304 lib/ui/stdtoolbars.inc:310
 #: lib/ui/stdtoolbars.inc:316 lib/ui/stdtoolbars.inc:322
-#, fuzzy
 msgid "[[Toolbar]]&On"
 msgstr "Вкл."
 
 #: lib/ui/stdtoolbars.inc:305 lib/ui/stdtoolbars.inc:311
 #: lib/ui/stdtoolbars.inc:317 lib/ui/stdtoolbars.inc:323
-#, fuzzy
 msgid "[[Toolbar]]O&ff"
 msgstr "Выкл."
 
 #: lib/ui/stdtoolbars.inc:306 lib/ui/stdtoolbars.inc:312
 #: lib/ui/stdtoolbars.inc:318 lib/ui/stdtoolbars.inc:324
-#, fuzzy
 msgid "[[Toolbar]]&Automatic"
 msgstr "Автоматически"
 
@@ -28474,7 +28394,7 @@ msgid "No information for exporting the format %1$s."
 msgstr "Нет информации для экспортирования формата %1$s."
 
 #: src/Buffer.cpp:4519
-#, fuzzy, c-format
+#, c-format
 msgid "Hint: use non-TeX fonts or set input encoding to '%1$s'"
 msgstr ""
 "Подсказка: используйте системные шрифты или установите входную кодировку "
@@ -28603,9 +28523,8 @@ msgstr ""
 "это может перезаписать вашу собственную работу."
 
 #: src/Buffer.cpp:4859
-#, fuzzy
 msgid "Emergency File Renamed"
-msgstr "Переименования аварийного файла"
+msgstr "Аварийный файл переименован"
 
 #: src/Buffer.cpp:4860
 #, c-format
@@ -28664,7 +28583,7 @@ msgstr "Не удалось перезагрузить документ %1$s."
 
 #: src/Buffer.cpp:5730
 msgid "File deleted from disk"
-msgstr ""
+msgstr "Файл удален с диска"
 
 #: src/Buffer.cpp:5731
 #, c-format
@@ -28673,6 +28592,9 @@ msgid ""
 "  %1$s\n"
 "has been deleted from disk!"
 msgstr ""
+"Файл\n"
+"  %1$s\n"
+"был удален с диска!"
 
 #: src/BufferParams.cpp:536
 msgid ""
@@ -28811,7 +28733,7 @@ msgid "Uncodable character in document metadata"
 msgstr "Некодируемый символ в метаданных документа"
 
 #: src/BufferParams.cpp:1742
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The metadata of your document contains glyphs that are unknown in the "
 "current document encoding (namely %1$s).\n"
@@ -28826,7 +28748,7 @@ msgstr ""
 "будут пропущены в выводе, что может привести к неполному выводу.\n"
 "\n"
 "Выберите подходящую кодировку (такую как utf8)\n"
-"или измените код преамбулы."
+"или измените метаданные."
 
 #: src/BufferParams.cpp:1894
 msgid "Uncodable character in class options"
@@ -29278,9 +29200,8 @@ msgid "selection"
 msgstr "выделение"
 
 #: src/Color.cpp:267
-#, fuzzy
 msgid "selected math"
-msgstr "выделенный текст"
+msgstr "выделенная матем. формула"
 
 #: src/Color.cpp:268
 msgid "selected text"
@@ -29307,9 +29228,8 @@ msgid "inline completion"
 msgstr "дополнение в строке"
 
 #: src/Color.cpp:275
-#, fuzzy
 msgid "inline completion (non-unique)"
-msgstr "дополнение в строке"
+msgstr "дополнение в строке (не единственное)"
 
 #: src/Color.cpp:277
 msgid "previewed snippet"
@@ -29420,9 +29340,8 @@ msgid "special character"
 msgstr "специальный символ"
 
 #: src/Color.cpp:305
-#, fuzzy
 msgid "math text"
-msgstr "Левый текст"
+msgstr "матем. текст"
 
 #: src/Color.cpp:306
 msgid "math background"
@@ -29485,9 +29404,8 @@ msgid "inset background"
 msgstr "фон вставки"
 
 #: src/Color.cpp:322
-#, fuzzy
 msgid "inset label"
-msgstr "Вставить метку"
+msgstr "метка вставки"
 
 #: src/Color.cpp:323
 msgid "inset frame"
@@ -29510,14 +29428,12 @@ msgid "change bar"
 msgstr "панель изменений"
 
 #: src/Color.cpp:328
-#, fuzzy
 msgid "changes - deleted text (exported output)"
-msgstr "удалённый текст (вывод)"
+msgstr "изменения - удалённый текст (вывод)"
 
 #: src/Color.cpp:329
-#, fuzzy
 msgid "changes - added text (exported output)"
-msgstr "добавленный текст (вывод)"
+msgstr "изменения - добавленный текст (вывод)"
 
 #: src/Color.cpp:330
 msgid "changed text (workarea, 1st author)"
@@ -29544,9 +29460,8 @@ msgid "changed text (workarea, document comparison)"
 msgstr "изменённый текст (рабочая область, сравнение документов)"
 
 #: src/Color.cpp:336
-#, fuzzy
 msgid "changes - deleted text brightness (workarea)"
-msgstr "модификатор удалённого текста (рабочая область)"
+msgstr "изменения - модификатор удалённого текста (рабочая область)"
 
 #: src/Color.cpp:337
 msgid "added space markers"
@@ -29609,7 +29524,7 @@ msgid "ignore"
 msgstr "игнорировать"
 
 #: src/Converter.cpp:318
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The following LaTeX backend has been configured to allow execution of "
 "external programs for any document:</p><center><p>%1$s</p></center><p>This "
@@ -29617,31 +29532,31 @@ msgid ""
 "LyX for allowing this privilege only to documents that actually need it, "
 "instead.</p>"
 msgstr ""
-"<p>Следующая серверная часть LaTeX настроена так, чтобы разрешить выполнение "
-"внешних программ для любого документа:</p><center><p><tt>%1$s</tt></p></"
-"center><p>Это опасная конфигурация. Пожалуйста, рассмотрите возможность "
-"использования поддержки, предлагаемой LyX для разрешения этой привилегии "
-"только для документов, которые действительно в ней нуждаются.</p>"
+"<p>Следующая реализация LaTeX настроена так, чтобы разрешить выполнение "
+"внешних программ для любого документа:</p><center><p>%1$s</p></center><p>Это "
+"опасная конфигурация. Пожалуйста, рассмотрите возможность использования "
+"поддержки, предлагаемой LyX для разрешения этой привилегии только для "
+"документов, которые действительно в ней нуждаются.</p>"
 
 #: src/Converter.cpp:327
 msgid "Security Warning"
 msgstr "Предупреждение безопасности"
 
 #: src/Converter.cpp:342
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The following LaTeX backend has been requested to allow execution of "
 "external programs:</p><center><p>%1$s</p></center><p>The external programs "
 "can execute arbitrary commands on your system, including dangerous ones, if "
 "instructed to do so by a maliciously crafted LyX document.</p>"
 msgstr ""
-"<p>Следующая серверная часть LaTeX была предложена для выполнения внешних "
-"программ:</p><center><p><tt>%1$s</tt></p></center><p>Внешние программы могут "
-"выполнять произвольные команды на вашей системе, в том числе опасные, если "
-"они будут проинструктированы вредоносным документом LyX.</p>"
+"<p>Следующая реализация LaTeX была запрошена для выполнения внешних программ:"
+"</p><center><p>%1$s</p></center><p>Внешние программы могут выполнять "
+"произвольные команды на вашей системе, в том числе опасные, если они будут "
+"проинструктированы вредоносным документом LyX.</p>"
 
 #: src/Converter.cpp:349
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<p>The requested operation requires the use of a converter from %2$s to %3$s:"
 "</p><blockquote><p>%1$s</p></blockquote><p>This external program can execute "
@@ -29649,9 +29564,9 @@ msgid ""
 "to do so by a maliciously crafted LyX document.</p>"
 msgstr ""
 "<p>Запрошенная операция требует использования конвертера из %2$s в %3$s:</"
-"p><blockquote><p><tt>%1$s</tt></p></blockquote><p>Эта внешняя программа "
-"может выполнять произвольные команды на вашей системе, в том числе опасные, "
-"если это будет проинструктировано вредоносным документом LyX.</p>"
+"p><blockquote><p>%1$s</p></blockquote><p>Эта внешняя программа может "
+"выполнять произвольные команды на вашей системе, в том числе опасные, если "
+"это будет проинструктировано вредоносным документом LyX.</p>"
 
 #: src/Converter.cpp:359
 msgid "An external converter is disabled for security reasons"
@@ -29671,7 +29586,7 @@ msgstr ""
 
 #: src/Converter.cpp:370
 msgid "A LaTeX backend requires your authorization"
-msgstr "Серверная часть LaTeX требует вашей авторизации"
+msgstr "Реализация LaTeX требует вашей авторизации"
 
 #: src/Converter.cpp:371
 msgid "An external converter requires your authorization"
@@ -29682,8 +29597,8 @@ msgid ""
 "<p>Should LaTeX backends be allowed to run external programs?</p><p><b>Allow "
 "them only if you trust the origin/sender of the LyX document!</b></p>"
 msgstr ""
-"<p>Разрешать ли LaTeX-бэкэндам запускать внешние программы?</"
-"p><p><b>Разрешайте их только в том случае, если вы доверяете происхождению/"
+"<p>Разрешать ли реализациям LaTeX запускать внешние программы?</"
+"p><p><b>Разрешайте это только в том случае, если вы доверяете источнику/"
 "отправителю документа LyX!</b></p>"
 
 #: src/Converter.cpp:377
@@ -29962,11 +29877,11 @@ msgstr "Гибкая вставка %1$s не определена после п
 #: src/CutAndPaste.cpp:896
 #, c-format
 msgid ""
-"Flex inset %1$s is undefined because of conversion from `%2$s' layout to "
-"`%3$s'."
+"Flex inset %1$s is undefined because of conversion from `%2$s' layout to `"
+"%3$s'."
 msgstr ""
-"Гибкая вставка %1$s не определена из-за преобразования из макета `%2$s' в "
-"`%3$s'."
+"Гибкая вставка %1$s не определена из-за преобразования из макета `%2$s' в `"
+"%3$s'."
 
 #: src/CutAndPaste.cpp:901
 msgid "Undefined flex inset"
@@ -30436,7 +30351,6 @@ msgid "LyX: Creating directory %1$s"
 msgstr "LyX: Создаётся каталог  %1$s"
 
 #: src/LyX.cpp:1128
-#, fuzzy
 msgid ""
 "Failed to create directory. Perhaps wrong -userdir command-line option?\n"
 "Exiting."
@@ -30599,8 +30513,8 @@ msgid ""
 "Consider run-together words, such as \"diskdrive\" for \"disk drive\", as "
 "legal words?"
 msgstr ""
-"Считать слитно написанные слова, например \"diskdrive\" вместо \"disk "
-"drive\", допустимыми?"
+"Считать слитно написанные слова, например \"diskdrive\" вместо \"disk drive"
+"\", допустимыми?"
 
 #: src/LyXRC.cpp:3125
 msgid ""
@@ -31407,9 +31321,9 @@ msgid "Could not read stdinsets.inc! This may lead to data loss!"
 msgstr "Не прочитан stdinsets.inc! Это может привести к потере данных!"
 
 #: src/TextClass.cpp:1634
-#, fuzzy, c-format
+#, c-format
 msgid "%1$s ##"
-msgstr "%1$s блокировка"
+msgstr "%1$s ##"
 
 #: src/TextClass.cpp:1635
 #, c-format
@@ -31417,9 +31331,9 @@ msgid "%1$s (Float)"
 msgstr "%1$s (плавающий объект)"
 
 #: src/TextClass.cpp:1640
-#, fuzzy, c-format
+#, c-format
 msgid "Sub-%1$s ##"
-msgstr "Под-%1$s"
+msgstr "Под-%1$s ##"
 
 #: src/TextClass.cpp:1641
 #, c-format
@@ -32115,7 +32029,7 @@ msgstr "Операционная система: %1$s"
 #: src/frontends/qt/GuiAbout.cpp:300
 #, c-format
 msgid "Python detected: %1$s"
-msgstr "Команда запуска Python: %1$s"
+msgstr "Версия Python: %1$s"
 
 #: src/frontends/qt/GuiAbout.cpp:331
 msgid "About LyX"
@@ -33317,13 +33231,12 @@ msgid "Unapplied changes"
 msgstr "Неприменённые изменения"
 
 #: src/frontends/qt/GuiDocument.cpp:1861
-#, fuzzy
 msgid ""
 "Some changes in the document were not yet applied.\n"
 "Do you want to apply them before closing or dismiss the changes?"
 msgstr ""
-"Некоторые изменения в предыдущем документе еще не были приняты.\n"
-"Вы хотите переключиться обратно и применить их?"
+"Некоторые изменения в документе ещё не были приняты.\n"
+"Вы хотите применить их до закрытия или отменить изменения?"
 
 #: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:3102
 #: src/frontends/qt/GuiDocument.cpp:3403 src/frontends/qt/GuiDocument.cpp:5038
@@ -33331,26 +33244,22 @@ msgid "&Apply"
 msgstr "&Применить"
 
 #: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Dismiss Changes"
-msgstr "Нет, отклонить изменения"
+msgstr "Отклонить изменения"
 
 #: src/frontends/qt/GuiDocument.cpp:1887
-#, fuzzy
 msgid ""
 "Some changes in the previous document were not yet applied.\n"
 "Do you want to switch back in order to apply them or dismiss the changes?"
 msgstr ""
-"Некоторые изменения в предыдущем документе еще не были приняты.\n"
-"Вы хотите переключиться обратно и применить их?"
+"Некоторые изменения в предыдущем документе ещё не были приняты.\n"
+"Вы хотите переключиться обратно, чтобы применить их или отменить изменения?"
 
 #: src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Switch Back"
-msgstr "Да, переключить &обратно"
+msgstr "Переключить &обратно"
 
 #: src/frontends/qt/GuiDocument.cpp:2333
-#, fuzzy
 msgid "Default margins"
 msgstr "Поля по умолчанию"
 
@@ -33359,11 +33268,12 @@ msgid "Package defaults"
 msgstr "По умолчанию для пакета"
 
 #: src/frontends/qt/GuiDocument.cpp:2336
-#, fuzzy
 msgid ""
 "If no value is given, the defaults as set by the class, a package or the "
 "preamble are used."
-msgstr "Если пусто, то используется значение по умолчанию для класса."
+msgstr ""
+"Если пусто, то используется значение по умолчанию для класса, пакета или "
+"преамбулы."
 
 #: src/frontends/qt/GuiDocument.cpp:2337
 msgid ""
@@ -34071,7 +33981,6 @@ msgstr ""
 
 #: src/frontends/qt/GuiInfo.cpp:148 src/frontends/qt/GuiInfo.cpp:162
 #: src/frontends/qt/GuiInfo.cpp:176
-#, fuzzy
 msgid ""
 "Enter time format specification, using the following placeholders:\n"
 "* h: the hour without a leading zero (1-12 in AM/PM)\n"
@@ -34090,13 +33999,13 @@ msgid ""
 msgstr ""
 "Введите спецификацию формата времени, используя следующие обозначения:\n"
 "* h: час без ведущего нуля (1-12 в AM/PM)\n"
-"* hh: час с ведущим нулем (01-12 в AM/PM)\n"
-"* H: час без ведущего нуля (0-23 в AM/PM)\n"
-"* HH: час с ведущим нулем (00-23 в AM/PM)\n"
+"* hh: час с ведущим нулём (01-12 в AM/PM)\n"
+"* H: час без ведущего нуля (0-23)\n"
+"* HH: час с ведущим нулём (00-23)\n"
 "* m: минута без ведущего нуля\n"
-"* mm: минута с ведущим нулем\n"
+"* mm: минута с ведущим нулём\n"
 "* s: секунда без ведущего нуля\n"
-"* ss: секунда с ведущим нулем\n"
+"* ss: секунда с ведущим нулём\n"
 "* z: миллисекунды без ведущих нулей\n"
 "* zzz: миллисекунды с ведущими нулями\n"
 "* AP или A: показывать AM/PM ('AM'/'PM')\n"
@@ -34565,7 +34474,6 @@ msgid "SECURITY WARNING!"
 msgstr "ПРЕДУПРЕЖДЕНИЕ БЕЗОПАСНОСТИ!"
 
 #: src/frontends/qt/GuiPrefs.cpp:1771
-#, fuzzy
 msgid ""
 "Unchecking this option has the effect that potentially harmful converters "
 "would be run without asking your permission first. This is UNSAFE and NOT "
@@ -34629,12 +34537,14 @@ msgstr "Oxygen"
 
 #: src/frontends/qt/GuiPrefs.cpp:2544
 msgid "Restart needed"
-msgstr ""
+msgstr "Требуется перезапуск"
 
 #: src/frontends/qt/GuiPrefs.cpp:2545
 msgid ""
 "Resetting the user interface style to 'Default' requires a restart of LyX."
 msgstr ""
+"Сброс стиля пользовательского интерфейса на \"По умолчанию\" требует "
+"перезапуска LyX."
 
 #: src/frontends/qt/GuiPrefs.cpp:2600
 msgid "Document Handling"
@@ -34725,14 +34635,14 @@ msgid "Invalid or empty key sequence"
 msgstr "Неверное или пустое сочетание клавиш"
 
 #: src/frontends/qt/GuiPrefs.cpp:3328
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Shortcut `%1$s' is already a prefix for other commands.\n"
 "Are you sure you want to unbind these commands and bind it to %2$s?"
 msgstr ""
-"Сочетание клавиш `%1$s' уже привязано к:\n"
-"%2$s\n"
-"Вы уверены, что хотите привязать его к %3$s?"
+"Сочетание клавиш `%1$s' уже является префиксом для других команд.\n"
+"Вы уверены, что хотите отменить привязку к этим командам и привязать его к "
+"%2$s?"
 
 #: src/frontends/qt/GuiPrefs.cpp:3331 src/frontends/qt/GuiPrefs.cpp:3354
 msgid "Redefine shortcut?"
@@ -35308,11 +35218,10 @@ msgstr ""
 "Processor[[welcome banner]]"
 
 #: src/frontends/qt/GuiView.cpp:160
-#, fuzzy
 msgid ""
 "1.0[[translating this to different value scales the welcome banner text size "
 "for your language]]"
-msgstr "1.0[[possibly scale the welcome banner text size]]"
+msgstr "1.0"
 
 #: src/frontends/qt/GuiView.cpp:163
 msgid "version "
@@ -35489,9 +35398,8 @@ msgstr "Резервные копии документов LyX (*.lyx~)"
 
 #: src/frontends/qt/GuiView.cpp:2854 src/frontends/qt/GuiView.cpp:4604
 #: src/frontends/qt/qt_helpers.cpp:677
-#, fuzzy
 msgid "All Files"
-msgstr "Все файлы "
+msgstr "Все файлы"
 
 #: src/frontends/qt/GuiView.cpp:2885
 #, c-format
@@ -36013,12 +35921,10 @@ msgid "%1 (modified externally)"
 msgstr "%1 (изменён внешней программой)"
 
 #: src/frontends/qt/GuiWorkArea.cpp:2086
-#, fuzzy
 msgid "&Hide Tab"
-msgstr "Спрятать вкладку"
+msgstr "Скрыть вкладку"
 
 #: src/frontends/qt/GuiWorkArea.cpp:2092
-#, fuzzy
 msgid "&Close Tab"
 msgstr "Закрыть вкладку"
 
@@ -36385,25 +36291,24 @@ msgid "No file was found using the pattern `%1$s'."
 msgstr "Файл по шаблону `%1$s' не найден."
 
 #: src/frontends/qt/qt_helpers.cpp:342
-#, fuzzy
 msgid "Multiple files found!"
-msgstr "Файл не найден!"
+msgstr "Найдено несколько файлов!"
 
 #: src/frontends/qt/qt_helpers.cpp:343
-#, fuzzy
 msgid "Select the file that should be opened:"
-msgstr "Выберите отладочные сообщения для показа"
+msgstr "Выберите файл, который нужно открыть:"
 
 #: src/frontends/qt/qt_helpers.cpp:355
 msgid "&Trust this document and do not ask me again!"
-msgstr ""
+msgstr "Доверять этому документу и больше не спрашивать!"
 
 #: src/frontends/qt/qt_helpers.cpp:356
-#, fuzzy
 msgid ""
 "If you check this, LyX will open all targets without asking for the given "
 "document in the future."
-msgstr "Отметьте, чтобы LyX больше не беспокоил вас в подобных ситуациях."
+msgstr ""
+"Отметьте, чтобы LyX в дальнейшем открывал все цели без запроса для данного "
+"документа."
 
 #: src/frontends/qt/qt_helpers.cpp:357
 #, c-format
@@ -36419,16 +36324,24 @@ msgid ""
 "\n"
 "How do you want to proceed?"
 msgstr ""
+"LyX хочет открыть следующую цель во внешнем приложении:\n"
+"\n"
+"%1$s\n"
+"\n"
+"Учтите, что это может привести к нарушению безопасности!\n"
+"\n"
+"Делайте это только в том случае, если вы доверяете источнику документа и "
+"цели ссылки!\n"
+"\n"
+"Как вы хотите поступить?"
 
 #: src/frontends/qt/qt_helpers.cpp:362
-#, fuzzy
 msgid "Open external target?"
-msgstr "Перезаписать внешний файл?"
+msgstr "Открыть внешнюю цель?"
 
 #: src/frontends/qt/qt_helpers.cpp:364
-#, fuzzy
 msgid "&Open Target"
-msgstr "Открыть ссылку...|О"
+msgstr "Открыть цель"
 
 #: src/frontends/qt/qt_helpers.cpp:393
 #, c-format
@@ -38811,243 +38724,3 @@ msgstr ""
 #: src/support/userinfo.cpp:45
 msgid "Unknown user"
 msgstr "Неизвестный пользователь"
-
-#~ msgid "Library directory"
-#~ msgstr "Каталог библиотек"
-
-#~ msgid "Open library directory in file browser"
-#~ msgstr "Открыть каталог библиотек в файловом менеджере"
-
-#~ msgid "Lan&guage:"
-#~ msgstr "&Язык:"
-
-#~ msgid "Enter text"
-#~ msgstr "Введите текст"
-
-#~ msgid "Remarks #."
-#~ msgstr "Замечания #."
-
-#~ msgid "Footnote ##"
-#~ msgstr "Сноска ##"
-
-#, c-format
-#~ msgid "Branch \"%1$s\" does not exist."
-#~ msgstr "Ветка \"%1$s\" не существует."
-
-#~ msgid "non-unique inline completion"
-#~ msgstr "неуникальное дополнение в строке"
-
-#~ msgid "math"
-#~ msgstr "матем. формула"
-
-#~ msgid "Formats[[output]]"
-#~ msgstr "Форматы"
-
-#~ msgid "Class defaults"
-#~ msgstr "По умолчанию для класса"
-
-#~ msgid "All Files (*.*)"
-#~ msgstr "Все файлы (*.*)"
-
-#~ msgid "All Files (*)"
-#~ msgstr "Все файлы (*)"
-
-#~ msgid "&Backup documents, every"
-#~ msgstr "Делать &резервные копии документов каждые"
-
-#~ msgid "&minutes"
-#~ msgstr "минут"
-
-#~ msgid "Acknowledgement"
-#~ msgstr "Благодарности"
-
-#~ msgid "Acknowledgement."
-#~ msgstr "Благодарности."
-
-#~ msgid "Acknowledgements."
-#~ msgstr "Благодарности."
-
-#~ msgid "Acknowledgements"
-#~ msgstr "Благодарности"
-
-#~ msgid "Acknowledgment \\theacknowledgement."
-#~ msgstr "Благодарности \\theacknowledgement."
-
-#~ msgid "Acknowledgment*"
-#~ msgstr "Благодарности*"
-
-#~ msgid "Acknowledgement*"
-#~ msgstr "Благодарности*"
-
-#~ msgid "Acknowledgment \\thetheorem."
-#~ msgstr "Благодарности \\thetheorem."
-
-#~ msgid "Japanese Report (Vertical Writing)"
-#~ msgstr "Japanese Report (вертикальное письмо)"
-
-#~ msgid "Date (last modified)"
-#~ msgstr "Дата (последнее изменение)"
-
-#~ msgid "Time (last modified)"
-#~ msgstr "Время (последнее изменение)"
-
-#~ msgid "All Keyboard Shortcuts"
-#~ msgstr "Все сочетания клавиш"
-
-#~ msgid "Default..."
-#~ msgstr "По умолчанию..."
-
-#~ msgid "New Docu&ment"
-#~ msgstr "Новый документ"
-
-#~ msgid "Link to the web or to every other target"
-#~ msgstr "Ссылка на веб-страницу или какую-то другую цель"
-
-#~ msgid "Validation required!"
-#~ msgstr "Требуется проверка!"
-
-#~ msgid "&Default..."
-#~ msgstr "По умолчанию..."
-
-#~ msgid ""
-#~ "If unchecked, the search will be limited to occurrences of the selected "
-#~ "text and paragraph style"
-#~ msgstr ""
-#~ "Если флажок снят, поиск будет ограничен вхождениями выбранного стиля "
-#~ "текста и абзаца"
-
-#~ msgid "e.g.: pdfstartview=XYZ, plainpages=false, pdfpagelabels"
-#~ msgstr "Например: pdfstartview=XYZ, plainpages=false, pdfpagelabels"
-
-#~ msgid "Screen used (pi&xels):"
-#~ msgstr "Ши&рина (пиксели):"
-
-#~ msgid "DefSkip"
-#~ msgstr "По умолчанию"
-
-#~ msgid "MedSkip"
-#~ msgstr "Средний"
-
-#~ msgid "VFill"
-#~ msgstr "Вертикальное заполнение"
-
-#~ msgid "foot"
-#~ msgstr "Сноска"
-
-#~ msgid "Interword Space|w"
-#~ msgstr "Пробел между словами|б"
-
-#~ msgid "Protected Space|o"
-#~ msgstr "Неразрывный пробел|п"
-
-#~ msgid "Protected Half Quad Space (Enspace)|E"
-#~ msgstr "Защищённый полуквадрат (enspace)|щ"
-
-#~ msgid "DefSkip|D"
-#~ msgstr "По умолчанию|П"
-
-#~ msgid "MedSkip|M"
-#~ msgstr "Средний|С"
-
-#~ msgid "VFill|F"
-#~ msgstr "Вертикальное заполнение|В"
-
-#~ msgid "Protected Hyphen|y"
-#~ msgstr "Неразрывный дефис|д"
-
-#~ msgid "Protected Space|P"
-#~ msgstr "Неразрывный пробел|п"
-
-#~ msgid "Figure Wrap Float|F"
-#~ msgstr "Обтекаемый рисунок|р"
-
-#~ msgid "Table Wrap Float|T"
-#~ msgstr "Обтекаемая таблица|т"
-
-#~ msgid "Cancel Background Process|P"
-#~ msgstr "Отменить фоновый процесс|ф"
-
-#~ msgid "Set all lines"
-#~ msgstr "Все линии"
-
-#~ msgid "Converting document to new document class..."
-#~ msgstr "Преобразование документа к новому классу..."
-
-#, c-format
-#~ msgid "%1$d characters (excluding blanks)"
-#~ msgstr "%1$d знаков (без пробелов)"
-
-#~ msgid "One character (excluding blanks)"
-#~ msgstr "Один знак (без пробелов)"
-
-#~ msgid "Running BibTeX."
-#~ msgstr "Выполняется BibTeX."
-
-#~ msgid "Running MakeIndex for nomencl."
-#~ msgstr "Выполняется MakeIndex."
-
-#, c-format
-#~ msgid "Setting debug level to %1$s"
-#~ msgstr "Установить уровень отладки на %1$s"
-
-#~ msgid "Interword Space"
-#~ msgstr "Пробел между словами"
-
-#~ msgid "Preferred &Language:"
-#~ msgstr "Предпочитаемый язык:"
-
-#~ msgid "Ignore|g"
-#~ msgstr "Игнорировать"
-
-#~ msgid "Ignore all|I"
-#~ msgstr "Пропустить все"
-
-#~ msgid "Protected Space"
-#~ msgstr "Неразрывный пробел"
-
-#~ msgid "Double Quad Space"
-#~ msgstr "Двойной квадрат"
-
-#~ msgid "Enspace"
-#~ msgstr "Защищённый полуквадрат (enspace)"
-
-#~ msgid "Enskip"
-#~ msgstr "Полуквадрат (enskip)"
-
-#~ msgid "Protected Horizontal Fill"
-#~ msgstr "Защищённое горизонтальное заполнение"
-
-#, c-format
-#~ msgid "Protected Horizontal Space (%1$s)"
-#~ msgstr "Неразрывный пробел  (%1$s)"
-
-#, c-format
-#~ msgid "No vertical grid lines in 'cases': feature %1$s"
-#~ msgstr "Невозможно добавить вертикальные линии в 'cases': возможность %1$s"
-
-#~ msgid "LaTeX generation/execution"
-#~ msgstr "Генерация/выполнение LaTeX"
-
-#~ msgid "Fi&nd:"
-#~ msgstr "Н&айти:"
-
-#~ msgid "S&ettings"
-#~ msgstr "Настройки"
-
-#~ msgid "&Find Next"
-#~ msgstr "&Найти далее"
-
-#~ msgid "Filter:"
-#~ msgstr "Фильтр:"
-
-#~ msgid "Enter string to filter contents"
-#~ msgstr "Введите строку для фильтрации содержания"
-
-#~ msgid "Toggle math toolbar"
-#~ msgstr "Переключить панель формул"
-
-#~ msgid "Toggle table toolbar"
-#~ msgstr "Переключить панель таблиц"
-
-#~ msgid "Clear text"
-#~ msgstr "Удалить текст"
