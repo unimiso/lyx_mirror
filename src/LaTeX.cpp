@@ -25,6 +25,7 @@
 #include "DepTable.h"
 #include "Encoding.h"
 #include "Language.h"
+#include "LaTeXFeatures.h"
 
 #include "support/debug.h"
 #include "support/docstring.h"
@@ -160,12 +161,14 @@ void LaTeX::removeAuxiliaryFiles() const
 	ind.removeFile();
 
 	// nomencl file
-	FileName const nls(changeExtension(file.absFileName(), ".nls"));
-	nls.removeFile();
-
-	// nomencl file (old version of the package)
-	FileName const gls(changeExtension(file.absFileName(), ".gls"));
-	gls.removeFile();
+	if (LaTeXFeatures::isAvailableAtLeastFrom("nomencl", 2005, 3, 31)) {
+		FileName const nls(changeExtension(file.absFileName(), ".nls"));
+		nls.removeFile();
+	} else if (LaTeXFeatures::isAvailable("nomencl")) {
+		// nomencl file (old version of the package up to v. 4.0)
+		FileName const gls(changeExtension(file.absFileName(), ".gls"));
+		gls.removeFile();
+	}
 
 	// endnotes file
 	FileName const ent(changeExtension(file.absFileName(), ".ent"));
@@ -315,8 +318,12 @@ int LaTeX::run(TeXErrors & terr)
 	// the extra checks here (to trigger a rerun). Cf. discussions in #8905.
 	// FIXME: Sort out the real problem in DepTable.
 	bool const run_nomencl = head.haschanged(nlofile) || (nlofile.exists() && nlofile.isFileEmpty());
-	FileName const glofile(changeExtension(file.absFileName(), ".glo"));
-	bool const run_nomencl_glo = head.haschanged(glofile);
+	bool run_nomencl_glo = false;
+	if (!LaTeXFeatures::isAvailableAtLeastFrom("nomencl", 2005, 3, 31)) {
+		// nomencl package up to v4.0
+		FileName const glofile(changeExtension(file.absFileName(), ".glo"));
+		run_nomencl_glo = head.haschanged(glofile);
+	}
 
 	// 1
 	// At this point we must run the bibliography processor if needed.

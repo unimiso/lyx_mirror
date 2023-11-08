@@ -1529,14 +1529,16 @@ string const LaTeXFeatures::getPackages() const
 			    "\\usepackage{ulem}\n";
 
 	if (mustProvide("nomencl")) {
+		packages << "\\usepackage{nomencl}\n";
 		// Make it work with the new and old version of the package,
 		// but don't use the compatibility option since it is
 		// incompatible to other packages.
-		packages << "\\usepackage{nomencl}\n"
-			    "% the following is useful when we have the old nomencl.sty package\n"
-			    "\\providecommand{\\printnomenclature}{\\printglossary}\n"
-			    "\\providecommand{\\makenomenclature}{\\makeglossary}\n"
-			    "\\makenomenclature\n";
+		if (!LaTeXFeatures::isAvailableAtLeastFrom("nomencl", 2005, 3, 31)) {
+			packages << "% Needed with nomencl < v4.1\n"
+				    "\\providecommand{\\printnomenclature}{\\printglossary}\n"
+				    "\\providecommand{\\makenomenclature}{\\makeglossary}\n";
+		}
+		packages << "\\makenomenclature\n";
 	}
 
 	// fixltx2e provides subscript
