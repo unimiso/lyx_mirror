@@ -58,7 +58,7 @@ overline            decoration none
 overrightarrow      decoration none
 tilde               decoration none
 uline               decoration none       ulem
-underbar            decoration none
+underbar            decoration everymode
 underbrace          decoration none
 underleftarrow      decoration none       amsmath
 underleftrightarrow decoration none       amsmath

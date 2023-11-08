@@ -182,7 +182,8 @@ void InsetMathDecoration::draw(PainterInfo & pi, int x, int y) const
 void InsetMathDecoration::write(TeXMathStream & os) const
 {
 	bool needs_mathmode = currentMode() == MATH_MODE;
-	bool textmode_macro = currentMode() == TEXT_MODE;
+	bool textmode_macro = currentMode() == TEXT_MODE
+	                      && key_->extra != "everymode";
 	MathEnsurer ensurer(os, needs_mathmode, true, textmode_macro);
 	if (os.fragile() && protect())
 		os << "\\protect";
