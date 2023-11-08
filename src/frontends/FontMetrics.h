@@ -177,8 +177,12 @@ class Font;
 class FontInfo;
 
 /// Implementation is in Application.cpp
+
+LYX_BEGIN_MUTE_GCC_WARNING(dangling-reference)
 frontend::FontMetrics const & theFontMetrics(Font const & f);
 frontend::FontMetrics const & theFontMetrics(FontInfo const & fi);
+LYX_END_MUTE_GCC_WARNING
+
 
 } // namespace lyx
 

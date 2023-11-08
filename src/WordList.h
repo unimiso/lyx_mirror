@@ -36,7 +36,9 @@ private:
 	std::unique_ptr<Impl> d;
 };
 
+LYX_BEGIN_MUTE_GCC_WARNING(dangling-reference)
 WordList & theWordList(std::string const & lang);
+LYX_END_MUTE_GCC_WARNING
 
 } // namespace lyx
 

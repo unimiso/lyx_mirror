@@ -181,8 +181,10 @@ private:
 
 
 extern Movers & theMovers();
+LYX_BEGIN_MUTE_GCC_WARNING(dangling-reference)
 /// @c returns the Mover registered for format @c fmt.
 extern Mover const & getMover(std::string  const & fmt);
+LYX_END_MUTE_GCC_WARNING
 /** Register a specialised @c command to be used to copy a file
  *  of format @c fmt.
  */
