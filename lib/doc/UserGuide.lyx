@@ -22409,7 +22409,13 @@ non-breaking
  hyphen (
 \family sans
 Insert\SpecialChar menuseparator
-Formatting\SpecialChar menuseparator
+
+\change_inserted 244031559 1699481895
+Special Character
+\change_deleted 244031559 1699481900
+Formatting
+\change_unchanged
+\SpecialChar menuseparator
 
 \change_deleted 177693 1654619809
 Protected
