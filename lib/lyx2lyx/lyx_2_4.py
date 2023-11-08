@@ -1529,6 +1529,8 @@ def convert_hebrew_parentheses(document):
     """
     # print("convert hebrew parentheses")
     current_languages = [document.language]
+    # skip math and pass thru insets
+    skip_insets = ['Formula', 'ERT', 'listings']
     i = 0
     while i < len(document.body):
         line = document.body[i]
@@ -1539,10 +1541,13 @@ def convert_hebrew_parentheses(document):
             # print (line, current_languages[-1])
         elif line.startswith('\\end_layout'):
             current_languages.pop()
-        elif line.startswith('\\begin_inset Formula'):
-            # In math, parentheses must not be changed
-            i = find_end_of_inset(document.body, i)
-            continue
+        elif line.startswith('\\begin_inset '):
+            tokenend = len('\\begin_inset ')
+            inset = line[tokenend:].strip()
+            if inset in skip_insets:
+                # In these insets, parentheses must not be changed
+                i = find_end_of_inset(document.body, i)
+                continue
         elif current_languages[-1] == 'hebrew' and not line.startswith('\\'):
             document.body[i] = line.replace('(','\x00').replace(')','(').replace('\x00',')')
         i += 1
