@@ -575,14 +575,14 @@ copyFileIfNeeded(FileName const & file_in, FileName const & file_out)
 
 
 pair<GraphicsCopyStatus, FileName> const
-copyToDirIfNeeded(DocFileName const & file, string const & dir)
+copyToDirIfNeeded(DocFileName const & file, string const & dir, bool encrypt_path)
 {
 	string const file_in = file.absFileName();
 	string const only_path = onlyPath(file_in);
 	if (rtrim(only_path, "/") == rtrim(dir, "/"))
 		return make_pair(IDENTICAL_PATHS, FileName(file_in));
 
-	string mangled = file.mangledFileName(empty_string(), false, true);
+	string mangled = file.mangledFileName(empty_string(), encrypt_path);
 	if (theFormats().isZippedFile(file)) {
 		// We need to change _eps.gz to .eps.gz. The mangled name is
 		// still unique because of the counter in mangledFileName().
@@ -680,7 +680,7 @@ string InsetGraphics::prepareFile(OutputParams const & runparams) const
 	// we move it to a temp dir or uncompress it.
 	FileName temp_file;
 	GraphicsCopyStatus status;
-	tie(status, temp_file) = copyToDirIfNeeded(params().filename, temp_path);
+	tie(status, temp_file) = copyToDirIfNeeded(params().filename, temp_path, false);
 
 	if (status == FAILURE)
 		return orig_file;
@@ -997,7 +997,7 @@ string InsetGraphics::prepareHTMLFile(OutputParams const & runparams) const
 	// Copy to temporary directory.
 	FileName temp_file;
 	GraphicsCopyStatus status;
-	tie(status, temp_file) = copyToDirIfNeeded(params().filename, temp_path);
+	tie(status, temp_file) = copyToDirIfNeeded(params().filename, temp_path, true);
 
 	if (status == FAILURE)
 		return string();

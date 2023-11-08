@@ -957,69 +957,102 @@ string DocFileName::outputFileName(string const & path) const
 	return save_abs_path_ ? absFileName() : relFileName(path);
 }
 
-
-string DocFileName::mangledFileName(string const & dir) const
+// check for an existing value in a map
+bool collision_exists(map<string, string> const & db, string const & value)
 {
-	return mangledFileName(dir, true, false);
+	for (auto it = db.begin(); it != db.end(); ++it)
+		if (it->second == value)
+			return true;
+	return false;
+
+/* replace the above, once we support C++17
+        for (const auto& [key, val] : db)
+                if (val == value)
+                        return true;
+        return false; */
 }
 
-string DocFileName::mangledFileName(string const & dir, bool use_counter, bool encrypt_path) const
+string DocFileName::mangledFileName(string const & dir, bool encrypt_path) const
 {
 	// Concurrent access to these variables is possible.
 
 	// We need to make sure that every DocFileName instance for a given
 	// filename returns the same mangled name.
 	typedef map<string, string> MangledMap;
-	static MangledMap mangledNames;
+	static MangledMap mangledPlainNames;
+	static MangledMap mangledEncryptNames;  //separate table for xhtml() route
 	static Mutex mangledMutex;
 	// this locks both access to mangledNames and counter below
 	Mutex::Locker lock(&mangledMutex);
-	MangledMap::const_iterator const it = mangledNames.find(absFileName());
-	if (it != mangledNames.end())
+	MangledMap * mangledNames = encrypt_path ? &mangledEncryptNames  : &mangledPlainNames;
+	MangledMap::const_iterator const it = mangledNames->find(absFileName());
+	if (it != mangledNames->end())
 		return (*it).second;
 
 	string const name = absFileName();
-	// Now the real work. Remove the extension.
-	string mname = support::changeExtension(name, string());
+	string mname;
 
-	if (encrypt_path)
-		mname = "export_" + onlyFileName() + "_" + toHexHash(mname);
+	// xHTML route
+	// we use hash instead of counter to get stable filenames in export directory
+	if (encrypt_path) {
+		// sanitization probably not neccessary for xhtml, but won't harm
+		string sanfn = support::changeExtension(onlyFileName(), string());
+		sanfn = sanitizeFileName(sanfn);
+		// Add the extension back on
+		sanfn = support::changeExtension(sanfn, getExtension(onlyFileName()));
 
-	// The mangled name must be a valid LaTeX name.
-	mname = sanitizeFileName(mname);
-	// Add the extension back on
-	mname = support::changeExtension(mname, getExtension(name));
+		//various filesystems have filename limit around 2^8
+		if (sanfn.length() > 230)
+			sanfn = "";
 
-	// Prepend a counter to the filename. This is necessary to make
-	// the mangled name unique.
-	static int counter = 0;
+		string enc_name = "e_" + toHexHash(name, true) + "_" + sanfn;
 
-	if (use_counter) {
+		while (collision_exists(mangledEncryptNames, enc_name))
+			enc_name = "e_" + toHexHash(enc_name, true) + "_" + sanfn;
+
+		mname = enc_name;
+	}
+
+	// LaTeX route
+	if (!encrypt_path) {
+		// Now the real work. Remove the extension.
+		mname = support::changeExtension(name, string());
+		// The mangled name must be a valid LaTeX name.
+		mname = sanitizeFileName(mname);
+		// Add the extension back on
+		mname = support::changeExtension(mname, getExtension(name));
+
+		// Prepend a counter to the filename. This is necessary to make
+		// the mangled name unique, see truncation below.
+	        //
+		static int counter = 0;
+
 		ostringstream s;
 		s << counter++ << mname;
 		mname = s.str();
-	}
 
-	// MiKTeX's YAP (version 2.4.1803) crashes if the file name
-	// is longer than about 160 characters. MiKTeX's pdflatex
-	// is even pickier. A maximum length of 100 has been proven to work.
-	// If dir.size() > max length, all bets are off for YAP. We truncate
-	// the filename nevertheless, keeping a minimum of 10 chars.
 
-	string::size_type max_length = max(100 - ((int)dir.size() + 1), 10);
+		// MiKTeX's YAP (version 2.4.1803) crashes if the file name
+		// is longer than about 160 characters. MiKTeX's pdflatex
+		// is even pickier. A maximum length of 100 has been proven to work.
+		// If dir.size() > max length, all bets are off for YAP. We truncate
+		// the filename nevertheless, keeping a minimum of 10 chars.
 
-	// If the mangled file name is too long, hack it to fit.
-	// We know we're guaranteed to have a unique file name because
-	// of the counter.
-	if (mname.size() > max_length) {
-		int const half = (int(max_length) / 2) - 2;
-		if (half > 0) {
-			mname = mname.substr(0, half) + "___" +
-				mname.substr(mname.size() - half);
+		string::size_type max_length = max(100 - ((int)dir.size() + 1), 10);
+
+		// If the mangled file name is too long, hack it to fit.
+		// We know we're guaranteed to have a unique file name because
+		// of the counter.
+		if (mname.size() > max_length) {
+			int const half = (int(max_length) / 2) - 2;
+			if (half > 0) {
+				mname = mname.substr(0, half) + "___" +
+					mname.substr(mname.size() - half);
+			}
 		}
 	}
 
-	mangledNames[absFileName()] = mname;
+	(*mangledNames)[absFileName()] = mname;
 	return mname;
 }
 

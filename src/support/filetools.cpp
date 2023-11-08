@@ -1334,13 +1334,22 @@ void fileUnlock(int fd, const char * /* lock_file*/)
 }
 
 
-std::string toHexHash(const std::string & str)
+std::string toHexHash(const std::string & str, bool shorten)
 {
-	// Use the best available hashing algorithm.
 	auto hashAlgo = QCryptographicHash::Sha256;
 
 	QByteArray hash = QCryptographicHash::hash(toqstr(str).toLocal8Bit(), hashAlgo);
-	return fromqstr(QString(hash.toHex()));
+	QString qshash=QString(hash.toHex());
+
+	/* For shortened case we take 12 leftmost chars (6 bytes encoded).
+	 * Random experiment shows:
+	 *  8 chars: 16 collisions for 10^5 graphic filenames
+	 * 12 chars:  0 collisions for 10^5 graphic filenames
+	 */
+	if (shorten)
+		qshash=qshash.left(12);
+
+	return fromqstr(qshash);
 }
 
 
