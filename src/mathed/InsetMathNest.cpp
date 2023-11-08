@@ -688,76 +688,60 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	}
 
 	InsetMathDecoration const * d = asDecorationInset();
+	docstring const name = d ? d->name() : docstring();
 
-	if (font.fontInfo().underbar() == FONT_OFF && d && d->name() == "uline") {
-			lyxerr << "Remove uline" << endl;
-	}
-	if (font.fontInfo().uuline() == FONT_OFF && d && d->name() == "uuline") {
-			lyxerr << "Remove uuline" << endl;
-	}
-	if (font.fontInfo().uwave() == FONT_OFF && d && d->name() == "uwave") {
-			lyxerr << "Remove uwave" << endl;
+	if ((font.fontInfo().underbar() == FONT_OFF && name == "uline") ||
+	    (font.fontInfo().uuline() == FONT_OFF && name == "uuline") ||
+	    (font.fontInfo().uwave() == FONT_OFF && name == "uwave")) {
+		if (include_previous_change) {
+			Cursor oldcur = cur;
+			cur.backwardInset();
+			cur.resetAnchor();
+			cur = oldcur;
+			cur.setSelection();
+		}
+		docstring const beg = '\\' + name + '{';
+		docstring const end = from_ascii("}");
+		docstring const sel2 = cur.selectionAsString(false);
+		cap::cutSelection(cur, false);
+		cur.pos() = 0;
+		cur.setSelection();
+		docstring const sel1 = cur.selectionAsString(false);
+		cur.pos() = cur.lastpos();
+		cur.setSelection();
+		docstring const sel3 = cur.selectionAsString(false);
+		cur.mathForward(false);
+		cur.setSelection();
+		cap::cutSelection(cur, false);
+		MathData ar;
+		if (!sel1.empty()) {
+			mathed_parse_cell(ar, beg + sel1 + end);
+			cur.insert(ar);
+		}
+		cur.resetAnchor();
+		mathed_parse_cell(ar, sel2);
+		cur.insert(ar);
+		if (!sel3.empty()) {
+			pos_type pos = cur.pos();
+			mathed_parse_cell(ar, beg + sel3 + end);
+			cur.insert(ar);
+			cur.pos() = pos;
+		}
+		cur.setSelection();
+		include_previous_change = false;
 	}
 
-	switch(font.fontInfo().underbar()) {
-	case FONT_ON:
-		if (!d || d->name() != "uline")
+	if (font.fontInfo().underbar() == FONT_ON) {
+		if (!d || name != "uline")
 			im = from_ascii("uline");
-		break;
-	case FONT_OFF:
-	case FONT_TOGGLE:
-	case FONT_INHERIT:
-	case FONT_IGNORE:
-		break;
-	}
-	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
-			cur.resetAnchor();
-			cur = oldcur;
-			cur.setSelection();
-		}
-		handleNest(cur, createInsetMath(im, cur.buffer()));
-		im.clear();
-		include_previous_change = true;
-	}
-
-	switch(font.fontInfo().uuline()) {
-	case FONT_ON:
-		if (!d || d->name() != "uuline")
+	} else if (font.fontInfo().uuline() == FONT_ON) {
+		if (!d || name != "uuline")
 			im = from_ascii("uuline");
-		break;
-	case FONT_OFF:
-	case FONT_TOGGLE:
-	case FONT_INHERIT:
-	case FONT_IGNORE:
-		break;
-	}
-	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
-			cur.resetAnchor();
-			cur = oldcur;
-			cur.setSelection();
-		}
-		handleNest(cur, createInsetMath(im, cur.buffer()));
-		im.clear();
-		include_previous_change = true;
+	} else if (font.fontInfo().uwave() == FONT_ON) {
+		if (!d || name != "uwave")
+			im = from_ascii("uwave");
 	}
 
-	switch(font.fontInfo().uwave()) {
-	case FONT_ON:
-		if (!d || d->name() != "uwave")
-			im = from_ascii("uwave");
-		break;
-	case FONT_OFF:
-	case FONT_TOGGLE:
-	case FONT_INHERIT:
-	case FONT_IGNORE:
-		break;
-	}
 	if (!im.empty()) {
 		if (include_previous_change) {
 			Cursor oldcur = cur;
