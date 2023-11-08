@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Lyx 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-11-05 11:07-0500\n"
-"PO-Revision-Date: 2023-07-27 01:09-0800\n"
+"PO-Revision-Date: 2023-11-08 01:09-0800\n"
 "Last-Translator: Pavel Sanda <sanda@lyx.org>\n"
 "Language-Team: Czech <LL@li.org>\n"
 "Language: cs\n"
@@ -2867,18 +2867,16 @@ msgid "&Extended character table"
 msgstr "&Rozšířená tabulka znaků"
 
 #: src/frontends/qt/ui/ListingsUi.ui:334
-#, fuzzy
 msgid "Language[[Programming]]"
-msgstr "Dokumentované programování"
+msgstr "Programovací jazyk"
 
 #: src/frontends/qt/ui/ListingsUi.ui:343
-#, fuzzy
 msgid "Lan&guage[[Programming]]:"
-msgstr "Dokumentované programování"
+msgstr "&Programovací jazyk"
 
 #: src/frontends/qt/ui/ListingsUi.ui:353
 msgid "Select the programming language"
-msgstr "Vybrat Programovací jazyk"
+msgstr "Vybrat programovací jazyk"
 
 #: src/frontends/qt/ui/ListingsUi.ui:360
 msgid "&Dialect:"
@@ -3020,11 +3018,10 @@ msgid "The available language(s) of the selected file will be displayed here"
 msgstr "Zde budou zobrazeny dostupné jazykové varianty tohoto souboru"
 
 #: src/frontends/qt/ui/MarginsUi.ui:38
-#, fuzzy
 msgid ""
 "Use the margin settings provided by the document class.<br>Note that if this "
 "is unchecked, different defaults may be used."
-msgstr "Použít nastavení okraje z třídy dokumentu"
+msgstr "Použít nastavení okraje z třídy dokumentu.<br>Pokud nezaškrtnete mohou být použity jiné standardní hodnoty."
 
 #: src/frontends/qt/ui/MarginsUi.ui:41
 msgid "&Default margins"
@@ -4143,9 +4140,8 @@ msgid "Use s&ingle instance"
 msgstr "Jediná &instance"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:197
-#, fuzzy
 msgid "Whether to place close button on each tab or only one in the top right."
-msgstr "Má se zavírací tlačítko objevit na každém panelu zvlášť?"
+msgstr "Má se zavírací tlačítko objevit na každém panelu zvlášť nebo ho umístit do pravého horního rohu?"
 
 #: src/frontends/qt/ui/PrefDocHandlingUi.ui:200
 msgid "Displa&y single close-tab button"
@@ -5042,7 +5038,6 @@ msgid "&User interface file:"
 msgstr "Soubor s už&ivatelským rozhraním:"
 
 #: src/frontends/qt/ui/PrefUi.ui:88
-#, fuzzy
 msgid "User interface &style:"
 msgstr "Soubor s už&ivatelským rozhraním:"
 
@@ -5050,7 +5045,7 @@ msgstr "Soubor s už&ivatelským rozhraním:"
 msgid ""
 "You can set a custom style here. Note that only certain styles may support "
 "dark mode, e.g. fusion on Windows."
-msgstr ""
+msgstr "Zde lze nastavit styl uživatelského rozhraní. Pouze některé styly umožňují tmavý režim (např. styl fusion ve Windows)."
 
 #: src/frontends/qt/ui/PrefUi.ui:126
 msgid "Context Help"
@@ -33102,13 +33097,12 @@ msgid "Unapplied changes"
 msgstr "Neuplatněné změny"
 
 #: src/frontends/qt/GuiDocument.cpp:1861
-#, fuzzy
 msgid ""
 "Some changes in the document were not yet applied.\n"
 "Do you want to apply them before closing or dismiss the changes?"
 msgstr ""
-"Některé změny v předchozím dokumentu nebyly zatím uplatněny.\n"
-"Přejete si přepnout zpět and potvrdit je?"
+"Některé změny v dokumentu nebyly zatím uplatněny.\n"
+"Přejete si je použít anebo zrušit před zavřením?"
 
 #: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:3102
 #: src/frontends/qt/GuiDocument.cpp:3403 src/frontends/qt/GuiDocument.cpp:5038
@@ -33116,23 +33110,20 @@ msgid "&Apply"
 msgstr "&Použít"
 
 #: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Dismiss Changes"
-msgstr "Ne, &odmítnout změny"
+msgstr "&Zamítnout změny"
 
 #: src/frontends/qt/GuiDocument.cpp:1887
-#, fuzzy
 msgid ""
 "Some changes in the previous document were not yet applied.\n"
 "Do you want to switch back in order to apply them or dismiss the changes?"
 msgstr ""
 "Některé změny v předchozím dokumentu nebyly zatím uplatněny.\n"
-"Přejete si přepnout zpět and potvrdit je?"
+"Přejete si přepnout zpět pro jejich potvrzení anebo je zamítnout?"
 
 #: src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Switch Back"
-msgstr "Ano, přepnout &zpět"
+msgstr "Př&epnout zpět"
 
 #: src/frontends/qt/GuiDocument.cpp:2333
 msgid "Default margins"
@@ -33856,7 +33847,6 @@ msgstr ""
 
 #: src/frontends/qt/GuiInfo.cpp:148 src/frontends/qt/GuiInfo.cpp:162
 #: src/frontends/qt/GuiInfo.cpp:176
-#, fuzzy
 msgid ""
 "Enter time format specification, using the following placeholders:\n"
 "* h: the hour without a leading zero (1-12 in AM/PM)\n"
@@ -33874,10 +33864,10 @@ msgid ""
 "* t: the timezone (e.g. CEST)"
 msgstr ""
 "Vložte specifikaci časového formátu za pomocí těchto znaků:\n"
-"* h: hodina bez úvodní nuly (1-12 in AM/PM)\n"
-"* hh: hodina s úvodní nulou (01-12 in AM/PM)\n"
-"* H: hodina bez úvodní nuly (0-23 in AM/PM)\n"
-"* HH: hodina s úvodní nulou (00-23 in AM/PM)\n"
+"* h: hodina bez úvodní nuly (1-12 AM/PM)\n"
+"* hh: hodina s úvodní nulou (01-12 AM/PM)\n"
+"* H: hodina bez úvodní nuly (0-23)\n"
+"* HH: hodina s úvodní nulou (00-23)\n"
 "* m: minuta bez úvodní nuly\n"
 "* mm: minuta s úvodní nulou\n"
 "* s: sekunda bez úvodní nuly\n"
@@ -34411,12 +34401,12 @@ msgstr "Oxygen"
 
 #: src/frontends/qt/GuiPrefs.cpp:2544
 msgid "Restart needed"
-msgstr ""
+msgstr "Restart aplikace"
 
 #: src/frontends/qt/GuiPrefs.cpp:2545
 msgid ""
 "Resetting the user interface style to 'Default' requires a restart of LyX."
-msgstr ""
+msgstr "Nastavení uživatelského rozhraní vyžaduje restart LyX-u."
 
 #: src/frontends/qt/GuiPrefs.cpp:2600
 msgid "Document Handling"
