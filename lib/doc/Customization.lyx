@@ -24589,7 +24589,17 @@ status collapsed
 
 \end_inset
 
- defines another argument (by its number) which this argument requires to be output if it is itself output.
+ defines another argument
+\change_inserted -712698321 1699562312
+ or arguments
+\change_inserted -584632292 1615846730
+ (by 
+\change_deleted -712698321 1699562317
+its
+\change_inserted -712698321 1699562318
+their
+\change_inserted -584632292 1615846730
+ number) which this argument requires to be output if it is itself output.
  E.
 \begin_inset space \thinspace{}
 \end_inset
@@ -24644,6 +24654,27 @@ Argument 2
 \end_inset
 
 .
+
+\change_inserted -712698321 1699562142
+ If multiple arguments are required,
+ separate them by comma (e.g.,
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -712698321 1699562142
+Requires 1,2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize

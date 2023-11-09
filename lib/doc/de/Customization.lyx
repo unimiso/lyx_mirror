@@ -20476,8 +20476,9 @@ status collapsed
 
 \end_inset
 
- Definiert ein anderes Argument (mittels seiner Nummer),
- dass das vorliegende voraussetzt,
+ Definiert ein anderes Argument bzw.
+ mehrere andere Arguments (mittels ihrer Nummer),
+ welche(s) das vorliegende voraussetzt,
  wenn es selbst ausgegeben wird.
  So verlangen \SpecialChar LaTeX
 -Befehle häufig,
@@ -20517,6 +20518,19 @@ Argument 2
 \end_inset
 
 .
+ Wenn mehrere Argumente vorausgesetzt werden,
+ separieren Sie diese durch Komma (bspw.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Requires 1,2
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
