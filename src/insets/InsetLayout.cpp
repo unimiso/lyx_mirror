@@ -891,7 +891,7 @@ void InsetLayout::readArgument(Lexer & lex)
 			lex.next();
 			arg.tooltip = lex.getDocString();
 		} else if (tok == "requires") {
-			lex.next();
+			lex.eatLine();
 			arg.required = lex.getString();
 		} else if (tok == "decoration") {
 			lex.next();
