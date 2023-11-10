@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
 "POT-Creation-Date: 2023-11-05 11:07-0500\n"
-"PO-Revision-Date: 2023-11-08 21:50+0100\n"
+"PO-Revision-Date: 2023-11-12 19:37+0100\n"
 "Last-Translator: Yuriy Skalko <yuriy.skalko@gmail.com>\n"
 "Language-Team: Russian <lyx-docs@lists.lyx.org>\n"
 "Language: ru\n"
@@ -111,9 +111,9 @@ msgid ""
 "full list for author-year citation, you can put the full list here and the "
 "abbreviated list above."
 msgstr ""
-"Если вы хотите использовать сокращенный список авторов (с пометкой \"и др."
+"Если вы хотите использовать сокращённый список авторов (с пометкой \"и др."
 "\"), а также полный список для ссылки \"автор-год\", вы можете поместить "
-"полный список здесь и сокращенный список выше."
+"полный список здесь и сокращённый список выше."
 
 #: src/frontends/qt/ui/BibitemUi.ui:122 src/frontends/qt/GuiBibitem.cpp:93
 msgid ""
@@ -2343,7 +2343,7 @@ msgid ""
 "Link to an arbitrary URI scheme not matched by the other three types (to be "
 "fully spelled out in the Target field above)"
 msgstr ""
-"Ссылка на произвольную схему URI, не соответствующую трем другим типам "
+"Ссылка на произвольную схему URI, не соответствующую трём другим типам "
 "(должна быть полностью прописана в поле Цель выше)"
 
 #: src/frontends/qt/ui/HyperlinkUi.ui:169
@@ -3123,7 +3123,7 @@ msgid ""
 "document.<br>This is the fastest method. Use this if you do not need correct "
 "counter values and references."
 msgstr ""
-"Все счётчики и ссылки исключенных дочерних документов будут игнорироваться, "
+"Все счётчики и ссылки исключённых дочерних документов будут игнорироваться, "
 "при этом счётчики в выводе будут отличаться от вывода полного документа."
 "<br>Это самый быстрый метод. Используйте его, если вам не нужны правильные "
 "значения счётчиков и ссылок."
@@ -3460,13 +3460,13 @@ msgid ""
 "Namespace prefix to use for MathML formulae. For instance, with the <code>m</"
 "code> prefix, the MathML tags will be output like <code>m:math</code>."
 msgstr ""
-"Префикс пространства имен для формул MathML. Например, с префиксом <code>m</"
+"Префикс пространства имён для формул MathML. Например, с префиксом <code>m</"
 "code> теги MathML будут выводиться как <code>m:math</code>."
 
 #: src/frontends/qt/ui/OutputUi.ui:327
 msgid "No prefix (namespace defined inline for each tag)"
 msgstr ""
-"Без префикса (пространство имен определяется непосредственно для каждого "
+"Без префикса (пространство имён определяется непосредственно для каждого "
 "тега)"
 
 #: src/frontends/qt/ui/OutputUi.ui:332
@@ -3487,7 +3487,7 @@ msgstr "CALS"
 
 #: src/frontends/qt/ui/OutputUi.ui:419
 msgid "&MathML namespace prefix:"
-msgstr "Префикс пространства имен MathML:"
+msgstr "Префикс пространства имён MathML:"
 
 #: src/frontends/qt/ui/OutputUi.ui:449
 msgid "LyX Format"
@@ -3636,7 +3636,7 @@ msgstr "Дополнительные &параметры"
 msgid ""
 "Additional hyperref options (comma-separated) to be passed via \\hypersetup."
 msgstr ""
-"Дополнительные параметры hyperref (разделенные запятыми) для передачи через "
+"Дополнительные параметры hyperref (разделённые запятыми) для передачи через "
 "\\hypersetup."
 
 #: src/frontends/qt/ui/PDFSupportUi.ui:464
@@ -6193,7 +6193,7 @@ msgid ""
 "change tracking, etc.)"
 msgstr ""
 "Отфильтровать элементы, которые не выводятся (в заметках, неактивных ветках, "
-"удаленных в отслеживании изменений и т. д.)"
+"удалённых в отслеживании изменений и т. д.)"
 
 #: src/frontends/qt/ui/TocUi.ui:317 src/frontends/qt/TocWidget.cpp:99
 msgid "All items"
@@ -14241,7 +14241,7 @@ msgstr "Аннотация над колонками"
 
 #: lib/layouts/jlreq-common.inc:107 lib/layouts/jlreq-common.inc:113
 msgid "JLReq Setup"
-msgstr "JLReq Setup"
+msgstr "Настройка JLReq"
 
 #: lib/layouts/jlreq-common.inc:170 lib/layouts/jlreq-common.inc:173
 #: lib/layouts/tufte-book.layout:27 lib/layouts/tufte-book.layout:159
@@ -14310,7 +14310,7 @@ msgstr "Distance between chars is set to this length."
 
 #: lib/layouts/jlreq-report.layout:3
 msgid "Japanese Report (JLReq Class)"
-msgstr "Japanese Report (JLReq Class)"
+msgstr "Japanese Report (класс JLReq)"
 
 #: lib/layouts/jreport.layout:3
 msgid "Japanese Report (Standard Class)"
@@ -14592,8 +14592,8 @@ msgid ""
 "Linguistics."
 msgstr ""
 "Определяет некоторые специальные окружения, полезные для лингвистов "
-"(нумерация примеров, толкования, семантическая разметка, таблицы). См. "
-"Помощь > Специальные руководства > Лингвистика."
+"(нумерованные примеры, глоссы, семантическую разметку, матрицы). См. Помощь "
+"> Специальные руководства > Лингвистика."
 
 #: lib/layouts/linguistics.module:20 lib/layouts/linguistics.module:21
 msgid "(\\arabic{example})"
@@ -14715,23 +14715,23 @@ msgstr "Постамбула подпримера"
 
 #: lib/layouts/linguistics.module:202
 msgid "Interlinear Gloss (2 Lines)"
-msgstr "Глоссирование (2 строки)"
+msgstr "Глосса (2 строки)"
 
 #: lib/layouts/linguistics.module:204
 msgid "Gloss"
-msgstr "Толкование"
+msgstr "Глосса"
 
 #: lib/layouts/linguistics.module:220 lib/layouts/linguistics.module:276
 msgid "Gloss options"
-msgstr "Gloss options"
+msgstr "Параметры глоссы"
 
 #: lib/layouts/linguistics.module:221 lib/layouts/linguistics.module:277
 msgid "Gloss Options|s"
-msgstr "Gloss Options|s"
+msgstr "Параметры глоссы"
 
 #: lib/layouts/linguistics.module:222
 msgid "Add digloss options here"
-msgstr "Add digloss options here"
+msgstr "Добавьте сюда параметры диглоссы"
 
 #: lib/layouts/linguistics.module:225 lib/layouts/linguistics.module:226
 #: lib/layouts/linguistics.module:281 lib/layouts/linguistics.module:282
@@ -14744,20 +14744,20 @@ msgstr "Добавьте сюда необязательный коммента�
 
 #: lib/layouts/linguistics.module:231 lib/layouts/linguistics.module:232
 msgid "Interlinear Gloss"
-msgstr "Глоссирование"
+msgstr "Глосса"
 
 #: lib/layouts/linguistics.module:233
 msgid "Add the inter-linear gloss here"
-msgstr "Add the inter-linear gloss here"
+msgstr "Добавьте сюда глоссу"
 
 #: lib/layouts/linguistics.module:240 lib/layouts/linguistics.module:241
 msgid "Gloss Comment"
-msgstr "Комментарий толкования"
+msgstr "Комментарий глоссы"
 
 #: lib/layouts/linguistics.module:242 lib/layouts/linguistics.module:298
 #: lib/layouts/linguistics.module:313
 msgid "Add an optional gloss comment here"
-msgstr "Добавьте сюда необязательный комментарий к толкованию"
+msgstr "Добавьте сюда необязательный комментарий к глоссе"
 
 #: lib/layouts/linguistics.module:246 lib/layouts/linguistics.module:317
 msgid "Translation"
@@ -14765,71 +14765,71 @@ msgstr "Перевод"
 
 #: lib/layouts/linguistics.module:247 lib/layouts/linguistics.module:318
 msgid "Gloss Translation"
-msgstr "Gloss Translation"
+msgstr "Перевод глоссы"
 
 #: lib/layouts/linguistics.module:248
 msgid "Add a free translation for the gloss"
-msgstr "Add a free translation for the gloss"
+msgstr "Добавьте свободный перевод для глоссы"
 
 #: lib/layouts/linguistics.module:258
 msgid "Interlinear Gloss (3 Lines)"
-msgstr "Глоссирование (3 строки)"
+msgstr "Глосса (3 строки)"
 
 #: lib/layouts/linguistics.module:260
 msgid "Tri-Gloss"
-msgstr "Tri-Gloss"
+msgstr "Триглосса"
 
 #: lib/layouts/linguistics.module:278
 msgid "Add trigloss options here"
-msgstr "Add trigloss options here"
+msgstr "Добавьте сюда параметры триглоссы"
 
 #: lib/layouts/linguistics.module:287
 msgid "Interlinear Gloss (1)"
-msgstr "Глоссирование (1)"
+msgstr "Глосса (1)"
 
 #: lib/layouts/linguistics.module:288
 msgid "Interlinear Gloss (Line 1)|1"
-msgstr "Глоссирование (строка 1)|1"
+msgstr "Глосса (строка 1)|1"
 
 #: lib/layouts/linguistics.module:289
 msgid "Add the first inter-linear gloss line here"
-msgstr "Добавьте сюда первую строку комментария к толкованию"
+msgstr "Добавьте сюда первую строку глоссы"
 
 #: lib/layouts/linguistics.module:296
 msgid "Gloss Comment (1)"
-msgstr "Комментарий толкования (1)"
+msgstr "Комментарий глоссы (1)"
 
 #: lib/layouts/linguistics.module:297
 msgid "Gloss Comment (Line 1)"
-msgstr "Комментарий толкования (строка 1)"
+msgstr "Комментарий глоссы (строка 1)"
 
 #: lib/layouts/linguistics.module:302
 msgid "Interlinear Gloss (2)"
-msgstr "Глоссирование (2)"
+msgstr "Глосса (2)"
 
 #: lib/layouts/linguistics.module:303
 msgid "Interlinear Gloss (Line 2)|2"
-msgstr "Глоссирование (строка 2)|2"
+msgstr "Глосса (строка 2)|2"
 
 #: lib/layouts/linguistics.module:304
 msgid "Add the second inter-linear gloss line here"
-msgstr "Добавьте сюда вторую строку комментария к толкованию"
+msgstr "Добавьте сюда вторую строку глоссы"
 
 #: lib/layouts/linguistics.module:311
 msgid "Gloss Comment (2)"
-msgstr "Комментарий толкования (2)"
+msgstr "Комментарий глоссы (2)"
 
 #: lib/layouts/linguistics.module:312
 msgid "Gloss Comment (Line 2)"
-msgstr "Комментарий толкования (строка 1)"
+msgstr "Комментарий глоссы (строка 2)"
 
 #: lib/layouts/linguistics.module:319
 msgid "Add a translation for the glosse"
-msgstr "Добавить перевод в glosse"
+msgstr "Добавьте перевод для глоссы"
 
 #: lib/layouts/linguistics.module:328
 msgid "GroupGlossedWords"
-msgstr "GroupGlossedWords"
+msgstr "Группа глоссированных слов"
 
 #: lib/layouts/linguistics.module:330
 msgid "Group"
@@ -14849,7 +14849,7 @@ msgstr "DRS"
 
 #: lib/layouts/linguistics.module:380
 msgid "Discourse Representation Structure|D"
-msgstr "Discourse Representation Structure|D"
+msgstr "Структура представления дискурса DRS|D"
 
 #: lib/layouts/linguistics.module:392 lib/layouts/linguistics.module:539
 msgid "Referents"
@@ -14869,7 +14869,7 @@ msgstr "DRS*"
 
 #: lib/layouts/linguistics.module:404
 msgid "Discourse Representation Structure (unspaced)|u"
-msgstr "Discourse Representation Structure (unspaced)|u"
+msgstr "Структура представления дискурса (без пробелов)"
 
 #: lib/layouts/linguistics.module:409
 msgid "IfThen-DRS"
@@ -14923,7 +14923,7 @@ msgstr "Cond."
 
 #: lib/layouts/linguistics.module:443
 msgid "DRS Condition"
-msgstr "DRS Condition"
+msgstr "DRS-условие"
 
 #: lib/layouts/linguistics.module:444
 msgid "Add the DRS condition here"
@@ -14987,7 +14987,7 @@ msgstr "Sent. DRS"
 
 #: lib/layouts/linguistics.module:526
 msgid "DRS with Sentence above"
-msgstr "DRS with Sentence above"
+msgstr "DRS с предложением выше"
 
 #: lib/layouts/linguistics.module:530
 msgid "Sentence"
@@ -14999,7 +14999,7 @@ msgstr "DRS Sentence"
 
 #: lib/layouts/linguistics.module:532
 msgid "Add the sentence here"
-msgstr "Add the sentence here"
+msgstr "Добавьте сюда предложение"
 
 #: lib/layouts/linguistics.module:553
 msgid "Expression"
@@ -15027,19 +15027,19 @@ msgstr "значение"
 
 #: lib/layouts/linguistics.module:596
 msgid "Tableaux"
-msgstr "Таблицы (лингв.)"
+msgstr "Матрицы"
 
 #: lib/layouts/linguistics.module:600
 msgid "Tableau"
-msgstr "Таблица (лингв.)"
+msgstr "Матрица"
 
 #: lib/layouts/linguistics.module:605
 msgid "List of Tableaux"
-msgstr "Список таблиц (лингв.)"
+msgstr "Список матриц"
 
 #: lib/layouts/linguistics.module:608
 msgid "Tableau ##"
-msgstr "Таблица ##"
+msgstr "Матрица ##"
 
 #: lib/layouts/litinsets.inc:13
 msgid "Chunk ##"
@@ -17328,7 +17328,7 @@ msgid ""
 "markup provided by the Text Properties dialog, words marked-up with soul are "
 "hyphenated."
 msgstr ""
-"Определяет стили текста для выделения, разрядки, зачеркивания, подчеркивания "
+"Определяет стили текста для выделения, разрядки, зачёркивания, подчёркивания "
 "и написания прописными/капителью с помощью пакета soul. В отличие от "
 "разметки в диалоговом окне \"Свойства текста\", в размеченных словах c "
 "помощью soul могут выполняться переносы."
@@ -28583,7 +28583,7 @@ msgstr "Не удалось перезагрузить документ %1$s."
 
 #: src/Buffer.cpp:5730
 msgid "File deleted from disk"
-msgstr "Файл удален с диска"
+msgstr "Файл удалён с диска"
 
 #: src/Buffer.cpp:5731
 #, c-format
@@ -28594,7 +28594,7 @@ msgid ""
 msgstr ""
 "Файл\n"
 "  %1$s\n"
-"был удален с диска!"
+"был удалён с диска!"
 
 #: src/BufferParams.cpp:536
 msgid ""
@@ -28691,7 +28691,7 @@ msgstr ""
 "Выбранный класс документа\n"
 "\t%1$s\n"
 "требует внешние файлы, которые сейчас недоступны.\n"
-"Класс документа все равно можно использовать, но\n"
+"Класс документа всё равно можно использовать, но\n"
 "документ нельзя будет скомпилировать, пока следующие\n"
 "необходимые компоненты не будут установлены:\n"
 "\t%2$s\n"
@@ -31239,7 +31239,7 @@ msgid ""
 "before to be on the same level since there is no more lower or higher "
 "heading level. Continue still?"
 msgstr ""
-"Это действие приведет к тому, что некоторые заголовки, которые раньше "
+"Это действие приведёт к тому, что некоторые заголовки, которые раньше "
 "находились на разных уровнях, будут находиться на одном уровне, поскольку "
 "больше нет более низкого или более высокого уровня заголовка. Продолжить?"
 
@@ -32272,7 +32272,7 @@ msgid ""
 "abbreviated list (with `et al.'), the full list can go below."
 msgstr ""
 "Вставьте здесь имя автора (имена авторов) для ссылки \"автор-год\". Если вы "
-"используете сокращенный список (с \"et al.''), полный список можно найти "
+"используете сокращённый список (с \"et al.''), полный список можно найти "
 "ниже."
 
 #: src/frontends/qt/GuiBibitem.cpp:66
@@ -32330,8 +32330,8 @@ msgid ""
 "you can set it in the list above."
 msgstr ""
 "Если в ваших библиографических базах данных используется кодировка, отличная "
-"от кодировки документа LyX, укажите ее здесь. Если отдельные базы данных "
-"имеют разные кодировки, вы можете установить их в вышеприведенном списке."
+"от кодировки документа LyX, укажите её здесь. Если отдельные базы данных "
+"имеют разные кодировки, вы можете установить их в вышеприведённом списке."
 
 #: src/frontends/qt/GuiBibtex.cpp:340
 msgid "General Encoding"
@@ -32343,7 +32343,7 @@ msgid ""
 "below, set it here"
 msgstr ""
 "Если эта библиографическая база данных использует другую кодировку, чем "
-"указанная ниже, установите ее здесь."
+"указанная ниже, установите её здесь."
 
 #: src/frontends/qt/GuiBibtex.cpp:380
 msgid "Biblatex Bibliography"
@@ -34557,7 +34557,7 @@ msgid ""
 "Note that these files are hidden by default by some file managers. A "
 "dedicated backup directory can be set in the 'Paths' section."
 msgstr ""
-"Если этот флажок установлен, в текущем рабочем каталоге создается резервная "
+"Если этот флажок установлен, в текущем рабочем каталоге создаётся резервная "
 "копия документа. Файл резервной копии имеет то же имя, но с суффиксом '."
 "lyx~'. Обратите внимание, что эти файлы по умолчанию скрыты некоторыми "
 "файловыми менеджерами. Специальный каталог для резервных копий можно задать "
@@ -34571,7 +34571,7 @@ msgid ""
 "file name and the suffix '.lyx~' (e.g., !mydir!filename.lyx~). Note that "
 "these files are hidden by default by some file managers."
 msgstr ""
-"Если этот флажок установлен, резервная копия документа создается в каталоге "
+"Если этот флажок установлен, резервная копия документа создаётся в каталоге "
 "резервного копирования (%1$s). Резервный файл имеет полный исходный путь и "
 "имя в качестве имени файла и суффикс '.lyx~' (например, !mydir!filename."
 "lyx~). Обратите внимание, что эти файлы скрыты по умолчанию некоторыми "
@@ -35521,7 +35521,7 @@ msgid ""
 msgstr ""
 "Предлагается сохранить шаблон в подкаталоге\n"
 "в соответствии с языком документа (%1$s).\n"
-"Этот подкаталог еще не существует.\n"
+"Этот подкаталог ещё не существует.\n"
 "Вы хотите создать его?"
 
 #: src/frontends/qt/GuiView.cpp:3191
@@ -35558,7 +35558,7 @@ msgid ""
 msgstr ""
 "Предлагается сохранить шаблон в подкаталоге\n"
 "в соответствии с категорией макета (%1$s).\n"
-"Этот подкаталог еще не существует.\n"
+"Этот подкаталог ещё не существует.\n"
 "Вы хотите создать его?"
 
 #: src/frontends/qt/GuiView.cpp:3222
