@@ -14,6 +14,8 @@
 #ifndef FONT_METRICS_H
 #define FONT_METRICS_H
 
+
+#include "support/mute_warning.h"
 #include "support/strfwd.h"
 
 #include <vector>

@@ -15,6 +15,7 @@
 #include <map>
 #include <string>
 
+#include "support/mute_warning.h"
 
 namespace lyx {
 

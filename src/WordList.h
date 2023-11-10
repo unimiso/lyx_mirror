@@ -13,6 +13,7 @@
 #define WORDLIST_H
 
 #include "support/docstring.h"
+#include "support/mute_warning.h"
 
 #include <memory>
 

@@ -71,6 +71,7 @@
 #include "support/lassert.h"
 #include "support/lstrings.h"
 #include "support/lyxalgo.h" // sorted
+#include "support/mute_warning.h"
 #include "support/textutils.h"
 #include "support/Messages.h"
 #include "support/os.h"
