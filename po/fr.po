@@ -362,10 +362,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LyX 2.4\n"
 "Report-Msgid-Bugs-To: lyx-devel@lists.lyx.org\n"
-"POT-Creation-Date: 2023-11-05 11:07-0500\n"
-"PO-Revision-Date: 2023-10-16 10:57+0200\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: Jean-Pierre Chrétien <jeanpierre.chretien@free.fr>\n"
-"Language-Team: lyxfr\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3276,19 +3276,16 @@ msgstr "Utilise la table de caractères étendue"
 msgid "&Extended character table"
 msgstr "Table de caractères étendu&e"
 
-#: src/frontends/qt/ui/ListingsUi.ui:334
-#, fuzzy
 msgid "Language[[Programming]]"
-msgstr "Programmation littéraire"
+msgstr "Langage"
 
 #: src/frontends/qt/ui/ListingsUi.ui:343
-#, fuzzy
 msgid "Lan&guage[[Programming]]:"
-msgstr "Programmation littéraire"
+msgstr "Lan&gage"
 
 #: src/frontends/qt/ui/ListingsUi.ui:353
 msgid "Select the programming language"
-msgstr "Choisir le language de programmation"
+msgstr "Choisir le langage de programmation"
 
 #: src/frontends/qt/ui/ListingsUi.ui:360
 msgid "&Dialect:"
@@ -3296,7 +3293,7 @@ msgstr "&Dialecte :"
 
 #: src/frontends/qt/ui/ListingsUi.ui:370
 msgid "Select the dialect of the programming language, if available"
-msgstr "Choisir, s'il y a lieu, le dialecte du language de programmation"
+msgstr "Choisir, s'il y a lieu, le dialecte du langage de programmation"
 
 #: src/frontends/qt/ui/ListingsUi.ui:380
 msgid "Range"
@@ -3432,12 +3429,12 @@ msgstr ""
 "Les langue(s) disponible(s) pour les fichiers sélectionnés seront affichées "
 "ici"
 
-#: src/frontends/qt/ui/MarginsUi.ui:38
-#, fuzzy
 msgid ""
 "Use the margin settings provided by the document class.<br>Note that if this "
 "is unchecked, different defaults may be used."
-msgstr "Utiliser les marges imposées par la classe de document"
+msgstr ""
+"Utiliser les marges imposées par la classe de document.<br>Notez que si la "
+"case n'est pas cochée, d'autres réglages implicites peuvent être utilisés."
 
 #: src/frontends/qt/ui/MarginsUi.ui:41
 msgid "&Default margins"
@@ -4928,7 +4925,7 @@ msgstr "Alt"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:22
 msgid "User &interface language:"
-msgstr "Langage de l'interface &utilisateur :"
+msgstr "Langue de l'interface &utilisateur :"
 
 #: src/frontends/qt/ui/PrefLanguageUi.ui:32
 msgid "Select the language of the user interface (menus, dialogs, etc.)"
@@ -33838,7 +33835,6 @@ msgid "Unapplied changes"
 msgstr "Modifications non appliquées"
 
 #: src/frontends/qt/GuiDocument.cpp:1861
-#, fuzzy
 msgid ""
 "Some changes in the document were not yet applied.\n"
 "Do you want to apply them before closing or dismiss the changes?"
@@ -33853,24 +33849,22 @@ msgid "&Apply"
 msgstr "&Appliquer"
 
 #: src/frontends/qt/GuiDocument.cpp:1863 src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Dismiss Changes"
-msgstr "Non, &refuser les modifications"
+msgstr "&Refuser les modifications"
 
 #: src/frontends/qt/GuiDocument.cpp:1887
-#, fuzzy
 msgid ""
 "Some changes in the previous document were not yet applied.\n"
 "Do you want to switch back in order to apply them or dismiss the changes?"
 msgstr ""
 "Certaines modifications dans document précédent n'ont pas encore été "
 "appliquées.\n"
-"Voulez-vous revenir en arrière et les appliquer ?"
+"Voulez-vous revenir en arrière et les appliquer ou bien ignorer les "
+"modifications ?"
 
 #: src/frontends/qt/GuiDocument.cpp:1889
-#, fuzzy
 msgid "&Switch Back"
-msgstr "Oui, &revenir en arrière"
+msgstr "&Revenir en arrière"
 
 #: src/frontends/qt/GuiDocument.cpp:2333
 msgid "Default margins"
@@ -34764,7 +34758,7 @@ msgstr "Paramètres de ligne"
 
 #: src/frontends/qt/GuiListings.cpp:63
 msgid "No language"
-msgstr "Pas de language"
+msgstr "Pas de langage"
 
 #: src/frontends/qt/GuiListings.cpp:168
 msgid "Program Listing Settings"
