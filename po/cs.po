@@ -14378,7 +14378,7 @@ msgstr "S/R výraz"
 
 #: lib/layouts/landscape.module:2
 msgid "Landscape Document Parts"
-msgstr "část dokumentu na šířku"
+msgstr "Část dokumentu na šířku"
 
 #: lib/layouts/landscape.module:6
 msgid "Output parts of the document in landscape mode."
