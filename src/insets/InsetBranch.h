@@ -114,7 +114,7 @@ private:
 	///
 	void doDispatch(Cursor & cur, FuncRequest & cmd) override;
 	///
-	docstring layoutName() const override { return from_ascii("Branch:") + branch(); }
+	docstring layoutName() const override;
 	///
 	Inset * clone() const override { return new InsetBranch(*this); }
 

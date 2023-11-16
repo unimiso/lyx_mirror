@@ -338,6 +338,14 @@ string InsetBranch::contextMenuName() const
 }
 
 
+docstring InsetBranch::layoutName() const
+{
+	docstring const name = support::subst(branch(), '_', ' ');
+	return from_ascii("Branch:") + name;
+}
+
+
+
 bool InsetBranch::isMacroScope() const
 {
 	// Its own scope if not selected by buffer
