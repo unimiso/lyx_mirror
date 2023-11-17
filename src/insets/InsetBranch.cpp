@@ -21,6 +21,7 @@
 #include "DispatchResult.h"
 #include "FuncRequest.h"
 #include "FuncStatus.h"
+#include "Inset.h"
 #include "Lexer.h"
 #include "LyX.h"
 #include "output_docbook.h"
@@ -117,6 +118,10 @@ docstring const InsetBranch::buttonLabel(BufferView const &) const
 	if (decoration() == InsetDecoration::MINIMALISTIC)
 		return symb + inv_symb + params_.branch;
 
+	InsetLayout const & il = getLayout();
+	docstring const & label_string = il.labelstring();
+	if (!label_string.empty())
+		return symb + inv_symb + label_string;
 	docstring s;
 	if (inmaster && inchild)
 		s = _("Branch: ");
