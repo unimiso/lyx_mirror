@@ -56,6 +56,10 @@
 * Dark mode on Windows is possible now by choosing "fusion" user interface style
   in the user interface preferences dialog, your system style has to be set to dark.
 
+* One can now use the Text Properties dialog in mathed to not only change
+  colors but also other text properties, except strikethrough and language
+  settings.
+
 
 !!Documents compilation process and images conversion
 
