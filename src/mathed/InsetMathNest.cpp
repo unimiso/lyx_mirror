@@ -511,17 +511,15 @@ void InsetMathNest::handleNest(Cursor & cur, MathAtom const & nest,
 
 void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 {
-	bool include_previous_change = false;
 	cur.recordUndoSelection();
+	bool include_previous_change = false;
+	bool selection = cur.selection();
+	DocIterator sel_begin = cur.selectionBegin();
+	DocIterator sel_end = cur.selectionEnd();
+	bool multiple_cells = sel_begin.idx() != sel_end.idx();
 	Font font;
 	bool b;
 	font.fromString(to_utf8(arg), b);
-	if (font.fontInfo().color() != Color_inherit &&
-	    font.fontInfo().color() != Color_ignore) {
-		handleNest(cur, MathAtom(new InsetMathColor(buffer_, true, font.fontInfo().color())));
-		include_previous_change = true;
-	}
-
 	docstring im;
 	InsetMathFont const * f = asFontInset();
 
@@ -559,13 +557,6 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
-			cur.resetAnchor();
-			cur = oldcur;
-			cur.setSelection();
-		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
 		include_previous_change = true;
@@ -580,18 +571,22 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	case BOLD_SERIES:
 		if (!f || (f->name() != "textbf" && f->name() != "mathbf"))
 			im = currentMode() != MATH_MODE ? from_ascii("textbf")
-							: from_ascii("mathbf");
+							: from_ascii("boldsymbol");
 		break;
 	case INHERIT_SERIES:
 	case IGNORE_SERIES:
 		break;
 	}
 	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
 			cur.resetAnchor();
-			cur = oldcur;
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else if (include_previous_change && selection) {
 			cur.setSelection();
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
@@ -613,23 +608,27 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	case SLANTED_SHAPE:
 		if (!f || f->name() != "textsl")
 			im = currentMode() != MATH_MODE ? from_ascii("textsl")
-							: from_ascii("error");
+							: docstring();
 		break;
 	case SMALLCAPS_SHAPE:
 		if (!f || f->name() != "textsc")
 			im = currentMode() != MATH_MODE ? from_ascii("textsc")
-							: from_ascii("error");
+							: docstring();
 		break;
 	case INHERIT_SHAPE:
 	case IGNORE_SHAPE:
 		break;
 	}
-	if (!im.empty() && im != "error") {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
+	if (!im.empty()) {
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
 			cur.resetAnchor();
-			cur = oldcur;
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else if (include_previous_change && selection) {
 			cur.setSelection();
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
@@ -675,11 +674,15 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		break;
 	}
 	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
 			cur.resetAnchor();
-			cur = oldcur;
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else if (include_previous_change && selection) {
 			cur.setSelection();
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
@@ -687,23 +690,22 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		include_previous_change = true;
 	}
 
-	InsetMathDecoration const * d = asDecorationInset();
+	InsetMathDecoration const * d = multiple_cells
+					? nullptr : asDecorationInset();
 	docstring const name = d ? d->name() : docstring();
 
 	if ((font.fontInfo().underbar() == FONT_OFF && name == "uline") ||
 	    (font.fontInfo().uuline() == FONT_OFF && name == "uuline") ||
 	    (font.fontInfo().uwave() == FONT_OFF && name == "uwave")) {
 		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
-			cur.resetAnchor();
-			cur = oldcur;
+			if (!selection)
+				cur.popForward();
 			cur.setSelection();
 		}
 		docstring const beg = '\\' + name + '{';
 		docstring const end = from_ascii("}");
 		docstring const sel2 = cur.selectionAsString(false);
-		cap::cutSelection(cur, false);
+		cutSelection(cur, false);
 		cur.pos() = 0;
 		cur.setSelection();
 		docstring const sel1 = cur.selectionAsString(false);
@@ -712,15 +714,17 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 		docstring const sel3 = cur.selectionAsString(false);
 		cur.mathForward(false);
 		cur.setSelection();
-		cap::cutSelection(cur, false);
+		cutSelection(cur, false);
 		MathData ar;
 		if (!sel1.empty()) {
 			mathed_parse_cell(ar, beg + sel1 + end);
 			cur.insert(ar);
 		}
 		cur.resetAnchor();
-		mathed_parse_cell(ar, sel2);
-		cur.insert(ar);
+		if (!sel2.empty()) {
+			mathed_parse_cell(ar, sel2);
+			cur.insert(ar);
+		}
 		if (!sel3.empty()) {
 			pos_type pos = cur.pos();
 			mathed_parse_cell(ar, beg + sel3 + end);
@@ -728,6 +732,8 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 			cur.pos() = pos;
 		}
 		cur.setSelection();
+		sel_begin = cur.selectionBegin();
+		sel_end = cur.selectionEnd();
 		include_previous_change = false;
 	}
 
@@ -743,16 +749,59 @@ void InsetMathNest::handleFont2(Cursor & cur, docstring const & arg)
 	}
 
 	if (!im.empty()) {
-		if (include_previous_change) {
-			Cursor oldcur = cur;
-			cur.backwardInset();
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
 			cur.resetAnchor();
-			cur = oldcur;
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else if (include_previous_change && selection) {
 			cur.setSelection();
 		}
 		handleNest(cur, createInsetMath(im, cur.buffer()));
 		im.clear();
 		include_previous_change = true;
+	}
+
+	if (font.fontInfo().color() != Color_inherit &&
+	    font.fontInfo().color() != Color_ignore) {
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
+			cur.resetAnchor();
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else if (include_previous_change && selection) {
+			cur.setSelection();
+		}
+		handleNest(cur, MathAtom(new InsetMathColor(buffer_, true, font.fontInfo().color())));
+		include_previous_change = true;
+	}
+
+	if (selection) {
+		if (multiple_cells) {
+			cur.setCursor(sel_begin);
+			cur.idx() = 0;
+			cur.pos() = 0;
+			cur.resetAnchor();
+			cur.setCursor(sel_end);
+			cur.pos() = cur.lastpos();
+			cur.setSelection();
+		} else {
+			if (include_previous_change) {
+				sel_end = cur;
+				cur.backwardInset();
+			} else {
+				cur.setCursor(sel_begin);
+			}
+			cur.resetAnchor();
+			cur.setCursor(sel_end);
+			cur.setSelection();
+		}
 	}
 
 	// FIXME: support other font changes here as well?
