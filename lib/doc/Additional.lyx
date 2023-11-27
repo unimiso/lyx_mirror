@@ -1,5 +1,5 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 615
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -105,6 +105,7 @@ initials
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
 \notefontcolor #0000ff
@@ -25417,14 +25418,16 @@ Predefined shapes
 
 \begin_layout Standard
 
-\change_inserted -712698321 1674913874
+\change_deleted 5863208 1701101601
 
 \series bold
 The 
-\change_unchanged
+\change_inserted 5863208 1701101603
 
 \family sans
 \series default
+The 
+\change_unchanged
 shapepar
 \family default
  
