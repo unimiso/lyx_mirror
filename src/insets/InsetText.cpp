@@ -1195,10 +1195,10 @@ void InsetText::iterateForToc(DocIterator const & cdit, bool output_active,
 		// If we find an InsetArgument that is supposed to provide the TOC caption,
 		// we'll save it for use later.
 		InsetArgument const * arginset = nullptr;
-		for (auto const & table : par.insetList()) {
-			dit.pos() = table.pos;
-			table.inset->addToToc(dit, doing_output, utype, backend);
-			if (InsetArgument const * x = table.inset->asInsetArgument())
+		for (auto const & elem : par.insetList()) {
+			dit.pos() = elem.pos;
+			elem.inset->addToToc(dit, doing_output, utype, backend);
+			if (InsetArgument const * x = elem.inset->asInsetArgument())
 				if (x->isTocCaption())
 					arginset = x;
 		}

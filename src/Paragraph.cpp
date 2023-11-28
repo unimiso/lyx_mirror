@@ -2375,8 +2375,8 @@ bool Paragraph::allowedInContext(Cursor const & cur, InsetLayout const & il) con
 	if (in_allowed_inset && inInset().asInsetText() && il.allowedOccurrences() != -1) {
 		ParagraphList & pars = cur.text()->paragraphs();
 			for (Paragraph const & par : pars) {
-				for (auto const & table : par.insetList())
-				if (table.inset->getLayout().name() == il.name())
+				for (auto const & elem : par.insetList())
+				if (elem.inset->getLayout().name() == il.name())
 					++have_ins;
 			}
 		if (have_ins >= il.allowedOccurrences())
@@ -2412,8 +2412,8 @@ bool Paragraph::allowedInContext(Cursor const & cur, InsetLayout const & il) con
 		for (; pit <= lastpit; ++pit) {
 			if (&pars[pit].layout() != d->layout_)
 				break;
-			for (auto const & table : pars[pit].insetList())
-				if (table.inset->getLayout().name() == il.name())
+			for (auto const & elem : pars[pit].insetList())
+				if (elem.inset->getLayout().name() == il.name())
 					++have_ins;
 		}
 		if (have_ins >= il.allowedOccurrences())
