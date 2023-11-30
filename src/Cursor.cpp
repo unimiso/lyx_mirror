@@ -1882,8 +1882,6 @@ void Cursor::pullArg()
 		plainErase();
 		cell().insert(pos(), ar);
 		resetAnchor();
-	} else {
-		//formula()->mutateToText();
 	}
 }
 

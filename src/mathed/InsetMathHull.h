@@ -276,8 +276,6 @@ private:
 //
 public:
 	///
-	virtual void mutateToText();
-	///
 	bool editable() const override { return true; }
 	///
 	void edit(Cursor & cur, bool front,

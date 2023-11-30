@@ -2243,28 +2243,6 @@ int InsetMathHull::border() const
 
 
 
-// simply scrap this function if you want
-void InsetMathHull::mutateToText()
-{
-#if 0
-	// translate to latex
-	ostringstream os;
-	latex(os, false, false);
-	string str = os.str();
-
-	// insert this text
-	Text * lt = view_->cursor().innerText();
-	string::const_iterator cit = str.begin();
-	string::const_iterator end = str.end();
-	for (; cit != end; ++cit)
-		view_->getIntl()->getTransManager().TranslateAndInsert(*cit, lt);
-
-	// remove ourselves
-	//dispatch(LFUN_ESCAPE);
-#endif
-}
-
-
 void InsetMathHull::handleFont(Cursor & cur, docstring const & arg,
 	docstring const & font)
 {
@@ -2307,47 +2285,6 @@ void InsetMathHull::edit(Cursor & cur, bool front, EntryDirection entry_from)
 
 
 /////////////////////////////////////////////////////////////////////
-
-
-#if 0
-bool InsetMathHull::searchForward(BufferView * bv, string const & str,
-				     bool, bool)
-{
-	// FIXME: completely broken
-	static InsetMathHull * lastformula = 0;
-	static CursorBase current = DocIterator(ibegin(nucleus()));
-	static MathData ar;
-	static string laststr;
-
-	if (lastformula != this || laststr != str) {
-		//lyxerr << "reset lastformula to " << this << endl;
-		lastformula = this;
-		laststr = str;
-		current	= ibegin(nucleus());
-		ar.clear();
-		mathed_parse_cell(ar, str, Parse::NORMAL, &buffer());
-	} else {
-		increment(current);
-	}
-	//lyxerr << "searching '" << str << "' in " << this << ar << endl;
-
-	for (DocIterator it = current; it != iend(nucleus()); increment(it)) {
-		CursorSlice & top = it.back();
-		MathData const & a = top.asInsetMath()->cell(top.idx_);
-		if (a.matchpart(ar, top.pos_)) {
-			bv->cursor().setSelection(it, ar.size());
-			current = it;
-			top.pos_ += ar.size();
-			bv->update();
-			return true;
-		}
-	}
-
-	//lyxerr << "not found!" << endl;
-	lastformula = 0;
-	return false;
-}
-#endif
 
 
 void InsetMathHull::write(ostream & os) const
