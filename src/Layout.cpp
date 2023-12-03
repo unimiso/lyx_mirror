@@ -1350,7 +1350,7 @@ void writeArgument(ostream & os, string const & id, Layout::latexarg const & arg
 	if (!arg.tooltip.empty())
 		os << "\t\tToolTip \"" << to_utf8(arg.tooltip) << "\"\n";
 	if (!arg.required.empty())
-		os << "\t\tRequires \"" << arg.required << "\"\n";
+		os << "\t\tRequires " << arg.required << "\n";
 	if (!arg.decoration.empty())
 		os << "\t\tDecoration \"" << arg.decoration << "\"\n";
 	if (!arg.newlinecmd.empty())
