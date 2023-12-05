@@ -12080,7 +12080,7 @@ msgstr "Definição \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:463 lib/layouts/theorems-counters-bytype.inc:26
 msgid "Conjecture \\arabic{theorem}"
-msgstr "Conjetura \arabic{theorem}"
+msgstr "Conjetura \\arabic{theorem}"
 
 #: lib/layouts/elsart.layout:475 lib/layouts/theorems-counters-bytype.inc:39
 msgid "Example \\arabic{theorem}"
@@ -15830,7 +15830,7 @@ msgstr "Seção ##"
 
 #: lib/layouts/numreport.inc:46
 msgid "footnote \\arabic{footnote}"
-msgstr "nota de rodapé \arabic{footnote}"
+msgstr "nota de rodapé \\arabic{footnote}"
 
 #: lib/layouts/numrevtex.inc:9
 msgid "\\Roman{section}."
@@ -16794,7 +16794,7 @@ msgstr "\\thesection.\\arabic{equation}"
 
 #: lib/layouts/scrbook.layout:33
 msgid "equation \\thechapter.\\arabic{equation}"
-msgstr "equação \\thechapter.\arabic{equation}"
+msgstr "equação \\thechapter.\\arabic{equation}"
 
 #: lib/layouts/scrclass.inc:49
 msgid "\\alph{enumii})"
@@ -17531,7 +17531,7 @@ msgstr "Equação ##"
 
 #: lib/layouts/stdcounters.inc:91 lib/layouts/stdcounters.inc:96
 msgid "Footnote \\arabic{footnote}"
-msgstr "Nota de rodapé \arabic{footnote}"
+msgstr "Nota de rodapé \\arabic{footnote}"
 
 #: lib/layouts/stdcounters.inc:97
 msgid "\\fnsymbol{thanks}"
@@ -18538,7 +18538,7 @@ msgstr "Caso (Nível 1)"
 
 #: lib/layouts/theorems-case.inc:13
 msgid "Case \\arabic{casei}"
-msgstr "Caso \arabic{casei}"
+msgstr "Caso \\arabic{casei}"
 
 #: lib/layouts/theorems-case.inc:14
 msgid "Case \\arabic{casei}."
@@ -18566,7 +18566,7 @@ msgstr "Caso \\alph{caseiii}."
 
 #: lib/layouts/theorems-case.inc:26
 msgid "Case \\alph{caseiii}"
-msgstr "Caso \alph{caseiii}"
+msgstr "Caso \\alph{caseiii}"
 
 #: lib/layouts/theorems-case.inc:29
 msgid "Case (Level 4)"
@@ -18574,7 +18574,7 @@ msgstr "Caso (Nível 4)"
 
 #: lib/layouts/theorems-case.inc:31
 msgid "Case \\arabic{caseiv}"
-msgstr "Caso \arabic{caseiv}"
+msgstr "Caso \\arabic{caseiv}"
 
 #: lib/layouts/theorems-case.inc:32
 msgid "Case \\arabic{caseiv}."
@@ -18615,43 +18615,43 @@ msgstr ""
 
 #: lib/layouts/theorems-counters-bytype.inc:30
 msgid "Fact \\arabic{theorem}"
-msgstr "Fato \arabic{theorem}"
+msgstr "Fato \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:48
 msgid "Exercise \\arabic{theorem}"
-msgstr "Exercício \arabic{theorem}"
+msgstr "Exercício \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-bytype.inc:53
 msgid "Solution \\arabic{theorem}"
-msgstr "Solução \arabic{theorem}"
+msgstr "Solução \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:16
 msgid "Axiom \\arabic{theorem}"
-msgstr "Axioma \arabic{theorem}"
+msgstr "Axioma \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:20
 msgid "Condition \\arabic{theorem}"
-msgstr "Condição \arabic{theorem}"
+msgstr "Condição \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:28
 msgid "Notation \\arabic{theorem}"
-msgstr "Notação \arabic{theorem}"
+msgstr "Notação \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:32
 msgid "Summary \\arabic{theorem}"
-msgstr "Resumo \arabic{theorem}"
+msgstr "Resumo \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:36
 msgid "Conclusion \\arabic{theorem}"
-msgstr "Afirmação \arabic{theorem}"
+msgstr "Afirmação \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:40
 msgid "Assumption \\arabic{theorem}"
-msgstr "Suposição \arabic{theorem}"
+msgstr "Suposição \\arabic{theorem}"
 
 #: lib/layouts/theorems-counters-extended-bytype.inc:44
 msgid "Question \\arabic{theorem}"
-msgstr "Pergunta \arabic{theorem}"
+msgstr "Pergunta \\arabic{theorem}"
 
 #: lib/layouts/theorems-named.module:3
 msgid "Standard Theorems (Nameable)"
