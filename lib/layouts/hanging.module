@@ -27,7 +27,7 @@ Style Hanging
     \IfFileExists{hanging.sty}{
       % Disable all character activation, as this interferes
       % with other packages and some languages
-      \PassOptionsToPackage{hanging}{%
+      \PassOptionsToPackage{%
           notcomma,
           notperiod,
           notquote,
@@ -35,7 +35,7 @@ Style Hanging
           notexcl,
           notcolon,
           notscolon
-      }
+      }{hanging}
       \usepackage{hanging}
       \newenvironment{hangparagraphs}
         {%
