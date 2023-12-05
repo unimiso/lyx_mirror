@@ -25,6 +25,17 @@ Style Hanging
   Preamble
     \newlength{\lyxhang}
     \IfFileExists{hanging.sty}{
+      % Disable all character activation, as this interferes
+      % with other packages and some languages
+      \PassOptionsToPackage{hanging}{%
+          notcomma,
+          notperiod,
+          notquote,
+          notquery,
+          notexcl,
+          notcolon,
+          notscolon
+      }
       \usepackage{hanging}
       \newenvironment{hangparagraphs}
         {%
