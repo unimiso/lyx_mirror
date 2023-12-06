@@ -233,7 +233,7 @@ def find_lyx2lyx(progloc, path):
     if "PATHEXT" in os.environ:
         extlist = extlist + os.environ["PATHEXT"].split(os.pathsep)
     lyx_exe, full_path = find_exe(["lyxc", "lyx"], extlist, path)
-    if lyx_exe == None:
+    if lyx_exe is None:
         error('Cannot find the LyX executable in the path.')
     try:
         cmd_stdout = subprocess.check_output([lyx_exe, '-version'], stderr=subprocess.STDOUT)
@@ -265,9 +265,9 @@ def main(args):
     ourprog = args[0]
 
     try:
-      (options, argv) = getopt(args[1:], "htzl:o:")
+        (options, argv) = getopt(args[1:], "htzl:o:")
     except:
-      error(usage(ourprog))
+        error(usage(ourprog))
 
     # we expect the filename to be left
     if len(argv) != 1:
@@ -278,19 +278,19 @@ def main(args):
     lyx2lyx = None
 
     for (opt, param) in options:
-      if opt == "-h":
-        print(usage(ourprog))
-        sys.exit(0)
-      elif opt == "-t":
-        makezip = False
-      elif opt == "-z":
-        makezip = True
-      elif opt == "-l":
-        lyx2lyx = param
-      elif opt == "-o":
-        outdir = param
-        if not os.path.isdir(unicode(outdir, 'utf-8')):
-          error('Error: "%s" is not a directory.' % outdir)
+        if opt == "-h":
+            print(usage(ourprog))
+            sys.exit(0)
+        elif opt == "-t":
+            makezip = False
+        elif opt == "-z":
+            makezip = True
+        elif opt == "-l":
+            lyx2lyx = param
+        elif opt == "-o":
+            outdir = param
+            if not os.path.isdir(unicode(outdir, 'utf-8')):
+                error('Error: "%s" is not a directory.' % outdir)
 
     lyxfile = argv[0]
     if not running_on_windows:
@@ -320,7 +320,7 @@ def main(args):
 
     path = os.environ["PATH"].split(os.pathsep)
 
-    if lyx2lyx == None:
+    if lyx2lyx is None:
         lyx2lyx = find_lyx2lyx(ourprog, path)
 
     # Initialize the list with the specified LyX file and recursively
@@ -390,7 +390,7 @@ if __name__ == "__main__":
         argc = c_int(0)
         argv_unicode = CommandLineToArgvW(GetCommandLineW(), byref(argc))
         # unicode_argv[0] is the Python interpreter, so skip that.
-        argv = [argv_unicode[i].encode('utf-8') for i in xrange(1, argc.value)]
+        argv = [argv_unicode[i].encode('utf-8') for i in range(1, argc.value)]
         # Also skip option arguments to the Python interpreter.
         while len(argv) > 0:
             if not argv[0].startswith("-"):
