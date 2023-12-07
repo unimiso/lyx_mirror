@@ -1147,6 +1147,8 @@ void InsetMathNest::doDispatch(Cursor & cur, FuncRequest & cmd)
 		}
 		break;
 
+#if 0
+// FIXME: resurrect this later
 	// 'Locks' the math inset. A 'locked' math inset behaves as a unit
 	// that is traversed by a single <CursorLeft>/<CursorRight>.
 	case LFUN_INSET_TOGGLE:
@@ -1154,6 +1156,7 @@ void InsetMathNest::doDispatch(Cursor & cur, FuncRequest & cmd)
 		lock(!lock());
 		cur.popForward();
 		break;
+#endif
 
 	case LFUN_SELF_INSERT:
 		// special case first for big delimiters
