@@ -1176,6 +1176,9 @@ RowList TextMetrics::breakParagraph(Row const & bigrow) const
 		// Last row in paragraph is flushed
 		rows.back().flushed(true);
 		cleanupRow(rows.back(), true);
+		// Is there an end-of-paragraph change?
+		if (bigrow.needsChangeBar())
+			rows.back().needsChangeBar(true);
 	}
 
 	return rows;

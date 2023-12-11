@@ -425,6 +425,7 @@ bool Row::sameString(Font const & f, Change const & ch) const
 }
 
 
+// FIXME: remove this and move the changebar update to Row::push_back()
 void Row::finalizeLast()
 {
 	if (elements_.empty())
