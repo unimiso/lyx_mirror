@@ -1207,9 +1207,19 @@ void TeXOnePar(Buffer const & buf,
 
 	bool const is_command = style.isCommand();
 
+	bool const last_was_separator =
+		!par.empty() && par.isEnvSeparator(par.size() - 1);
+
 	// InTitle commands need to be closed after the language has been closed.
 	if (!intitle_command) {
 		if (is_command) {
+			// Signify added/deleted par break in output if show changes in output
+			if (nextpar && !os.afterParbreak() && !last_was_separator
+			    && bparams.output_changes && par.parEndChange().changed()) {
+				Changes::latexMarkChange(os, bparams, Change(Change::UNCHANGED),
+							 par.parEndChange(), runparams);
+				os << bparams.encoding().latexString(docstring(1, 0x00b6)).first << "}";
+			}
 			os << '}';
 			if (!style.postcommandargs().empty())
 				latexArgInsets(par, os, runparams, style.postcommandargs(), "post:");
@@ -1399,11 +1409,8 @@ void TeXOnePar(Buffer const & buf,
 		}
 	}
 
-	bool const last_was_separator =
-		!par.empty() && par.isEnvSeparator(par.size() - 1);
-
 	// Signify added/deleted par break in output if show changes in output
-	if (nextpar && !os.afterParbreak() && !last_was_separator
+	if ((intitle_command || !is_command) && nextpar && !os.afterParbreak() && !last_was_separator
 	    && bparams.output_changes && par.parEndChange().changed()) {
 		Changes::latexMarkChange(os, bparams, Change(Change::UNCHANGED),
 					 par.parEndChange(), runparams);
