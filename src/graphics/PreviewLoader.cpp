@@ -19,7 +19,6 @@
 #include "Converter.h"
 #include "Encoding.h"
 #include "Format.h"
-#include "LaTeXFeatures.h"
 #include "LyXRC.h"
 #include "output.h"
 #include "OutputParams.h"
@@ -606,9 +605,6 @@ void PreviewLoader::Impl::startLoading(bool wait)
 	}
 
 	otexstream os(of);
-	OutputParams runparams(&enc);
-	LaTeXFeatures features(buffer_, buffer_.params(), runparams);
-
 	if (!openFileWrite(of, latexfile))
 		return;
 
