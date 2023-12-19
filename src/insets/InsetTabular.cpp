@@ -818,7 +818,7 @@ void Tabular::deleteRow(row_type const row, bool const force)
 				cell_info[row + 1][c] = cell_info[row][c];
 		}
 	}
-	if (ct)
+	if (ct && !row_info[row].change.inserted())
 		row_info[row].change.setDeleted();
 	else {
 		row_info.erase(row_info.begin() + row);
@@ -979,10 +979,10 @@ void Tabular::deleteColumn(col_type const col, bool const force)
 		    cell_info[r][col + 1].multicolumn == CELL_PART_OF_MULTICOLUMN) {
 				cell_info[r][col + 1] = cell_info[r][col]; 
 		}
-		if (!ct)
+		if (!ct || column_info[col].change.inserted())
 			cell_info[r].erase(cell_info[r].begin() + col);
 	}
-	if (ct)
+	if (ct && !column_info[col].change.inserted())
 		column_info[col].change.setDeleted();
 	else
 		column_info.erase(column_info.begin() + col);
@@ -6746,7 +6746,7 @@ void InsetTabular::tabularFeatures(Cursor & cur,
 		}
 
 		for (row_type r = sel_row_start; r <= sel_row_end; ++r)
-			tabular.deleteRow(sel_row_start);
+			tabular.deleteRow(r);
 		if (sel_row_start >= tabular.nrows())
 			--sel_row_start;
 		cur.idx() = tabular.cellIndex(sel_row_start, column);
@@ -6769,7 +6769,7 @@ void InsetTabular::tabularFeatures(Cursor & cur,
 		}
 
 		for (col_type c = sel_col_start; c <= sel_col_end; ++c)
-			tabular.deleteColumn(sel_col_start);
+			tabular.deleteColumn(c);
 		if (sel_col_start >= tabular.ncols())
 			--sel_col_start;
 		cur.idx() = tabular.cellIndex(row, sel_col_start);
