@@ -22,6 +22,7 @@
 #include "FuncRequest.h"
 #include "FuncStatus.h"
 #include "Inset.h"
+#include "LaTeXFeatures.h"
 #include "Lexer.h"
 #include "LyX.h"
 #include "output_docbook.h"
@@ -340,7 +341,8 @@ void InsetBranch::forOutliner(docstring & os, size_t const maxlen,
 
 void InsetBranch::validate(LaTeXFeatures & features) const
 {
-	if (producesOutput())
+	// Showing previews in a disabled branch may require stuff
+	if (producesOutput() || features.runparams().for_preview)
 		InsetCollapsible::validate(features);
 }
 

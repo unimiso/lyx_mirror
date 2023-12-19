@@ -334,6 +334,9 @@ void InsetNote::validate(LaTeXFeatures & features) const
 		InsetCollapsible::validate(features);
 		break;
 	case InsetNoteParams::Note:
+		// Showing previews in this inset may require stuff
+		if (features.runparams().for_preview)
+			InsetCollapsible::validate(features);
 		break;
 	}
 }
