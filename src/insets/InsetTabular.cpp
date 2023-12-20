@@ -808,7 +808,13 @@ void Tabular::deleteRow(row_type const row, bool const force)
 	if (nrows() == 1)
 		return;
 
-	bool const ct = force ? false : buffer().params().track_changes;
+	// If we are in change tracking mode, and the row is not marked
+	// as inserted by the same author, we do not delete it, but mark
+	// it deleted.
+	bool const track_deletion = force ? false
+		: buffer().params().track_changes
+		  && (!row_info[row].change.inserted()
+		      || !row_info[row].change.currentAuthor());
 
 	for (col_type c = 0; c < ncols(); ++c) {
 		// Care about multirow cells
@@ -818,7 +824,7 @@ void Tabular::deleteRow(row_type const row, bool const force)
 				cell_info[row + 1][c] = cell_info[row][c];
 		}
 	}
-	if (ct && !row_info[row].change.inserted())
+	if (track_deletion)
 		row_info[row].change.setDeleted();
 	else {
 		row_info.erase(row_info.begin() + row);
@@ -970,7 +976,13 @@ void Tabular::deleteColumn(col_type const col, bool const force)
 	if (ncols() == 1)
 		return;
 
-	bool const ct = force ? false : buffer().params().track_changes;
+	// If we are in change tracking mode, and the column is not marked
+	// as inserted by the same author, we do not delete it, but mark
+	// it deleted.
+	bool const track_deletion = force ? false
+		: buffer().params().track_changes
+		  && (!column_info[col].change.inserted()
+		      || !column_info[col].change.currentAuthor());
 
 	for (row_type r = 0; r < nrows(); ++r) {
 		// Care about multicolumn cells
@@ -979,10 +991,10 @@ void Tabular::deleteColumn(col_type const col, bool const force)
 		    cell_info[r][col + 1].multicolumn == CELL_PART_OF_MULTICOLUMN) {
 				cell_info[r][col + 1] = cell_info[r][col]; 
 		}
-		if (!ct || column_info[col].change.inserted())
+		if (!track_deletion)
 			cell_info[r].erase(cell_info[r].begin() + col);
 	}
-	if (ct && !column_info[col].change.inserted())
+	if (track_deletion)
 		column_info[col].change.setDeleted();
 	else
 		column_info.erase(column_info.begin() + col);
